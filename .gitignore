@@ -1,0 +1,10 @@
+/config/
+/.idea/
+/.git/
+*.png
+*.psd
+*.jpg
+*.ai
+*.webp
+*.ttf
+*.ico
