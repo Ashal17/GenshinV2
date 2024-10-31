@@ -1,0 +1,157 @@
+[
+  {
+    "id": 0,
+    "name": "Protective Canopy",
+    "vision": false,
+    "req": false,
+    "bonus": [
+      {
+        "stat": "elementalres",
+        "value": 15
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Impetuous Winds",
+    "vision": "anemo",
+    "req": 2,
+    "bonus": [
+      {
+        "stat": "stamina",
+        "value": 15
+      },
+      {
+        "stat": "mspeed",
+        "value": 10
+      },
+      {
+        "stat": "cdr",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Shattering Ice",
+    "vision": "cryo",
+    "req": 2,
+    "bonus": [
+      {
+        "stat": null,
+        "value": "Affected by Electro for {{40%}} less time."
+      },
+      {
+        "stat": null,
+        "value": "Increases CRIT Rate against enemies that are Frozen or affected by Cryo by {{15%}}.",
+        "effects": {
+          "id": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Sprawling Greenery",
+    "vision": "dendro",
+    "req": 2,
+    "bonus": [
+      {
+        "stat": "elemastery",
+        "value": 50
+      },
+      {
+        "stat": null,
+        "value": "Triggering Burning, Quicken, or Bloom increases Elemental Mastery by {{30}}.",
+        "apply": {
+          "id": 585,
+          "option": 0
+        }
+      },
+      {
+        "stat": null,
+        "value": "Triggering Aggravate, Spread, or Hyperbloom increases Elemental Mastery by {{20}}.",
+        "apply": {
+          "id": 586,
+          "option": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "High Voltage",
+    "vision": "electro",
+    "req": 2,
+    "bonus": [
+      {
+        "stat": null,
+        "value": "Affected by Hydro for {{40%}} less time."
+      },
+      {
+        "stat": null,
+        "value": "Superconduct, Overloaded, Electro-Charged, Quicken, Aggravate or Hyperbloom have a 100% chance to generate an Electro Elemental Particle (CD: 5s)."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Enduring Rock",
+    "vision": "geo",
+    "req": 2,
+    "bonus": [
+      {
+        "stat": "shield",
+        "value": 15
+      },
+      {
+        "stat": null,
+        "value": "When protected by a shield, increases DMG by {{15%}}.",
+        "apply": {
+          "id": 2,
+          "option": 0
+        }
+      },
+      {
+        "stat": null,
+        "value": "When protected by a shield, dealing DMG to enemies will decrease their Geo RES by {{20%}} for 15s",
+        "apply": {
+          "id": 351,
+          "option": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Soothing Water",
+    "vision": "hydro",
+    "req": 2,
+    "bonus": [
+      {
+        "stat": null,
+        "value": "Affected by Pyro for {{40%}} less time."
+      },
+      {
+        "stat": "hp%",
+        "value": 25
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Fervent Flames",
+    "vision": "pyro",
+    "req": 2,
+    "bonus": [
+      {
+        "stat": null,
+        "value": "Affected by Cryo for {{40%}} less time."
+      },
+      {
+        "stat": "atk%",
+        "value": 25
+      }
+    ]
+  }
+]

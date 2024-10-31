@@ -10,9 +10,18 @@ session_start();
 
 <?php
 	require_once "header.php";
+	require_once "dependencies/equip.php";
 ?>
 </head>
 
-<body class="dark_theme">
+<body class="dark_theme" onload="equip_setup_all()">
+
+<?php
+	require_once "nav.php";
+?>
+
+<div class="main_window" id="main_window" >
+
+</div>
 
 </body>

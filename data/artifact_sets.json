@@ -1,0 +1,1562 @@
+[
+  {
+    "id": 0,
+    "enka_id": 0,
+    "name": "None",
+    "icon": "none",
+    "stars": [ 0 ],
+    "set_bonus": [],
+    "flower": "None",
+    "plume": "None",
+    "sands": "None",
+    "goblet": "None",
+    "circlet": "None"
+  },
+  {
+    "id": 1,
+    "enka_id": 10010,
+    "name": "Adventurer",
+    "scanner_key": "Adventurer",
+    "icon": "adventurer",
+    "stars": [ 3, 2, 1 ],
+    "set_bonus": [
+      {
+        "stat": "hp",
+        "value": 1000,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Opening a chest regenerates {{30%}} Max HP over 5s.",
+        "req": 4
+      }
+    ],
+    "flower": "Adventurer's Flower",
+    "plume": "Adventurer's Tail Feather",
+    "sands": "Adventurer's Pocket Watch",
+    "goblet": "Adventurer's Golden Goblet",
+    "circlet": "Adventurer's Bandana"
+  },
+  {
+    "id": 2,
+    "enka_id": 10011,
+    "name": "Lucky Dog",
+    "scanner_key": "LuckyDog",
+    "icon": "lucky_dog",
+    "stars": [ 3, 2, 1 ],
+    "set_bonus": [
+      {
+        "stat": "def",
+        "value": 100,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Picking up Mora restores {{300}} HP.",
+        "req": 4
+      }
+    ],
+    "flower": "Lucky Dog's Clover",
+    "plume": "Lucky Dog's Eagle Feather",
+    "sands": "Lucky Dog's Hourglass",
+    "goblet": "Lucky Dog's Goblet",
+    "circlet": "Lucky Dog's Silver Circlet"
+  },
+  {
+    "id": 3,
+    "enka_id": 10013,
+    "name": "Travelling Doctor",
+    "scanner_key": "TravelingDoctor",
+    "icon": "travelling_doctor",
+    "stars": [ 3, 2, 1 ],
+    "set_bonus": [
+      {
+        "stat": "healinginc",
+        "value": 20,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Using Elemental Burst restores {{20%}} HP.",
+        "req": 4
+      }
+    ],
+    "flower": "Travelling Doctor's Silver Lotus",
+    "plume": "Travelling Doctor's Owl Feather",
+    "sands": "Travelling Doctor's Pocket Watch",
+    "goblet": "Travelling Doctor's Medicine Pot",
+    "circlet": "Travelling Doctor's Handkerchief"
+  },
+  {
+    "id": 4,
+    "enka_id": 10007,
+    "name": "Instructor",
+    "scanner_key": "Instructor",
+    "icon": "instructor",
+    "stars": [ 4, 3 ],
+    "set_bonus": [
+      {
+        "stat": "elemastery",
+        "value": 80,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "After causing an elemental reaction increases party members' Elemental Mastery by {{120}} for 8s.",
+        "req": 4,
+        "apply": {
+          "id": 99,
+          "option": 0,
+          "party": true
+        }
+      }
+    ],
+    "flower": "Instructor's Brooch",
+    "plume": "Instructor's Feather Accessory",
+    "sands": "Instructor's Pocket Watch",
+    "goblet": "Instructor's Tea Cup",
+    "circlet": "Instructor's Cap"
+  },
+  {
+    "id": 5,
+    "enka_id": 10005,
+    "name": "Berserker",
+    "scanner_key": "Berserker",
+    "icon": "berserker",
+    "stars": [ 4, 3 ],
+    "set_bonus": [
+      {
+        "stat": "crit",
+        "value": 12,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "When HP is below 70%, CRIT Rate increases by an additional {{24%}}.",
+        "req": 4,
+        "apply": {
+          "id": 98,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Berserker's Rose",
+    "plume": "Berserker's Indigo Feather",
+    "sands": "Berserker's Timepiece",
+    "goblet": "Berserker's Bone Goblet",
+    "circlet": "Berserker's Battle Mask"
+  },
+  {
+    "id": 6,
+    "enka_id": 10009,
+    "name": "The Exile",
+    "scanner_key": "TheExile",
+    "icon": "the_exile",
+    "stars": [ 4, 3 ],
+    "set_bonus": [
+      {
+        "stat": "recharge",
+        "value": 20,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Using an Elemental Burst regenerates {{2}} Energy for all party members (excluding the wearer) every 2s for 6s. This effect cannot stack.",
+        "req": 4
+      }
+    ],
+    "flower": "Exile's Flower",
+    "plume": "Exile's Feather",
+    "sands": "Exile's Pocket Watch",
+    "goblet": "Exile's Goblet",
+    "circlet": "Exile's Circlet"
+  },
+  {
+    "id": 7,
+    "enka_id": 10001,
+    "name": "Resolution of Sojourner",
+    "scanner_key": "ResolutionOfSojourner",
+    "icon": "resolution_of_sojourner",
+    "stars": [ 4, 3 ],
+    "set_bonus": [
+      {
+        "stat": "atk%",
+        "value": 18,
+        "req": 2
+      },
+      {
+        "stat": "critcharged",
+        "value": 30,
+        "req": 4
+      }
+    ],
+    "flower": "Heart of Comeradeship",
+    "plume": "Feather of Homecoming",
+    "sands": "Sundial of the Sojourner",
+    "goblet": "Goblet of the Sojourner",
+    "circlet": "Crown of Parting"
+  },
+  {
+    "id": 8,
+    "enka_id": 10006,
+    "name": "Martial Artist",
+    "scanner_key": "MartialArtist",
+    "icon": "martial_artist",
+    "stars": [ 4, 3 ],
+    "set_bonus": [
+      {
+        "stat": "normal",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": "charged",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by {{25%}} for 8s.",
+        "req": 4,
+        "apply": {
+          "id": 97,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Martial Artist's Red Flower",
+    "plume": "Martial Artist's Feather Accessory",
+    "sands": "Martial Artist's Water Hourglass",
+    "goblet": "Martial Artist's Wine Cup",
+    "circlet": "Martial Artist's Bandana"
+  },
+  {
+    "id": 9,
+    "enka_id": 10003,
+    "name": "Defender's Will",
+    "scanner_key": "DefendersWill",
+    "icon": "defenders_will",
+    "stars": [ 4, 3 ],
+    "set_bonus": [
+      {
+        "stat": "def%",
+        "value": 30,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Increases Elemental RES by {{30%}} to each element present among your characters in the party.",
+        "req": 4,
+        "apply": {
+          "id": 85,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Guardian's Flower",
+    "plume": "Guardian's Sigil",
+    "sands": "Guardian's Clock",
+    "goblet": "Guardian's Vessel",
+    "circlet": "Guardian's Band"
+  },
+  {
+    "id": 10,
+    "enka_id": 10004,
+    "name": "Tiny Miracle",
+    "scanner_key": "TinyMiracle",
+    "icon": "tiny_miracle",
+    "stars": [ 4, 3 ],
+    "set_bonus": [
+      {
+        "stat": "elementalres",
+        "value": 20,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Incoming elemental DMG increases corresponding Elemental RES by {{30%}} for 10s. Can only occur once every 10s.",
+        "req": 4,
+        "apply": {
+          "id": 84,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Tiny Miracle's Flower",
+    "plume": "Tiny Miracle's Feather",
+    "sands": " Tiny Miracle's Hourglass",
+    "goblet": "Tiny Miracle's Goblet",
+    "circlet": "Tiny Miracle's Earrings"
+  },
+  {
+    "id": 11,
+    "enka_id": 10002,
+    "name": "Brave Heart",
+    "scanner_key": "BraveHeart",
+    "icon": "brave_heart",
+    "stars": [ 4, 3 ],
+    "set_bonus": [
+      {
+        "stat": "atk%",
+        "value": 18,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Increases DMG by {{30%}} against enemies with more than 50% HP.",
+        "req": 4,
+        "apply": {
+          "id": 96,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Medal of the Brave",
+    "plume": "Prospect of the Brave",
+    "sands": "Fortitude of the Brave",
+    "goblet": "Outset of the Brave",
+    "circlet": "Crown of the Brave"
+  },
+  {
+    "id": 12,
+    "enka_id": 10008,
+    "name": "Gambler",
+    "scanner_key": "Gambler",
+    "icon": "gambler",
+    "stars": [ 4, 3 ],
+    "set_bonus": [
+      {
+        "stat": "skill",
+        "value": 20,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Defeating an enemy has 100% chance to remove Elemental Skill CD. Can only occur once every 15s.",
+        "req": 4
+      }
+    ],
+    "flower": "Gambler's Brooch",
+    "plume": "Gambler's Feather Accessory",
+    "sands": "Gambler's Pocket Watch",
+    "goblet": "Gambler's Dice Cup",
+    "circlet": "Gambler's Earrings"
+  },
+  {
+    "id": 13,
+    "enka_id": 10012,
+    "name": "Scholar",
+    "scanner_key": "Scholar",
+    "icon": "scholar",
+    "stars": [ 4, 3 ],
+    "set_bonus": [
+      {
+        "stat": "recharge",
+        "value": 20,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Gaining Energy gives {{3}} Energy to all party members who have a bow or a catalyst equipped. Can only occur once every 3s.",
+        "req": 4
+      }
+    ],
+    "flower": "Scholar's Bookmark",
+    "plume": "Scholar's Quill Pen",
+    "sands": "Scholar's Clock",
+    "goblet": "Scholar's Ink Cup",
+    "circlet": "Scholar's Lens"
+  },
+  {
+    "id": 14,
+    "enka_id": 15001,
+    "name": "Gladiator's Finale",
+    "scanner_key": "GladiatorsFinale",
+    "icon": "gladiators_finale",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "atk%",
+        "value": 18,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "If the wielder of this artifact set uses a Sword, Claymore, or Polearm, increases their Normal Attack DMG by {{35%}}.",
+        "req": 4,
+        "apply": {
+          "id": 95,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Gladiator's Nostalgia",
+    "plume": "Gladiator's Destiny",
+    "sands": "Gladiator's Longing",
+    "goblet": "Gladiator's Intoxication",
+    "circlet": "Gladiator's Triumphus"
+  },
+  {
+    "id": 15,
+    "enka_id": 14004,
+    "name": "Maiden Beloved",
+    "scanner_key": "MaidenBeloved",
+    "icon": "maiden_beloved",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "healing",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Using an Elemental Skill or Elemental Burst increase healing received by all party member by {{20%}} for 10s.",
+        "req": 4,
+        "apply": {
+          "id": 94,
+          "option": 0,
+          "party": true
+        }
+      }
+    ],
+    "flower": "Maiden's Distant Love",
+    "plume": "Maiden's Heart-stricken Infatuation",
+    "sands": "Maiden's Passing Youth",
+    "goblet": "Maiden's Fleeting Leisure",
+    "circlet": "Maiden's Fading Beauty"
+  },
+  {
+    "id": 16,
+    "enka_id": 15007,
+    "name": "Noblesse Oblige",
+    "scanner_key": "NoblesseOblige",
+    "icon": "noblesse_oblige",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "burst",
+        "value": 20,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Using an Elemental Burst increases all party members' ATK by {{20%}} for 12s. This effect cannot stack.",
+        "req": 4,
+        "apply": {
+          "id": 93,
+          "option": 0,
+          "party": true
+        }
+      }
+    ],
+    "flower": "Royal Flora",
+    "plume": "Royal Plume",
+    "sands": "Royal Pocket Watch",
+    "goblet": "Royal Silver Urn",
+    "circlet": "Royal Masque"
+  },
+  {
+    "id": 17,
+    "enka_id": 15008,
+    "name": "Bloodstained Chivalry",
+    "scanner_key": "BloodstainedChivalry",
+    "icon": "bloodstained_chivalry",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "physical",
+        "value": 25,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "After defeating an opponent, increases Charged Attack DMG by {{50%}}, and reduces its Stamina cost to 0 for 10s.",
+        "req": 4,
+        "apply": {
+          "id": 92,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Bloodstained Flower of Iron",
+    "plume": "Bloodstained Black Plume",
+    "sands": "Bloodstained Final Hour",
+    "goblet": "Bloodstained Chevalier's Goblet",
+    "circlet": "Bloodstained Iron Mask"
+  },
+  {
+    "id": 18,
+    "enka_id": 15003,
+    "name": "Wanderer's Troupe",
+    "scanner_key": "WanderersTroupe",
+    "icon": "wanderers_troupe",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "elemastery",
+        "value": 80,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Increases Charged Attack DMG by {{35%}} if the character uses a Catalyst or Bow.",
+        "req": 4,
+        "apply": {
+          "id": 91,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Troupe's Dawnlight",
+    "plume": "Bard's Arrow Feather",
+    "sands": "Concert's Final Hour",
+    "goblet": "Wanderer's String Kettle",
+    "circlet": "Conductor's Top Hat"
+  },
+  {
+    "id": 19,
+    "enka_id": 15002,
+    "name": "Viridescent Venerer",
+    "scanner_key": "ViridescentVenerer",
+    "icon": "viridescent_venerer",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "anemo",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": "swirl",
+        "value": 60,
+        "req": 4
+      },
+      {
+        "stat": null,
+        "value": "Decreases opponent's Elemental RES to the element infused in the Swirl by {{40%}} for 10s.",
+        "req": 4,
+        "apply": {
+          "id": 83,
+          "option": 0,
+          "party": true
+        }
+      }
+    ],
+    "flower": "In Remembrance of Viridescent Fields",
+    "plume": "Viridescent Arrow Feather",
+    "sands": "Viridescent Venerer's Determination",
+    "goblet": "Viridescent Venerer's Vessel",
+    "circlet": "Viridescent Venerer's Diadem"
+  },
+  {
+    "id": 20,
+    "enka_id": 15005,
+    "name": "Thundering Fury",
+    "scanner_key": "ThunderingFury",
+    "icon": "thundering_fury",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "electro",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": "overload",
+        "value": 40,
+        "req": 4
+      },
+      {
+        "stat": "electrocharged",
+        "value": 40,
+        "req": 4
+      },
+      {
+        "stat": "superconduct",
+        "value": 40,
+        "req": 4
+      },
+      {
+        "stat": "aggravate",
+        "value": 20,
+        "req": 4
+      },
+      {
+        "stat": null,
+        "value": "Triggering Quicken, Overloaded, Electro-Charged or Superconduct decreases Elemental Skill CD by 1s. Can only occur once every 0.8s.",
+        "req": 4
+      }
+    ],
+    "flower": "Thunderbird's Mercy",
+    "plume": "Survivor of Catastrophe",
+    "sands": "Hourglass of Thunder",
+    "goblet": "Omen of Thunderstorm",
+    "circlet": "Thunder Summoner's Crown"
+  },
+  {
+    "id": 21,
+    "enka_id": 14002,
+    "name": "Thundersoother",
+    "scanner_key": "Thundersoother",
+    "icon": "thundersoother",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "electrores",
+        "value": 40,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Increase DMG against enemies affected by Electro by {{35%}}.",
+        "req": 4,
+        "apply": {
+          "id": 90,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Thundersoother's Heart",
+    "plume": "Thundersoother's Plume",
+    "sands": "Hour of Soothing Thunder",
+    "goblet": "Thundersoother's Goblet",
+    "circlet": "Thundersoother's Diadem"
+  },
+  {
+    "id": 22,
+    "enka_id": 15006,
+    "name": "Crimson Witch of Flames",
+    "scanner_key": "CrimsonWitchOfFlames",
+    "icon": "crimson_witch_of_flames",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "pyro",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": "overload",
+        "value": 40,
+        "req": 4
+      },
+      {
+        "stat": "burning",
+        "value": 40,
+        "req": 4
+      },
+      {
+        "stat": "burgeon",
+        "value": 40,
+        "req": 4
+      },
+      {
+        "stat": "vaporize",
+        "value": 15,
+        "req": 4
+      },
+      {
+        "stat": "melt",
+        "value": 15,
+        "req": 4
+      },
+      {
+        "stat": null,
+        "value": "Using an Elemental Skill increases Pyro DMG by {{7.5%}} for 10s. Max 3 stacks.",
+        "req": 4,
+        "apply": {
+          "id": 89,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Witch's Flower of Blaze",
+    "plume": "Witch's Ever-Burning Plume",
+    "sands": "Witch's End Time",
+    "goblet": "Witch's Heart Flames",
+    "circlet": "Witch's Scorching Hat"
+  },
+  {
+    "id": 23,
+    "enka_id": 14003,
+    "name": "Lavawalker",
+    "scanner_key": "Lavawalker",
+    "icon": "lavawalker",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "pyrores",
+        "value": 40,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Increases DMG against enemies affected by Pryo by {{35%}}",
+        "req": 4,
+        "apply": {
+          "id": 88,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Lavawalker's Resolution",
+    "plume": "Lavawalker's Salvation",
+    "sands": "Lavawalker's Torment",
+    "goblet": "Lavawalker's Epiphany",
+    "circlet": "Lavawalker's Wisdom"
+  },
+  {
+    "id": 24,
+    "enka_id": 15014,
+    "name": "Archaic Petra",
+    "scanner_key": "ArchaicPetra",
+    "icon": "archaic_petra",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "geo",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Upon obtaining Crystallize's Elemental Shard, all party members gain {{35%}} DMG to that element for 10s. Only one of these effects can exist at a time.",
+        "req": 4,
+        "apply": {
+          "id": 87,
+          "option": 0,
+          "party": true
+        }
+      }
+    ],
+    "flower": "Flower of Creviced Cliff",
+    "plume": "Feather of Jagged Peaks",
+    "sands": "Sundial of Enduring Jade",
+    "goblet": "Goblet of Chiseled Crag",
+    "circlet": "Mask of Solitude Basalt"
+  },
+  {
+    "id": 25,
+    "enka_id": 15015,
+    "name": "Retracing Bolide",
+    "scanner_key": "RetracingBolide",
+    "icon": "retracing_bolide",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "shield",
+        "value": 35,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "While protected by a Shield, gain {{40%}} Normal and Charged Attack DMG.",
+        "req": 4,
+        "apply": {
+          "id": 86,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Summer Night's Bloom",
+    "plume": "Summer Night's Finale",
+    "sands": "Summer Night's Moment",
+    "goblet": "Summer Night's Waterballoon",
+    "circlet": "Summer Night's Mask"
+  },
+  {
+    "id": 30,
+    "enka_id": 14001,
+    "name": "Blizzard Strayer",
+    "scanner_key": "BlizzardStrayer",
+    "icon": "blizzard_strayer",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "cryo",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "CRIT Rate against enemies affected by Cryo is increased by {{20%}}. If the enemy is Frozen, CRIT Rate is increased by an additional {{20%}}.",
+        "req": 4,
+        "apply": {
+          "id": 81,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Snowswept Memory",
+    "plume": "Icebreaker's Resolve",
+    "sands": "Frozen Homeland's Demise",
+    "goblet": "Frost-Weaved Dignity",
+    "circlet": "Broken Rime's Echo"
+  },
+  {
+    "id": 31,
+    "enka_id": 15016,
+    "name": "Heart of Depth",
+    "scanner_key": "HeartOfDepth",
+    "icon": "heart_of_depth",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "hydro",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by {{30%}} for 15s.",
+        "req": 4,
+        "apply": {
+          "id": 80,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Gilded Corsage",
+    "plume": "Gust of Nostalgia",
+    "sands": "Copper Compass",
+    "goblet": "Goblet of Thundering Deep",
+    "circlet": "Wine-Stained Tricorne"
+  },
+  {
+    "id": 32,
+    "enka_id": 15018,
+    "name": "Pale Flame",
+    "scanner_key": "PaleFlame",
+    "icon": "pale_flame",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "physical",
+        "value": 25,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "When an Elemental Skill hits an opponent, ATK is increased by {{9%}} for 7s. Max 2 stacks. At 2 stacks increase Physical DMG by {{25%}}.",
+        "req": 4,
+        "apply": {
+          "id": 380,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Stainless Bloom",
+    "plume": "Wise Doctor's Pinion",
+    "sands": "Moment of Cessation",
+    "goblet": "Surpassing Cup",
+    "circlet": "Mocking Mask"
+  },
+  {
+    "id": 33,
+    "enka_id": 15017,
+    "name": "Tenacity of the Millelith",
+    "scanner_key": "TenacityOfTheMillelith",
+    "icon": "millelith_tenacity",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "hp%",
+        "value": 20,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "When an Elemental Skill hits an opponent, all party members gain {{20%}} ATK and {{30%}} Shield Strength for 3s.",
+        "req": 4,
+        "apply": {
+          "id": 379,
+          "option": 0,
+          "party": true
+        }
+      }
+    ],
+    "flower": "Flower of Accolades",
+    "plume": "Ceremonial War-Plume",
+    "sands": "Orichalceous Time-Dial",
+    "goblet": "Noble's Pledging Vessel",
+    "circlet": "General's Ancient Helm"
+  },
+  {
+    "id": 34,
+    "enka_id": 15019,
+    "name": "Shimenawa's Reminiscence",
+    "scanner_key": "ShimenawasReminiscence",
+    "icon": "shimenawa_reminiscence",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "atk%",
+        "value": 18,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "When casting an Elemental Skill, if the character has 15 or more Energy, they lose 15 Energy and Normal/Charged/Plunging Attack DMG is increased by {{50%}} for 10s.",
+        "req": 4,
+        "apply": {
+          "id": 418,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Entangling Bloom",
+    "plume": "Shaft of Remembrance",
+    "sands": "Morning Dew's Moment",
+    "goblet": "Hopeful Heart",
+    "circlet": "Capricious Visage"
+  },
+  {
+    "id": 35,
+    "enka_id": 15020,
+    "name": "Emblem of Severed Fate",
+    "scanner_key": "EmblemOfSeveredFate",
+    "icon": "severed_fate",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "recharge",
+        "value": 20,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Increases Elemental Burst DMG by {{25%}} of Energy Recharge. A maximum of {{75%}} bonus DMG can be obtained in this way.",
+        "req": 4,
+        "apply": {
+          "id": 419,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Magnificent Tsuba",
+    "plume": "Sundered Feather",
+    "sands": "Storm Cage",
+    "goblet": "Scarlet Vessel",
+    "circlet": "Ornate Kabuto"
+  },
+  {
+    "id": 36,
+    "enka_id": 15021,
+    "name": "Husk of Opulent Dreams",
+    "scanner_key": "HuskOfOpulentDreams",
+    "icon": "opulent_dreams",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "def%",
+        "value": 30,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "On field, Geo damage grants {{6%}} DEF and {{6%}} Geo DMG. Off field, stack is gained every 3sec. Max 4 stacks.",
+        "req": 4,
+        "apply": {
+          "id": 493,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Bloom Times",
+    "plume": "Plume of Luxury",
+    "sands": "Song of Life",
+    "goblet": "Calabash of Awakening",
+    "circlet": "Skeletal Hat"
+  },
+  {
+    "id": 37,
+    "enka_id": 15022,
+    "name": "Ocean-Hued Clam",
+    "scanner_key": "OceanHuedClam",
+    "icon": "divine_chorus",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "healing",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Healing accumulates Sea-Dyed Foam equal to restored HP (Max 30 000). After 3s, explodes for {{90%}} of accumulated Sea-Dyed Foam.",
+        "req": 4
+      }
+    ],
+    "flower": "Sea-Dyed Blossom",
+    "plume": "Deep Palace's Plume",
+    "sands": "Cowry of Parting",
+    "goblet": "Pearl Cage",
+    "circlet": "Crown of Watatsumi"
+  },
+  {
+    "id": 38,
+    "enka_id": 15023,
+    "name": "Vermillion Hereafter",
+    "scanner_key": "VermillionHereafter",
+    "icon": "vermillion_hereafter",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "atk%",
+        "value": 18,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Using Elemental Burst increases ATK by {{8%}}. Every time HP decreases, increases ATK by {{10%}}. Max 4 stacks.",
+        "req": 4,
+        "apply": {
+          "id": 536,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Flowering Life",
+    "plume": "Feather of Nascent Light",
+    "sands": "Solar Relic",
+    "goblet": "Moment of the Pact",
+    "circlet": "Thundering Poise"
+  },
+  {
+    "id": 39,
+    "enka_id": 15024,
+    "name": "Echoes of an Offering",
+    "scanner_key": "EchoesOfAnOffering",
+    "icon": "echoes_of_offering",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "atk%",
+        "value": 18,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "{{36%}} chance to increase Normal Attack DMG by {{60%}} of ATK. Chance increases by {{20%}} until triggered.",
+        "req": 4,
+        "apply": {
+          "id": 537,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Soulscent Bloom",
+    "plume": "Jade Leaf",
+    "sands": "Symbol of Felicitation",
+    "goblet": "Chalice of the Font",
+    "circlet": "Flowing Rings"
+  },
+  {
+    "id": 40,
+    "enka_id": 15025,
+    "name": "Deepwood Memories",
+    "scanner_key": "DeepwoodMemories",
+    "icon": "deepwood_memories",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "dendro",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "After Elemental Skill or Burst hits opponent, their Dendro RES will be decreased by {{30%}} for 8s.",
+        "req": 4,
+        "apply": {
+          "id": 583,
+          "option": 0,
+          "party": true
+        }
+      }
+    ],
+    "flower": "Labyrinth Wayfarer",
+    "plume": "Scholar of Vines",
+    "sands": "A Time of Insight",
+    "goblet": "Lamp of the Lost",
+    "circlet": "Laurel Coronet"
+  },
+  {
+    "id": 41,
+    "enka_id": 15026,
+    "name": "Gilded Dreams",
+    "scanner_key": "GildedDreams",
+    "icon": "gilded_dreams",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "elemastery",
+        "value": 80,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "For 8s after triggering an Elemental Reaction, ATK is increased by {{14%}} for each party member with same Elemental Type, and Elemental Mastery is increased by {{50}} for each party member with different Elemental Type",
+        "req": 4,
+        "apply": {
+          "id": 584,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Dreaming Steelbloom",
+    "plume": "Feather of Judgment",
+    "sands": "The Sunken Years",
+    "goblet": "Honeyed Final Feast",
+    "circlet": "Shadow of the Sand King"
+  },
+  {
+    "id": 42,
+    "enka_id": 15027,
+    "name": "Desert Pavilion Chronicle",
+    "scanner_key": "DesertPavilionChronicle",
+    "icon": "desert_pavilion_chronicle",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "anemo",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "When Charged Attacks hit opponents, Normal Attack SPD will increase by {{10%}} and Normal, Charged, and Plunging Attack DMG will increase by {{40%}} for 15s.",
+        "req": 4,
+        "apply": {
+          "id": 652,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "The First Days of the City of Kings",
+    "plume": "End of the Golden Realm",
+    "sands": "Timepiece of the Lost Path",
+    "goblet": "Defender of the Enchanting Dream",
+    "circlet": "Legacy of the Desert High-Born"
+  },
+  {
+    "id": 43,
+    "enka_id": 15028,
+    "name": "Flower of Paradise Lost",
+    "scanner_key": "FlowerOfParadiseLost",
+    "icon": "flower_of_paradise_lost",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "elemastery",
+        "value": 80,
+        "req": 2
+      },
+      {
+        "stat": "rupture",
+        "value": 40,
+        "req": 4
+      },
+      {
+        "stat": "hyperbloom",
+        "value": 40,
+        "req": 4
+      },
+      {
+        "stat": "burgeon",
+        "value": 40,
+        "req": 4
+      },
+      {
+        "stat": null,
+        "value": "Triggering Bloom, Hyperbloom or Burgeon increases all of their damage by {{25%}} for 10 seconds. Max 4 Stacks.",
+        "req": 4,
+        "apply": {
+          "id": 653,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Ay-Khanoum's Myriad",
+    "plume": "Wilting Feast",
+    "sands": "A Moment Congealed",
+    "goblet": "Secret-Keeper's Magic Bottle",
+    "circlet": "Amethyst Crown"
+  },
+  {
+    "id": 44,
+    "enka_id": 15029,
+    "name": "Nymph's Dream",
+    "scanner_key": "NymphsDream",
+    "icon": "nymphs_dream",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "hydro",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Normal, Charged and Plunging Attack, Skill and Burst hits increase Attack by {{7%}}/{{16%}}/{{25%}} and Hydro DMG by {{4%}}/{{9%}}/{{15%}}. Each stack lasts 8s and is tracked independently.",
+        "req": 4,
+        "apply": {
+          "id": 694,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Odyssean Flower",
+    "plume": "Wicked Mage's Plumule",
+    "sands": "Nymph's Constancy",
+    "goblet": "Heroes' Tea Party",
+    "circlet": "Fell Dragon's Monocle"
+  },
+  {
+    "id": 45,
+    "enka_id": 15030,
+    "name": "Vourukasha's Glow",
+    "scanner_key": "VourukashasGlow",
+    "icon": "vourukashas_glow",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "hp%",
+        "value": 20,
+        "req": 2
+      },
+      {
+        "stat": "skill",
+        "value": 10,
+        "req": 4
+      },
+      {
+        "stat": "burst",
+        "value": 10,
+        "req": 4
+      },
+      {
+        "stat": null,
+        "value": "Taking DMG increases Skill and Burst DMG by {{8%}} for 5s. Max 5 stacks. Duration of each stack is counted independently.",
+        "req": 4,
+        "apply": {
+          "id": 695,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Stamen of Khvarena's Origin",
+    "plume": "Vibrant Pinion",
+    "sands": "Ancient Abscission",
+    "goblet": "Feast of Boundless Joy",
+    "circlet": "Heart of Khvarena's Brilliance"
+  },
+  {
+    "id": 46,
+    "enka_id": 15031,
+    "name": "Marechaussee Hunter",
+    "scanner_key": "MarechausseeHunter",
+    "icon": "marechaussee_hunter",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "normal",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": "charged",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "When a character's current HP changes, their CRIT Rate will be increased by {{12%}} for 5s. Max 3 stacks.",
+        "req": 4,
+        "apply": {
+          "id": 793,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Hunter's Brooch",
+    "plume": "Masterpiece's Overture",
+    "sands": "Moment of Judgment",
+    "goblet": "Forgotten Vessel",
+    "circlet": "Veteran's Visage"
+  },
+  {
+    "id": 47,
+    "enka_id": 15032,
+    "name": "Golden Troupe",
+    "scanner_key": "GoldenTroupe",
+    "icon": "golden_troupe",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "skill",
+        "value": 20,
+        "req": 2
+      },
+      {
+        "stat": "skill",
+        "value": 25,
+        "req": 4
+      },
+      {
+        "stat": null,
+        "value": "When not on the field, Elemental Skill DMG is increased by {{25%}}. This effect will be cleared 2s after taking the field.",
+        "req": 4,
+        "apply": {
+          "id": 794,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Golden Song's Variation",
+    "plume": "Golden Bird's Shedding",
+    "sands": "Golden Era's Prelude",
+    "goblet": "Golden Night's Bustle",
+    "circlet": "Golden Troupe's Reward"
+  },
+  {
+    "id": 48,
+    "enka_id": 15033,
+    "name": "Song of Days Past",
+    "scanner_key": "SongOfDaysPast",
+    "icon": "song_of_days_past",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "healing",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Healing accumulates Yearning equal to restored HP (Max 15 000). After 6s, party member's attacks' DMG is increased by {{8%}} of Yearning for 10s or 5 attacks.",
+        "req": 4
+      }
+    ],
+    "flower": "Forgotten Oath of Days Past",
+    "plume": "Recollection of Days Past",
+    "sands": "Echoing Sound From Days Past",
+    "goblet": "Promised Dream of Days Past",
+    "circlet": "Poetry of Days Past"
+  },
+  {
+    "id": 49,
+    "enka_id": 15034,
+    "name": "Nighttime Whispers in the Echoing Woods",
+    "scanner_key": "NighttimeWhispersintheEchoingWoods",
+    "icon": "nighttime_whispers_in_the_echoing_woods",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "atk%",
+        "value": 18,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "After Elemental Skill gain {{20%}} Geo DMG for 10s. Increase to 50% Geo DMG if protected by Crystallize shield.",
+        "req": 4,
+        "apply": {
+          "id": 866,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Selfless Floral Accessory",
+    "plume": "Honest Quill",
+    "sands": "Faithful Hourglass",
+    "goblet": "Magnanimous Ink Bottle",
+    "circlet": "Compassionate Ladies' Hat"
+  },
+  {
+    "id": 50,
+    "enka_id": 15035,
+    "name": "Fragment of Harmonic Whimsy",
+    "scanner_key": "FragmentOfHarmonicWhimsy",
+    "icon": "fragment_of_harmonic_whimsy",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "atk%",
+        "value": 18,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "When Bond of Life changes, gain {{18%}} increased DMG for 6s. Max 3 stacks.",
+        "req": 4,
+        "apply": {
+          "id": 895,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Harmonious Symphony Prelude",
+    "plume": "Ancient Sea's Nocturnal Musing",
+    "sands": "The Grand Jape of the Turning of Fate",
+    "goblet": "Ichor Shower Rhapsody",
+    "circlet": "Whimsical Dance of the Withered"
+  },
+  {
+    "id": 51,
+    "enka_id": 15036,
+    "name": "Unfinished Reverie",
+    "scanner_key": "UnfinishedReverie",
+    "icon": "unfinished_reverie",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "atk%",
+        "value": 18,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "If out of combat for 3s, increase DMG by {{50%}}. In combat, DMG Bonus decreases by 10% per second if no Burning enemy is nearby for more than 6s. Else it increases by 10% up to 50%.",
+        "req": 4,
+        "apply": {
+          "id": 896,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Dark Fruit of Bright Flowers",
+    "plume": "Faded Emerald Tail",
+    "sands": "Moment of Attainment",
+    "goblet": "The Wine-Flask Over Which the Plan Was Hatched",
+    "circlet": "Crownless Crown"
+  },
+  {
+    "id": 52,
+    "enka_id": 15037,
+    "name": "Scroll of the Hero of Cinder City",
+    "scanner_key": "ScrollOfTheHeroOfCinderCity",
+    "icon": "scroll_of_the_hero_of_cinder_city",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": null,
+        "value": "Regenerate {{6}} Energy when party member triggers a Nightsoul Burst.",
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Triggering Reaction increases related Elemental DMG for party by {{12%}} for 15s. Additional {{28%}} for 20s if in Nightsoul's Blessing.",
+        "req": 4,
+        "apply": {
+          "id": 972,
+          "option": 0,
+          "party": true
+        }
+      }
+    ],
+    "flower": "Beast Tamer's Talisman",
+    "plume": "Mountain Ranger's Marker",
+    "sands": "Mystic's Gold Dial",
+    "goblet": "Wandering Scholar's Claw Cup",
+    "circlet": "Demon-Warrior's Feather Mask"
+  },
+  {
+    "id": 53,
+    "enka_id": 15038,
+    "name": "Obsidian Codex",
+    "scanner_key": "ObsidianCodex",
+    "icon": "obsidian_codex",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": null,
+        "value": "All DMG increased by {{15%}} during Nightsoul's Blessing.",
+        "req": 2,
+        "apply": {
+          "id": 973,
+          "option": 0
+        }
+      },
+      {
+        "stat": null,
+        "value": "Consuming Nightsoul point on field increases CRIT Rate by {{40%}} for 6s.",
+        "req": 4,
+        "apply": {
+          "id": 974,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Reckoning of the Xenogenic",
+    "plume": "Root of the Spirit-Marrow",
+    "sands": "Myths of the Night Realm",
+    "goblet": "Pre-Banquet of the Contenders",
+    "circlet": "Crown of the Saints"
+  },
+  {
+    "id": 26,
+    "enka_id": 15011,
+    "name": "Prayers for Wisdom",
+    "scanner_key": "PrayersForWisdom",
+    "icon": "prayers_for_wisdom",
+    "stars": [ 4, 3 ],
+    "set_bonus": [
+      {
+        "stat": null,
+        "value": "Affected by Electro for {{40%}} less time.",
+        "req": 1
+      }
+    ],
+    "circlet": "Tiara of Thunder"
+  },
+  {
+    "id": 27,
+    "enka_id": 15013,
+    "name": "Prayers for Springtime",
+    "scanner_key": "PrayersForSpringtime",
+    "icon": "prayers_for_springtime",
+    "stars": [ 4, 3 ],
+    "set_bonus": [
+      {
+        "stat": null,
+        "value": "Affected by Cryo for {{40%}} less time.",
+        "req": 1
+      }
+    ],
+    "circlet": "Tiara of Frost"
+  },
+  {
+    "id": 28,
+    "enka_id": 15009,
+    "name": "Prayers for Illumination",
+    "scanner_key": "PrayersForIllumination",
+    "icon": "prayers_for_illumination",
+    "stars": [ 4, 3 ],
+    "set_bonus": [
+      {
+        "stat": null,
+        "value": "Affected by Pyro for {{40%}} less time.",
+        "req": 1
+      }
+    ],
+    "circlet": "Tiara of Flame"
+  },
+  {
+    "id": 29,
+    "enka_id": 15010,
+    "name": "Prayers for Destiny",
+    "scanner_key": "PrayersForDestiny",
+    "icon": "prayers_for_destiny",
+    "stars": [ 4, 3 ],
+    "set_bonus": [
+      {
+        "stat": null,
+        "value": "Affected by Hydro for {{40%}} less time.",
+        "req": 1
+      }
+    ],
+    "circlet": "Tiara of Torrents"
+  }
+]

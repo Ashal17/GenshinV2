@@ -1,0 +1,371 @@
+.frame_equipment {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+    .frame_equipment .container_object {
+        min-width: 248px;
+        width: calc(100% / 6 - 12px);
+        padding: 1px;
+    }
+
+    .frame_equipment .prompt_select_options {
+        grid-template-columns: repeat(auto-fill, 100px);
+    }
+
+    .equipment_icon {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .equipment_icon .icon_selects {
+        width: 80px;
+        height: 17px;
+    }
+
+.equipment_img {
+    height: 80px;
+    width: 80px;
+    margin: 5px 5px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+    .equipment_img img {
+        max-height: 74px;
+        max-width: 74px;
+    }
+
+.equipment_stats {
+    flex: 1 1;
+    background-color: var(--grey-15);
+    height: min-content;
+}
+
+    .equipment_stats .tooltip_trigger {
+        padding: 2px;
+        font-size: 0.9em;
+        text-overflow:ellipsis;
+        color:var(--yellow);
+    }
+
+    .equipment_stats .tooltip_hover {
+        top: 100%;
+        right: -5px;
+        width: calc(100% + 86px);
+        transform: none;
+        color: var(--white);
+    }
+
+.container_weapon .equipment_stats .statline:nth-child(2) {
+    border-bottom: 10px solid var(--grey-20);
+}
+
+.artifact_stats {
+    height: auto;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+.artifact_stats .icon_selects {
+    height: 20px;
+}
+
+    .artifact_stats .icon_selects_text {
+        font-size:0.9em;
+    }
+
+.artifact_sub_line {
+    display: flex;
+    flex-direction: row;
+}
+
+.artifact_sub_line .container:first-child {
+    width: calc(50% - 4px);
+    margin-right: 4px;
+}
+
+.artifact_sub_line > .container:nth-child(2) {
+    width: calc(25% - 2px);
+    margin-right: 2px;
+}
+
+    .artifact_sub_line .prompt_values {
+        min-width: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+.artifact_sub_val {
+    width: calc(100% - 2px);
+}
+
+    .artifact_sub_val .icon_selects_text {
+        color: var(--yellow);
+    }
+
+.artifact_sub_line .prompt_input_simple {
+    min-width: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.artifact_stats .left {
+    width: 75%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.artifact_stats .right {
+    width: 25%;
+    min-width: 45px;
+    color: var(--yellow);
+}
+
+
+.prompt_select_options .equipment_img {
+    height: 90px;
+    width: 90px;
+}
+
+    .prompt_select_options .equipment_img img {
+        max-height: 84px;
+        max-width: 84px;
+    }
+
+.prompt_select_options .equipment_icon:hover .equipment_img {
+    box-shadow: 0px 0px 5px 5px var(--orange-bg-glow) inset;
+}
+
+
+.equipment_img_label {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 70%;
+    background-color: var(--black-alpha-75);
+    box-shadow: 0px 0px 5px 5px var(--black-alpha-75);
+    border-radius: 4px;
+    padding: 2px 3px;
+    color: var(--white);
+    text-shadow: none;
+    width: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 26px;
+    pointer-events:none;
+}
+
+.container_weapon .prompt_value:has(~ .prompt_value:hover), .artifact_level + .prompt_values .prompt_value:has(~ .prompt_value:hover) {
+    background-color: var(--orange-bg-dark);
+}
+
+.artifact_level + .prompt_values {
+    flex-direction:column-reverse;
+}
+
+    .artifact_level + .prompt_values .prompt_value:not(:first-child) {
+        border-bottom: 1px solid var(--orange-bg);
+    }
+
+.weapon_level.l0 {
+    background: transparent;
+}
+
+.weapon_level.l1 {
+    background: linear-gradient(to right, var(--orange-bg) 7%, transparent 0%);
+}
+
+.weapon_level.l2 {
+    background: linear-gradient(to right, var(--orange-bg) 15%, transparent 0%);
+}
+
+.weapon_level.l3 {
+    background: linear-gradient(to right, var(--orange-bg) 22%, transparent 0%);
+}
+
+.weapon_level.l4 {
+    background: linear-gradient(to right, var(--orange-bg) 30%, transparent 0%);
+}
+
+.weapon_level.l5 {
+    background: linear-gradient(to right, var(--orange-bg) 37%, transparent 0%);
+}
+
+.weapon_level.l6 {
+    background: linear-gradient(to right, var(--orange-bg) 45%, transparent 0%);
+}
+
+.weapon_level.l7 {
+    background: linear-gradient(to right, var(--orange-bg) 52%, transparent 0%);
+}
+
+.weapon_level.l8 {
+    background: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
+}
+
+.weapon_level.l9 {
+    background: linear-gradient(to right, var(--orange-bg) 67%, transparent 0%);
+}
+
+.weapon_level.l10 {
+    background: linear-gradient(to right, var(--orange-bg) 75%, transparent 0%);
+}
+
+.weapon_level.l11 {
+    background: linear-gradient(to right, var(--orange-bg) 82%, transparent 0%);
+}
+
+.weapon_level.l12 {
+    background: linear-gradient(to right, var(--orange-bg) 90%, transparent 0%);
+}
+
+.weapon_level.l13 {
+    background: var(--orange-bg);
+}
+
+.weapon_refine.r0 {
+    background: transparent;
+}
+
+.weapon_refine.r1 {
+    background: linear-gradient(to right, var(--orange-bg) 25%, transparent 0%);
+}
+
+.weapon_refine.r2 {
+    background: linear-gradient(to right, var(--orange-bg) 50%, transparent 0%);
+}
+
+.weapon_refine.r3 {
+    background: linear-gradient(to right, var(--orange-bg) 75%, transparent 0%);
+}
+
+.weapon_refine.r4 {
+    background: var(--orange-bg);
+}
+
+.artifact_stars.s0 {
+    background: transparent;
+}
+
+.artifact_stars.s1 {
+    background: linear-gradient(to right, var(--orange-bg) 20%, transparent 0%);
+}
+
+.artifact_stars.s2 {
+    background: linear-gradient(to right, var(--orange-bg) 40%, transparent 0%);
+}
+
+.artifact_stars.s3 {
+    background: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
+}
+
+.artifact_stars.s4 {
+    background: linear-gradient(to right, var(--orange-bg) 80%, transparent 0%);
+}
+
+.artifact_stars.s5 {
+    background: var(--orange-bg);
+}
+
+.artifact_level.l0, .artifact_level.l1, .artifact_level.l2, .artifact_level.l3 {
+    background: transparent;
+}
+
+.artifact_level.l4, .artifact_level.l5, .artifact_level.l6, .artifact_level.l7 {
+    background: linear-gradient(to right, var(--orange-bg) 20%, transparent 0%);
+}
+
+.artifact_level.l8, .artifact_level.l9, .artifact_level.l10, .artifact_level.l11 {
+    background: linear-gradient(to right, var(--orange-bg) 40%, transparent 0%);
+}
+
+.artifact_level.l12, .artifact_level.l13, .artifact_level.l14, .artifact_level.l15 {
+    background: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
+}
+
+.artifact_level.l16, .artifact_level.l17, .artifact_level.l18, .artifact_level.l19 {
+    background: linear-gradient(to right, var(--orange-bg) 80%, transparent 0%);
+}
+
+.artifact_level.l20 {
+    background: var(--orange-bg);
+}
+
+.artifact_sub.rv0 {
+    background: transparent;
+}
+
+.artifact_sub.rv1 {
+    background: linear-gradient(to right, var(--orange-bg) 16%, transparent 0%);
+}
+
+.artifact_sub.rv2 {
+    background: linear-gradient(to right, var(--orange-bg) 33%, transparent 0%);
+}
+
+.artifact_sub.rv3 {
+    background: linear-gradient(to right, var(--orange-bg) 50%, transparent 0%);
+}
+
+.artifact_sub.rv4 {
+    background: linear-gradient(to right, var(--orange-bg) 67%, transparent 0%);
+}
+
+.artifact_sub.rv5 {
+    background: linear-gradient(to right, var(--orange-bg) 84%, transparent 0%);
+}
+
+.artifact_sub.rv6 {
+    background: var(--orange-bg);
+}
+
+
+.img_stars_1 .equipment_img {
+    background-image: linear-gradient(to bottom right, #4f5864, #838f99);
+}
+
+.img_stars_2 .equipment_img {
+    background-image: linear-gradient(to bottom right, #48575c, #5e966c);
+}
+
+.img_stars_3 .equipment_img {
+    background-image: linear-gradient(to bottom right, #515474, #499fb3);
+}
+
+.img_stars_4 .equipment_img {
+    background-image: linear-gradient(to bottom right, #595482, #b886ca);
+}
+
+.img_stars_5 .equipment_img {
+    background-image: linear-gradient(to bottom right, #695453, #e6ac54);
+}
+
+.img_stars_3_2_1 .equipment_img {
+    background: linear-gradient(to bottom right, #515474, #499fb3) left/33%, linear-gradient(to bottom right, #4f5864, #838f99) right/33%, linear-gradient(to bottom right, #48575c, #5e966c);
+    background-repeat: no-repeat;
+}
+
+.img_stars_4_3 .equipment_img {
+    background: linear-gradient(to bottom right, #595482, #b886ca) left/50%, linear-gradient(to bottom right, #515474, #499fb3) right/50%;
+    background-repeat: no-repeat;
+}
+
+.img_stars_5_4 .equipment_img {
+    background: linear-gradient(to bottom right, #695453, #e6ac54) left/50%, linear-gradient(to bottom right, #595482, #b886ca) right/50%;
+    background-repeat: no-repeat;
+}
+
