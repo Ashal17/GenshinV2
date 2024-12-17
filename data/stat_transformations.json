@@ -87,7 +87,7 @@
     }
   ],
 
-  "mult_hp": [
+  "mult": [
     {
       "stat": "hp_base_mid",
       "change": "add",
@@ -102,9 +102,7 @@
       "stat": "hp",
       "change": "add",
       "mods": [ "hp_base_mid" ]
-    }
-  ],
-  "mult_atkdef": [
+    },
     {
       "stat": "atk_base_mid",
       "change": "add",
@@ -134,6 +132,38 @@
       "stat": "def",
       "change": "add",
       "mods": [ "def_base_mid" ]
+    }
+  ],
+  "mult_trans": [
+    {
+      "stat": "hp%_trans",
+      "change": "times",
+      "mods": [ "hp_base" ]
+    },
+    {
+      "stat": "hp",
+      "change": "add",
+      "mods": [ "hp%_trans" ]
+    },
+    {
+      "stat": "atk%_trans",
+      "change": "times",
+      "mods": [ "atk_base" ]
+    },
+    {
+      "stat": "atk",
+      "change": "add",
+      "mods": [ "atk%_trans" ]
+    },
+    {
+      "stat": "def%_trans",
+      "change": "times",
+      "mods": [ "def_base" ]
+    },
+    {
+      "stat": "def",
+      "change": "add",
+      "mods": [ "def%_trans" ]
     }
   ],
   "trans": [
@@ -526,6 +556,16 @@
       "stat": "bondoflifeatk",
       "change": "times",
       "mods": [ "bondoflife" ]
+    },
+    {
+      "stat": "healinghp",
+      "change": "add",
+      "mods": [ "hp" ]
+    },
+    {
+      "stat": "healinghp",
+      "change": "times",
+      "mods": [ "healing" ]
     }
   ],
 

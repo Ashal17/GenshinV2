@@ -7,8 +7,15 @@ const character_visions = ["anemo", "cryo", "dendro", "electro", "geo", "hydro",
 
 function equip_character_change_simple_trigger(party_id) {
     equip_character_update_stats(party_id);
+
+    equip_stats_update_total_all();
     equip_effects_update_options_all();
-    equip_stats_update_total(party_id);
+    equip_effects_update_stats_all();
+    equip_stats_update_total_all();
+    equip_skills_update_all();
+
+    equip_effects_display_all();
+    equip_skills_display_all();
     equip_character_display(party_id);
     equip_stats_display();
     equip_storage_save_last();
@@ -16,9 +23,16 @@ function equip_character_change_simple_trigger(party_id) {
 
 function equip_character_change_trigger(party_id) {
     equip_character_update_all(true);
-    equip_effects_update_options_all();
-    equip_stats_update_total_all();
 
+    equip_stats_update_total_all();
+    equip_effects_update_options_all();
+    equip_effects_update_stats_all();
+    equip_stats_update_total_all();
+    equip_skills_update_all();
+    equip_skills_update_reset_active(party_id);
+
+    equip_effects_display_all();
+    equip_skills_display_all();
     equip_character_display(party_id);
     equip_character_display_resonance();
     equip_stats_display();
@@ -28,9 +42,12 @@ function equip_character_change_trigger(party_id) {
 function equip_enemy_change_trigger() {
     for (var i = 0; i < party_size; i++) {
         equip_character_update_stats(i);
-        equip_stats_update_total(i);
     }
+    equip_stats_update_total_all();
+    equip_skills_update_all();
+
     equip_enemy_display();
+    equip_skills_display_all();
     equip_stats_display();
     equip_storage_save_last();
 }
@@ -40,6 +57,8 @@ function equip_active_character_change(party_id) {
         user_objects.user_active_character = party_id;
               
         equip_control_display_all();
+        equip_effects_display_all();
+        equip_skills_display_all();
         equip_weapon_display();
         equip_artifacts_display_all();
         equip_stats_display();
@@ -250,4 +269,76 @@ function equip_enemy_display() {
     icon.className = "character_icon " + enemy.vision;
     img.src = "/images/icons/enemy/" + enemy.icon + ".png";
     level.innerHTML = user_objects.user_enemy.level;
+}
+
+function equip_character_return_party_id_by_name(character_id) {
+    for (var i = 0; i < party_size; i++) {
+        if (user_objects.user_party[i].id == character_id) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+function equip_character_return_party_id_by_special(special_condition) {
+    switch (special_condition) {
+        case "highest_elemastery":
+            var highest_index = 0;
+            var highest_value = 0;
+            for (var i = 0; i < party_size; i++) {
+                if (output_party[i].stats.total["elemastery"] > highest_value) {
+                    highest_value = output_party[i].stats.total["elemastery"];
+                    highest_index = i;
+                }
+            }
+            return highest_index;
+
+            break;
+        default:
+            return
+    }
+}
+
+function equip_character_return_vision_count(vision) {
+    var count = 0;
+
+    if (vision == "unique") {
+        var visions = [];
+
+        for (var i = 0; i < party_size; i++) {
+            if (!visions.includes(data_characters[user_objects.user_party[i].id].vision)) {
+                visions.push(data_characters[user_objects.user_party[i].id].vision);
+                count += 1;
+            }                
+        }
+
+    } else {
+        for (var i = 0; i < party_size; i++) {
+            if (data_characters[user_objects.user_party[i].id].vision == vision) {
+                count += 1;
+            }
+        }
+    }
+
+    
+    return count;
+}
+
+function equip_character_return_nation_count(nation) {
+    var count = 0;
+    for (var i = 0; i < party_size; i++) {
+        if (data_characters[user_objects.user_party[i].id].nation == nation) {
+            count += 1;
+        }
+    }
+    return count;
+}
+
+function equip_character_return_short_name(character_id) {
+    var character = data_characters[character_id];
+    if (character.short_name) {
+        return character.short_name;
+    } else {
+        return character.name;
+    }
 }

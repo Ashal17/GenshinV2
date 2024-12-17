@@ -10,7 +10,7 @@ const frame_stats_columns = 4;
 
 
 async function equip_load_all() {
-    var ver = "?20241029"
+    var ver = "?20241128"
 
     data_characters = await utils_load_file("/data/characters.json" + ver);
     data_enemies = await utils_load_file("/data/enemies.json" + ver);
@@ -22,6 +22,7 @@ async function equip_load_all() {
     data_artifact_vars = await utils_load_file("/data/artifact_vars.json");
     data_artifact_stats = await utils_load_file("/data/artifact_stats.json");
     data_artifact_sets = await utils_load_file("/data/artifact_sets.json");
+    data_effects = await utils_load_file("/data/effects.json");
 
     for (var i = 0; i < data_enemies.length; i++) {
         for (var ii = 0; ii < data_enemies[i].stats.length; ii++) {
@@ -46,8 +47,8 @@ async function equip_setup_all() {
         equip_setup_ui_frame_party();
         equip_setup_ui_frame_stats();
         equip_setup_ui_frame_equipment();
-        //equip_setup_ui_frame_effects();
-        //equip_setup_ui_frame_skills();
+        equip_setup_ui_frame_effects();
+        equip_setup_ui_frame_skills();
 
         equip_storage_load_last();
     } catch (err) {
@@ -353,6 +354,48 @@ function equip_setup_ui_artifact(artifact_id) {
     return obj;
 }
 
+function equip_setup_ui_frame_effects() {
+    var parent = document.getElementById("frame_effects_content");
+    parent.className += " frame_effects";
+
+    for (var i = 0; i < effect_types.length; i++) {
+        parent.appendChild(equip_setup_ui_effects(effect_types[i]));
+    }
+}
+
+function equip_setup_ui_effects(effect_type) {
+    var obj = utils_create_obj("div", "container_object container_effects");
+
+    obj.appendChild(utils_create_obj("p", "container_name", null, utils_capitalize(effect_type)));
+
+    obj.appendChild(utils_create_obj("div", "effects_column", "effects_container_" + effect_type));
+
+    if (effect_type == "manual") {
+        var new_btn = utils_create_obj("div", "new_button");
+        new_btn.onclick = function (event) { equip_control_create_effects_manual() };
+        obj.appendChild(new_btn);
+    }
+
+    return obj;
+}
+
+function equip_setup_ui_frame_skills() {
+    var parent = document.getElementById("frame_skills_content");
+    parent.className += " frame_skills";
+
+    parent.appendChild(equip_setup_ui_skills("permanent"));
+    parent.appendChild(equip_setup_ui_skills("active"));
+}
+
+function equip_setup_ui_skills(skill_window) {
+    var obj = utils_create_obj("div", "container_object container_skills container_skills_" + skill_window);
+
+    obj.appendChild(utils_create_obj("p", "container_name", null, utils_capitalize(skill_window)));
+    obj.appendChild(utils_create_obj("div", "skills_column", "skills_container_" + skill_window));
+
+    return obj;
+}
+
 function equip_setup_user_objects(user_data = null) {
     user_objects = {};
 
@@ -389,6 +432,9 @@ function equip_setup_user_objects(user_data = null) {
             char.artifacts[artifact_types[ii]] = artifact;
         }
 
+        char.effects = utils_object_get_value(user_data, "user_party." + i + ".effects", []);
+        char.active_skills = utils_object_get_value(user_data, "user_party." + i + ".active_skills", []);
+
         user_objects.user_party.push(char);
     }
     user_objects.user_enemy = {};
@@ -422,10 +468,21 @@ function equip_setup_output_objects() {
         char.stats.weapon = [];
         char.stats.artifacts = [];
         char.stats.effects = [];
+        char.stats.effects_transform_other = [];
+        char.stats.effects_transform_personal = [];
 
         char.effects = {};
+        char.effects.infusion = false;
         char.effects.character = [];
         char.effects.party = [];
+
+        char.skills = {};
+        char.skills.attacks = [];
+        char.skills.passives = [];
+        char.skills.consts = [];
+        char.skills.reactions = {};
+        char.skills.bonusdmg = {};
+        char.skills.other = [];
 
         output_party.push(char);
     }
@@ -437,6 +494,7 @@ function equip_setup_output_objects() {
 function equip_setup_default_stats() {
     default_stats = {};
     display_stats = [];
+    default_bonusdmg = {};
 
     for (let stat_id in data_stats) {
         default_stats[stat_id] = 0;
@@ -445,5 +503,19 @@ function equip_setup_default_stats() {
             display_stats.push(stat_id); 
         }
     }  
+
+    data_manual_effects = [];
+    for (var i = 0; i < data_effects.length; i++) {
+        if (data_effects[i].manual) {
+            data_manual_effects.push(data_effects[i]);
+        }
+    }
+
+    for (var i = 0; i < bonusdmg_visions.length; i++) {
+        default_bonusdmg[bonusdmg_visions[i]] = {};
+        for (var ii = 0; ii < bonusdmg_types.length; ii++) {
+            default_bonusdmg[bonusdmg_visions[i]][bonusdmg_types[ii]] = 0;
+        }
+    }
 }
 

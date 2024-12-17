@@ -63,12 +63,41 @@ function utils_array_get_parameter_by_lookup(array, lookup_parameter, value, ret
     return utils_array_get_by_lookup(array, lookup_parameter, value, caseinsensitive)[return_parameter];
 }
 
-function utils_number_format(num) {
+function utils_capitalize(input) {
+    if (typeof input !== 'string') return ''
+    return input.charAt(0).toUpperCase() + input.slice(1)
+}
+
+function utils_number_format(num, round = null) {
+
     if (num) {
+        if (round != null) {
+            num = utils_number_round(num, round);
+        }
+
         return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ").replace(/(-)(?=(\d))/g, "$1 ");
     } else {
         return num;
     }
+}
+
+function utils_number_check_decimal_scale(num) {
+    result = 0;
+    while (num < 1) {
+        num = num * 10;
+        result++;
+    }
+    return Math.pow(10, result);
+}
+
+function utils_number_round(num, min_rounding) {
+    var rounding = utils_number_check_decimal_scale(num)
+    if (rounding > min_rounding) {
+        var result = Math.round(num * rounding * min_rounding) / (rounding * min_rounding);
+    } else {
+        var result = Math.round(num * min_rounding) / min_rounding;
+    }
+    return result
 }
 
 function utils_number_verify(input_value, decimal_places, min, max) {
@@ -137,4 +166,10 @@ function utils_object_get_value(obj, path, default_value ) {
     } else {
         return default_value;
     }
+}
+
+function utils_object_create_key(obj, key, value) {
+    if (!obj.hasOwnProperty(key)) {
+        obj[key] = value;
+    } 
 }

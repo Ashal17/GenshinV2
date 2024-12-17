@@ -213,7 +213,11 @@ function utils_delete_children(obj, limit) {
 }
 
 function utils_create_bonus(bonus) {
-    return utils_create_stat(bonus.stat, bonus.value);       
+    if (bonus.custom_name) {
+        return utils_create_statline(bonus.custom_name, utils_format_stat_value(data_stats[bonus.stat], bonus.value));
+    } else {
+        return utils_create_stat(bonus.stat, bonus.value);       
+    }
 }
 
 function utils_create_stat(stat_id, value) {
@@ -225,11 +229,11 @@ function utils_create_stat(stat_id, value) {
     }
 }
 
-function utils_create_statline(text, value) {
+function utils_create_statline(text, value, value_class) {
     var line = utils_create_obj("div", "statline");
     line.appendChild(utils_create_obj("p", null, null, text));
     if (value || value === 0) {
-        line.appendChild(utils_create_obj("p", null, null, value));
+        line.appendChild(utils_create_obj("p", value_class, null, value));
     }
     return line;
 }

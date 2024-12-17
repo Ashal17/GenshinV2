@@ -4,7 +4,9 @@
     "enka_id": 0,
     "name": "None",
     "icon": "none",
-    "stars": [ 0 ],
+    "stars": [
+      0
+    ],
     "set_bonus": [],
     "flower": "None",
     "plume": "None",
@@ -18,7 +20,11 @@
     "name": "Adventurer",
     "scanner_key": "Adventurer",
     "icon": "adventurer",
-    "stars": [ 3, 2, 1 ],
+    "stars": [
+      3,
+      2,
+      1
+    ],
     "set_bonus": [
       {
         "stat": "hp",
@@ -43,7 +49,11 @@
     "name": "Lucky Dog",
     "scanner_key": "LuckyDog",
     "icon": "lucky_dog",
-    "stars": [ 3, 2, 1 ],
+    "stars": [
+      3,
+      2,
+      1
+    ],
     "set_bonus": [
       {
         "stat": "def",
@@ -68,7 +78,11 @@
     "name": "Travelling Doctor",
     "scanner_key": "TravelingDoctor",
     "icon": "travelling_doctor",
-    "stars": [ 3, 2, 1 ],
+    "stars": [
+      3,
+      2,
+      1
+    ],
     "set_bonus": [
       {
         "stat": "healinginc",
@@ -93,7 +107,10 @@
     "name": "Instructor",
     "scanner_key": "Instructor",
     "icon": "instructor",
-    "stars": [ 4, 3 ],
+    "stars": [
+      4,
+      3
+    ],
     "set_bonus": [
       {
         "stat": "elemastery",
@@ -105,7 +122,7 @@
         "value": "After causing an elemental reaction increases party members' Elemental Mastery by {{120}} for 8s.",
         "req": 4,
         "apply": {
-          "id": 99,
+          "id": 12,
           "option": 0,
           "party": true
         }
@@ -123,7 +140,10 @@
     "name": "Berserker",
     "scanner_key": "Berserker",
     "icon": "berserker",
-    "stars": [ 4, 3 ],
+    "stars": [
+      4,
+      3
+    ],
     "set_bonus": [
       {
         "stat": "crit",
@@ -135,7 +155,7 @@
         "value": "When HP is below 70%, CRIT Rate increases by an additional {{24%}}.",
         "req": 4,
         "apply": {
-          "id": 98,
+          "id": 156,
           "option": 0
         }
       }
@@ -152,7 +172,10 @@
     "name": "The Exile",
     "scanner_key": "TheExile",
     "icon": "the_exile",
-    "stars": [ 4, 3 ],
+    "stars": [
+      4,
+      3
+    ],
     "set_bonus": [
       {
         "stat": "recharge",
@@ -177,7 +200,10 @@
     "name": "Resolution of Sojourner",
     "scanner_key": "ResolutionOfSojourner",
     "icon": "resolution_of_sojourner",
-    "stars": [ 4, 3 ],
+    "stars": [
+      4,
+      3
+    ],
     "set_bonus": [
       {
         "stat": "atk%",
@@ -202,7 +228,10 @@
     "name": "Martial Artist",
     "scanner_key": "MartialArtist",
     "icon": "martial_artist",
-    "stars": [ 4, 3 ],
+    "stars": [
+      4,
+      3
+    ],
     "set_bonus": [
       {
         "stat": "normal",
@@ -219,7 +248,7 @@
         "value": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by {{25%}} for 8s.",
         "req": 4,
         "apply": {
-          "id": 97,
+          "id": 155,
           "option": 0
         }
       }
@@ -236,7 +265,10 @@
     "name": "Defender's Will",
     "scanner_key": "DefendersWill",
     "icon": "defenders_will",
-    "stars": [ 4, 3 ],
+    "stars": [
+      4,
+      3
+    ],
     "set_bonus": [
       {
         "stat": "def%",
@@ -248,7 +280,7 @@
         "value": "Increases Elemental RES by {{30%}} to each element present among your characters in the party.",
         "req": 4,
         "apply": {
-          "id": 85,
+          "id": 146,
           "option": 0
         }
       }
@@ -265,7 +297,10 @@
     "name": "Tiny Miracle",
     "scanner_key": "TinyMiracle",
     "icon": "tiny_miracle",
-    "stars": [ 4, 3 ],
+    "stars": [
+      4,
+      3
+    ],
     "set_bonus": [
       {
         "stat": "elementalres",
@@ -277,7 +312,7 @@
         "value": "Incoming elemental DMG increases corresponding Elemental RES by {{30%}} for 10s. Can only occur once every 10s.",
         "req": 4,
         "apply": {
-          "id": 84,
+          "id": 145,
           "option": 0
         }
       }
@@ -294,7 +329,10 @@
     "name": "Brave Heart",
     "scanner_key": "BraveHeart",
     "icon": "brave_heart",
-    "stars": [ 4, 3 ],
+    "stars": [
+      4,
+      3
+    ],
     "set_bonus": [
       {
         "stat": "atk%",
@@ -306,7 +344,7 @@
         "value": "Increases DMG by {{30%}} against enemies with more than 50% HP.",
         "req": 4,
         "apply": {
-          "id": 96,
+          "id": 154,
           "option": 0
         }
       }
@@ -323,7 +361,10 @@
     "name": "Gambler",
     "scanner_key": "Gambler",
     "icon": "gambler",
-    "stars": [ 4, 3 ],
+    "stars": [
+      4,
+      3
+    ],
     "set_bonus": [
       {
         "stat": "skill",
@@ -348,7 +389,10 @@
     "name": "Scholar",
     "scanner_key": "Scholar",
     "icon": "scholar",
-    "stars": [ 4, 3 ],
+    "stars": [
+      4,
+      3
+    ],
     "set_bonus": [
       {
         "stat": "recharge",
@@ -373,7 +417,10 @@
     "name": "Gladiator's Finale",
     "scanner_key": "GladiatorsFinale",
     "icon": "gladiators_finale",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "atk%",
@@ -385,7 +432,7 @@
         "value": "If the wielder of this artifact set uses a Sword, Claymore, or Polearm, increases their Normal Attack DMG by {{35%}}.",
         "req": 4,
         "apply": {
-          "id": 95,
+          "id": 153,
           "option": 0
         }
       }
@@ -402,7 +449,10 @@
     "name": "Maiden Beloved",
     "scanner_key": "MaidenBeloved",
     "icon": "maiden_beloved",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "healing",
@@ -414,7 +464,7 @@
         "value": "Using an Elemental Skill or Elemental Burst increase healing received by all party member by {{20%}} for 10s.",
         "req": 4,
         "apply": {
-          "id": 94,
+          "id": 11,
           "option": 0,
           "party": true
         }
@@ -432,7 +482,10 @@
     "name": "Noblesse Oblige",
     "scanner_key": "NoblesseOblige",
     "icon": "noblesse_oblige",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "burst",
@@ -444,7 +497,7 @@
         "value": "Using an Elemental Burst increases all party members' ATK by {{20%}} for 12s. This effect cannot stack.",
         "req": 4,
         "apply": {
-          "id": 93,
+          "id": 10,
           "option": 0,
           "party": true
         }
@@ -462,7 +515,10 @@
     "name": "Bloodstained Chivalry",
     "scanner_key": "BloodstainedChivalry",
     "icon": "bloodstained_chivalry",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "physical",
@@ -474,7 +530,7 @@
         "value": "After defeating an opponent, increases Charged Attack DMG by {{50%}}, and reduces its Stamina cost to 0 for 10s.",
         "req": 4,
         "apply": {
-          "id": 92,
+          "id": 152,
           "option": 0
         }
       }
@@ -491,7 +547,10 @@
     "name": "Wanderer's Troupe",
     "scanner_key": "WanderersTroupe",
     "icon": "wanderers_troupe",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "elemastery",
@@ -503,7 +562,7 @@
         "value": "Increases Charged Attack DMG by {{35%}} if the character uses a Catalyst or Bow.",
         "req": 4,
         "apply": {
-          "id": 91,
+          "id": 151,
           "option": 0
         }
       }
@@ -520,7 +579,10 @@
     "name": "Viridescent Venerer",
     "scanner_key": "ViridescentVenerer",
     "icon": "viridescent_venerer",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "anemo",
@@ -536,11 +598,28 @@
         "stat": null,
         "value": "Decreases opponent's Elemental RES to the element infused in the Swirl by {{40%}} for 10s.",
         "req": 4,
-        "apply": {
-          "id": 83,
-          "option": 0,
-          "party": true
-        }
+        "apply": [
+          {
+            "id": 2,
+            "option": 0,
+            "party": true
+          },
+          {
+            "id": 3,
+            "option": 0,
+            "party": true
+          },
+          {
+            "id": 4,
+            "option": 0,
+            "party": true
+          },
+          {
+            "id": 5,
+            "option": 0,
+            "party": true
+          }
+        ]
       }
     ],
     "flower": "In Remembrance of Viridescent Fields",
@@ -555,7 +634,10 @@
     "name": "Thundering Fury",
     "scanner_key": "ThunderingFury",
     "icon": "thundering_fury",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "electro",
@@ -600,7 +682,10 @@
     "name": "Thundersoother",
     "scanner_key": "Thundersoother",
     "icon": "thundersoother",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "electrores",
@@ -612,7 +697,7 @@
         "value": "Increase DMG against enemies affected by Electro by {{35%}}.",
         "req": 4,
         "apply": {
-          "id": 90,
+          "id": 150,
           "option": 0
         }
       }
@@ -629,7 +714,10 @@
     "name": "Crimson Witch of Flames",
     "scanner_key": "CrimsonWitchOfFlames",
     "icon": "crimson_witch_of_flames",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "pyro",
@@ -666,7 +754,7 @@
         "value": "Using an Elemental Skill increases Pyro DMG by {{7.5%}} for 10s. Max 3 stacks.",
         "req": 4,
         "apply": {
-          "id": 89,
+          "id": 149,
           "option": 0
         }
       }
@@ -683,7 +771,10 @@
     "name": "Lavawalker",
     "scanner_key": "Lavawalker",
     "icon": "lavawalker",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "pyrores",
@@ -695,7 +786,7 @@
         "value": "Increases DMG against enemies affected by Pryo by {{35%}}",
         "req": 4,
         "apply": {
-          "id": 88,
+          "id": 148,
           "option": 0
         }
       }
@@ -712,7 +803,10 @@
     "name": "Archaic Petra",
     "scanner_key": "ArchaicPetra",
     "icon": "archaic_petra",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "geo",
@@ -723,11 +817,28 @@
         "stat": null,
         "value": "Upon obtaining Crystallize's Elemental Shard, all party members gain {{35%}} DMG to that element for 10s. Only one of these effects can exist at a time.",
         "req": 4,
-        "apply": {
-          "id": 87,
-          "option": 0,
-          "party": true
-        }
+        "apply": [
+          {
+            "id": 6,
+            "option": 0,
+            "party": true
+          },
+          {
+            "id": 7,
+            "option": 0,
+            "party": true
+          },
+          {
+            "id": 8,
+            "option": 0,
+            "party": true
+          },
+          {
+            "id": 9,
+            "option": 0,
+            "party": true
+          }
+        ]
       }
     ],
     "flower": "Flower of Creviced Cliff",
@@ -742,7 +853,10 @@
     "name": "Retracing Bolide",
     "scanner_key": "RetracingBolide",
     "icon": "retracing_bolide",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "shield",
@@ -754,7 +868,7 @@
         "value": "While protected by a Shield, gain {{40%}} Normal and Charged Attack DMG.",
         "req": 4,
         "apply": {
-          "id": 86,
+          "id": 147,
           "option": 0
         }
       }
@@ -771,7 +885,10 @@
     "name": "Blizzard Strayer",
     "scanner_key": "BlizzardStrayer",
     "icon": "blizzard_strayer",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "cryo",
@@ -783,7 +900,7 @@
         "value": "CRIT Rate against enemies affected by Cryo is increased by {{20%}}. If the enemy is Frozen, CRIT Rate is increased by an additional {{20%}}.",
         "req": 4,
         "apply": {
-          "id": 81,
+          "id": 144,
           "option": 0
         }
       }
@@ -800,7 +917,10 @@
     "name": "Heart of Depth",
     "scanner_key": "HeartOfDepth",
     "icon": "heart_of_depth",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "hydro",
@@ -812,7 +932,7 @@
         "value": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by {{30%}} for 15s.",
         "req": 4,
         "apply": {
-          "id": 80,
+          "id": 143,
           "option": 0
         }
       }
@@ -829,7 +949,10 @@
     "name": "Pale Flame",
     "scanner_key": "PaleFlame",
     "icon": "pale_flame",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "physical",
@@ -841,7 +964,7 @@
         "value": "When an Elemental Skill hits an opponent, ATK is increased by {{9%}} for 7s. Max 2 stacks. At 2 stacks increase Physical DMG by {{25%}}.",
         "req": 4,
         "apply": {
-          "id": 380,
+          "id": 478,
           "option": 0
         }
       }
@@ -858,7 +981,10 @@
     "name": "Tenacity of the Millelith",
     "scanner_key": "TenacityOfTheMillelith",
     "icon": "millelith_tenacity",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "hp%",
@@ -870,7 +996,7 @@
         "value": "When an Elemental Skill hits an opponent, all party members gain {{20%}} ATK and {{30%}} Shield Strength for 3s.",
         "req": 4,
         "apply": {
-          "id": 379,
+          "id": 13,
           "option": 0,
           "party": true
         }
@@ -888,7 +1014,10 @@
     "name": "Shimenawa's Reminiscence",
     "scanner_key": "ShimenawasReminiscence",
     "icon": "shimenawa_reminiscence",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "atk%",
@@ -900,7 +1029,7 @@
         "value": "When casting an Elemental Skill, if the character has 15 or more Energy, they lose 15 Energy and Normal/Charged/Plunging Attack DMG is increased by {{50%}} for 10s.",
         "req": 4,
         "apply": {
-          "id": 418,
+          "id": 547,
           "option": 0
         }
       }
@@ -917,7 +1046,10 @@
     "name": "Emblem of Severed Fate",
     "scanner_key": "EmblemOfSeveredFate",
     "icon": "severed_fate",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "recharge",
@@ -929,7 +1061,7 @@
         "value": "Increases Elemental Burst DMG by {{25%}} of Energy Recharge. A maximum of {{75%}} bonus DMG can be obtained in this way.",
         "req": 4,
         "apply": {
-          "id": 419,
+          "id": 548,
           "option": 0
         }
       }
@@ -946,7 +1078,10 @@
     "name": "Husk of Opulent Dreams",
     "scanner_key": "HuskOfOpulentDreams",
     "icon": "opulent_dreams",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "def%",
@@ -958,7 +1093,7 @@
         "value": "On field, Geo damage grants {{6%}} DEF and {{6%}} Geo DMG. Off field, stack is gained every 3sec. Max 4 stacks.",
         "req": 4,
         "apply": {
-          "id": 493,
+          "id": 681,
           "option": 0
         }
       }
@@ -975,7 +1110,10 @@
     "name": "Ocean-Hued Clam",
     "scanner_key": "OceanHuedClam",
     "icon": "divine_chorus",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "healing",
@@ -1000,7 +1138,10 @@
     "name": "Vermillion Hereafter",
     "scanner_key": "VermillionHereafter",
     "icon": "vermillion_hereafter",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "atk%",
@@ -1012,7 +1153,7 @@
         "value": "Using Elemental Burst increases ATK by {{8%}}. Every time HP decreases, increases ATK by {{10%}}. Max 4 stacks.",
         "req": 4,
         "apply": {
-          "id": 536,
+          "id": 780,
           "option": 0
         }
       }
@@ -1029,7 +1170,10 @@
     "name": "Echoes of an Offering",
     "scanner_key": "EchoesOfAnOffering",
     "icon": "echoes_of_offering",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "atk%",
@@ -1041,7 +1185,7 @@
         "value": "{{36%}} chance to increase Normal Attack DMG by {{60%}} of ATK. Chance increases by {{20%}} until triggered.",
         "req": 4,
         "apply": {
-          "id": 537,
+          "id": 781,
           "option": 0
         }
       }
@@ -1058,7 +1202,10 @@
     "name": "Deepwood Memories",
     "scanner_key": "DeepwoodMemories",
     "icon": "deepwood_memories",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "dendro",
@@ -1070,7 +1217,7 @@
         "value": "After Elemental Skill or Burst hits opponent, their Dendro RES will be decreased by {{30%}} for 8s.",
         "req": 4,
         "apply": {
-          "id": 583,
+          "id": 14,
           "option": 0,
           "party": true
         }
@@ -1088,7 +1235,10 @@
     "name": "Gilded Dreams",
     "scanner_key": "GildedDreams",
     "icon": "gilded_dreams",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "elemastery",
@@ -1100,8 +1250,9 @@
         "value": "For 8s after triggering an Elemental Reaction, ATK is increased by {{14%}} for each party member with same Elemental Type, and Elemental Mastery is increased by {{50}} for each party member with different Elemental Type",
         "req": 4,
         "apply": {
-          "id": 584,
-          "option": 0
+          "id": 1520,
+          "option": 0,
+          "special": "same_element"
         }
       }
     ],
@@ -1117,7 +1268,10 @@
     "name": "Desert Pavilion Chronicle",
     "scanner_key": "DesertPavilionChronicle",
     "icon": "desert_pavilion_chronicle",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "anemo",
@@ -1129,7 +1283,7 @@
         "value": "When Charged Attacks hit opponents, Normal Attack SPD will increase by {{10%}} and Normal, Charged, and Plunging Attack DMG will increase by {{40%}} for 15s.",
         "req": 4,
         "apply": {
-          "id": 652,
+          "id": 959,
           "option": 0
         }
       }
@@ -1146,7 +1300,10 @@
     "name": "Flower of Paradise Lost",
     "scanner_key": "FlowerOfParadiseLost",
     "icon": "flower_of_paradise_lost",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "elemastery",
@@ -1173,7 +1330,7 @@
         "value": "Triggering Bloom, Hyperbloom or Burgeon increases all of their damage by {{25%}} for 10 seconds. Max 4 Stacks.",
         "req": 4,
         "apply": {
-          "id": 653,
+          "id": 960,
           "option": 0
         }
       }
@@ -1190,7 +1347,10 @@
     "name": "Nymph's Dream",
     "scanner_key": "NymphsDream",
     "icon": "nymphs_dream",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "hydro",
@@ -1202,7 +1362,7 @@
         "value": "Normal, Charged and Plunging Attack, Skill and Burst hits increase Attack by {{7%}}/{{16%}}/{{25%}} and Hydro DMG by {{4%}}/{{9%}}/{{15%}}. Each stack lasts 8s and is tracked independently.",
         "req": 4,
         "apply": {
-          "id": 694,
+          "id": 1029,
           "option": 0
         }
       }
@@ -1219,7 +1379,10 @@
     "name": "Vourukasha's Glow",
     "scanner_key": "VourukashasGlow",
     "icon": "vourukashas_glow",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "hp%",
@@ -1241,7 +1404,7 @@
         "value": "Taking DMG increases Skill and Burst DMG by {{8%}} for 5s. Max 5 stacks. Duration of each stack is counted independently.",
         "req": 4,
         "apply": {
-          "id": 695,
+          "id": 1030,
           "option": 0
         }
       }
@@ -1258,7 +1421,10 @@
     "name": "Marechaussee Hunter",
     "scanner_key": "MarechausseeHunter",
     "icon": "marechaussee_hunter",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "normal",
@@ -1275,7 +1441,7 @@
         "value": "When a character's current HP changes, their CRIT Rate will be increased by {{12%}} for 5s. Max 3 stacks.",
         "req": 4,
         "apply": {
-          "id": 793,
+          "id": 1127,
           "option": 0
         }
       }
@@ -1292,7 +1458,10 @@
     "name": "Golden Troupe",
     "scanner_key": "GoldenTroupe",
     "icon": "golden_troupe",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "skill",
@@ -1309,7 +1478,7 @@
         "value": "When not on the field, Elemental Skill DMG is increased by {{25%}}. This effect will be cleared 2s after taking the field.",
         "req": 4,
         "apply": {
-          "id": 794,
+          "id": 1128,
           "option": 0
         }
       }
@@ -1326,7 +1495,10 @@
     "name": "Song of Days Past",
     "scanner_key": "SongOfDaysPast",
     "icon": "song_of_days_past",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "healing",
@@ -1351,7 +1523,10 @@
     "name": "Nighttime Whispers in the Echoing Woods",
     "scanner_key": "NighttimeWhispersintheEchoingWoods",
     "icon": "nighttime_whispers_in_the_echoing_woods",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "atk%",
@@ -1363,7 +1538,7 @@
         "value": "After Elemental Skill gain {{20%}} Geo DMG for 10s. Increase to 50% Geo DMG if protected by Crystallize shield.",
         "req": 4,
         "apply": {
-          "id": 866,
+          "id": 1257,
           "option": 0
         }
       }
@@ -1380,7 +1555,10 @@
     "name": "Fragment of Harmonic Whimsy",
     "scanner_key": "FragmentOfHarmonicWhimsy",
     "icon": "fragment_of_harmonic_whimsy",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "atk%",
@@ -1392,7 +1570,7 @@
         "value": "When Bond of Life changes, gain {{18%}} increased DMG for 6s. Max 3 stacks.",
         "req": 4,
         "apply": {
-          "id": 895,
+          "id": 1281,
           "option": 0
         }
       }
@@ -1409,7 +1587,10 @@
     "name": "Unfinished Reverie",
     "scanner_key": "UnfinishedReverie",
     "icon": "unfinished_reverie",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": "atk%",
@@ -1421,7 +1602,7 @@
         "value": "If out of combat for 3s, increase DMG by {{50%}}. In combat, DMG Bonus decreases by 10% per second if no Burning enemy is nearby for more than 6s. Else it increases by 10% up to 50%.",
         "req": 4,
         "apply": {
-          "id": 896,
+          "id": 1282,
           "option": 0
         }
       }
@@ -1438,7 +1619,10 @@
     "name": "Scroll of the Hero of Cinder City",
     "scanner_key": "ScrollOfTheHeroOfCinderCity",
     "icon": "scroll_of_the_hero_of_cinder_city",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": null,
@@ -1449,11 +1633,50 @@
         "stat": null,
         "value": "Triggering Reaction increases related Elemental DMG for party by {{12%}} for 15s. Additional {{28%}} for 20s if in Nightsoul's Blessing.",
         "req": 4,
-        "apply": {
-          "id": 972,
-          "option": 0,
-          "party": true
-        }
+        "apply": [
+          {
+            "id": 1475,
+            "option": 0,
+            "party": true,
+            "special": "scroll_of_the_hero_of_cinder_city"
+          },
+          {
+            "id": 1477,
+            "option": 0,
+            "party": true,
+            "special": "scroll_of_the_hero_of_cinder_city"
+          },
+          {
+            "id": 1479,
+            "option": 0,
+            "party": true,
+            "special": "scroll_of_the_hero_of_cinder_city"
+          },
+          {
+            "id": 1481,
+            "option": 0,
+            "party": true,
+            "special": "scroll_of_the_hero_of_cinder_city"
+          },
+          {
+            "id": 1483,
+            "option": 0,
+            "party": true,
+            "special": "scroll_of_the_hero_of_cinder_city"
+          },
+          {
+            "id": 1485,
+            "option": 0,
+            "party": true,
+            "special": "scroll_of_the_hero_of_cinder_city"
+          },
+          {
+            "id": 1487,
+            "option": 0,
+            "party": true,
+            "special": "scroll_of_the_hero_of_cinder_city"
+          }
+        ]
       }
     ],
     "flower": "Beast Tamer's Talisman",
@@ -1468,14 +1691,17 @@
     "name": "Obsidian Codex",
     "scanner_key": "ObsidianCodex",
     "icon": "obsidian_codex",
-    "stars": [ 5, 4 ],
+    "stars": [
+      5,
+      4
+    ],
     "set_bonus": [
       {
         "stat": null,
         "value": "All DMG increased by {{15%}} during Nightsoul's Blessing.",
         "req": 2,
         "apply": {
-          "id": 973,
+          "id": 1373,
           "option": 0
         }
       },
@@ -1484,7 +1710,7 @@
         "value": "Consuming Nightsoul point on field increases CRIT Rate by {{40%}} for 6s.",
         "req": 4,
         "apply": {
-          "id": 974,
+          "id": 1374,
           "option": 0
         }
       }
@@ -1501,7 +1727,10 @@
     "name": "Prayers for Wisdom",
     "scanner_key": "PrayersForWisdom",
     "icon": "prayers_for_wisdom",
-    "stars": [ 4, 3 ],
+    "stars": [
+      4,
+      3
+    ],
     "set_bonus": [
       {
         "stat": null,
@@ -1517,7 +1746,10 @@
     "name": "Prayers for Springtime",
     "scanner_key": "PrayersForSpringtime",
     "icon": "prayers_for_springtime",
-    "stars": [ 4, 3 ],
+    "stars": [
+      4,
+      3
+    ],
     "set_bonus": [
       {
         "stat": null,
@@ -1533,7 +1765,10 @@
     "name": "Prayers for Illumination",
     "scanner_key": "PrayersForIllumination",
     "icon": "prayers_for_illumination",
-    "stars": [ 4, 3 ],
+    "stars": [
+      4,
+      3
+    ],
     "set_bonus": [
       {
         "stat": null,
@@ -1549,7 +1784,10 @@
     "name": "Prayers for Destiny",
     "scanner_key": "PrayersForDestiny",
     "icon": "prayers_for_destiny",
-    "stars": [ 4, 3 ],
+    "stars": [
+      4,
+      3
+    ],
     "set_bonus": [
       {
         "stat": null,

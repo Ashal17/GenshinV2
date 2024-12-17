@@ -32,6 +32,10 @@ background: none;
     -webkit-mask-image: url(../images/svg/alert-outline.svg);
     mask-image: url(../images/svg/alert-outline.svg);
 }
+.svg-arrow-right-thin-circle-outline:before {
+    -webkit-mask-image: url(../images/svg/arrow-right-thin-circle-outline.svg);
+    mask-image: url(../images/svg/arrow-right-thin-circle-outline.svg);
+}
 .svg-arrow-up-bold-hexagon-outline:before {
     -webkit-mask-image: url(../images/svg/arrow-up-bold-hexagon-outline.svg);
     mask-image: url(../images/svg/arrow-up-bold-hexagon-outline.svg);
@@ -72,7 +76,7 @@ background: none;
     -webkit-mask-image: url(../images/svg/filter-outline.svg);
     mask-image: url(../images/svg/filter-outline.svg);
 }
-.svg-flare:before {
+.svg-flare:before, .svg-burst:before {
     -webkit-mask-image: url(../images/svg/flare.svg);
     mask-image: url(../images/svg/flare.svg);
 }
@@ -80,7 +84,7 @@ background: none;
     -webkit-mask-image: url(../images/svg/hospital.svg);
     mask-image: url(../images/svg/hospital.svg);
 }
-.svg-chevron-double-down:before {
+.svg-chevron-double-down:before, .svg-plunge:before {
     -webkit-mask-image: url(../images/svg/chevron-double-down.svg);
     mask-image: url(../images/svg/chevron-double-down.svg);
 }
@@ -120,7 +124,7 @@ background: none;
     -webkit-mask-image: url(../images/svg/plus-circle-outline.svg);
     mask-image: url(../images/svg/plus-circle-outline.svg);
 }
-.svg-shield-outline:before {
+.svg-shield-outline:before, .svg-shield:before {
     -webkit-mask-image: url(../images/svg/shield-outline.svg);
     mask-image: url(../images/svg/shield-outline.svg);
 }
@@ -128,15 +132,15 @@ background: none;
     -webkit-mask-image: url(../images/svg/square-edit-outline.svg);
     mask-image: url(../images/svg/square-edit-outline.svg);
 }
-.svg-star-four-points:before {
+.svg-star-four-points:before, .svg-skill:before {
     -webkit-mask-image: url(../images/svg/star-four-points.svg);
     mask-image: url(../images/svg/star-four-points.svg);
 }
-.svg-sword:before {
+.svg-sword:before, .svg-normal:before {
     -webkit-mask-image: url(../images/svg/sword.svg);
     mask-image: url(../images/svg/sword.svg);
 }
-.svg-sword-cross:before {
+.svg-sword-cross:before, .svg-charged:before {
     -webkit-mask-image: url(../images/svg/sword-cross.svg);
     mask-image: url(../images/svg/sword-cross.svg);
 }

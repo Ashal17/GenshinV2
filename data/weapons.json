@@ -76,8 +76,8 @@
       ],
       "apply_effect": [
         {
-          "id": 100,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 157,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -139,8 +139,8 @@
       ],
       "apply_effect": [
         {
-          "id": 105,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 162,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -192,8 +192,8 @@
       ],
       "apply_effect": [
         {
-          "id": 110,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 167,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -254,8 +254,8 @@
       ],
       "apply_effect": [
         {
-          "id": 115,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 172,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -303,8 +303,8 @@
       ],
       "apply_effect": [
         {
-          "id": 120,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 177,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -423,8 +423,8 @@
       ],
       "apply_effect": [
         {
-          "id": 125,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 182,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -476,8 +476,8 @@
       ],
       "apply_effect": [
         {
-          "id": 130,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 187,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -525,8 +525,8 @@
       ],
       "apply_effect": [
         {
-          "id": 135,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 192,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -624,8 +624,8 @@
       ],
       "apply_effect": [
         {
-          "id": 140,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 197,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -796,8 +796,8 @@
       ],
       "apply_effect": [
         {
-          "id": 145,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 202,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -909,8 +909,8 @@
       ],
       "apply_effect": [
         {
-          "id": 150,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 207,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -1072,8 +1072,8 @@
       ],
       "apply_effect": [
         {
-          "id": 1003,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1416,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0,
           "party": true
         }
@@ -1126,8 +1126,8 @@
       ],
       "apply_effect": [
         {
-          "id": 367,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 452,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -1188,8 +1188,8 @@
       ],
       "apply_effect": [
         {
-          "id": 397,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 512,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -1264,8 +1264,8 @@
       ],
       "apply_effect": [
         {
-          "id": 425,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 554,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -1336,8 +1336,8 @@
       ],
       "apply_effect": [
         {
-          "id": 432,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 560,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -1380,13 +1380,13 @@
       ],
       "apply_effect": [
         {
-          "id": 470,
-          "refine": [ 0, 0, 0, 0, 0 ],
+          "id": 637,
+          "offset": [ 0, 0, 0, 0, 0 ],
           "option": 0
         },
         {
-          "id": 471,
-          "refine": [ 0, 0, 0, 0, 0 ],
+          "id": 638,
+          "offset": [ 0, 0, 0, 0, 0 ],
           "option": 0
         }
       ],
@@ -1475,8 +1475,8 @@
       ],
       "apply_effect": [
         {
-          "id": 479,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 639,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -1537,8 +1537,8 @@
       ],
       "apply_effect": [
         {
-          "id": 494,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 682,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -1595,8 +1595,8 @@
       ],
       "apply_effect": [
         {
-          "id": 545,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 786,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -1666,8 +1666,8 @@
       ],
       "apply_effect": [
         {
-          "id": 550,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 791,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -1724,8 +1724,8 @@
       ],
       "apply_effect": [
         {
-          "id": 566,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 807,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -1822,8 +1822,8 @@
       ],
       "apply_effect": [
         {
-          "id": 571,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 812,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -1874,8 +1874,8 @@
       ],
       "apply_effect": [
         {
-          "id": 701,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1036,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -1936,8 +1936,8 @@
       ],
       "apply_effect": [
         {
-          "id": 777,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1112,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -1989,8 +1989,8 @@
       ],
       "apply_effect": [
         {
-          "id": 782,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1117,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -2092,9 +2092,10 @@
       ],
       "apply_effect": [
         {
-          "id": 787,
-          "refine": [ 0, 1, 2, 3, 4 ],
-          "option": 0
+          "id": 1565,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0,
+          "special": "same_element"
         }
       ],
       "ascension": [
@@ -2154,8 +2155,8 @@
       ],
       "apply_effect": [
         {
-          "id": 818,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1166,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -2207,8 +2208,8 @@
       ],
       "apply_effect": [
         {
-          "id": 917,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1318,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -2287,8 +2288,8 @@
       ],
       "apply_effect": [
         {
-          "id": 922,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1323,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -2349,9 +2350,10 @@
       ],
       "apply_effect": [
         {
-          "id": 952,
-          "refine": [ 0, 1, 2, 3, 4 ],
-          "option": 0
+          "id": 1575,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0,
+          "special": "natlan_different_element"
         }
       ],
       "ascension": [
@@ -2416,8 +2418,8 @@
       ],
       "apply_effect": [
         {
-          "id": 155,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 212,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -2481,8 +2483,8 @@
       ],
       "apply_effect": [
         {
-          "id": 110,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 167,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -2534,8 +2536,8 @@
       ],
       "apply_effect": [
         {
-          "id": 160,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 217,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -2702,8 +2704,8 @@
       ],
       "apply_effect": [
         {
-          "id": 459,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 612,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -2755,8 +2757,8 @@
       ],
       "apply_effect": [
         {
-          "id": 165,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 222,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -2808,8 +2810,8 @@
       ],
       "apply_effect": [
         {
-          "id": 170,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 227,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -2987,8 +2989,8 @@
       ],
       "apply_effect": [
         {
-          "id": 140,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 197,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -3155,13 +3157,13 @@
       ],
       "apply_effect": [
         {
-          "id": 175,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 232,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         },
         {
-          "id": 180,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 237,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -3231,8 +3233,8 @@
       ],
       "apply_effect": [
         {
-          "id": 185,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 242,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -3284,10 +3286,11 @@
       ],
       "apply_effect": [
         {
-          "id": 1018,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1431,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0,
-          "party": true
+          "party": true,
+          "noself": true
         }
       ],
       "ascension": [
@@ -3338,8 +3341,8 @@
       ],
       "apply_effect": [
         {
-          "id": 190,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 247,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -3400,8 +3403,8 @@
       ],
       "apply_effect": [
         {
-          "id": 195,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 252,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -3458,8 +3461,8 @@
       ],
       "apply_effect": [
         {
-          "id": 330,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 387,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -3575,8 +3578,8 @@
       ],
       "apply_effect": [
         {
-          "id": 402,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 517,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -3628,8 +3631,8 @@
       ],
       "apply_effect": [
         {
-          "id": 1023,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1436,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0,
           "party": true
         }
@@ -3738,8 +3741,8 @@
       ],
       "apply_effect": [
         {
-          "id": 517,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 747,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -3791,8 +3794,8 @@
       ],
       "apply_effect": [
         {
-          "id": 526,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 770,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -3843,8 +3846,8 @@
       ],
       "apply_effect": [
         {
-          "id": 576,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 817,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -3896,9 +3899,17 @@
       ],
       "apply_effect": [
         {
-          "id": 606,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 858,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
+        },
+        {
+          "id": 919,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0,
+          "party": true,
+          "noself": true,
+          "multi": true
         }
       ],
       "ascension": [
@@ -3966,15 +3977,18 @@
       ],
       "apply_effect": [
         {
-          "id": 640,
-          "refine": [ 0, 1, 2, 3, 4 ],
-          "option": 0
+          "id": 1545,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0,
+          "special": "same_element"
         },
         {
-          "id": 1048,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1461,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0,
-          "party": true
+          "party": true,
+          "noself": true,
+          "multi": true
         }
       ],
       "ascension": [
@@ -4048,8 +4062,8 @@
       ],
       "apply_effect": [
         {
-          "id": 659,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 966,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -4119,8 +4133,8 @@
       ],
       "apply_effect": [
         {
-          "id": 689,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1024,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -4181,8 +4195,8 @@
       ],
       "apply_effect": [
         {
-          "id": 762,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1097,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -4252,13 +4266,13 @@
       ],
       "apply_effect": [
         {
-          "id": 767,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1102,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         },
         {
-          "id": 772,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1107,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -4319,8 +4333,8 @@
       ],
       "apply_effect": [
         {
-          "id": 823,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1171,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -4395,8 +4409,8 @@
       ],
       "apply_effect": [
         {
-          "id": 828,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1176,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -4462,8 +4476,8 @@
       ],
       "apply_effect": [
         {
-          "id": 833,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1181,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -4524,8 +4538,8 @@
       ],
       "apply_effect": [
         {
-          "id": 1028,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1441,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0,
           "party": true
         }
@@ -4629,8 +4643,8 @@
       ],
       "apply_effect": [
         {
-          "id": 937,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1338,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -4691,8 +4705,8 @@
       ],
       "apply_effect": [
         {
-          "id": 942,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1343,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -4758,8 +4772,8 @@
       ],
       "apply_effect": [
         {
-          "id": 110,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 167,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -4811,8 +4825,8 @@
       ],
       "apply_effect": [
         {
-          "id": 200,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 257,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -4974,8 +4988,8 @@
       ],
       "apply_effect": [
         {
-          "id": 205,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 262,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -5036,9 +5050,10 @@
       ],
       "apply_effect": [
         {
-          "id": 210,
-          "refine": [ 0, 1, 2, 3, 4 ],
-          "option": 0
+          "id": 1489,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0,
+          "special": "lithic"
         }
       ],
       "ascension": [
@@ -5055,7 +5070,7 @@
           "id": "weathered_arrowhead"
         }
       ],
-      "effect_name": "Lithic Axiom - Unity"
+      "effect_name": "Lithic Axiom: Unity"
     },
     {
       "id": 7,
@@ -5161,8 +5176,8 @@
       ],
       "apply_effect": [
         {
-          "id": 215,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 272,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -5200,8 +5215,8 @@
       ],
       "apply_effect": [
         {
-          "id": 220,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 277,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -5253,8 +5268,8 @@
       ],
       "apply_effect": [
         {
-          "id": 140,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 197,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -5370,8 +5385,8 @@
       ],
       "apply_effect": [
         {
-          "id": 225,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 282,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -5423,8 +5438,8 @@
       ],
       "apply_effect": [
         {
-          "id": 230,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 287,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -5536,8 +5551,8 @@
       ],
       "apply_effect": [
         {
-          "id": 235,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 292,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -5661,8 +5676,8 @@
       ],
       "apply_effect": [
         {
-          "id": 240,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 297,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -5719,8 +5734,8 @@
       ],
       "apply_effect": [
         {
-          "id": 1033,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1446,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0,
           "party": true
         }
@@ -5778,8 +5793,8 @@
       ],
       "apply_effect": [
         {
-          "id": 330,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 387,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -5900,8 +5915,8 @@
       ],
       "apply_effect": [
         {
-          "id": 1008,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1421,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0,
           "party": true
         }
@@ -6112,8 +6127,8 @@
       ],
       "apply_effect": [
         {
-          "id": 494,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 682,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -6164,8 +6179,8 @@
       ],
       "apply_effect": [
         {
-          "id": 1038,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1451,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0,
           "party": true
         }
@@ -6218,9 +6233,17 @@
       ],
       "apply_effect": [
         {
-          "id": 606,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1353,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
+        },
+        {
+          "id": 267,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0,
+          "party": true,
+          "noself": true,
+          "multi": true
         }
       ],
       "ascension": [
@@ -6279,8 +6302,8 @@
       ],
       "apply_effect": [
         {
-          "id": 696,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1031,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -6340,13 +6363,13 @@
       ],
       "apply_effect": [
         {
-          "id": 742,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1077,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         },
         {
-          "id": 747,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1082,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -6398,8 +6421,8 @@
       ],
       "apply_effect": [
         {
-          "id": 752,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1087,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -6469,13 +6492,13 @@
       ],
       "apply_effect": [
         {
-          "id": 795,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1129,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         },
         {
-          "id": 800,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1134,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -6536,8 +6559,8 @@
       ],
       "apply_effect": [
         {
-          "id": 813,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1161,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -6594,8 +6617,8 @@
       ],
       "apply_effect": [
         {
-          "id": 855,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1246,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -6685,8 +6708,8 @@
       ],
       "apply_effect": [
         {
-          "id": 957,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1358,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -6738,8 +6761,8 @@
       ],
       "apply_effect": [
         {
-          "id": 962,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1363,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -6796,8 +6819,8 @@
       ],
       "apply_effect": [
         {
-          "id": 975,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1375,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -6889,8 +6912,8 @@
       ],
       "apply_effect": [
         {
-          "id": 250,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 307,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -6942,8 +6965,8 @@
       ],
       "apply_effect": [
         {
-          "id": 110,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 167,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -6995,8 +7018,8 @@
       ],
       "apply_effect": [
         {
-          "id": 335,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 392,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -7066,8 +7089,8 @@
       ],
       "apply_effect": [
         {
-          "id": 255,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 312,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -7119,8 +7142,8 @@
       ],
       "apply_effect": [
         {
-          "id": 260,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 317,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -7303,8 +7326,8 @@
       ],
       "apply_effect": [
         {
-          "id": 265,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 322,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -7351,9 +7374,10 @@
       ],
       "apply_effect": [
         {
-          "id": 210,
-          "refine": [ 0, 1, 2, 3, 4 ],
-          "option": 0
+          "id": 1489,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0,
+          "special": "lithic"
         }
       ],
       "ascension": [
@@ -7370,7 +7394,7 @@
           "id": "weathered_arrowhead"
         }
       ],
-      "effect_name": "Lithic Axiom - Unity"
+      "effect_name": "Lithic Axiom: Unity"
     },
     {
       "id": 12,
@@ -7413,8 +7437,8 @@
       ],
       "apply_effect": [
         {
-          "id": 275,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 332,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -7466,8 +7490,8 @@
       ],
       "apply_effect": [
         {
-          "id": 280,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 337,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -7617,8 +7641,8 @@
       ],
       "apply_effect": [
         {
-          "id": 330,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 387,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -7670,8 +7694,8 @@
       ],
       "apply_effect": [
         {
-          "id": 140,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 197,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -7792,8 +7816,8 @@
       ],
       "apply_effect": [
         {
-          "id": 357,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 442,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -7956,13 +7980,13 @@
       ],
       "apply_effect": [
         {
-          "id": 446,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 586,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         },
         {
-          "id": 451,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 591,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -8023,8 +8047,8 @@
       ],
       "apply_effect": [
         {
-          "id": 494,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 682,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -8081,8 +8105,8 @@
       ],
       "apply_effect": [
         {
-          "id": 510,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 740,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -8134,8 +8158,8 @@
       ],
       "apply_effect": [
         {
-          "id": 1043,
-          "refine": [ 0,1,2,3,4 ],
+          "id": 1456,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0,
           "party": true
         }
@@ -8197,8 +8221,8 @@
       ],
       "apply_effect": [
         {
-          "id": 611,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 863,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -8259,8 +8283,8 @@
       ],
       "apply_effect": [
         {
-          "id": 616,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 868,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -8312,8 +8336,8 @@
       ],
       "apply_effect": [
         {
-          "id": 757,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1092,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -8420,8 +8444,8 @@
       ],
       "apply_effect": [
         {
-          "id": 818,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1166,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -8528,8 +8552,8 @@
       ],
       "apply_effect": [
         {
-          "id": 890,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1276,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -8595,8 +8619,8 @@
       ],
       "apply_effect": [
         {
-          "id": 927,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1328,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -8648,8 +8672,8 @@
       ],
       "apply_effect": [
         {
-          "id": 947,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1348,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -8706,8 +8730,8 @@
       ],
       "apply_effect": [
         {
-          "id": 980,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1380,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -8833,8 +8857,8 @@
       ],
       "apply_effect": [
         {
-          "id": 110,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 167,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -8886,8 +8910,8 @@
       ],
       "apply_effect": [
         {
-          "id": 285,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 342,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -8939,8 +8963,8 @@
       ],
       "apply_effect": [
         {
-          "id": 290,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 347,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -9128,8 +9152,8 @@
       ],
       "apply_effect": [
         {
-          "id": 295,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 352,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -9181,8 +9205,8 @@
       ],
       "apply_effect": [
         {
-          "id": 300,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 357,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -9234,8 +9258,8 @@
       ],
       "apply_effect": [
         {
-          "id": 305,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 362,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -9287,8 +9311,8 @@
       ],
       "apply_effect": [
         {
-          "id": 310,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 367,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -9340,8 +9364,8 @@
       ],
       "apply_effect": [
         {
-          "id": 140,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 197,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -9474,8 +9498,8 @@
       ],
       "apply_effect": [
         {
-          "id": 315,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 372,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -9532,8 +9556,8 @@
       ],
       "apply_effect": [
         {
-          "id": 320,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 377,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -9622,8 +9646,8 @@
       ],
       "apply_effect": [
         {
-          "id": 325,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 382,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -9870,8 +9894,8 @@
       ],
       "apply_effect": [
         {
-          "id": 330,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 387,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -9928,8 +9952,8 @@
       ],
       "apply_effect": [
         {
-          "id": 342,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 399,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -9995,8 +10019,8 @@
       ],
       "apply_effect": [
         {
-          "id": 1013,
-          "refine": [ 0,1,2,3,4 ],
+          "id": 1426,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0,
           "party": true
         }
@@ -10072,8 +10096,8 @@
       ],
       "apply_effect": [
         {
-          "id": 420,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 549,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -10213,8 +10237,8 @@
       ],
       "apply_effect": [
         {
-          "id": 531,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 775,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -10266,8 +10290,8 @@
       ],
       "apply_effect": [
         {
-          "id": 1038,
-          "refine": [ 0,1,2,3,4 ],
+          "id": 1451,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0,
           "party": true
         }
@@ -10320,9 +10344,17 @@
       ],
       "apply_effect": [
         {
-          "id": 621,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 873,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
+        },
+        {
+          "id": 1122,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0,
+          "party": true,
+          "noself": true,
+          "multi": true
         }
       ],
       "ascension": [
@@ -10339,7 +10371,7 @@
           "id": "spectral_nucleus"
         }
       ],
-      "effect_name": "Whisper of the Jinn"
+      "effect_name": "Jinni's Whisper"
     },
     {
       "id": 32,
@@ -10387,8 +10419,8 @@
       ],
       "apply_effect": [
         {
-          "id": 626,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 878,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -10440,8 +10472,8 @@
       ],
       "apply_effect": [
         {
-          "id": 654,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 961,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -10498,8 +10530,8 @@
       ],
       "apply_effect": [
         {
-          "id": 672,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 979,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -10570,13 +10602,13 @@
       ],
       "apply_effect": [
         {
-          "id": 717,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1052,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         },
         {
-          "id": 722,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1057,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -10646,13 +10678,13 @@
       ],
       "apply_effect": [
         {
-          "id": 727,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1062,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         },
         {
-          "id": 732,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1067,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -10709,8 +10741,8 @@
       ],
       "apply_effect": [
         {
-          "id": 737,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1072,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -10771,8 +10803,8 @@
       ],
       "apply_effect": [
         {
-          "id": 813,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1161,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -10833,13 +10865,13 @@
       ],
       "apply_effect": [
         {
-          "id": 841,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1232,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         },
         {
-          "id": 846,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1237,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -10901,8 +10933,8 @@
       ],
       "apply_effect": [
         {
-          "id": 882,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1268,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -11005,8 +11037,8 @@
       ],
       "apply_effect": [
         {
-          "id": 912,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1313,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -11058,8 +11090,8 @@
       ],
       "apply_effect": [
         {
-          "id": 967,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1368,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],
@@ -11138,13 +11170,13 @@
       ],
       "apply_effect": [
         {
-          "id": 985,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1385,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         },
         {
-          "id": 1053,
-          "refine": [ 0,1,2,3,4 ],
+          "id": 1466,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0,
           "party": true
         }
@@ -11197,8 +11229,8 @@
       ],
       "apply_effect": [
         {
-          "id": 991,
-          "refine": [ 0, 1, 2, 3, 4 ],
+          "id": 1390,
+          "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
       ],

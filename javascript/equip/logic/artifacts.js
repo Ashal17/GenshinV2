@@ -5,8 +5,15 @@ const artifact_sub_stats_options = ["blank", "atk", "atk%", "hp", "hp%", "def", 
 
 function equip_artifacts_change_trigger(artifact_id) {
     equip_artifacts_update(user_objects.user_active_character, artifact_id);
+
+    equip_stats_update_total_all();
     equip_effects_update_options_all();
-    equip_stats_update_total(user_objects.user_active_character);
+    equip_effects_update_stats_all();
+    equip_stats_update_total_all();
+    equip_skills_update_all();
+
+    equip_effects_display_all();
+    equip_skills_display_all();
     equip_artifacts_display(artifact_id);
     equip_stats_display();
     equip_storage_save_last();

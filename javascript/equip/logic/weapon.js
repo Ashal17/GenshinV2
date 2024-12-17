@@ -3,14 +3,18 @@ const refine_list = [1, 2, 3, 4, 5];
 const weapon_max_levels = [0, 9, 9, 13, 13, 13];
 
 function equip_weapon_change_trigger() {
-
     equip_weapon_update(user_objects.user_active_character);
+
+    equip_stats_update_total_all();
     equip_effects_update_options_all();
-    equip_stats_update_total(user_objects.user_active_character);
+    equip_effects_update_stats_all();
+    equip_stats_update_total_all();
+    equip_skills_update_all();
+
+    equip_effects_display_all();
     equip_weapon_display();
     equip_stats_display();
     equip_storage_save_last();
-
 }
 
 function equip_weapon_change(i) {

@@ -1,0 +1,137 @@
+.frame_skills {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.container_skills {
+    min-width: 800px;
+    width: calc(100% / 2 - 12px);
+    padding: 1px;
+}
+
+.skills_column {
+    display:flex;
+    flex-direction:column;
+}
+
+.skills_row_permanent {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grey-15);
+    padding: 5px;
+    margin: 2px;
+}
+
+    .skills_row_permanent.enabled .skills_name{
+        color: var(--yellow);
+    }
+
+    .skills_row_permanent.disabled {
+        color: var(--grey-50) !important;
+    }
+
+    .skills_name {
+        text-align: center;
+        padding: 5px;
+    }
+
+.skills_row_name {
+    display: flex;
+    flex-direction: row;
+}
+
+    .skills_row_name .skills_part_text, .skills_row_name .skills_part_val, .skills_row_name .skills_part_btn {
+        text-align:center;
+    }
+
+    .skills_passive {
+        display: flex;
+        flex-direction: row;
+        border-top: 1px solid var(--grey-40);
+    }
+
+.skills_passive_icon {
+    max-width: 64px;
+    max-height: 64px;
+    margin-right: 5px;
+    object-fit: scale-down;
+}
+
+.skills_passive_desc {
+    font-size:0.9em;
+    padding:5px;
+}
+
+.skills_attack {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--grey-40);
+}
+
+.skills_part {
+    display:flex;
+    flex-direction:row;
+}
+
+    .skills_part:not(:last-child) {
+        border-bottom: 1px dashed var(--grey-40);
+    }
+
+.skills_part_text {
+    flex: 1 1;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.skills_part_text_type {
+    aspect-ratio: 1 / 1;
+    margin-right:5px;
+}
+
+    .skills_part_text_type:before {
+        width: 100%;
+        height: 100%;
+    }
+
+.pyro .skills_part_text_type:before {
+    background-color: var(--pyro);
+}
+
+.hydro .skills_part_text_type:before {
+    background-color: var(--hydro);
+}
+
+.anemo .skills_part_text_type:before {
+    background-color: var(--anemo);
+}
+
+.geo .skills_part_text_type:before {
+    background-color: var(--geo);
+}
+
+.electro .skills_part_text_type:before {
+    background-color: var(--electro);
+}
+
+.dendro .skills_part_text_type:before {
+    background-color: var(--dendro);
+}
+
+.cryo .skills_part_text_type:before {
+    background-color: var(--cryo);
+}
+
+.skills_part_val {
+    width: calc(100% / 8);
+    text-align: right;
+    padding: 5px;
+    border-left: 1px solid var(--grey-40);
+}
+
+.skills_part_btn {
+    width: 25px;
+    border-left: 1px solid var(--grey-40);
+    padding:2px;
+}
+

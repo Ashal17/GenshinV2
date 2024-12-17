@@ -23,6 +23,7 @@ body {
     --grey-75: #bfbfbf;
     --white: #cccccc;
     --red: #ff0000;
+    --red-light: #ff3333;
     --red-dark: #cc0000;
     --yellow: #ffe51a;
     --orange: #ff8000;
@@ -30,6 +31,7 @@ body {
     --orange-bg-dim: #994d00;
     --orange-bg: #b35900;
     --orange-bg-glow: #cc6600;
+    --purple: #ad33ff;
     --highlight: #66ccff;
 }
 
@@ -650,5 +652,48 @@ input {
         height: 75%;
         aspect-ratio: 1 / 1;
     }
+
+.new_button {
+    height: 50px;
+    width: 50px;
+    border: 1px dashed var(--orange-bg);
+    position: relative;
+    cursor: pointer;
+    align-self: center;
+    margin: 5px;
+}
+
+    .new_button::before, .new_button::after {
+        content: " ";
+        position: absolute;
+        display: block;
+        background-color: var(--orange-bg);
+        z-index: 2;
+    }
+
+    .new_button::before {
+        width: 6px;
+        margin-left: -3px;
+        left: 50%;
+        top: 10px;
+        bottom: 10px;
+        z-index: 2;
+    }
+
+    .new_button::after {
+        height: 6px;
+        margin-top: -3px;
+        top: 50%;
+        left: 10px;
+        right: 10px;
+    }
+
+    .new_button:hover {
+        border-color: var(--orange-bg-glow);
+    }
+
+        .new_button:hover::before, .new_button:hover::after {
+            background-color: var(--orange-bg-glow);
+        }
 
 

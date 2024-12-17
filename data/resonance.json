@@ -44,8 +44,9 @@
       {
         "stat": null,
         "value": "Increases CRIT Rate against enemies that are Frozen or affected by Cryo by {{15%}}.",
-        "effects": {
-          "id": 1
+        "apply": {
+          "id": 24,
+          "option": 0
         }
       }
     ]
@@ -64,7 +65,7 @@
         "stat": null,
         "value": "Triggering Burning, Quicken, or Bloom increases Elemental Mastery by {{30}}.",
         "apply": {
-          "id": 585,
+          "id": 823,
           "option": 0
         }
       },
@@ -72,7 +73,7 @@
         "stat": null,
         "value": "Triggering Aggravate, Spread, or Hyperbloom increases Elemental Mastery by {{20}}.",
         "apply": {
-          "id": 586,
+          "id": 824,
           "option": 0
         }
       }
@@ -108,7 +109,7 @@
         "stat": null,
         "value": "When protected by a shield, increases DMG by {{15%}}.",
         "apply": {
-          "id": 2,
+          "id": 25,
           "option": 0
         }
       },
@@ -116,7 +117,7 @@
         "stat": null,
         "value": "When protected by a shield, dealing DMG to enemies will decrease their Geo RES by {{20%}} for 15s",
         "apply": {
-          "id": 351,
+          "id": 422,
           "option": 0
         }
       }

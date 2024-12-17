@@ -1,0 +1,113 @@
+.frame_effects {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.frame_effects .container_object {
+    min-width: 500px;
+    width: calc(100% / 3 - 12px);
+    padding: 1px;
+}
+
+.effect_row {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--grey-15);
+    padding:2px;
+    margin:2px;
+    align-items:center;
+}
+
+.effect_col {
+    width: calc(50% - 26px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:2px 5px;
+}
+
+.effect_option, .effect_option:hover, .effect_manual, .effect_manual:hover {
+    border: none;
+}
+
+    .effect_option .icon_selects_text {
+        justify-content: left;
+        padding-left: 10px;
+        text-align: left;
+    }
+
+    .effect_manual .icon_selects_text {
+        justify-content: left;
+        text-align: left;
+        font-size: 0.9em;
+    }
+
+.effect_col .prompt {
+    max-height:300px;
+    overflow:scroll;
+}
+
+.effect_col .prompt, .effect_col .prompt_value {
+    border: none;
+}
+
+.effect_col .prompt_value {
+    justify-content: left;
+    font-size: 0.8em;
+    padding:2px 10px;
+    width: calc(100% - 20px);
+    text-align:left;
+}
+
+.effect_name {
+    font-size: 0.9em;
+}
+
+.effect_toggle {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--orange-bg);
+    cursor: pointer;
+}
+
+    .effect_toggle:hover {
+        border-color:var(--orange-bg-glow);
+    }
+
+    .effect_toggle.active {
+        background-color: var(--orange-bg);
+    }
+    .effect_toggle.inactive {
+        background-color: transparent;
+    }
+
+        .effect_toggle.inactive:hover {
+            box-shadow: inset 0 0 15px var(--orange-bg);
+        }
+
+.effect_source {
+    height: 26px;
+    width: 26px;
+    margin:0px 3px;
+    position:relative;
+}
+
+.effect_source_img {
+    height: 26px;
+    width: 26px;
+}
+
+.value_transform {
+    color: var(--purple) !important;
+}
+
+.value_bonusdmg {
+    color: var(--red-light) !important;
+}
+
+.effect_row .img_button {
+    width: 25px;
+}
+
+

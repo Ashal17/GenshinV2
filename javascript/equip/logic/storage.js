@@ -25,7 +25,10 @@ function equip_storage_load(storage_json) {
         equip_character_update_all(false);
         equip_weapon_update_all();
         equip_artifacts_update_all_all();
+        equip_effects_update_stats_all();
+
         equip_stats_update_total_all();
+        equip_skills_update_all();
         equip_effects_update_options_all();
 
         equip_character_display_all();
@@ -34,6 +37,8 @@ function equip_storage_load(storage_json) {
         equip_enemy_display();
         equip_weapon_display();
         equip_artifacts_display_all();
+        equip_effects_display_all();
+        equip_skills_display_all();
         
         equip_stats_display();
 

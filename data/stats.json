@@ -32,6 +32,13 @@
     "type": "percent",
     "display": { "col": 1 }
   },
+  "atk%_trans": {
+    "name": "Attack %",
+    "shortname": "ATK",
+    "labelname": "ATK",
+    "listname": "ATK",
+    "type": "percent"
+  },
   "hp": {
     "name": "HP",
     "shortname": "HP",
@@ -60,6 +67,14 @@
     "listname": "HP",
     "type": "percent",
     "display": { "col": 1 }
+  },
+
+  "hp%_trans": {
+    "name": "HP %",
+    "shortname": "HP",
+    "labelname": "HP",
+    "listname": "HP",
+    "type": "percent"
   },
   "def": {
     "name": "Defense",
@@ -90,6 +105,13 @@
     "type": "percent",
     "display": { "col": 1 }
   },
+  "def%_trans": {
+    "name": "Defense %",
+    "shortname": "DEF",
+    "labelname": "DEF",
+    "listname": "DEF",
+    "type": "percent"
+  },
   "bondoflife": {
     "name": "Bond of Life",
     "shortname": "Bond of life",
@@ -99,6 +121,12 @@
   "bondoflifeatk": {
     "name": "Bond of Life × Attack",
     "shortname": "Bond of Life × ATK",
+    "type": "percent",
+    "conversion": "percent"
+  },
+  "healinghp": {
+    "name": "Healing × HP",
+    "shortname": "Healing × HP",
     "type": "percent",
     "conversion": "percent"
   },

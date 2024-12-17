@@ -1,36 +1,224 @@
 const output_party_stat_objects = ["basic", "weapon", "artifacts", "effects"];
-const stats_visions = ["physical", "anemo", "cryo", "dendro", "geo", "electro", "hydro", "pyro", "healing"];
+const visions_variables = {
+    "anemo": {
+        "name": "Anemo",
+        "reactions": ["swirlcryo", "swirlelectro", "swirlhydro", "swirlpyro"],
+        "reactions_mod": []
+    },
+    "cryo": {
+        "name": "Cryo",
+        "reactions": ["melt", "superconduct", "swirlcryo"],
+        "reactions_mod": ["melt"]
+    },
+    "dendro": {
+        "name": "Dendro",
+        "reactions": ["burning", "rupture", "spread"],
+        "reactions_mod": ["spread"]
+    },
+    "electro": {
+        "name": "Electro",
+        "reactions": ["superconduct", "electrocharged", "overload", "swirlelectro", "hyperbloom", "aggravate"],
+        "reactions_mod": ["aggravate"]
+    },
+    "geo": {
+        "name": "Geo",
+        "reactions": ["crystalize"],
+        "reactions_mod": []
+    },
+    "hydro": {
+        "name": "Hydro",
+        "reactions": ["vaporize", "electrocharged", "swirlhydro", "rupture"],
+        "reactions_mod": ["vaporize"]
+    },
+    "pyro": {
+        "name": "Pyro",
+        "reactions": ["melt", "vaporize", "overload", "swirlpyro", "burning", "burgeon"],
+        "reactions_mod": ["melt", "vaporize"]
+    },
+    "physical": {
+        "name": "Physical",
+        "reactions": [],
+        "reactions_mod": []
+    },
+    "healing": {
+        "name": "Healing",
+        "reactions": [],
+        "reactions_mod": []
+    }
+}
+
+const reactions_variables = {
+    "melt": {
+        "name": "Melt",
+        "type": "elemasterymult",
+        "multiplier": {
+            "pyro": 2,
+            "cryo": 1.5
+        }
+    },
+    "vaporize": {
+        "name": "Vaporize",
+        "type": "elemasterymult",
+        "multiplier": {
+            "pyro": 1.5,
+            "hydro": 2
+        }
+    },
+    "swirlcryo": {
+        "name": "Swirl - Cryo",
+        "type": "elemasteryadd",
+        "multiplier": 0.6,
+        "vision": "cryo"
+    },
+    "swirlelectro": {
+        "name": "Swirl - Electro",
+        "type": "elemasteryadd",
+        "multiplier": 0.6,
+        "vision": "electro"
+    },
+    "swirlhydro": {
+        "name": "Swirl - Hydro",
+        "type": "elemasteryadd",
+        "multiplier": 0.6,
+        "vision": "hydro"
+    },
+    "swirlpyro": {
+        "name": "Swirl - Pyro",
+        "type": "elemasteryadd",
+        "multiplier": 0.6,
+        "vision": "pyro"
+    },
+    "superconduct": {
+        "name": "Superconduct",
+        "type": "elemasteryadd",
+        "multiplier": 0.5,
+        "vision": "cryo"
+    },
+    "electrocharged": {
+        "name": "Electro-Charged",
+        "type": "elemasteryadd",
+        "multiplier": 1.2,
+        "vision": "electro"
+    },
+    "overload": {
+        "name": "Overload",
+        "type": "elemasteryadd",
+        "multiplier": 2,
+        "vision": "pyro"
+    },
+    "shatter": {
+        "name": "Shatter",
+        "type": "elemasteryadd",
+        "multiplier": 1.5,
+        "vision": "physical"
+    },
+    "crystalize": {
+        "name": "Crystalize",
+        "type": "elemasterycrystalize",
+        "multiplier": 1,
+        "vision": "geo"
+    },
+    "rupture": {
+        "name": "Rupture",
+        "type": "elemasteryadd",
+        "multiplier": 2,
+        "vision": "dendro"
+    },
+    "burgeon": {
+        "name": "Burgeon",
+        "type": "elemasteryadd",
+        "multiplier": 3,
+        "vision": "dendro"
+    },
+    "hyperbloom": {
+        "name": "Hyperbloom",
+        "type": "elemasteryadd",
+        "multiplier": 3,
+        "vision": "dendro"
+    },
+    "burning": {
+        "name": "Burning",
+        "type": "elemasteryadd",
+        "multiplier": 0.25,
+        "vision": "pyro"
+    },
+    "aggravate": {
+        "name": "Aggravate",
+        "type": "elemasterybonus",
+        "multiplier": 1.15,
+        "vision": "electro"
+    },
+    "spread": {
+        "name": "Spread",
+        "type": "elemasterybonus",
+        "multiplier": 1.25,
+        "vision": "dendro"
+    }
+}
+
+const bonusdmg_names = {
+    "normal": "Normal Attack",
+    "charged": "Charged Attack",
+    "plunge": "Plunging Attack",
+    "skill": "Elemental Skill",
+    "burst": "Elemental Burst"
+}
 
 function equip_stats_update_total_all() {
+    equip_stats_update_reset_total_all();
+    equip_stats_update_add_total_all();
+
+    equip_stats_update_transformation_all("main");
+    equip_stats_update_transformation_all("mult");
+    equip_effects_update_stats_transform_other_all();
+    equip_stats_update_add_all("effects_transform_other");
+    equip_effects_update_stats_transform_personal_all();
+    equip_stats_update_add_all("effects_transform_personal");
+    equip_stats_update_transformation_all("mult_trans");
+    equip_stats_update_transformation_all("merge");
+    equip_stats_update_transformation_all("elemastery");
+
     for (var i = 0; i < party_size; i++) {
-        equip_stats_update_total(i);
+        output_party[i].stats.total["enemyred"] = equip_stats_calculate_enemyred(output_party[i].stats.total, i);
+    }
+
+}
+
+function equip_stats_update_reset_total_all() {
+    for (var i = 0; i < party_size; i++) {
+        equip_stats_update_reset_total(i);
     }
 }
 
-function equip_stats_update_total(party_id) {
-    
-    var stats_total = { ...default_stats };
+function equip_stats_update_reset_total(party_id) {
+    output_party[party_id].stats.total = structuredClone(default_stats);
+}
+
+function equip_stats_update_add_total_all() {
 
     for (var i = 0; i < output_party_stat_objects.length; i++) {
-        var stats_obj = output_party[party_id].stats[output_party_stat_objects[i]];
-        for (var ii = 0; ii < stats_obj.length; ii++) {
-            stats_total[stats_obj[ii].id] += stats_obj[ii].value;
-        }
+        equip_stats_update_add_all(output_party_stat_objects[i]);
     }
 
-    output_party[party_id].stats.total = equip_stats_update_transformations(party_id, stats_total);
 }
 
-function equip_stats_update_transformations(party_id, stats_total) {
-    stats_total = equip_stats_calculate_tranformation(stats_total, "main");
-    stats_total = equip_stats_calculate_tranformation(stats_total, "mult_hp");
-    stats_total = equip_stats_calculate_tranformation(stats_total, "mult_atkdef");
-    stats_total = equip_stats_calculate_tranformation(stats_total, "merge");
-    stats_total = equip_stats_calculate_tranformation(stats_total, "elemastery");
+function equip_stats_update_add_all(stats_obj_name) {
+    for (var i = 0; i < party_size; i++) {
+        equip_stats_update_add(i, stats_obj_name);
+    }
+}
 
-    stats_total["enemyred"] = equip_stats_calculate_enemyred(stats_total, party_id);
+function equip_stats_update_add(party_id, stats_obj_name) {
+    var stats_obj = output_party[party_id].stats[stats_obj_name]
+    for (var i = 0; i < stats_obj.length; i++) {
+        output_party[party_id].stats.total[stats_obj[i].id] += stats_obj[i].value;
+    }
+}
 
-    return stats_total;
+function equip_stats_update_transformation_all(transformation_name) {
+    for (var i = 0; i < party_size; i++) {
+        output_party[i].stats.total = equip_stats_calculate_tranformation(output_party[i].stats.total, transformation_name);
+    }
 }
 
 function equip_stats_calculate_tranformation(stats_total, transformation_name) {
@@ -216,12 +404,13 @@ function equip_stats_return_vision_stat(party_id) {
 
     var highest_val = 0;
     var highest_stat = data_characters[user_objects.user_party[party_id].id].vision;
-    for (var i = 0; i < stats_visions.length; i++) {
-        if (output_party[party_id].stats.total[stats_visions[i]] > highest_val) {
-            highest_val = output_party[party_id].stats.total[stats_visions[i]];
-            highest_stat = stats_visions[i];
+    for (let vision in visions_variables) {
+        if (output_party[party_id].stats.total[vision] > highest_val) {
+            highest_val = output_party[party_id].stats.total[vision];
+            highest_stat = vision;
         }
     }
+
 
     return highest_stat;
 }
