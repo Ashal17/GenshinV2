@@ -614,7 +614,7 @@ function equip_effects_update_active_options(party_id) {
                 }
 
                 if (found == false) {
-                    console.log("Deleting " + i)
+                    utils_log_debug("Removing effect id: " + user_effect.id);
                     user_objects.user_party[party_id].effects.splice(i, 1);
                 }
             }    

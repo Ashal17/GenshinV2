@@ -34,7 +34,7 @@ function utils_array_sort(arr, key) {
         }
 
     } else {
-        arr.sort();
+        arr.sort((a, b) => (a > b) ? 1 : -1);
     }
     return arr;
 }

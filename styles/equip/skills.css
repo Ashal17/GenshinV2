@@ -14,7 +14,7 @@
     flex-direction:column;
 }
 
-.skills_row_permanent {
+.skills_row_permanent, .skills_row_active {
     display: flex;
     flex-direction: column;
     background-color: var(--grey-15);

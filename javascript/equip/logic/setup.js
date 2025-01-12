@@ -478,8 +478,8 @@ function equip_setup_output_objects() {
 
         char.skills = {};
         char.skills.attacks = [];
-        char.skills.passives = [];
-        char.skills.consts = [];
+        char.skills.passive = [];
+        char.skills.const = [];
         char.skills.reactions = {};
         char.skills.bonusdmg = {};
         char.skills.other = [];
