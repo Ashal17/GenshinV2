@@ -54,6 +54,10 @@ const reactions_variables = {
         "multiplier": {
             "pyro": 2,
             "cryo": 1.5
+        },
+        "combination": {
+            "pyro": "cryo",
+            "cryo": "pyro"
         }
     },
     "vaporize": {
@@ -62,6 +66,10 @@ const reactions_variables = {
         "multiplier": {
             "pyro": 1.5,
             "hydro": 2
+        },
+        "combination": {
+            "pyro": "hydro",
+            "hydro": "pyro"
         }
     },
     "swirlcryo": {
@@ -146,13 +154,19 @@ const reactions_variables = {
         "name": "Aggravate",
         "type": "elemasterybonus",
         "multiplier": 1.15,
-        "vision": "electro"
+        "vision": "electro",
+        "combination": {
+            "electro": "dendro"
+        }
     },
     "spread": {
         "name": "Spread",
         "type": "elemasterybonus",
         "multiplier": 1.25,
-        "vision": "dendro"
+        "vision": "dendro",
+        "combination": {
+            "dendro": "electro"
+        }
     }
 }
 

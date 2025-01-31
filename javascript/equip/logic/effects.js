@@ -17,6 +17,13 @@ function equip_effects_change_trigger() {
     equip_storage_save_last();
 }
 
+function equip_effects_change_new_manual() {
+    user_objects.user_party[user_objects.user_active_character].effects.push(
+        { "id": 0, "option": 0, "selected": true, "manual": true }
+    );
+    equip_effects_change_trigger();
+}
+
 function equip_effects_change_delete_manual(delete_index) {
 
     var user_effects = user_objects.user_party[user_objects.user_active_character].effects;
@@ -150,17 +157,18 @@ function equip_effects_update_stats(party_id) {
 
     var user_effects = user_objects.user_party[party_id].effects;
     for (var i = 0; i < user_effects.length; i++) {
+        if (user_effects[i].selected) {
+            var effect = utils_array_get_by_lookup(data_effects, "id", user_effects[i].id);
+            var option = effect.options[user_effects[i].option];
 
-        var effect = utils_array_get_by_lookup(data_effects, "id", user_effects[i].id);  
-        var option = effect.options[user_effects[i].option];
-
-        if (option.stats) {
-            for (var ii = 0; ii < option.stats.length; ii++) {
-                stats.push(
-                    { "id": option.stats[ii].stat, "value": option.stats[ii].value }
-                );
+            if (option.stats) {
+                for (var ii = 0; ii < option.stats.length; ii++) {
+                    stats.push(
+                        { "id": option.stats[ii].stat, "value": option.stats[ii].value }
+                    );
+                }
             }
-        }
+        }       
     }
 
     output_party[party_id].stats.effects = stats;
@@ -178,25 +186,26 @@ function equip_effects_update_stats_transform_other(party_id) {
     var user_effects = user_objects.user_party[party_id].effects;
 
     for (var i = 0; i < user_effects.length; i++) {
+        if (user_effects[i].selected) {
+            var effect = utils_array_get_by_lookup(data_effects, "id", user_effects[i].id);
+            var option = effect.options[user_effects[i].option];
 
-        var effect = utils_array_get_by_lookup(data_effects, "id", user_effects[i].id);
-        var option = effect.options[user_effects[i].option];
+            if (option.transform) {
+                for (var ii = 0; ii < option.transform.length; ii++) {
+                    if (option.transform[ii].character) {
 
-        if (option.transform) {
-            for (var ii = 0; ii < option.transform.length; ii++) {
-                if (option.transform[ii].character) {
+                        stats.push(equip_effects_return_stats_transformed(user_effects[i].source_party, option.transform[ii]));
 
-                    stats.push(equip_effects_return_stats_transformed(user_effects[i].source_party, option.transform[ii]));
-
-                } else if (option.transform[ii].special) {
+                    } else if (option.transform[ii].special) {
 
 
-                    var source_party_id = equip_character_return_party_id_by_special(option.transform[ii].special);
+                        var source_party_id = equip_character_return_party_id_by_special(option.transform[ii].special);
 
-                    stats.push(equip_effects_return_stats_transformed(source_party_id, option.transform[ii]));
+                        stats.push(equip_effects_return_stats_transformed(source_party_id, option.transform[ii]));
+                    }
                 }
             }
-        }
+        }       
     }
 
     output_party[party_id].stats.effects_transform_other = stats;
@@ -214,17 +223,18 @@ function equip_effects_update_stats_transform_personal(party_id) {
     var user_effects = user_objects.user_party[party_id].effects;
 
     for (var i = 0; i < user_effects.length; i++) {
-        var effect = utils_array_get_by_lookup(data_effects, "id", user_effects[i].id);
-        var option = effect.options[user_effects[i].option];
+        if (user_effects[i].selected) {
+            var effect = utils_array_get_by_lookup(data_effects, "id", user_effects[i].id);
+            var option = effect.options[user_effects[i].option];
 
-        if (option.transform) {
-            for (var ii = 0; ii < option.transform.length; ii++) {
-                if (!option.transform[ii].character && !option.transform[ii].special) {
-                    stats.push(equip_effects_return_stats_transformed(party_id, option.transform[ii]));
-                } 
+            if (option.transform) {
+                for (var ii = 0; ii < option.transform.length; ii++) {
+                    if (!option.transform[ii].character && !option.transform[ii].special) {
+                        stats.push(equip_effects_return_stats_transformed(party_id, option.transform[ii]));
+                    }
+                }
             }
         }
-
     }
 
     output_party[party_id].stats.effects_transform_personal = stats;
@@ -274,30 +284,21 @@ function equip_effects_update_character_options(effect_list, party_id, party) {
 
     for (var i = 0; i < current_character.attacks.length; i++) {
         if (current_character.attacks[i].apply) {
-            var level = 0;
-            if (current_character.attacks[i].type) {
-                level = output_party[party_id].stats.total["level" + current_character.attacks[i].type];
-            }
+            var level = equip_skills_return_skill_level(party_id, current_character.attacks[i].type);
             equip_effects_update_single_option(effect_list, current_character.attacks[i].apply, party, level, { "type": "character", "id": user_objects.user_party[party_id].id }, party_id)
         }
     }
 
     for (var i = 0; i < current_character.passive.length; i++) {
         if (user_objects.user_party[party_id].level >= current_character.passive[i].level && current_character.passive[i].apply) {
-            var level = 0;
-            if (current_character.passive[i].type) {
-                level = output_party[party_id].stats.total["level" + current_character.passive[i].type];
-            }
+            var level = equip_skills_return_skill_level(party_id, current_character.passive[i].type);
             equip_effects_update_single_option(effect_list, current_character.passive[i].apply, party, level, { "type": "character", "id": user_objects.user_party[party_id].id }, party_id)
         }
     }
 
     for (var i = 0; i < current_character.const.length; i++) {
         if (user_objects.user_party[party_id].constel > i && current_character.const[i].apply) {
-            var level = 0;
-            if (current_character.const[i].type) {
-                level = output_party[party_id].stats.total["level" + current_character.const[i].type];
-            }
+            var level = equip_skills_return_skill_level(party_id, current_character.const[i].type);
             equip_effects_update_single_option(effect_list, current_character.const[i].apply, party, level, { "type": "character", "id": user_objects.user_party[party_id].id }, party_id)
         }
     }
@@ -798,11 +799,11 @@ function equip_effects_return_transform_statline(transform, source_party) {
         var targetname = data_stats[transform.target].name;
         var text_min = "";
         if (transform.min) {
-            text_min = " over " + utils_number_format(transform.min);
+            text_min = " over&nbsp;" + utils_number_format(transform.min);
         }
         var text_max = "";
         if (transform.max) {
-            text_max = " (Max " + utils_number_format(transform.max)  + ")";
+            text_max = " (Max&nbsp;" + utils_number_format(transform.max)  + ")";
         }
         if (transform.character) {
             sourcename = equip_character_return_short_name(user_objects.user_party[source_party].id) + "'s " + sourcename;
@@ -820,11 +821,11 @@ function equip_effects_return_bonusdmg_statline(bonusdmg) {
 
         var text_min = "";
         if (bonusdmg.min) {
-            text_min = " over " + utils_number_format(bonusdmg.min);
+            text_min = " over&nbsp;" + utils_number_format(bonusdmg.min);
         }
         var text_max = "";
         if (bonusdmg.max) {
-            text_max = " (Max " + utils_number_format(bonusdmg.max) + ")";
+            text_max = " (Max&nbsp;" + utils_number_format(bonusdmg.max) + ")";
         }
         var targetname = "";
         if (bonusdmg.target_vision != "all") {
@@ -944,21 +945,23 @@ function equip_effects_return_infusion(party_id) {
 
     var user_effects = user_objects.user_party[party_id].effects;
     for (var i = 0; i < user_effects.length; i++) {
+        if (user_effects[i].selected) {
+            var effect = utils_array_get_by_lookup(data_effects, "id", user_effects[i].id);
+            var option = effect.options[user_effects[i].option];
 
-        var effect = utils_array_get_by_lookup(data_effects, "id", user_effects[i].id);
-        var option = effect.options[user_effects[i].option];
+            if (option.conversion) {
+                return option.conversion;
+            }
 
-        if (option.conversion) {
-            return option.conversion;
-        }
-
-        if (infusable && option.infusion) {
-            if (option.infusion.repeated) {
-                repeated_infusions.push(option.infusion.vision)
-            } else {
-                single_infusion = option.infusion.vision;
+            if (infusable && option.infusion) {
+                if (option.infusion.repeated) {
+                    repeated_infusions.push(option.infusion.vision)
+                } else {
+                    single_infusion = option.infusion.vision;
+                }
             }
         }
+        
 
     }
 

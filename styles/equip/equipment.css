@@ -90,7 +90,7 @@
 }
 
 .artifact_sub_line .container:first-child {
-    width: calc(50% - 4px);
+    width: calc(63% - 4px);
     margin-right: 4px;
 }
 
@@ -117,6 +117,14 @@
     min-width: 64px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.artifact_rel_val {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: calc(13%);
+    font-size: 0.9em;
 }
 
 .artifact_stats .left {

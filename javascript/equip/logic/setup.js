@@ -3,14 +3,14 @@ window_frame_ids = [
     { "id": "frame_stats", "text": "Stats", "order": 1, "display": true },
     { "id": "frame_equipment", "text": "Equipment", "order": 2, "display": true },
     { "id": "frame_effects", "text": "Effects", "order": 3, "display": true },
-    { "id": "frame_skills", "text": "Skills", "order": 4, "display": true },
+    { "id": "frame_skills", "text": "Skills // Storage", "order": 4, "display": true },
 ];
 
 const frame_stats_columns = 4;
 
 
 async function equip_load_all() {
-    var ver = "?20241128"
+    var ver = "?20250125"
 
     data_characters = await utils_load_file("/data/characters.json" + ver);
     data_enemies = await utils_load_file("/data/enemies.json" + ver);
@@ -40,6 +40,7 @@ async function equip_setup_all() {
         await equip_load_all();
         equip_setup_default_stats();
 
+        equip_setup_local_storage();
         equip_setup_user_objects();
         equip_setup_output_objects();
 
@@ -49,7 +50,9 @@ async function equip_setup_all() {
         equip_setup_ui_frame_equipment();
         equip_setup_ui_frame_effects();
         equip_setup_ui_frame_skills();
+        equip_setup_ui_frame_storage();
 
+        equip_storage_display_all();
         equip_storage_load_last();
     } catch (err) {
         utils_loading_show_error(err, "An Error occured during loading the page.<br>Please reload the page with CTRL+F5.<br>If the Error persists, please contact the administrator.");
@@ -349,6 +352,8 @@ function equip_setup_ui_artifact(artifact_id) {
         sub_val.onclick = function (event) { utils_create_prompt_input(null, sub_val.id, equip_artifacts_change_sub_value, artifact_id + i, user_objects.user_party[user_objects.user_active_character].artifacts[artifact_id].sub_stats[i].value, sub_val_container); event.preventDefault(); };
         sub_val_container.appendChild(sub_val);
         sub_val.appendChild(utils_create_obj("div", "icon_selects_text", "artifact_sub_val_text_" + artifact_id + i, "0"));
+
+        sub_stat_line.appendChild(utils_create_obj("div", "artifact_rel_val", "artifact_rel_val_text_" + artifact_id + i, "0"));
     }
 
     return obj;
@@ -372,7 +377,7 @@ function equip_setup_ui_effects(effect_type) {
 
     if (effect_type == "manual") {
         var new_btn = utils_create_obj("div", "new_button");
-        new_btn.onclick = function (event) { equip_control_create_effects_manual() };
+        new_btn.onclick = function (event) { equip_effects_change_new_manual() };
         obj.appendChild(new_btn);
     }
 
@@ -385,6 +390,7 @@ function equip_setup_ui_frame_skills() {
 
     parent.appendChild(equip_setup_ui_skills("permanent"));
     parent.appendChild(equip_setup_ui_skills("active"));
+    parent.appendChild(equip_setup_ui_skills("storage"));
 }
 
 function equip_setup_ui_skills(skill_window) {
@@ -392,6 +398,12 @@ function equip_setup_ui_skills(skill_window) {
 
     obj.appendChild(utils_create_obj("p", "container_name", null, utils_capitalize(skill_window)));
     obj.appendChild(utils_create_obj("div", "skills_column", "skills_container_" + skill_window));
+
+    if (skill_window == "storage") {
+        var new_btn = utils_create_obj("div", "new_button");
+        new_btn.onclick = function (event) { equip_storage_change_new() };
+        obj.appendChild(new_btn);
+    }
 
     return obj;
 }
@@ -407,6 +419,9 @@ function equip_setup_user_objects(user_data = null) {
         char.id = utils_object_get_value(user_data, "user_party."+i+".id", "none");
         char.level = utils_object_get_value(user_data, "user_party." + i + ".level", 0);
         char.constel = utils_object_get_value(user_data, "user_party." + i + ".constel", 0);
+        char.levelnormal = utils_object_get_value(user_data, "user_party." + i + ".levelnormal", 0);
+        char.levelskill = utils_object_get_value(user_data, "user_party." + i + ".levelskill", 0);
+        char.levelburst = utils_object_get_value(user_data, "user_party." + i + ".levelburst", 0);
 
         char.weapon = {};
         char.weapon.id = utils_object_get_value(user_data, "user_party." + i + ".weapon.id", 0);
@@ -519,3 +534,8 @@ function equip_setup_default_stats() {
     }
 }
 
+function equip_setup_local_storage() {
+    if (localStorage.getItem("equip_storage_count") == null || isNaN(localStorage.getItem("equip_storage_count")) || localStorage.getItem("equip_storage_count") < 0) {
+        localStorage.setItem("equip_storage_count", 0);
+    }
+}

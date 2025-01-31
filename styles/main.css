@@ -33,6 +33,9 @@ body {
     --orange-bg-glow: #cc6600;
     --purple: #ad33ff;
     --highlight: #66ccff;
+    --green: #00ff00;
+    --green-light: #33ff33;
+    --green-dark: #00cc00;
 }
 
 p {
@@ -396,15 +399,22 @@ input {
 }
 
 .frame_window.minimized .svg-chevron-up::before,
-.frame_window.minimized .svg-chevron-down::before,
+.frame_window.minimized .svg-chevron-down::before{
+    //cursor: default;
+    //background-color: var(--grey-30);
+}
+
+.frame_window.minimized .svg-chevron-up,
+.frame_window.minimized .svg-chevron-down{
+    //pointer-events: none;
+}
+
 .frame_window:first-child .svg-chevron-up::before,
 .frame_window:nth-last-child(-n + 1 of .frame_window:not(.minimized)) .svg-chevron-down::before {
     cursor: default;
     background-color: var(--grey-30);
 }
 
-.frame_window.minimized .svg-chevron-up,
-.frame_window.minimized .svg-chevron-down,
 .frame_window:first-child .svg-chevron-up,
 .frame_window:nth-last-child(-n + 1 of .frame_window:not(.minimized)) .svg-chevron-down {
     pointer-events: none;

@@ -1253,32 +1253,58 @@
           },
           {
             "id": 3,
-            "name": "Charge Level 2",
+            "name": "Charge Level 2 (1/2)",
             "type": "skill",
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
             "crit": true,
             "scale": [
-              [ 88, 96 ],
-              [ 94.6, 103.2 ],
-              [ 101.2, 110.4 ],
-              [ 110, 120 ],
-              [ 116.6, 127.2 ],
-              [ 123.2, 134.4 ],
-              [ 132, 144 ],
-              [ 140.8, 153.6 ],
-              [ 149.6, 163.2 ],
-              [ 158.4, 172.8 ],
-              [ 167.2, 182.4 ],
-              [ 176, 192 ],
-              [ 187, 204 ],
-              [ 198, 216 ],
-              [ 209, 228 ]
+               88 ,
+               94.6 ,
+               101.2 ,
+               110 ,
+               116.6 ,
+               123.2 ,
+               132 ,
+               140.8 ,
+               149.6 ,
+               158.4 ,
+               167.2 ,
+               176 ,
+               187 ,
+               198 ,
+               209 
             ]
           },
           {
             "id": 4,
+            "name": "Charge Level 2 (2/2)",
+            "type": "skill",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [
+               96 ,
+               103.2 ,
+               110.4 ,
+               120 ,
+               127.2 ,
+               134.4 ,
+               144 ,
+               153.6 ,
+               163.2 ,
+               172.8 ,
+               182.4 ,
+               192 ,
+               204 ,
+               216 ,
+               228 
+            ]
+          },
+          {
+            "id": 5,
             "name": "Explosion",
             "type": "skill",
             "damage": true,
@@ -22776,10 +22802,10 @@
             "id": 1,
             "name": "Shield Absorption",
             "type": "shield",
-            "damage": true,
+            "damage": false,
             "vision": "dendro",
             "stat": "hp",
-            "crit": true,
+            "crit": false,
             "scale": [ 10.0, 10.75, 11.5, 12.5, 13.25, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.25, 22.5, 23.75 ],
             "flat": [ 962.23, 1058.47, 1162.72, 1275.0, 1395.3, 1523.61, 1659.95, 1804.3, 1956.68, 2117.07, 2285.48, 2461.92, 2646.37, 2838.84, 3039.34 ]
           },
@@ -22787,10 +22813,10 @@
             "id": 2,
             "name": "Max Shield Absorption",
             "type": "shield",
-            "damage": true,
+            "damage": false,
             "vision": "dendro",
             "stat": "hp",
-            "crit": true,
+            "crit": false,
             "scale": [ 16.0, 17.2, 18.4, 20.0, 21.2, 22.4, 24.0, 25.6, 27.2, 28.8, 30.4, 32.0, 34.0, 36.0, 38.0 ],
             "flat": [ 1541.08, 1695.21, 1862.18, 2042.0, 2234.66, 2440.17, 2658.52, 2889.71, 3133.75, 3390.63, 3660.36, 3942.93, 4238.34, 4546.6, 4867.71 ]
           },
@@ -24876,7 +24902,8 @@
         "level": 2,
         "apply": {
           "id": 1537,
-          "option": 0
+          "option": 0,
+          "special": "const_2"
         }
       },
       {
@@ -28283,8 +28310,9 @@
         "desc": "After a nearby party member triggers a Electro-related reaction against an opponent, Electro DMG dealt by Clorinde's Normal Attacks and Last Lightfall will be increased by 20% of Clorinde's ATK for 15s. Max 3 stacks. Each stack is counted independently. The Maximum DMG increase achievable this way for the above attacks is 1,800.",
         "level": 2,
         "apply": {
-          "id": 1283,
-          "option": 0
+          "id": 1592,
+          "option": 0,
+          "special": "const_1"
         }
       },
       {
@@ -28323,11 +28351,7 @@
       },
       {
         "name": "\"Now, As We Face the Perils of the Long Night\"",
-        "desc": "Enhance the Passive Talent \"Dark-Shattering Flame\": After a nearby party member triggers a Electro-related reaction against an opponent, Electro DMG dealt by Clorinde's Normal Attacks and Last Lightfall will be increased by 30% of Clorinde's ATK for 15s. Max 3 stacks. Each stack is counted independently. When you have 3 stacks, Clorinde's interruption resistance will be increased. The Maximum DMG increase achievable this way for the above attacks is 2,700.You must first unlock the Passive Talent \"Dark-Shattering Flame.\"",
-        "apply": {
-          "id": 1283,
-          "option": 3
-        }
+        "desc": "Enhance the Passive Talent \"Dark-Shattering Flame\": After a nearby party member triggers a Electro-related reaction against an opponent, Electro DMG dealt by Clorinde's Normal Attacks and Last Lightfall will be increased by 30% of Clorinde's ATK for 15s. Max 3 stacks. Each stack is counted independently. When you have 3 stacks, Clorinde's interruption resistance will be increased. The Maximum DMG increase achievable this way for the above attacks is 2,700.You must first unlock the Passive Talent \"Dark-Shattering Flame.\""
       },
       {
         "name": "\"I Pledge to Remember the Oath of Daylight\"",

@@ -148,12 +148,3 @@ function equip_control_create_artifact(index, artifact_id) {
 
     return icon;
 }
-
-function equip_control_create_effects_manual() {
-    user_objects.user_party[user_objects.user_active_character].effects.push(
-        { "id": 0, "option": 0, "selected": true, "manual": true }
-    );
-    equip_effects_change_trigger();
-}
-
-

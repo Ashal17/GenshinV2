@@ -1,3 +1,5 @@
+const keep_frame_order = true;
+
 function utils_loading_hide(sleep) {
     setTimeout(_ => {
         document.getElementById("loader_error").style.display = "none";
@@ -105,7 +107,7 @@ function utils_create_frame(frame_definitions, index) {
 
 function utils_frame_move(frame_definitions, index, move_direction) {
 
-    if (frame_definitions[index]["display"]) {
+    if (frame_definitions[index]["display"] || keep_frame_order) {
         var new_order = frame_definitions[index]["order"] + move_direction;
 
         var max_order = 0;
@@ -140,25 +142,31 @@ function utils_frame_hideshow(frame_definitions, index) {
     if (frame_definitions[index]["display"]) {
         frame_definitions[index]["display"] = false;
         frame_obj.className = "frame_window minimized";
-        frame_definitions[index]["order"] = frame_definitions.length;
-        for (var i = 0; i < frame_definitions.length; i++) {
-            if (frame_definitions[i]["order"] >= previous_order) {
-                frame_definitions[i]["order"] += -1;
-            }
-        }     
-    } else {
-        var max_order = 0;
-        for (var i = 0; i < frame_definitions.length; i++) {
-            if (frame_definitions[i]["display"]) {
-                max_order++;
-            } else {
-                if (frame_definitions[i]["order"] < previous_order) {
-                    frame_definitions[i]["order"] += 1;
+        if (!keep_frame_order) {
+            frame_definitions[index]["order"] = frame_definitions.length;
+            for (var i = 0; i < frame_definitions.length; i++) {
+                if (frame_definitions[i]["order"] >= previous_order) {
+                    frame_definitions[i]["order"] += -1;
                 }
             }
         }
-        frame_definitions[index]["display"] = true;
-        frame_definitions[index]["order"] = max_order;
+             
+    } else {
+        if (!keep_frame_order) {
+            var max_order = 0;
+            for (var i = 0; i < frame_definitions.length; i++) {
+                if (frame_definitions[i]["display"]) {
+                    max_order++;
+                } else {
+                    if (frame_definitions[i]["order"] < previous_order) {
+                        frame_definitions[i]["order"] += 1;
+                    }
+                }
+            }
+            frame_definitions[index]["order"] = max_order;
+        }
+        
+        frame_definitions[index]["display"] = true;       
         frame_obj.className = "frame_window";
     }
 
@@ -250,10 +258,12 @@ function utils_create_img_btn(svg_name, func, hover_text, btn_id) {
     icon.onclick = function () { func(); };
     btn.appendChild(icon);
 
-    var btn_hover = document.createElement("div");
-    btn_hover.className = "img_button_hover";
-    btn_hover.innerHTML = hover_text;
-    btn.appendChild(btn_hover);
+    if (hover_text) {
+        var btn_hover = document.createElement("div");
+        btn_hover.className = "img_button_hover";
+        btn_hover.innerHTML = hover_text;
+        btn.appendChild(btn_hover);
+    }    
 
     return btn;
 }

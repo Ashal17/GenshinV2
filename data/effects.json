@@ -24753,7 +24753,7 @@
             "ratio": 0.1,
             "max": 80,
             "min": 200,
-            "custom_name": "Elemental Mastery over 200 to Tri-Karma Purification DMG"
+            "custom_name": "Elemental Mastery over 200 to Tri-Karma Purification DMG (Max 80)"
           },
           {
             "source": "elemastery",
@@ -24761,7 +24761,7 @@
             "ratio": 0.03,
             "max": 24,
             "min": 200,
-            "custom_name": "Elemental Mastery over 200 to Tri-Karma Purification Crit Rate"
+            "custom_name": "Elemental Mastery over 200 to Tri-Karma Purification Crit Rate (Max 24)"
           }
         ]
       }
@@ -34155,81 +34155,8 @@
   },
   {
     "id": 1283,
-    "name": "Dark-Shattering Flame",
-    "options": [
-      {
-        "id": 0,
-        "name": "3 Stacks",
-        "bonusdmg": [
-          {
-            "source": "atk",
-            "ratio": 60,
-            "target_vision": "all",
-            "target_type": "normal"
-          }
-        ]
-      },
-      {
-        "id": 1,
-        "name": "2 Stacks",
-        "bonusdmg": [
-          {
-            "source": "atk",
-            "ratio": 40,
-            "target_vision": "all",
-            "target_type": "normal"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "name": "1 Stack",
-        "bonusdmg": [
-          {
-            "source": "atk",
-            "ratio": 20,
-            "target_vision": "all",
-            "target_type": "normal"
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "name": "C2 - 3 Stacks",
-        "bonusdmg": [
-          {
-            "source": "atk",
-            "ratio": 90,
-            "target_vision": "all",
-            "target_type": "normal"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "name": "C2 - 2 Stacks",
-        "bonusdmg": [
-          {
-            "source": "atk",
-            "ratio": 60,
-            "target_vision": "all",
-            "target_type": "normal"
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "name": "C2 - 1 Stack",
-        "bonusdmg": [
-          {
-            "source": "atk",
-            "ratio": 30,
-            "target_vision": "all",
-            "target_type": "normal"
-          }
-        ]
-      }
-    ]
+    "name": "FREE",
+    "options": []
   },
   {
     "id": 1284,
@@ -41398,6 +41325,96 @@
             "max": 9000,
             "target_vision": "all",
             "target_type": "plunge"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1592,
+    "name": "Dark-Shattering Flame",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "ratio": 60,
+            "max": 1800,
+            "target_vision": "all",
+            "target_type": "normal"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "ratio": 40,
+            "max": 1200,
+            "target_vision": "all",
+            "target_type": "normal"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "ratio": 20,
+            "max": 600,
+            "target_vision": "all",
+            "target_type": "normal"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1593,
+    "name": "\"Now, As We Face the Perils of the Long Night\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "ratio": 90,
+            "max": 2700,
+            "target_vision": "all",
+            "target_type": "normal"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "ratio": 60,
+            "max": 1800,
+            "target_vision": "all",
+            "target_type": "normal"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "ratio": 30,
+            "max": 900,
+            "target_vision": "all",
+            "target_type": "normal"
           }
         ]
       }

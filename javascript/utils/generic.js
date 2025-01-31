@@ -75,7 +75,7 @@ function utils_number_format(num, round = null) {
             num = utils_number_round(num, round);
         }
 
-        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ").replace(/(-)(?=(\d))/g, "$1 ");
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1&nbsp;").replace(/(-)(?=(\d))/g, "$1&nbsp;");
     } else {
         return num;
     }

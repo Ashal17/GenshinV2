@@ -222,6 +222,8 @@ function equip_artifacts_display(artifact_id) {
         var sub_val = document.getElementById("artifact_sub_val_text_" + artifact_id + i);
         sub_val.innerHTML = current_artifact.sub_stats[i].value;
 
+        var rel_val = document.getElementById("artifact_rel_val_text_" + artifact_id + i);
+        rel_val.innerHTML = output_party[user_objects.user_active_character].artifacts[artifact_id].relative_values[i];
     }
 }
 
