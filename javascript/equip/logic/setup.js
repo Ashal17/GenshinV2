@@ -50,7 +50,6 @@ async function equip_setup_all() {
         equip_setup_ui_frame_equipment();
         equip_setup_ui_frame_effects();
         equip_setup_ui_frame_skills();
-        equip_setup_ui_frame_storage();
 
         equip_storage_display_all();
         equip_storage_load_last();
@@ -498,6 +497,7 @@ function equip_setup_output_objects() {
         char.skills.reactions = {};
         char.skills.bonusdmg = {};
         char.skills.other = [];
+        char.skills.active = 0;
 
         output_party.push(char);
     }

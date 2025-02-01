@@ -54,6 +54,9 @@ function equip_storage_change_trigger() {
 
 function equip_storage_change_new() {
 
+    var storage_save = {};
+
+
     equip_storage_change_trigger();
 }
 
