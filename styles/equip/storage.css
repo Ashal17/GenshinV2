@@ -1,0 +1,16 @@
+.storage_row {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--grey-15);
+    margin:2px;
+    padding: 2px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.storage_text {
+    padding: 2px 5px;
+    width: calc(100% / 3 - 30px);
+    text-align:center;
+    font-size:0.9em;
+}

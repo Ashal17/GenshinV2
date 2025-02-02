@@ -512,11 +512,13 @@ input {
     width:100%;
 }
 
-.prompt_header_text {
+.prompt_header .prompt_header_text {
     position: absolute;
     right: 50%;
     transform: translateX(50%);
 }
+
+
 
 .prompt_select_options {
     display: grid;
@@ -575,16 +577,30 @@ input {
     border-bottom: 1px solid var(--orange-bg);
 }
 
-.prompt_input_simple {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--orange-bg);
-    padding: 2px;
-    left: 0;
-    top: 100%;
-    width: calc(100% - 6px);
-    height: auto;
+.prompt_input {
+    left: 50%;
+    transform: translateX(-50%);
+    padding:10px;
 }
+
+    .prompt_input .prompt_input_field {
+        margin:5px;
+    }
+
+    .prompt_input .prompt_header_text {
+        margin-bottom:5px;
+    }
+
+    .prompt_input_simple {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--orange-bg);
+        padding: 2px;
+        left: 0;
+        top: 100%;
+        width: calc(100% - 6px);
+        height: auto;
+    }
 
     .prompt_input_simple .prompt_button {
         font-size: 1em;
@@ -662,6 +678,10 @@ input {
         height: 75%;
         aspect-ratio: 1 / 1;
     }
+
+.new_button_container {
+    align-self: center;
+}
 
 .new_button {
     height: 50px;

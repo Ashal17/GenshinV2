@@ -399,9 +399,12 @@ function equip_setup_ui_skills(skill_window) {
     obj.appendChild(utils_create_obj("div", "skills_column", "skills_container_" + skill_window));
 
     if (skill_window == "storage") {
-        var new_btn = utils_create_obj("div", "new_button");
-        new_btn.onclick = function (event) { equip_storage_change_new() };
-        obj.appendChild(new_btn);
+        var new_btn_container = utils_create_obj("div", "container new_button_container");
+        var new_btn = utils_create_obj("div", "new_button", "storage_new_button");
+        new_btn.onclick = function (event) { utils_create_prompt_input("Enter name for new Storage", new_btn.id, equip_storage_change_new, null, "New", new_btn_container); event.preventDefault(); };
+
+        new_btn_container.appendChild(new_btn);
+        obj.appendChild(new_btn_container);
     }
 
     return obj;

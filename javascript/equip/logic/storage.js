@@ -8,15 +8,14 @@ function equip_storage_load_last() {
     var last_storage = localStorage.getItem("last_storage");
     if (last_storage) {
         utils_log_debug("Found last Storage.");
-        equip_storage_load(last_storage);
+        equip_storage_load(JSON.parse(last_storage));
     } else {
         utils_log_debug("No last Storage.");
     }
     
 }
 
-function equip_storage_load(storage_json) {
-    var storage_data = JSON.parse(storage_json);
+function equip_storage_load(storage_data) {
 
     utils_log_debug("Loading storage...")
     if (storage_data) {        
@@ -52,12 +51,28 @@ function equip_storage_change_trigger() {
     equip_storage_display_all();
 }
 
-function equip_storage_change_new() {
+function equip_storage_change_new(new_name) {
 
-    var storage_save = {};
+    var storage_count = parseInt(localStorage.getItem("equip_storage_count"));
 
+    equip_storage_update_set_storage(
+        storage_count,
+        new_name,
+        user_objects.user_party[user_objects.user_active_character].id,
+        output_party[user_objects.user_active_character].skills.active,
+        user_objects
+    );
+
+    localStorage.setItem("equip_storage_count", storage_count+1);
 
     equip_storage_change_trigger();
+}
+
+function equip_storage_update_set_storage(index, name, char_id, damage, storage_data) {
+    localStorage.setItem("equip_storage_name_" + index, name);
+    localStorage.setItem("equip_storage_char_" + index, char_id);
+    localStorage.setItem("equip_storage_damage_" + index, damage);
+    localStorage.setItem("equip_storage_data_" + index, JSON.stringify(storage_data));
 }
 
 function equip_storage_display_all() {
@@ -72,10 +87,11 @@ function equip_storage_display_all() {
 }
 
 function equip_storage_display(index) {
-    var equip_storage = localStorage.getItem("equip_storage_" + index);
 
-    var obj = utils_create_obj("div", "storage_line", "storage_line_" + index);
-
+    var obj = utils_create_obj("div", "storage_row", "storage_row_" + index);
+    obj.appendChild(utils_create_obj("div", "storage_text", null, localStorage.getItem("equip_storage_name_" + index)));
+    obj.appendChild(utils_create_obj("div", "storage_text", null, localStorage.getItem("equip_storage_char_" + index)));
+    obj.appendChild(utils_create_obj("div", "storage_text", null, utils_number_format(Number(localStorage.getItem("equip_storage_damage_" + index)).toFixed(1))));
 
 
     return obj;

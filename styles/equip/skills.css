@@ -9,11 +9,6 @@
     padding: 1px;
 }
 
-.skills_column {
-    display:flex;
-    flex-direction:column;
-}
-
 .skills_row_permanent, .skills_row_active {
     display: flex;
     flex-direction: column;

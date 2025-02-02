@@ -450,6 +450,7 @@ function utils_create_prompt_input(text, btn, func, input, current_value, parent
     }
 
     if (text) {
+
         prompt.appendChild(utils_create_obj("div", "prompt_header_text", null, text));
     }
 
