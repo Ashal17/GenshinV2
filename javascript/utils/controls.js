@@ -246,7 +246,8 @@ function utils_create_statline(text, value, value_class) {
     return line;
 }
 
-function utils_create_img_btn(svg_name, func, hover_text, btn_id) {
+function utils_create_img_btn(svg_name, func, hover_text, btn_id, container_class) {
+
     var btn = document.createElement("div");
     if (btn_id) {
         btn.id = btn_id;
@@ -255,7 +256,9 @@ function utils_create_img_btn(svg_name, func, hover_text, btn_id) {
 
     var icon = document.createElement("div");
     icon.className = "img_icon svg svg-" + svg_name;
-    icon.onclick = function () { func(); };
+    if (func) {
+        icon.onclick = function () { func(); };
+    }    
     btn.appendChild(icon);
 
     if (hover_text) {
@@ -263,9 +266,35 @@ function utils_create_img_btn(svg_name, func, hover_text, btn_id) {
         btn_hover.className = "img_button_hover";
         btn_hover.innerHTML = hover_text;
         btn.appendChild(btn_hover);
-    }    
+    }
 
-    return btn;
+    if (container_class) {
+        var container = utils_create_obj("div", "img_button_container " + container_class);
+        container.appendChild(btn);
+        return container;
+    } else {
+        return btn;
+    }    
+}
+
+function utils_create_img_button_prompt_confirm(svg_name, hover_text, btn_id, text, func, input, container_class) {
+    var container = utils_create_obj("div", "img_button_container " + container_class);
+
+    var btn = utils_create_img_btn(svg_name, null, hover_text, btn_id, null);
+    btn.onclick = function (event) { utils_create_prompt_confirm(text, btn_id, func, input, container); event.preventDefault(); };
+
+    container.appendChild(btn);
+    return container;
+}
+
+function utils_create_img_button_prompt_input(svg_name, hover_text, btn_id, text, func, input, current_value, container_class) {
+    var container = utils_create_obj("div", "img_button_container " + container_class);
+
+    var btn = utils_create_img_btn(svg_name, null, hover_text, btn_id, null);
+    btn.onclick = function (event) { utils_create_prompt_input(text, btn_id, func, input, current_value, container); event.preventDefault(); };
+    
+    container.appendChild(btn);
+    return container;
 }
 
 function utils_create_label_img(svg_name, hover_text, img_id, label_id) {
@@ -436,6 +465,47 @@ function utils_create_prompt_values(btn, func, value_list, input, parent = null)
         value.onclick = function () { func(id, input); utils_destroy_current_prompt(); };
         prompt.appendChild(value);
     }
+}
+
+function utils_create_prompt_confirm(text, btn, func, input, parent = null) {
+    if (text) {
+        var prompt = utils_create_prompt(btn, "prompt_input", parent);
+    } else {
+        var prompt = utils_create_prompt(btn, "prompt_input_simple", parent);
+    }
+
+    if (!prompt) {
+        return;
+    }
+
+    if (text) {
+
+        prompt.appendChild(utils_create_obj("div", "prompt_header_text", null, text));
+    }
+    var line = utils_create_obj("div", "container");
+    prompt.appendChild(line);
+
+    prompt.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            func(input);
+            utils_destroy_current_prompt();
+        }
+    });
+    prompt.addEventListener("keyup", function (event) {
+        if (event.keyCode === 27) {
+            event.preventDefault();
+            utils_destroy_current_prompt();
+        }
+    });
+
+    var accept = utils_create_obj("button", "prompt_button prompt_button_accept", null, "\u2713");
+    accept.onclick = function () { func(input); utils_destroy_current_prompt(); };
+    line.appendChild(accept);
+
+    var decline = utils_create_obj("button", "prompt_button prompt_button_decline", null, "&#10006");
+    decline.onclick = function () { utils_destroy_current_prompt(); };
+    line.appendChild(decline);
 }
 
 function utils_create_prompt_input(text, btn, func, input, current_value, parent = null) {

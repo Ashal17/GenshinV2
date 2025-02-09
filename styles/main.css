@@ -74,6 +74,14 @@ input {
         box-shadow: 0 0 2px 1px var(--white);
     }
 
+.positive {
+    color: var(--green-light);
+}
+
+.negative {
+    color: var(--red-light);
+}
+
 .pyro {
     color:var(--pyro);
 }

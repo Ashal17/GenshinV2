@@ -28,6 +28,14 @@ background: none;
     -webkit-mask-image: url(../images/svg/account-circle.svg);
     mask-image: url(../images/svg/account-circle.svg);
 }
+.svg-account-outline:before {
+    -webkit-mask-image: url(../images/svg/account-outline.svg);
+    mask-image: url(../images/svg/account-outline.svg);
+}
+.svg-account-multiple-outline:before {
+    -webkit-mask-image: url(../images/svg/account-multiple-outline.svg);
+    mask-image: url(../images/svg/account-multiple-outline.svg);
+}
 .svg-alert-outline:before {
     -webkit-mask-image: url(../images/svg/alert-outline.svg);
     mask-image: url(../images/svg/alert-outline.svg);
@@ -43,6 +51,10 @@ background: none;
 .svg-code-tags:before {
     -webkit-mask-image: url(../images/svg/code-tags.svg);
     mask-image: url(../images/svg/code-tags.svg);
+}
+.svg-cog-outline:before {
+    -webkit-mask-image: url(../images/svg/cog-outline.svg);
+    mask-image: url(../images/svg/cog-outline.svg);
 }
 .svg-content-copy:before {
     -webkit-mask-image: url(../images/svg/content-copy.svg);

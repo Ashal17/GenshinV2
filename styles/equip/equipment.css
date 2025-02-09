@@ -84,6 +84,11 @@
         font-size:0.9em;
     }
 
+    .artifact_stats .elemastery .icon_selects_text,
+    .artifact_stats .recharge .icon_selects_text {
+        font-size: 0.8em;
+    }
+
 .artifact_sub_line {
     display: flex;
     flex-direction: row;
@@ -100,7 +105,7 @@
 }
 
     .artifact_sub_line .prompt_values {
-        min-width: 120px;
+        min-width: 130px;
         left: 50%;
         transform: translateX(-50%);
     }

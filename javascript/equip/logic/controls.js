@@ -128,7 +128,7 @@ function equip_control_create_artifacts_select(artifact_id, icon) {
     options = utils_array_sort(options, "name");
     options = utils_array_sort(options, "rarity");
 
-    utils_create_prompt_select("Select " + artifact_id, icon.id, options, "frame_equipment_content");
+    utils_create_prompt_select("Select " + data_artifact_vars[artifact_id].name, icon.id, options, "frame_equipment_content");
 }
 
 function equip_control_create_artifact(index, artifact_id) {

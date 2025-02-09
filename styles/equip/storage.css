@@ -1,16 +1,112 @@
+.storage_column {
+    background-color: var(--grey-15);
+    padding: 5px;
+    margin: 2px;
+}
+
 .storage_row {
     display: flex;
     flex-direction: row;
-    background-color: var(--grey-15);
-    margin:2px;
-    padding: 2px;
     align-items: center;
-    justify-content: space-between;
+    min-height: 27px;
+    font-size: 0.9em;
 }
+    .storage_row:not(:last-child) {
+        border-bottom: 1px dashed var(--grey-40);
+    }
+
+    .storage_row:first-child {
+        border-bottom: 1px solid var(--grey-40);
+    }
+
+    
 
 .storage_text {
     padding: 2px 5px;
-    width: calc(100% / 3 - 30px);
     text-align:center;
-    font-size:0.9em;
 }
+
+.storage_text_name {
+    width:calc((100% - 255px) * 25 / 60);
+}
+
+.storage_text_damage {
+    width: calc((100% - 255px) * 20 / 60);
+}
+
+.storage_text_comparison {
+    width: calc((100% - 255px) * 15 / 60);
+}
+
+.storage_btn {
+    width: 21px;
+    align-content: center;
+    position: relative;
+}
+
+    .storage_btn .prompt {
+        width:auto;
+        min-width:100px;
+    }
+
+        .storage_btn .prompt .prompt_header_text {
+            text-align: center;
+        }
+
+    .storage_party {
+        height: 26px;
+        width: 26px;
+        margin: 2px;
+    }
+
+.storage_party_img {
+    height: 26px;
+    width: 26px;
+}
+
+.storage_party_container {
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+    justify-content: center;
+}
+
+.storage_party {
+    box-shadow: 0 0 1px 1px var(--grey-50);
+    background-color: var(--grey-50);
+}
+
+    .storage_party.pyro {
+        box-shadow: 0 0 1px 1px var(--pyro);
+        background-color: var(--pyro);
+    }
+
+    .storage_party.hydro {
+        box-shadow: 0 0 1px 1px var(--hydro);
+        background-color: var(--hydro);
+    }
+
+    .storage_party.anemo {
+        box-shadow: 0 0 1px 1px var(--anemo);
+        background-color: var(--anemo);
+    }
+
+    .storage_party.geo {
+        box-shadow: 0 0 1px 1px var(--geo);
+        background-color: var(--geo);
+    }
+
+    .storage_party.electro {
+        box-shadow: 0 0 1px 1px var(--electro);
+        background-color: var(--electro);
+    }
+
+    .storage_party.dendro {
+        box-shadow: 0 0 1px 1px var(--dendro);
+        background-color: var(--dendro);
+    }
+
+    .storage_party.cryo {
+        box-shadow: 0 0 1px 1px var(--cryo);
+        background-color: var(--cryo);
+    }

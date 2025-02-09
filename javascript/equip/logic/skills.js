@@ -11,6 +11,7 @@ function equip_skills_change_trigger() {
 
     equip_skills_update_total_active(user_objects.user_active_character);
     equip_skills_display_active_all();
+    equip_storage_display_active();
     equip_storage_save_last();
 }
 
@@ -102,7 +103,7 @@ function equip_skills_update_verify_reactions(party_id) {
     for (var i = 0; i < active_skills.length; i++) {
         var active_skill = active_skills[i];
         if (active_skill.reaction) {
-            var part_objects = equip_skills_return_attack_part_objects(active_skill.attack_type, active_skill.attack_id, active_skill.part_id);
+            var part_objects = equip_skills_return_attack_part_objects(party_id, active_skill.attack_type, active_skill.attack_id, active_skill.part_id);
             var vision = equip_skills_return_part_vision(part_objects.part, party_id);
 
             if (!visions_variables[vision].reactions_mod.includes(active_skill.reaction)) {
@@ -125,19 +126,30 @@ function equip_skills_update_all() {
 
 function equip_skills_update_total_active(party_id) {
     var active_skills = user_objects.user_party[party_id].active_skills;
-    var total = 0;
+    var total_avg = 0;
+    var total_ncrt = 0;
+    var total_crt = 0;
 
     for (var i = 0; i < active_skills.length; i++) {
         var active_skill = active_skills[i];
         if (active_skill.attack_type != "reaction") {
             var part_objects = equip_skills_return_attack_part_objects(party_id, active_skill.attack_type, active_skill.attack_id, active_skill.part_id);
-            total += equip_skills_return_part_dmg(part_objects.part, part_objects.output, "avg", active_skill.reaction, active_skill.count);
+            var part_dmg = equip_skills_return_part_dmg(party_id, part_objects.part, part_objects.output, active_skill.reaction, active_skill.count);
+            total_avg += part_dmg.avg;
+            total_ncrt += part_dmg.ncrt;
+            total_crt += part_dmg.crt;
         } else {
             var output_reaction = output_party[party_id].skills.reactions[active_skill.attack_id][active_skill.part_id];
-            total += equip_skills_return_reaction_dmg(active_skill.part_id, output_reaction, "avg", active_skill.count)
+            var reaction_dmg = equip_skills_return_reaction_dmg(active_skill.part_id, output_reaction, active_skill.count);
+            total_avg += reaction_dmg.avg;
+            total_ncrt += reaction_dmg.ncrt;
+            total_crt += reaction_dmg.crt;
         }
     }
-    output_party[party_id].skills.active = total;
+    output_party[party_id].skills.active.ncrt = total_ncrt;
+    output_party[party_id].skills.active.crt = total_crt;
+    output_party[party_id].skills.active.avg = total_avg;
+
 }
 
 function equip_skills_update_character(party_id) {
@@ -264,9 +276,10 @@ function equip_skills_display_permanent_reaction(vision, reaction) {
     obj.appendChild(equip_skills_display_reaction_text(reaction));
 
     var output_reaction = output_party[user_objects.user_active_character].skills.reactions[vision][reaction];
-    obj.appendChild(equip_skills_display_reaction_value(reaction, output_reaction, "ncrt", 1));
-    obj.appendChild(equip_skills_display_reaction_value(reaction, output_reaction, "crt", 1));
-    obj.appendChild(equip_skills_display_reaction_value(reaction, output_reaction, "avg", 1));
+    var reaction_dmg_objects = equip_skills_display_reaction_value(reaction, output_reaction, 1)
+    obj.appendChild(reaction_dmg_objects.ncrt);
+    obj.appendChild(reaction_dmg_objects.crt);
+    obj.appendChild(reaction_dmg_objects.avg);
 
     var active_btn = utils_create_obj("div", "skills_part_btn skills_part_btn_right");
     if (reactions_variables[reaction].type == "elemasteryadd") {
@@ -343,9 +356,11 @@ function equip_skills_display_permanent_attack_part(part, output_part, active) {
 
     obj.appendChild(equip_skills_display_attack_part_text(part));
 
-    obj.appendChild(equip_skills_display_attack_part_value(part, output_part, "ncrt", false, 1));
-    obj.appendChild(equip_skills_display_attack_part_value(part, output_part, "crt", false, 1));
-    obj.appendChild(equip_skills_display_attack_part_value(part, output_part, "avg", false, 1));
+    var part_dmg_objects = equip_skills_display_attack_part_value(part, output_part, false, 1);
+
+    obj.appendChild(part_dmg_objects.ncrt);
+    obj.appendChild(part_dmg_objects.crt);
+    obj.appendChild(part_dmg_objects.avg);
     
     var active_btn = utils_create_obj("div", "skills_part_btn skills_part_btn_right");
     if (active) {
@@ -423,34 +438,55 @@ function equip_skills_display_reaction_text(reaction) {
     return text
 }
 
-function equip_skills_display_attack_part_value(part, output_part, crit_type, reaction, count) {
-    var part_dmg = equip_skills_return_part_dmg(part, output_part, crit_type, reaction, count);
-    if (part_dmg) {
-        var part_dmg_text = utils_number_format(part_dmg.toFixed(1));
-    } else {
-        var part_dmg_text = "";
-    }
+function equip_skills_display_attack_part_value(part, output_part, reaction, count) {
+    var part_dmg = equip_skills_return_part_dmg(user_objects.user_active_character, part, output_part, reaction, count);
 
-    return utils_create_obj("div", "skills_part_val", null, part_dmg_text);
+    var part_dmg_objects = {
+        "ncrt": utils_create_obj("div", "skills_part_val", null, utils_number_format(part_dmg.ncrt.toFixed(1))),
+        "crt": utils_create_obj("div", "skills_part_val", null, utils_number_format(part_dmg.crt.toFixed(1))),
+        "avg": utils_create_obj("div", "skills_part_val", null, utils_number_format(part_dmg.avg.toFixed(1)))
+    };
+
+
+    return part_dmg_objects;
 }
 
-function equip_skills_display_reaction_value(reaction, output_reaction, crit_type, count) {
+function equip_skills_display_reaction_value(reaction, output_reaction, count) {
 
-    var reaction_val = equip_skills_return_reaction_dmg(reaction, output_reaction, crit_type, count);
+    var reaction_val = equip_skills_return_reaction_dmg(reaction, output_reaction, count);
 
-    if (reaction_val) {
-        if (reactions_variables[reaction].type == "elemasterymult") {
-            var reaction_text = "&times " + utils_number_format(reaction_val.toFixed(2));
-        } else if (reactions_variables[reaction].type == "elemasterybonus") {
-            var reaction_text = "+ " + utils_number_format(reaction_val.toFixed(1));
-        } else {
-            var reaction_text = utils_number_format(reaction_val.toFixed(1));
-        }
-    } else {
-        var reaction_text = "";
+    switch (reactions_variables[reaction].type) {
+
+        case "elemasteryadd":
+            var part_dmg_objects = {
+                "ncrt": utils_create_obj("div", "skills_part_val", null, utils_number_format(reaction_val.ncrt.toFixed(1))),
+                "crt": utils_create_obj("div", "skills_part_val", null, utils_number_format(reaction_val.crt.toFixed(1))),
+                "avg": utils_create_obj("div", "skills_part_val", null, utils_number_format(reaction_val.avg.toFixed(1)))
+            };
+            break;
+        case "elemasterymult":
+            var part_dmg_objects = {
+                "ncrt": utils_create_obj("div", "skills_part_val", null, ""),
+                "crt": utils_create_obj("div", "skills_part_val", null, ""),
+                "avg": utils_create_obj("div", "skills_part_val", null, "&times " + utils_number_format(reaction_val.avg.toFixed(2)))
+            };
+            break;
+        case "elemasterybonus":
+            var part_dmg_objects = {
+                "ncrt": utils_create_obj("div", "skills_part_val", null, ""),
+                "crt": utils_create_obj("div", "skills_part_val", null, ""),
+                "avg": utils_create_obj("div", "skills_part_val", null, "+ " + utils_number_format(reaction_val.avg.toFixed(1)))
+            };
+            break;
+        default:
+            var part_dmg_objects = {
+                "ncrt": utils_create_obj("div", "skills_part_val", null, ""),
+                "crt": utils_create_obj("div", "skills_part_val", null, ""),
+                "avg": utils_create_obj("div", "skills_part_val", null, utils_number_format(reaction_val.avg.toFixed(1)))
+            };
     }
     
-    return utils_create_obj("div", "skills_part_val", null, reaction_text);
+    return part_dmg_objects;
 }
 
 
@@ -543,25 +579,23 @@ function equip_skills_display_active_attack(active_skill, index) {
         obj.appendChild(count_container);
         
         if (part.damage && visions_variables[vision].reactions_mod.length > 0) {
-            var reaction_btn = utils_create_obj("div", "skills_part_btn skills_part_btn_left");
             var reaction_svg = "elemastery";
             if (active_skill.reaction) {
                 reaction_svg = reactions_variables[active_skill.reaction].combination[vision];
             }
-            reaction_btn.appendChild(utils_create_img_btn(reaction_svg, function () { equip_skills_change_reaction_active(index) }, "Change Reaction", null));
-            obj.appendChild(reaction_btn);
+            obj.appendChild(utils_create_img_btn(reaction_svg, function () { equip_skills_change_reaction_active(index) }, "Change Reaction", null, "skills_part_btn skills_part_btn_left"));
         }
         
 
         obj.appendChild(equip_skills_display_attack_part_text(part));
-        obj.appendChild(equip_skills_display_attack_part_value(part, output_part, "ncrt", active_skill.reaction, active_skill.count));
-        obj.appendChild(equip_skills_display_attack_part_value(part, output_part, "crt", active_skill.reaction, active_skill.count));
-        obj.appendChild(equip_skills_display_attack_part_value(part, output_part, "avg", active_skill.reaction, active_skill.count));
 
-        var del_btn = utils_create_obj("div", "skills_part_btn skills_part_btn_right");
-        del_btn.appendChild(utils_create_img_btn("delete-forever", function () { equip_skills_change_delete_active(index) }, "Deactivate", null));
-        obj.appendChild(del_btn);
+        var part_dmg_objects = equip_skills_display_attack_part_value(part, output_part, active_skill.reaction, active_skill.count);
 
+        obj.appendChild(part_dmg_objects.ncrt);
+        obj.appendChild(part_dmg_objects.crt);
+        obj.appendChild(part_dmg_objects.avg);
+
+        obj.appendChild(utils_create_img_btn("delete-forever", function () { equip_skills_change_delete_active(index) }, "Deactivate", null, "skills_part_btn skills_part_btn_right"));
 
         return {
             "obj": obj,
@@ -589,9 +623,10 @@ function equip_skills_display_active_reaction(active_reaction, index) {
     obj.appendChild(equip_skills_display_reaction_text(active_reaction.part_id));
 
     var output_reaction = output_party[user_objects.user_active_character].skills.reactions[active_reaction.attack_id][active_reaction.part_id];
-    obj.appendChild(equip_skills_display_reaction_value(active_reaction.part_id, output_reaction, "ncrt", active_reaction.count));
-    obj.appendChild(equip_skills_display_reaction_value(active_reaction.part_id, output_reaction, "crt", active_reaction.count));
-    obj.appendChild(equip_skills_display_reaction_value(active_reaction.part_id, output_reaction, "avg", active_reaction.count));
+    var reaction_dmg_objects = equip_skills_display_reaction_value(active_reaction.part_id, output_reaction, active_reaction.count)
+    obj.appendChild(reaction_dmg_objects.ncrt);
+    obj.appendChild(reaction_dmg_objects.crt);
+    obj.appendChild(reaction_dmg_objects.avg);
 
     var del_btn = utils_create_obj("div", "skills_part_btn skills_part_btn_right");
     del_btn.appendChild(utils_create_img_btn("delete-forever", function () { equip_skills_change_delete_active(index) }, "Deactivate", null));
@@ -910,16 +945,12 @@ function equip_skills_return_part_vision(part, party_id) {
     }
 }
 
-function equip_skills_return_part_dmg(part, output_part, crit, reaction_name = false, count = 1) {
-
-    if (part.crit == false && crit != "avg") {
-        return 0;
-    }
+function equip_skills_return_part_dmg(party_id, part, output_part, reaction_name = false, count = 1) {
 
     var result = output_part.basic;
 
     if (part.damage) {
-        result += equip_skills_return_part_bonusdmg(part);
+        result += equip_skills_return_part_bonusdmg(party_id, part);
     }
 
     if (reaction_name) {
@@ -934,62 +965,97 @@ function equip_skills_return_part_dmg(part, output_part, crit, reaction_name = f
     result *= output_part.resistance;
     result *= output_part.defense;
 
-    if (crit == "crt") {
-        result += result * output_part.critdmg;
-    } else if (crit == "avg") {
-        result += result * output_part.critdmg * output_part.crit;
-    }
-
     if (count > 1) {
         result *= count;
     }
+
+    if (part.crit) {
+        var result_ncrt = result;
+        var result_crt = result * (1 + output_part.critdmg);
+        var result_avg = result * (1 + output_part.critdmg * output_part.crit);
+    } else {
+        var result_ncrt = result;
+        var result_crt = result;
+        var result_avg = result;
+    }
     
-    return result;
+    var result_obj = {
+        "ncrt": result_ncrt,
+        "crt": result_crt,
+        "avg": result_avg
+    }
+    
+    return result_obj;
     
 }
 
-function equip_skills_return_part_bonusdmg(part) {
+function equip_skills_return_part_bonusdmg(party_id, part) {
     var result = 0;
 
-    var vision = equip_skills_return_part_vision(part, user_objects.user_active_character);
+    var vision = equip_skills_return_part_vision(part, party_id);
 
-    result += output_party[user_objects.user_active_character].skills.bonusdmg.all.all;
+    result += output_party[party_id].skills.bonusdmg.all.all;
     if (vision) {
-        result += output_party[user_objects.user_active_character].skills.bonusdmg[vision].all;
+        result += output_party[party_id].skills.bonusdmg[vision].all;
 
         if (part.type) {
-            result += output_party[user_objects.user_active_character].skills.bonusdmg[vision][part.type];
+            result += output_party[party_id].skills.bonusdmg[vision][part.type];
         }
     }
     if (part.type) {
-        result += output_party[user_objects.user_active_character].skills.bonusdmg.all[part.type];
+        result += output_party[party_id].skills.bonusdmg.all[part.type];
     }
 
     return result;
 
 }
 
-function equip_skills_return_reaction_dmg(reaction, output_reaction, crit_type, count) {
-    if (reactions_variables[reaction].type == "elemasteryadd" || crit_type == "avg") {
-        if (reactions_variables[reaction].type == "elemasteryadd") {
-            var result = output_reaction.basic;
-            result *= output_reaction.resistance;
+function equip_skills_return_reaction_dmg(reaction, output_reaction, count) {
 
-            if (crit_type == "crt") {
-                result += result * output_reaction.critdmg;
-            } else if (crit_type == "avg") {
-                result += result * output_reaction.critdmg * output_reaction.crit;
-            }
+    if (reactions_variables[reaction].type == "elemasteryadd") {
+        var result = output_reaction.basic;
+        result *= output_reaction.resistance;
 
-            if (count > 1) {
-                result *= count;
-            }
+        if (count > 1) {
+            result *= count;
         }
-        else {
-            var result = output_reaction;
-        }
-    } else {
-        var result = 0;
+
+        var result_ncrt = result;
+        var result_crt = result * (1 + output_reaction.critdmg);
+        var result_avg = result * (1 + output_reaction.critdmg * output_reaction.crit);
+        
     }
-    return result;
+    else {
+        var result_ncrt = 0;
+        var result_crt = 0;
+        var result_avg = output_reaction;
+    }
+
+    var result_obj = {
+        "ncrt": result_ncrt,
+        "crt": result_crt,
+        "avg": result_avg
+    }
+
+    return result_obj;
+}
+
+function equip_skills_return_party_total_active() {
+    var total_ncrt = 0;
+    var total_crt = 0;
+    var total_avg = 0;
+
+    for (var i = 0; i < party_size; i++) {
+        total_ncrt += output_party[i].skills.active.ncrt;
+        total_crt += output_party[i].skills.active.crt;
+        total_avg += output_party[i].skills.active.avg;
+    }
+
+    var result_obj = {
+        "ncrt": total_ncrt,
+        "crt": total_crt,
+        "avg": total_avg
+    };
+
+    return result_obj;
 }

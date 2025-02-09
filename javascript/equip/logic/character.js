@@ -62,6 +62,7 @@ function equip_active_character_change(party_id) {
         equip_weapon_display();
         equip_artifacts_display_all();
         equip_stats_display();
+        equip_storage_display_active();
         equip_storage_save_last();
     }
 }
