@@ -10,6 +10,47 @@ function equip_control_display_all() {
 
 }
 
+function equip_control_create_enka(btn) {
+
+    var prompt = utils_create_prompt(btn, "prompt_select", "frame_party_content");
+
+    var headerline = utils_create_obj("div", "prompt_header");
+    prompt.appendChild(headerline);
+    headerline.appendChild(utils_create_obj("div", "prompt_header_text", null, "Load Enka"));
+    headerline.appendChild(utils_create_obj("div", "spacer"));
+    var decline = utils_create_obj("button", "prompt_button prompt_button_decline", null, "&#10006");
+    decline.onclick = function () { utils_destroy_current_prompt(); };
+    headerline.appendChild(decline);
+    
+    
+
+    var inputline = utils_create_obj("div", "enka_load_container");
+    prompt.appendChild(inputline);
+    var inputfield = utils_create_obj("input", "prompt_input_field", "prompt_input_enka");
+    inputfield.placeholder = "UID...";
+    inputfield.value = enka_objects.last_uid;
+    inputline.appendChild(inputfield);
+
+    inputline.appendChild(utils_create_img_btn("enka-download", equip_enka_change_load_uid, "Load Enka characters", "enka_load", "enka_load"));
+
+    prompt.appendChild(utils_create_obj("div", "enka_column", "enka_column"));
+
+    prompt.addEventListener("keyup", function (event) {
+        if (event.code === "Escape") {
+            event.preventDefault();
+            utils_destroy_current_prompt();
+        }
+    });
+    prompt.addEventListener("keyup", function (event) {
+        if (event.code === "Enter") {
+            event.preventDefault();
+            equip_enka_change_load_uid();
+        }
+    });
+    inputfield.focus();
+
+}
+
 function equip_control_create_character_select(party_id, icon) {
     var options = [];
 
@@ -48,8 +89,6 @@ function equip_control_create_character(character_id, party_id) {
     if (character.unreleased) {
         icon.appendChild(utils_create_obj("div", "character_ribbon ribbon_left_top",null , "Beta"));
     }
-
-    
 
     return icon;
 }
@@ -148,3 +187,5 @@ function equip_control_create_artifact(index, artifact_id) {
 
     return icon;
 }
+
+

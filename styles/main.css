@@ -74,6 +74,10 @@ input {
         box-shadow: 0 0 2px 1px var(--white);
     }
 
+.hidden {
+    display:none !important;
+}
+
 .positive {
     color: var(--green-light);
 }
@@ -266,7 +270,7 @@ input {
 }
 
 
-.img_button, .label_img {
+.img_button, .label_img, .img_svg {
     position: relative;
     aspect-ratio: 1 / 1;
 }
@@ -507,9 +511,10 @@ input {
 
 .prompt_select {
     width: 97%;
-    top: 15px;
+    top: calc(100% - 5px);
     left: 50%;
     transform: translateX(-50%);
+    min-height:200px;
 }
 
 .prompt_header {

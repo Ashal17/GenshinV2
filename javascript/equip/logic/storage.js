@@ -12,7 +12,20 @@ function equip_storage_save_last() {
     localStorage.setItem("last_storage", user_json);
 }
 
+function equip_storage_save_user_storage() {
+    var storage_json = JSON.stringify(storage_objects);
+    localStorage.setItem("user_storage", storage_json);
+}
+
 function equip_storage_load_last() {
+    var user_storage = localStorage.getItem("user_storage");
+    if (user_storage) {
+        utils_log_debug("Found saved Storages.");
+        equip_setup_storage_objects(JSON.parse(user_storage));
+    } else {
+        utils_log_debug("No saved Storages.");
+    }
+
     var last_storage = localStorage.getItem("last_storage");
     if (last_storage) {
         utils_log_debug("Found last Storage.");
@@ -55,141 +68,152 @@ function equip_storage_load(storage_data) {
     }  
 }
 
-function equip_storage_change_trigger(recalculate) {
-    if (recalculate) {
-        equip_storage_update_comparison_all();
-        equip_storage_display_active();
-    }
+function equip_storage_load_preferences(preferences_data = null) {
+    user_preferences.storage = {};
+
+    user_preferences.storage.base = utils_object_get_value(preferences_data, "storage.base", -1);
+    user_preferences.storage.comparison = utils_object_get_value(preferences_data, "storage.comparison", "avg");
+    user_preferences.storage.party = utils_object_get_value(preferences_data, "storage.party", "character");
+    user_preferences.storage.filter = utils_object_get_value(preferences_data, "storage.filter", false);
+    user_preferences.storage.pin = utils_object_get_value(preferences_data, "storage.pin", false);
+}
+
+function equip_storage_change_trigger() {
+    equip_storage_update_comparison_all();
+    equip_storage_display_active();
     equip_storage_display_all();
+    equip_storage_save_user_storage();
 }
 
 function equip_storage_change_new(new_name) {
 
-    var storage_count = parseInt(localStorage.getItem("equip_storage_count"));
+    var storage_count = storage_objects.saved_storage.length;
 
     if (!new_name) {
         new_name = "Storage " + (storage_count + 1);
     }
 
     equip_storage_update_set_storage(
-        storage_count,
+        -1,
         new_name,
-        user_objects.user_active_character,
-        user_objects.user_party,
         output_party[user_objects.user_active_character].skills.active,
         equip_skills_return_party_total_active(),
         user_objects
     );
 
-    localStorage.setItem("equip_storage_count", storage_count+1);
-
-    equip_storage_change_trigger(true);
+    equip_storage_change_trigger();
 }
 
 function equip_storage_change_move(index, direction) {
 
-    equip_storage_change_trigger(false);
+    equip_storage_change_trigger();
 }
 
 function equip_storage_change_rename(new_name, index) {
-    localStorage.setItem("equip_storage_name_" + index, new_name);
-    equip_storage_change_trigger(false);
+    if (new_name) {
+        storage_objects.saved_storage[index].name = new_name;
+        equip_storage_change_trigger();
+    }    
 }
 
 function equip_storage_change_base(index) {
-    var storage_base = parseInt(localStorage.getItem("equip_storage_base"));
-    if (index == storage_base) {
-        localStorage.setItem("equip_storage_base", -1);
+    if (index == user_preferences.storage.base) {
+        user_preferences.storage.base = -1;
     } else {
-        localStorage.setItem("equip_storage_base", index);
+        user_preferences.storage.base = index;
     }
-
-    equip_storage_change_trigger(true);
+    utils_preferences_change_trigger();
+    equip_storage_change_trigger();
 }
 
 function equip_storage_change_save(index) {
     equip_storage_update_set_storage(
         index,
-        null,
-        user_objects.user_active_character,
-        user_objects.user_party,
+        storage_objects.saved_storage[index].name,
         output_party[user_objects.user_active_character].skills.active,
         equip_skills_return_party_total_active(),
         user_objects
     );
 
-    equip_storage_change_trigger(true);
+    equip_storage_change_trigger();
 }
 
 function equip_storage_change_load(index) {
-    var storage_data = localStorage.getItem("equip_storage_data_" + index);
-    equip_storage_load(JSON.parse(storage_data));
 
-    equip_storage_change_trigger(false);
+    equip_storage_load(storage_objects.saved_storage[index].user_data);
+    equip_storage_save_last();
+
+    equip_storage_change_trigger();
 }
 
 function equip_storage_change_delete(index) {
-    var storage_count = parseInt(localStorage.getItem("equip_storage_count"));
-    localStorage.setItem("equip_storage_count", storage_count - 1);
-
-    if (storage_count != (index + 1)) {
-        for (var i = index; i < (storage_count - 1); i++) {
-            equip_storage_update_copy_storage(i + 1, i);
-        }
-    }
-    equip_storage_update_delete_storage(storage_count - 1);
-
-    var storage_base = parseInt(localStorage.getItem("equip_storage_base"));
-    if (storage_base > -1) {
-        if (index == storage_base) {
-            localStorage.setItem("equip_storage_base", -1);
-        } else if (storage_base > index) {
-            localStorage.setItem("equip_storage_base", storage_base-1);
-        }
-    }
     
-    equip_storage_change_trigger(true);
+    storage_objects.saved_storage.splice(index, 1);
+
+    if (user_preferences.storage.base == index) {
+        user_preferences.storage.base = -1;
+    }   
+    
+    equip_storage_change_trigger();
+}
+
+function equip_storage_change_filter() {
+    if (user_preferences.storage.filter) {
+        user_preferences.storage.filter = false;
+    } else {
+        user_preferences.storage.filter = true;
+    }
+
+    equip_storage_display_header_type();
+    utils_preferences_change_trigger();
+    equip_storage_change_trigger();
+}
+
+function equip_storage_change_pin() {
+    if (user_preferences.storage.pin) {
+        user_preferences.storage.pin = false;
+    } else {
+        user_preferences.storage.pin = true;
+    }
+
+    equip_storage_display_header_type();
+    utils_preferences_change_trigger();
+    equip_storage_change_trigger();
 }
 
 function equip_storage_change_party_type() {
-    var party_type = localStorage.getItem("equip_storage_party_type");
 
-    if (party_type == "party") {
-        localStorage.setItem("equip_storage_party_type", "character");
+    if (user_preferences.storage.party == "party") {
+        user_preferences.storage.party = "character";
     } else {
-        localStorage.setItem("equip_storage_party_type", "party");
+        user_preferences.storage.party = "party";
     }
 
     equip_storage_display_header_type();
-    equip_storage_change_trigger(true);
+    utils_preferences_change_trigger();
+    equip_storage_change_trigger();
 }
 
 function equip_storage_change_comparison_type() {
-    var comparison_type = localStorage.getItem("equip_storage_comparison_type");
-
-    if (comparison_type == "avg") {
-        localStorage.setItem("equip_storage_comparison_type", "ncrt");
-    } else if (comparison_type == "ncrt") {
-        localStorage.setItem("equip_storage_comparison_type", "crt");
+    if (user_preferences.storage.comparison == "avg") {
+        user_preferences.storage.comparison = "ncrt";
+    } else if (user_preferences.storage.comparison == "ncrt") {
+        user_preferences.storage.comparison = "crt";
     } else {
-        localStorage.setItem("equip_storage_comparison_type", "avg");
+        user_preferences.storage.comparison = "avg";
     }
 
     equip_storage_display_header_type();
-    equip_storage_change_trigger(true);
+    utils_preferences_change_trigger();
+    equip_storage_change_trigger();
 }
 
-function equip_storage_update_set_storage(index, name, active_character, current_party, damage_character, damage_party, storage_data) {
-    var party_data = {
-        "active_character": active_character,
-        "party": []
-    }
+function equip_storage_update_set_storage(index, name, damage_character, damage_party, user_data) {
+    var data = {};
 
-    for (var i = 0; i < party_size; i++) {
-        party_data.party.push(current_party[i].id);
-    }
+    data.name = name;
 
-    var damage_data = {
+    data.damage_data = {
         "character": {
             "avg": damage_character.avg,
             "ncrt": damage_character.ncrt,
@@ -202,94 +226,97 @@ function equip_storage_update_set_storage(index, name, active_character, current
         }       
     }
 
-    if (name) {
-        localStorage.setItem("equip_storage_name_" + index, name);
+    data.comparison = 0;
+
+    data.user_data = structuredClone(user_data) ;
+
+    if (index > -1) {
+        storage_objects.saved_storage[index] = data;
+    } else {
+        storage_objects.saved_storage.push(data);
     }    
-    localStorage.setItem("equip_storage_party_" + index, JSON.stringify(party_data));
-    localStorage.setItem("equip_storage_damage_" + index, JSON.stringify(damage_data));
-    localStorage.setItem("equip_storage_data_" + index, JSON.stringify(storage_data));
-}
-
-function equip_storage_update_copy_storage(index_1, index_2) {
-    for (var i = 0; i < storage_data_names.length; i++) {
-        utils_local_storage_copy("equip_storage_" + storage_data_names[i] + "_" + index_1, "equip_storage_" + storage_data_names[i] + "_" + index_2);
-    }
-}
-
-function equip_storage_update_delete_storage(index) {
-    for (var i = 0; i < storage_data_names.length; i++) {
-        localStorage.removeItem("equip_storage_" + storage_data_names[i] + "_" + index);
-    }
 }
 
 function equip_storage_update_comparison_all() {   
-    var storage_base = parseInt(localStorage.getItem("equip_storage_base"));
 
-    if (storage_base > -1) {
-        var storage_count = parseInt(localStorage.getItem("equip_storage_count"));
-        var comparison_type = localStorage.getItem("equip_storage_comparison_type");
-        var party_type = localStorage.getItem("equip_storage_party_type");
-        var dmg_obj = JSON.parse(localStorage.getItem("equip_storage_damage_" + storage_base));
-        var base_dmg = Number(dmg_obj[party_type][comparison_type]);
-        for (var i = 0; i < storage_count; i++) {
-            equip_storage_update_comparison(i, base_dmg, comparison_type, party_type);
+    if (user_preferences.storage.base > -1) {
+        var base_dmg = Number(storage_objects.saved_storage[user_preferences.storage.base].damage_data[user_preferences.storage.party][user_preferences.storage.comparison]);
+        for (var i = 0; i < storage_objects.saved_storage.length; i++) {
+            equip_storage_update_comparison(i, base_dmg);
         }
     }
 }
 
-function equip_storage_update_comparison(index, base_dmg, comparison_type, party_type) {
-    var dmg_obj = JSON.parse(localStorage.getItem("equip_storage_damage_" + index));
-    var index_dmg = Number(dmg_obj[party_type][comparison_type]);
+function equip_storage_update_comparison(index, base_dmg) {
+    var index_dmg = Number(storage_objects.saved_storage[index].damage_data[user_preferences.storage.party][user_preferences.storage.comparison]);
     var dmg_diff = index_dmg / base_dmg - 1;
-    localStorage.setItem("equip_storage_comparison_" + index, dmg_diff);
+    storage_objects.saved_storage[index].comparison = dmg_diff;
 }
 
 function equip_storage_display_header_type() {
-    var comparison_type = localStorage.getItem("equip_storage_comparison_type");
     var comparison_header = document.getElementById("storage_text_damage_header");
+    var comparison_pin_header = document.getElementById("storage_text_damage_header_pin");
 
-    if (comparison_type == "crt") {
+    if (user_preferences.storage.comparison == "crt") {
         comparison_header.innerHTML = "Crit";
-    } else if (comparison_type == "ncrt") {
+        comparison_pin_header.innerHTML = "Crit";
+    } else if (user_preferences.storage.comparison == "ncrt") {
         comparison_header.innerHTML = "Non-Crit";
+        comparison_pin_header.innerHTML = "Non-Crit";
     } else {
         comparison_header.innerHTML = "Average";
+        comparison_pin_header.innerHTML = "Average";
     }
 
-    var party_type = localStorage.getItem("equip_storage_party_type");
     var party_header = document.getElementById("storage_party_container_header");
+    var party_pin_header = document.getElementById("storage_party_container_header_pin");
     var party_icon = document.getElementById("storage_party_active").firstChild;
 
-    if (party_type == "character") {
+    if (user_preferences.storage.party == "character") {
         party_header.innerHTML = "Character";
+        party_pin_header.innerHTML = "Character";
         party_icon.className = "img_icon svg svg-account-outline";
     } else {
         party_header.innerHTML = "Party";
+        party_pin_header.innerHTML = "Party";
         party_icon.className = "img_icon svg svg-account-multiple-outline";
+    }
+
+    var filter_icon = document.getElementById("storage_filter_active").firstChild;
+    if (user_preferences.storage.filter) {
+        filter_icon.className = "img_icon svg svg-filter-outline img_icon_active";
+    } else {
+        filter_icon.className = "img_icon svg svg-filter-outline";
+    }
+
+    var pin_icon = document.getElementById("storage_pin_active").firstChild;
+    var storage_pin = document.getElementById("storage_pin");
+    if (user_preferences.storage.pin) {
+        pin_icon.className = "img_icon svg svg-pin-outline img_icon_active";
+        storage_pin.className = "container_storage_pin";
+    } else {
+        pin_icon.className = "img_icon svg svg-pin-outline";
+        storage_pin.className = "container_storage_pin hidden";
     }
 }
 
 function equip_storage_display_active() {
-    var party_container = document.getElementById("storage_party_container_active");
-    utils_delete_children(party_container, 0);
-    equip_storage_display_party(user_objects.user_party, party_container);
 
-    var storage_base = parseInt(localStorage.getItem("equip_storage_base"));
-    var comparison_type = localStorage.getItem("equip_storage_comparison_type");
-    var party_type = localStorage.getItem("equip_storage_party_type");
-    if (party_type == "party") {
+    equip_storage_display_active_party("storage_party_container_active");
+    equip_storage_display_active_party("storage_party_container_pin");
+
+    if (user_preferences.storage.party == "party") {
         var active_dmg = equip_skills_return_party_total_active();
-        active_dmg = active_dmg[comparison_type];
+        active_dmg = active_dmg[user_preferences.storage.comparison];
     } else {
-        var active_dmg = output_party[user_objects.user_active_character].skills.active[comparison_type];
+        var active_dmg = output_party[user_objects.user_active_character].skills.active[user_preferences.storage.comparison];
     }
 
     var comparison_class = "storage_text storage_text_comparison";
     var comparison_text = "";
 
-    if (storage_base > -1) {
-        var dmg_obj = JSON.parse(localStorage.getItem("equip_storage_damage_" + storage_base));
-        var base_dmg = Number(dmg_obj[party_type][comparison_type]);
+    if (user_preferences.storage.base > -1) {
+        var base_dmg = Number(storage_objects.saved_storage[user_preferences.storage.base].damage_data[user_preferences.storage.party][user_preferences.storage.comparison]);
         var comparison = active_dmg / base_dmg - 1;
 
         comparison_text = utils_number_format((comparison * 100).toFixed(2)) + " %";
@@ -301,12 +328,16 @@ function equip_storage_display_active() {
         }
     }
 
-    var storage_text_damage_active = document.getElementById("storage_text_damage_active");
-    storage_text_damage_active.innerHTML = utils_number_format(active_dmg.toFixed(1));
+    document.getElementById("storage_text_damage_active").innerHTML = utils_number_format(active_dmg.toFixed(1));
+    document.getElementById("storage_text_damage_pin").innerHTML = utils_number_format(active_dmg.toFixed(1));
 
     var storage_text_comparison_active = document.getElementById("storage_text_comparison_active");
     storage_text_comparison_active.className = comparison_class;
     storage_text_comparison_active.innerHTML = comparison_text;
+
+    var storage_text_comparison_pin = document.getElementById("storage_text_comparison_pin");
+    storage_text_comparison_pin.className = comparison_class;
+    storage_text_comparison_pin.innerHTML = comparison_text;
 
 }
 
@@ -314,36 +345,36 @@ function equip_storage_display_all() {
     var parent = document.getElementById("storage_column");
     utils_delete_children(parent, 2);
 
-    var storage_count = parseInt(localStorage.getItem("equip_storage_count"));
-    var storage_base = parseInt(localStorage.getItem("equip_storage_base"));
-    var comparison_type = localStorage.getItem("equip_storage_comparison_type");
-    var party_type = localStorage.getItem("equip_storage_party_type");
-    
-    for (var i = 0; i < storage_count; i++) {
-        parent.appendChild(equip_storage_display(i, comparison_type, party_type, storage_base));
+    var current_char = user_objects.user_party[user_objects.user_active_character].id;
+
+    for (var i = 0; i < storage_objects.saved_storage.length; i++) {
+        var stored_active_char = storage_objects.saved_storage[i].user_data.user_party[storage_objects.saved_storage[i].user_data.user_active_character].id;
+        if (!user_preferences.storage.filter || current_char == stored_active_char) {
+            parent.appendChild(equip_storage_display(i));
+        }        
     }
 }
 
-function equip_storage_display(index, comparison_type, party_type, storage_base) {
-
-    var old_name = localStorage.getItem("equip_storage_name_" + index);
+function equip_storage_display(index) {
 
     var obj = utils_create_obj("div", "storage_row", "storage_row_" + index);
 
-    obj.appendChild(utils_create_img_button_prompt_input("square-edit-outline", "Rename", "storage_rename_" + index, "Enter new name", equip_storage_change_rename, index, old_name, "storage_btn"));
+    obj.appendChild(utils_create_img_button_prompt_input("square-edit-outline", "Rename", "storage_rename_" + index, "Enter new name", equip_storage_change_rename, index, storage_objects.saved_storage[index].name, "storage_btn"));
+    obj.appendChild(utils_create_obj("div", "storage_text storage_text_name", null, storage_objects.saved_storage[index].name));
 
-    obj.appendChild(utils_create_obj("div", "storage_text storage_text_name", null, old_name));
-
-    var party_obj = JSON.parse(localStorage.getItem("equip_storage_party_" + index));
     var party_container = utils_create_obj("div", "storage_party_container");
-    equip_storage_display_party(party_obj.party, party_container);
+    if (user_preferences.storage.party == "party") {
+        equip_storage_display_party(storage_objects.saved_storage[index].user_data.user_party, party_container);
+    } else {
+        equip_storage_display_character(storage_objects.saved_storage[index].user_data.user_party[storage_objects.saved_storage[index].user_data.user_active_character].id, party_container);
+    }
+    
     obj.appendChild(party_container);
 
-    var dmg_obj = JSON.parse(localStorage.getItem("equip_storage_damage_" + index));
-    obj.appendChild(utils_create_obj("div", "storage_text storage_text_damage", null, utils_number_format(Number(dmg_obj[party_type][comparison_type]).toFixed(1))));
-    obj.appendChild(equip_storage_display_comparison(index, storage_base));
+    obj.appendChild(utils_create_obj("div", "storage_text storage_text_damage", null, utils_number_format(Number(storage_objects.saved_storage[index].damage_data[user_preferences.storage.party][user_preferences.storage.comparison]).toFixed(1))));
+    obj.appendChild(equip_storage_display_comparison(index, user_preferences.storage.base));
 
-    if (storage_base == index) {
+    if (user_preferences.storage.base == index) {
         obj.appendChild(utils_create_img_btn("target-variant img_icon_active", function () { equip_storage_change_base(index) }, "Set Comparison", "storage_base_" + index, "storage_btn"));
     } else {
         obj.appendChild(utils_create_img_btn("target-variant", function () { equip_storage_change_base(index) }, "Set Comparison", "storage_base_" + index, "storage_btn"));
@@ -363,7 +394,7 @@ function equip_storage_display_comparison(index, storage_base) {
         if (storage_base == index) {
             comparison_text = "Basis";
         } else {
-            var comparison = Number(localStorage.getItem("equip_storage_comparison_" + index));
+            var comparison = Number(storage_objects.saved_storage[index].comparison);
 
             comparison_text = utils_number_format((comparison * 100).toFixed(2)) + " %";
             if (comparison > 0) {
@@ -375,6 +406,17 @@ function equip_storage_display_comparison(index, storage_base) {
         }
     }
     return utils_create_obj("div", comparison_class, null, comparison_text);
+}
+
+function equip_storage_display_active_party(party_container_id) {
+    var party_container = document.getElementById(party_container_id);
+    utils_delete_children(party_container, 0);
+
+    if (user_preferences.storage.party == "party") {
+        equip_storage_display_party(user_objects.user_party, party_container);
+    } else {
+        equip_storage_display_character(user_objects.user_party[user_objects.user_active_character].id, party_container)
+    }
 }
 
 function equip_storage_display_party(party_list, party_container) {
@@ -389,4 +431,12 @@ function equip_storage_display_party(party_list, party_container) {
         char_img_container.appendChild(utils_create_img("storage_party_img", null, "/images/icons/character/" + char_id + "/char.png"));
         party_container.appendChild(char_img_container);
     }
+}
+
+function equip_storage_display_character(char_id, party_container) {
+    var character = data_characters[char_id];
+    var vision = character.vision;
+
+    party_container.appendChild(utils_create_img_svg(vision));    
+    party_container.appendChild(utils_create_obj("div", vision, null, utils_object_get_value(character, "short_name", character.name)));
 }

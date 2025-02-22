@@ -78,12 +78,22 @@ function utils_create_img(classes, id, img) {
     return newimg;
 }
 
+function utils_preferences_change_trigger() {
+    utils_preferences_save();
+}
+
+function utils_preferences_save() {
+    var preferences_json = JSON.stringify(user_preferences);
+    localStorage.setItem("user_preferences", preferences_json);
+}
+
 function utils_create_frames(parent_id, frame_definitions) {
     parent = document.getElementById(parent_id);
 
-    for (var i = 0; i < window_frame_ids.length; i++) {
+    for (var i = 0; i < frame_definitions.length; i++) {
         parent.appendChild(utils_create_frame(frame_definitions, i));
     }
+    utils_frame_reorder_display(frame_definitions);
 }
 
 function utils_create_frame(frame_definitions, index) {
@@ -129,19 +139,18 @@ function utils_frame_move(frame_definitions, index, move_direction) {
             }
         }
 
+        utils_preferences_change_trigger();
         utils_frame_reorder_display(frame_definitions);
     }
 
 }
 
 function utils_frame_hideshow(frame_definitions, index) {
-    var frame_obj = document.getElementById(frame_definitions[index]["id"]);
 
     var previous_order = frame_definitions[index]["order"];
 
     if (frame_definitions[index]["display"]) {
         frame_definitions[index]["display"] = false;
-        frame_obj.className = "frame_window minimized";
         if (!keep_frame_order) {
             frame_definitions[index]["order"] = frame_definitions.length;
             for (var i = 0; i < frame_definitions.length; i++) {
@@ -166,10 +175,9 @@ function utils_frame_hideshow(frame_definitions, index) {
             frame_definitions[index]["order"] = max_order;
         }
         
-        frame_definitions[index]["display"] = true;       
-        frame_obj.className = "frame_window";
+        frame_definitions[index]["display"] = true;  
     }
-
+    utils_preferences_change_trigger();
     utils_frame_reorder_display(frame_definitions);
 }
 
@@ -179,7 +187,13 @@ function utils_frame_reorder_display(frame_definitions) {
     for (var i = 0; i < frame_definitions.length; i++) {
         for (var ii = 0; ii < frame_definitions.length; ii++) {
             if (frame_definitions[ii]["order"] == i) {
-                parent.appendChild(document.getElementById(frame_definitions[ii]["id"]));
+                var frame_obj = document.getElementById(frame_definitions[ii]["id"]);
+                if (frame_definitions[ii]["display"]) {
+                    frame_obj.className = "frame_window";
+                } else {
+                    frame_obj.className = "frame_window minimized";
+                }
+                parent.appendChild(frame_obj);
             }
         }
         
@@ -275,6 +289,26 @@ function utils_create_img_btn(svg_name, func, hover_text, btn_id, container_clas
     } else {
         return btn;
     }    
+}
+
+function utils_create_img_svg(svg_name, btn_id, container_class) {
+    var btn = document.createElement("div");
+    if (btn_id) {
+        btn.id = btn_id;
+    }
+    btn.className = "img_svg";
+
+    var icon = document.createElement("div");
+    icon.className = "img_icon svg svg-" + svg_name;
+    btn.appendChild(icon);
+
+    if (container_class) {
+        var container = utils_create_obj("div", "img_button_container " + container_class);
+        container.appendChild(btn);
+        return container;
+    } else {
+        return btn;
+    }
 }
 
 function utils_create_img_button_prompt_confirm(svg_name, hover_text, btn_id, text, func, input, container_class) {
@@ -397,7 +431,7 @@ function utils_create_prompt_select(text, btn, objects, parent=null) {
     var decline = utils_create_obj("button", "prompt_button prompt_button_decline", null, "&#10006");
     decline.onclick = function () { utils_destroy_current_prompt(); };
     prompt.addEventListener("keyup", function (event) {
-        if (event.keyCode === 27) {
+        if (event.code === "Escape") {
             event.preventDefault();
             utils_destroy_current_prompt();
         }
@@ -486,20 +520,20 @@ function utils_create_prompt_confirm(text, btn, func, input, parent = null) {
     prompt.appendChild(line);
 
     prompt.addEventListener("keyup", function (event) {
-        if (event.keyCode === 13) {
+        if (event.code === "Enter") {
             event.preventDefault();
             func(input);
             utils_destroy_current_prompt();
         }
     });
     prompt.addEventListener("keyup", function (event) {
-        if (event.keyCode === 27) {
+        if (event.code === "Escape") {
             event.preventDefault();
             utils_destroy_current_prompt();
         }
     });
 
-    var accept = utils_create_obj("button", "prompt_button prompt_button_accept", null, "\u2713");
+    var accept = utils_create_obj("button", "prompt_button prompt_button_accept", null, "&#10003");
     accept.onclick = function () { func(input); utils_destroy_current_prompt(); };
     line.appendChild(accept);
 
@@ -533,20 +567,20 @@ function utils_create_prompt_input(text, btn, func, input, current_value, parent
     prompt.appendChild(line);
 
     prompt.addEventListener("keyup", function (event) {
-        if (event.keyCode === 13) {
+        if (event.code === "Enter") {
             event.preventDefault();
             func(input_field.value, input);
             utils_destroy_current_prompt();
         }
     });
     prompt.addEventListener("keyup", function (event) {
-        if (event.keyCode === 27) {
+        if (event.code === "Escape") {
             event.preventDefault();
             utils_destroy_current_prompt();
         }
     });
 
-    var accept = utils_create_obj("button", "prompt_button prompt_button_accept",null, "\u2713");
+    var accept = utils_create_obj("button", "prompt_button prompt_button_accept", null, "&#10003");
     accept.onclick = function () { func(input_field.value, input); utils_destroy_current_prompt(); };
     line.appendChild(accept);
 

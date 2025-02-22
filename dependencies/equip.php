@@ -16,5 +16,6 @@ echo '
 	<script src="/javascript/equip/logic/effects.js?' . $javascript_logic_ver .'"></script>
 	<script src="/javascript/equip/logic/skills.js?' . $javascript_logic_ver .'"></script>
 	<script src="/javascript/equip/logic/storage.js?' . $javascript_logic_ver .'"></script>
+	<script src="/javascript/equip/logic/enka.js?' . $javascript_logic_ver .'"></script>
 ';
 ?>

@@ -38,11 +38,14 @@ async function equip_setup_all() {
     var setup_success = true;
     try {
         await equip_load_all();
+        
         equip_setup_default_stats();
-
-        equip_setup_local_storage();
+        equip_setup_storage_objects();
         equip_setup_user_objects();
         equip_setup_output_objects();
+        equip_setup_enka_objects();
+
+        equip_setup_preferences_load();
 
         equip_setup_ui_frames();
         equip_setup_ui_frame_party();
@@ -50,9 +53,12 @@ async function equip_setup_all() {
         equip_setup_ui_frame_equipment();
         equip_setup_ui_frame_effects();
         equip_setup_ui_frame_skills();
-
-        equip_storage_display_all();
+       
         equip_storage_load_last();
+        equip_storage_display_header_type();
+        equip_storage_display_all();
+
+        equip_enka_load_last();
     } catch (err) {
         utils_loading_show_error(err, "An Error occured during loading the page.<br>Please reload the page with CTRL+F5.<br>If the Error persists, please contact the administrator.");
         setup_success = false;
@@ -67,20 +73,40 @@ async function equip_setup_all() {
 
 }
 
+function equip_setup_preferences_load() {
+    user_preferences = {};
+
+    var preferences = localStorage.getItem("user_preferences");
+    var pref_data = null;
+    if (preferences) {
+        pref_data = JSON.parse(preferences);
+    }
+    equip_storage_load_preferences(pref_data);
+    equip_setup_window_objects(pref_data);
+
+}
+
 function equip_setup_ui_frames() {
 
     utils_setup_prompt_destroyer();
-    utils_create_frames("main_window", window_frame_ids);
+    utils_create_frames("main_window", user_preferences.window.equip);
 
 }
 
 function equip_setup_ui_frame_party() {
     var parent = document.getElementById("frame_party_content");
     parent.className += " frame_party";
-
+    
     for (var i = 0; i < party_size; i++) {
         parent.appendChild(equip_setup_ui_character(i));
     }
+
+    var panel = utils_create_obj("div", "frame_left_panel");
+    var load_enka = utils_create_img_btn("enka", null, "Load Enka", "left_panel_enka");
+    load_enka.className += " enka_btn"
+    load_enka.onclick = function (event) { equip_control_create_enka(load_enka.id); event.preventDefault(); };
+    panel.appendChild(load_enka);
+    parent.appendChild(panel);
 
     parent.appendChild(equip_setup_ui_resonance());
     parent.appendChild(equip_setup_ui_enemy());
@@ -108,7 +134,7 @@ function equip_setup_ui_character(index) {
     level.appendChild(utils_create_obj("div", "icon_selects_text", "character_level_text_" + index, "1"))
 
     var icon_container = utils_create_obj("div", "character_img");
-    icon_container.onclick = function (event) { equip_control_create_character_select(index, "character_icon_" + index); event.preventDefault(); };
+    icon_container.onclick = function (event) { equip_control_create_character_select(index, icon); event.preventDefault(); };
     icon.appendChild(icon_container);
     icon_container.appendChild(utils_create_img(null, "character_img_" + index, "/images/icons/characters.png"));
 
@@ -195,7 +221,7 @@ function equip_setup_ui_enemy() {
     level.appendChild(utils_create_obj("div", "icon_selects_text", "enemy_level_text", "0"))
 
     var icon_container = utils_create_obj("div", "character_img enemy_img");
-    icon_container.onclick = function (event) { equip_control_create_enemy_select("enemy_icon"); event.preventDefault(); };
+    icon_container.onclick = function (event) { equip_control_create_enemy_select(icon); event.preventDefault(); };
     icon.appendChild(icon_container);
     icon_container.appendChild(utils_create_img(null, "enemy_img" , "/images/icons/enemy/none.png"));
 
@@ -276,7 +302,7 @@ function equip_setup_ui_weapon() {
     level.appendChild(utils_create_obj("div", "icon_selects_text", "weapon_level_text", "1"))
 
     var icon_container = utils_create_obj("div", "equipment_img");
-    icon_container.onclick = function (event) { equip_control_create_weapon_select("weapon_icon"); event.preventDefault(); };
+    icon_container.onclick = function (event) { equip_control_create_weapon_select(icon); event.preventDefault(); };
     icon.appendChild(icon_container);
     icon_container.appendChild(utils_create_img(null, "weapon_img", "/images/icons/weapons.png"));
 
@@ -311,7 +337,7 @@ function equip_setup_ui_artifact(artifact_id) {
     level.appendChild(utils_create_obj("div", "icon_selects_text", "artifact_level_text_" + artifact_id, "+ 0"));
 
     var icon_container = utils_create_obj("div", "equipment_img");
-    icon_container.onclick = function (event) { equip_control_create_artifacts_select(artifact_id, "artifact_icon_" + artifact_id); event.preventDefault(); };
+    icon_container.onclick = function (event) { equip_control_create_artifacts_select(artifact_id, icon); event.preventDefault(); };
     icon.appendChild(icon_container);
     icon_container.appendChild(utils_create_img(null, "artifact_img_" + artifact_id, "/images/icons/artifact/" + artifact_id + "/none.png"));
 
@@ -390,6 +416,7 @@ function equip_setup_ui_frame_skills() {
     parent.appendChild(equip_setup_ui_skills("permanent"));
     parent.appendChild(equip_setup_ui_skills("active"));
     parent.appendChild(equip_setup_ui_storage());
+    parent.appendChild(equip_setup_ui_storage_pin());
 
     equip_storage_display_header_type();
 }
@@ -426,8 +453,8 @@ function equip_setup_ui_storage() {
     storage_active.appendChild(utils_create_obj("div", "storage_party_container", "storage_party_container_active"));
     storage_active.appendChild(utils_create_obj("div", "storage_text storage_text_damage", "storage_text_damage_active"), "0");
     storage_active.appendChild(utils_create_obj("div", "storage_text storage_text_comparison", "storage_text_comparison_active", "0"));
-    storage_active.appendChild(utils_create_obj("div", "storage_btn"));
-    storage_active.appendChild(utils_create_obj("div", "storage_btn"));
+    storage_active.appendChild(utils_create_img_btn("filter-outline", equip_storage_change_filter, "Filter Active Character", "storage_filter_active", "storage_btn"));
+    storage_active.appendChild(utils_create_img_btn("pin-outline", equip_storage_change_pin, "Pin Active Damage", "storage_pin_active", "storage_btn"));
     storage_active.appendChild(utils_create_img_btn("account-outline", equip_storage_change_party_type, "Change Party/Character", "storage_party_active", "storage_btn"));
     storage_active.appendChild(utils_create_img_btn("cog-outline", equip_storage_change_comparison_type, "Change Damage Type", "storage_comparison_active", "storage_btn"));
     storage_column.appendChild(storage_active);
@@ -440,6 +467,23 @@ function equip_setup_ui_storage() {
 
     new_btn_container.appendChild(new_btn);
     obj.appendChild(new_btn_container);
+
+    return obj;
+}
+
+function equip_setup_ui_storage_pin() {
+    var obj = utils_create_obj("div", "container_storage_pin", "storage_pin");
+    var storage_header = utils_create_obj("div", "storage_row");
+    storage_header.appendChild(utils_create_obj("div", "storage_party_container", "storage_party_container_header_pin", "Party"));
+    storage_header.appendChild(utils_create_obj("div", "storage_text", "storage_text_damage_header_pin", "Damage"));
+    storage_header.appendChild(utils_create_obj("div", "storage_text", null, "Comparison"));
+    obj.appendChild(storage_header);
+
+    var storage_active = utils_create_obj("div", "storage_row");
+    storage_active.appendChild(utils_create_obj("div", "storage_party_container", "storage_party_container_pin", "Party"));
+    storage_active.appendChild(utils_create_obj("div", "storage_text", "storage_text_damage_pin", "Damage"));
+    storage_active.appendChild(utils_create_obj("div", "storage_text", "storage_text_comparison_pin", "Comparison"));
+    obj.appendChild(storage_active);
 
     return obj;
 }
@@ -491,6 +535,28 @@ function equip_setup_user_objects(user_data = null) {
     user_objects.user_enemy = {};
     user_objects.user_enemy.id = utils_object_get_value(user_data, "user_enemy.id", 0);
     user_objects.user_enemy.level = utils_object_get_value(user_data, "user_enemy.level", 0);
+}
+
+function equip_setup_storage_objects(user_storage = null) {
+    storage_objects = {};
+
+    storage_objects.saved_storage = utils_object_get_value(user_storage, "saved_storage", []);
+}
+
+function equip_setup_enka_objects(user_enka = null) {
+    enka_objects = {};
+    enka_objects.last_uid = utils_object_get_value(user_enka, "last_uid", null);
+    enka_objects.saved_storage = utils_object_get_value(user_enka, "saved_storage", []);
+}
+
+function equip_setup_window_objects(preferences_data = null) {
+    user_preferences.window = {};
+
+    user_preferences.window.equip = utils_object_get_value(preferences_data, "window.equip", structuredClone(window_frame_ids));
+
+    if (user_preferences.window.equip.length != window_frame_ids.length) {
+        user_preferences.window.equip = structuredClone(window_frame_ids);
+    }
 }
 
 function equip_setup_output_objects() {
@@ -549,8 +615,7 @@ function equip_setup_output_objects() {
 function equip_setup_default_stats() {
     default_stats = {};
     display_stats = [];
-    default_bonusdmg = {};
-
+    
     for (let stat_id in data_stats) {
         default_stats[stat_id] = 0;
 
@@ -566,28 +631,38 @@ function equip_setup_default_stats() {
         }
     }
 
+    default_bonusdmg = {};
     for (var i = 0; i < bonusdmg_visions.length; i++) {
         default_bonusdmg[bonusdmg_visions[i]] = {};
         for (var ii = 0; ii < bonusdmg_types.length; ii++) {
             default_bonusdmg[bonusdmg_visions[i]][bonusdmg_types[ii]] = 0;
         }
     }
-}
 
-function equip_setup_local_storage() {
-    if (localStorage.getItem("equip_storage_count") == null || isNaN(localStorage.getItem("equip_storage_count")) || localStorage.getItem("equip_storage_count") < 0) {
-        localStorage.setItem("equip_storage_count", 0);
-    }
+    default_enka_character = {};
+    default_enka_character.id = 0;
+    default_enka_character.name = "";
+    default_enka_character.level = 0;
+    default_enka_character.const = 0;
+    default_enka_character.skill_level = [];
+    default_enka_character.display_stats = {};
 
-    if (localStorage.getItem("equip_storage_base") == null || isNaN(localStorage.getItem("equip_storage_base"))) {
-        localStorage.setItem("equip_storage_base", -1);
-    }
+    default_enka_character.weapon = {};
+    default_enka_character.weapon.id = 0;
+    default_enka_character.weapon.level = 0;
+    default_enka_character.weapon.refine = 0;
 
-    if (localStorage.getItem("equip_storage_comparison_type") == null) {
-        localStorage.setItem("equip_storage_comparison_type", "avg");
-    }
-
-    if (localStorage.getItem("equip_storage_party_type") == null) {
-        localStorage.setItem("equip_storage_party_type", "party");
-    }
+    default_enka_character.artifacts = {};
+    for (var i = 0; i < artifact_types.length; i++) {
+        var artifact = {};
+        artifact.id = 0
+        artifact.star = 0
+        artifact.level = 0
+        artifact.main = data_artifact_vars[artifact_types[i]].main_stats[0];
+        for (var ii = 0; ii < 4; ii++) {
+            artifact["sub_" + ii] = "blank";
+            artifact["sub_val_" + ii] = 0;
+        }
+        default_enka_character.artifacts[artifact_types[i]] = artifact;
+    }  
 }

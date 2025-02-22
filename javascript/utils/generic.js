@@ -63,6 +63,26 @@ function utils_array_get_parameter_by_lookup(array, lookup_parameter, value, ret
     return utils_array_get_by_lookup(array, lookup_parameter, value, caseinsensitive)[return_parameter];
 }
 
+function utils_dict_lookup_property(object, parameter, value) {
+
+    var key_names = Object.keys(object);
+
+    for (var i = 0; i < key_names.length; i++) {
+        if (Array.isArray(object[key_names[i]][parameter])) {
+            for (var ii = 0; ii < object[key_names[i]][parameter].length; ii++) {
+                if (object[key_names[i]][parameter][ii] == value) {
+                    return key_names[i];
+                }
+            }
+        } else {
+            if (object[key_names[i]][parameter] == value) {
+                return key_names[i];
+            }
+        }
+
+    }
+}
+
 function utils_capitalize(input) {
     if (typeof input !== 'string') return ''
     return input.charAt(0).toUpperCase() + input.slice(1)

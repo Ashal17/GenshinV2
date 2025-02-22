@@ -60,6 +60,14 @@ background: none;
     -webkit-mask-image: url(../images/svg/content-copy.svg);
     mask-image: url(../images/svg/content-copy.svg);
 }
+.svg-content-save-check-outline:before {
+    -webkit-mask-image: url(../images/svg/content-save-check-outline.svg);
+    mask-image: url(../images/svg/content-save-check-outline.svg);
+}
+.svg-database:before {
+    -webkit-mask-image: url(../images/svg/database.svg);
+    mask-image: url(../images/svg/database.svg);
+}
 .svg-delete-forever:before {
     -webkit-mask-image: url(../images/svg/delete-forever.svg);
     mask-image: url(../images/svg/delete-forever.svg);
@@ -104,6 +112,14 @@ background: none;
     -webkit-mask-image: url(../images/svg/chevron-down.svg);
     mask-image: url(../images/svg/chevron-down.svg);
 }
+.svg-chevron-left:before {
+    -webkit-mask-image: url(../images/svg/chevron-left.svg);
+    mask-image: url(../images/svg/chevron-left.svg);
+}
+.svg-chevron-right:before {
+    -webkit-mask-image: url(../images/svg/chevron-right.svg);
+    mask-image: url(../images/svg/chevron-right.svg);
+}
 .svg-chevron-up:before {
     -webkit-mask-image: url(../images/svg/chevron-up.svg);
     mask-image: url(../images/svg/chevron-up.svg);
@@ -135,6 +151,10 @@ background: none;
 .svg-plus-circle-outline:before {
     -webkit-mask-image: url(../images/svg/plus-circle-outline.svg);
     mask-image: url(../images/svg/plus-circle-outline.svg);
+}
+.svg-share-outline:before {
+    -webkit-mask-image: url(../images/svg/share-outline.svg);
+    mask-image: url(../images/svg/share-outline.svg);
 }
 .svg-shield-outline:before, .svg-shield:before {
     -webkit-mask-image: url(../images/svg/shield-outline.svg);
@@ -251,5 +271,13 @@ background: none;
     -webkit-mask-image: url(../images/svg/physical.svg);
     mask-image: url(../images/svg/physical.svg);
     background-color: var(--white);
+}
+.svg-enka:before {
+    -webkit-mask-image: url(../images/svg/enka.svg);
+    mask-image: url(../images/svg/enka.svg);
+}
+.svg-enka-download:before {
+    -webkit-mask-image: url(../images/svg/enka-download.svg);
+    mask-image: url(../images/svg/enka-download.svg);
 }
 

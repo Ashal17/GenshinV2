@@ -213,6 +213,7 @@ function equip_skills_update_bonusdmg(party_id) {
 function equip_skills_display_all() {
     equip_skills_display_permanent_all();
     equip_skills_display_active_all();
+    equip_storage_display_active();
 }
 
 function equip_skills_display_permanent_all() {

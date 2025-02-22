@@ -28,8 +28,8 @@ function equip_character_change_trigger(party_id) {
     equip_effects_update_options_all();
     equip_effects_update_stats_all();
     equip_stats_update_total_all();
-    equip_skills_update_all();
     equip_skills_update_reset_active(party_id);
+    equip_skills_update_all();
 
     equip_effects_display_all();
     equip_skills_display_all();
@@ -62,7 +62,6 @@ function equip_active_character_change(party_id) {
         equip_weapon_display();
         equip_artifacts_display_all();
         equip_stats_display();
-        equip_storage_display_active();
         equip_storage_save_last();
     }
 }
@@ -114,7 +113,7 @@ function equip_character_update_all(manual = false) {
     equip_character_update_resonance();
 
     for (var i = 0; i < party_size; i++) {
-        equip_character_update(i, manual);
+        equip_character_update(i, manual);        
         equip_character_update_stats(i);
     }
 }
@@ -127,6 +126,7 @@ function equip_character_update(party_id, manual = false) {
         user_objects.user_party[party_id].weapon.id = 0;
         user_objects.user_party[party_id].weapon.level = 0;
         user_objects.user_party[party_id].weapon.refine = 0;
+        equip_weapon_update(party_id);
     }
 
     output_party[party_id].weapon_type = new_weapon_type;

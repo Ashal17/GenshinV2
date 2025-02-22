@@ -3,6 +3,18 @@ async function utils_load_file(file) {
     return await response.json();
 }
 
+function utils_ajax(req_type, url, func, json = null) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onload = function () { func(this); }
+    xhttp.open(req_type, url);
+    if (req_type == "POST" && json) {
+        xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhttp.send(json);
+    } else {
+        xhttp.send();
+    }
+}
+
 function utils_local_storage_copy(item1, item2) {
     var value = localStorage.getItem(item1);
     value = utils_local_storage_check_null(value);
