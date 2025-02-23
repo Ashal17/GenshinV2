@@ -129,6 +129,7 @@
     padding: 5px;
     width:400px;
     border: 1px solid var(--grey-40);
+    z-index: 20;
 }
 
     .container_storage_pin .storage_text {

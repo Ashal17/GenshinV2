@@ -144,6 +144,22 @@ background: none;
     -webkit-mask-image: url(../images/svg/moon-waning-crescent.svg);
     mask-image: url(../images/svg/moon-waning-crescent.svg);
 }
+.svg-numeric-1-box-outline:before {
+    -webkit-mask-image: url(../images/svg/numeric-1-box-outline.svg);
+    mask-image: url(../images/svg/numeric-1-box-outline.svg);
+}
+.svg-numeric-2-box-outline:before {
+    -webkit-mask-image: url(../images/svg/numeric-2-box-outline.svg);
+    mask-image: url(../images/svg/numeric-2-box-outline.svg);
+}
+.svg-numeric-3-box-outline:before {
+    -webkit-mask-image: url(../images/svg/numeric-3-box-outline.svg);
+    mask-image: url(../images/svg/numeric-3-box-outline.svg);
+}
+.svg-numeric-4-box-outline:before {
+    -webkit-mask-image: url(../images/svg/numeric-4-box-outline.svg);
+    mask-image: url(../images/svg/numeric-4-box-outline.svg);
+}
 .svg-pin-outline:before {
     -webkit-mask-image: url(../images/svg/pin-outline.svg);
     mask-image: url(../images/svg/pin-outline.svg);

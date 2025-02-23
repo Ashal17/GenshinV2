@@ -641,9 +641,9 @@ input {
     position: relative;
 }
 
-.tooltip_trigger, .tooltip_trigger p {
-    cursor: help;
-}
+    .tooltip_trigger, .tooltip_trigger p, .tooltip_trigger img {
+        cursor: help;
+    }
 
 
 .tooltip_hover {
@@ -665,6 +665,13 @@ input {
 
 .tooltip_trigger:hover > .tooltip_hover {
     display: flex;
+}
+
+.tooltip_hover.tooltip_top {
+    white-space: nowrap;
+    width: auto;
+    top: 0px;
+    transform: translate(50%,-100%);
 }
 
 .statcolumn {

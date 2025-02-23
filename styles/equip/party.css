@@ -346,3 +346,97 @@
     max-width:16px;
 }
 
+.enka_column {
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    margin-top:20px;
+}
+
+.enka_row, .enka_name, .enka_data, .enka_stats, .enka_stat, .enka_skill, .enka_equip, .enka_btns {
+    display: flex;
+    flex-direction: row;
+}
+
+.enka_row {
+    padding: 0px 5px;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 10px);
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+    .enka_row:not(:first-child) {
+        border-top: 1px dashed var(--grey-40);
+    }
+
+    .enka_row .label_img, .enka_row .img_svg, .enka_row .img_button {
+        height: 21px;
+    }
+
+.enka_name {
+    width:350px;
+}
+
+    .enka_name .img_svg {
+        margin-right:10px;
+    }
+
+.enka_data {
+    //width:15%;
+}
+
+.enka_lv {
+    width:55px;
+}
+
+.enka_const {
+    width:30px;
+}
+
+.enka_skill {
+    width:50px;
+}
+
+.enka_equip {
+    margin:0px 10px;
+}
+
+.enka_equip .equipment_img {
+    height: 26px;
+    width: 26px;
+    margin: 2px;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.enka_equip .equipment_img img {
+    width: 22px;
+    height: 22px;
+}
+
+.enka_stats {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.enka_atk, .enka_def, .enka_elemastery {
+    width:80px;
+}
+
+.enka_hp, .enka_crit, .enka_critdmg, .enka_recharge, .enka_vision {
+    width:90px;
+}
+
+.enka_stat_val {
+    margin-left:5px;
+}
+
+.enka_btn {
+    position:relative;
+}
+
+.enka_buttons {
+    //width: 25%;
+}

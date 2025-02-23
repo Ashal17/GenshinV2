@@ -311,21 +311,21 @@ function utils_create_img_svg(svg_name, btn_id, container_class) {
     }
 }
 
-function utils_create_img_button_prompt_confirm(svg_name, hover_text, btn_id, text, func, input, container_class) {
+function utils_create_img_button_prompt_confirm(svg_name, hover_text, btn_id, text, func, input, container_class, active_prompt_id = "active_prompt") {
     var container = utils_create_obj("div", "img_button_container " + container_class);
 
     var btn = utils_create_img_btn(svg_name, null, hover_text, btn_id, null);
-    btn.onclick = function (event) { utils_create_prompt_confirm(text, btn_id, func, input, container); event.preventDefault(); };
+    btn.onclick = function (event) { utils_create_prompt_confirm(text, btn_id, func, input, container, active_prompt_id); event.preventDefault(); };
 
     container.appendChild(btn);
     return container;
 }
 
-function utils_create_img_button_prompt_input(svg_name, hover_text, btn_id, text, func, input, current_value, container_class) {
+function utils_create_img_button_prompt_input(svg_name, hover_text, btn_id, text, func, input, current_value, container_class, active_prompt_id = "active_prompt") {
     var container = utils_create_obj("div", "img_button_container " + container_class);
 
     var btn = utils_create_img_btn(svg_name, null, hover_text, btn_id, null);
-    btn.onclick = function (event) { utils_create_prompt_input(text, btn_id, func, input, current_value, container); event.preventDefault(); };
+    btn.onclick = function (event) { utils_create_prompt_input(text, btn_id, func, input, current_value, container, active_prompt_id); event.preventDefault(); };
     
     container.appendChild(btn);
     return container;
@@ -365,9 +365,9 @@ function utils_destroy(obj) {
     }
 }
 
-function utils_destroy_current_prompt() {
-
-    var current_prompt = document.getElementById("active_prompt");
+function utils_destroy_current_prompt(active_prompt_id = "active_prompt") {
+    console.log(active_prompt_id);
+    var current_prompt = document.getElementById(active_prompt_id);
     if (current_prompt) {
         utils_destroy(current_prompt);
     }
@@ -382,8 +382,8 @@ function utils_setup_prompt_destroyer() {
     });
 }
 
-function utils_create_prompt(btn, class_name, parent = null) {
-    var current_prompt = document.getElementById("active_prompt");
+function utils_create_prompt(btn, class_name, parent = null, active_prompt_id = "active_prompt") {
+    var current_prompt = document.getElementById(active_prompt_id);
 
     if (current_prompt) {
         utils_destroy(current_prompt);
@@ -402,7 +402,7 @@ function utils_create_prompt(btn, class_name, parent = null) {
         var parent_obj = btn.parentElement;
     }
 
-    var prompt = utils_create_obj("div", "prompt " + class_name, "active_prompt")
+    var prompt = utils_create_obj("div", "prompt " + class_name, active_prompt_id)
     prompt.name = String(btn);
     parent_obj.appendChild(prompt);
 
@@ -501,11 +501,11 @@ function utils_create_prompt_values(btn, func, value_list, input, parent = null)
     }
 }
 
-function utils_create_prompt_confirm(text, btn, func, input, parent = null) {
+function utils_create_prompt_confirm(text, btn, func, input, parent = null, active_prompt_id = "active_prompt") {
     if (text) {
-        var prompt = utils_create_prompt(btn, "prompt_input", parent);
+        var prompt = utils_create_prompt(btn, "prompt_input", parent, active_prompt_id);
     } else {
-        var prompt = utils_create_prompt(btn, "prompt_input_simple", parent);
+        var prompt = utils_create_prompt(btn, "prompt_input_simple", parent, active_prompt_id);
     }
 
     if (!prompt) {
@@ -513,7 +513,6 @@ function utils_create_prompt_confirm(text, btn, func, input, parent = null) {
     }
 
     if (text) {
-
         prompt.appendChild(utils_create_obj("div", "prompt_header_text", null, text));
     }
     var line = utils_create_obj("div", "container");
@@ -523,30 +522,32 @@ function utils_create_prompt_confirm(text, btn, func, input, parent = null) {
         if (event.code === "Enter") {
             event.preventDefault();
             func(input);
-            utils_destroy_current_prompt();
+            utils_destroy_current_prompt(active_prompt_id);
         }
     });
     prompt.addEventListener("keyup", function (event) {
         if (event.code === "Escape") {
             event.preventDefault();
-            utils_destroy_current_prompt();
+            utils_destroy_current_prompt(active_prompt_id);
         }
     });
 
     var accept = utils_create_obj("button", "prompt_button prompt_button_accept", null, "&#10003");
-    accept.onclick = function () { func(input); utils_destroy_current_prompt(); };
+    accept.onclick = function (event) { event.preventDefault(); func(input); utils_destroy_current_prompt(active_prompt_id); };
     line.appendChild(accept);
 
     var decline = utils_create_obj("button", "prompt_button prompt_button_decline", null, "&#10006");
-    decline.onclick = function () { utils_destroy_current_prompt(); };
+    decline.onclick = function (event) { event.preventDefault(); utils_destroy_current_prompt(active_prompt_id); };
     line.appendChild(decline);
+
+    accept.focus();
 }
 
-function utils_create_prompt_input(text, btn, func, input, current_value, parent = null) {
+function utils_create_prompt_input(text, btn, func, input, current_value, parent = null, active_prompt_id = "active_prompt") {
     if (text) {
-        var prompt = utils_create_prompt(btn, "prompt_input", parent);
+        var prompt = utils_create_prompt(btn, "prompt_input", parent, active_prompt_id);
     } else {
-        var prompt = utils_create_prompt(btn, "prompt_input_simple", parent);
+        var prompt = utils_create_prompt(btn, "prompt_input_simple", parent, active_prompt_id);
     }
     
     if (!prompt) {
@@ -566,26 +567,27 @@ function utils_create_prompt_input(text, btn, func, input, current_value, parent
     var line = utils_create_obj("div", "container");
     prompt.appendChild(line);
 
-    prompt.addEventListener("keyup", function (event) {
+    input_field.addEventListener("keyup", function (event) {
         if (event.code === "Enter") {
             event.preventDefault();
             func(input_field.value, input);
-            utils_destroy_current_prompt();
+            utils_destroy_current_prompt(active_prompt_id);
+            ;
         }
     });
-    prompt.addEventListener("keyup", function (event) {
+    input_field.addEventListener("keyup", function (event) {
         if (event.code === "Escape") {
             event.preventDefault();
-            utils_destroy_current_prompt();
+            utils_destroy_current_prompt(active_prompt_id);
         }
     });
 
     var accept = utils_create_obj("button", "prompt_button prompt_button_accept", null, "&#10003");
-    accept.onclick = function () { func(input_field.value, input); utils_destroy_current_prompt(); };
+    accept.onclick = function (event) { event.preventDefault(); func(input_field.value, input); utils_destroy_current_prompt(active_prompt_id); };
     line.appendChild(accept);
 
     var decline = utils_create_obj("button", "prompt_button prompt_button_decline",null, "&#10006");
-    decline.onclick = function () { utils_destroy_current_prompt(); };
+    decline.onclick = function (event) { event.preventDefault(); utils_destroy_current_prompt(active_prompt_id); };
     line.appendChild(decline);
 
     input_field.focus();

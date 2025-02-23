@@ -178,6 +178,8 @@ const bonusdmg_names = {
     "burst": "Elemental Burst"
 }
 
+const attack_level_types = ["normal", "skill", "burst"]
+
 function equip_stats_update_total_all() {
     equip_stats_update_reset_total_all();
     equip_stats_update_add_total_all();
@@ -415,7 +417,6 @@ function equip_stats_display() {
 }
 
 function equip_stats_return_vision_stat(party_id) {
-
     var highest_val = 0;
     var highest_stat = data_characters[user_objects.user_party[party_id].id].vision;
     for (let vision in visions_variables) {
@@ -424,7 +425,5 @@ function equip_stats_return_vision_stat(party_id) {
             highest_stat = vision;
         }
     }
-
-
     return highest_stat;
 }

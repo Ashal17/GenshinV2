@@ -10,7 +10,7 @@ const frame_stats_columns = 4;
 
 
 async function equip_load_all() {
-    var ver = "?20250125"
+    var ver = "?20250223";
 
     data_characters = await utils_load_file("/data/characters.json" + ver);
     data_enemies = await utils_load_file("/data/enemies.json" + ver);
@@ -22,6 +22,7 @@ async function equip_load_all() {
     data_artifact_vars = await utils_load_file("/data/artifact_vars.json");
     data_artifact_stats = await utils_load_file("/data/artifact_stats.json");
     data_artifact_sets = await utils_load_file("/data/artifact_sets.json");
+    data_artifact_enka_stats = await utils_load_file("/data/artifact_enka_stats.json");
     data_effects = await utils_load_file("/data/effects.json");
 
     for (var i = 0; i < data_enemies.length; i++) {
@@ -374,7 +375,7 @@ function equip_setup_ui_artifact(artifact_id) {
         let sub_val_container = utils_create_obj("div", "container", "artifact_sub_val_container_" + artifact_id + i);
         sub_stat_line.appendChild(sub_val_container);
         let sub_val = utils_create_obj("div", "icon_selects artifact_sub_val", "artifact_sub_val_" + artifact_id + i);
-        sub_val.onclick = function (event) { utils_create_prompt_input(null, sub_val.id, equip_artifacts_change_sub_value, artifact_id + i, user_objects.user_party[user_objects.user_active_character].artifacts[artifact_id].sub_stats[i].value, sub_val_container); event.preventDefault(); };
+        sub_val.onclick = function (event) { utils_create_prompt_input(null, sub_val.id, equip_artifacts_change_sub_value, artifact_id + i, utils_number_round(user_objects.user_party[user_objects.user_active_character].artifacts[artifact_id].sub_stats[i].value, 2), sub_val_container); event.preventDefault(); };
         sub_val_container.appendChild(sub_val);
         sub_val.appendChild(utils_create_obj("div", "icon_selects_text", "artifact_sub_val_text_" + artifact_id + i, "0"));
 
@@ -495,7 +496,6 @@ function equip_setup_user_objects(user_data = null) {
     user_objects.user_party = [];
     for (var i = 0; i < party_size; i++) {
         var char = {};
-        char.id = "none";
         char.id = utils_object_get_value(user_data, "user_party."+i+".id", "none");
         char.level = utils_object_get_value(user_data, "user_party." + i + ".level", 0);
         char.constel = utils_object_get_value(user_data, "user_party." + i + ".constel", 0);
@@ -643,9 +643,12 @@ function equip_setup_default_stats() {
     default_enka_character.id = 0;
     default_enka_character.name = "";
     default_enka_character.level = 0;
-    default_enka_character.const = 0;
-    default_enka_character.skill_level = [];
+    default_enka_character.constel = 0;
+    default_enka_character.levelnormal = 0;
+    default_enka_character.levelskill = 0;
+    default_enka_character.levelburst = 0;
     default_enka_character.display_stats = {};
+    default_enka_character.vision_stat = "blank";
 
     default_enka_character.weapon = {};
     default_enka_character.weapon.id = 0;
@@ -656,12 +659,15 @@ function equip_setup_default_stats() {
     for (var i = 0; i < artifact_types.length; i++) {
         var artifact = {};
         artifact.id = 0
-        artifact.star = 0
+        artifact.stars = 0
         artifact.level = 0
-        artifact.main = data_artifact_vars[artifact_types[i]].main_stats[0];
-        for (var ii = 0; ii < 4; ii++) {
-            artifact["sub_" + ii] = "blank";
-            artifact["sub_val_" + ii] = 0;
+        artifact.main_stat = data_artifact_vars[artifact_types[i]].main_stats[0];
+        artifact.sub_stats = [];
+        for (var ii = 0; ii < artifact_sub_stats; ii++) {
+            var sub_stat = {};
+            sub_stat.id = artifact_sub_stats_options[0];
+            sub_stat.value = 0;
+            artifact.sub_stats.push(sub_stat);
         }
         default_enka_character.artifacts[artifact_types[i]] = artifact;
     }  

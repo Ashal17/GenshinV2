@@ -35,13 +35,13 @@ function equip_control_create_enka(btn) {
 
     prompt.appendChild(utils_create_obj("div", "enka_column", "enka_column"));
 
-    prompt.addEventListener("keyup", function (event) {
+    inputfield.addEventListener("keyup", function (event) {
         if (event.code === "Escape") {
             event.preventDefault();
             utils_destroy_current_prompt();
         }
     });
-    prompt.addEventListener("keyup", function (event) {
+    inputfield.addEventListener("keyup", function (event) {
         if (event.code === "Enter") {
             event.preventDefault();
             equip_enka_change_load_uid();
@@ -49,6 +49,7 @@ function equip_control_create_enka(btn) {
     });
     inputfield.focus();
 
+    equip_enka_display_all();
 }
 
 function equip_control_create_character_select(party_id, icon) {

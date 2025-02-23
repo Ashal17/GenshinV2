@@ -5,6 +5,75 @@ const level_list_values = [1, 20, 20, 40, 40, 50, 50, 60, 60, 70, 70, 80, 80, 90
 const constel_list = [0, 1, 2, 3, 4, 5, 6];
 const character_visions = ["anemo", "cryo", "dendro", "electro", "geo", "hydro", "pyro"];
 
+function equip_character_load(party_id, character_data) {
+
+    for (var i = 0; i < party_size; i++) {
+        if (i!= party_id && character_data.id != "none" && character_data.id == user_objects.user_party[i].id) {
+            utils_message("Each character can be present only once in party!", "automatic_warn")
+            return;
+        }
+    }
+
+    var current_char_id = user_objects.user_party[party_id].id;
+
+    var char = user_objects.user_party[party_id]
+
+    char.id = utils_object_get_value(character_data, "id", "none");
+    char.level = utils_object_get_value(character_data, "level", 0);
+    char.constel = utils_object_get_value(character_data, "constel", 0);
+    char.levelnormal = utils_object_get_value(character_data, "levelnormal", 0);
+    char.levelskill = utils_object_get_value(character_data, "levelskill", 0);
+    char.levelburst = utils_object_get_value(character_data, "levelburst", 0);
+
+    char.weapon = {};
+    char.weapon.id = utils_object_get_value(character_data, "weapon.id", 0);
+    char.weapon.level = utils_object_get_value(character_data, "weapon.level", 0);
+    char.weapon.refine = utils_object_get_value(character_data, "weapon.refine", 0);
+
+    char.artifacts = {};
+
+    for (var ii = 0; ii < artifact_types.length; ii++) {
+        var artifact = {};
+        artifact.id = utils_object_get_value(character_data, "artifacts." + artifact_types[ii] + ".id", 0);
+        artifact.level = utils_object_get_value(character_data, "artifacts." + artifact_types[ii] + ".level", 0);
+        artifact.stars = utils_object_get_value(character_data, "artifacts." + artifact_types[ii] + ".stars", 0);
+        artifact.main_stat = utils_object_get_value(character_data, "artifacts." + artifact_types[ii] + ".main_stat", data_artifact_vars[artifact_types[ii]].main_stats[0]);
+        artifact.sub_stats = [];
+        for (var iii = 0; iii < artifact_sub_stats; iii++) {
+            var sub_stat = {};
+            sub_stat.id = utils_object_get_value(character_data, "artifacts." + artifact_types[ii] + ".sub_stats." + iii + ".id", artifact_sub_stats_options[0]);
+            sub_stat.value = utils_object_get_value(character_data, "artifacts." + artifact_types[ii] + ".sub_stats." + iii + ".value", 0);
+            artifact.sub_stats.push(sub_stat);
+        }
+
+        char.artifacts[artifact_types[ii]] = artifact;
+    }
+
+    equip_character_update_all(false);
+    equip_weapon_update_all();
+    equip_artifacts_update_all_all();
+    equip_effects_update_options_all();  
+    equip_effects_update_stats_all();
+
+    equip_stats_update_total_all();
+    if (current_char_id != character_data.id) {
+        equip_skills_update_reset_active(party_id);
+    }
+    equip_skills_update_all();
+    
+    equip_character_display(party_id);
+    equip_control_display_all();
+    equip_character_display_resonance();
+    equip_weapon_display();
+    equip_artifacts_display_all();
+    equip_effects_display_all();
+    equip_skills_display_all();
+    equip_storage_display_active();
+    equip_stats_display();   
+
+    equip_storage_save_last();
+}
+
 function equip_character_change_simple_trigger(party_id) {
     equip_character_update_stats(party_id);
 
@@ -36,6 +105,7 @@ function equip_character_change_trigger(party_id) {
     equip_character_display(party_id);
     equip_character_display_resonance();
     equip_stats_display();
+    equip_weapon_display();
     equip_storage_save_last();
 }
 
@@ -68,7 +138,7 @@ function equip_active_character_change(party_id) {
 
 function equip_character_change(character_id, party_id) {
 
-    for (var i = 0; i < user_objects.user_party.length; i++) {
+    for (var i = 0; i < party_size; i++) {
         if (character_id != "none" && character_id == user_objects.user_party[i].id) {
             utils_message("Each character can be present only once in party!", "automatic_warn")
             return;
@@ -76,9 +146,7 @@ function equip_character_change(character_id, party_id) {
     }
     user_objects.user_party[party_id].id = character_id;
 
-    equip_character_change_trigger(party_id);
-   
-    equip_weapon_display();
+    equip_character_change_trigger(party_id);    
 }
 
 function equip_character_change_level(i, party_id) {

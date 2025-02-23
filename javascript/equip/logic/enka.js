@@ -1,4 +1,4 @@
-enka_stats_transform_table = {
+const enka_stats_transform_table = {
     "FIGHT_PROP_ATTACK": "atk",
     "FIGHT_PROP_ATTACK_PERCENT": "atk%",
     "FIGHT_PROP_DEFENSE": "def",
@@ -20,7 +20,7 @@ enka_stats_transform_table = {
     "FIGHT_PROP_HEAL_ADD": "healing"
 }
 
-enka_stats_display_table = {
+const enka_stats_display_table = {
     "2000": "hp",
     "2001": "atk",
     "2002": "def",
@@ -38,6 +38,8 @@ enka_stats_display_table = {
     "30": "physical",
     "26": "healing"
 }
+
+
 
 function equip_enka_load_last() {
     var user_storage = localStorage.getItem("enka_storage");
@@ -64,6 +66,14 @@ function equip_enka_change_load_uid() {
     if (uid) {
         equip_enka_request_uid(uid.trim());
     }    
+}
+
+function equip_enka_change_load_character(input_obj) {
+    equip_character_load(input_obj.party_id, enka_objects.saved_storage[input_obj.index]);
+}
+
+function equip_enka_change_save_character(index) {
+    
 }
 
 function equip_enka_update_response(response) {
@@ -140,14 +150,107 @@ function equip_enka_display_all() {
     utils_delete_children(parent, 0);
 
     for (var i = 0; i < enka_objects.saved_storage.length; i++) {
-        parent.appendChild(equip_enka_display(i));
+        if (enka_objects.saved_storage[i].id) {
+            parent.appendChild(equip_enka_display(i));
+        }       
     }
 }
 
 function equip_enka_display(index) {
-    var obj = utils_create_obj("div");
+    var enka_character = enka_objects.saved_storage[index];
+    var character = data_characters[enka_character.id];
+
+    var obj = utils_create_obj("div", "enka_row", "enka_row_" + index);       
+    var name_container = utils_create_obj("div", "enka_name");
+    name_container.appendChild(utils_create_img_svg(character.vision));
+    name_container.appendChild(utils_create_obj("div", character.vision, null, enka_character.name));
+    obj.appendChild(name_container);
+    obj.appendChild(equip_enka_display_data(index));
+    obj.appendChild(equip_enka_display_equip(index));
+    obj.appendChild(equip_enka_display_stats(index));
+    obj.appendChild(equip_enka_display_btns(index));
 
     return obj;
+}
+
+function equip_enka_display_btns(index) {
+    var btns_obj = utils_create_obj("div", "enka_btns", "enka_btns_" + index);
+
+    for (let i = 0; i < party_size; i++) {
+        let input_obj = { "party_id": i, "index": index };
+        let party_num = i + 1;
+        btns_obj.appendChild(utils_create_img_button_prompt_confirm("numeric-" + party_num + "-box-outline", "Load as Party " + party_num, "enka_party_load_" + i + "_" + index, "Load this character as Party " + party_num + "?", equip_enka_change_load_character, input_obj, "enka_btn", "active_prompt_enka"))
+    }
+
+    btns_obj.appendChild(utils_create_img_button_prompt_confirm("download", "Save CHaracter", "enka_party_save_" + index, "Save this character?", equip_enka_change_save_character, index, "enka_btn", "active_prompt_enka"))
+
+
+    return btns_obj;
+}
+
+function equip_enka_display_stats(index) {
+
+    var enka_character = enka_objects.saved_storage[index];
+    var stats_obj = utils_create_obj("div", "enka_stats", "enka_stats_" + index);   
+
+    for (var i = 0; i < display_stats.length; i++) {
+        var stat_id = display_stats[i];
+        if (data_stats[stat_id].display.enka == true) {
+            var stat_obj = utils_create_obj("div", "enka_stat enka_" + stat_id);
+            stat_obj.appendChild(utils_create_label_img(stat_id, data_stats[stat_id].name));
+            stat_obj.appendChild(
+                utils_create_obj("div", "enka_stat_val", null, utils_format_stat_value(data_stats[stat_id], enka_character.display_stats[stat_id]))
+            )
+            stats_obj.appendChild(stat_obj);
+        }
+    }
+    var vision_stat_obj = utils_create_obj("div", "enka_stat enka_vision");
+    vision_stat_obj.appendChild(utils_create_label_img(enka_character.vision_stat, data_stats[enka_character.vision_stat].name));
+    vision_stat_obj.appendChild(
+        utils_create_obj("div", "enka_stat_val", null, utils_format_stat_value(data_stats[enka_character.vision_stat], enka_character.display_stats[enka_character.vision_stat]))
+    )
+    stats_obj.appendChild(vision_stat_obj);
+
+    return stats_obj;
+}
+
+function equip_enka_display_equip(index) {
+    var enka_character = enka_objects.saved_storage[index];
+
+    var weapon_type = data_characters[enka_character.id].weapon;
+    var weapon = utils_array_get_by_lookup(data_weapons[weapon_type], "id", enka_character.weapon.id);  
+
+    var equip_obj = utils_create_obj("div", "enka_equip", "enka_enka_equip_" + index);
+    equip_obj.appendChild(equip_display_equipment_icon("/images/icons/weapon/" + weapon_type + "/" + weapon.icon + ".png", weapon.rarity, weapon.name, level_list[enka_character.weapon.level]));
+
+    for (var i = 0; i < artifact_types.length; i++) {
+        var artifact = utils_array_get_by_lookup(data_artifact_sets, "id", enka_character.artifacts[artifact_types[i]].id);
+        equip_obj.appendChild(equip_display_equipment_icon("/images/icons/artifact/" + artifact_types[i] + "/" + artifact.icon + ".png", enka_character.artifacts[artifact_types[i]].stars, artifact.name, enka_character.artifacts[artifact_types[i]].level));
+    }
+
+    return equip_obj;
+}
+
+function equip_enka_display_data(index) {
+    var enka_character = enka_objects.saved_storage[index];
+
+    var data_obj = utils_create_obj("div", "enka_data", "enka_data_" + index);
+
+    data_obj.appendChild(utils_create_obj("div", "enka_lv", null, "Lv. " + level_list[enka_character.level]));
+    data_obj.appendChild(utils_create_obj("div", "enka_const", null, "C" + constel_list[enka_character.constel]));
+
+    for (var i = 0; i < attack_level_types.length; i++) {
+        data_obj.appendChild(equip_enka_display_skill_level(attack_level_types[i], enka_character["level" + attack_level_types[i]] + 1));
+    }
+    
+    return data_obj;
+}
+
+function equip_enka_display_skill_level(skill_name, skill_level) {
+    var skill_obj = utils_create_obj("div", "enka_skill");
+    skill_obj.appendChild(utils_create_label_img(skill_name, bonusdmg_names[skill_name]));
+    skill_obj.appendChild(utils_create_obj("div", null, null, skill_level));
+    return skill_obj;
 }
 
 function equip_enka_return_character(enka_char, custom_name = null) {
@@ -163,15 +266,19 @@ function equip_enka_return_character(enka_char, custom_name = null) {
     }
     character.level = equip_enka_return_level(enka_char.propMap["4001"].val, enka_char.propMap["1002"].val);
     if ("talentIdList" in enka_char) {
-        character.const = enka_char.talentIdList.length;
+        character.constel = enka_char.talentIdList.length;
     } 
-   
+
+    var skill_level = [];
     for (const [key, value] of Object.entries(enka_char.skillLevelMap)) {
-        character.skill_level.push(value - 1);
+        skill_level.push(value - 1);
     }
-    while (character.skill_level.length > 3) {
-        character.skill_level.shift();
-    }    
+    while (skill_level.length > attack_level_types.length) {
+        skill_level.shift();
+    }
+    for (var i = 0; i < attack_level_types.length; i++) {
+        character["level" + attack_level_types[i]] = skill_level[i];
+    }
 
     for (var i = 0; i < enka_char.equipList.length; i++) {
         var enka_equip = enka_char.equipList[i];
@@ -190,32 +297,45 @@ function equip_enka_return_character(enka_char, custom_name = null) {
             }
         } else if (enka_equip.flat.itemType == "ITEM_RELIQUARY") {
             var artifact_type = equip_enka_return_artifact_type(enka_equip.flat.equipType);
-            var artifact = {};
-            artifact.id = data_artifact_sets[utils_array_lookup_parameter(data_artifact_sets, "enka_id", enka_equip.flat.icon.split("_")[2])].id;
-            artifact.star = enka_equip.flat.rankLevel;
+            var artifact = character.artifacts[artifact_type];
+            artifact.id = utils_array_get_by_lookup(data_artifact_sets, "enka_id", enka_equip.flat.icon.split("_")[2]).id;
+            artifact.stars = enka_equip.flat.rankLevel;
             artifact.level = enka_equip.reliquary.level - 1;
-            artifact.main = enka_stats_transform_table[enka_equip.flat.reliquaryMainstat.mainPropId];
+            artifact.main_stat = enka_stats_transform_table[enka_equip.flat.reliquaryMainstat.mainPropId];
 
-            for (var ii = 0; ii < 4; ii++) {
-                if (enka_equip.flat.reliquarySubstats[ii]) {
-                    artifact["sub_" + ii] = enka_stats_transform_table[enka_equip.flat.reliquarySubstats[ii].appendPropId];
-                    artifact["sub_val_" + ii] = enka_equip.flat.reliquarySubstats[ii].statValue;
-                } else {
-                    artifact["sub_" + ii] = "blank";
-                    artifact["sub_val_" + ii] = 0;
+            for (var ii = 0; ii < enka_equip.reliquary.appendPropIdList.length; ii++) {
+                var sub = utils_array_get_by_lookup(data_artifact_enka_stats, "id", enka_equip.reliquary.appendPropIdList[ii]);
+                var filled_substat = false;
+                for (var iii = 0; iii < artifact_sub_stats; iii++) {
+                    if (artifact.sub_stats[iii].id == artifact_sub_stats_options[0]) {
+                        artifact.sub_stats[iii].id = sub.stat;
+                        artifact.sub_stats[iii].value = sub.value;
+                        filled_substat = true;
+                        break;
+                    } else if (artifact.sub_stats[iii].id == sub.stat) {
+                        artifact.sub_stats[iii].value += sub.value;
+                        filled_substat = true;
+                        break;
+                    }
                 }
-
+                if (filled_substat == false) {
+                    throw new Error('More than 4 substats: ' + sub.stat + ' in artifact: ' + artifact.sub_stats);
+                }
             }
-
-            character.artifacts[artifact_type] = artifact;
         }
     }
 
     for (const [key, value] of Object.entries(enka_char.fightPropMap)) {
         if (key in enka_stats_display_table) {
-            character.display_stats[enka_stats_display_table[key]] = value;
+            if (data_stats[enka_stats_display_table[key]].type == "percent") {
+                character.display_stats[enka_stats_display_table[key]] = value * 100;
+            } else {
+                character.display_stats[enka_stats_display_table[key]] = value;
+            }
         }
     }
+
+    character.vision_stat = equip_enka_return_vision_stat(character.id, character.display_stats);
 
     return character;
 }
@@ -238,4 +358,17 @@ function equip_enka_return_artifact_type(equip_type) {
             return key;
         }
     }
+}
+
+function equip_enka_return_vision_stat(char_id, enka_stats) {
+    var highest_val = 0;
+    var highest_stat = data_characters[char_id].vision;
+
+    for (let vision in visions_variables) {
+        if (enka_stats[vision] > highest_val) {
+            highest_val = enka_stats[vision];
+            highest_stat = vision;
+        }
+    }
+    return highest_stat;
 }

@@ -103,15 +103,18 @@ function utils_number_format(num, round = null) {
 
 function utils_number_check_decimal_scale(num) {
     result = 0;
-    while (num < 1) {
-        num = num * 10;
-        result++;
-    }
+    if (num != 0) {
+        while (Math.abs(num) < 1) {
+            num = num * 10;
+            result++;
+        }
+    }    
     return Math.pow(10, result);
 }
 
 function utils_number_round(num, min_rounding) {
-    var rounding = utils_number_check_decimal_scale(num)
+    var rounding = utils_number_check_decimal_scale(num);
+    var min_rounding = Math.pow(10, min_rounding);
     if (rounding > min_rounding) {
         var result = Math.round(num * rounding * min_rounding) / (rounding * min_rounding);
     } else {

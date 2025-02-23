@@ -8,6 +8,7 @@ echo '
 
 	<script src="/javascript/equip/logic/controls.js?' . $javascript_logic_ver .'"></script>
 	<script src="/javascript/equip/logic/setup.js?' . $javascript_logic_ver .'"></script>
+	<script src="/javascript/equip/logic/display.js?' . $javascript_logic_ver .'"></script>
 
 	<script src="/javascript/equip/logic/character.js?' . $javascript_logic_ver .'"></script>
 	<script src="/javascript/equip/logic/weapon.js?' . $javascript_logic_ver .'"></script>
