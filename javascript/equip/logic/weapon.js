@@ -101,9 +101,9 @@ function equip_weapon_display() {
     name.innerHTML = weapon.name;
     icon.className = "equipment_icon img_stars_" + weapon.rarity;
     img.src = "/images/icons/weapon/" + weapon_type + "/" + weapon.icon + ".png";
-    level.className = "icon_selects weapon_level l" + current_weapon.level;
+    level.className = "icon_selects weapon_level select_gradient l" + current_weapon.level;
     level_text.innerHTML = level_list[current_weapon.level];
-    refine.className = "icon_selects weapon_refine r" + current_weapon.refine;
+    refine.className = "icon_selects weapon_refine select_gradient r" + current_weapon.refine;
     refine_text.innerHTML = "R" + refine_list[current_weapon.refine];
 
     var stats = document.getElementById("weapon_stats");

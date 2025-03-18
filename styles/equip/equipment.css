@@ -74,6 +74,7 @@
     justify-content: space-between;
     display: flex;
     flex-direction: column;
+    width: calc(100% - 90px);
 }
 
 .artifact_stats .icon_selects {
@@ -81,31 +82,47 @@
 }
 
     .artifact_stats .icon_selects_text {
-        font-size:0.9em;
+        font-size: 0.9em;
     }
+
+.artifact_sub_line .icon_selects_text span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width:100%;
+}
 
     .artifact_stats .elemastery .icon_selects_text,
     .artifact_stats .recharge .icon_selects_text {
         font-size: 0.8em;
     }
 
+.artifact_main_container .prompt_values {
+    min-width: 190px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .artifact_sub_line {
     display: flex;
     flex-direction: row;
 }
 
-.artifact_sub_line .container:first-child {
-    width: calc(63% - 4px);
-    margin-right: 4px;
-}
+    .artifact_sub_line .container:first-child {
+        //width: calc(63% - 4px);
+        //flex: 1 1;
+        margin-right: 4px;
+        width: calc(100% - 79px);
+    }
 
-.artifact_sub_line > .container:nth-child(2) {
-    width: calc(25% - 2px);
-    margin-right: 2px;
-}
+    .artifact_sub_line > .container:nth-child(2) {
+        //width: calc(25% - 2px);
+        width: 50px;
+        //margin-right: 2px;
+    }
 
     .artifact_sub_line .prompt_values {
-        min-width: 130px;
+        min-width: 150px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -125,11 +142,11 @@
 }
 
 .artifact_rel_val {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width: calc(13%);
-    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    font-size: 0.8em;
 }
 
 .artifact_stats .left {
@@ -199,51 +216,51 @@
 }
 
 .weapon_level.l1 {
-    background: linear-gradient(to right, var(--orange-bg) 7%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 7%, transparent 0%);
 }
 
 .weapon_level.l2 {
-    background: linear-gradient(to right, var(--orange-bg) 15%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 15%, transparent 0%);
 }
 
 .weapon_level.l3 {
-    background: linear-gradient(to right, var(--orange-bg) 22%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 22%, transparent 0%);
 }
 
 .weapon_level.l4 {
-    background: linear-gradient(to right, var(--orange-bg) 30%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 30%, transparent 0%);
 }
 
 .weapon_level.l5 {
-    background: linear-gradient(to right, var(--orange-bg) 37%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 37%, transparent 0%);
 }
 
 .weapon_level.l6 {
-    background: linear-gradient(to right, var(--orange-bg) 45%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 45%, transparent 0%);
 }
 
 .weapon_level.l7 {
-    background: linear-gradient(to right, var(--orange-bg) 52%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 52%, transparent 0%);
 }
 
 .weapon_level.l8 {
-    background: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
 }
 
 .weapon_level.l9 {
-    background: linear-gradient(to right, var(--orange-bg) 67%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 67%, transparent 0%);
 }
 
 .weapon_level.l10 {
-    background: linear-gradient(to right, var(--orange-bg) 75%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 75%, transparent 0%);
 }
 
 .weapon_level.l11 {
-    background: linear-gradient(to right, var(--orange-bg) 82%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 82%, transparent 0%);
 }
 
 .weapon_level.l12 {
-    background: linear-gradient(to right, var(--orange-bg) 90%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 90%, transparent 0%);
 }
 
 .weapon_level.l13 {
@@ -255,15 +272,15 @@
 }
 
 .weapon_refine.r1 {
-    background: linear-gradient(to right, var(--orange-bg) 25%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 25%, transparent 0%);
 }
 
 .weapon_refine.r2 {
-    background: linear-gradient(to right, var(--orange-bg) 50%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 50%, transparent 0%);
 }
 
 .weapon_refine.r3 {
-    background: linear-gradient(to right, var(--orange-bg) 75%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 75%, transparent 0%);
 }
 
 .weapon_refine.r4 {
@@ -275,19 +292,19 @@
 }
 
 .artifact_stars.s1 {
-    background: linear-gradient(to right, var(--orange-bg) 20%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 20%, transparent 0%);
 }
 
 .artifact_stars.s2 {
-    background: linear-gradient(to right, var(--orange-bg) 40%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 40%, transparent 0%);
 }
 
 .artifact_stars.s3 {
-    background: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
 }
 
 .artifact_stars.s4 {
-    background: linear-gradient(to right, var(--orange-bg) 80%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 80%, transparent 0%);
 }
 
 .artifact_stars.s5 {
@@ -299,19 +316,19 @@
 }
 
 .artifact_level.l4, .artifact_level.l5, .artifact_level.l6, .artifact_level.l7 {
-    background: linear-gradient(to right, var(--orange-bg) 20%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 20%, transparent 0%);
 }
 
 .artifact_level.l8, .artifact_level.l9, .artifact_level.l10, .artifact_level.l11 {
-    background: linear-gradient(to right, var(--orange-bg) 40%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 40%, transparent 0%);
 }
 
 .artifact_level.l12, .artifact_level.l13, .artifact_level.l14, .artifact_level.l15 {
-    background: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
 }
 
 .artifact_level.l16, .artifact_level.l17, .artifact_level.l18, .artifact_level.l19 {
-    background: linear-gradient(to right, var(--orange-bg) 80%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 80%, transparent 0%);
 }
 
 .artifact_level.l20 {
@@ -323,23 +340,23 @@
 }
 
 .artifact_sub.rv1 {
-    background: linear-gradient(to right, var(--orange-bg) 16%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 16%, transparent 0%);
 }
 
 .artifact_sub.rv2 {
-    background: linear-gradient(to right, var(--orange-bg) 33%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 33%, transparent 0%);
 }
 
 .artifact_sub.rv3 {
-    background: linear-gradient(to right, var(--orange-bg) 50%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 50%, transparent 0%);
 }
 
 .artifact_sub.rv4 {
-    background: linear-gradient(to right, var(--orange-bg) 67%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 67%, transparent 0%);
 }
 
 .artifact_sub.rv5 {
-    background: linear-gradient(to right, var(--orange-bg) 84%, transparent 0%);
+    background-image: linear-gradient(to right, var(--orange-bg) 84%, transparent 0%);
 }
 
 .artifact_sub.rv6 {

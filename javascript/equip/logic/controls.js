@@ -12,6 +12,15 @@ function equip_control_display_all() {
 
 function equip_control_create_enka(btn) {
 
+    var current_prompt = document.getElementById("active_prompt");
+
+    if (current_prompt) {
+        utils_destroy(current_prompt);
+        if (current_prompt.name == String(btn)) {
+            return null;
+        }
+    }
+
     var prompt = utils_create_prompt(btn, "prompt_select", "frame_party_content");
 
     var headerline = utils_create_obj("div", "prompt_header");
@@ -33,7 +42,9 @@ function equip_control_create_enka(btn) {
 
     inputline.appendChild(utils_create_img_btn("enka-download", equip_enka_change_load_uid, "Load Enka characters", "enka_load", "enka_load"));
 
-    prompt.appendChild(utils_create_obj("div", "enka_column", "enka_column"));
+    inputline.appendChild(utils_create_img_btn("enka-share", equip_enka_change_goto_uid, "Go to Enka", "enka_share", "enka_load"));
+
+    prompt.appendChild(utils_create_obj("div", "char_storage_column", "enka_column"));
 
     inputfield.addEventListener("keyup", function (event) {
         if (event.code === "Escape") {
@@ -50,6 +61,33 @@ function equip_control_create_enka(btn) {
     inputfield.focus();
 
     equip_enka_display_all();
+}
+
+function equip_control_create_character_storage(btn) {
+    var current_prompt = document.getElementById("active_prompt");
+
+    if (current_prompt) {
+        utils_destroy(current_prompt);
+        if (current_prompt.name == String(btn)) {
+            return null;
+        }
+    }
+
+    var prompt = utils_create_prompt(btn, "prompt_select", "frame_party_content");
+
+    var headerline = utils_create_obj("div", "prompt_header");
+    prompt.appendChild(headerline);
+    headerline.appendChild(utils_create_obj("div", "prompt_header_text", null, "Character Storage"));
+    headerline.appendChild(utils_create_obj("div", "spacer"));
+    var decline = utils_create_obj("button", "prompt_button prompt_button_decline", null, "&#10006");
+    decline.onclick = function () { utils_destroy_current_prompt(); };
+    headerline.appendChild(decline);
+
+    prompt.appendChild(utils_create_obj("div", "char_storage_column", "character_storage_active_column"));
+    prompt.appendChild(utils_create_obj("div", "char_storage_column", "character_storage_column"));
+
+    equip_character_storage_display_active_all();
+    equip_character_storage_display_all();
 }
 
 function equip_control_create_character_select(party_id, icon) {
@@ -176,7 +214,8 @@ function equip_control_create_artifact(index, artifact_id) {
 
     var icon = utils_create_obj("div", "equipment_icon img_stars_" + artifact.stars.join("_"), "prompt_option_" + artifact.id);
     var icon_container = utils_create_obj("div", "equipment_img");
-    icon.name = artifact.icon;
+    icon.name = artifact.name;
+    icon.alt_names = [artifact[artifact_id]];
     icon.rarity = artifact.stars[0];
     icon.appendChild(icon_container);
     icon_container.appendChild(utils_create_img(null, null, "images/icons/artifact/" + artifact_id + "/" + artifact.icon + ".png"));

@@ -10,7 +10,7 @@ const frame_stats_columns = 4;
 
 
 async function equip_load_all() {
-    var ver = "?20250223";
+    var ver = "?20250317";
 
     data_characters = await utils_load_file("/data/characters.json" + ver);
     data_enemies = await utils_load_file("/data/enemies.json" + ver);
@@ -45,6 +45,7 @@ async function equip_setup_all() {
         equip_setup_user_objects();
         equip_setup_output_objects();
         equip_setup_enka_objects();
+        equip_setup_character_storage_objects();
 
         equip_setup_preferences_load();
 
@@ -60,6 +61,7 @@ async function equip_setup_all() {
         equip_storage_display_all();
 
         equip_enka_load_last();
+        equip_character_load_last();
     } catch (err) {
         utils_loading_show_error(err, "An Error occured during loading the page.<br>Please reload the page with CTRL+F5.<br>If the Error persists, please contact the administrator.");
         setup_success = false;
@@ -102,13 +104,7 @@ function equip_setup_ui_frame_party() {
         parent.appendChild(equip_setup_ui_character(i));
     }
 
-    var panel = utils_create_obj("div", "frame_left_panel");
-    var load_enka = utils_create_img_btn("enka", null, "Load Enka", "left_panel_enka");
-    load_enka.className += " enka_btn"
-    load_enka.onclick = function (event) { equip_control_create_enka(load_enka.id); event.preventDefault(); };
-    panel.appendChild(load_enka);
-    parent.appendChild(panel);
-
+    parent.appendChild(equip_setup_ui_party_panel());
     parent.appendChild(equip_setup_ui_resonance());
     parent.appendChild(equip_setup_ui_enemy());
 }
@@ -175,6 +171,20 @@ function equip_setup_ui_character(index) {
     stats_unit_party_2.appendChild(stat_line);
 
     return obj;
+}
+
+function equip_setup_ui_party_panel() {
+    var panel = utils_create_obj("div", "frame_party_panel");
+    var load_enka = utils_create_img_btn("enka", null, "Load Enka", "party_panel_enka");
+    load_enka.className += " enka_btn"
+    load_enka.onclick = function (event) { equip_control_create_enka(load_enka.id); event.preventDefault(); };
+    panel.appendChild(load_enka);
+
+    var character_storage = utils_create_img_btn("database", null, "Character Storage", "party_panel_storage");
+    character_storage.onclick = function (event) { equip_control_create_character_storage(character_storage.id); event.preventDefault(); };
+    panel.appendChild(character_storage);
+
+    return panel;
 }
 
 function equip_setup_ui_resonance() {
@@ -352,7 +362,7 @@ function equip_setup_ui_artifact(artifact_id) {
     var stats = utils_create_obj("div", "equipment_stats artifact_stats", "artifact_stats_" + artifact_id);
     row.appendChild(stats);
 
-    var main_stat_container = utils_create_obj("div", "container", "artifact_main_container_" + artifact_id);
+    var main_stat_container = utils_create_obj("div", "container artifact_main_container", "artifact_main_container_" + artifact_id);
     stats.appendChild(main_stat_container);
     var main_stat = utils_create_obj("div", "icon_selects artifact_main", "artifact_main_" + artifact_id);
     if (equip_artifacts_return_main_options(artifact_id).length > 1) {
@@ -370,7 +380,9 @@ function equip_setup_ui_artifact(artifact_id) {
         let sub_stat = utils_create_obj("div", "icon_selects artifact_sub", "artifact_sub_" + artifact_id + i);
         sub_stat.onclick = function (event) { utils_create_prompt_values(sub_stat.id, equip_artifacts_change_sub, equip_artifacts_return_sub_options(i, artifact_id), artifact_id + i, sub_stat_container); event.preventDefault(); };
         sub_stat_container.appendChild(sub_stat);
-        sub_stat.appendChild(utils_create_obj("div", "icon_selects_text", "artifact_sub_text_" + artifact_id + i, "Empty"));
+        sub_stat_text = utils_create_obj("div", "icon_selects_text")
+        sub_stat_text.appendChild(utils_create_obj("span", null, "artifact_sub_text_" + artifact_id + i, "Empty"));
+        sub_stat.appendChild(sub_stat_text);
 
         let sub_val_container = utils_create_obj("div", "container", "artifact_sub_val_container_" + artifact_id + i);
         sub_stat_line.appendChild(sub_val_container);
@@ -539,8 +551,12 @@ function equip_setup_user_objects(user_data = null) {
 
 function equip_setup_storage_objects(user_storage = null) {
     storage_objects = {};
-
     storage_objects.saved_storage = utils_object_get_value(user_storage, "saved_storage", []);
+}
+
+function equip_setup_character_storage_objects(user_characters = null) {
+    character_storage_objects = {};
+    character_storage_objects.saved_characters = utils_object_get_value(user_characters, "saved_characters", []);
 }
 
 function equip_setup_enka_objects(user_enka = null) {
@@ -581,12 +597,15 @@ function equip_setup_output_objects() {
 
         char.stats = {};
         char.stats.total = { ...default_stats };
+        char.stats.display = { ...default_stats };
         char.stats.basic = [];
+        char.stats.environment = [];
         char.stats.weapon = [];
         char.stats.artifacts = [];
         char.stats.effects = [];
         char.stats.effects_transform_other = [];
         char.stats.effects_transform_personal = [];
+        char.stats.vision_stat = "none";
 
         char.effects = {};
         char.effects.infusion = false;
@@ -641,6 +660,8 @@ function equip_setup_default_stats() {
 
     default_enka_character = {};
     default_enka_character.id = 0;
+    default_enka_character.uid = 0;
+    default_enka_character.source = "enka";
     default_enka_character.name = "";
     default_enka_character.level = 0;
     default_enka_character.constel = 0;

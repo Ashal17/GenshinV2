@@ -68,12 +68,30 @@ function equip_enka_change_load_uid() {
     }    
 }
 
+function equip_enka_change_goto_uid() {
+    var uid = document.getElementById("prompt_input_enka").value;
+    if (uid) {
+        window.open("https://enka.network/u/" + uid, "_blank").focus();;
+    }
+}
+
 function equip_enka_change_load_character(input_obj) {
     equip_character_load(input_obj.party_id, enka_objects.saved_storage[input_obj.index]);
 }
 
 function equip_enka_change_save_character(index) {
-    
+    var character = structuredClone(enka_objects.saved_storage[index]);
+    var hash = utils_hash(JSON.stringify(character))
+
+    for (var i = 0; i < character_storage_objects.saved_characters.length; i++) {
+        if (character_storage_objects.saved_characters[i].hash == hash) {
+            utils_message("This Character build is already saved!", "automatic_warn")
+            return;
+        } 
+    }
+    character.hash = hash;
+    character_storage_objects.saved_characters.push(character);
+    equip_character_save_last();
 }
 
 function equip_enka_update_response(response) {
@@ -128,14 +146,14 @@ function equip_enka_update_data(response_json, uid) {
 
     if (enka_chars) {
         for (var i = 0; i < enka_chars.length; i++) {
-            characters.push(equip_enka_return_character(enka_chars[i]));
+            characters.push(equip_enka_return_character(uid, enka_chars[i]));
         }
     }
 
     if ("profile_builds" in response) {
         for (const [key, value] of Object.entries(response.profile_builds)) {
             for (var i = 0; i < value.length; i++) {
-                characters.push(equip_enka_return_character(value[i].avatar_data, value[i].name));
+                characters.push(equip_enka_return_character(uid, value[i].avatar_data, value[i].name));
             }
         }
     }
@@ -160,102 +178,33 @@ function equip_enka_display(index) {
     var enka_character = enka_objects.saved_storage[index];
     var character = data_characters[enka_character.id];
 
-    var obj = utils_create_obj("div", "enka_row", "enka_row_" + index);       
-    var name_container = utils_create_obj("div", "enka_name");
-    name_container.appendChild(utils_create_img_svg(character.vision));
-    name_container.appendChild(utils_create_obj("div", character.vision, null, enka_character.name));
-    obj.appendChild(name_container);
-    obj.appendChild(equip_enka_display_data(index));
-    obj.appendChild(equip_enka_display_equip(index));
-    obj.appendChild(equip_enka_display_stats(index));
+    var obj = utils_create_obj("div", "char_storage_row", "enka_row_" + index);       
+    obj.appendChild(equip_character_storage_display_name(character, enka_character.name));
+    obj.appendChild(equip_character_storage_display_data(enka_character));
+    obj.appendChild(equip_character_storage_display_equip(enka_character));
+    obj.appendChild(equip_character_storage_display_stats(enka_character.display_stats, enka_character.vision_stat));
     obj.appendChild(equip_enka_display_btns(index));
 
     return obj;
 }
 
 function equip_enka_display_btns(index) {
-    var btns_obj = utils_create_obj("div", "enka_btns", "enka_btns_" + index);
+    var btns_obj = utils_create_obj("div", "char_storage_btns", "enka_btns_" + index);
 
     for (let i = 0; i < party_size; i++) {
         let input_obj = { "party_id": i, "index": index };
         let party_num = i + 1;
-        btns_obj.appendChild(utils_create_img_button_prompt_confirm("numeric-" + party_num + "-box-outline", "Load as Party " + party_num, "enka_party_load_" + i + "_" + index, "Load this character as Party " + party_num + "?", equip_enka_change_load_character, input_obj, "enka_btn", "active_prompt_enka"))
+        btns_obj.appendChild(utils_create_img_button_prompt_confirm("numeric-" + party_num + "-box-outline", "Load as Party " + party_num, "enka_party_load_" + i + "_" + index, "Load this character as Party " + party_num + "?", equip_enka_change_load_character, input_obj, "char_storage_btn", "active_prompt_enka"))
     }
 
-    btns_obj.appendChild(utils_create_img_button_prompt_confirm("download", "Save CHaracter", "enka_party_save_" + index, "Save this character?", equip_enka_change_save_character, index, "enka_btn", "active_prompt_enka"))
-
+    btns_obj.appendChild(utils_create_img_button_prompt_confirm("download", "Save Character", "enka_party_save_" + index, "Save this character?", equip_enka_change_save_character, index, "char_storage_btn", "active_prompt_enka"))
 
     return btns_obj;
 }
 
-function equip_enka_display_stats(index) {
-
-    var enka_character = enka_objects.saved_storage[index];
-    var stats_obj = utils_create_obj("div", "enka_stats", "enka_stats_" + index);   
-
-    for (var i = 0; i < display_stats.length; i++) {
-        var stat_id = display_stats[i];
-        if (data_stats[stat_id].display.enka == true) {
-            var stat_obj = utils_create_obj("div", "enka_stat enka_" + stat_id);
-            stat_obj.appendChild(utils_create_label_img(stat_id, data_stats[stat_id].name));
-            stat_obj.appendChild(
-                utils_create_obj("div", "enka_stat_val", null, utils_format_stat_value(data_stats[stat_id], enka_character.display_stats[stat_id]))
-            )
-            stats_obj.appendChild(stat_obj);
-        }
-    }
-    var vision_stat_obj = utils_create_obj("div", "enka_stat enka_vision");
-    vision_stat_obj.appendChild(utils_create_label_img(enka_character.vision_stat, data_stats[enka_character.vision_stat].name));
-    vision_stat_obj.appendChild(
-        utils_create_obj("div", "enka_stat_val", null, utils_format_stat_value(data_stats[enka_character.vision_stat], enka_character.display_stats[enka_character.vision_stat]))
-    )
-    stats_obj.appendChild(vision_stat_obj);
-
-    return stats_obj;
-}
-
-function equip_enka_display_equip(index) {
-    var enka_character = enka_objects.saved_storage[index];
-
-    var weapon_type = data_characters[enka_character.id].weapon;
-    var weapon = utils_array_get_by_lookup(data_weapons[weapon_type], "id", enka_character.weapon.id);  
-
-    var equip_obj = utils_create_obj("div", "enka_equip", "enka_enka_equip_" + index);
-    equip_obj.appendChild(equip_display_equipment_icon("/images/icons/weapon/" + weapon_type + "/" + weapon.icon + ".png", weapon.rarity, weapon.name, level_list[enka_character.weapon.level]));
-
-    for (var i = 0; i < artifact_types.length; i++) {
-        var artifact = utils_array_get_by_lookup(data_artifact_sets, "id", enka_character.artifacts[artifact_types[i]].id);
-        equip_obj.appendChild(equip_display_equipment_icon("/images/icons/artifact/" + artifact_types[i] + "/" + artifact.icon + ".png", enka_character.artifacts[artifact_types[i]].stars, artifact.name, enka_character.artifacts[artifact_types[i]].level));
-    }
-
-    return equip_obj;
-}
-
-function equip_enka_display_data(index) {
-    var enka_character = enka_objects.saved_storage[index];
-
-    var data_obj = utils_create_obj("div", "enka_data", "enka_data_" + index);
-
-    data_obj.appendChild(utils_create_obj("div", "enka_lv", null, "Lv. " + level_list[enka_character.level]));
-    data_obj.appendChild(utils_create_obj("div", "enka_const", null, "C" + constel_list[enka_character.constel]));
-
-    for (var i = 0; i < attack_level_types.length; i++) {
-        data_obj.appendChild(equip_enka_display_skill_level(attack_level_types[i], enka_character["level" + attack_level_types[i]] + 1));
-    }
-    
-    return data_obj;
-}
-
-function equip_enka_display_skill_level(skill_name, skill_level) {
-    var skill_obj = utils_create_obj("div", "enka_skill");
-    skill_obj.appendChild(utils_create_label_img(skill_name, bonusdmg_names[skill_name]));
-    skill_obj.appendChild(utils_create_obj("div", null, null, skill_level));
-    return skill_obj;
-}
-
-function equip_enka_return_character(enka_char, custom_name = null) {
-    console.log(enka_char);
+function equip_enka_return_character(uid, enka_char, custom_name = null) {
     var character = structuredClone(default_enka_character);
+    character.uid = uid;
     character.id = utils_dict_lookup_property(data_characters, "enka_id", enka_char.avatarId);
     if (!character.id) {
         return character;

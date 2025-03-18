@@ -1,4 +1,7 @@
-const output_party_stat_objects = ["basic", "weapon", "artifacts", "effects"];
+const output_party_stat_objects = {
+    "total": ["basic", "environment", "weapon", "artifacts", "effects"],
+    "display": ["basic", "weapon", "artifacts"]
+}
 const visions_variables = {
     "anemo": {
         "name": "Anemo",
@@ -187,12 +190,14 @@ function equip_stats_update_total_all() {
     equip_stats_update_transformation_all("main");
     equip_stats_update_transformation_all("mult");
     equip_effects_update_stats_transform_other_all();
-    equip_stats_update_add_all("effects_transform_other");
+    equip_stats_update_add_all("total", "effects_transform_other");
     equip_effects_update_stats_transform_personal_all();
-    equip_stats_update_add_all("effects_transform_personal");
+    equip_stats_update_add_all("total", "effects_transform_personal");
     equip_stats_update_transformation_all("mult_trans");
     equip_stats_update_transformation_all("merge");
     equip_stats_update_transformation_all("elemastery");
+
+    equip_stats_update_vision_stat_all();
 
     for (var i = 0; i < party_size; i++) {
         output_party[i].stats.total["enemyred"] = equip_stats_calculate_enemyred(output_party[i].stats.total, i);
@@ -208,33 +213,47 @@ function equip_stats_update_reset_total_all() {
 
 function equip_stats_update_reset_total(party_id) {
     output_party[party_id].stats.total = structuredClone(default_stats);
+    output_party[party_id].stats.display = structuredClone(default_stats);
 }
+
 
 function equip_stats_update_add_total_all() {
-
-    for (var i = 0; i < output_party_stat_objects.length; i++) {
-        equip_stats_update_add_all(output_party_stat_objects[i]);
-    }
-
+    for (const [stat_type, stat_obj] of Object.entries(output_party_stat_objects)) {
+        for (var i = 0; i < stat_obj.length; i++) {
+            equip_stats_update_add_all(stat_type, stat_obj[i]);
+        }
+    }    
 }
 
-function equip_stats_update_add_all(stats_obj_name) {
+function equip_stats_update_add_all(stat_type, stats_obj_name) {
     for (var i = 0; i < party_size; i++) {
-        equip_stats_update_add(i, stats_obj_name);
+        equip_stats_update_add(stat_type, i, stats_obj_name);
     }
 }
 
-function equip_stats_update_add(party_id, stats_obj_name) {
+function equip_stats_update_add(stat_type, party_id, stats_obj_name) {
     var stats_obj = output_party[party_id].stats[stats_obj_name]
     for (var i = 0; i < stats_obj.length; i++) {
-        output_party[party_id].stats.total[stats_obj[i].id] += stats_obj[i].value;
+        output_party[party_id].stats[stat_type][stats_obj[i].id] += stats_obj[i].value;
     }
 }
 
 function equip_stats_update_transformation_all(transformation_name) {
     for (var i = 0; i < party_size; i++) {
-        output_party[i].stats.total = equip_stats_calculate_tranformation(output_party[i].stats.total, transformation_name);
+        for (const [stat_type, stat_obj] of Object.entries(output_party_stat_objects)) {
+            output_party[i].stats[stat_type] = equip_stats_calculate_tranformation(output_party[i].stats[stat_type], transformation_name);
+        }       
     }
+}
+
+function equip_stats_update_vision_stat_all() {
+    for (var i = 0; i < party_size; i++) {
+        equip_stats_update_vision_stat(i);
+    }
+}
+
+function equip_stats_update_vision_stat(index) {
+    output_party[index].stats.vision_stat = equip_stats_return_vision_stat(index);
 }
 
 function equip_stats_calculate_tranformation(stats_total, transformation_name) {
@@ -404,13 +423,13 @@ function equip_stats_display() {
         }
     }
 
-    for (var ii = 0; ii < party_size; ii++) {
-        var stat = document.getElementById("display_stat_vision_party_" + ii);
-        var stat_id = equip_stats_return_vision_stat(ii);
-        stat.innerHTML = utils_format_stat_value(data_stats[stat_id], output_party[ii].stats.total[stat_id]);
-        var icon = document.getElementById("display_stat_vision_party_" + ii + "_img");
+    for (var i = 0; i < party_size; i++) {
+        var stat = document.getElementById("display_stat_vision_party_" + i);
+        var stat_id = output_party[i].stats.vision_stat;
+        stat.innerHTML = utils_format_stat_value(data_stats[stat_id], output_party[i].stats.total[stat_id]);
+        var icon = document.getElementById("display_stat_vision_party_" + i + "_img");
         icon.className = "img_icon svg svg-" + stat_id;
-        var label = document.getElementById("display_stat_vision_party_" + ii + "_label");
+        var label = document.getElementById("display_stat_vision_party_" + i + "_label");
         label.innerHTML = data_stats[stat_id].name;
     }
 

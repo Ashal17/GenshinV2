@@ -216,7 +216,7 @@ function equip_artifacts_display(artifact_id) {
         var sub = document.getElementById("artifact_sub_" + artifact_id + i);       
         var sub_text = document.getElementById("artifact_sub_text_" + artifact_id + i);
         var sub_stat = current_artifact.sub_stats[i].id;
-        sub.className = "icon_selects artifact_sub rv" + Math.ceil(output_party[user_objects.user_active_character].artifacts[artifact_id].relative_values[i]) + " " + sub_stat;
+        sub.className = "icon_selects artifact_sub select_gradient rv" + Math.ceil(output_party[user_objects.user_active_character].artifacts[artifact_id].relative_values[i]) + " " + sub_stat;
         sub_text.innerHTML = data_stats[sub_stat].name;
 
         var sub_val = document.getElementById("artifact_sub_val_text_" + artifact_id + i);

@@ -5,6 +5,21 @@ const level_list_values = [1, 20, 20, 40, 40, 50, 50, 60, 60, 70, 70, 80, 80, 90
 const constel_list = [0, 1, 2, 3, 4, 5, 6];
 const character_visions = ["anemo", "cryo", "dendro", "electro", "geo", "hydro", "pyro"];
 
+function equip_character_load_last() {
+    var character_storage = localStorage.getItem("character_storage");
+    if (character_storage) {
+        utils_log_debug("Found saved Characters.");
+        equip_setup_character_storage_objects(JSON.parse(character_storage));
+    } else {
+        utils_log_debug("No saved Characters.");
+    }
+}
+
+function equip_character_save_last() {
+    var character_json = JSON.stringify(character_storage_objects);
+    localStorage.setItem("character_storage", character_json);
+}
+
 function equip_character_load(party_id, character_data) {
 
     for (var i = 0; i < party_size; i++) {
@@ -122,6 +137,12 @@ function equip_enemy_change_trigger() {
     equip_storage_save_last();
 }
 
+function equip_character_storage_change_trigger() {
+    equip_character_storage_display_active_all();
+    equip_character_storage_display_all();
+    equip_character_save_last();
+}
+
 function equip_active_character_change(party_id) {
     if (user_objects.user_active_character != party_id) {
         user_objects.user_active_character = party_id;
@@ -176,6 +197,16 @@ function equip_enemy_change_level(level) {
     
 }
 
+function equip_character_storage_change_load_character(input_obj) {
+    equip_character_load(input_obj.party_id, character_storage_objects.saved_characters[input_obj.index]);
+    equip_character_storage_change_trigger();
+}
+
+function equip_character_storage_change_delete_character(index) {
+    character_storage_objects.saved_characters.splice(index, 1);
+    equip_character_storage_change_trigger();
+}
+
 function equip_character_update_all(manual = false) {
     
     equip_character_update_resonance();
@@ -203,13 +234,14 @@ function equip_character_update(party_id, manual = false) {
 
 function equip_character_update_stats(party_id) {
 
-    var stats = [];
+    var stats_basic = [];
+    var stats_env = [];
 
     var character = data_characters[user_objects.user_party[party_id].id];
     var level = user_objects.user_party[party_id].level;
 
     for (var i = 0; i < character.stats.length; i++) {
-        stats.push(
+        stats_basic.push(
             { "id": character.stats[i].stat, "value": character.stats[i].values[level] }
         );
     }
@@ -217,7 +249,7 @@ function equip_character_update_stats(party_id) {
     for (var i = 0; i < user_objects.user_party[party_id].constel; i++) {
         if (character.const[i].hasOwnProperty("bonus")) {
             for (var ii = 0; ii < character.const[i].bonus.length; ii++) {
-                stats.push(
+                stats_basic.push(
                     { "id": character.const[i].bonus[ii].stat, "value": character.const[i].bonus[ii].value }
                 );
             }            
@@ -228,7 +260,7 @@ function equip_character_update_stats(party_id) {
         var resonance = utils_array_get_by_lookup(data_resonance, "id", output_resonances[i]);
         for (var ii = 0; ii < resonance.bonus.length; ii++) {
             if (resonance.bonus[ii].stat) {
-                stats.push(
+                stats_env.push(
                     { "id": resonance.bonus[ii].stat, "value": resonance.bonus[ii].value }
                 );
             }
@@ -239,7 +271,7 @@ function equip_character_update_stats(party_id) {
     var enemy = utils_array_get_by_lookup(data_enemies, "id", user_objects.user_enemy.id);
 
     for (var i = 0; i < enemy.stats.length; i++) {
-        stats.push(
+        stats_env.push(
             { "id": enemy.stats[i].id, "value": enemy.stats[i].value }
         );
     }
@@ -250,11 +282,12 @@ function equip_character_update_stats(party_id) {
         var defense = 0;
     }
 
-    stats.push(
+    stats_env.push(
         { "id": "enemydef", "value": defense }
     );
 
-    output_party[party_id].stats.basic = stats;
+    output_party[party_id].stats.basic = stats_basic;
+    output_party[party_id].stats.environment = stats_env;
 }
 
 function equip_character_update_resonance() {
@@ -308,9 +341,9 @@ function equip_character_display(party_id) {
     name.className = "container_name " + character.vision;
     icon.className = "character_icon " + character.vision;
     img.src = "/images/icons/character/" + character_id + "/char.png";
-    level.className = "icon_selects character_level l" + user_objects.user_party[party_id].level;
+    level.className = "icon_selects character_level select_gradient l" + user_objects.user_party[party_id].level;
     level_text.innerHTML = level_list[user_objects.user_party[party_id].level];
-    constel.className = "icon_selects character_constel c" + user_objects.user_party[party_id].constel;
+    constel.className = "icon_selects character_constel select_gradient c" + user_objects.user_party[party_id].constel;
     constel_text.innerHTML = "C" + constel_list[user_objects.user_party[party_id].constel];
 }
 
@@ -338,6 +371,135 @@ function equip_enemy_display() {
     icon.className = "character_icon " + enemy.vision;
     img.src = "/images/icons/enemy/" + enemy.icon + ".png";
     level.innerHTML = user_objects.user_enemy.level;
+}
+
+function equip_character_storage_display_all() {
+    var parent = document.getElementById("character_storage_column");
+    utils_delete_children(parent, 0);
+
+    for (var i = 0; i < character_storage_objects.saved_characters.length; i++) {
+        parent.appendChild(equip_character_storage_display(i));
+    }
+}
+
+function equip_character_storage_display(index) {
+    var storage_character = character_storage_objects.saved_characters[index];
+    var character = data_characters[storage_character.id];
+
+    var obj = utils_create_obj("div", "char_storage_row", "char_storage_row_" + index);
+    obj.appendChild(equip_character_storage_display_name(character, storage_character.name));
+    obj.appendChild(equip_character_storage_display_data(storage_character));
+    obj.appendChild(equip_character_storage_display_equip(storage_character));
+    obj.appendChild(equip_character_storage_display_stats(storage_character.display_stats, storage_character.vision_stat));
+    obj.appendChild(equip_character_storage_display_btns(index));
+
+    return obj;
+}
+
+function equip_character_storage_display_active_all() {
+    var parent = document.getElementById("character_storage_active_column");
+    utils_delete_children(parent, 0);
+
+    for (var i = 0; i < party_size; i++) {
+        parent.appendChild(equip_character_storage_display_active(i));
+    }
+}
+
+function equip_character_storage_display_active(index) {
+    var active_character = user_objects.user_party[index];
+    var output_character = output_party[index];
+    var character = data_characters[active_character.id];
+
+    var obj = utils_create_obj("div", "char_storage_row", "char_storage_active_row_" + index);
+    obj.appendChild(equip_character_storage_display_name(character, character.name));
+    obj.appendChild(equip_character_storage_display_data(active_character));
+    obj.appendChild(equip_character_storage_display_equip(active_character));
+    obj.appendChild(equip_character_storage_display_stats(output_character.stats.display, output_character.stats.vision_stat));
+
+    return obj;
+}
+
+function equip_character_storage_display_btns(index) {
+    var btns_obj = utils_create_obj("div", "char_storage_btns", "char_storage_btns_" + index);
+
+    for (let i = 0; i < party_size; i++) {
+        let input_obj = { "party_id": i, "index": index };
+        let party_num = i + 1;
+        btns_obj.appendChild(utils_create_img_button_prompt_confirm("numeric-" + party_num + "-box-outline", "Load as Party " + party_num, "char_storage_load_" + i + "_" + index, "Load this character as Party " + party_num + "?", equip_character_storage_change_load_character, input_obj, "char_storage_btn", "active_prompt_char_storage"))
+    }
+
+    btns_obj.appendChild(utils_create_img_button_prompt_confirm("delete-forever", "Delete Character", "char_storage_save_" + index, "Delete this character?", equip_character_storage_change_delete_character, index, "char_storage_btn", "active_prompt_char_storage"))
+
+
+    return btns_obj;
+}
+
+function equip_character_storage_display_stats(character_display_stats, vision_stat) {
+    var stats_obj = utils_create_obj("div", "char_storage_stats");
+
+    for (var i = 0; i < display_stats.length; i++) {
+        var stat_id = display_stats[i];
+        if (data_stats[stat_id].display.enka == true) {
+            var stat_obj = utils_create_obj("div", "char_storage_stat char_storage_" + stat_id);
+            stat_obj.appendChild(utils_create_label_img(stat_id, data_stats[stat_id].name));
+            stat_obj.appendChild(
+                utils_create_obj("div", "char_storage_stat_val", null, utils_format_stat_value(data_stats[stat_id], character_display_stats[stat_id]))
+            )
+            stats_obj.appendChild(stat_obj);
+        }
+    }
+    var vision_stat_obj = utils_create_obj("div", "char_storage_stat char_storage_vision");
+    vision_stat_obj.appendChild(utils_create_label_img(vision_stat, data_stats[vision_stat].name));
+    vision_stat_obj.appendChild(
+        utils_create_obj("div", "char_storage_stat_val", null, utils_format_stat_value(data_stats[vision_stat], character_display_stats[vision_stat]))
+    )
+    stats_obj.appendChild(vision_stat_obj);
+
+    return stats_obj;
+}
+
+function equip_character_storage_display_equip(character_storage) {
+    var weapon_type = data_characters[character_storage.id].weapon;
+    var weapon = utils_array_get_by_lookup(data_weapons[weapon_type], "id", character_storage.weapon.id);
+
+    var equip_obj = utils_create_obj("div", "char_storage_equip");
+    equip_obj.appendChild(equip_display_equipment_icon("/images/icons/weapon/" + weapon_type + "/" + weapon.icon + ".png", weapon.rarity, weapon.name, level_list[character_storage.weapon.level]));
+
+    for (var i = 0; i < artifact_types.length; i++) {
+        var artifact = utils_array_get_by_lookup(data_artifact_sets, "id", character_storage.artifacts[artifact_types[i]].id);
+        equip_obj.appendChild(equip_display_equipment_icon("/images/icons/artifact/" + artifact_types[i] + "/" + artifact.icon + ".png", character_storage.artifacts[artifact_types[i]].stars, artifact.name, character_storage.artifacts[artifact_types[i]].level));
+    }
+
+    return equip_obj;
+}
+
+
+function equip_character_storage_display_skill_level(skill_name, skill_level) {
+    var skill_obj = utils_create_obj("div", "char_storage_skill");
+    skill_obj.appendChild(utils_create_label_img(skill_name, bonusdmg_names[skill_name]));
+    skill_obj.appendChild(utils_create_obj("div", null, null, skill_level));
+    return skill_obj;
+}
+
+function equip_character_storage_display_data(character_storage) {
+    var data_obj = utils_create_obj("div", "char_storage_data");
+
+    data_obj.appendChild(utils_create_obj("div", "char_storage_lv", null, "Lv. " + level_list[character_storage.level]));
+    data_obj.appendChild(utils_create_obj("div", "char_storage_const", null, "C" + constel_list[character_storage.constel]));
+
+    for (var i = 0; i < attack_level_types.length; i++) {
+        data_obj.appendChild(equip_character_storage_display_skill_level(attack_level_types[i], character_storage["level" + attack_level_types[i]] + 1));
+    }
+
+    return data_obj;
+}
+
+function equip_character_storage_display_name(character, character_name) {
+    var name_container = utils_create_obj("div", "char_storage_name");
+    name_container.appendChild(utils_create_img_svg(character.vision));
+    name_container.appendChild(utils_create_obj("div", character.vision, null, character_name));
+
+    return name_container;
 }
 
 function equip_character_return_party_id_by_name(character_id) {

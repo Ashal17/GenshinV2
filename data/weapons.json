@@ -3181,7 +3181,7 @@
           "id": "energy_nectar"
         }
       ],
-      "effect_name": "Solar Shine (Normal)"
+      "effect_name": "Solar Shine"
     },
     {
       "id": 17,
@@ -4437,7 +4437,7 @@
       "icon": "tome_of_the_eternal_flow",
       "type": "catalyst",
       "rarity": 5,
-      "atk_base": 43.73,
+      "atk_base": 44.34,
       "stats": [
         {
           "stat": "critdmg",
@@ -6046,7 +6046,7 @@
       "icon": "redhorn_stonethresher",
       "type": "claymore",
       "rarity": 5,
-      "atk_base": 43.73,
+      "atk_base": 44.34,
       "stats": [
         {
           "stat": "critdmg",
@@ -6387,7 +6387,7 @@
           "id": "spectral_nucleus"
         }
       ],
-      "effect_name": "Talking Stick (Hydro, Cryo, Electro)"
+      "effect_name": "\"The Silver Tongue\""
     },
     {
       "id": 34,
@@ -6516,7 +6516,7 @@
           "id": "spectral_nucleus"
         }
       ],
-      "effect_name": "Desert Watch (HP)"
+      "effect_name": "Desert Watch"
     },
     {
       "id": 36,
@@ -10831,7 +10831,7 @@
       "icon": "splendor_of_still_waters",
       "type": "sword",
       "rarity": 5,
-      "atk_base": 43.73,
+      "atk_base": 44.34,
       "stats": [
         {
           "stat": "critdmg",
@@ -10889,7 +10889,7 @@
           "id": "spectral_nucleus"
         }
       ],
-      "effect_name": "Dawn and Dusk by the Lake (HP)"
+      "effect_name": "Dawn and Dusk by the Lake"
     },
     {
       "id": 40,
@@ -10898,7 +10898,7 @@
       "icon": "uraku_misugiri",
       "type": "sword",
       "rarity": 5,
-      "atk_base": 43.73,
+      "atk_base": 44.34,
       "stats": [
         {
           "stat": "critdmg",

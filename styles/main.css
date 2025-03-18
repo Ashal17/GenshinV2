@@ -1,3 +1,8 @@
+@font-face {
+    font-family: GenshinFont;
+    src: url(/styles/fonts/genshin_font.woff2) format("woff2")
+}
+
 body {
     --pyro: #ff6600;
     --hydro: #0099ff;
@@ -55,7 +60,7 @@ body {
     flex-direction: column;
     align-items:center;
     background-color: var(--grey-15);
-    font: 100% Tahoma;
+    font: 90% GenshinFont;
     margin: 0;
     color: var(--white);
 }
@@ -494,6 +499,12 @@ input {
     display: flex;
     justify-content: center;
     width: 100%;
+    text-shadow: 1px 0px 1px var(--grey-15);
+}
+
+.select_gradient {
+    background-position: -1px 0px;
+    background-repeat: no-repeat;
 }
 
 

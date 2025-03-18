@@ -311,6 +311,26 @@ function utils_create_img_svg(svg_name, btn_id, container_class) {
     }
 }
 
+function utils_create_img_link(svg_name, hover_text, hyperlink) {
+
+    var btn = document.createElement("a");
+    btn.href = hyperlink;
+    btn.className = "img_button";
+
+    var icon = document.createElement("div");
+    icon.className = "img_icon svg svg-" + svg_name;
+    btn.appendChild(icon);
+
+    if (hover_text) {
+        var btn_hover = document.createElement("div");
+        btn_hover.className = "img_button_hover";
+        btn_hover.innerHTML = hover_text;
+        btn.appendChild(btn_hover);
+    }
+
+    return btn;
+}
+
 function utils_create_img_button_prompt_confirm(svg_name, hover_text, btn_id, text, func, input, container_class, active_prompt_id = "active_prompt") {
     var container = utils_create_obj("div", "img_button_container " + container_class);
 
@@ -366,7 +386,6 @@ function utils_destroy(obj) {
 }
 
 function utils_destroy_current_prompt(active_prompt_id = "active_prompt") {
-    console.log(active_prompt_id);
     var current_prompt = document.getElementById(active_prompt_id);
     if (current_prompt) {
         utils_destroy(current_prompt);
@@ -445,8 +464,6 @@ function utils_create_prompt_select(text, btn, objects, parent=null) {
     for (var i = 0; i < objects.length; i++) {
         options.appendChild(objects[i]);
     }
-
-    
 
     search.focus();
 }

@@ -297,3 +297,8 @@ background: none;
     mask-image: url(../images/svg/enka-download.svg);
 }
 
+.svg-enka-share:before {
+    -webkit-mask-image: url(../images/svg/enka-share.svg);
+    mask-image: url(../images/svg/enka-share.svg);
+}
+

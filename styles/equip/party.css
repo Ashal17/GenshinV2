@@ -3,7 +3,7 @@
     flex-wrap:wrap;
 }
 
-.frame_left_panel {
+.frame_party_panel {
     display: flex;
     flex-direction: column-reverse;
     margin: 5px;
@@ -246,41 +246,41 @@
     }
 
     .character_level.l1 {
-        background: linear-gradient(to right, var(--orange-bg) 7%, transparent 0%);
+        background-image: linear-gradient(to right, var(--orange-bg) 7%, transparent 0%);
     }
-    .character_level.l2 {
-        background: linear-gradient(to right, var(--orange-bg) 15%, transparent 0%);
-    }
-    .character_level.l3 {
-        background: linear-gradient(to right, var(--orange-bg) 22%, transparent 0%);
-    }
-    .character_level.l4 {
-        background: linear-gradient(to right, var(--orange-bg) 30%, transparent 0%);
-    }
-    .character_level.l5 {
-        background: linear-gradient(to right, var(--orange-bg) 37%, transparent 0%);
-    }
-    .character_level.l6 {
-        background: linear-gradient(to right, var(--orange-bg) 45%, transparent 0%);
-    }
-    .character_level.l7 {
-        background: linear-gradient(to right, var(--orange-bg) 52%, transparent 0%);
-    }
-    .character_level.l8 {
-        background: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
-    }
-    .character_level.l9 {
-        background: linear-gradient(to right, var(--orange-bg) 67%, transparent 0%);
-    }
-    .character_level.l10 {
-        background: linear-gradient(to right, var(--orange-bg) 75%, transparent 0%);
-    }
-    .character_level.l11 {
-        background: linear-gradient(to right, var(--orange-bg) 82%, transparent 0%);
-    }
-    .character_level.l12 {
-        background: linear-gradient(to right, var(--orange-bg) 90%, transparent 0%);
-    }
+.character_level.l2 {
+    background-image: linear-gradient(to right, var(--orange-bg) 15%, transparent 0%);
+}
+.character_level.l3 {
+    background-image: linear-gradient(to right, var(--orange-bg) 22%, transparent 0%);
+}
+.character_level.l4 {
+    background-image: linear-gradient(to right, var(--orange-bg) 30%, transparent 0%);
+}
+.character_level.l5 {
+    background-image: linear-gradient(to right, var(--orange-bg) 37%, transparent 0%);
+}
+.character_level.l6 {
+    background-image: linear-gradient(to right, var(--orange-bg) 45%, transparent 0%);
+}
+.character_level.l7 {
+    background-image: linear-gradient(to right, var(--orange-bg) 52%, transparent 0%);
+}
+.character_level.l8 {
+    background-image: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
+}
+.character_level.l9 {
+    background-image: linear-gradient(to right, var(--orange-bg) 67%, transparent 0%);
+}
+.character_level.l10 {
+    background-image: linear-gradient(to right, var(--orange-bg) 75%, transparent 0%);
+}
+.character_level.l11 {
+    background-image: linear-gradient(to right, var(--orange-bg) 82%, transparent 0%);
+}
+.character_level.l12 {
+    background-image: linear-gradient(to right, var(--orange-bg) 90%, transparent 0%);
+}
     .character_level.l13 {
         background: var(--orange-bg);
     }
@@ -289,25 +289,25 @@
         background: transparent;
     }
 
-    .character_constel.c1 {
-        background: linear-gradient(to right, var(--orange-bg) 16%, transparent 0%);
-    }
+.character_constel.c1 {
+    background-image: linear-gradient(to right, var(--orange-bg) 16%, transparent 0%);
+}
 
-    .character_constel.c2 {
-        background: linear-gradient(to right, var(--orange-bg) 33%, transparent 0%);
-    }
+.character_constel.c2 {
+    background-image: linear-gradient(to right, var(--orange-bg) 33%, transparent 0%);
+}
 
-    .character_constel.c3 {
-        background: linear-gradient(to right, var(--orange-bg) 50%, transparent 0%);
-    }
+.character_constel.c3 {
+    background-image: linear-gradient(to right, var(--orange-bg) 50%, transparent 0%);
+}
 
-    .character_constel.c4 {
-        background: linear-gradient(to right, var(--orange-bg) 67%, transparent 0%);
-    }
+.character_constel.c4 {
+    background-image: linear-gradient(to right, var(--orange-bg) 67%, transparent 0%);
+}
 
-    .character_constel.c5 {
-        background: linear-gradient(to right, var(--orange-bg) 84%, transparent 0%);
-    }
+.character_constel.c5 {
+    background-image: linear-gradient(to right, var(--orange-bg) 84%, transparent 0%);
+}
 
     .character_constel.c6 {
         background: var(--orange-bg);
@@ -346,19 +346,19 @@
     max-width:16px;
 }
 
-.enka_column {
-    display:flex;
-    flex-direction:column;
-    width:100%;
-    margin-top:20px;
+.char_storage_column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.enka_row, .enka_name, .enka_data, .enka_stats, .enka_stat, .enka_skill, .enka_equip, .enka_btns {
+.char_storage_row, .char_storage_name, .char_storage_data, .char_storage_stats, .char_storage_stat, .char_storage_skill, .char_storage_equip, .char_storage_btns {
     display: flex;
     flex-direction: row;
 }
 
-.enka_row {
+.char_storage_row {
     padding: 0px 5px;
     align-items: center;
     justify-content: space-between;
@@ -367,76 +367,76 @@
     flex-wrap: wrap;
 }
 
-    .enka_row:not(:first-child) {
+    .char_storage_row:not(:first-child) {
         border-top: 1px dashed var(--grey-40);
     }
 
-    .enka_row .label_img, .enka_row .img_svg, .enka_row .img_button {
+    .char_storage_row .label_img, .char_storage_row .img_svg, .char_storage_row .img_button {
         height: 21px;
     }
 
-.enka_name {
-    width:350px;
+.char_storage_name {
+    width: 350px;
 }
 
-    .enka_name .img_svg {
-        margin-right:10px;
+    .char_storage_name .img_svg {
+        margin-right: 10px;
     }
 
-.enka_data {
+.char_storage_data {
     //width:15%;
 }
 
-.enka_lv {
-    width:55px;
+.char_storage_lv {
+    width: 55px;
 }
 
-.enka_const {
-    width:30px;
+.char_storage_const {
+    width: 30px;
 }
 
-.enka_skill {
-    width:50px;
+.char_storage_skill {
+    width: 50px;
 }
 
-.enka_equip {
-    margin:0px 10px;
+.char_storage_equip {
+    margin: 0px 10px;
 }
 
-.enka_equip .equipment_img {
-    height: 26px;
-    width: 26px;
-    margin: 2px;
-    border-radius: 5px;
-    cursor: default;
-}
+    .char_storage_equip .equipment_img {
+        height: 26px;
+        width: 26px;
+        margin: 2px;
+        border-radius: 5px;
+        cursor: default;
+    }
 
-.enka_equip .equipment_img img {
-    width: 22px;
-    height: 22px;
-}
+        .char_storage_equip .equipment_img img {
+            width: 22px;
+            height: 22px;
+        }
 
-.enka_stats {
+.char_storage_stats {
     justify-content: flex-start;
     flex-wrap: wrap;
 }
 
-.enka_atk, .enka_def, .enka_elemastery {
-    width:80px;
+.char_storage_atk, .char_storage_def, .char_storage_elemastery {
+    width: 80px;
 }
 
-.enka_hp, .enka_crit, .enka_critdmg, .enka_recharge, .enka_vision {
-    width:90px;
+.char_storage_hp, .char_storage_crit, .char_storage_critdmg, .char_storage_recharge, .char_storage_vision {
+    width: 90px;
 }
 
-.enka_stat_val {
-    margin-left:5px;
+.char_storage_stat_val {
+    margin-left: 5px;
 }
 
-.enka_btn {
-    position:relative;
+.char_storage_btn {
+    position: relative;
 }
 
-.enka_buttons {
+.char_storage_buttons {
     //width: 25%;
 }
