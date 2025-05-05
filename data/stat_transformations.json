@@ -1,4 +1,101 @@
 {
+  "display": [
+    {
+      "stat": "crit",
+      "change": "add",
+      "mods": [ 5 ]
+    },
+    {
+      "stat": "critdmg",
+      "change": "add",
+      "mods": [ 50 ]
+    },
+    {
+      "stat": "recharge",
+      "change": "add",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "hp_base_mid",
+      "change": "add",
+      "mods": [ "hp_base" ]
+    },
+    {
+      "stat": "hp_base_mid",
+      "change": "mult",
+      "mods": [ "hp%" ]
+    },
+    {
+      "stat": "hp",
+      "change": "add",
+      "mods": [ "hp_base_mid" ]
+    },
+    {
+      "stat": "atk_base_mid",
+      "change": "add",
+      "mods": [ "atk_base" ]
+    },
+    {
+      "stat": "atk_base_mid",
+      "change": "mult",
+      "mods": [ "atk%" ]
+    },
+    {
+      "stat": "atk",
+      "change": "add",
+      "mods": [ "atk_base_mid" ]
+    },
+    {
+      "stat": "def_base_mid",
+      "change": "add",
+      "mods": [ "def_base" ]
+    },
+    {
+      "stat": "def_base_mid",
+      "change": "mult",
+      "mods": [ "def%" ]
+    },
+    {
+      "stat": "def",
+      "change": "add",
+      "mods": [ "def_base_mid" ]
+    },
+    {
+      "stat": "anemo",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "hydro",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "electro",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "cryo",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "pyro",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "dendro",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "geo",
+      "change": "add",
+      "mods": [ "elemental" ]
+    }
+  ],
   "main": [
     {
       "stat": "crit",
@@ -587,22 +684,7 @@
       "change": "elemastery"
     },
     {
-      "stat": "swirlhydro",
-      "change": "add",
-      "mods": [ "elemasteryadd" ]
-    },
-    {
-      "stat": "swirlelectro",
-      "change": "add",
-      "mods": [ "elemasteryadd" ]
-    },
-    {
-      "stat": "swirlcryo",
-      "change": "add",
-      "mods": [ "elemasteryadd" ]
-    },
-    {
-      "stat": "swirlpyro",
+      "stat": "swirl",
       "change": "add",
       "mods": [ "elemasteryadd" ]
     },

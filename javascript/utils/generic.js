@@ -1,3 +1,14 @@
+
+const const_base_64 = [
+    "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
+    "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
+    "u", "v", "w", "x", "y", "z", "A", "B", "C", "D",
+    "E", "F", "G", "H", "I", "J", "K", "L", "M", "N",
+    "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X",
+    "Y", "Z", "_", "-"
+]
+
 function utils_log_debug(mes) {
     console.log("DEBUG|" + mes);
 }
@@ -12,12 +23,19 @@ function utils_includes_alt_names(name, alt_names, input) {
     if (name.toLowerCase().includes(input.toLowerCase())) {
         result = true
     } else if (alt_names) {
-        for (var alt_name of alt_names) {
-            if (alt_name.toLowerCase().includes(input.toLowerCase())) {
+        if (Array.isArray(alt_names)) {
+            for (var alt_name of alt_names) {
+                if (alt_name.toLowerCase().includes(input.toLowerCase())) {
+                    result = true
+                    break;
+                }
+            }
+        } else {
+            if (alt_names.toLowerCase().includes(input.toLowerCase())) {
                 result = true
-                break;
             }
         }
+        
     }
 
     return result;
@@ -63,6 +81,15 @@ function utils_array_get_parameter_by_lookup(array, lookup_parameter, value, ret
     return utils_array_get_by_lookup(array, lookup_parameter, value, caseinsensitive)[return_parameter];
 }
 
+function utils_array_swap(array, index1, index2) {
+    if (index1 != index2 && index1 >= 0 && index2 >= 0 && index1 < array.length && index2 < array.length) {
+        [array[index1], array[index2]] = [array[index2], array[index1]];
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function utils_dict_lookup_property(object, parameter, value) {
 
     var key_names = Object.keys(object);
@@ -86,6 +113,17 @@ function utils_dict_lookup_property(object, parameter, value) {
 function utils_capitalize(input) {
     if (typeof input !== 'string') return ''
     return input.charAt(0).toUpperCase() + input.slice(1)
+}
+
+
+function utils_random_alphanumerical(length) {
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
 }
 
 function utils_number_format(num, round = null) {
@@ -207,4 +245,146 @@ function utils_hash(input) {
         hash |= 0; // Convert to 32bit integer
     }
     return hash;
+}
+
+function utils_url_set(url) {
+    try {
+        history.replaceState(null, '', url);
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
+
+function utils_url_short(old_url) {
+    new_url = "";
+    sub_url = 0;
+    for (var i = 0; i < old_url.length; i++) {
+        if (old_url[i] == "0" && sub_url < 63) {
+            sub_url++;
+            if (i == (old_url.length - 1)) {
+                if (sub_url > 1) {
+                    sub_url64 = utils_base_convert(sub_url, 10, 64)
+                    new_url += "!" + sub_url64;
+                } else {
+                    new_url += "0";
+                }
+            }
+        } else {
+            if (sub_url == 1) {
+                new_url += "0";
+            } else if (sub_url > 0) {
+                sub_url64 = utils_base_convert(sub_url, 10, 64)
+                new_url += "!" + sub_url64;
+            }
+            if (old_url[i] == "0" && sub_url == 63) {
+                sub_url = 1;
+            } else {
+                sub_url = 0;
+                new_url += old_url[i];
+            }
+        }
+    }
+    return new_url;
+}
+
+function utils_url_long(old_url) {
+    var new_url = "";
+    var sub_url = false;
+    if (old_url) {
+        for (var i = 0; i < old_url.length; i++) {
+            if (old_url[i] == "!") {
+                sub_url = true;
+            } else if (sub_url == true) {
+                sub_url = false;
+                var count = utils_base_convert(old_url[i], 64, 10);
+                for (var j = 0; j < count; j++)
+                    new_url += "0";
+            } else {
+                new_url += old_url[i];
+            }
+        }
+    }
+    return new_url;
+}
+
+function utils_base_convert(input, input_base, output_base) {
+    if (input_base == 2 && output_base == 10) {
+        return utils_base_convert_2_10(input);
+    } else if (input_base == 2 && output_base == 64) {
+        return utils_base_convert_2_64(input);
+    } else if (input_base == 10 && output_base == 2) {
+        return utils_base_convert_10_2(input);
+    } else if (input_base == 10 && output_base == 64) {
+        return utils_base_convert_10_64(input);
+    } else if (input_base == 64 && output_base == 2) {
+        return utils_base_convert_64_2(input);
+    } else if (input_base == 64 && output_base == 10) {
+        return utils_base_convert_64_10(input);
+    }
+    throw "Invalid base convert parameters input_base: " + input_base + ", output_base: " + output_base;
+}
+
+function utils_base_convert_2_10(input) {
+    if (input || input === 0) {
+        return parseInt(input, 2);
+    }
+    return "";
+}
+
+function utils_base_convert_2_64(input) {
+    if (input || input === 0) {
+        while ((input.length % 6) != 0) {
+            input = "0" + input;
+        }
+        var spl = input.match(/.{1,6}/g);
+        var result = "";
+        for (var i = 0; i < spl.length; i++) {
+            a = parseInt(spl[i], 2);
+            result += const_base_64[a];
+        }
+        return result;
+    }
+    return "";
+}
+
+function utils_base_convert_10_2(input) {
+    if (input || input === 0) {
+        return parseInt(input, 10).toString(2);
+    }
+    return "";
+}
+
+function utils_base_convert_10_64(input) {
+    return utils_base_convert_2_64(utils_base_convert_10_2(input));
+}
+
+function utils_base_convert_64_2(input) {
+
+    var spl = input.split("");
+    var result = "";
+
+    for (var i = 0; i < spl.length; i++) {
+        var a = utils_base_convert_10_2(const_base_64.indexOf(spl[i]));
+        while (a.length < 6) {
+            a = "0" + a;
+        }
+        result += a;
+    }
+
+    return result;
+}
+
+function utils_base_convert_64_10(input) {
+    if (input || input === 0) {
+        var spl = input.split("");
+        var result = 0;
+        for (var i = 0; i < spl.length; i++) {
+            var a = const_base_64.indexOf(spl[i]);
+            var exp = spl.length - i - 1;
+            result += a * Math.pow(64, exp);;
+        }
+        return result.toString();
+    }
+    return "";
 }

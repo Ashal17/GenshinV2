@@ -1,0 +1,122 @@
+{
+  "melt": {
+    "name": "Melt",
+    "type": "elemasterymult",
+    "multiplier": {
+      "pyro": 2,
+      "cryo": 1.5
+    },
+    "combination": {
+      "pyro": "cryo",
+      "cryo": "pyro"
+    }
+  },
+  "vaporize": {
+    "name": "Vaporize",
+    "type": "elemasterymult",
+    "multiplier": {
+      "pyro": 1.5,
+      "hydro": 2
+    },
+    "combination": {
+      "pyro": "hydro",
+      "hydro": "pyro"
+    }
+  },
+  "swirlcryo": {
+    "name": "Swirl - Cryo",
+    "type": "elemasteryadd",
+    "multiplier": 0.6,
+    "vision": "cryo"
+  },
+  "swirlelectro": {
+    "name": "Swirl - Electro",
+    "type": "elemasteryadd",
+    "multiplier": 0.6,
+    "vision": "electro"
+  },
+  "swirlhydro": {
+    "name": "Swirl - Hydro",
+    "type": "elemasteryadd",
+    "multiplier": 0.6,
+    "vision": "hydro"
+  },
+  "swirlpyro": {
+    "name": "Swirl - Pyro",
+    "type": "elemasteryadd",
+    "multiplier": 0.6,
+    "vision": "pyro"
+  },
+  "superconduct": {
+    "name": "Superconduct",
+    "type": "elemasteryadd",
+    "multiplier": 0.5,
+    "vision": "cryo"
+  },
+  "electrocharged": {
+    "name": "Electro-Charged",
+    "type": "elemasteryadd",
+    "multiplier": 1.2,
+    "vision": "electro"
+  },
+  "overload": {
+    "name": "Overload",
+    "type": "elemasteryadd",
+    "multiplier": 2,
+    "vision": "pyro"
+  },
+  "shatter": {
+    "name": "Shatter",
+    "type": "elemasteryadd",
+    "multiplier": 1.5,
+    "vision": "physical"
+  },
+  "crystalize": {
+    "name": "Crystalize",
+    "type": "elemasterycrystalize",
+    "multiplier": 1,
+    "vision": "geo"
+  },
+  "rupture": {
+    "name": "Rupture",
+    "type": "elemasteryadd",
+    "multiplier": 2,
+    "vision": "dendro"
+  },
+  "burgeon": {
+    "name": "Burgeon",
+    "type": "elemasteryadd",
+    "multiplier": 3,
+    "vision": "dendro"
+  },
+  "hyperbloom": {
+    "name": "Hyperbloom",
+    "type": "elemasteryadd",
+    "multiplier": 3,
+    "vision": "dendro"
+  },
+  "burning": {
+    "name": "Burning",
+    "type": "elemasteryadd",
+    "multiplier": 0.25,
+    "vision": "pyro"
+  },
+  "aggravate": {
+    "name": "Aggravate",
+    "type": "elemasterybonus",
+    "multiplier": 1.15,
+    "vision": "electro",
+    "combination": {
+      "electro": "dendro"
+    }
+  },
+  "spread": {
+    "name": "Spread",
+    "type": "elemasterybonus",
+    "multiplier": 1.25,
+    "vision": "dendro",
+    "combination": {
+      "dendro": "electro"
+    }
+  }
+}

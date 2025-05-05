@@ -1,5 +1,7 @@
 <?php
-session_start();
+	session_start();
+	require_once "config/config_db.php";
+	require_once "account/auth/token_auth.php";
 ?>
 
 <!DOCTYPE html>
@@ -8,20 +10,19 @@ session_start();
 <head>	
     <title>Ashal - Genshin</title>
 
-<?php
-	require_once "header.php";
-	require_once "dependencies/equip.php";
-?>
+	<?php
+		require_once "header.php";
+		require_once "dependencies/equip.php";
+	?>
 </head>
 
-<body class="dark_theme" onload="equip_setup_all()">
+<body class="dark_theme" onload="equip_setup_all();">
 
-<?php
-	require_once "nav.php";
-?>
+	<?php
+		require_once "nav.php";
+	?>
 
-<div class="main_window" id="main_window" >
-
-</div>
+	<div class="main_window" id="main_window">
+	</div>
 
 </body>

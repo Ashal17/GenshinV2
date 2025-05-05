@@ -42,23 +42,16 @@
 .storage_btn {
     width: 21px;
     align-content: center;
-    position: relative;
 }
-
-    .storage_btn .prompt {
-        width:auto;
-        min-width:100px;
+    .storage_btn .prompt .prompt_header_text {
+        text-align: center;
     }
 
-        .storage_btn .prompt .prompt_header_text {
-            text-align: center;
-        }
-
-    .storage_party {
-        height: 26px;
-        width: 26px;
-        margin: 2px;
-    }
+.storage_party {
+    height: 26px;
+    width: 26px;
+    margin: 2px;
+}
 
 .storage_party_img {
     height: 26px;

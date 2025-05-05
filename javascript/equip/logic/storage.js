@@ -1,11 +1,3 @@
-const storage_data_names = [
-    "name",
-    "party",
-    "damage",
-    "comparison",
-    "data"
-]
-
 function equip_storage_save_last() {
 
     var user_json = JSON.stringify(user_objects);
@@ -14,26 +6,45 @@ function equip_storage_save_last() {
 
 function equip_storage_save_user_storage() {
     var storage_json = JSON.stringify(storage_objects);
-    localStorage.setItem("user_storage", storage_json);
+    if (user_account && user_account.status) {
+        equip_account_storage_save(storage_json);
+    } else {
+        localStorage.setItem("user_storage", storage_json);
+    }
 }
 
-function equip_storage_load_last() {
-    var user_storage = localStorage.getItem("user_storage");
-    if (user_storage) {
-        utils_log_debug("Found saved Storages.");
-        equip_setup_storage_objects(JSON.parse(user_storage));
-    } else {
-        utils_log_debug("No saved Storages.");
-    }
-
+function equip_storage_load_last() {    
     var last_storage = localStorage.getItem("last_storage");
     if (last_storage) {
         utils_log_debug("Found last Storage.");
         equip_storage_load(JSON.parse(last_storage));
     } else {
         utils_log_debug("No last Storage.");
+        equip_setup_initialize();
+    }    
+}
+
+function equip_storage_load_user_storage(user_storage_account) {
+
+    if (user_storage_account) {
+        utils_log_debug("Found Storages at account.");
+        equip_setup_storage_objects(user_storage_account);
+    } else {
+        var user_storage_local = localStorage.getItem("user_storage");
+        if (user_storage_local) {
+            utils_log_debug("Found Storages locally.");
+            equip_setup_storage_objects(JSON.parse(user_storage_local));
+        } else {
+            utils_log_debug("No saved Storages.");
+        }
     }
-    
+
+    if (!user_storage_account && user_account && user_account.status) {
+        utils_log_debug("Saving Storages to account");
+        equip_storage_save_user_storage();
+    }
+
+    equip_storage_update_comparison_all();
 }
 
 function equip_storage_load(storage_data) {
@@ -78,11 +89,13 @@ function equip_storage_load_preferences(preferences_data = null) {
     user_preferences.storage.pin = utils_object_get_value(preferences_data, "storage.pin", false);
 }
 
-function equip_storage_change_trigger() {
+function equip_storage_change_trigger(save_storage = true) {
     equip_storage_update_comparison_all();
     equip_storage_display_active();
     equip_storage_display_all();
-    equip_storage_save_user_storage();
+    if (save_storage) {
+        equip_storage_save_user_storage();
+    }   
 }
 
 function equip_storage_change_new(new_name) {
@@ -123,7 +136,7 @@ function equip_storage_change_base(index) {
         user_preferences.storage.base = index;
     }
     utils_preferences_change_trigger();
-    equip_storage_change_trigger();
+    equip_storage_change_trigger(false);
 }
 
 function equip_storage_change_save(index) {
@@ -143,7 +156,7 @@ function equip_storage_change_load(index) {
     equip_storage_load(storage_objects.saved_storage[index].user_data);
     equip_storage_save_last();
 
-    equip_storage_change_trigger();
+    equip_storage_change_trigger(false);
 }
 
 function equip_storage_change_delete(index) {
@@ -166,7 +179,7 @@ function equip_storage_change_filter() {
 
     equip_storage_display_header_type();
     utils_preferences_change_trigger();
-    equip_storage_change_trigger();
+    equip_storage_change_trigger(false);
 }
 
 function equip_storage_change_pin() {
@@ -178,7 +191,7 @@ function equip_storage_change_pin() {
 
     equip_storage_display_header_type();
     utils_preferences_change_trigger();
-    equip_storage_change_trigger();
+    equip_storage_change_trigger(false);
 }
 
 function equip_storage_change_party_type() {
@@ -191,7 +204,7 @@ function equip_storage_change_party_type() {
 
     equip_storage_display_header_type();
     utils_preferences_change_trigger();
-    equip_storage_change_trigger();
+    equip_storage_change_trigger(false);
 }
 
 function equip_storage_change_comparison_type() {
@@ -205,7 +218,7 @@ function equip_storage_change_comparison_type() {
 
     equip_storage_display_header_type();
     utils_preferences_change_trigger();
-    equip_storage_change_trigger();
+    equip_storage_change_trigger(false);
 }
 
 function equip_storage_update_set_storage(index, name, damage_character, damage_party, user_data) {
@@ -250,7 +263,7 @@ function equip_storage_update_comparison_all() {
 function equip_storage_update_comparison(index, base_dmg) {
     var index_dmg = Number(storage_objects.saved_storage[index].damage_data[user_preferences.storage.party][user_preferences.storage.comparison]);
     var dmg_diff = index_dmg / base_dmg - 1;
-    storage_objects.saved_storage[index].comparison = dmg_diff;
+    storage_objects.saved_storage[index].comparison = utils_number_round(dmg_diff, 4);
 }
 
 function equip_storage_display_header_type() {
@@ -347,11 +360,17 @@ function equip_storage_display_all() {
 
     var current_char = user_objects.user_party[user_objects.user_active_character].id;
 
+    var storage_display_objects = [];
+
     for (var i = 0; i < storage_objects.saved_storage.length; i++) {
         var stored_active_char = storage_objects.saved_storage[i].user_data.user_party[storage_objects.saved_storage[i].user_data.user_active_character].id;
         if (!user_preferences.storage.filter || current_char == stored_active_char) {
-            parent.appendChild(equip_storage_display(i));
+            storage_display_objects.push(equip_storage_display(i));
         }        
+    }
+    storage_display_objects = utils_array_sort(storage_display_objects, "sort");
+    for (var i = 0; i < storage_display_objects.length; i++) {
+        parent.appendChild(storage_display_objects[i]);
     }
 }
 
@@ -361,6 +380,7 @@ function equip_storage_display(index) {
 
     obj.appendChild(utils_create_img_button_prompt_input("square-edit-outline", "Rename", "storage_rename_" + index, "Enter new name", equip_storage_change_rename, index, storage_objects.saved_storage[index].name, "storage_btn"));
     obj.appendChild(utils_create_obj("div", "storage_text storage_text_name", null, storage_objects.saved_storage[index].name));
+    obj.sort = storage_objects.saved_storage[index].name;
 
     var party_container = utils_create_obj("div", "storage_party_container");
     if (user_preferences.storage.party == "party") {

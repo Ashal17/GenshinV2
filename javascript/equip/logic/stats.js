@@ -1,187 +1,29 @@
-const output_party_stat_objects = {
-    "total": ["basic", "environment", "weapon", "artifacts", "effects"],
-    "display": ["basic", "weapon", "artifacts"]
-}
-const visions_variables = {
-    "anemo": {
-        "name": "Anemo",
-        "reactions": ["swirlcryo", "swirlelectro", "swirlhydro", "swirlpyro"],
-        "reactions_mod": []
-    },
-    "cryo": {
-        "name": "Cryo",
-        "reactions": ["melt", "superconduct", "swirlcryo"],
-        "reactions_mod": ["melt"]
-    },
-    "dendro": {
-        "name": "Dendro",
-        "reactions": ["burning", "rupture", "spread"],
-        "reactions_mod": ["spread"]
-    },
-    "electro": {
-        "name": "Electro",
-        "reactions": ["superconduct", "electrocharged", "overload", "swirlelectro", "hyperbloom", "aggravate"],
-        "reactions_mod": ["aggravate"]
-    },
-    "geo": {
-        "name": "Geo",
-        "reactions": ["crystalize"],
-        "reactions_mod": []
-    },
-    "hydro": {
-        "name": "Hydro",
-        "reactions": ["vaporize", "electrocharged", "swirlhydro", "rupture"],
-        "reactions_mod": ["vaporize"]
-    },
-    "pyro": {
-        "name": "Pyro",
-        "reactions": ["melt", "vaporize", "overload", "swirlpyro", "burning", "burgeon"],
-        "reactions_mod": ["melt", "vaporize"]
-    },
-    "physical": {
-        "name": "Physical",
-        "reactions": [],
-        "reactions_mod": []
-    },
-    "healing": {
-        "name": "Healing",
-        "reactions": [],
-        "reactions_mod": []
-    }
-}
+function equip_stats_load_preferences(preferences_data = null) {
+    user_preferences.stats = {};
 
-const reactions_variables = {
-    "melt": {
-        "name": "Melt",
-        "type": "elemasterymult",
-        "multiplier": {
-            "pyro": 2,
-            "cryo": 1.5
-        },
-        "combination": {
-            "pyro": "cryo",
-            "cryo": "pyro"
-        }
-    },
-    "vaporize": {
-        "name": "Vaporize",
-        "type": "elemasterymult",
-        "multiplier": {
-            "pyro": 1.5,
-            "hydro": 2
-        },
-        "combination": {
-            "pyro": "hydro",
-            "hydro": "pyro"
-        }
-    },
-    "swirlcryo": {
-        "name": "Swirl - Cryo",
-        "type": "elemasteryadd",
-        "multiplier": 0.6,
-        "vision": "cryo"
-    },
-    "swirlelectro": {
-        "name": "Swirl - Electro",
-        "type": "elemasteryadd",
-        "multiplier": 0.6,
-        "vision": "electro"
-    },
-    "swirlhydro": {
-        "name": "Swirl - Hydro",
-        "type": "elemasteryadd",
-        "multiplier": 0.6,
-        "vision": "hydro"
-    },
-    "swirlpyro": {
-        "name": "Swirl - Pyro",
-        "type": "elemasteryadd",
-        "multiplier": 0.6,
-        "vision": "pyro"
-    },
-    "superconduct": {
-        "name": "Superconduct",
-        "type": "elemasteryadd",
-        "multiplier": 0.5,
-        "vision": "cryo"
-    },
-    "electrocharged": {
-        "name": "Electro-Charged",
-        "type": "elemasteryadd",
-        "multiplier": 1.2,
-        "vision": "electro"
-    },
-    "overload": {
-        "name": "Overload",
-        "type": "elemasteryadd",
-        "multiplier": 2,
-        "vision": "pyro"
-    },
-    "shatter": {
-        "name": "Shatter",
-        "type": "elemasteryadd",
-        "multiplier": 1.5,
-        "vision": "physical"
-    },
-    "crystalize": {
-        "name": "Crystalize",
-        "type": "elemasterycrystalize",
-        "multiplier": 1,
-        "vision": "geo"
-    },
-    "rupture": {
-        "name": "Rupture",
-        "type": "elemasteryadd",
-        "multiplier": 2,
-        "vision": "dendro"
-    },
-    "burgeon": {
-        "name": "Burgeon",
-        "type": "elemasteryadd",
-        "multiplier": 3,
-        "vision": "dendro"
-    },
-    "hyperbloom": {
-        "name": "Hyperbloom",
-        "type": "elemasteryadd",
-        "multiplier": 3,
-        "vision": "dendro"
-    },
-    "burning": {
-        "name": "Burning",
-        "type": "elemasteryadd",
-        "multiplier": 0.25,
-        "vision": "pyro"
-    },
-    "aggravate": {
-        "name": "Aggravate",
-        "type": "elemasterybonus",
-        "multiplier": 1.15,
-        "vision": "electro",
-        "combination": {
-            "electro": "dendro"
-        }
-    },
-    "spread": {
-        "name": "Spread",
-        "type": "elemasterybonus",
-        "multiplier": 1.25,
-        "vision": "dendro",
-        "combination": {
-            "dendro": "electro"
+    user_preferences.stats.detail = utils_object_get_value(preferences_data, "stats.detail", []);
+
+    if (user_preferences.stats.detail.length != const_display_stats_columns.length) {
+        user_preferences.stats.detail = [];
+        for (var i = 0; i < const_display_stats_columns.length; i++) {
+            user_preferences.stats.detail.push(false);
         }
     }
 }
 
-const bonusdmg_names = {
-    "normal": "Normal Attack",
-    "charged": "Charged Attack",
-    "plunge": "Plunging Attack",
-    "skill": "Elemental Skill",
-    "burst": "Elemental Burst"
+function equip_stats_change_trigger() {
+    equip_stats_display_detail_all();
+    utils_preferences_change_trigger();
 }
 
-const attack_level_types = ["normal", "skill", "burst"]
+function equip_stats_change_detail(index) {
+    if (user_preferences.stats.detail[index]) {
+        user_preferences.stats.detail[index] = false;
+    } else {
+        user_preferences.stats.detail[index] = true;    
+    }
+    equip_stats_change_trigger();
+}
 
 function equip_stats_update_total_all() {
     equip_stats_update_reset_total_all();
@@ -194,31 +36,32 @@ function equip_stats_update_total_all() {
     equip_effects_update_stats_transform_personal_all();
     equip_stats_update_add_all("total", "effects_transform_personal");
     equip_stats_update_transformation_all("mult_trans");
-    equip_stats_update_transformation_all("merge");
     equip_stats_update_transformation_all("elemastery");
+    equip_stats_update_transformation_all("merge");
 
     equip_stats_update_vision_stat_all();
 
-    for (var i = 0; i < party_size; i++) {
+    for (var i = 0; i < const_party_size; i++) {
         output_party[i].stats.total["enemyred"] = equip_stats_calculate_enemyred(output_party[i].stats.total, i);
     }
 
 }
 
 function equip_stats_update_reset_total_all() {
-    for (var i = 0; i < party_size; i++) {
+    for (var i = 0; i < const_party_size; i++) {
         equip_stats_update_reset_total(i);
     }
 }
 
 function equip_stats_update_reset_total(party_id) {
-    output_party[party_id].stats.total = structuredClone(default_stats);
-    output_party[party_id].stats.display = structuredClone(default_stats);
+    for (const [stat_type, stat_obj] of Object.entries(const_output_party_stat_objects)) {
+        output_party[party_id].stats[stat_type] = structuredClone(default_stats);
+    } 
 }
 
 
 function equip_stats_update_add_total_all() {
-    for (const [stat_type, stat_obj] of Object.entries(output_party_stat_objects)) {
+    for (const [stat_type, stat_obj] of Object.entries(const_output_party_stat_objects)) {
         for (var i = 0; i < stat_obj.length; i++) {
             equip_stats_update_add_all(stat_type, stat_obj[i]);
         }
@@ -226,7 +69,7 @@ function equip_stats_update_add_total_all() {
 }
 
 function equip_stats_update_add_all(stat_type, stats_obj_name) {
-    for (var i = 0; i < party_size; i++) {
+    for (var i = 0; i < const_party_size; i++) {
         equip_stats_update_add(stat_type, i, stats_obj_name);
     }
 }
@@ -239,15 +82,15 @@ function equip_stats_update_add(stat_type, party_id, stats_obj_name) {
 }
 
 function equip_stats_update_transformation_all(transformation_name) {
-    for (var i = 0; i < party_size; i++) {
-        for (const [stat_type, stat_obj] of Object.entries(output_party_stat_objects)) {
+    for (var i = 0; i < const_party_size; i++) {
+        for (const [stat_type, stat_obj] of Object.entries(const_output_party_stat_objects)) {
             output_party[i].stats[stat_type] = equip_stats_calculate_tranformation(output_party[i].stats[stat_type], transformation_name);
         }       
     }
 }
 
 function equip_stats_update_vision_stat_all() {
-    for (var i = 0; i < party_size; i++) {
+    for (var i = 0; i < const_party_size; i++) {
         equip_stats_update_vision_stat(i);
     }
 }
@@ -397,52 +240,205 @@ function equip_stats_calculate_elemastery(type, value) {
 
 function equip_stats_calculate_enemyred(stats_total, party_id) {
 
-    return 100 * stats_total["enemydef"] / (stats_total["enemydef"] + (5 * level_list_values[user_objects.user_party[party_id].level]) + 500);
+    return 100 * stats_total["enemydef"] / (stats_total["enemydef"] + (5 * const_level_list_values[user_objects.user_party[party_id].level]) + 500);
 
 }
 
 function equip_stats_display() {
-    for (var i = 0; i < display_stats.length; i++) {
-        var stat_id = display_stats[i];
-        if (data_stats[stat_id].display.hasOwnProperty("col")) {
-            var stat = document.getElementById("display_stats_" + stat_id);
-            stat.innerHTML = utils_format_stat_value(data_stats[stat_id], output_party[user_objects.user_active_character].stats.total[stat_id]);
-        }
 
-        if (data_stats[stat_id].display.hasOwnProperty("unit")) {
-            if (data_stats[stat_id].display.unit.startsWith("enemy")) {
-                var stat = document.getElementById("display_stat_" + data_stats[stat_id].display.unit + "_" + stat_id);
-                stat.innerHTML = utils_format_stat_value(data_stats[stat_id], output_party[user_objects.user_active_character].stats.total[stat_id]);
-            } else if (data_stats[stat_id].display.unit.startsWith("party")) {
-                for (var ii = 0; ii < party_size; ii++) {
-                    var stat = document.getElementById("display_stat_" + data_stats[stat_id].display.unit + "_" + ii + "_" + stat_id);
-                    stat.innerHTML = utils_format_stat_value(data_stats[stat_id], output_party[ii].stats.total[stat_id]);
-                }
-            }
-            
-        }
+    equip_stats_display_detail_all();
+    for (var i = 0; i < const_party_size; i++) {
+        equip_stats_display_unit("party", i);
     }
-
-    for (var i = 0; i < party_size; i++) {
-        var stat = document.getElementById("display_stat_vision_party_" + i);
-        var stat_id = output_party[i].stats.vision_stat;
-        stat.innerHTML = utils_format_stat_value(data_stats[stat_id], output_party[i].stats.total[stat_id]);
-        var icon = document.getElementById("display_stat_vision_party_" + i + "_img");
-        icon.className = "img_icon svg svg-" + stat_id;
-        var label = document.getElementById("display_stat_vision_party_" + i + "_label");
-        label.innerHTML = data_stats[stat_id].name;
-    }
+    equip_stats_display_unit("enemy");
 
 }
 
+function equip_stats_display_detail_all() {
+    for (var i = 0; i < const_display_stats_columns.length; i++) {
+        equip_stats_display_detail(i);
+    }
+}
+
+function equip_stats_display_detail(index) {
+    var parent = document.getElementById("stats_detail_column_" + index);
+    utils_delete_children(parent, 0);
+
+    if (Array.isArray(const_display_stats_columns[index].main)) {
+        if (const_display_stats_columns[index].default == "vision_auto") {
+            var default_stat = data_characters[user_objects.user_party[user_objects.user_active_character].id].vision
+        } else {
+            var default_stat = const_display_stats_columns[index].default;
+        }
+        var main_stat_id = equip_stats_return_highest_stat(
+            output_party[user_objects.user_active_character].stats.total,
+            const_display_stats_columns[index].main,
+            default_stat
+        )
+    } else {
+        var main_stat_id = const_display_stats_columns[index].main;
+    }
+
+    var main_stat_line = utils_create_obj("div", "main_statline");
+    main_stat_line.appendChild(utils_create_img_svg(main_stat_id));
+    main_stat_line.appendChild(utils_create_obj("p", null, null, data_stats[main_stat_id].name));
+    main_stat_line.appendChild(utils_create_obj("p", null, null, utils_format_stat_value(data_stats[main_stat_id], output_party[user_objects.user_active_character].stats.total[main_stat_id])));
+    main_stat_line.onclick = function (event) { equip_stats_change_detail(index); }
+    parent.append(main_stat_line);
+
+    if (user_preferences.stats.detail[index]) {
+        for (var i = 0; i < const_display_stats_columns[index].stats.length; i++) {
+            var stat_id = const_display_stats_columns[index].stats[i];
+            parent.append(utils_create_stat(stat_id, output_party[user_objects.user_active_character].stats.total[stat_id]));
+        }
+    } else {
+        main_stat_line.className += " detail_hidden";
+    } 
+}
+
+function equip_stats_display_unit(unit, unit_id = null) {
+    if (unit_id == null) {
+        var parent = document.getElementById("stats_unit_" + unit);
+        unit_id = user_objects.user_active_character;    
+    } else {
+        var parent = document.getElementById("stats_unit_" + unit + "_" + unit_id);
+    }
+    utils_delete_children(parent, 0);
+
+    for (var i = 0; i < const_display_stats_units[unit].length; i++) {
+        var stat_id = const_display_stats_units[unit][i];
+        if (stat_id == "vision_auto") {
+            stat_id = equip_stats_return_vision_stat(unit_id);
+        }
+        parent.appendChild(utils_create_stat_img(stat_id, output_party[unit_id].stats.total[stat_id]));
+    }
+}
+
 function equip_stats_return_vision_stat(party_id) {
-    var highest_val = 0;
-    var highest_stat = data_characters[user_objects.user_party[party_id].id].vision;
-    for (let vision in visions_variables) {
-        if (output_party[party_id].stats.total[vision] > highest_val) {
-            highest_val = output_party[party_id].stats.total[vision];
-            highest_stat = vision;
+    return equip_stats_return_calculated_vision_stat(
+        user_objects.user_party[party_id].id, output_party[party_id].stats.total);
+}
+
+function equip_stats_return_calculated_vision_stat(character_id, stats) {  
+    return equip_stats_return_highest_stat(stats, const_stats_visions, data_characters[character_id].vision);
+}
+
+function equip_stats_return_highest_stat(stats, stats_ids, default_stat) {
+    
+    var highest_stat = default_stat;
+    var highest_val = stats[default_stat];
+    for (var i = 0; i < stats_ids.length; i++) {
+        if (stats[stats_ids[i]] > highest_val) {
+            highest_val = stats[stats_ids[i]];
+            highest_stat = stats_ids[i];
         }
     }
+    
     return highest_stat;
+}
+
+function equip_stats_return_display_stats(char_obj) {
+    var calculate_stats = equip_stats_return_calculated_display_stats(char_obj);
+    var vision_stat = equip_stats_return_calculated_vision_stat(char_obj.id, calculate_stats);
+    var stats = {};
+
+    for (var i = 0; i < const_display_stats_storage.length; i++) {
+        stats[const_display_stats_storage[i]] = calculate_stats[const_display_stats_storage[i]];
+    }
+    stats[vision_stat] = calculate_stats[vision_stat];
+
+    return stats;
+}
+
+function equip_stats_return_calculated_display_stats(char_obj) {
+    var calculate_stats = structuredClone(default_calculate_stats);
+    var stats = equip_stats_return_basic_stats(char_obj);
+
+    for (var i = 0; i < stats.length; i++) {
+        calculate_stats[stats[i].id] += stats[i].value;
+    }
+    calculate_stats = equip_stats_calculate_tranformation(calculate_stats, "display");
+    return calculate_stats;
+}
+
+function equip_stats_return_basic_stats(char_obj) {
+
+    var stats = [];
+    stats = stats.concat(equip_stats_return_character_basic_stats(data_characters[char_obj.id], char_obj.level));
+    stats = stats.concat(equip_stats_return_weapon_stats(char_obj.weapon, data_characters[char_obj.id].weapon));
+    stats = stats.concat(equip_stats_return_artifacts_stats(char_obj.artifacts, equip_artifacts_return_active_sets(char_obj.artifacts)))
+
+    return stats;    
+}
+
+
+
+function equip_stats_return_character_basic_stats(character, level) {
+    var stats = [];
+    for (var i = 0; i < character.stats.length; i++) {
+        stats.push(
+            { "id": character.stats[i].stat, "value": character.stats[i].values[level] }
+        );
+    }
+    return stats;
+}
+
+function equip_stats_return_weapon_stats(weapon_obj, weapon_type) {
+    var stats = [];
+    var weapon = utils_array_get_by_lookup(data_weapons[weapon_type], "id", weapon_obj.id);
+
+    stats.push(
+        { "id": "atk_base", "value": data_weapon_stats.primary[weapon.atk_base][weapon_obj.level] }
+    );
+
+    for (var i = 0; i < weapon.stats.length; i++) {
+        var stat_id = weapon.stats[i].stat;
+        var value = 0;
+
+        if (weapon.stats[i].type == "refine") {
+            value = weapon.stats[i].value[weapon_obj.refine];
+        } else if (weapon.stats[i].type == "level") {
+            value = data_weapon_stats.secondary[weapon.stats[i].value][Math.round(weapon_obj.level / 2)];
+        } else if (weapon.stats[i].type == "flat") {
+            value = weapon.stats[i].value;
+        }
+
+        stats.push(
+            { "id": stat_id, "value": value }
+        );
+    }
+    return stats;
+}
+
+function equip_stats_return_artifacts_stats(artifacts, sets) {
+
+    var stats = [];
+
+    for (var i = 0; i < const_artifact_types.length; i++) {
+        var artifact_id = const_artifact_types[i];
+        var current_artifact = artifacts[artifact_id];
+
+        stats.push(
+            { "id": current_artifact.main_stat, "value": equip_artifacts_return_main_value(current_artifact) }
+        );
+
+        for (var ii = 0; ii < const_artifact_sub_stats; ii++) {
+            stats.push(
+                { "id": current_artifact.sub_stats[ii].id, "value": current_artifact.sub_stats[ii].value }
+            );
+        }
+    }
+
+    for (const [key, value] of Object.entries(sets)) {
+        var artifact_set = utils_array_get_by_lookup(data_artifact_sets, "id", key);
+        for (var i = 0; i < artifact_set.set_bonus.length; i++) {
+            if (value >= artifact_set.set_bonus[i].req && artifact_set.set_bonus[i].stat) {
+                stats.push(
+                    { "id": artifact_set.set_bonus[i].stat, "value": artifact_set.set_bonus[i].value }
+                );
+            }
+        }
+    }
+
+    return stats;
 }

@@ -16,5 +16,8 @@ echo '
 	<script src="/javascript/utils/controls.js?' . $javascript_utils_ver .'"></script>
 	<script src="/javascript/utils/calls.js?' . $javascript_utils_ver .'"></script>
 	<script src="/javascript/utils/generic.js?' . $javascript_utils_ver .'"></script>
+
+	<script src="/javascript/utils/analytics.js?' . $javascript_utils_ver .'"></script>
+	<script>utils_analytics_send()</script>
 ';
 ?>

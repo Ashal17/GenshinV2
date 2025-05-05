@@ -7,9 +7,11 @@ $json = json_decode(file_get_contents("php://input"));
 $jsondata = $json ->data;
 $uid = $jsondata ->uid;
 
+header('Content-Type: application/json; charset=utf-8');
+
 if (!is_numeric($uid) || strlen($uid)<9 || strlen($uid)>10) {
 	http_response_code(400);
-	echo "{'code':'400', 'error':'Input is not valid UID', 'message':'Input is not valid UID'}";
+	echo '{"code":400, "error":"Bad Request", "message":"Input is not valid UID"}';
 	exit();
 }
 
@@ -25,7 +27,7 @@ $response_uid = file_get_contents($url_uid . $uid, false, $context);
 if ($response_uid === FALSE) { 
 	$error = $http_response_header[11];
 	http_response_code(400);
-	echo "{'code':'400', 'error':'" . $error . "', 'message':'" . $error . "'}";
+	echo '{"code":400, "error":"Bad Request", "message":"' . $error . '"}';
 	exit();
 }
 
@@ -43,6 +45,6 @@ if (array_key_exists('owner', $parsedresponse)) {
 	array_push($parsedresponse, $profile_builds);
 }
 http_response_code(200);
-echo json_encode($parsedresponse);
+echo '{"code":200, "error":"-", "message":' . json_encode($parsedresponse) .'}';
 
 ?>

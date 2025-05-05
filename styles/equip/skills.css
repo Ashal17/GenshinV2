@@ -1,11 +1,28 @@
-.frame_skills {
-    justify-content: flex-start;
-    flex-wrap: wrap;
+@media only screen and (max-width: 1084px) {
+    .frame_skills {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 1084px) {
+    .frame_skills {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .frame_skills {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.frame_skills .container_object {
+    min-width: 400px;
+    padding: 1px;
 }
 
 .container_skills {
-    min-width: 500px;
-    width: calc(100% / 3 - 12px);
+    min-width: 400px;
     padding: 1px;
 }
 

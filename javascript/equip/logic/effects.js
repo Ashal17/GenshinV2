@@ -1,6 +1,3 @@
-const effect_types = ["character", "party", "manual"];
-const effect_types_auto = ["character", "party"];
-
 function equip_effects_change_trigger() {
 
     equip_effects_update_stats_all();
@@ -145,7 +142,7 @@ function equip_effects_change_selected(possible_eff) {
 }
 
 function equip_effects_update_stats_all() {
-    for (var i = 0; i < party_size; i++) {
+    for (var i = 0; i < const_party_size; i++) {
         equip_effects_update_stats(i);
         equip_effects_update_infusion(i);
     }
@@ -175,7 +172,7 @@ function equip_effects_update_stats(party_id) {
 }
 
 function equip_effects_update_stats_transform_other_all() {
-    for (var i = 0; i < party_size; i++) {
+    for (var i = 0; i < const_party_size; i++) {
         equip_effects_update_stats_transform_other(i);
     }
 }
@@ -212,7 +209,7 @@ function equip_effects_update_stats_transform_other(party_id) {
 }
 
 function equip_effects_update_stats_transform_personal_all() {
-    for (var i = 0; i < party_size; i++) {
+    for (var i = 0; i < const_party_size; i++) {
         equip_effects_update_stats_transform_personal(i);
     }
 }
@@ -246,7 +243,7 @@ function equip_effects_update_infusion(party_id) {
 
 
 function equip_effects_update_options_all() {
-    for (var i = 0; i < party_size; i++) {
+    for (var i = 0; i < const_party_size; i++) {
         equip_effects_update_options(i);
     }
 }
@@ -268,7 +265,7 @@ function equip_effects_update_options(party_id) {
         }
     }
 
-    for (var i = 0; i < party_size; i++) {       
+    for (var i = 0; i < const_party_size; i++) {       
         if (i != party_id) {
             equip_effects_update_character_options(party_effect_list, i, true);           
         }
@@ -518,7 +515,7 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             var vision = data_characters[user_objects.user_party[source_party].id].vision;
 
             var count = 0;
-            for (var i = 0; i < party_size; i++) {
+            for (var i = 0; i < const_party_size; i++) {
                 if (data_characters[user_objects.user_party[i].id].nation == "natlan" || data_characters[user_objects.user_party[i].id].vision != vision) {
                     count += 1;
                 }
@@ -568,7 +565,7 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
 }
 
 function equip_effects_update_active_options_all() {
-    for (var i = 0; i < party_size; i++) {
+    for (var i = 0; i < const_party_size; i++) {
         equip_effects_update_active_options(i);
     }
 }
@@ -626,11 +623,11 @@ function equip_effects_update_active_options(party_id) {
 function equip_effects_update_multi_options(party_id) {
     var multi_effects = [];
 
-    for (var i = 0; i < effect_types_auto.length; i++) {
-        for (var ii = 0; ii < output_party[party_id].effects[effect_types_auto[i]].length; ii++) {
-            var output_effect = output_party[party_id].effects[effect_types_auto[i]][ii];
+    for (var i = 0; i < const_effect_types_auto.length; i++) {
+        for (var ii = 0; ii < output_party[party_id].effects[const_effect_types_auto[i]].length; ii++) {
+            var output_effect = output_party[party_id].effects[const_effect_types_auto[i]][ii];
             if (output_effect.multi) {
-                multi_effects.push({ "type": effect_types_auto[i], "i": ii, "base_id": output_effect.base_id, "uncounted":false })
+                multi_effects.push({ "type": const_effect_types_auto[i], "i": ii, "base_id": output_effect.base_id, "uncounted":false })
             }
         }
     }
@@ -650,8 +647,8 @@ function equip_effects_update_multi_options(party_id) {
 }
 
 function equip_effects_display_all() {
-    for (var i = 0; i < effect_types_auto.length; i++) {
-        equip_effects_display(effect_types_auto[i]);
+    for (var i = 0; i < const_effect_types_auto.length; i++) {
+        equip_effects_display(const_effect_types_auto[i]);
     }
     equip_effects_display_manual();
 }
@@ -781,11 +778,11 @@ function equip_effects_return_effect_right(selected_option, source_party) {
     }
 
     if (selected_option.infusion) {
-        effect_right.appendChild(utils_create_statline(visions_variables[selected_option.infusion.vision].name + " Infusion", null));
+        effect_right.appendChild(utils_create_statline(data_visions[selected_option.infusion.vision].name + " Infusion", null));
     }
 
     if (selected_option.conversion) {
-        effect_right.appendChild(utils_create_statline(visions_variables[selected_option.conversion].name + " Conversion", null));
+        effect_right.appendChild(utils_create_statline(data_visions[selected_option.conversion].name + " Conversion", null));
     }
 
     return effect_right;
@@ -829,10 +826,10 @@ function equip_effects_return_bonusdmg_statline(bonusdmg) {
         }
         var targetname = "";
         if (bonusdmg.target_vision != "all") {
-            targetname += " " + visions_variables[bonusdmg.target_vision].name;
+            targetname += " " + data_visions[bonusdmg.target_vision].name;
         }
         if (bonusdmg.target_type != "all") {
-            targetname += " " + bonusdmg_names[bonusdmg.target_type];
+            targetname += " " + const_bonusdmg_names[bonusdmg.target_type];
         }
         if (targetname == "") {
             targetname = " All Damage";

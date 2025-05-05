@@ -4,118 +4,45 @@
     "enka_id": 0,
     "name": "None",
     "vision": "physical",
-    "nation": "none",
+    "rarity": 0, 
+		"nation": "none",
     "stats": [],
     "weapon": "none",
     "attacks": [
       {
         "id": 0,
-        "parts": [
-          {
-            "id": 0,
-            "name": "1-Hit",
-            "type": "normal",
-            "damage": true,
-            "vision": "physical",
-            "stat": "atk",
-            "crit": true
-          },
-          {
-            "id": 1,
-            "name": "2-Hit",
-            "type": "normal",
-            "damage": true,
-            "vision": "physical",
-            "stat": "atk",
-            "crit": true
-          },
-          {
-            "id": 2,
-            "name": "3-Hit",
-            "type": "normal",
-            "damage": true,
-            "vision": "physical",
-            "stat": "atk",
-            "crit": true
-          },
-          {
-            "id": 3,
-            "name": "4-Hit",
-            "type": "normal",
-            "damage": true,
-            "vision": "physical",
-            "stat": "atk",
-            "crit": true
-          },
-          {
-            "id": 4,
-            "name": "Charged",
-            "type": "charged",
-            "damage": true,
-            "vision": "charged",
-            "stat": "atk",
-            "crit": true
-          },
-          {
-            "id": 5,
-            "name": "Plunge",
-            "type": "plunge",
-            "damage": true,
-            "vision": "physical",
-            "stat": "atk",
-            "crit": true
-          },
-          {
-            "id": 6,
-            "name": "Low Plunge",
-            "type": "plunge",
-            "damage": true,
-            "vision": "physical",
-            "stat": "atk",
-            "crit": true
-          },
-          {
-            "id": 7,
-            "name": "High Plunge",
-            "type": "plunge",
-            "damage": true,
-            "vision": "physical",
-            "stat": "atk",
-            "crit": true
-          }
-        ]
+        "name": "Normal Attack",
+        "vision": "physical",
+        "type": "normal",
+        "parts": []
       },
       {
         "id": 1,
-        "parts": [
-          {
-            "id": 0,
-            "name": "1-Hit",
-            "type": "normal",
-            "damage": true,
-            "vision": "physical",
-            "stat": "atk",
-            "crit": true,
-            "apply": {
-              "id": 4,
-              "option": 0
-            }
-          }
-        ]
+        "name": "Elemental Skill",
+        "vision": "physical",
+        "type": "skill",
+        "parts": []
+      },
+      {
+        "id": 2,
+        "name": "Elemental Burst",
+        "vision": "physical",
+        "type": "burst",
+        "parts": []
       }
     ],
     "const": [
       {
-        "name": "",
-        "desc": ""
+        "name": "Constelation 1",
+        "desc": "Constelation 1"
       },
       {
-        "name": "",
-        "desc": ""
+        "name": "Constelation 2",
+        "desc": "Constelation 2"
       },
       {
-        "name": "",
-        "desc": "",
+        "name": "Constelation 3",
+        "desc": "Constelation 3",
         "bonus": [
           {
             "stat": "levelburst",
@@ -124,12 +51,12 @@
         ]
       },
       {
-        "name": "",
-        "desc": ""
+        "name": "Constelation 4",
+        "desc": "Constelation 4"
       },
       {
-        "name": "",
-        "desc": "",
+        "name": "Constelation 5",
+        "desc": "Constelation 5",
         "bonus": [
           {
             "stat": "levelskill",
@@ -138,29 +65,25 @@
         ]
       },
       {
-        "name": "",
-        "desc": ""
+        "name": "Constelation 6",
+        "desc": "Constelation 6"
       }
     ],
     "passive": [
       {
-        "name": "",
-        "desc": "",
+        "name": "Passive 1",
+        "desc": "Passive 1",
         "level": 0
       },
       {
-        "name": "",
-        "desc": "",
+        "name": "Passive 2",
+        "desc": "Passive 2",
         "level": 2
       },
       {
-        "name": "",
-        "desc": "",
-        "level": 8,
-        "apply": {
-          "id": 27,
-          "option": 0
-        }
+        "name": "Passive 3",
+        "desc": "Passive 3",
+        "level": 8
       }
     ]
   },
@@ -170,7 +93,8 @@
     "name": "Amber",
     "weapon": "bow",
     "vision": "pyro",
-    "nation": "mondstadt",
+    "rarity": 4, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -499,7 +423,8 @@
     "name": "Barbara",
     "weapon": "catalyst",
     "vision": "hydro",
-    "nation": "mondstadt",
+    "rarity": 4, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -757,7 +682,8 @@
     "name": "Beidou",
     "weapon": "claymore",
     "vision": "electro",
-    "nation": "liyue",
+    "rarity": 4, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -1081,7 +1007,8 @@
     "name": "Bennett",
     "weapon": "sword",
     "vision": "pyro",
-    "nation": "mondstadt",
+    "rarity": 4, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -1461,7 +1388,8 @@
     "name": "Chongyun",
     "weapon": "claymore",
     "vision": "cryo",
-    "nation": "liyue",
+    "rarity": 4, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -1764,7 +1692,8 @@
     "name": "Diluc",
     "weapon": "claymore",
     "vision": "pyro",
-    "nation": "mondstadt",
+    "rarity": 5, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -2066,7 +1995,8 @@
     "name": "Fischl",
     "weapon": "bow",
     "vision": "electro",
-    "nation": "mondstadt",
+    "rarity": 4, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -2441,7 +2371,8 @@
     "name": "Jean",
     "weapon": "sword",
     "vision": "anemo",
-    "nation": "mondstadt",
+    "rarity": 5, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -2741,7 +2672,8 @@
     "name": "Kaeya",
     "weapon": "sword",
     "vision": "cryo",
-    "nation": "mondstadt",
+    "rarity": 4, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -3032,7 +2964,8 @@
     "name": "Keqing",
     "weapon": "sword",
     "vision": "electro",
-    "nation": "liyue",
+    "rarity": 5, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -3365,7 +3298,8 @@
     "name": "Klee",
     "weapon": "catalyst",
     "vision": "pyro",
-    "nation": "mondstadt",
+    "rarity": 5, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -3645,7 +3579,8 @@
     "name": "Lisa",
     "weapon": "catalyst",
     "vision": "electro",
-    "nation": "mondstadt",
+    "rarity": 4, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -3922,7 +3857,8 @@
     "name": "Mona",
     "weapon": "catalyst",
     "vision": "hydro",
-    "nation": "mondstadt",
+    "rarity": 5, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -4202,7 +4138,8 @@
     "name": "Ningguang",
     "weapon": "catalyst",
     "vision": "geo",
-    "nation": "liyue",
+    "rarity": 4, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -4429,7 +4366,8 @@
     "name": "Noelle",
     "weapon": "claymore",
     "vision": "geo",
-    "nation": "mondstadt",
+    "rarity": 4, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -4754,7 +4692,8 @@
     "name": "Qiqi",
     "weapon": "sword",
     "vision": "cryo",
-    "nation": "liyue",
+    "rarity": 5, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -5041,7 +4980,8 @@
     "name": "Razor",
     "weapon": "claymore",
     "vision": "electro",
-    "nation": "mondstadt",
+    "rarity": 4, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -5325,7 +5265,8 @@
     "name": "Sucrose",
     "weapon": "catalyst",
     "vision": "anemo",
-    "nation": "mondstadt",
+    "rarity": 4, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -5581,7 +5522,8 @@
     "short_name": "Traveler",
     "weapon": "sword",
     "vision": "anemo",
-    "nation": "none",
+    "rarity": 5, 
+		"nation": "none",
     "stats": [
       {
         "stat": "hp_base",
@@ -5889,7 +5831,8 @@
     "short_name": "Traveler",
     "weapon": "sword",
     "vision": "geo",
-    "nation": "none",
+    "rarity": 5, 
+		"nation": "none",
     "stats": [
       {
         "stat": "hp_base",
@@ -6150,7 +6093,8 @@
     "name": "Venti",
     "weapon": "bow",
     "vision": "anemo",
-    "nation": "mondstadt",
+    "rarity": 5, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -6471,7 +6415,8 @@
     "name": "Xiangling",
     "weapon": "polearm",
     "vision": "pyro",
-    "nation": "liyue",
+    "rarity": 4, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -6772,7 +6717,8 @@
     "name": "Xingqiu",
     "weapon": "sword",
     "vision": "hydro",
-    "nation": "liyue",
+    "rarity": 4, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -7094,7 +7040,8 @@
     "name": "Diona",
     "weapon": "bow",
     "vision": "cryo",
-    "nation": "mondstadt",
+    "rarity": 4, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -7446,7 +7393,8 @@
     "name": "Tartaglia",
     "weapon": "bow",
     "vision": "hydro",
-    "nation": "liyue",
+    "rarity": 5, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -7829,7 +7777,8 @@
     "name": "Zhongli",
     "weapon": "polearm",
     "vision": "geo",
-    "nation": "liyue",
+    "rarity": 5, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -8434,7 +8383,8 @@
     "name": "Xinyan",
     "weapon": "claymore",
     "vision": "pyro",
-    "nation": "liyue",
+    "rarity": 4, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -8740,7 +8690,8 @@
     "name": "Albedo",
     "weapon": "sword",
     "vision": "geo",
-    "nation": "mondstadt",
+    "rarity": 5, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -9031,7 +8982,8 @@
     "name": "Ganyu",
     "weapon": "bow",
     "vision": "cryo",
-    "nation": "liyue",
+    "rarity": 5, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -9337,7 +9289,8 @@
     "name": "Xiao",
     "weapon": "polearm",
     "vision": "anemo",
-    "nation": "liyue",
+    "rarity": 5, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -9590,7 +9543,8 @@
     "name": "Hu Tao",
     "weapon": "polearm",
     "vision": "pyro",
-    "nation": "liyue",
+    "rarity": 5, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -9921,7 +9875,8 @@
     "name": "Rosaria",
     "weapon": "polearm",
     "vision": "cryo",
-    "nation": "mondstadt",
+    "rarity": 4, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -10218,7 +10173,8 @@
     "name": "Yanfei",
     "weapon": "catalyst",
     "vision": "pyro",
-    "nation": "liyue",
+    "rarity": 4, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -10535,7 +10491,8 @@
     "name": "Eula",
     "weapon": "claymore",
     "vision": "cryo",
-    "nation": "mondstadt",
+    "rarity": 5, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -10856,7 +10813,8 @@
     "short_name": "Kazuha",
     "weapon": "sword",
     "vision": "anemo",
-    "nation": "inazuma",
+    "rarity": 5, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -11209,7 +11167,8 @@
     "name": "Sayu",
     "weapon": "claymore",
     "vision": "anemo",
-    "nation": "inazuma",
+    "rarity": 4, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -11584,7 +11543,8 @@
     "name": "Yoimiya",
     "weapon": "bow",
     "vision": "pyro",
-    "nation": "inazuma",
+    "rarity": 5, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -11922,7 +11882,8 @@
     "short_name": "Ayaka",
     "weapon": "sword",
     "vision": "cryo",
-    "nation": "inazuma",
+    "rarity": 5, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -12227,7 +12188,8 @@
     "short_name": "Traveler",
     "weapon": "sword",
     "vision": "electro",
-    "nation": "none",
+    "rarity": 5, 
+		"nation": "none",
     "stats": [
       {
         "stat": "hp_base",
@@ -12509,7 +12471,8 @@
     "short_name": "Raiden",
     "weapon": "polearm",
     "vision": "electro",
-    "nation": "inazuma",
+    "rarity": 5, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -12987,7 +12950,8 @@
     "short_name": "Sara",
     "weapon": "bow",
     "vision": "electro",
-    "nation": "inazuma",
+    "rarity": 4, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -13255,7 +13219,8 @@
     "name": "Aloy",
     "weapon": "bow",
     "vision": "cryo",
-    "nation": "none",
+    "rarity": 5, 
+		"nation": "none",
     "stats": [
       {
         "stat": "hp_base",
@@ -13522,7 +13487,8 @@
     "short_name": "Kokomi",
     "weapon": "catalyst",
     "vision": "hydro",
-    "nation": "inazuma",
+    "rarity": 5, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -13849,7 +13815,8 @@
     "name": "Thoma",
     "weapon": "polearm",
     "vision": "pyro",
-    "nation": "inazuma",
+    "rarity": 4, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -14158,7 +14125,8 @@
     "short_name": "Itto",
     "weapon": "claymore",
     "vision": "geo",
-    "nation": "inazuma",
+    "rarity": 5, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -14466,7 +14434,8 @@
     "name": "Gorou",
     "weapon": "bow",
     "vision": "geo",
-    "nation": "inazuma",
+    "rarity": 4, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -14824,7 +14793,8 @@
     "name": "Shenhe",
     "weapon": "polearm",
     "vision": "cryo",
-    "nation": "liyue",
+    "rarity": 5, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -15097,7 +15067,8 @@
     "name": "Yun Jin",
     "weapon": "polearm",
     "vision": "geo",
-    "nation": "liyue",
+    "rarity": 4, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -15416,7 +15387,8 @@
     "name": "Yae Miko",
     "weapon": "catalyst",
     "vision": "electro",
-    "nation": "inazuma",
+    "rarity": 5, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -15688,7 +15660,8 @@
     "short_name": "Ayato",
     "weapon": "sword",
     "vision": "hydro",
-    "nation": "inazuma",
+    "rarity": 5, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -16238,7 +16211,8 @@
     "name": "Yelan",
     "weapon": "bow",
     "vision": "hydro",
-    "nation": "liyue",
+    "rarity": 5, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -16550,7 +16524,8 @@
     "short_name": "Shinobu",
     "weapon": "sword",
     "vision": "electro",
-    "nation": "inazuma",
+    "rarity": 4, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -16909,7 +16884,8 @@
     "short_name": "Heizou",
     "weapon": "catalyst",
     "vision": "anemo",
-    "nation": "inazuma",
+    "rarity": 4, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -17231,7 +17207,8 @@
     "name": "Dori",
     "weapon": "claymore",
     "vision": "electro",
-    "nation": "sumeru",
+    "rarity": 4, 
+		"nation": "sumeru",
     "stats": [
       {
         "stat": "hp_base",
@@ -17535,7 +17512,8 @@
     "name": "Collei",
     "weapon": "bow",
     "vision": "dendro",
-    "nation": "sumeru",
+    "rarity": 4, 
+		"nation": "sumeru",
     "stats": [
       {
         "stat": "hp_base",
@@ -17830,7 +17808,8 @@
     "name": "Tighnari",
     "weapon": "bow",
     "vision": "dendro",
-    "nation": "sumeru",
+    "rarity": 5, 
+		"nation": "sumeru",
     "stats": [
       {
         "stat": "hp_base",
@@ -18140,7 +18119,8 @@
     "short_name": "Traveler",
     "weapon": "sword",
     "vision": "dendro",
-    "nation": "none",
+    "rarity": 5, 
+		"nation": "none",
     "stats": [
       {
         "stat": "hp_base",
@@ -18401,7 +18381,8 @@
     "name": "Nilou",
     "weapon": "sword",
     "vision": "hydro",
-    "nation": "sumeru",
+    "rarity": 5, 
+		"nation": "sumeru",
     "stats": [
       {
         "stat": "hp_base",
@@ -18746,7 +18727,8 @@
     "name": "Cyno",
     "weapon": "polearm",
     "vision": "electro",
-    "nation": "sumeru",
+    "rarity": 5, 
+		"nation": "sumeru",
     "stats": [
       {
         "stat": "hp_base",
@@ -19238,7 +19220,8 @@
     "name": "Candace",
     "weapon": "polearm",
     "vision": "hydro",
-    "nation": "sumeru",
+    "rarity": 4, 
+		"nation": "sumeru",
     "stats": [
       {
         "stat": "hp_base",
@@ -19541,7 +19524,8 @@
     "name": "Layla",
     "weapon": "sword",
     "vision": "cryo",
-    "nation": "sumeru",
+    "rarity": 4, 
+		"nation": "sumeru",
     "stats": [
       {
         "stat": "hp_base",
@@ -19864,7 +19848,8 @@
     "name": "Nahida",
     "weapon": "catalyst",
     "vision": "dendro",
-    "nation": "sumeru",
+    "rarity": 5, 
+		"nation": "sumeru",
     "stats": [
       {
         "stat": "hp_base",
@@ -20157,7 +20142,8 @@
     "name": "Faruzan",
     "weapon": "bow",
     "vision": "anemo",
-    "nation": "sumeru",
+    "rarity": 4, 
+		"nation": "sumeru",
     "stats": [
       {
         "stat": "hp_base",
@@ -20420,7 +20406,8 @@
     "name": "Wanderer",
     "weapon": "catalyst",
     "vision": "anemo",
-    "nation": "sumeru",
+    "rarity": 5, 
+		"nation": "sumeru",
     "stats": [
       {
         "stat": "hp_base",
@@ -20739,7 +20726,8 @@
     "name": "Alhaitham",
     "weapon": "sword",
     "vision": "dendro",
-    "nation": "sumeru",
+    "rarity": 5, 
+		"nation": "sumeru",
     "stats": [
       {
         "stat": "hp_base",
@@ -21065,7 +21053,8 @@
     "name": "Yaoyao",
     "weapon": "polearm",
     "vision": "dendro",
-    "nation": "liyue",
+    "rarity": 4, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -21396,7 +21385,8 @@
     "name": "Dehya",
     "weapon": "claymore",
     "vision": "pyro",
-    "nation": "sumeru",
+    "rarity": 5, 
+		"nation": "sumeru",
     "stats": [
       {
         "stat": "hp_base",
@@ -21727,7 +21717,8 @@
     "name": "Mika",
     "weapon": "polearm",
     "vision": "cryo",
-    "nation": "mondstadt",
+    "rarity": 4, 
+		"nation": "mondstadt",
     "stats": [
       {
         "stat": "hp_base",
@@ -22012,7 +22003,8 @@
     "name": "Baizhu",
     "weapon": "catalyst",
     "vision": "dendro",
-    "nation": "liyue",
+    "rarity": 5, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -22347,7 +22339,8 @@
     "name": "Kaveh",
     "weapon": "claymore",
     "vision": "dendro",
-    "nation": "sumeru",
+    "rarity": 4, 
+		"nation": "sumeru",
     "stats": [
       {
         "stat": "hp_base",
@@ -22638,7 +22631,8 @@
     "name": "Kirara",
     "weapon": "sword",
     "vision": "dendro",
-    "nation": "inazuma",
+    "rarity": 4, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -23016,7 +23010,8 @@
     "name": "Lynette",
     "weapon": "sword",
     "vision": "anemo",
-    "nation": "fontaine",
+    "rarity": 4, 
+		"nation": "fontaine",
     "stats": [
       {
         "stat": "hp_base",
@@ -23318,7 +23313,8 @@
     "name": "Lyney",
     "weapon": "bow",
     "vision": "pyro",
-    "nation": "fontaine",
+    "rarity": 5, 
+		"nation": "fontaine",
     "stats": [
       {
         "stat": "hp_base",
@@ -23677,7 +23673,8 @@
     "name": "Freminet",
     "weapon": "claymore",
     "vision": "cryo",
-    "nation": "fontaine",
+    "rarity": 4, 
+		"nation": "fontaine",
     "stats": [
       {
         "stat": "hp_base",
@@ -24034,7 +24031,8 @@
     "short_name": "Traveler",
     "weapon": "sword",
     "vision": "hydro",
-    "nation": "none",
+    "rarity": 5, 
+		"nation": "none",
     "stats": [
       {
         "stat": "hp_base",
@@ -24374,7 +24372,8 @@
     "name": "Wriothesley",
     "weapon": "catalyst",
     "vision": "cryo",
-    "nation": "fontaine",
+    "rarity": 5, 
+		"nation": "fontaine",
     "stats": [
       {
         "stat": "hp_base",
@@ -24707,7 +24706,8 @@
     "name": "Neuvillette",
     "weapon": "catalyst",
     "vision": "hydro",
-    "nation": "fontaine",
+    "rarity": 5, 
+		"nation": "fontaine",
     "stats": [
       {
         "stat": "hp_base",
@@ -24995,7 +24995,8 @@
     "name": "Furina",
     "weapon": "sword",
     "vision": "hydro",
-    "nation": "fontaine",
+    "rarity": 5, 
+		"nation": "fontaine",
     "stats": [
       {
         "stat": "hp_base",
@@ -25577,7 +25578,8 @@
     "name": "Charlotte",
     "weapon": "catalyst",
     "vision": "cryo",
-    "nation": "fontaine",
+    "rarity": 4, 
+		"nation": "fontaine",
     "stats": [
       {
         "stat": "hp_base",
@@ -25927,7 +25929,8 @@
     "name": "Navia",
     "weapon": "claymore",
     "vision": "geo",
-    "nation": "fontaine",
+    "rarity": 5, 
+		"nation": "fontaine",
     "stats": [
       {
         "stat": "hp_base",
@@ -26311,7 +26314,8 @@
     "name": "Chevreuse",
     "weapon": "polearm",
     "vision": "pyro",
-    "nation": "fontaine",
+    "rarity": 4, 
+		"nation": "fontaine",
     "stats": [
       {
         "stat": "hp_base",
@@ -26653,7 +26657,8 @@
     "name": "Xianyun",
     "weapon": "catalyst",
     "vision": "anemo",
-    "nation": "liyue",
+    "rarity": 5, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -27006,7 +27011,8 @@
     "enka_id": 10000092,
     "weapon": "claymore",
     "vision": "pyro",
-    "nation": "liyue",
+    "rarity": 4, 
+		"nation": "liyue",
     "stats": [
       {
         "stat": "hp_base",
@@ -27289,7 +27295,8 @@
     "enka_id": 10000094,
     "weapon": "sword",
     "vision": "geo",
-    "nation": "inazuma",
+    "rarity": 5, 
+		"nation": "inazuma",
     "stats": [
       {
         "stat": "hp_base",
@@ -27582,7 +27589,8 @@
     "name": "Arlecchino",
     "weapon": "polearm",
     "vision": "pyro",
-    "nation": "fontaine",
+    "rarity": 5, 
+		"nation": "fontaine",
     "stats": [
       {
         "stat": "hp_base",
@@ -28087,7 +28095,8 @@
     "name": "Clorinde",
     "weapon": "sword",
     "vision": "electro",
-    "nation": "fontaine",
+    "rarity": 5, 
+		"nation": "fontaine",
     "stats": [
       {
         "stat": "hp_base",
@@ -28430,7 +28439,8 @@
     "name": "Sigewinne",
     "weapon": "bow",
     "vision": "hydro",
-    "nation": "fontaine",
+    "rarity": 5, 
+		"nation": "fontaine",
     "stats": [
       {
         "stat": "hp_base",
@@ -28744,7 +28754,8 @@
     "name": "Sethos",
     "weapon": "bow",
     "vision": "electro",
-    "nation": "sumeru",
+    "rarity": 4, 
+		"nation": "sumeru",
     "stats": [
       {
         "stat": "hp_base",
@@ -29073,7 +29084,8 @@
     "name": "Emilie",
     "weapon": "polearm",
     "vision": "dendro",
-    "nation": "fontaine",
+    "rarity": 5, 
+		"nation": "fontaine",
     "stats": [
       {
         "stat": "hp_base",
@@ -29407,7 +29419,8 @@
     "name": "Kachina",
     "weapon": "polearm",
     "vision": "geo",
-    "nation": "natlan",
+    "rarity": 4, 
+		"nation": "natlan",
     "stats": [
       {
         "stat": "hp_base",
@@ -29730,7 +29743,8 @@
     "name": "Kinich",
     "weapon": "claymore",
     "vision": "dendro",
-    "nation": "natlan",
+    "rarity": 5, 
+		"nation": "natlan",
     "stats": [
       {
         "stat": "hp_base",
@@ -30086,7 +30100,8 @@
     "name": "Mualani",
     "weapon": "catalyst",
     "vision": "hydro",
-    "nation": "natlan",
+    "rarity": 5, 
+		"nation": "natlan",
     "stats": [
       {
         "stat": "hp_base",
@@ -30403,7 +30418,8 @@
     "name": "Xilonen",
     "weapon": "sword",
     "vision": "geo",
-    "nation": "natlan",
+    "rarity": 5, 
+		"nation": "natlan",
     "stats": [
       {
         "stat": "hp_base",

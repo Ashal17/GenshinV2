@@ -6,24 +6,23 @@ window_frame_ids = [
     { "id": "frame_skills", "text": "Skills // Storage", "order": 4, "display": true },
 ];
 
-const frame_stats_columns = 4;
+async function equip_load_all_data() {
+    var ver = "?20250502";
 
-
-async function equip_load_all() {
-    var ver = "?20250317";
-
-    data_characters = await utils_load_file("/data/characters.json" + ver);
-    data_enemies = await utils_load_file("/data/enemies.json" + ver);
-    data_resonance = await utils_load_file("/data/resonance.json");
-    data_stats = await utils_load_file("/data/stats.json" + ver);
-    data_stat_transformations = await utils_load_file("/data/stat_transformations.json" + ver);
-    data_weapons = await utils_load_file("/data/weapons.json" + ver);
-    data_weapon_stats = await utils_load_file("/data/weapon_stats.json");
-    data_artifact_vars = await utils_load_file("/data/artifact_vars.json");
-    data_artifact_stats = await utils_load_file("/data/artifact_stats.json");
-    data_artifact_sets = await utils_load_file("/data/artifact_sets.json");
-    data_artifact_enka_stats = await utils_load_file("/data/artifact_enka_stats.json");
-    data_effects = await utils_load_file("/data/effects.json");
+    data_characters = await utils_load_json("/data/characters.json" + ver);
+    data_enemies = await utils_load_json("/data/enemies.json" + ver);
+    data_resonance = await utils_load_json("/data/resonance.json");
+    data_visions = await utils_load_json("/data/visions.json");
+    data_reactions = await utils_load_json("/data/reactions.json");
+    data_stats = await utils_load_json("/data/stats.json" + ver);
+    data_stat_transformations = await utils_load_json("/data/stat_transformations.json" + ver);
+    data_weapons = await utils_load_json("/data/weapons.json" + ver);
+    data_weapon_stats = await utils_load_json("/data/weapon_stats.json");
+    data_artifact_vars = await utils_load_json("/data/artifact_vars.json");
+    data_artifact_stats = await utils_load_json("/data/artifact_stats.json");
+    data_artifact_sets = await utils_load_json("/data/artifact_sets.json");
+    data_artifact_enka_stats = await utils_load_json("/data/artifact_enka_stats.json");
+    data_effects = await utils_load_json("/data/effects.json");
 
     for (var i = 0; i < data_enemies.length; i++) {
         for (var ii = 0; ii < data_enemies[i].stats.length; ii++) {
@@ -38,55 +37,97 @@ async function equip_setup_all() {
 
     var setup_success = true;
     try {
-        await equip_load_all();
+        await equip_load_all_data();
         
         equip_setup_default_stats();
         equip_setup_storage_objects();
         equip_setup_user_objects();
         equip_setup_output_objects();
-        equip_setup_enka_objects();
         equip_setup_character_storage_objects();
+        equip_setup_artifacts_storage_objects();
 
-        equip_setup_preferences_load();
-
+        await equip_account_setup();
+        await equip_setup_preferences_load();
+               
         equip_setup_ui_frames();
         equip_setup_ui_frame_party();
         equip_setup_ui_frame_stats();
         equip_setup_ui_frame_equipment();
         equip_setup_ui_frame_effects();
         equip_setup_ui_frame_skills();
-       
-        equip_storage_load_last();
+
+        var storage_account = await equip_account_return_storage();
+        var legacy_storage = await equip_legacy_v1_account_storage_load(storage_account);
+
+        equip_storage_load_user_storage(storage_account.storage_objects);
         equip_storage_display_header_type();
         equip_storage_display_all();
 
-        equip_enka_load_last();
-        equip_character_load_last();
+        if (!equip_legacy_v1_url_load_url()) {
+            equip_storage_load_last();
+        } 
+
+        equip_character_storage_load_last(storage_account.character_storage_objects, legacy_storage.setup);
+        equip_artifacts_storage_load_last(storage_account.artifact_storage_objects, legacy_storage.artifact_list);
+        
     } catch (err) {
         utils_loading_show_error(err, "An Error occured during loading the page.<br>Please reload the page with CTRL+F5.<br>If the Error persists, please contact the administrator.");
         setup_success = false;
-
     }
 
     if (setup_success) {
         utils_loading_hide();
     }
-
-    
-
+  
 }
 
-function equip_setup_preferences_load() {
-    user_preferences = {};
-
-    var preferences = localStorage.getItem("user_preferences");
+async function equip_setup_preferences_load() {
+   
+    var preferences_account = await equip_account_return_preferences();
     var pref_data = null;
-    if (preferences) {
-        pref_data = JSON.parse(preferences);
+    if (preferences_account) {
+        utils_log_debug("Found preferences at account.");
+        pref_data = preferences_account;
+    } else {
+        var preferences_local = localStorage.getItem("user_preferences");
+        if (preferences_local) {
+            utils_log_debug("Found preferences locally.");
+            pref_data = JSON.parse(preferences_local);
+        }       
     }
+    user_preferences = {};
+    equip_stats_load_preferences(pref_data);
     equip_storage_load_preferences(pref_data);
+    equip_skills_load_preferences(pref_data);
+    equip_setup_enka_objects(pref_data);
     equip_setup_window_objects(pref_data);
 
+    if (!preferences_account && user_account && user_account.status) {
+        utils_log_debug("Saving preferences to account.");
+        utils_preferences_save();
+    }
+}
+
+function equip_setup_initialize() {
+    equip_character_update_all(false);
+    equip_weapon_update_all();
+    equip_artifacts_update_all_all();
+    equip_effects_update_stats_all();
+
+    equip_stats_update_total_all();
+    equip_skills_update_all();
+    equip_effects_update_options_all();
+
+    equip_character_display_all();
+    equip_control_display_all();
+    equip_character_display_resonance();
+    equip_enemy_display();
+    equip_weapon_display();
+    equip_artifacts_display_all();
+    equip_effects_display_all();
+    equip_skills_display_all();
+    equip_storage_display_active();
+    equip_stats_display();
 }
 
 function equip_setup_ui_frames() {
@@ -99,23 +140,29 @@ function equip_setup_ui_frames() {
 function equip_setup_ui_frame_party() {
     var parent = document.getElementById("frame_party_content");
     parent.className += " frame_party";
-    
-    for (var i = 0; i < party_size; i++) {
+      
+    for (var i = 0; i < const_party_size; i++) {
         parent.appendChild(equip_setup_ui_character(i));
     }
-
-    parent.appendChild(equip_setup_ui_party_panel());
-    parent.appendChild(equip_setup_ui_resonance());
+    var resonance_container = utils_create_obj("div", "container_party_panel");
+    resonance_container.appendChild(equip_setup_ui_party_panel());
+    resonance_container.appendChild(equip_setup_ui_resonance());
+    parent.appendChild(resonance_container);
     parent.appendChild(equip_setup_ui_enemy());
+
 }
 
 function equip_setup_ui_character(index) {
     var obj = utils_create_obj("div", "container_object container_character", "container_character_" + index);
-    var char_name_container = utils_create_obj("div", "container container_name_container");
-    obj.appendChild(char_name_container);
+    obj.onclick = function (event) { equip_active_character_change(index); }
+    if (index == 0) {
+        obj.className += " active_character";
+    }
+    var name_row = utils_create_obj("div", "container_namerow");
+    obj.appendChild(name_row);
     var char_name = utils_create_obj("p", "container_name", "character_name_" + index, "None")
-    char_name.onclick = function (event) { equip_active_character_change(index); }
-    char_name_container.appendChild(char_name);
+    //char_name.onclick = function (event) { equip_active_character_change(index); }
+    name_row.appendChild(char_name);
 
     var row = utils_create_obj("div", "container_subrow");
     obj.appendChild(row);
@@ -126,49 +173,25 @@ function equip_setup_ui_character(index) {
     var level_container = utils_create_obj("div", "container")
     icon.appendChild(level_container);
     var level = utils_create_obj("div", "icon_selects character_level", "character_level_" + index);
-    level.onclick = function (event) { utils_create_prompt_values(level.id, equip_character_change_level, level_list, index, level_container); event.preventDefault(); };
+    level.onclick = function (event) { utils_create_prompt_values(level.id, equip_character_change_level, const_level_list, index, level_container); event.preventDefault(); event.stopImmediatePropagation(); };
     level_container.appendChild(level);
     level.appendChild(utils_create_obj("div", "icon_selects_text", "character_level_text_" + index, "1"))
 
     var icon_container = utils_create_obj("div", "character_img");
-    icon_container.onclick = function (event) { equip_control_create_character_select(index, icon); event.preventDefault(); };
+    icon_container.onclick = function (event) { equip_control_create_character_select(index, icon); event.preventDefault(); event.stopImmediatePropagation(); };
     icon.appendChild(icon_container);
     icon_container.appendChild(utils_create_img(null, "character_img_" + index, "/images/icons/characters.png"));
 
     var constel_container = utils_create_obj("div", "container")
     icon.appendChild(constel_container);
     var constel = utils_create_obj("div", "icon_selects character_constel", "character_constel_" + index);
-    constel.onclick = function (event) { utils_create_prompt_values(constel.id, equip_character_change_constel, constel_list, index, constel_container); event.preventDefault(); };
+    constel.onclick = function (event) { utils_create_prompt_values(constel.id, equip_character_change_constel, const_constel_list, index, constel_container); event.preventDefault(); event.stopImmediatePropagation(); };
     constel_container.appendChild(constel);
     constel.appendChild(utils_create_obj("div", "icon_selects_text", "character_constel_text_" + index, "C0"))
 
-    var stats = utils_create_obj("div", "character_stats", "character_stats_" + index);
-    stats.onclick = function (event) { equip_active_character_change(index); }
-    row.appendChild(stats);
-
-    var stats_unit_party_1 = utils_create_obj("div", "statcolumn", "stats_unit_party_1")
-    stats.appendChild(stats_unit_party_1);
-    var stats_unit_party_2 = utils_create_obj("div", "statcolumn", "stats_unit_party_2")
-    stats.appendChild(stats_unit_party_2);
-
-    for (var i = 0; i < display_stats.length; i++) {
-        var stat_id = display_stats[i];
-        
-        if (data_stats[stat_id].display.hasOwnProperty("unit")) {
-            if (data_stats[stat_id].display.unit.startsWith("party")) {
-                var stat_line = utils_create_obj("div", "statline");
-
-                stat_line.appendChild(utils_create_label_img(stat_id, data_stats[stat_id].name));
-                stat_line.appendChild(utils_create_obj("p", null, "display_stat_" + data_stats[stat_id].display.unit + "_" + index + "_" + stat_id));
-                eval("stats_unit_" + data_stats[stat_id].display.unit + ".appendChild(stat_line)");
-            }
-        }       
-    }
-
-    var stat_line = utils_create_obj("div", "statline");
-    stat_line.appendChild(utils_create_label_img("sword-cross", "Vision", "display_stat_vision_party_" + index + "_img", "display_stat_vision_party_" + index + "_label"));
-    stat_line.appendChild(utils_create_obj("p", null, "display_stat_vision_party_" + index));
-    stats_unit_party_2.appendChild(stat_line);
+    var stats = utils_create_obj("div", "character_stats", "stats_unit_party_" + index);
+    //stats.onclick = function (event) { equip_active_character_change(index); }
+    row.appendChild(stats);  
 
     return obj;
 }
@@ -213,9 +236,12 @@ function equip_setup_ui_resonance() {
 }
 
 function equip_setup_ui_enemy() {
-    var obj = utils_create_obj("div", "container_object container_character");
+    var obj = utils_create_obj("div", "container_object container_character container_enemy");
 
-    obj.appendChild(utils_create_obj("p", "container_name", "enemy_name", "None"));
+    var name_row = utils_create_obj("div", "container_namerow");
+    name_row.appendChild(utils_create_obj("p", "container_name", "enemy_name", "None"));
+    obj.appendChild(name_row);
+
 
     var row = utils_create_obj("div", "container_subrow");
     obj.appendChild(row);
@@ -237,25 +263,8 @@ function equip_setup_ui_enemy() {
     icon_container.appendChild(utils_create_img(null, "enemy_img" , "/images/icons/enemy/none.png"));
 
 
-    var stats = utils_create_obj("div", "character_stats", "enemy_stats");
+    var stats = utils_create_obj("div", "character_stats", "stats_unit_enemy");
     row.appendChild(stats);
-
-    var stats_unit_enemy_1 = utils_create_obj("div", "statcolumn", "stats_unit_enemy_1")
-    stats.appendChild(stats_unit_enemy_1);
-    var stats_unit_enemy_2 = utils_create_obj("div", "statcolumn", "stats_unit_enemy_2")
-    stats.appendChild(stats_unit_enemy_2);
-
-    for (var i = 0; i < display_stats.length; i++) {
-        var stat_id = display_stats[i];
-        if (data_stats[stat_id].display.hasOwnProperty("unit")) {            
-            if (data_stats[stat_id].display.unit.startsWith("enemy")) {
-                var stat_line = utils_create_obj("div", "statline");
-                stat_line.appendChild(utils_create_label_img(data_stats[stat_id].svg, data_stats[stat_id].total_name));
-                stat_line.appendChild(utils_create_obj("p", null, "display_stat_" + data_stats[stat_id].display.unit + "_" + stat_id));
-                eval("stats_unit_" + data_stats[stat_id].display.unit + ".appendChild(stat_line)");
-            }
-        }
-    }
 
     return obj;
 }
@@ -264,25 +273,9 @@ function equip_setup_ui_frame_stats() {
     var parent = document.getElementById("frame_stats_content");
     parent.className += " frame_stats";
 
-    for (var i = 1; i <= frame_stats_columns; i++) {
-        parent.appendChild(equip_setup_ui_stats_column(i));
+    for (var i = 0; i < const_display_stats_columns.length; i++) {
+        parent.appendChild(utils_create_obj("div", "stats_detail_column", "stats_detail_column_" + i));       
     }
-}
-
-function equip_setup_ui_stats_column(index) {
-    var obj = utils_create_obj("div", "container_stats_column", "container_stats_column_" + index);
-
-    for (var i = 0; i < display_stats.length; i++) {
-        var stat_id = display_stats[i];
-        if (data_stats[stat_id].display.col == index) {
-            var stat_line = utils_create_obj("div", "statline");
-            stat_line.appendChild(utils_create_obj("p", null, null, data_stats[stat_id].name));
-            stat_line.appendChild(utils_create_obj("p", null, "display_stats_" + stat_id));
-            obj.append(stat_line);
-        }
-    }
-
-    return obj
 }
 
 function equip_setup_ui_frame_equipment() {
@@ -290,14 +283,18 @@ function equip_setup_ui_frame_equipment() {
     parent.className += " frame_equipment";
 
     parent.appendChild(equip_setup_ui_weapon());
-    for (var i = 0; i < artifact_types.length; i++) {
-        parent.appendChild(equip_setup_ui_artifact(artifact_types[i]));
+    for (var i = 0; i < const_artifact_types.length; i++) {
+        parent.appendChild(equip_setup_ui_artifact(const_artifact_types[i]));       
     }
 }
 
 function equip_setup_ui_weapon() {
     var obj = utils_create_obj("div", "container_object container_weapon");
-    obj.appendChild(utils_create_obj("p", "container_name", "weapon_name", "None"));
+
+    var name_row = utils_create_obj("div", "container_namerow");
+    name_row.appendChild(utils_create_obj("p", "container_name", "weapon_name", "None"));
+
+    obj.appendChild(name_row);
 
     var row = utils_create_obj("div", "container_subrow");
     obj.appendChild(row);
@@ -320,7 +317,7 @@ function equip_setup_ui_weapon() {
     var refine_container = utils_create_obj("div", "container")
     icon.appendChild(refine_container);
     var refine = utils_create_obj("div", "icon_selects weapon_refine", "weapon_refine");
-    refine.onclick = function (event) { utils_create_prompt_values(refine.id, equip_weapon_change_refine, refine_list, null, refine_container); event.preventDefault(); };
+    refine.onclick = function (event) { utils_create_prompt_values(refine.id, equip_weapon_change_refine, const_refine_list, null, refine_container); event.preventDefault(); };
     refine_container.appendChild(refine);
     refine.appendChild(utils_create_obj("div", "icon_selects_text", "weapon_refine_text", "R1"));
 
@@ -332,7 +329,22 @@ function equip_setup_ui_weapon() {
 
 function equip_setup_ui_artifact(artifact_id) {
     var obj = utils_create_obj("div", "container_object container_artifact");
-    obj.appendChild(utils_create_obj("p", "container_name", "artifact_name_" + artifact_id, "None"));
+
+    var name_row = utils_create_obj("div", "container_namerow");
+    name_row.appendChild(utils_create_img_btn(
+        "database",
+        function () { equip_control_create_artifacts_storage(artifact_id, artifact_id + "_storage"); },
+        data_artifact_vars[artifact_id].name + " Storage",
+        artifact_id + "_storage",
+        "container")
+    );
+
+    name_row.appendChild(utils_create_obj("p", "container_name", "artifact_name_" + artifact_id, "None"));
+    var artifact_set = utils_create_obj("div", "artifact_set tooltip_trigger");
+    artifact_set.appendChild(utils_create_obj("p", "artifact_set_text", "artifact_set_text_" + artifact_id, "&times;0"));
+    artifact_set.appendChild(utils_create_obj("div", "artifact_set_description tooltip_hover", "artifact_set_description_" + artifact_id));
+    name_row.appendChild(artifact_set);   
+    obj.appendChild(name_row);
 
     var row = utils_create_obj("div", "container_subrow");
     obj.appendChild(row);
@@ -371,7 +383,7 @@ function equip_setup_ui_artifact(artifact_id) {
     main_stat_container.appendChild(main_stat);
     main_stat.appendChild(utils_create_obj("div", "icon_selects_text", "artifact_main_text_" + artifact_id, "Empty"));
 
-    for (let i = 0; i < artifact_sub_stats; i++) {
+    for (let i = 0; i < const_artifact_sub_stats; i++) {
         let sub_stat_line = utils_create_obj("div", "artifact_sub_line");
         stats.appendChild(sub_stat_line);
 
@@ -401,8 +413,8 @@ function equip_setup_ui_frame_effects() {
     var parent = document.getElementById("frame_effects_content");
     parent.className += " frame_effects";
 
-    for (var i = 0; i < effect_types.length; i++) {
-        parent.appendChild(equip_setup_ui_effects(effect_types[i]));
+    for (var i = 0; i < const_effect_types.length; i++) {
+        parent.appendChild(equip_setup_ui_effects(const_effect_types[i]));
     }
 }
 
@@ -431,13 +443,24 @@ function equip_setup_ui_frame_skills() {
     parent.appendChild(equip_setup_ui_storage());
     parent.appendChild(equip_setup_ui_storage_pin());
 
+    equip_skills_display_header();
     equip_storage_display_header_type();
 }
 
 function equip_setup_ui_skills(skill_window) {
     var obj = utils_create_obj("div", "container_object container_skills container_skills_" + skill_window);
-    obj.appendChild(utils_create_obj("p", "container_name", null, utils_capitalize(skill_window)));
+    var name_row = utils_create_obj("div", "container_namerow");
+    if (skill_window == "permanent") {
+        var hide_desc = utils_create_img_btn("eye-outline", null, "Hide Descriptions", "skills_hide_btn", "container");
+        hide_desc.onclick = function (event) { equip_skills_change_hideshow_desc() };
+        name_row.appendChild(hide_desc);
+    }
+    name_row.appendChild(utils_create_obj("p", "container_name", null, utils_capitalize(skill_window)));
+    obj.appendChild(name_row);
+
     obj.appendChild(utils_create_obj("div", "skills_column", "skills_container_" + skill_window));
+
+    
 
     return obj;
 }
@@ -506,7 +529,7 @@ function equip_setup_user_objects(user_data = null) {
 
     user_objects.user_active_character = utils_object_get_value(user_data, "user_active_character", 0);
     user_objects.user_party = [];
-    for (var i = 0; i < party_size; i++) {
+    for (var i = 0; i < const_party_size; i++) {
         var char = {};
         char.id = utils_object_get_value(user_data, "user_party."+i+".id", "none");
         char.level = utils_object_get_value(user_data, "user_party." + i + ".level", 0);
@@ -522,21 +545,21 @@ function equip_setup_user_objects(user_data = null) {
 
         char.artifacts = {};
 
-        for (var ii = 0; ii < artifact_types.length; ii++) {
+        for (var ii = 0; ii < const_artifact_types.length; ii++) {
             var artifact = {};
-            artifact.id = utils_object_get_value(user_data, "user_party." + i + ".artifacts." + artifact_types[ii] + ".id", 0);
-            artifact.level = utils_object_get_value(user_data, "user_party." + i + ".artifacts." + artifact_types[ii] + ".level", 0);
-            artifact.stars = utils_object_get_value(user_data, "user_party." + i + ".artifacts." + artifact_types[ii] + ".stars", 0);
-            artifact.main_stat = utils_object_get_value(user_data, "user_party." + i + ".artifacts." + artifact_types[ii] + ".main_stat", data_artifact_vars[artifact_types[ii]].main_stats[0]);
+            artifact.id = utils_object_get_value(user_data, "user_party." + i + ".artifacts." + const_artifact_types[ii] + ".id", 0);
+            artifact.level = utils_object_get_value(user_data, "user_party." + i + ".artifacts." + const_artifact_types[ii] + ".level", 0);
+            artifact.stars = utils_object_get_value(user_data, "user_party." + i + ".artifacts." + const_artifact_types[ii] + ".stars", 0);
+            artifact.main_stat = utils_object_get_value(user_data, "user_party." + i + ".artifacts." + const_artifact_types[ii] + ".main_stat", data_artifact_vars[const_artifact_types[ii]].main_stats[0]);
             artifact.sub_stats = [];
-            for (var iii = 0; iii < artifact_sub_stats; iii++) {
+            for (var iii = 0; iii < const_artifact_sub_stats; iii++) {
                 var sub_stat = {};
-                sub_stat.id = utils_object_get_value(user_data, "user_party." + i + ".artifacts." + artifact_types[ii] + ".sub_stats." + iii + ".id", artifact_sub_stats_options[0]);
-                sub_stat.value = utils_object_get_value(user_data, "user_party." + i + ".artifacts." + artifact_types[ii] + ".sub_stats." + iii + ".value", 0);
+                sub_stat.id = utils_object_get_value(user_data, "user_party." + i + ".artifacts." + const_artifact_types[ii] + ".sub_stats." + iii + ".id", const_artifact_sub_stats_options[0]);
+                sub_stat.value = utils_object_get_value(user_data, "user_party." + i + ".artifacts." + const_artifact_types[ii] + ".sub_stats." + iii + ".value", 0);
                 artifact.sub_stats.push(sub_stat);
             }
 
-            char.artifacts[artifact_types[ii]] = artifact;
+            char.artifacts[const_artifact_types[ii]] = artifact;
         }
 
         char.effects = utils_object_get_value(user_data, "user_party." + i + ".effects", []);
@@ -559,10 +582,25 @@ function equip_setup_character_storage_objects(user_characters = null) {
     character_storage_objects.saved_characters = utils_object_get_value(user_characters, "saved_characters", []);
 }
 
-function equip_setup_enka_objects(user_enka = null) {
+function equip_setup_artifacts_storage_objects(user_artifacts = null) {
+    artifact_storage_objects = {};
+    artifact_storage_objects.artifacts = {};
+    artifact_storage_objects.filters = {};
+    for (var i = 0; i < const_artifact_types.length; i++) {
+        artifact_storage_objects.artifacts[const_artifact_types[i]] = utils_object_get_value(user_artifacts, "artifacts." + const_artifact_types[i], []);
+        artifact_storage_objects.filters[const_artifact_types[i]] = {};
+        artifact_storage_objects.filters[const_artifact_types[i]].sets = utils_object_get_value(user_artifacts, "filters." + const_artifact_types[i] + ".sets", []);
+        artifact_storage_objects.filters[const_artifact_types[i]].main_stat = utils_object_get_value(user_artifacts, "filters." + const_artifact_types[i] + ".main_stat", []);
+        artifact_storage_objects.filters[const_artifact_types[i]].sub_stats = utils_object_get_value(user_artifacts, "filters." + const_artifact_types[i] + ".sub_stats", []);
+    }
+}
+
+function equip_setup_enka_objects(preferences_data = null) {
+    user_preferences.enka = {};
+    user_preferences.enka.last_uid = utils_object_get_value(preferences_data, "enka.last_uid", "");
+
     enka_objects = {};
-    enka_objects.last_uid = utils_object_get_value(user_enka, "last_uid", null);
-    enka_objects.saved_storage = utils_object_get_value(user_enka, "saved_storage", []);
+    enka_objects.characters = [];
 }
 
 function equip_setup_window_objects(preferences_data = null) {
@@ -579,25 +617,24 @@ function equip_setup_output_objects() {
 
     output_party = [];
 
-    for (var i = 0; i < party_size; i++) {
+    for (var i = 0; i < const_party_size; i++) {
         var char = {};
         char.weapon_type = "none";
         char.artifacts = {};
 
-        for (var ii = 0; ii < artifact_types.length; ii++) {
+        for (var ii = 0; ii < const_artifact_types.length; ii++) {
             var artifact = {};
             artifact.relative_values = [];
-            for (var iii = 0; iii < artifact_sub_stats; iii++) {
-                artifact.relative_values.push[0];
+            for (var iii = 0; iii < const_artifact_sub_stats; iii++) {
+                artifact.relative_values.push(0);
             }
-            char.artifacts[artifact_types[ii]] = artifact;
+            char.artifacts[const_artifact_types[ii]] = artifact;
         }
 
         char.artifacts.sets = [];
 
         char.stats = {};
         char.stats.total = { ...default_stats };
-        char.stats.display = { ...default_stats };
         char.stats.basic = [];
         char.stats.environment = [];
         char.stats.weapon = [];
@@ -633,15 +670,15 @@ function equip_setup_output_objects() {
 
 function equip_setup_default_stats() {
     default_stats = {};
-    display_stats = [];
+    default_calculate_stats = {};
     
     for (let stat_id in data_stats) {
         default_stats[stat_id] = 0;
-
-        if (data_stats[stat_id].hasOwnProperty("display")) {
-            display_stats.push(stat_id); 
-        }
     }  
+
+    for (var i = 0; i < const_display_stats_calculate.length; i++) {
+        default_calculate_stats[const_display_stats_calculate[i]] = 0;
+    }
 
     data_manual_effects = [];
     for (var i = 0; i < data_effects.length; i++) {
@@ -651,45 +688,45 @@ function equip_setup_default_stats() {
     }
 
     default_bonusdmg = {};
-    for (var i = 0; i < bonusdmg_visions.length; i++) {
-        default_bonusdmg[bonusdmg_visions[i]] = {};
-        for (var ii = 0; ii < bonusdmg_types.length; ii++) {
-            default_bonusdmg[bonusdmg_visions[i]][bonusdmg_types[ii]] = 0;
+    for (var i = 0; i < const_bonusdmg_visions.length; i++) {
+        default_bonusdmg[const_bonusdmg_visions[i]] = {};
+        for (var ii = 0; ii < const_bonusdmg_types.length; ii++) {
+            default_bonusdmg[const_bonusdmg_visions[i]][const_bonusdmg_types[ii]] = 0;
         }
     }
 
-    default_enka_character = {};
-    default_enka_character.id = 0;
-    default_enka_character.uid = 0;
-    default_enka_character.source = "enka";
-    default_enka_character.name = "";
-    default_enka_character.level = 0;
-    default_enka_character.constel = 0;
-    default_enka_character.levelnormal = 0;
-    default_enka_character.levelskill = 0;
-    default_enka_character.levelburst = 0;
-    default_enka_character.display_stats = {};
-    default_enka_character.vision_stat = "blank";
+    default_storage_character = {};
+    default_storage_character.id = 0;
+    default_storage_character.uid = 0;
+    default_storage_character.source = "";
+    default_storage_character.name = "";
+    default_storage_character.level = 0;
+    default_storage_character.constel = 0;
+    default_storage_character.levelnormal = 0;
+    default_storage_character.levelskill = 0;
+    default_storage_character.levelburst = 0;
+    default_storage_character.display_stats = {};
+    default_storage_character.vision_stat = "blank";
 
-    default_enka_character.weapon = {};
-    default_enka_character.weapon.id = 0;
-    default_enka_character.weapon.level = 0;
-    default_enka_character.weapon.refine = 0;
+    default_storage_character.weapon = {};
+    default_storage_character.weapon.id = 0;
+    default_storage_character.weapon.level = 0;
+    default_storage_character.weapon.refine = 0;
 
-    default_enka_character.artifacts = {};
-    for (var i = 0; i < artifact_types.length; i++) {
+    default_storage_character.artifacts = {};
+    for (var i = 0; i < const_artifact_types.length; i++) {
         var artifact = {};
         artifact.id = 0
         artifact.stars = 0
         artifact.level = 0
-        artifact.main_stat = data_artifact_vars[artifact_types[i]].main_stats[0];
+        artifact.main_stat = data_artifact_vars[const_artifact_types[i]].main_stats[0];
         artifact.sub_stats = [];
-        for (var ii = 0; ii < artifact_sub_stats; ii++) {
+        for (var ii = 0; ii < const_artifact_sub_stats; ii++) {
             var sub_stat = {};
-            sub_stat.id = artifact_sub_stats_options[0];
+            sub_stat.id = const_artifact_sub_stats_options[0];
             sub_stat.value = 0;
             artifact.sub_stats.push(sub_stat);
         }
-        default_enka_character.artifacts[artifact_types[i]] = artifact;
+        default_storage_character.artifacts[const_artifact_types[i]] = artifact;
     }  
 }

@@ -19,9 +19,14 @@ background: none;
     mask-image: url(../images/svg/ashal.svg);
 }
 
-.svg-elemastery:before {
-    -webkit-mask-image: url(../images/svg/elemastery.svg);
-    mask-image: url(../images/svg/elemastery.svg); 
+.svg-ashal-full:before {
+    -webkit-mask-image: url(../images/svg/ashal-full.svg);
+    mask-image: url(../images/svg/ashal-full.svg);
+}
+
+.svg-legacy:before {
+    -webkit-mask-image: url(../images/svg/legacy.svg);
+    mask-image: url(../images/svg/legacy.svg);
 }
 
 .svg-account-circle:before {
@@ -47,6 +52,22 @@ background: none;
 .svg-arrow-up-bold-hexagon-outline:before {
     -webkit-mask-image: url(../images/svg/arrow-up-bold-hexagon-outline.svg);
     mask-image: url(../images/svg/arrow-up-bold-hexagon-outline.svg);
+}
+.svg-blank:before {
+    -webkit-mask-image: url(../images/svg/blank.svg);
+    mask-image: url(../images/svg/blank.svg);
+}
+.svg-book-open-variant-outline:before, .svg-catalyst:before {
+    -webkit-mask-image: url(../images/svg/book-open-variant-outline.svg);
+    mask-image: url(../images/svg/book-open-variant-outline.svg);
+}
+.svg-bow-arrow:before, .svg-bow:before {
+    -webkit-mask-image: url(../images/svg/bow-arrow.svg);
+    mask-image: url(../images/svg/bow-arrow.svg);
+}
+.svg-claymore:before {
+    -webkit-mask-image: url(../images/svg/claymore.svg);
+    mask-image: url(../images/svg/claymore.svg);
 }
 .svg-code-tags:before {
     -webkit-mask-image: url(../images/svg/code-tags.svg);
@@ -92,6 +113,10 @@ background: none;
     -webkit-mask-image: url(../images/svg/eye-outline.svg);
     mask-image: url(../images/svg/eye-outline.svg);
 }
+.svg-eye-off-outline:before {
+    -webkit-mask-image: url(../images/svg/eye-off-outline.svg);
+    mask-image: url(../images/svg/eye-off-outline.svg);
+}
 .svg-filter-outline:before {
     -webkit-mask-image: url(../images/svg/filter-outline.svg);
     mask-image: url(../images/svg/filter-outline.svg);
@@ -136,6 +161,10 @@ background: none;
     -webkit-mask-image: url(../images/svg/lock-open.svg);
     mask-image: url(../images/svg/lock-open.svg);
 }
+.svg-logout-variant:before {
+    -webkit-mask-image: url(../images/svg/logout-variant.svg);
+    mask-image: url(../images/svg/logout-variant.svg);
+}
 .svg-minus-circle-outline:before {
     -webkit-mask-image: url(../images/svg/minus-circle-outline.svg);
     mask-image: url(../images/svg/minus-circle-outline.svg);
@@ -176,11 +205,19 @@ background: none;
     -webkit-mask-image: url(../images/svg/shield-outline.svg);
     mask-image: url(../images/svg/shield-outline.svg);
 }
+.svg-spear:before, .svg-polearm:before {
+    -webkit-mask-image: url(../images/svg/spear.svg);
+    mask-image: url(../images/svg/spear.svg);
+}
 .svg-square-edit-outline:before {
     -webkit-mask-image: url(../images/svg/square-edit-outline.svg);
     mask-image: url(../images/svg/square-edit-outline.svg);
 }
-.svg-star-four-points:before, .svg-skill:before {
+.svg-star:before, .svg-star-5:before {
+    -webkit-mask-image: url(../images/svg/star.svg);
+    mask-image: url(../images/svg/star.svg);
+}
+.svg-star-four-points:before, .svg-skill:before, .svg-star-4:before {
     -webkit-mask-image: url(../images/svg/star-four-points.svg);
     mask-image: url(../images/svg/star-four-points.svg);
 }
@@ -244,6 +281,10 @@ background: none;
     -webkit-mask-image: url(../images/svg/critdmg.svg);
     mask-image: url(../images/svg/critdmg.svg);
 }
+.svg-elemastery:before {
+    -webkit-mask-image: url(../images/svg/elemastery.svg);
+    mask-image: url(../images/svg/elemastery.svg);
+}
 .svg-recharge:before {
     -webkit-mask-image: url(../images/svg/recharge.svg);
     mask-image: url(../images/svg/recharge.svg);
@@ -296,9 +337,14 @@ background: none;
     -webkit-mask-image: url(../images/svg/enka-download.svg);
     mask-image: url(../images/svg/enka-download.svg);
 }
-
 .svg-enka-share:before {
     -webkit-mask-image: url(../images/svg/enka-share.svg);
     mask-image: url(../images/svg/enka-share.svg);
+}
+.svg-star-4:before {
+    background-color: var(--star-4);
+}
+.svg-star-5:before {
+    background-color: var(--star-5);
 }
 

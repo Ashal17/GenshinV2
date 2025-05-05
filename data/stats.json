@@ -9,17 +9,11 @@
     "labelname": "ATK",
     "listname": "ATK",
     "type": "flat",
-    "display": {
-      "col": 1,
-      "unit": "party_1",
-      "enka":  true
-    },
     "conversion": "percent"
   },
   "atk_base": {
     "name": "Base Attack",
-    "type": "flat",
-    "display": { "col": 1 }
+    "type": "flat"
   },
   "atk_base_mid": {
     "name": "Base Attack",
@@ -30,8 +24,7 @@
     "shortname": "ATK",
     "labelname": "ATK",
     "listname": "ATK",
-    "type": "percent",
-    "display": { "col": 1 }
+    "type": "percent"
   },
   "atk%_trans": {
     "name": "Attack %",
@@ -46,17 +39,11 @@
     "labelname": "HP",
     "listname": "HP",
     "type": "flat",
-    "conversion": "percent",
-    "display": {
-      "col": 1,
-      "unit": "party_1",
-      "enka": true
-    }
+    "conversion": "percent"
   },
   "hp_base": {
     "name": "Base HP",
-    "type": "flat",
-    "display": { "col": 1 }
+    "type": "flat"
   },
   "hp_base_mid": {
     "name": "Base HP",
@@ -67,8 +54,7 @@
     "shortname": "HP",
     "labelname": "HP",
     "listname": "HP",
-    "type": "percent",
-    "display": { "col": 1 }
+    "type": "percent"
   },
 
   "hp%_trans": {
@@ -84,17 +70,11 @@
     "labelname": "DEF",
     "listname": "DEF",
     "type": "flat",
-    "conversion": "percent",
-    "display": {
-      "col": 1,
-      "unit": "party_1",
-      "enka": true
-    }
+    "conversion": "percent"
   },
   "def_base": {
     "name": "Base Defense",
-    "type": "flat",
-    "display": { "col": 1 }
+    "type": "flat"
   },
   "def_base_mid": {
     "name": "Base Defense",
@@ -105,8 +85,7 @@
     "shortname": "DEF",
     "labelname": "DEF",
     "listname": "DEF",
-    "type": "percent",
-    "display": { "col": 1 }
+    "type": "percent"
   },
   "def%_trans": {
     "name": "Defense %",
@@ -138,27 +117,7 @@
     "shortname": "CRIT Rate",
     "labelname": "CR",
     "listname": "C.Rate",
-    "type": "percent",
-    "display": {
-      "col": 1,
-      "detail": [
-        "critnormal",
-        "critcharged",
-        "critplunge",
-        "critskill",
-        "critburst",
-        "critanemo",
-        "critcryo",
-        "critdendro",
-        "critelectro",
-        "critgeo",
-        "crithydro",
-        "critpyro",
-        "critphysical"
-      ],
-      "unit": "party_2",
-      "enka": true
-    }
+    "type": "percent"
   },
   "critnormal": {
     "name": "Normal Attack Crit Rate",
@@ -309,27 +268,7 @@
     "shortname": "CRIT DMG",
     "labelname": "CD",
     "listname": "C.DMG",
-    "type": "percent",
-    "display": {
-      "col": 1,
-      "detail": [
-        "critdmgnormal",
-        "critdmgcharged",
-        "critdmgplunge",
-        "critdmgskill",
-        "critdmgburst",
-        "critdmganemo",
-        "critdmgcryo",
-        "critdmgdendro",
-        "critdmgelectro",
-        "critdmggeo",
-        "critdmghydro",
-        "critdmgpyro",
-        "critdmgphysical"
-      ],
-      "unit": "party_2",
-      "enka": true
-    }
+    "type": "percent"
   },
   "critdmgnormal": {
     "name": "Normal Attack Crit DMG",
@@ -477,21 +416,7 @@
   },
   "normal": {
     "name": "Normal Attack DMG",
-    "type": "percent",
-    "display": {
-      "col": 2,
-      "detail": [
-        "normalelemental",
-        "normalanemo",
-        "normalcryo",
-        "normaldendro",
-        "normalelectro",
-        "normalgeo",
-        "normalhydro",
-        "normalpyro",
-        "normalphysical"
-      ]
-    }
+    "type": "percent"
   },
   "normalalt": {
     "name": "Normal Attack DMG",
@@ -543,21 +468,7 @@
   },
   "charged": {
     "name": "Charged Attack DMG",
-    "type": "percent",
-    "display": {
-      "col": 2,
-      "detail": [
-        "chargedelemental",
-        "chargedanemo",
-        "chargedcryo",
-        "chargeddendro",
-        "chargedelectro",
-        "chargedgeo",
-        "chargedhydro",
-        "chargedpyro",
-        "chargedphysical"
-      ]
-    }
+    "type": "percent"
   },
   "chargedalt": {
     "name": "Charged Attack DMG",
@@ -609,21 +520,7 @@
   },
   "plunge": {
     "name": "Plunge Attack DMG",
-    "type": "percent",
-    "display": {
-      "col": 2,
-      "detail": [
-        "plungeelemental",
-        "plungeanemo",
-        "plungecryo",
-        "plungedendro",
-        "plungeelectro",
-        "plungegeo",
-        "plungehydro",
-        "plungepyro",
-        "plungephysical"
-      ]
-    }
+    "type": "percent"
   },
   "plungealt": {
     "name": "Plunge Attack DMG",
@@ -679,31 +576,15 @@
   },
   "aspeed": {
     "name": "Attack SPD",
-    "type": "percent",
-    "display": { "col": 1 }
+    "type": "percent"
   },
   "mspeed": {
     "name": "Movement SPD",
-    "type": "percent",
-    "display": { "col": 1 }
+    "type": "percent"
   },
   "skill": {
     "name": "Elemental Skill DMG",
-    "type": "percent",
-    "display": {
-      "col": 2,
-      "detail": [
-        "skillelemental",
-        "skillanemo",
-        "skillcryo",
-        "skilldendro",
-        "skillelectro",
-        "skillgeo",
-        "skillhydro",
-        "skillpyro",
-        "skillphysical"
-      ]
-    }
+    "type": "percent"
   },
   "skillalt": {
     "name": "Elemental Skill DMG",
@@ -755,21 +636,7 @@
   },
   "burst": {
     "name": "Elemental Burst DMG",
-    "type": "percent",
-    "display": {
-      "col": 2,
-      "detail": [
-        "burstelemental",
-        "burstanemo",
-        "burstcryo",
-        "burstdendro",
-        "burstelectro",
-        "burstgeo",
-        "bursthydro",
-        "burstpyro",
-        "burstphysical"
-      ]
-    }
+    "type": "percent"
   },
   "burstalt": {
     "name": "Elemental Burst DMG",
@@ -825,28 +692,7 @@
     "labelname": "EM",
     "listname": "EM",
     "type": "flat",
-    "conversion": "flat",
-    "display": {
-      "col": 1,
-      "detail": [
-        "melt",
-        "vaporize",
-        "overload",
-        "burning",
-        "electrocharged",
-        "superconduct",
-        "shatter",
-        "crystalize",
-        "swirl",
-        "rupture",
-        "burgeon",
-        "hyperbloom",
-        "aggravate",
-        "spread"
-      ],
-      "unit": "party_2",
-      "enka": true
-    }
+    "conversion": "flat"
   },
   "elemasterymult": {
     "name": "Elemental Mastery",
@@ -949,12 +795,7 @@
     "shortname": "Energy Recharge",
     "labelname": "ER",
     "listname": "ER",
-    "type": "percent",
-    "display": {
-      "col": 1,
-      "unit": "party_1",
-      "enka": true
-    }
+    "type": "percent"
   },
   "recharge_bonus": {
     "name": "Energy Recharge Bonus",
@@ -962,21 +803,11 @@
   },
   "cdr": {
     "name": "Reduce CD",
-    "type": "percent",
-    "display": { "col": 1 }
+    "type": "percent"
   },
   "all": {
     "name": "All DMG",
-    "type": "percent",
-    "display": { "col": 2 }
-  },
-  "physical": {
-    "name": "Physical DMG",
-    "shortname": "Physical DMG Bonus",
-    "labelname": "PHY",
-    "listname": "Phys",
-    "type": "percent",
-    "display": { "col": 3 }
+    "type": "percent"
   },
   "elemental": {
     "name": "Elemental DMG",
@@ -987,61 +818,60 @@
     "shortname": "Anemo DMG Bonus",
     "labelname": "ANE",
     "listname": "Anemo",
-    "type": "percent",
-    "display": { "col": 3 }
+    "type": "percent"
   },
   "hydro": {
     "name": "Hydro DMG",
     "shortname": "Hydro DMG Bonus",
     "labelname": "HYD",
     "listname": "Hydro",
-    "type": "percent",
-    "display": { "col": 3 }
+    "type": "percent"
   },
   "pyro": {
     "name": "Pyro DMG",
     "shortname": "Pyro DMG Bonus",
     "labelname": "PYR",
     "listname": "Pyro",
-    "type": "percent",
-    "display": { "col": 3 }
+    "type": "percent"
   },
   "cryo": {
     "name": "Cryo DMG",
     "shortname": "Cryo DMG Bonus",
     "labelname": "CRY",
     "listname": "Cryo",
-    "type": "percent",
-    "display": { "col": 3 }
+    "type": "percent"
   },
   "geo": {
     "name": "Geo DMG",
     "shortname": "Geo DMG Bonus",
     "labelname": "GEO",
     "listname": "Geo",
-    "type": "percent",
-    "display": { "col": 3 }
+    "type": "percent"
   },
   "electro": {
     "name": "Electro DMG",
     "shortname": "Electro DMG Bonus",
     "labelname": "ELE",
     "listname": "Electro",
-    "type": "percent",
-    "display": { "col": 3 }
+    "type": "percent"
   },
   "dendro": {
     "name": "Dendro DMG",
     "shortname": "Dendro DMG Bonus",
     "labelname": "DEN",
     "listname": "Dendro",
-    "type": "percent",
-    "display": { "col": 3 }
+    "type": "percent"
+  },
+  "physical": {
+    "name": "Physical DMG",
+    "shortname": "Physical DMG Bonus",
+    "labelname": "PHY",
+    "listname": "Phys",
+    "type": "percent"
   },
   "physicalres": {
     "name": "Physical RES",
-    "type": "percent",
-    "display": { "col": 4 }
+    "type": "percent"
   },
   "elementalres": {
     "name": "Elemental RES",
@@ -1049,46 +879,38 @@
   },
   "anemores": {
     "name": "Anemo RES",
-    "type": "percent",
-    "display": { "col": 4 }
+    "type": "percent"
   },
   "hydrores": {
     "name": "Hydro RES",
-    "type": "percent",
-    "display": { "col": 4 }
+    "type": "percent"
   },
   "pyrores": {
     "name": "Pyro RES",
-    "type": "percent",
-    "display": { "col": 4 }
+    "type": "percent"
   },
   "cryores": {
     "name": "Cryo RES",
-    "type": "percent",
-    "display": { "col": 4 }
+    "type": "percent"
   },
   "geores": {
     "name": "Geo RES",
-    "type": "percent",
-    "display": { "col": 4 }
+    "type": "percent"
   },
   "electrores": {
     "name": "Electro RES",
-    "type": "percent",
-    "display": { "col": 4 }
+    "type": "percent"
   },
   "dendrores": {
     "name": "Dendro RES",
-    "type": "percent",
-    "display": { "col": 4 }
+    "type": "percent"
   },
   "healing": {
     "name": "Healing Bonus",
     "shortname": "Healing",
     "labelname": "HEAL",
     "listname": "Healing",
-    "type": "percent",
-    "display": { "col": 2 }
+    "type": "percent"
   },
   "healing_mult": {
     "name": "Healing Bonus",
@@ -1096,13 +918,11 @@
   },
   "healinginc": {
     "name": "Incoming Healing Bonus",
-    "type": "percent",
-    "display": { "col": 2 }
+    "type": "percent"
   },
   "shield": {
     "name": "Powerful Shield",
-    "type": "percent",
-    "display": { "col": 2 }
+    "type": "percent"
   },
   "shield_mult": {
     "name": "Shield Bonus",
@@ -1212,7 +1032,6 @@
     "name": "Enemy Defense",
     "total_name": "Defense",
     "type": "flat",
-    "display": { "unit": "enemy_1" },
     "svg": "def"
   },
   "enemydef%": {
@@ -1224,14 +1043,12 @@
     "name": "Enemy Damage Reduction",
     "total_name": "DMG Reduction",
     "type": "percent",
-    "display": { "unit": "enemy_2" },
     "svg": "def-p"
   },
   "enemyphysicalres": {
     "name": "Enemy Physical RES",
     "total_name": "Physical RES",
     "type": "percent",
-    "display": { "unit": "enemy_1" },
     "svg": "atk"
   },
   "enemyelementalres": {
@@ -1242,49 +1059,42 @@
     "name": "Enemy Anemo RES",
     "total_name": "Anemo RES",
     "type": "percent",
-    "display": { "unit": "enemy_1" },
     "svg": "anemo"
   },
   "enemycryores": {
     "name": "Enemy Cryo RES",
     "total_name": "Cryo RES",
     "type": "percent",
-    "display": { "unit": "enemy_1" },
     "svg": "cryo"
   },
   "enemydendrores": {
     "name": "Enemy Dendro RES",
     "total_name": "Dendro RES",
     "type": "percent",
-    "display": { "unit": "enemy_1" },
     "svg": "dendro"
   },
   "enemygeores": {
     "name": "Enemy Geo RES",
     "total_name": "Geo RES",
     "type": "percent",
-    "display": { "unit": "enemy_2" },
     "svg": "geo"
   },
   "enemyelectrores": {
     "name": "Enemy Electro RES",
     "total_name": "Electro RES",
     "type": "percent",
-    "display": { "unit": "enemy_2" },
     "svg": "electro"
   },
   "enemyhydrores": {
     "name": "Enemy Hydro RES",
     "total_name": "Hydro RES",
     "type": "percent",
-    "display": { "unit": "enemy_2" },
     "svg": "hydro"
   },
   "enemypyrores": {
     "name": "Enemy Pyro RES",
     "total_name": "Pyro RES",
     "type": "percent",
-    "display": { "unit": "enemy_2" },
     "svg": "pyro"
   }
 }
