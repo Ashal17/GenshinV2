@@ -25,9 +25,9 @@
         padding: 1px;
     }
 
-    .frame_equipment .prompt_select_options {
-        grid-template-columns: repeat(auto-fill, 100px);
-    }
+.prompt_equipment_select .prompt_select_options {
+    grid-template-columns: repeat(auto-fill, 100px);
+}
 
     .equipment_icon {
         position: relative;
@@ -200,7 +200,6 @@
     color: var(--yellow);
 }
 
-
 .prompt_select_options .equipment_img {
     height: 90px;
     width: 90px;
@@ -239,11 +238,15 @@
         border-bottom: 1px solid var(--orange-bg);
     }
 
+.prompt_equipment_select {
+    min-width: 600px;
+}
+
 .artifact_storage_column {
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
     width: 100%;
-    grid-template-columns: repeat(auto-fill, 300px);
     position: relative;
 }
 
@@ -256,82 +259,194 @@
     position: relative;
 }
 
-.artifact_storage_row, .artifact_storage_btns {
+.artifact_storage_filter_container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    background-color: var(--grey-20);
+    margin: 5px;
     align-items:center;
-    justify-content:space-around;
+    justify-content:space-between;
+}
+
+.artifact_storage_filter_header {
+    padding: 5px 5px 0px 5px;
+    color: var(--white);
 }
 
 .artifact_storage_row {
-    margin: 5px;
-    background-color: var(--grey-20);
-    padding: 5px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    min-width:270px;
-    max-width: 300px;
+    justify-content: space-around;
     flex: 1 1;
-    justify-content:space-between;
-    position:relative;
+    max-width: calc(100% - 10px);
+    position: relative;
+    padding: 0px 3px;
 }
+
+    .artifact_storage_row:nth-child(n + 3) {
+        border-top: 1px dashed var(--grey-40);
+    }
+
+    .artifact_storage_row:nth-child(2) {
+        border-top: 1px solid var(--grey-40);
+    }
 
     .artifact_storage_row .equipment_icon {
         margin: 0px;
-        //position: initial;
     }
 
-    .artifact_storage_row .equipment_img, .artifact_storage_filter_set .equipment_img {
+@media only screen and (min-width: 1055px) {
+    .artifact_storage_stats {
+        border-left: 1px solid var(--grey-40);
+        border-right: 1px solid var(--grey-40);
+    }
+        .artifact_storage_stats .statline:nth-child(8) {
+            border-left: 1px dashed var(--grey-40);
+        }
+}
+
+@media only screen and (max-width: 1055px) {
+    .artifact_storage_row {
+        display: grid;
+        grid-template-columns: 26px calc(100% - 26px - 64px) 64px;
+    }
+
+    .artifact_storage_row > div:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .artifact_storage_row > div:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .artifact_storage_row > div:nth-child(3) {
+        grid-column: 1 / span 3;
+        grid-row: 2;
+    }
+
+    .artifact_storage_row > div:nth-child(4) {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .artifact_storage_row .equipment_icon {
+        margin-left: 5px;
+    }
+    .artifact_storage_stats {
+        width:563px;
+    }
+    .artifact_storage_btns {
+        justify-content:flex-end;
+    }
+}
+
+
+
+    .artifact_storage_row .equipment_img {
+        margin: 0px;
+        height: 26px;
+        width: 26px;
+        border-radius: 5px;
+        cursor: help;
+    }
+
+    .artifact_storage_filter_set .equipment_img {
         margin: 0px;
         height: 56px;
         width: 56px;
     }
 
-
     .artifact_storage_row .label_img, .artifact_storage_row .img_svg, .artifact_storage_row .img_button {
         height: 21px;
     }
 
-    .artifact_storage_row .statline {
-        padding: 2px 4px;        
-        flex: none;
-        height: calc(50% - 4px);
+    .artifact_storage_row:first-child .artifact_storage_name {
+        color: var(--yellow);
     }
 
-    .artifact_storage_main_col {
+    .artifact_storage_name {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 300px;
+        padding: 5px;
+    }
+
+    .artifact_storage_stats {
         display: flex;
-        flex-direction: column;
-        width: 80px;
-        height: 56px;
+        flex-direction: row;
     }
 
-.artifact_storage_sub_col {
+.artifact_storage_sub_stats {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 160px;
-    height: 56px;
+    flex: 1 1;
+    border-left: 1px dashed var(--grey-40);
 }
 
-    .artifact_storage_sub_col .statline {
-        width: calc(50% - 8px);
-    }
+.artifact_storage_compare {
+    display: flex;
+    flex-direction: row;
+}
+
+.artifact_storage_stats .statline {
+    width: 70px;
+    padding: 5px;
+    flex: none;
+}
+
+            .artifact_storage_stats > .statline:first-child p:nth-child(2) {
+                color: var(--white);
+            }
+
+.artifact_storage_sub_stats .statline:nth-child(5) p:nth-child(2), .artifact_storage_sub_stats .statline:nth-child(6) p:nth-child(2) {
+    color: var(--orange);
+}
+
+.artifact_storage_sub_stats > .statline:nth-child(5) {
+    border-left: 1px dashed var(--grey-40);
+}
+.artifact_storage_sub_stats > .statline:nth-child(6) {
+    border-right: 1px dashed var(--grey-40);
+}
+
+            .artifact_storage_stats .statline.diminish .img_icon, .artifact_storage_stats .statline.diminish p {
+                opacity: 0.4;
+            }
+
+            .artifact_storage_stats .statline.neutral p:nth-child(2) {
+                color: var(--white);
+            }
+
+            .artifact_storage_stats .statline.positive p:nth-child(2) {
+                color: var(--green-light);
+            }
+
+            .artifact_storage_stats .statline.negative p:nth-child(2) {
+                color: var(--red-light);
+            }
 
     .artifact_storage_btns {
         padding: 2px;
-        height: calc(50% - 4px);
+        width: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
-.artifact_storage_filter_set, .artifact_storage_filter_main_stat, .artifact_storage_filter_sub_stats {
-    display: flex;
-    flex-direction: row;
-    margin: 5px;
-    background-color: var(--grey-20);
-    padding: 5px;
-    align-items: center;
-}
+    .artifact_storage_filter_set, .artifact_storage_filter_main_stat, .artifact_storage_filter_sub_stats {
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        align-items: center;
+    }
 
-    .artifact_storage_filter_set .new_button {
+    .artifact_storage_filter_container .new_button {
         margin: 2px;
     }
 
@@ -340,7 +455,7 @@
     }
 
     .artifact_storage_filter_set .equipment_icon {
-        margin-right:5px;
+        margin-right: 5px;
     }
 
         .artifact_storage_filter_set .equipment_icon:hover .equipment_img,
@@ -349,55 +464,59 @@
             opacity: 0.5;
         }
 
-.artifact_storage_filter_stat_icon .img_button:hover .img_button_hover:not(:hover) {
-    display: flex;
-}
-
-.artifact_storage_filter_set .equipment_icon:hover::before,
-.artifact_storage_filter_stat_icon .img_button:hover::before {
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    -webkit-mask-size: contain;
-    background-color: var(--white);
-    content: '';
-    display: block;
-    -webkit-mask-image: url(../../images/svg/delete-forever.svg);
-    mask-image: url(../../images/svg/delete-forever.svg);
-    width: 70%;
-    height: 70%;
-    position: absolute;
-    left: 15%;
-    top: 15%;
-    z-index: 2;
-    opacity: 1;
-    pointer-events: none;
-}
-
-        .tooltip_artifact {
-            width: 200px;
-        }
-
-.artifact_storage_header_column .prompt_values {
-    width: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.artifact_storage_filter_stat_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--grey-15);
-    border-radius:10px;
-    flex-direction:row;
-}
-
-    .artifact_storage_filter_stat_container:not(:first-child) {
-        margin-left:5px;
+    .artifact_storage_filter_stat_icon .img_button:hover .img_button_hover:not(:hover) {
+        display: flex;
     }
+
+    .artifact_storage_filter_set .equipment_icon:hover::before,
+    .artifact_storage_filter_stat_icon .img_button:hover::before {
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: contain;
+        background-color: var(--white);
+        content: '';
+        display: block;
+        -webkit-mask-image: url(../../images/svg/delete-forever.svg);
+        mask-image: url(../../images/svg/delete-forever.svg);
+        width: 70%;
+        height: 70%;
+        position: absolute;
+        left: 15%;
+        top: 15%;
+        z-index: 2;
+        opacity: 1;
+        pointer-events: none;
+    }
+
+    .tooltip_artifact {
+        width: 200px;
+    }
+
+.artifact_storage_header_column .prompt_select {
+    width: 97%;
+}
+
+    .artifact_storage_header_column .prompt_values {
+        width: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .artifact_storage_filter_stat_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--grey-15);
+        border-radius: 10px;
+        flex-direction: row;
+    }
+
+        .artifact_storage_filter_stat_container:not(:first-child) {
+            margin-left: 5px;
+        }
 
     .artifact_storage_filter_stat_icon .img_button {
         height: 56px;
@@ -407,25 +526,25 @@
         justify-content: center;
     }
 
-    .artifact_storage_filter_stat_icon .img_button .img_icon {
-        height: 70%;
-        width: 70%;
-    }
-
-        .artifact_storage_filter_stat_container .img_button:hover .img_icon.svg:before {
-            background-color: var(--orange-bg);
+        .artifact_storage_filter_stat_icon .img_button .img_icon {
+            height: 70%;
+            width: 70%;
         }
 
-.artifact_filter_sub_val_container {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-    position: relative;
-    height: 46px;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-}
+    .artifact_storage_filter_stat_container .img_button:hover .img_icon.svg:before, .artifact_storage_filter_main_stat .img_button:hover .img_icon.svg:before {
+        background-color: var(--orange-bg);
+    }
+
+    .artifact_filter_sub_val_container {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        position: relative;
+        height: 46px;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
 
     .artifact_storage_filter_sub_stats .prompt_input_simple {
         width: 64px;
@@ -438,235 +557,235 @@
         height: calc(50% - 4px);
     }
 
-.artifact_filter_sub_val_move {
-    height: 50%;
-    display:flex;
-    flex-direction:row;
-}
-
-.artifact_storage_filter_stat_container:first-child .artifact_filter_sub_val_move .img_button .svg-chevron-left::before,
-.artifact_storage_filter_stat_container:nth-last-child(-n + 1 of .artifact_storage_filter_stat_container) .img_button .svg-chevron-right::before {
-    cursor: default;
-    background-color: var(--grey-30);
-}
-
-.artifact_storage_filter_stat_container:first-child .artifact_filter_sub_val_move .img_button .svg-chevron-left,
-.artifact_storage_filter_stat_container:nth-last-child(-n + 1 of .artifact_storage_filter_stat_container) .img_button .svg-chevron-right {
-    pointer-events: none;
-}
-
-
-.tooltip_weapon {
-    width: 300px;
-}
-
-    .tooltip_artifact .tooltip_header_text, .tooltip_weapon .tooltip_header_text {
-        text-align: center;
-        width: calc(100% - 58px);
+    .artifact_filter_sub_val_move {
+        height: 50%;
+        display: flex;
+        flex-direction: row;
     }
 
-    .tooltip_artifact .equipment_img, .tooltip_weapon .equipment_img {
-        width: 54px;
-        height: 54px;
+    .artifact_storage_filter_stat_container:first-child .artifact_filter_sub_val_move .img_button .svg-chevron-left::before,
+    .artifact_storage_filter_stat_container:nth-last-child(-n + 1 of .artifact_storage_filter_stat_container) .img_button .svg-chevron-right::before {
+        cursor: default;
+        background-color: var(--grey-30);
     }
 
-    .tooltip_artifact .artifact_main, .tooltip_weapon .statline:nth-child(3) {
-        border-bottom: 1px solid var(--grey-50);
-        margin-bottom: 2px;
-        padding-bottom: 4px;
-        padding-top: 4px;
+    .artifact_storage_filter_stat_container:first-child .artifact_filter_sub_val_move .img_button .svg-chevron-left,
+    .artifact_storage_filter_stat_container:nth-last-child(-n + 1 of .artifact_storage_filter_stat_container) .img_button .svg-chevron-right {
+        pointer-events: none;
     }
 
-.weapon_effect {
-    font-size:0.8em;
-    padding:2px;
-}
+
+    .tooltip_weapon {
+        width: 300px;
+    }
+
+        .tooltip_artifact .tooltip_header_text, .tooltip_weapon .tooltip_header_text {
+            text-align: center;
+            width: calc(100% - 58px);
+        }
+
+        .tooltip_artifact .equipment_img, .tooltip_weapon .equipment_img {
+            width: 54px;
+            height: 54px;
+        }
+
+        .tooltip_artifact .artifact_main, .tooltip_weapon .statline:nth-child(3) {
+            border-bottom: 1px solid var(--grey-50);
+            margin-bottom: 2px;
+            padding-bottom: 4px;
+            padding-top: 4px;
+        }
+
+    .weapon_effect {
+        font-size: 0.8em;
+        padding: 2px;
+    }
 
     .weapon_level.l0 {
         background: transparent;
     }
 
-.weapon_level.l1 {
-    background-image: linear-gradient(to right, var(--orange-bg) 7%, transparent 0%);
-}
+    .weapon_level.l1 {
+        background-image: linear-gradient(to right, var(--orange-bg) 7%, transparent 0%);
+    }
 
-.weapon_level.l2 {
-    background-image: linear-gradient(to right, var(--orange-bg) 15%, transparent 0%);
-}
+    .weapon_level.l2 {
+        background-image: linear-gradient(to right, var(--orange-bg) 15%, transparent 0%);
+    }
 
-.weapon_level.l3 {
-    background-image: linear-gradient(to right, var(--orange-bg) 22%, transparent 0%);
-}
+    .weapon_level.l3 {
+        background-image: linear-gradient(to right, var(--orange-bg) 22%, transparent 0%);
+    }
 
-.weapon_level.l4 {
-    background-image: linear-gradient(to right, var(--orange-bg) 30%, transparent 0%);
-}
+    .weapon_level.l4 {
+        background-image: linear-gradient(to right, var(--orange-bg) 30%, transparent 0%);
+    }
 
-.weapon_level.l5 {
-    background-image: linear-gradient(to right, var(--orange-bg) 37%, transparent 0%);
-}
+    .weapon_level.l5 {
+        background-image: linear-gradient(to right, var(--orange-bg) 37%, transparent 0%);
+    }
 
-.weapon_level.l6 {
-    background-image: linear-gradient(to right, var(--orange-bg) 45%, transparent 0%);
-}
+    .weapon_level.l6 {
+        background-image: linear-gradient(to right, var(--orange-bg) 45%, transparent 0%);
+    }
 
-.weapon_level.l7 {
-    background-image: linear-gradient(to right, var(--orange-bg) 52%, transparent 0%);
-}
+    .weapon_level.l7 {
+        background-image: linear-gradient(to right, var(--orange-bg) 52%, transparent 0%);
+    }
 
-.weapon_level.l8 {
-    background-image: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
-}
+    .weapon_level.l8 {
+        background-image: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
+    }
 
-.weapon_level.l9 {
-    background-image: linear-gradient(to right, var(--orange-bg) 67%, transparent 0%);
-}
+    .weapon_level.l9 {
+        background-image: linear-gradient(to right, var(--orange-bg) 67%, transparent 0%);
+    }
 
-.weapon_level.l10 {
-    background-image: linear-gradient(to right, var(--orange-bg) 75%, transparent 0%);
-}
+    .weapon_level.l10 {
+        background-image: linear-gradient(to right, var(--orange-bg) 75%, transparent 0%);
+    }
 
-.weapon_level.l11 {
-    background-image: linear-gradient(to right, var(--orange-bg) 82%, transparent 0%);
-}
+    .weapon_level.l11 {
+        background-image: linear-gradient(to right, var(--orange-bg) 82%, transparent 0%);
+    }
 
-.weapon_level.l12 {
-    background-image: linear-gradient(to right, var(--orange-bg) 90%, transparent 0%);
-}
+    .weapon_level.l12 {
+        background-image: linear-gradient(to right, var(--orange-bg) 90%, transparent 0%);
+    }
 
-.weapon_level.l13 {
-    background: var(--orange-bg);
-}
+    .weapon_level.l13 {
+        background: var(--orange-bg);
+    }
 
-.weapon_refine.r0 {
-    background: transparent;
-}
+    .weapon_refine.r0 {
+        background: transparent;
+    }
 
-.weapon_refine.r1 {
-    background-image: linear-gradient(to right, var(--orange-bg) 25%, transparent 0%);
-}
+    .weapon_refine.r1 {
+        background-image: linear-gradient(to right, var(--orange-bg) 25%, transparent 0%);
+    }
 
-.weapon_refine.r2 {
-    background-image: linear-gradient(to right, var(--orange-bg) 50%, transparent 0%);
-}
+    .weapon_refine.r2 {
+        background-image: linear-gradient(to right, var(--orange-bg) 50%, transparent 0%);
+    }
 
-.weapon_refine.r3 {
-    background-image: linear-gradient(to right, var(--orange-bg) 75%, transparent 0%);
-}
+    .weapon_refine.r3 {
+        background-image: linear-gradient(to right, var(--orange-bg) 75%, transparent 0%);
+    }
 
-.weapon_refine.r4 {
-    background: var(--orange-bg);
-}
+    .weapon_refine.r4 {
+        background: var(--orange-bg);
+    }
 
-.artifact_stars.s0 {
-    background: transparent;
-}
+    .artifact_stars.s0 {
+        background: transparent;
+    }
 
-.artifact_stars.s1 {
-    background-image: linear-gradient(to right, var(--orange-bg) 20%, transparent 0%);
-}
+    .artifact_stars.s1 {
+        background-image: linear-gradient(to right, var(--orange-bg) 20%, transparent 0%);
+    }
 
-.artifact_stars.s2 {
-    background-image: linear-gradient(to right, var(--orange-bg) 40%, transparent 0%);
-}
+    .artifact_stars.s2 {
+        background-image: linear-gradient(to right, var(--orange-bg) 40%, transparent 0%);
+    }
 
-.artifact_stars.s3 {
-    background-image: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
-}
+    .artifact_stars.s3 {
+        background-image: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
+    }
 
-.artifact_stars.s4 {
-    background-image: linear-gradient(to right, var(--orange-bg) 80%, transparent 0%);
-}
+    .artifact_stars.s4 {
+        background-image: linear-gradient(to right, var(--orange-bg) 80%, transparent 0%);
+    }
 
-.artifact_stars.s5 {
-    background: var(--orange-bg);
-}
+    .artifact_stars.s5 {
+        background: var(--orange-bg);
+    }
 
-.artifact_level.l0, .artifact_level.l1, .artifact_level.l2, .artifact_level.l3 {
-    background: transparent;
-}
+    .artifact_level.l0, .artifact_level.l1, .artifact_level.l2, .artifact_level.l3 {
+        background: transparent;
+    }
 
-.artifact_level.l4, .artifact_level.l5, .artifact_level.l6, .artifact_level.l7 {
-    background-image: linear-gradient(to right, var(--orange-bg) 20%, transparent 0%);
-}
+    .artifact_level.l4, .artifact_level.l5, .artifact_level.l6, .artifact_level.l7 {
+        background-image: linear-gradient(to right, var(--orange-bg) 20%, transparent 0%);
+    }
 
-.artifact_level.l8, .artifact_level.l9, .artifact_level.l10, .artifact_level.l11 {
-    background-image: linear-gradient(to right, var(--orange-bg) 40%, transparent 0%);
-}
+    .artifact_level.l8, .artifact_level.l9, .artifact_level.l10, .artifact_level.l11 {
+        background-image: linear-gradient(to right, var(--orange-bg) 40%, transparent 0%);
+    }
 
-.artifact_level.l12, .artifact_level.l13, .artifact_level.l14, .artifact_level.l15 {
-    background-image: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
-}
+    .artifact_level.l12, .artifact_level.l13, .artifact_level.l14, .artifact_level.l15 {
+        background-image: linear-gradient(to right, var(--orange-bg) 60%, transparent 0%);
+    }
 
-.artifact_level.l16, .artifact_level.l17, .artifact_level.l18, .artifact_level.l19 {
-    background-image: linear-gradient(to right, var(--orange-bg) 80%, transparent 0%);
-}
+    .artifact_level.l16, .artifact_level.l17, .artifact_level.l18, .artifact_level.l19 {
+        background-image: linear-gradient(to right, var(--orange-bg) 80%, transparent 0%);
+    }
 
-.artifact_level.l20 {
-    background: var(--orange-bg);
-}
+    .artifact_level.l20 {
+        background: var(--orange-bg);
+    }
 
-.artifact_sub.rv0 {
-    background: transparent;
-}
+    .artifact_sub.rv0 {
+        background: transparent;
+    }
 
-.artifact_sub.rv1 {
-    background-image: linear-gradient(to right, var(--orange-bg) 16%, transparent 0%);
-}
+    .artifact_sub.rv1 {
+        background-image: linear-gradient(to right, var(--orange-bg) 16%, transparent 0%);
+    }
 
-.artifact_sub.rv2 {
-    background-image: linear-gradient(to right, var(--orange-bg) 33%, transparent 0%);
-}
+    .artifact_sub.rv2 {
+        background-image: linear-gradient(to right, var(--orange-bg) 33%, transparent 0%);
+    }
 
-.artifact_sub.rv3 {
-    background-image: linear-gradient(to right, var(--orange-bg) 50%, transparent 0%);
-}
+    .artifact_sub.rv3 {
+        background-image: linear-gradient(to right, var(--orange-bg) 50%, transparent 0%);
+    }
 
-.artifact_sub.rv4 {
-    background-image: linear-gradient(to right, var(--orange-bg) 67%, transparent 0%);
-}
+    .artifact_sub.rv4 {
+        background-image: linear-gradient(to right, var(--orange-bg) 67%, transparent 0%);
+    }
 
-.artifact_sub.rv5 {
-    background-image: linear-gradient(to right, var(--orange-bg) 84%, transparent 0%);
-}
+    .artifact_sub.rv5 {
+        background-image: linear-gradient(to right, var(--orange-bg) 84%, transparent 0%);
+    }
 
-.artifact_sub.rv6 {
-    background: var(--orange-bg);
-}
+    .artifact_sub.rv6 {
+        background: var(--orange-bg);
+    }
 
 
-.img_stars_1 .equipment_img {
-    background-image: linear-gradient(to bottom right, #4f5864, #838f99);
-}
+    .img_stars_1 .equipment_img {
+        background-image: linear-gradient(to bottom right, #4f5864, #838f99);
+    }
 
-.img_stars_2 .equipment_img {
-    background-image: linear-gradient(to bottom right, #48575c, #5e966c);
-}
+    .img_stars_2 .equipment_img {
+        background-image: linear-gradient(to bottom right, #48575c, #5e966c);
+    }
 
-.img_stars_3 .equipment_img {
-    background-image: linear-gradient(to bottom right, #515474, #499fb3);
-}
+    .img_stars_3 .equipment_img {
+        background-image: linear-gradient(to bottom right, #515474, #499fb3);
+    }
 
-.img_stars_4 .equipment_img {
-    background-image: linear-gradient(to bottom right, #595482, #b886ca);
-}
+    .img_stars_4 .equipment_img {
+        background-image: linear-gradient(to bottom right, #595482, #b886ca);
+    }
 
-.img_stars_5 .equipment_img {
-    background-image: linear-gradient(to bottom right, #695453, #e6ac54);
-}
+    .img_stars_5 .equipment_img {
+        background-image: linear-gradient(to bottom right, #695453, #e6ac54);
+    }
 
-.img_stars_3_2_1 .equipment_img {
-    background: linear-gradient(to bottom right, #515474, #499fb3) left/33%, linear-gradient(to bottom right, #4f5864, #838f99) right/33%, linear-gradient(to bottom right, #48575c, #5e966c);
-    background-repeat: no-repeat;
-}
+    .img_stars_3_2_1 .equipment_img {
+        background: linear-gradient(to bottom right, #515474, #499fb3) left/33%, linear-gradient(to bottom right, #4f5864, #838f99) right/33%, linear-gradient(to bottom right, #48575c, #5e966c);
+        background-repeat: no-repeat;
+    }
 
-.img_stars_4_3 .equipment_img {
-    background: linear-gradient(to bottom right, #595482, #b886ca) left/50%, linear-gradient(to bottom right, #515474, #499fb3) right/50%;
-    background-repeat: no-repeat;
-}
+    .img_stars_4_3 .equipment_img {
+        background: linear-gradient(to bottom right, #595482, #b886ca) left/50%, linear-gradient(to bottom right, #515474, #499fb3) right/50%;
+        background-repeat: no-repeat;
+    }
 
-.img_stars_5_4 .equipment_img {
-    background: linear-gradient(to bottom right, #695453, #e6ac54) left/50%, linear-gradient(to bottom right, #595482, #b886ca) right/50%;
-    background-repeat: no-repeat;
-}
+    .img_stars_5_4 .equipment_img {
+        background: linear-gradient(to bottom right, #695453, #e6ac54) left/50%, linear-gradient(to bottom right, #595482, #b886ca) right/50%;
+        background-repeat: no-repeat;
+    }
 

@@ -535,15 +535,18 @@
     .char_storage_equip {
         justify-self: center;
     }
+    .char_storage_btns {
+        justify-content: flex-end;
+    }
 }
 
-    .char_storage_row:not(:first-child) {
-        border-top: 1px dashed var(--grey-40);
-    }
+.char_storage_row:not(:first-child) {
+    border-top: 1px dashed var(--grey-40);
+}
 
-    .char_storage_row .label_img, .char_storage_row .img_svg, .char_storage_row .img_button {
-        height: 21px;
-    }
+.char_storage_row .label_img, .char_storage_row .img_svg, .char_storage_row .img_button {
+    height: 21px;
+}
 
 .char_storage_row_name {
     flex: 1 1;

@@ -3,7 +3,7 @@
 session_start();
 
 require_once "../../config/config_db.php";
-require_once "../../account/auth/token_auth.php";
+require_once "../../php/account/token_auth.php";
 
 header('Content-Type: application/json; charset=utf-8');
 
@@ -29,7 +29,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 					} else {		
 						$errormessage = "Error when reading query result";
 					}				
-			 }else {
+			}else {
 				$responseobj=array(
 					"storage_objects" => null,
 					"artifact_storage_objects" => null,

@@ -75,17 +75,32 @@
     font-size: 0.9em;
 }
 
-.effect_toggle {
-    display: flex;
-    height: 20px;
-    width: 20px;
-    border: 2px solid var(--orange-bg);
+.effect_row.disabled {
+    opacity:60%;
+}
+
+    .effect_row.disabled .effect_toggle {
+        opacity: 60%;
+    }
+
+    .effect_row.disabled .icon_selects {
+        cursor:initial;
+    }
+
+    .effect_toggle {
+        display: flex;
+        height: 20px;
+        width: 20px;
+        border: 2px solid var(--orange-bg);
+    }
+
+.effect_row:not(.disabled) .effect_toggle {
     cursor: pointer;
 }
 
-    .effect_toggle:hover {
-        border-color:var(--orange-bg-glow);
-    }
+.effect_row:not(.disabled) .effect_toggle:hover {
+    border-color: var(--orange-bg-glow);
+}
 
     .effect_toggle.active {
         background-color: var(--orange-bg);

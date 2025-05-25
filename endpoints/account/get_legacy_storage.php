@@ -3,7 +3,7 @@
 session_start();
 
 require_once "../../config/config_db.php";
-require_once "../../account/auth/token_auth.php";
+require_once "../../php/account/token_auth.php";
 
 header('Content-Type: application/json; charset=utf-8');
 

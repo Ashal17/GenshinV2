@@ -10,34 +10,25 @@ header('Content-Type: application/json; charset=utf-8');
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 
 	$user_id = $_SESSION["id"];
-	$input = file_get_contents("php://input");
+	$input = json_decode(file_get_contents("php://input"));
+	$share_link = $input ->share_link;
 	$errormessage = false;
 	$errorcode = 500;
 
-	if (strlen($input) > 52428800){
-		$errorcode = 400;
-		$errormessage = "Input data is too large: " . strlen($input) . "B";
-	} else {
-		$sql = "UPDATE genshin_users SET storage_objects = ? WHERE id = ?";
-
-		if($input){
-			if($stmt = mysqli_prepare($link, $sql)){
-				mysqli_stmt_bind_param($stmt, "si", $param_input, $param_userid);
-				$param_userid = $user_id;
-				$param_input = $input;
-				if (mysqli_stmt_execute($stmt)){
-					//success
-				} else {
-					$errormessage = "Error when updating storage data";
-				}
-			} else {		
-				$errormessage = "Error when updating storage data";
-			}
-
+	$sql = "UPDATE genshin_shares SET active = 0 WHERE user_id = ? AND BINARY share_link = ?";
+	if($stmt = mysqli_prepare($link, $sql)){
+		mysqli_stmt_bind_param($stmt, "is", $param_userid, $param_link);
+		$param_userid = $user_id;
+		$param_link = $share_link;
+		if (mysqli_stmt_execute($stmt)){
+			$responseobj = array(
+				"deleted_share" =>  $share_link,
+			);
 		} else {
-			$errorcode = 400;
-			$errormessage = "No input storage data provided";
+			$errormessage = "Error when deleting Share";
 		}
+	} else {		
+		$errormessage = "Error when deleting Share";
 	}
 
 	mysqli_close($link);				
@@ -51,7 +42,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 		}		
 	} else {
 		http_response_code(200);
-		echo '{"code":200, "error":"-", "message":"Success"}';
+		echo '{"code":200, "error":"-", "message":' . json_encode($responseobj) .'}';
 	}
 				
 	

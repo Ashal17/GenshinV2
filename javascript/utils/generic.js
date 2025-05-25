@@ -45,10 +45,10 @@ function utils_array_sort(arr, key) {
     if (key) {
         if (Array.isArray(key)) {
             for (var i = 0; i < key.length; i++) {
-                arr.sort((a, b) => (a[key[i]] > b[key[i]]) ? 1 : -1)
+                arr = utils_array_sort(arr, key[i]);
             }
         } else {
-            arr.sort((a, b) => (a[key] > b[key]) ? 1 : -1)
+            arr.sort((a, b) => (utils_object_get_value(a, key) > utils_object_get_value(b, key)) ? 1 : -1);
         }
 
     } else {
@@ -126,17 +126,18 @@ function utils_random_alphanumerical(length) {
     return result;
 }
 
-function utils_number_format(num, round = null) {
+function utils_number_format(num, round = null, short = false) {
 
     if (num) {
         if (round != null) {
             num = utils_number_round(num, round);
         }
-
-        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1&nbsp;").replace(/(-)(?=(\d))/g, "$1&nbsp;");
-    } else {
-        return num;
+        num = num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1&nbsp;");
+        if (!short) {
+            num = num.replace(/(-)(?=(\d))/g, "$1&nbsp;");
+        }
     }
+    return num;
 }
 
 function utils_number_check_decimal_scale(num) {

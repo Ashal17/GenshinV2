@@ -14,16 +14,31 @@ function equip_effects_change_trigger() {
     equip_storage_save_last();
 }
 
-function equip_effects_change_new_manual() {
-    user_objects.user_party[user_objects.user_active_character].effects.push(
-        { "id": 0, "option": 0, "selected": true, "manual": true }
-    );
+function equip_effects_change_skill_trigger(skill_index) {
+    equip_effects_display_all(skill_index);
+}
+
+function equip_effects_change_new_manual(skill_index) {
+    if (skill_index === null) {
+        user_objects.user_party[user_objects.user_active_character].effects.push(
+            { "id": 0, "option": 0, "selected": true, "manual": true, "skill_index": skill_index }
+        );
+    } else {
+        user_objects.user_party[user_objects.user_active_character].active_skills[skill_index].effects.push(
+            { "id": 0, "option": 0, "selected": true, "manual": true, "skill_index": skill_index }
+        );
+        equip_effects_change_skill_trigger(skill_index);
+    }
+    
     equip_effects_change_trigger();
 }
 
-function equip_effects_change_delete_manual(delete_index) {
-
-    var user_effects = user_objects.user_party[user_objects.user_active_character].effects;
+function equip_effects_change_delete_manual(delete_index, skill_index) {
+    if (skill_index === null) {
+        var user_effects = user_objects.user_party[user_objects.user_active_character].effects;
+    } else {
+        var user_effects = user_objects.user_party[user_objects.user_active_character].active_skills[skill_index].effects;
+    }
 
     var index = 0;
     for (var i = 0; i < user_effects.length; i++) {
@@ -36,12 +51,24 @@ function equip_effects_change_delete_manual(delete_index) {
             }
         }
     }
+    if (skill_index !== null) {
+        equip_effects_change_skill_trigger(skill_index);
+    }
 
     equip_effects_change_trigger();
 }
 
 function equip_effects_change_manual(selected_id, manual_index) {
-    var user_effects = user_objects.user_party[user_objects.user_active_character].effects;
+
+    var skill_index = null;
+    if (typeof manual_index === "string") {
+        var manual_index_split = manual_index.split("_");
+        manual_index = parseInt(manual_index_split[1]);
+        skill_index = parseInt(manual_index_split[0])
+        var user_effects = user_objects.user_party[user_objects.user_active_character].active_skills[skill_index].effects;
+    } else { 
+        var user_effects = user_objects.user_party[user_objects.user_active_character].effects;
+    }
 
     var index = 0;
     for (var i = 0; i < user_effects.length; i++) {
@@ -55,13 +82,24 @@ function equip_effects_change_manual(selected_id, manual_index) {
             }
         }
     }
+    if (skill_index !== null) {
+        equip_effects_change_skill_trigger(skill_index);
+    }
 
     equip_effects_change_trigger();
 }
 
 function equip_effects_change_manual_option(option, manual_index) {
 
-    var user_effects = user_objects.user_party[user_objects.user_active_character].effects;
+    var skill_index = null;
+    if (typeof manual_index === "string") {
+        var manual_index_split = manual_index.split("_");
+        manual_index = parseInt(manual_index_split[1]);
+        skill_index = parseInt(manual_index_split[0])
+        var user_effects = user_objects.user_party[user_objects.user_active_character].active_skills[skill_index].effects;
+    } else {
+        var user_effects = user_objects.user_party[user_objects.user_active_character].effects;
+    }
 
     var index = 0;
     for (var i = 0; i < user_effects.length; i++) {
@@ -74,6 +112,9 @@ function equip_effects_change_manual_option(option, manual_index) {
             }
         }
     }
+    if (skill_index !== null) {
+        equip_effects_change_skill_trigger(skill_index);
+    }
 
     equip_effects_change_trigger();
 }
@@ -81,8 +122,13 @@ function equip_effects_change_manual_option(option, manual_index) {
 function equip_effects_change_option(option, possible_eff) {
     var effect_id = possible_eff.id;
     var source_party = possible_eff.source_party;
+    var skill_index = possible_eff.skill_index;
 
-    var user_effects = user_objects.user_party[user_objects.user_active_character].effects;
+    if (skill_index === null) {
+        var user_effects = user_objects.user_party[user_objects.user_active_character].effects;
+    } else {
+        var user_effects = user_objects.user_party[user_objects.user_active_character].active_skills[skill_index].effects;
+    }
 
     var index = -1
     for (var i = 0; i < user_effects.length; i++) {
@@ -96,15 +142,23 @@ function equip_effects_change_option(option, possible_eff) {
         user_effects[index].option = option;        
     } else {
         user_effects.push(
-            { "id": effect_id, "option": option, "selected": false, "manual": false, "source_party": source_party }
-        );
+            { "id": effect_id, "option": option, "selected": false, "manual": false, "source_party": source_party, "skill_index": skill_index }
+        );        
+    }
+    if (skill_index !== null) {
+        equip_effects_change_skill_trigger(skill_index);
     }
     equip_effects_change_trigger();
 }
 
-function equip_effects_change_selected(possible_eff) {
+function equip_effects_change_selected(possible_eff, skill_index) {
 
-    var user_effects = user_objects.user_party[user_objects.user_active_character].effects;
+    if (skill_index === null) {
+        var user_effects = user_objects.user_party[user_objects.user_active_character].effects;
+    } else {
+        var user_effects = user_objects.user_party[user_objects.user_active_character].active_skills[skill_index].effects;
+    }
+
     var effect_id = possible_eff.id;
     var source_party = possible_eff.source_party;
 
@@ -135,14 +189,18 @@ function equip_effects_change_selected(possible_eff) {
         user_effects[index].selected = !user_effects[index].selected;      
     } else {
         user_effects.push(
-            { "id": effect_id, "option": 0, "selected": true, "manual": false, "source_party": source_party }
+            { "id": effect_id, "option": 0, "selected": true, "manual": false, "source_party": source_party, "skill_index": skill_index }
         );
+    }
+    if (skill_index !== null) {
+        equip_effects_change_skill_trigger(skill_index);
     }
     equip_effects_change_trigger();
 }
 
 function equip_effects_update_stats_all() {
     for (var i = 0; i < const_party_size; i++) {
+        equip_skills_update_details_active(i);
         equip_effects_update_stats(i);
         equip_effects_update_infusion(i);
     }
@@ -150,9 +208,21 @@ function equip_effects_update_stats_all() {
 
 function equip_effects_update_stats(party_id) {
 
-    var stats = [];
+    var global_stats = [];
+    global_stats = equip_effects_return_stats(global_stats, user_objects.user_party[party_id].effects);
 
-    var user_effects = user_objects.user_party[party_id].effects;
+    output_party[party_id].stats.effects = global_stats;
+
+    for (var i = 0; i < user_objects.user_party[party_id].active_skills.length; i++) {
+        var skill_effects = user_objects.user_party[party_id].active_skills[i].effects;
+        if (skill_effects && skill_effects.length > 0) {
+            output_party[party_id].skills.active.details[i].stats.effects = equip_effects_return_stats(global_stats, skill_effects);
+        }
+    }
+}
+
+function equip_effects_return_stats(stats, user_effects) {
+    var result_stats = structuredClone(stats);
     for (var i = 0; i < user_effects.length; i++) {
         if (user_effects[i].selected) {
             var effect = utils_array_get_by_lookup(data_effects, "id", user_effects[i].id);
@@ -160,44 +230,48 @@ function equip_effects_update_stats(party_id) {
 
             if (option.stats) {
                 for (var ii = 0; ii < option.stats.length; ii++) {
-                    stats.push(
+                    result_stats.push(
                         { "id": option.stats[ii].stat, "value": option.stats[ii].value }
                     );
                 }
             }
-        }       
+        }
     }
-
-    output_party[party_id].stats.effects = stats;
+    return result_stats;
 }
 
 function equip_effects_update_stats_transform_other_all() {
     for (var i = 0; i < const_party_size; i++) {
-        equip_effects_update_stats_transform_other(i);
+        equip_effects_update_stats_transform_other(i, null);
+
+        for (var ii = 0; ii < user_objects.user_party[i].active_skills.length; ii++) {
+            var skill_effects = user_objects.user_party[i].active_skills[ii].effects;
+            if (skill_effects && skill_effects.length > 0) {
+                equip_effects_update_stats_transform_other(i, ii);
+            }
+        }
     }
 }
 
-function equip_effects_update_stats_transform_other(party_id) {
+function equip_effects_update_stats_transform_other(party_id, skill_index = null) {
     var stats = [];
 
-    var user_effects = user_objects.user_party[party_id].effects;
-
+    if (skill_index === null) {
+        var user_effects = user_objects.user_party[party_id].effects;
+    } else {
+        var user_effects = user_objects.user_party[party_id].active_skills[skill_index].effects;
+    }
+   
     for (var i = 0; i < user_effects.length; i++) {
         if (user_effects[i].selected) {
             var effect = utils_array_get_by_lookup(data_effects, "id", user_effects[i].id);
             var option = effect.options[user_effects[i].option];
-
             if (option.transform) {
                 for (var ii = 0; ii < option.transform.length; ii++) {
                     if (option.transform[ii].character) {
-
                         stats.push(equip_effects_return_stats_transformed(user_effects[i].source_party, option.transform[ii]));
-
                     } else if (option.transform[ii].special) {
-
-
                         var source_party_id = equip_character_return_party_id_by_special(option.transform[ii].special);
-
                         stats.push(equip_effects_return_stats_transformed(source_party_id, option.transform[ii]));
                     }
                 }
@@ -205,19 +279,36 @@ function equip_effects_update_stats_transform_other(party_id) {
         }       
     }
 
-    output_party[party_id].stats.effects_transform_other = stats;
+    if (skill_index === null) {
+        output_party[party_id].stats.effects_transform_other = stats;
+    } else {
+        output_party[party_id].skills.active.details[skill_index].stats.effects_transform_other = stats;
+    }
 }
 
 function equip_effects_update_stats_transform_personal_all() {
     for (var i = 0; i < const_party_size; i++) {
-        equip_effects_update_stats_transform_personal(i);
+        equip_effects_update_stats_transform_personal(i, null);
+
+        for (var ii = 0; ii < user_objects.user_party[i].active_skills.length; ii++) {
+            var skill_effects = user_objects.user_party[i].active_skills[ii].effects;
+            if (skill_effects && skill_effects.length > 0) {
+                equip_effects_update_stats_transform_personal(i, ii);
+            }
+        }
     }
 }
 
-function equip_effects_update_stats_transform_personal(party_id) {
+function equip_effects_update_stats_transform_personal(party_id, skill_index = null) {
     var stats = [];
 
-    var user_effects = user_objects.user_party[party_id].effects;
+    if (skill_index === null) {
+        var user_effects = user_objects.user_party[party_id].effects;
+        var output_stats = output_party[party_id].stats.effects_transform_personal;
+    } else {
+        var user_effects = user_objects.user_party[party_id].active_skills[skill_index].effects;
+        var output_stats = output_party[party_id].skills.active.details[skill_index].stats.effects_transform_personal;
+    }
 
     for (var i = 0; i < user_effects.length; i++) {
         if (user_effects[i].selected) {
@@ -233,12 +324,22 @@ function equip_effects_update_stats_transform_personal(party_id) {
             }
         }
     }
-
-    output_party[party_id].stats.effects_transform_personal = stats;
+    if (skill_index === null) {
+        output_party[party_id].stats.effects_transform_personal = stats;
+    } else {
+        output_party[party_id].skills.active.details[skill_index].stats.effects_transform_personal = stats;
+    }
 }
 
 function equip_effects_update_infusion(party_id) {
-    output_party[party_id].effects.infusion = equip_effects_return_infusion(party_id);
+    output_party[party_id].effects.infusion = equip_effects_return_infusion(party_id, null);
+
+    for (var i = 0; i < user_objects.user_party[party_id].active_skills.length; i++) {
+        var skill_effects = user_objects.user_party[party_id].active_skills[i].effects;
+        if (skill_effects && skill_effects.length > 0) {
+            output_party[party_id].skills.active.details[i].infusion = equip_effects_return_infusion(party_id, i);
+        }
+    }
 }
 
 
@@ -571,15 +672,30 @@ function equip_effects_update_active_options_all() {
 }
 
 function equip_effects_update_active_options(party_id) {
+    equip_effects_update_active_options_sub(party_id, null);
+    for (var i = 0; i < user_objects.user_party[party_id].active_skills.length; i++) {
+        if (user_objects.user_party[party_id].active_skills[i].effects && user_objects.user_party[party_id].active_skills[i].effects.length > 0) {
+            equip_effects_update_active_options_sub(party_id, i);
+        }
+    }
+}
 
-    for (var i = user_objects.user_party[party_id].effects.length - 1; i >= 0; i--) {
+function equip_effects_update_active_options_sub(party_id, skill_index) {
+
+    if (skill_index === null) {
+        var user_effects = user_objects.user_party[party_id].effects;
+    } else {
+        var user_effects = user_objects.user_party[party_id].active_skills[skill_index].effects;
+    }
+
+    for (var i = user_effects.length - 1; i >= 0; i--) {
         var found = false;
-        var user_effect = user_objects.user_party[party_id].effects[i];
+        var user_effect = user_effects[i];
 
         if (!user_effect.manual) {
 
             if (user_effect.selected == false && user_effect.option == 0) {
-                user_objects.user_party[party_id].effects.splice(i, 1);
+                user_effects.splice(i, 1);
             } else {
                 for (var ii = 0; ii < output_party[party_id].effects["character"].length; ii++) {
                     var output_effect = output_party[party_id].effects["character"][ii];
@@ -612,93 +728,109 @@ function equip_effects_update_active_options(party_id) {
                 }
 
                 if (found == false) {
-                    utils_log_debug("Removing effect id: " + user_effect.id);
-                    user_objects.user_party[party_id].effects.splice(i, 1);
+                    if (skill_index === null) {
+                        utils_log_debug("Removing effect id: " + user_effect.id);
+                    } else {
+                        utils_log_debug("Removing effect id: " + user_effect.id + ", from skill: " + skill_index);
+                    }                    
+                    user_effects.splice(i, 1);
                 }
             }    
-        }      
-    }
-}
-
-function equip_effects_update_multi_options(party_id) {
-    var multi_effects = [];
-
-    for (var i = 0; i < const_effect_types_auto.length; i++) {
-        for (var ii = 0; ii < output_party[party_id].effects[const_effect_types_auto[i]].length; ii++) {
-            var output_effect = output_party[party_id].effects[const_effect_types_auto[i]][ii];
-            if (output_effect.multi) {
-                multi_effects.push({ "type": const_effect_types_auto[i], "i": ii, "base_id": output_effect.base_id, "uncounted":false })
-            }
-        }
-    }
-
-    for (var i = 0; i < multi_effects.length; i++) {
-        if (multi_effects[i].uncounted) {
-            var multi = 0;
-            for (var ii = 0; ii < multi_effects.length; ii++) {
-                if (multi_effects[i].base_id == multi_effects[i].base_id) {
-
+        }  
+        if (user_effect.id != 0 && skill_index !== null && (found == true || user_effect.manual)) {
+            var user_effects_general = user_objects.user_party[party_id].effects;
+            for (var ii = 0; ii < user_effects_general.length; ii++) {
+                if (user_effect.id == user_effects_general[ii].id && user_effects_general[ii].selected) {
+                    user_effects.splice(i, 1);
+                    utils_log_debug("Removing effect id: " + user_effect.id + ", from skill: " + skill_index);
+                    break;
                 }
             }
         }
+        
     }
-
-    console.log(multi_effects);
 }
 
-function equip_effects_display_all() {
+
+function equip_effects_display_all(skill_index = null) {
     for (var i = 0; i < const_effect_types_auto.length; i++) {
-        equip_effects_display(const_effect_types_auto[i]);
+        equip_effects_display(const_effect_types_auto[i], skill_index);
     }
-    equip_effects_display_manual();
+    equip_effects_display_manual(skill_index);
 }
 
-function equip_effects_display_manual() {
-    var parent = document.getElementById("effects_container_manual");
+function equip_effects_display_manual(skill_index = null) {
+
+    if (skill_index === null) {
+        var parent = document.getElementById("effects_container_manual");
+        var current_effects = user_objects.user_party[user_objects.user_active_character].effects;
+    } else {
+        var parent = document.getElementById("skill_effects_container_manual");
+        var current_effects = user_objects.user_party[user_objects.user_active_character].active_skills[skill_index].effects;
+    }
+
     utils_delete_children(parent, 0);
 
     var manual_index = 0;
-    for (var i = 0; i < user_objects.user_party[user_objects.user_active_character].effects.length; i++) {
-        var user_effect = user_objects.user_party[user_objects.user_active_character].effects[i];
-        
-        if (user_effect.manual) {
-            let effect = utils_array_get_by_lookup(data_effects, "id", user_effect.id);
-            let selected_option = utils_array_get_by_lookup(effect.options, "id", user_effect.option);
-            var effect_obj = utils_create_obj("div", "effect_row");
 
-            var effect_left = utils_create_obj("div", "effect_col");
-            effect_obj.appendChild(effect_left);
+    if (current_effects) {
+        for (var i = 0; i < current_effects.length; i++) {
+            var user_effect = current_effects[i];
 
-            effect_left.appendChild(equip_effects_return_manual_selector(effect, manual_index));
+            if (user_effect.manual) {
+                let effect = utils_array_get_by_lookup(data_effects, "id", user_effect.id);
+                let selected_option = utils_array_get_by_lookup(effect.options, "id", user_effect.option);
+                var effect_obj = utils_create_obj("div", "effect_row");
 
-            if (effect.options.length > 1) {
-                effect_left.appendChild(equip_effects_return_options_manual_selector(effect, manual_index, selected_option));
+                var effect_left = utils_create_obj("div", "effect_col");
+                effect_obj.appendChild(effect_left);
+
+                effect_left.appendChild(equip_effects_return_manual_selector(effect, manual_index, skill_index));
+
+                if (effect.options.length > 1) {
+                    effect_left.appendChild(equip_effects_return_options_manual_selector(effect, manual_index, selected_option, skill_index));
+                }
+
+                effect_obj.appendChild(equip_effects_return_effect_right(selected_option, user_objects.user_active_character));
+                let delete_index = manual_index;
+                effect_obj.appendChild(utils_create_img_btn("delete-forever", function (event) { equip_effects_change_delete_manual(delete_index, skill_index) }, "Delete"));
+
+                manual_index += 1;
+
+                parent.appendChild(effect_obj);
             }
 
-            effect_obj.appendChild(equip_effects_return_effect_right(selected_option, user_objects.user_active_character));
-            let delete_index = manual_index;
-            effect_obj.appendChild(utils_create_img_btn("delete-forever", function (event) { equip_effects_change_delete_manual(delete_index) }, "Delete"));
-
-            manual_index += 1;
-
-            parent.appendChild(effect_obj);
         }
-
     }
+
+    
 }
 
-function equip_effects_display(effect_type) {
+function equip_effects_display(effect_type, skill_index = null) {
 
-    var parent = document.getElementById("effects_container_" + effect_type);
+    if (skill_index === null) {
+        var effect_super_type = "effects";
+    } else {
+        var effect_super_type = "skill_effects";        
+    }
+    var parent = document.getElementById(effect_super_type + "_container_" + effect_type);
     utils_delete_children(parent, 0);
 
     var possible_effects = output_party[user_objects.user_active_character].effects[effect_type];
 
     for (var i = 0; i < possible_effects.length; i++) {
         let effect = utils_array_get_by_lookup(data_effects, "id", possible_effects[i].id);
-        let user_select = equip_effects_return_user_select(user_objects.user_active_character, effect.id, possible_effects[i].source_party)
+        let user_select = equip_effects_return_user_select(user_objects.user_active_character, effect.id, possible_effects[i].source_party, skill_index);
+
         let selected_option = utils_array_get_by_lookup(effect.options, "id", user_select.option);
-        var effect_obj = utils_create_obj("div", "effect_row");
+
+        if (skill_index === null || !user_select.selected || user_select.skill_index !== null) {
+            var enabled = true;
+            var effect_obj = utils_create_obj("div", "effect_row");
+        } else {
+            var enabled = false;
+            var effect_obj = utils_create_obj("div", "effect_row disabled");
+        }
 
         if (user_select.selected) {
             var toggle_class = "active";
@@ -706,9 +838,15 @@ function equip_effects_display(effect_type) {
             var toggle_class = "inactive";
         }
         
-        var effect_toggle = utils_create_obj("div", "effect_toggle " + toggle_class, "effect_toggle_" + effect_type + "_" + effect.id);
+        var effect_toggle = utils_create_obj("div", "effect_toggle " + toggle_class, effect_super_type + "_toggle_" + effect_type + "_" + effect.id);
         let possible_eff = possible_effects[i];
-        effect_toggle.onclick = function (event) { equip_effects_change_selected(possible_eff) };
+        if (enabled) {    
+            if (skill_index === null) {
+                effect_toggle.onclick = function (event) { equip_effects_change_selected(possible_eff, skill_index); };
+            } else {
+                effect_toggle.onclick = function (event) { equip_effects_change_selected(possible_eff, skill_index); event.preventDefault(); };
+            }
+        }       
         effect_obj.appendChild(effect_toggle);
 
         var display_source = utils_create_obj("div", "effect_source");
@@ -721,7 +859,7 @@ function equip_effects_display(effect_type) {
         effect_left.appendChild(utils_create_obj("div", "effect_name", null, effect.name));
 
         if (effect.options.length > 1) {
-            effect_left.appendChild(equip_effects_return_options_selector(effect, selected_option, possible_eff));
+            effect_left.appendChild(equip_effects_return_options_selector(effect, selected_option, possible_eff, skill_index, enabled));
         }
 
         effect_obj.appendChild(equip_effects_return_effect_right(selected_option, possible_eff.source_party));
@@ -730,28 +868,59 @@ function equip_effects_display(effect_type) {
     }
 }
 
-function equip_effects_return_manual_selector(current_effect, manual_index) {
+function equip_effects_return_manual_selector(current_effect, manual_index, skill_index, enabled) {
+    if (skill_index === null) {
+        var effect_super_type = "effects";
+    } else {
+        var effect_super_type = "skill_effects";
+    }
     let option_container = utils_create_obj("div", "container");
-    let option = utils_create_obj("div", "icon_selects effect_manual", "effect_manual_" + manual_index);
-    option.onclick = function (event) { utils_create_prompt_values(option.id, equip_effects_change_manual, equip_effects_return_manual_options(), manual_index, option_container); event.preventDefault(); };
+    let option = utils_create_obj("div", "icon_selects effect_manual", effect_super_type + "_manual_" + manual_index);
+    if (skill_index === null) {
+        option.onclick = function (event) { utils_create_prompt_values(option.id, equip_effects_change_manual, equip_effects_return_manual_options(skill_index), manual_index, option_container); event.preventDefault(); };
+    } else {
+        option.onclick = function (event) { utils_create_prompt_values(option.id, equip_effects_change_manual, equip_effects_return_manual_options(skill_index), skill_index + "_" + manual_index, option_container, "active_prompt_skill_effects"); event.preventDefault(); };
+    }  
     option_container.appendChild(option);
     option.appendChild(utils_create_obj("div", "icon_selects_text", null, current_effect.name));
     return option_container;
 }
 
-function equip_effects_return_options_selector(effect, selected_option, possible_eff) {
+function equip_effects_return_options_selector(effect, selected_option, possible_eff, skill_index, enabled) {
+    if (skill_index === null) {
+        var effect_super_type = "effects";
+    } else {
+        var effect_super_type = "skill_effects";
+    }
     let option_container = utils_create_obj("div", "container");
-    let option = utils_create_obj("div", "icon_selects effect_option", "effect_option_" + effect.id);
-    option.onclick = function (event) { utils_create_prompt_values(option.id, equip_effects_change_option, equip_effects_return_options(effect), possible_eff, option_container); event.preventDefault(); };
+    let option = utils_create_obj("div", "icon_selects effect_option", effect_super_type + "_option_" + effect.id);
+    let possible_effect = structuredClone(possible_eff);
+    possible_effect.skill_index = skill_index;
+    if (enabled) {
+        if (skill_index === null) {
+            option.onclick = function (event) { utils_create_prompt_values(option.id, equip_effects_change_option, equip_effects_return_options(effect), possible_effect, option_container); event.preventDefault(); };
+        } else {
+            option.onclick = function (event) { utils_create_prompt_values(option.id, equip_effects_change_option, equip_effects_return_options(effect), possible_effect, option_container, "active_prompt_skill_effects"); event.preventDefault(); };
+        }
+    }    
     option_container.appendChild(option);
     option.appendChild(utils_create_obj("div", "icon_selects_text", null, selected_option.name));
     return option_container;
 }
 
-function equip_effects_return_options_manual_selector(current_effect, manual_index, selected_option) {
+function equip_effects_return_options_manual_selector(current_effect, manual_index, selected_option, skill_index) {
+    if (skill_index === null) {
+        var effect_super_type = "effects";
+    } else {
+        var effect_super_type = "skill_effects";
+    }
     let option_container = utils_create_obj("div", "container");
-    let option = utils_create_obj("div", "icon_selects effect_option", "effect_option_" + current_effect.id);
-    option.onclick = function (event) { utils_create_prompt_values(option.id, equip_effects_change_manual_option, equip_effects_return_options(current_effect), manual_index, option_container); event.preventDefault(); };
+    let option = utils_create_obj("div", "icon_selects effect_option", effect_super_type + "_option_" + current_effect.id);
+    if (skill_index === null) {
+        option.onclick = function (event) { utils_create_prompt_values(option.id, equip_effects_change_manual_option, equip_effects_return_options(current_effect), manual_index, option_container); event.preventDefault(); };
+    } else {
+        option.onclick = function (event) { utils_create_prompt_values(option.id, equip_effects_change_manual_option, equip_effects_return_options(current_effect), skill_index + "_" + manual_index, option_container, "active_prompt_skill_effects"); event.preventDefault(); };
+    }
     option_container.appendChild(option);
     option.appendChild(utils_create_obj("div", "icon_selects_text", null, selected_option.name));
     return option_container;
@@ -852,27 +1021,49 @@ function equip_effects_return_options(effect) {
     return options;
 }
 
-function equip_effects_return_user_select(party_id, effect_id, source_party) {
+function equip_effects_return_user_select(party_id, effect_id, source_party, skill_index = null) {
 
     var user_effects = user_objects.user_party[party_id].effects;
 
     for (var i = 0; i < user_effects.length; i++) {
         if (user_effects[i].id == effect_id && user_effects[i].source_party == source_party) {
-            return user_objects.user_party[party_id].effects[i];
+            if (user_effects[i].selected || skill_index === null) {
+                return user_objects.user_party[party_id].effects[i];
+            }            
         }
     }
 
-    return { "id": effect_id, "option": 0, "selected": false, "manual": false };
+    if (skill_index !== null) {
+        var active_skill = user_objects.user_party[party_id].active_skills[skill_index];
+        if (active_skill.effects) {
+            for (var i = 0; i < active_skill.effects.length; i++) {
+                if (active_skill.effects[i].id == effect_id && active_skill.effects[i].source_party == source_party) {
+                    return user_objects.user_party[party_id].active_skills[skill_index].effects[i];
+                }
+            }
+        }
+    }
+
+    return { "id": effect_id, "option": 0, "selected": false, "manual": false, "skill": false };
 
 }
 
-function equip_effects_return_manual_options() {
+function equip_effects_return_manual_options(skill_index) {
     var user_effects = user_objects.user_party[user_objects.user_active_character].effects;
     var selected_manual = [];
 
     for (var i = 0; i < user_effects.length; i++) {
         if (user_effects[i].id > 0 && user_effects[i].manual) {
-            selected_manual.push(user_effects[i].id)
+            selected_manual.push(user_effects[i].id);
+        }
+    }
+
+    if (skill_index !== null) {
+        var user_skill_effects = user_objects.user_party[user_objects.user_active_character].active_skills[skill_index].effects;
+        for (var i = 0; i < user_skill_effects.length; i++) {
+            if (user_skill_effects[i].id > 0 && user_skill_effects[i].manual) {
+                selected_manual.push(user_skill_effects[i].id);
+            }
         }
     }
 
@@ -931,7 +1122,7 @@ function equip_effects_return_source_icon(possible_eff) {
 }
 
 
-function equip_effects_return_infusion(party_id) {
+function equip_effects_return_infusion(party_id, skill_index = null) {
 
     var repeated_infusions = [];
     var single_infusion = false;
@@ -957,9 +1148,29 @@ function equip_effects_return_infusion(party_id) {
                     single_infusion = option.infusion.vision;
                 }
             }
-        }
-        
+        }        
+    }
 
+    if (skill_index !== null) {
+        var skill_effects = user_objects.user_party[party_id].active_skills[skill_index].effects;
+        for (var i = 0; i < skill_effects.length; i++) {
+            if (skill_effects[i].selected) {
+                var effect = utils_array_get_by_lookup(data_effects, "id", skill_effects[i].id);
+                var option = effect.options[skill_effects[i].option];
+
+                if (option.conversion) {
+                    return option.conversion;
+                }
+
+                if (infusable && option.infusion) {
+                    if (option.infusion.repeated) {
+                        repeated_infusions.push(option.infusion.vision)
+                    } else {
+                        single_infusion = option.infusion.vision;
+                    }
+                }
+            }
+        }
     }
 
     if (infusable) {
@@ -984,6 +1195,6 @@ function equip_effects_return_infusion(party_id) {
         }
     } else {
         return false;
-    }
-    
+    }    
 }
+

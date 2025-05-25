@@ -7,7 +7,7 @@ window_frame_ids = [
 ];
 
 async function equip_load_all_data() {
-    var ver = "?20250502";
+    var ver = "?20250507";
 
     data_characters = await utils_load_json("/data/characters.json" + ver);
     data_enemies = await utils_load_json("/data/enemies.json" + ver);
@@ -45,6 +45,7 @@ async function equip_setup_all() {
         equip_setup_output_objects();
         equip_setup_character_storage_objects();
         equip_setup_artifacts_storage_objects();
+        equip_setup_share_objects();
 
         await equip_account_setup();
         await equip_setup_preferences_load();
@@ -57,18 +58,27 @@ async function equip_setup_all() {
         equip_setup_ui_frame_skills();
 
         var storage_account = await equip_account_return_storage();
+        var share_account = await equip_account_return_share();
         var legacy_storage = await equip_legacy_v1_account_storage_load(storage_account);
 
         equip_storage_load_user_storage(storage_account.storage_objects);
         equip_storage_display_header_type();
         equip_storage_display_all();
 
-        if (!equip_legacy_v1_url_load_url()) {
+        var load_url_share = await equip_share_load_url();
+        if (load_url_share) {
+            equip_storage_load(load_url_share);
+        }
+        var load_url_legacy = equip_legacy_v1_url_load_url();
+
+        if (!load_url_share && !load_url_legacy) {
             equip_storage_load_last();
         } 
 
         equip_character_storage_load_last(storage_account.character_storage_objects, legacy_storage.setup);
         equip_artifacts_storage_load_last(storage_account.artifact_storage_objects, legacy_storage.artifact_list);
+
+        equip_share_load_account(share_account);
         
     } catch (err) {
         utils_loading_show_error(err, "An Error occured during loading the page.<br>Please reload the page with CTRL+F5.<br>If the Error persists, please contact the administrator.");
@@ -160,8 +170,7 @@ function equip_setup_ui_character(index) {
     }
     var name_row = utils_create_obj("div", "container_namerow");
     obj.appendChild(name_row);
-    var char_name = utils_create_obj("p", "container_name", "character_name_" + index, "None")
-    //char_name.onclick = function (event) { equip_active_character_change(index); }
+    var char_name = utils_create_obj("p", "container_name", "character_name_" + index, "None");
     name_row.appendChild(char_name);
 
     var row = utils_create_obj("div", "container_subrow");
@@ -177,8 +186,8 @@ function equip_setup_ui_character(index) {
     level_container.appendChild(level);
     level.appendChild(utils_create_obj("div", "icon_selects_text", "character_level_text_" + index, "1"))
 
-    var icon_container = utils_create_obj("div", "character_img");
-    icon_container.onclick = function (event) { equip_control_create_character_select(index, icon); event.preventDefault(); event.stopImmediatePropagation(); };
+    var icon_container = utils_create_obj("div", "character_img", "character_icon_container_" + index);
+    icon_container.onclick = function (event) { equip_control_create_character_select(index, icon_container); event.preventDefault(); event.stopImmediatePropagation(); };
     icon.appendChild(icon_container);
     icon_container.appendChild(utils_create_img(null, "character_img_" + index, "/images/icons/characters.png"));
 
@@ -190,14 +199,13 @@ function equip_setup_ui_character(index) {
     constel.appendChild(utils_create_obj("div", "icon_selects_text", "character_constel_text_" + index, "C0"))
 
     var stats = utils_create_obj("div", "character_stats", "stats_unit_party_" + index);
-    //stats.onclick = function (event) { equip_active_character_change(index); }
     row.appendChild(stats);  
 
     return obj;
 }
 
 function equip_setup_ui_party_panel() {
-    var panel = utils_create_obj("div", "frame_party_panel");
+    var panel = utils_create_obj("div", "frame_party_panel", "frame_party_panel");
     var load_enka = utils_create_img_btn("enka", null, "Load Enka", "party_panel_enka");
     load_enka.className += " enka_btn"
     load_enka.onclick = function (event) { equip_control_create_enka(load_enka.id); event.preventDefault(); };
@@ -206,6 +214,12 @@ function equip_setup_ui_party_panel() {
     var character_storage = utils_create_img_btn("database", null, "Character Storage", "party_panel_storage");
     character_storage.onclick = function (event) { equip_control_create_character_storage(character_storage.id); event.preventDefault(); };
     panel.appendChild(character_storage);
+
+    if (user_account && user_account.status) {
+        var share_storage = utils_create_img_btn("share-outline", null, "Share", "party_panel_share");
+        share_storage.onclick = function (event) { equip_control_create_share_storage(share_storage.id); event.preventDefault(); };
+        panel.appendChild(share_storage);
+    }
 
     return panel;
 }
@@ -236,7 +250,7 @@ function equip_setup_ui_resonance() {
 }
 
 function equip_setup_ui_enemy() {
-    var obj = utils_create_obj("div", "container_object container_character container_enemy");
+    var obj = utils_create_obj("div", "container_object container_character container_enemy", "container_enemy");
 
     var name_row = utils_create_obj("div", "container_namerow");
     name_row.appendChild(utils_create_obj("p", "container_name", "enemy_name", "None"));
@@ -257,8 +271,8 @@ function equip_setup_ui_enemy() {
     level_container.appendChild(level);
     level.appendChild(utils_create_obj("div", "icon_selects_text", "enemy_level_text", "0"))
 
-    var icon_container = utils_create_obj("div", "character_img enemy_img");
-    icon_container.onclick = function (event) { equip_control_create_enemy_select(icon); event.preventDefault(); };
+    var icon_container = utils_create_obj("div", "character_img enemy_img", "enemy_icon_container");
+    icon_container.onclick = function (event) { equip_control_create_enemy_select(icon_container); event.preventDefault(); };
     icon.appendChild(icon_container);
     icon_container.appendChild(utils_create_img(null, "enemy_img" , "/images/icons/enemy/none.png"));
 
@@ -289,7 +303,7 @@ function equip_setup_ui_frame_equipment() {
 }
 
 function equip_setup_ui_weapon() {
-    var obj = utils_create_obj("div", "container_object container_weapon");
+    var obj = utils_create_obj("div", "container_object container_weapon", "container_weapon");
 
     var name_row = utils_create_obj("div", "container_namerow");
     name_row.appendChild(utils_create_obj("p", "container_name", "weapon_name", "None"));
@@ -309,8 +323,8 @@ function equip_setup_ui_weapon() {
     level_container.appendChild(level);
     level.appendChild(utils_create_obj("div", "icon_selects_text", "weapon_level_text", "1"))
 
-    var icon_container = utils_create_obj("div", "equipment_img");
-    icon_container.onclick = function (event) { equip_control_create_weapon_select(icon); event.preventDefault(); };
+    var icon_container = utils_create_obj("div", "equipment_img", "weapon_icon_container");
+    icon_container.onclick = function (event) { equip_control_create_weapon_select(icon_container); event.preventDefault(); };
     icon.appendChild(icon_container);
     icon_container.appendChild(utils_create_img(null, "weapon_img", "/images/icons/weapons.png"));
 
@@ -328,7 +342,7 @@ function equip_setup_ui_weapon() {
 }
 
 function equip_setup_ui_artifact(artifact_id) {
-    var obj = utils_create_obj("div", "container_object container_artifact");
+    var obj = utils_create_obj("div", "container_object container_artifact", "container_artifact_" + artifact_id);
 
     var name_row = utils_create_obj("div", "container_namerow");
     name_row.appendChild(utils_create_img_btn(
@@ -359,8 +373,8 @@ function equip_setup_ui_artifact(artifact_id) {
     level_container.appendChild(level);
     level.appendChild(utils_create_obj("div", "icon_selects_text", "artifact_level_text_" + artifact_id, "+ 0"));
 
-    var icon_container = utils_create_obj("div", "equipment_img");
-    icon_container.onclick = function (event) { equip_control_create_artifacts_select(artifact_id, icon); event.preventDefault(); };
+    var icon_container = utils_create_obj("div", "equipment_img", "artifact_icon_container_" + artifact_id);
+    icon_container.onclick = function (event) { equip_control_create_artifacts_select(artifact_id, icon_container); event.preventDefault(); };
     icon.appendChild(icon_container);
     icon_container.appendChild(utils_create_img(null, "artifact_img_" + artifact_id, "/images/icons/artifact/" + artifact_id + "/none.png"));
 
@@ -414,20 +428,23 @@ function equip_setup_ui_frame_effects() {
     parent.className += " frame_effects";
 
     for (var i = 0; i < const_effect_types.length; i++) {
-        parent.appendChild(equip_setup_ui_effects(const_effect_types[i]));
+        parent.appendChild(equip_setup_ui_effects(const_effect_types[i], null));
     }
 }
 
-function equip_setup_ui_effects(effect_type) {
+function equip_setup_ui_effects(effect_type, skill_index = null) {
     var obj = utils_create_obj("div", "container_object container_effects");
 
     obj.appendChild(utils_create_obj("p", "container_name", null, utils_capitalize(effect_type)));
-
-    obj.appendChild(utils_create_obj("div", "effects_column", "effects_container_" + effect_type));
-
+    if (skill_index === null) {
+        obj.appendChild(utils_create_obj("div", "effects_column", "effects_container_" + effect_type));
+    } else {
+        obj.appendChild(utils_create_obj("div", "effects_column", "skill_effects_container_" + effect_type));
+    }
+    
     if (effect_type == "manual") {
         var new_btn = utils_create_obj("div", "new_button");
-        new_btn.onclick = function (event) { equip_effects_change_new_manual() };
+        new_btn.onclick = function (event) { equip_effects_change_new_manual(skill_index) };
         obj.appendChild(new_btn);
     }
 
@@ -451,7 +468,7 @@ function equip_setup_ui_skills(skill_window) {
     var obj = utils_create_obj("div", "container_object container_skills container_skills_" + skill_window);
     var name_row = utils_create_obj("div", "container_namerow");
     if (skill_window == "permanent") {
-        var hide_desc = utils_create_img_btn("eye-outline", null, "Hide Descriptions", "skills_hide_btn", "container");
+        var hide_desc = utils_create_img_btn("eye-outline", null, "Hide Passive Descriptions", "skills_hide_btn", "container");
         hide_desc.onclick = function (event) { equip_skills_change_hideshow_desc() };
         name_row.appendChild(hide_desc);
     }
@@ -603,6 +620,11 @@ function equip_setup_enka_objects(preferences_data = null) {
     enka_objects.characters = [];
 }
 
+function equip_setup_share_objects(user_share = null) {
+    share_objects = {};
+    share_objects.saved_shares = utils_object_get_value(user_share, "saved_shares", []);
+}
+
 function equip_setup_window_objects(preferences_data = null) {
     user_preferences.window = {};
 
@@ -661,6 +683,7 @@ function equip_setup_output_objects() {
         char.skills.active.crt = 0;
         char.skills.active.avg = 0;
         char.skills.active.comparison = 0;
+        char.skills.active.details = [];
 
         output_party.push(char);
     }
@@ -729,4 +752,15 @@ function equip_setup_default_stats() {
         }
         default_storage_character.artifacts[const_artifact_types[i]] = artifact;
     }  
+
+    default_active_skill_detail = {};
+    default_active_skill_detail.stats = {};
+    default_active_skill_detail.stats.total = { ...default_stats };
+    default_active_skill_detail.stats.effects = [];
+    default_active_skill_detail.stats.effects_transform_other = [];
+    default_active_skill_detail.stats.effects_transform_personal = [];
+    default_active_skill_detail.ncrt = 0;
+    default_active_skill_detail.crt = 0;
+    default_active_skill_detail.avg = 0;
+    default_active_skill_detail.infusion = false;
 }

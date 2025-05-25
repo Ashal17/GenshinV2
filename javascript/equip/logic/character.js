@@ -376,8 +376,19 @@ function equip_character_update_resonance() {
     output_resonances = active_resonances;
 }
 
-function equip_character_storage_save_character(character, show_warns=true) {
-    var hash = utils_hash(JSON.stringify(character))
+function equip_character_storage_save_character(character, show_warns = true) {
+
+    if (user_account && user_account.status) {
+        if (character_storage_objects.saved_characters.length > 5000) {
+            utils_message("Maximum of 5 000 Characters for logged in users!", "automatic_warn");
+            return false;
+        }       
+    } else if (character_storage_objects.saved_characters.length > 100) {
+        utils_message("Maximum of 100 Characters for unlogged users!", "automatic_warn");
+        return false;
+    }
+
+    var hash = utils_hash(JSON.stringify(character));
 
     for (var i = 0; i < character_storage_objects.saved_characters.length; i++) {
         if (character_storage_objects.saved_characters[i].hash == hash) {

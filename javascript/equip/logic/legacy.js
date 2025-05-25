@@ -7,7 +7,7 @@ function equip_legacy_v1_url_load_url() {
         }
     }
 
-    if (url != "") {
+    if (url != "" && url.length > 11) {
         url = url.slice(1);
         var character_data = equip_legacy_v1_url_return_character(url);
         equip_character_load(0, character_data);

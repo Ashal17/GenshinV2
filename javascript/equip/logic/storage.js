@@ -102,6 +102,16 @@ function equip_storage_change_new(new_name) {
 
     var storage_count = storage_objects.saved_storage.length;
 
+    if (user_account && user_account.status) {
+        if (storage_count > 1000) {
+            utils_message("Maximum of 1 000 Storages for logged in users!", "automatic_warn");
+            return;
+        }        
+    } else if (storage_count > 100) {
+        utils_message("Maximum of 100 Storages for unlogged users!", "automatic_warn");
+        return;
+    }
+
     if (!new_name) {
         new_name = "Storage " + (storage_count + 1);
     }

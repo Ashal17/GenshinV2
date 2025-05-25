@@ -13,7 +13,7 @@ function equip_display_equipment_icon(icon_path, rarity, hover = null, level = n
             var hover_element = hover;            
         }   
         icon.appendChild(hover_element);
-        icon.onmouseover = function () { utils_update_dynamic_tooltip(this, hover_element, "bottom"); }
+        icon.onmouseover = function () { utils_update_frame_position_contain(this, hover_element, "bottom"); }
     }
     return icon
-} utils_update_dynamic_tooltip
+} 

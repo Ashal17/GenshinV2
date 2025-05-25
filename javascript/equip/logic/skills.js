@@ -35,7 +35,14 @@ function equip_skills_change_attack_level(attack_type, change) {
 function equip_skills_change_add_active(attack_ids) {
 
     user_objects.user_party[user_objects.user_active_character].active_skills.push(
-        { "attack_type": attack_ids.attack_type, "attack_id": attack_ids.attack_id, "part_id": attack_ids.part_id, "reaction": false, "count": 1 }
+        {
+            "attack_type": attack_ids.attack_type,
+            "attack_id": attack_ids.attack_id,
+            "part_id": attack_ids.part_id,
+            "reaction": false,
+            "count": 1,
+            "effects": []
+        }
     );
 
     equip_skills_change_trigger();
@@ -113,7 +120,7 @@ function equip_skills_update_verify_reactions(party_id) {
             var part_objects = equip_skills_return_attack_part_objects(party_id, active_skill.attack_type, active_skill.attack_id, active_skill.part_id);
             var vision = equip_skills_return_part_vision(part_objects.part, party_id);
 
-            if (!data_visions[vision].reactions_mod.includes(active_skill.reaction)) {
+            if (!data_visions[vision] || !data_visions[vision].reactions_mod.includes(active_skill.reaction)) {
                 active_skill.reaction = false;
             }
         }
@@ -128,6 +135,19 @@ function equip_skills_update_all() {
         equip_skills_update_verify_active(i);
         equip_skills_update_verify_reactions(i);
         equip_skills_update_total_active(i);
+    }
+}
+
+function equip_skills_update_details_active(party_id) {
+    var active_skills = user_objects.user_party[party_id].active_skills;
+
+    output_party[party_id].skills.active.details = [];
+    for (var i = 0; i < active_skills.length; i++) {
+        if (active_skills[i].effects && active_skills[i].effects.length > 0) {
+            output_party[party_id].skills.active.details.push(structuredClone(default_active_skill_detail));
+        } else {
+            output_party[party_id].skills.active.details.push(null);
+        }        
     }
 }
 
@@ -602,7 +622,20 @@ function equip_skills_display_active_attack(active_skill, index) {
         count_container.appendChild(count_val);
         count_val.appendChild(utils_create_obj("div", "icon_selects_text", "skills_part_count_val_text_" + index, active_skill.count));
         obj.appendChild(count_container);
-        
+
+        var effects_svg = "star-plus";
+        if (active_skill.effects && active_skill.effects.length > 0) {
+            for (var i = 0; i < active_skill.effects.length; i++) {
+                if (active_skill.effects[i].selected && active_skill.effects[i].id != 0) {
+                    effects_svg = "star-plus img_icon_active";
+                    break;
+                }
+            }
+            
+        }
+
+        obj.appendChild(utils_create_img_btn(effects_svg, function () { equip_control_create_active_skill_effects(index, "skills_part_effects_" + index) }, "Change Effects", "skills_part_effects_" + index, "skills_part_btn skills_part_btn_left"));
+       
         if (part.damage && vision in data_visions && data_visions[vision].reactions_mod.length > 0) {
             var reaction_svg = "elemastery";
             if (active_skill.reaction) {
@@ -644,6 +677,18 @@ function equip_skills_display_active_reaction(active_reaction, index) {
     count_container.appendChild(count_val);
     count_val.appendChild(utils_create_obj("div", "icon_selects_text", "skills_part_count_val_text_" + index, active_reaction.count));
     obj.appendChild(count_container);
+
+    var effects_svg = "star-plus";
+    if (active_reaction.effects && active_reaction.effects.length > 0) {
+        for (var i = 0; i < active_reaction.effects.length; i++) {
+            if (active_reaction.effects[i].selected && active_reaction.effects[i].id != 0) {
+                effects_svg = "star-plus img_icon_active";
+                break;
+            }
+        }
+    }
+    obj.appendChild(utils_create_img_btn(effects_svg, function () { equip_control_create_active_skill_effects(index, "skills_part_effects_" + index) }, "Change Effects", "skills_part_effects_" + index, "skills_part_btn skills_part_btn_left"));
+
 
     obj.appendChild(equip_skills_display_reaction_text(active_reaction.part_id));
 

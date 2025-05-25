@@ -58,7 +58,19 @@ async function utils_message(text, class_name) {
     }, 5000)
 }
 
-function utils_update_dynamic_tooltip(element, child_element, position) {
+function utils_copy_clipboard(copiedtext, displayedtext, parent) {
+    var text_area = document.createElement("textarea");
+    text_area.value = copiedtext;
+    parent.appendChild(text_area);
+    text_area.focus();
+    text_area.select();
+    text_area.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    utils_message(displayedtext, "automatic_info")
+    parent.removeChild(text_area);
+}
+
+function utils_update_frame_position_contain(element, child_element, position) {
 
     var padding = 20;
     if (!element) {
@@ -101,8 +113,19 @@ function utils_update_dynamic_tooltip(element, child_element, position) {
         }
     }
 
-    
+}
 
+function utils_update_frame_position_center(relative_parent, element) {
+
+    if (typeof relative_parent == "string") {
+        var relative_parent = document.getElementById(relative_parent);
+    } 
+
+    var relative_coordinates = relative_parent.getBoundingClientRect();
+
+    var new_top = relative_coordinates.top + window.scrollY + relative_coordinates.height + 5;
+
+    element.style.top = new_top + "px";
 }
 
 function utils_preferences_change_trigger() {
@@ -262,26 +285,26 @@ function utils_frame_reorder_display(frame_definitions) {
 
 }
 
-function utils_format_stat_value(stat, value) {
+function utils_format_stat_value(stat, value, short = false) {
     if (value == Infinity) {
         value = "&infin;";
     }
 
     if (stat.type == "percent") {
         if (typeof value == "number") {
-            return (utils_number_format(Math.round(value * 10) / 10) + "%");
+            return (utils_number_format(Math.round(value * 10) / 10, null, short) + "%");
         } else {
             return value + "%";
         }
     } else if (stat.type == "flat") {
         if (typeof value == "number") {
-            return utils_number_format(Math.round(value));
+            return utils_number_format(Math.round(value), null, short);
         } else {
             return value;
         }
     } else {
         if (typeof value == "number") {
-            return utils_number_format(value);
+            return utils_number_format(value, null, short);
         } else {
             return value;
         }
@@ -295,18 +318,18 @@ function utils_delete_children(obj, limit) {
     }
 }
 
-function utils_create_bonus(bonus, line_class) {
+function utils_create_bonus(bonus, line_class, short = false) {
     if (bonus.custom_name) {
-        return utils_create_statline(bonus.custom_name, utils_format_stat_value(data_stats[bonus.stat], bonus.value), line_class);
+        return utils_create_statline(bonus.custom_name, utils_format_stat_value(data_stats[bonus.stat], bonus.value, short), line_class);
     } else {
-        return utils_create_stat(bonus.stat, bonus.value, line_class);       
+        return utils_create_stat(bonus.stat, bonus.value, line_class, short);       
     }
 }
 
-function utils_create_stat(stat_id, value, line_class) {
+function utils_create_stat(stat_id, value, line_class, short = false) {
     if (stat_id) {
         var stat = data_stats[stat_id];
-        return utils_create_statline(stat.name, utils_format_stat_value(stat, value), line_class);
+        return utils_create_statline(stat.name, utils_format_stat_value(stat, value, short), line_class);
     } else {
         return utils_create_statline(value.replaceAll('{{', '<span class="effect_value">').replaceAll('}}', '</span>'), null, line_class);
     }
@@ -325,7 +348,7 @@ function utils_create_statline(text, value, line_class, value_class) {
     return line;
 }
 
-function utils_create_stat_img(stat_id, value, line_class) {
+function utils_create_stat_img(stat_id, value, line_class, short = false) {
     if (line_class) {
         var line = utils_create_obj("div", "statline " + line_class);
     } else {
@@ -336,7 +359,7 @@ function utils_create_stat_img(stat_id, value, line_class) {
         stat_id = stat.svg;
     }
     line.appendChild(utils_create_label_img(stat_id, stat.name));
-    line.appendChild(utils_create_obj("p", null, null, utils_format_stat_value(stat, value)));
+    line.appendChild(utils_create_obj("p", null, null, utils_format_stat_value(stat, value, short)));
     return line;
 }
 
@@ -360,7 +383,7 @@ function utils_create_img_btn(svg_name, func, hover_text, btn_id, container_clas
         btn_hover.className = "img_button_hover";
         btn_hover.innerHTML = hover_text;
         btn.appendChild(btn_hover);
-        btn.onmouseover = function () { utils_update_dynamic_tooltip(this, btn_hover, "top"); };
+        btn.onmouseover = function () { utils_update_frame_position_contain(this, btn_hover, "top"); };
     }
 
     if (container_class) {
@@ -407,7 +430,7 @@ function utils_create_img_link(svg_name, hover_text, hyperlink) {
         btn_hover.className = "img_button_hover";
         btn_hover.innerHTML = hover_text;
         btn.appendChild(btn_hover);
-        btn.onmouseover = function () { utils_update_dynamic_tooltip(this, btn_hover, "top"); };
+        btn.onmouseover = function () { utils_update_frame_position_contain(this, btn_hover, "top"); };
     }
 
     return btn;
@@ -453,7 +476,7 @@ function utils_create_label_img(svg_name, hover_text, img_id, label_id, containe
             btn_hover.id = label_id;
         }
         btn.appendChild(btn_hover);
-        btn.onmouseover = function () { utils_update_dynamic_tooltip(this, btn_hover, "top"); };
+        btn.onmouseover = function () { utils_update_frame_position_contain(this, btn_hover, "top"); };
     }
     
     if (container_class) {
@@ -522,9 +545,15 @@ function utils_create_prompt(btn, class_name, parent = null, active_prompt_id = 
     return prompt;
 }
 
-function utils_create_prompt_select(text, btn, objects, parent = null, subheader = null, active_prompt_id = "active_prompt") {
+function utils_create_prompt_select(text, btn, class_name, objects, parent = null, relative_parent = null, subheader = null, active_prompt_id = "active_prompt") {
 
-    var prompt = utils_create_prompt(btn, "prompt_select", parent, active_prompt_id);
+    if (class_name) {
+        class_name = "prompt_select " + class_name;
+    } else {
+        class_name = "prompt_select";
+    }
+
+    var prompt = utils_create_prompt(btn, class_name, parent, active_prompt_id);
     if (!prompt) {
         return;
     }
@@ -563,6 +592,11 @@ function utils_create_prompt_select(text, btn, objects, parent = null, subheader
     for (var i = 0; i < objects.length; i++) {
         options.appendChild(objects[i]);
     }
+
+    if (relative_parent) {
+        utils_update_frame_position_center(relative_parent, prompt);
+    }    
+
     search.focus();
 }
 
@@ -653,7 +687,7 @@ function utils_create_prompt_confirm(text, btn, func, input, parent = null, acti
     decline.onclick = function (event) { event.preventDefault(); utils_destroy_current_prompt(active_prompt_id); };
     line.appendChild(decline);
 
-    utils_update_dynamic_tooltip(null, prompt, "bottom");
+    utils_update_frame_position_contain(null, prompt, "bottom");
 
     accept.focus();
 
@@ -706,7 +740,7 @@ function utils_create_prompt_input(text, btn, func, input, current_value, parent
     decline.onclick = function (event) { event.preventDefault(); utils_destroy_current_prompt(active_prompt_id); };
     line.appendChild(decline);
 
-    utils_update_dynamic_tooltip(null, prompt, "bottom");
+    utils_update_frame_position_contain(null, prompt, "bottom");
 
     input_field.focus();
     input_field.select();

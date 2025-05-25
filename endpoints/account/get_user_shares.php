@@ -11,39 +11,27 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 
 	$user_id = $_SESSION["id"];
 	$errormessage = false;
-	$sql = "SELECT user_preferences FROM genshin_users WHERE id = ?";
+	$sql = "SELECT share_link, share_object FROM genshin_shares WHERE user_id = ? AND active = 1";
 	
 	if($stmt = mysqli_prepare($link, $sql)){
 		mysqli_stmt_bind_param($stmt, "i", $param_userid);				
 		$param_userid = $user_id;
 		if (mysqli_stmt_execute($stmt)){
-			mysqli_stmt_store_result($stmt);
-			if(mysqli_stmt_num_rows($stmt) == 1){
-				mysqli_stmt_bind_result($stmt, $user_preferences);
-					if(mysqli_stmt_fetch($stmt)){
-						$responseobj=array(
-							"user_preferences" => json_decode($user_preferences)
-						);
-					} else {		
-						$errormessage = "Error when reading query result";
-					}				
-			 }else {
-				$responseobj=array(
-					"user_preferences" => null
-				);
-
-				$sqlinsert = "INSERT INTO genshin_users(id) VALUES (?)";
-				if($stmt = mysqli_prepare($link, $sqlinsert)){
-					mysqli_stmt_bind_param($stmt, "i", $param_userid);
-					if (mysqli_stmt_execute($stmt)){
-						//success
-					} else {
-						$errormessage = "Error when initializing data";
-					}
-				} else {		
-					$errormessage = "Error when initializing data";
-				}
-			}			
+			$result = mysqli_stmt_get_result($stmt);
+			$responseobj = array(
+				"saved_shares" =>  array(),
+			);
+			if(mysqli_num_rows($result) > 0){
+				$index = 0;
+                while($row = mysqli_fetch_array($result)){
+					$responseobj["saved_shares"][$index] = array(
+						"share_link" =>  $row['share_link'],
+						"share_object" =>  json_decode($row['share_object']),
+					);
+					$index = $index + 1;
+                }
+				mysqli_free_result($result);
+			} 			
 		} else {		
 			$errormessage = "Error when querying database";
 		}

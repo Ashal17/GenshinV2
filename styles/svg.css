@@ -109,6 +109,10 @@ background: none;
     -webkit-mask-image: url(../images/svg/download-multiple.svg);
     mask-image: url(../images/svg/download-multiple.svg);
 }
+.svg-equalizer:before, .svg-rollvalue:before {
+    -webkit-mask-image: url(../images/svg/equalizer.svg);
+    mask-image: url(../images/svg/equalizer.svg);
+}
 .svg-eye-outline:before {
     -webkit-mask-image: url(../images/svg/eye-outline.svg);
     mask-image: url(../images/svg/eye-outline.svg);
@@ -197,6 +201,10 @@ background: none;
     -webkit-mask-image: url(../images/svg/plus-circle-outline.svg);
     mask-image: url(../images/svg/plus-circle-outline.svg);
 }
+.svg-share:before {
+    -webkit-mask-image: url(../images/svg/share.svg);
+    mask-image: url(../images/svg/share.svg);
+}
 .svg-share-outline:before {
     -webkit-mask-image: url(../images/svg/share-outline.svg);
     mask-image: url(../images/svg/share-outline.svg);
@@ -220,6 +228,10 @@ background: none;
 .svg-star-four-points:before, .svg-skill:before, .svg-star-4:before {
     -webkit-mask-image: url(../images/svg/star-four-points.svg);
     mask-image: url(../images/svg/star-four-points.svg);
+}
+.svg-star-plus:before {
+    -webkit-mask-image: url(../images/svg/star-plus.svg);
+    mask-image: url(../images/svg/star-plus.svg);
 }
 .svg-sword:before, .svg-normal:before {
     -webkit-mask-image: url(../images/svg/sword.svg);
@@ -280,6 +292,10 @@ background: none;
 .svg-critdmg:before {
     -webkit-mask-image: url(../images/svg/critdmg.svg);
     mask-image: url(../images/svg/critdmg.svg);
+}
+.svg-critvalue:before {
+    -webkit-mask-image: url(../images/svg/critvalue.svg);
+    mask-image: url(../images/svg/critvalue.svg);
 }
 .svg-elemastery:before {
     -webkit-mask-image: url(../images/svg/elemastery.svg);

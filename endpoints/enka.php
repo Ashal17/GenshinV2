@@ -27,7 +27,7 @@ $response_uid = file_get_contents($url_uid . $uid, false, $context);
 if ($response_uid === FALSE) { 
 	$error = $http_response_header[11];
 	http_response_code(400);
-	echo '{"code":400, "error":"Bad Request", "message":"' . $error . '"}';
+	echo '{"code":400, "error":"Bad Request", "message":' . json_encode($http_response_header) . '}';
 	exit();
 }
 

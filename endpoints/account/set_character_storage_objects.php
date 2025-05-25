@@ -3,7 +3,7 @@
 session_start();
 
 require_once "../../config/config_db.php";
-require_once "../../account/auth/token_auth.php";
+require_once "../../php/account/token_auth.php";
 
 header('Content-Type: application/json; charset=utf-8');
 
@@ -13,27 +13,32 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 	$input = file_get_contents("php://input");
 	$errormessage = false;
 	$errorcode = 500;
-	$sql = "UPDATE genshin_users SET character_storage_objects = ? WHERE id = ?";
 
-	if($input){
-		if($stmt = mysqli_prepare($link, $sql)){
-			mysqli_stmt_bind_param($stmt, "si", $param_input, $param_userid);
-			$param_userid = $user_id;
-			$param_input = $input;
-			if (mysqli_stmt_execute($stmt)){
-				//success
-			} else {
+	if (strlen($input) > 52428800){
+		$errorcode = 400;
+		$errormessage = "Input data is too large: " . strlen($input) . "B";
+	} else {
+		$sql = "UPDATE genshin_users SET character_storage_objects = ? WHERE id = ?";
+
+		if($input){
+			if($stmt = mysqli_prepare($link, $sql)){
+				mysqli_stmt_bind_param($stmt, "si", $param_input, $param_userid);
+				$param_userid = $user_id;
+				$param_input = $input;
+				if (mysqli_stmt_execute($stmt)){
+					//success
+				} else {
+					$errormessage = "Error when updating character storage data";
+				}
+			} else {		
 				$errormessage = "Error when updating character storage data";
 			}
-		} else {		
-			$errormessage = "Error when updating character storage data";
-		}
 
-	} else {
-		$errorcode = 400;
-		$errormessage = "No input character storage data provided";
+		} else {
+			$errorcode = 400;
+			$errormessage = "No input character storage data provided";
+		}
 	}
-	
 
 	mysqli_close($link);				
 	if ($errormessage) {

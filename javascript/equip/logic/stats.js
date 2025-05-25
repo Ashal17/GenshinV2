@@ -29,21 +29,19 @@ function equip_stats_update_total_all() {
     equip_stats_update_reset_total_all();
     equip_stats_update_add_total_all();
 
+    equip_stats_update_add_all("total", "effects", true);
     equip_stats_update_transformation_all("main");
     equip_stats_update_transformation_all("mult");
     equip_effects_update_stats_transform_other_all();
-    equip_stats_update_add_all("total", "effects_transform_other");
+    equip_stats_update_add_all("total", "effects_transform_other", true);
     equip_effects_update_stats_transform_personal_all();
-    equip_stats_update_add_all("total", "effects_transform_personal");
+    equip_stats_update_add_all("total", "effects_transform_personal", true);
     equip_stats_update_transformation_all("mult_trans");
     equip_stats_update_transformation_all("elemastery");
     equip_stats_update_transformation_all("merge");
 
     equip_stats_update_vision_stat_all();
-
-    for (var i = 0; i < const_party_size; i++) {
-        output_party[i].stats.total["enemyred"] = equip_stats_calculate_enemyred(output_party[i].stats.total, i);
-    }
+    equip_stats_update_enemy_defense_all();
 
 }
 
@@ -63,21 +61,56 @@ function equip_stats_update_reset_total(party_id) {
 function equip_stats_update_add_total_all() {
     for (const [stat_type, stat_obj] of Object.entries(const_output_party_stat_objects)) {
         for (var i = 0; i < stat_obj.length; i++) {
-            equip_stats_update_add_all(stat_type, stat_obj[i]);
+            equip_stats_update_add_all(stat_type, stat_obj[i], false);
         }
-    }    
+        equip_stats_update_copy_total_all(stat_type);
+    }      
 }
 
-function equip_stats_update_add_all(stat_type, stats_obj_name) {
+function equip_stats_update_add_all(stat_type, stats_obj_name, skills) {
     for (var i = 0; i < const_party_size; i++) {
-        equip_stats_update_add(stat_type, i, stats_obj_name);
+        equip_stats_update_add(stat_type, i, stats_obj_name, null);
+        if (skills) {
+            equip_stats_update_add_skills(stat_type, i, stats_obj_name)
+        }
     }
 }
 
-function equip_stats_update_add(stat_type, party_id, stats_obj_name) {
-    var stats_obj = output_party[party_id].stats[stats_obj_name]
+function equip_stats_update_add_skills(stat_type, party_id, stats_obj_name) {
+    for (var i = 0; i < user_objects.user_party[party_id].active_skills.length; i++) {
+        var skill_effects = user_objects.user_party[party_id].active_skills[i].effects;
+        if (skill_effects && skill_effects.length > 0) {
+            equip_stats_update_add(stat_type, party_id, stats_obj_name, i)
+        }
+    }
+}
+
+function equip_stats_update_add(stat_type, party_id, stats_obj_name, skill_index = null) {
+    if (skill_index === null) {
+        var stats_obj = output_party[party_id].stats[stats_obj_name];
+        var output_obj = output_party[party_id].stats[stat_type];
+    } else {
+        var stats_obj = output_party[party_id].skills.active.details[skill_index].stats[stats_obj_name];
+        var output_obj = output_party[party_id].skills.active.details[skill_index].stats[stat_type];
+    }
+    
     for (var i = 0; i < stats_obj.length; i++) {
-        output_party[party_id].stats[stat_type][stats_obj[i].id] += stats_obj[i].value;
+        output_obj[stats_obj[i].id] += stats_obj[i].value;
+    }
+}
+
+function equip_stats_update_copy_total_all(stat_type) {
+    for (var i = 0; i < const_party_size; i++) {
+        equip_stats_update_copy_total(stat_type, i)
+    }
+}
+
+function equip_stats_update_copy_total(stat_type, party_id) {
+    for (var i = 0; i < user_objects.user_party[party_id].active_skills.length; i++) {
+        var skill_effects = user_objects.user_party[party_id].active_skills[i].effects;
+        if (skill_effects && skill_effects.length > 0) {
+            output_party[party_id].skills.active.details[i].stats[stat_type] = structuredClone(output_party[party_id].stats[stat_type]);
+        }
     }
 }
 
@@ -85,7 +118,13 @@ function equip_stats_update_transformation_all(transformation_name) {
     for (var i = 0; i < const_party_size; i++) {
         for (const [stat_type, stat_obj] of Object.entries(const_output_party_stat_objects)) {
             output_party[i].stats[stat_type] = equip_stats_calculate_tranformation(output_party[i].stats[stat_type], transformation_name);
-        }       
+            for (var ii = 0; ii < user_objects.user_party[i].active_skills.length; ii++) {
+                var skill_effects = user_objects.user_party[i].active_skills[ii].effects;
+                if (skill_effects && skill_effects.length > 0) {
+                    output_party[i].skills.active.details[ii].stats[stat_type] = equip_stats_calculate_tranformation(output_party[i].skills.active.details[ii].stats[stat_type], transformation_name);
+                }
+            }
+        }          
     }
 }
 
@@ -95,8 +134,25 @@ function equip_stats_update_vision_stat_all() {
     }
 }
 
-function equip_stats_update_vision_stat(index) {
-    output_party[index].stats.vision_stat = equip_stats_return_vision_stat(index);
+function equip_stats_update_vision_stat(party_id) {
+    output_party[party_id].stats.vision_stat = equip_stats_return_vision_stat(party_id);
+}
+
+function equip_stats_update_enemy_defense_all() {
+    for (var i = 0; i < const_party_size; i++) {
+        equip_stats_update_enemy_defense(i);
+    }
+}
+
+function equip_stats_update_enemy_defense(party_id) {
+    output_party[party_id].stats.total["enemyred"] = equip_stats_calculate_enemyred(output_party[party_id].stats.total, party_id);
+
+    for (var i = 0; i < user_objects.user_party[party_id].active_skills.length; i++) {
+        var skill_effects = user_objects.user_party[party_id].active_skills[i].effects;
+        if (skill_effects && skill_effects.length > 0) {
+            output_party[party_id].skills.active.details[i].stats.total["enemyred"] = equip_stats_calculate_enemyred(output_party[party_id].skills.active.details[i].stats.total, party_id);
+        }
+    }
 }
 
 function equip_stats_calculate_tranformation(stats_total, transformation_name) {

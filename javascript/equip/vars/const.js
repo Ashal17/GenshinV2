@@ -64,7 +64,7 @@ const const_bonusdmg_visions = ["all", "anemo", "cryo", "dendro", "electro", "ge
 const const_bonusdmg_types = ["all", "normal", "charged", "plunge", "skill", "burst"];
 
 const const_output_party_stat_objects = {
-    "total": ["basic", "environment", "weapon", "artifacts", "effects"]
+    "total": ["basic", "environment", "weapon", "artifacts"]
 }
 
 const const_display_stats_columns = [

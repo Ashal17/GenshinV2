@@ -60,7 +60,6 @@ function equip_enka_update_response(response) {
             } catch (e) {
                 utils_loading_show_error(e, "Parsing Error occured:\n" + e)
             }
-            utils_loading_hide();
         } else {
             try {
                 var err = JSON.parse(response.responseText);

@@ -10,19 +10,43 @@ function equip_control_display_all() {
 
 }
 
-function equip_control_create_enka(btn) {
-
-    var prompt = utils_create_prompt(btn, "prompt_select", "frame_party_content");
+function equip_control_create_share_storage(btn) {
+    var prompt = utils_create_prompt(btn, "prompt_select", "main_window");
     if (!prompt) {
         return;
     }
+
     var headerline = utils_create_obj("div", "prompt_header");
+    headerline.appendChild(utils_create_obj("div", "prompt_header_text", null, "Share"));
+    headerline.appendChild(utils_create_obj("div", "spacer"));
+    var decline = utils_create_obj("button", "prompt_button prompt_button_decline", null, "&#10006");
+    decline.onclick = function () { utils_destroy_current_prompt(); };
+    headerline.appendChild(decline);
     prompt.appendChild(headerline);
+
+    var container = utils_create_obj("div", "share_container");
+    container.appendChild(utils_create_obj("div", "char_storage_column", "share_column_active"));
+    container.appendChild(utils_create_obj("div", "char_storage_column", "share_column"));
+    prompt.appendChild(container);
+    
+    equip_share_display_all();
+    utils_setup_prompt_destroyer(prompt, "active_prompt_share");
+    utils_update_frame_position_center(btn, prompt);
+}
+
+function equip_control_create_enka(btn) {
+
+    var prompt = utils_create_prompt(btn, "prompt_select", "main_window");
+    if (!prompt) {
+        return;
+    }
+    var headerline = utils_create_obj("div", "prompt_header");   
     headerline.appendChild(utils_create_obj("div", "prompt_header_text", null, "Load Enka"));
     headerline.appendChild(utils_create_obj("div", "spacer"));
     var decline = utils_create_obj("button", "prompt_button prompt_button_decline", null, "&#10006");
     decline.onclick = function () { utils_destroy_current_prompt(); };
     headerline.appendChild(decline);
+    prompt.appendChild(headerline);
     
     var inputline = utils_create_obj("div", "enka_load_container");
     prompt.appendChild(inputline);
@@ -52,11 +76,12 @@ function equip_control_create_enka(btn) {
        
     equip_enka_display_all();
     utils_setup_prompt_destroyer(prompt, "active_prompt_enka");
+    utils_update_frame_position_center(btn, prompt);
     inputfield.focus();
 }
 
 function equip_control_create_character_storage(btn) {
-    var prompt = utils_create_prompt(btn, "prompt_select", "frame_party_content");
+    var prompt = utils_create_prompt(btn, "prompt_select", "main_window");
     if (!prompt) {
         return;
     }
@@ -90,12 +115,12 @@ function equip_control_create_character_storage(btn) {
     equip_character_storage_display_active_all();
     equip_character_storage_display_all();
     utils_setup_prompt_destroyer(prompt, "active_prompt_char_storage");
+    utils_update_frame_position_center(btn, prompt);
     search.focus();
 }
 
 function equip_control_create_character_select(party_id, icon) {
     var options = [];
-
 
     for (var key in data_characters) {
         options.push(equip_control_create_character(key, party_id));
@@ -110,7 +135,7 @@ function equip_control_create_character_select(party_id, icon) {
         equip_character_change_filter(options);
     }
 
-    utils_create_prompt_select("Select Party Member " + (party_id + 1), icon.id, options, "frame_party_content", subheader);
+    utils_create_prompt_select("Select Party Member " + (party_id + 1), icon.id, null, options, "main_window", icon.id, subheader);
 }
 
 function equip_control_create_character_filter() {
@@ -193,7 +218,7 @@ function equip_control_create_enemy_select(icon) {
         options.push(equip_control_create_enemy(i));
     }
 
-    utils_create_prompt_select("Select Enemy", icon.id, options, "frame_party_content");
+    utils_create_prompt_select("Select Enemy", icon.id, null, options, "main_window", icon.id);
 }
 
 function equip_control_create_enemy(index) {
@@ -226,7 +251,7 @@ function equip_control_create_weapon_select(icon) {
     options = utils_array_sort(options, "name");
     options = utils_array_sort(options, "rarity");
 
-    utils_create_prompt_select("Select Weapon ", icon.id, options, "frame_equipment_content");
+    utils_create_prompt_select("Select Weapon ", icon.id, "prompt_equipment_select", options, "main_window", icon.id);
 }
 
 function equip_control_create_weapon(index, weapon_type) {
@@ -245,7 +270,7 @@ function equip_control_create_weapon(index, weapon_type) {
     
     var tooltip = equip_weapon_display_tooltip(weapon, current_weapon, weapon_type);
     icon.appendChild(tooltip);
-    icon.onmouseover = function () { utils_update_dynamic_tooltip(this, tooltip, "bottom"); }
+    icon.onmouseover = function () { utils_update_frame_position_contain(this, tooltip, "bottom"); }
 
     icon.onclick = function () { equip_weapon_change(weapon.id); utils_destroy_current_prompt(); };
 
@@ -253,7 +278,7 @@ function equip_control_create_weapon(index, weapon_type) {
 }
 
 function equip_control_create_artifacts_storage(artifact_id, btn) {
-    var prompt = utils_create_prompt(btn, "prompt_select", "frame_equipment_content");
+    var prompt = utils_create_prompt(btn, "prompt_select", "main_window");
     if (!prompt) {
         return;
     }
@@ -272,6 +297,7 @@ function equip_control_create_artifacts_storage(artifact_id, btn) {
     equip_artifacts_storage_display_header(artifact_id);
     equip_artifacts_storage_display_all(artifact_id);
     utils_setup_prompt_destroyer("active_prompt", "active_prompt_artifact_storage");
+    utils_update_frame_position_center(btn, prompt);
 }
 
 function equip_control_create_artifacts_select(artifact_id, icon) {
@@ -286,7 +312,7 @@ function equip_control_create_artifacts_select(artifact_id, icon) {
     options = utils_array_sort(options, "name");
     options = utils_array_sort(options, "rarity");
 
-    utils_create_prompt_select("Select " + data_artifact_vars[artifact_id].name, icon.id, options, "frame_equipment_content");
+    utils_create_prompt_select("Select " + data_artifact_vars[artifact_id].name, icon.id, "prompt_equipment_select", options, "main_window", icon.id);
 }
 
 function equip_control_create_artifact_icon(artifact, artifact_id) {
@@ -304,7 +330,7 @@ function equip_control_create_artifact_icon(artifact, artifact_id) {
 
     var tooltip = equip_artifacts_storage_display_tooltip(artifact);
     icon.appendChild(tooltip);
-    icon.onmouseover = function () { utils_update_dynamic_tooltip(this, tooltip, "bottom"); };
+    icon.onmouseover = function () { utils_update_frame_position_contain(this, tooltip, "bottom"); };
     return icon;
 }
 
@@ -317,4 +343,28 @@ function equip_control_create_artifact(index, artifact_id) {
     return icon;
 }
 
+function equip_control_create_active_skill_effects(index, btn) {
+    var prompt = utils_create_prompt(btn, "prompt_select", "main_window");
+    if (!prompt) {
+        return;
+    }
 
+    var headerline = utils_create_obj("div", "prompt_header");
+    prompt.appendChild(headerline);
+    headerline.appendChild(utils_create_obj("div", "prompt_header_text", null, "Individual Effects for Active Skill"));
+    headerline.appendChild(utils_create_obj("div", "spacer"));
+    var decline = utils_create_obj("button", "prompt_button prompt_button_decline", null, "&#10006");
+    decline.onclick = function () { utils_destroy_current_prompt(); };
+    headerline.appendChild(decline);
+
+    var effects_parent = utils_create_obj("div", "frame_window_content frame_effects");
+
+    for (var i = 0; i < const_effect_types.length; i++) {
+        effects_parent.appendChild(equip_setup_ui_effects(const_effect_types[i], index));
+    }
+    prompt.appendChild(effects_parent);
+
+    equip_effects_display_all(index);
+    utils_setup_prompt_destroyer("active_prompt", "active_prompt_skill_effects");
+    utils_update_frame_position_center(btn, prompt);
+}

@@ -208,8 +208,12 @@ function equip_artifacts_storage_change_filter_sub_value(value, artifact_stat_id
     var filter_sub = artifact_storage_objects.filters[artifact_id].sub_stats;
     var index = utils_array_lookup_parameter(filter_sub, "id", stat_id);
     if (index >= 0) {
-        filter_sub[index].value = value;
-        equip_artifacts_storage_change_trigger(artifact_id);
+        value = utils_number_verify(value, 2, 0, 9999);
+        if (value != null) {
+            filter_sub[index].value = value;
+            equip_artifacts_storage_change_trigger(artifact_id);
+        }
+        
     }     
 }
 
@@ -221,12 +225,23 @@ function equip_artifacts_storage_change_filter_sub_move(index, artifact_id, dire
 }
 
 function equip_artifacts_storage_save_artifact(artifact_id, artifact, show_warns = true) {
-    var hash = utils_hash(JSON.stringify(artifact))
+
+    if (user_account && user_account.status) {
+        if (artifact_storage_objects.artifacts[artifact_id].length > 10000) {
+            utils_message("Maximum of 10 000 Artifacts per type for logged in users!", "automatic_warn");
+            return false;
+        }        
+    } else if (artifact_storage_objects.artifacts[artifact_id].length > 500) {
+        utils_message("Maximum of 500 Artifacts per type for unlogged users!", "automatic_warn");
+        return false;
+    }
+
+    var hash = utils_hash(JSON.stringify(artifact));
 
     for (var i = 0; i < artifact_storage_objects.artifacts[artifact_id].length; i++) {
         if (artifact_storage_objects.artifacts[artifact_id][i].hash == hash) {
             if (show_warns) {
-                utils_message("This Artifact is already saved!", "automatic_warn")
+                utils_message("This Artifact is already saved!", "automatic_warn");
             }
             return false;
         }
@@ -247,16 +262,7 @@ function equip_artifacts_update_relative_values(party_id, artifact_id) {
     var artifact = user_objects.user_party[party_id].artifacts[artifact_id];
     var stars = artifact.stars;
     for (var i = 0; i < const_artifact_sub_stats; i++) {
-        var stat_id = artifact.sub_stats[i].id;
-        var value = artifact.sub_stats[i].value;
-        if (value) {
-            var single_roll = data_artifact_stats[stars].sub_stats[stat_id].slice(-1)[0];
-            var relative_value = Math.round(value / single_roll * 10) / 10;
-            output_party[party_id].artifacts[artifact_id].relative_values[i] = relative_value;
-        } else {
-            output_party[party_id].artifacts[artifact_id].relative_values[i] = 0;
-        }
-        
+        output_party[party_id].artifacts[artifact_id].relative_values[i] = equip_artifacts_return_relative_value(artifact.sub_stats[i].id, artifact.sub_stats[i].value, stars);       
     }
 }
 
@@ -370,8 +376,6 @@ function equip_artifacts_storage_display_header(artifact_id) {
     var parent = document.getElementById("artifact_storage_header_column");
     utils_delete_children(parent, 0);
 
-    var active_artifact = user_objects.user_party[user_objects.user_active_character].artifacts[artifact_id];
-    parent.appendChild(equip_artifacts_storage_display(artifact_id, active_artifact));
     parent.appendChild(equip_artifacts_storage_display_filter_set(artifact_id));
     if (data_artifact_vars[artifact_id].main_stats.length > 1) {
         parent.appendChild(equip_artifacts_storage_display_filter_main_stat(artifact_id));
@@ -381,6 +385,8 @@ function equip_artifacts_storage_display_header(artifact_id) {
 }
 
 function equip_artifacts_storage_display_filter_set(artifact_id) {
+    var container = utils_create_obj("div", "artifact_storage_filter_container");
+    container.appendChild(utils_create_obj("div", "artifact_storage_filter_header", null, "Set Filter"));
     var obj = utils_create_obj("div", "artifact_storage_filter_set", "artifact_storage_filter_set");
 
     for (var i = 0; i < artifact_storage_objects.filters[artifact_id].sets.length; i++) {
@@ -391,13 +397,16 @@ function equip_artifacts_storage_display_filter_set(artifact_id) {
         artifact_set.onclick = function (event) { equip_artifacts_storage_change_filter_set(artifact_id, artifact.id); event.preventDefault(); };
         obj.appendChild(artifact_set);
     }
-    var new_btn_container = utils_create_obj("div", "container new_button_container");
-    var new_btn = utils_create_obj("div", "new_button", "artifact_storage_filter_set_new_button");
-    new_btn.onclick = function (event) { equip_artifacts_storage_display_filter_set_artifacts_select(artifact_id, new_btn); event.preventDefault(); };
-    new_btn_container.appendChild(new_btn);
-    obj.appendChild(new_btn_container);
-    
-    return obj;
+    if (artifact_storage_objects.filters[artifact_id].sets.length < 5) {
+        var new_btn_container = utils_create_obj("div", "container new_button_container");
+        var new_btn = utils_create_obj("div", "new_button", "artifact_storage_filter_set_new_button");
+        new_btn.onclick = function (event) { equip_artifacts_storage_display_filter_set_artifacts_select(artifact_id, new_btn); event.preventDefault(); };
+        new_btn_container.appendChild(new_btn);
+        obj.appendChild(new_btn_container);
+    }
+
+    container.appendChild(obj);    
+    return container;
 }
 
 function equip_artifacts_storage_display_filter_set_artifacts_select(artifact_id, icon) {
@@ -409,10 +418,9 @@ function equip_artifacts_storage_display_filter_set_artifacts_select(artifact_id
         }
     }
 
-    options = utils_array_sort(options, "name");
-    options = utils_array_sort(options, "rarity");
+    options = utils_array_sort(options, ["name", "rarity"]);
 
-    utils_create_prompt_select("Select Set Filter", icon.id, options, "artifact_storage_header_column", null, "active_prompt_artifact_storage");    
+    utils_create_prompt_select("Select Set Filter", icon.id, "prompt_equipment_select", options, "artifact_storage_header_column", null, null, "active_prompt_artifact_storage");    
 }
 function equip_artifacts_storage_display_filter_set_artifact(index, artifact_id) {
     var artifact = data_artifact_sets[index];
@@ -423,12 +431,14 @@ function equip_artifacts_storage_display_filter_set_artifact(index, artifact_id)
 }
 
 function equip_artifacts_storage_display_filter_main_stat(artifact_id) {
+    var container = utils_create_obj("div", "artifact_storage_filter_container");
+    container.appendChild(utils_create_obj("div", "artifact_storage_filter_header", null, "Main Stat Filter"));
     var obj = utils_create_obj("div", "artifact_storage_filter_main_stat", "artifact_storage_filter_main_stat");
 
-    for (var i = 0; i < artifact_storage_objects.filters[artifact_id].main_stat.length; i++) {
-        var stat_id = artifact_storage_objects.filters[artifact_id].main_stat[i];
-        var stat_container = utils_create_obj("div", "artifact_storage_filter_stat_container", "artifact_storage_filter_stat_container_" + artifact_id + i);
-        var stat_obj = utils_create_img_btn(
+    for (let i = 0; i < artifact_storage_objects.filters[artifact_id].main_stat.length; i++) {
+        let stat_id = artifact_storage_objects.filters[artifact_id].main_stat[i];
+        let stat_container = utils_create_obj("div", "artifact_storage_filter_stat_container", "artifact_storage_filter_stat_container_" + artifact_id + i);
+        let stat_obj = utils_create_img_btn(
             stat_id,
             null,
             data_stats[stat_id].name,
@@ -437,19 +447,23 @@ function equip_artifacts_storage_display_filter_main_stat(artifact_id) {
         )
         stat_obj.firstChild.onclick = function (event) { equip_artifacts_storage_change_filter_main(stat_id, artifact_id); event.preventDefault(); },
         stat_container.appendChild(stat_obj);
-        obj.appendChild(stat_obj);
+        obj.appendChild(stat_container);
     }
-
-    var new_btn_container = utils_create_obj("div", "container new_button_container");
-    var new_btn = utils_create_obj("div", "new_button", "artifact_storage_filter_main_new_button");
-    new_btn.onclick = function (event) { utils_create_prompt_values(new_btn.id, equip_artifacts_storage_change_filter_main, equip_artifacts_return_main_stats(artifact_id), artifact_id, new_btn_container, "active_prompt_artifact_storage"); event.preventDefault(); };
-    new_btn_container.appendChild(new_btn);
-    obj.appendChild(new_btn_container);
-
-    return obj;
+    if (artifact_storage_objects.filters[artifact_id].main_stat.length < 3) {
+        var new_btn_container = utils_create_obj("div", "container new_button_container");
+        var new_btn = utils_create_obj("div", "new_button", "artifact_storage_filter_main_new_button");
+        new_btn.onclick = function (event) { utils_create_prompt_values(new_btn.id, equip_artifacts_storage_change_filter_main, equip_artifacts_return_main_stats(artifact_id), artifact_id, new_btn_container, "active_prompt_artifact_storage"); event.preventDefault(); };
+        new_btn_container.appendChild(new_btn);
+        obj.appendChild(new_btn_container);
+    }
+    
+    container.appendChild(obj);
+    return container;
 }
 
 function equip_artifacts_storage_display_filter_sub_stats(artifact_id) {
+    var container = utils_create_obj("div", "artifact_storage_filter_container");
+    container.appendChild(utils_create_obj("div", "artifact_storage_filter_header", null, "Sub Stats Filter"));
     var obj = utils_create_obj("div", "artifact_storage_filter_sub_stats", "artifact_storage_filter_sub_stats");
 
     for (let i = 0; i < artifact_storage_objects.filters[artifact_id].sub_stats.length; i++) {
@@ -488,48 +502,129 @@ function equip_artifacts_storage_display_filter_sub_stats(artifact_id) {
         obj.appendChild(stat_container);
     }
 
-    var new_btn_container = utils_create_obj("div", "container new_button_container");
-    var new_btn = utils_create_obj("div", "new_button", "artifact_storage_filter_sub_new_button");
-    new_btn.onclick = function (event) { utils_create_prompt_values(new_btn.id, equip_artifacts_storage_change_filter_sub, equip_artifacts_return_sub_options(-1, artifact_id), artifact_id, new_btn_container, "active_prompt_artifact_storage"); event.preventDefault(); };
-    new_btn_container.appendChild(new_btn);
-    obj.appendChild(new_btn_container);
+    if (artifact_storage_objects.filters[artifact_id].sub_stats.length < 5) {
+        var new_btn_container = utils_create_obj("div", "container new_button_container");
+        var new_btn = utils_create_obj("div", "new_button", "artifact_storage_filter_sub_new_button");
+        new_btn.onclick = function (event) { utils_create_prompt_values(new_btn.id, equip_artifacts_storage_change_filter_sub, equip_artifacts_return_sub_filter_options(), artifact_id, new_btn_container, "active_prompt_artifact_storage"); event.preventDefault(); };
+        new_btn_container.appendChild(new_btn);
+        obj.appendChild(new_btn_container);
+    }    
 
-    return obj;
+    container.appendChild(obj);
+    return container;
 }
 
 function equip_artifacts_storage_display_all(artifact_id) {
     var parent = document.getElementById("artifact_storage_column");
     utils_delete_children(parent, 0);
 
+    var filter_sub_rv = [];
+    var filter_sub_simple = [];
+    for (var i = 0; i < artifact_storage_objects.filters[artifact_id].sub_stats.length; i++) {
+        if (artifact_storage_objects.filters[artifact_id].sub_stats[i].id == "critvalue") {
+            filter_sub_rv.push("crit");
+            filter_sub_rv.push("critdmg");
+        } else if (artifact_storage_objects.filters[artifact_id].sub_stats[i].id != "rollvalue") {
+            filter_sub_rv.push(artifact_storage_objects.filters[artifact_id].sub_stats[i].id);
+        }
+        filter_sub_simple.push(artifact_storage_objects.filters[artifact_id].sub_stats[i].id);
+    }
+    if (filter_sub_simple.includes("critvalue")) {
+        if (!filter_sub_simple.includes("crit")) {
+            filter_sub_simple.push("crit");
+        }
+        if (!filter_sub_simple.includes("critdmg")) {
+            filter_sub_simple.push("critdmg");
+        }
+    }    
+    
+    var active_artifact = user_objects.user_party[user_objects.user_active_character].artifacts[artifact_id];
+    var active_stats = equip_artifacts_storage_return_filtered_artifact(artifact_id, active_artifact, filter_sub_rv, true);
+    parent.appendChild(equip_artifacts_storage_display(artifact_id, active_artifact, null, active_stats, active_stats, filter_sub_simple));
+
+    var artifact_objects = [];
     for (var i = 0; i < artifact_storage_objects.artifacts[artifact_id].length; i++) {
         var display_artifact = artifact_storage_objects.artifacts[artifact_id][i];
-        var filter = equip_artifacts_storage_return_filtered_artifact(artifact_id, display_artifact);
-        if (filter) {
-            parent.appendChild(equip_artifacts_storage_display(artifact_id, display_artifact, i));
+        var filter_stats = equip_artifacts_storage_return_filtered_artifact(artifact_id, display_artifact, filter_sub_rv, false);
+        if (filter_stats) {
+            artifact_objects.push(equip_artifacts_storage_display(artifact_id, display_artifact, i, filter_stats, active_stats, filter_sub_simple));
         }
-        
+    }
+    var filter_sub = artifact_storage_objects.filters[artifact_id].sub_stats
+    if (filter_sub.length > 0) {
+        var sort = [];
+        for (var i = filter_sub.length; i > 0; i--) {
+            sort.push("filter_stats." + filter_sub[i-1].id);
+        }
+        artifact_objects = utils_array_sort(artifact_objects, sort);
+        artifact_objects.reverse();
+    }
+
+    for (var i = 0; i < artifact_objects.length; i++) {
+        parent.appendChild(artifact_objects[i]);
     }
 }
 
-function equip_artifacts_storage_display(artifact_id, display_artifact, index) {
+function equip_artifacts_storage_display(artifact_id, display_artifact, index, filter_stats, active_stats, filter_sub_simple) {
     var obj = utils_create_obj("div", "artifact_storage_row", "artifact_storage_row_" + index);
     var artifact = utils_array_get_by_lookup(data_artifact_sets, "id", display_artifact.id);
 
     obj.appendChild(equip_display_equipment_icon(
         "/images/icons/artifact/" + artifact_id + "/" + artifact.icon + ".png", display_artifact.stars, equip_artifacts_storage_display_tooltip(artifact), display_artifact.level
     ));
-    var main_col = utils_create_obj("div", "artifact_storage_main_col");
-    main_col.appendChild(utils_create_stat_img(display_artifact.main_stat, equip_artifacts_return_main_value(display_artifact)));
-    main_col.appendChild(equip_artifacts_storage_display_btns(artifact_id, index));
-    obj.appendChild(main_col);
+    obj.appendChild(utils_create_obj("p", "artifact_storage_name", null, artifact[artifact_id]));
+    
+    var stat_col = utils_create_obj("div", "artifact_storage_stats");
+    stat_col.appendChild(utils_create_stat_img(display_artifact.main_stat, equip_artifacts_return_main_value(display_artifact)));
 
-    var sub_col = utils_create_obj("div", "artifact_storage_sub_col");
+    var sub_stats = utils_create_obj("div", "artifact_storage_sub_stats");
 
+    for (var i = 0; i < filter_sub_simple.length; i++) {
+        for (var ii = 0; ii < const_artifact_sub_stats; ii++) {
+            if (filter_sub_simple[i] == display_artifact.sub_stats[ii].id) {
+                sub_stats.appendChild(utils_create_stat_img(display_artifact.sub_stats[ii].id, display_artifact.sub_stats[ii].value));
+                break;
+            }
+        }
+    }
+    var line_class = null;
+    if (filter_sub_simple.length > 0) {
+        line_class = "diminish"
+    }
     for (var i = 0; i < const_artifact_sub_stats; i++) {
-        sub_col.appendChild(utils_create_stat_img(display_artifact.sub_stats[i].id, display_artifact.sub_stats[i].value));
+        if (!filter_sub_simple.includes(display_artifact.sub_stats[i].id)) {
+            sub_stats.appendChild(utils_create_stat_img(display_artifact.sub_stats[i].id, display_artifact.sub_stats[i].value, line_class));
+        }      
+    }
+    if (filter_sub_simple.includes("critvalue")) {
+        sub_stats.appendChild(utils_create_stat_img("critvalue", filter_stats.critvalue));
+    } else {
+        sub_stats.appendChild(utils_create_stat_img("critvalue", filter_stats.critvalue, line_class));
+    }
+    if (filter_sub_simple.includes("rollvalue")) {
+        sub_stats.appendChild(utils_create_stat_img("rollvalue", filter_stats.rollvalue * 100));
+    } else {
+        sub_stats.appendChild(utils_create_stat_img("rollvalue", filter_stats.rollvalue * 100, line_class));
     }
 
-    obj.appendChild(sub_col);
+    obj.filter_stats = filter_stats;
+
+    var compare_stats = utils_create_obj("div", "artifact_storage_compare");
+    for (var i = 0; i < filter_sub_simple.length; i++) {
+        var difference = filter_stats[filter_sub_simple[i]] - active_stats[filter_sub_simple[i]];
+        var diff_class = "neutral";
+        if (difference > 0.05) {
+            diff_class = "positive";
+        } else if (difference < -0.05) {
+            diff_class = "negative";
+        }
+        compare_stats.appendChild(utils_create_stat_img(filter_sub_simple[i], difference, diff_class, true));
+    }
+    sub_stats.appendChild(compare_stats);
+    stat_col.appendChild(sub_stats);
+    obj.appendChild(stat_col);
+    obj.appendChild(equip_artifacts_storage_display_btns(artifact_id, index));
+    
     return obj;
 }
 
@@ -633,15 +728,13 @@ function equip_artifacts_return_main_value(artifact, stat_id = null) {
 function equip_artifacts_return_sub_options(sub_id, artifact_id) {
     var current_stats = [];
 
-    if (sub_id >= 0) {
-        current_stats.push(user_objects.user_party[user_objects.user_active_character].artifacts[artifact_id].main_stat);
-        for (var i = 0; i < const_artifact_sub_stats; i++) {
-            if (i != sub_id && user_objects.user_party[user_objects.user_active_character].artifacts[artifact_id].sub_stats[i].id != "blank") {
-                current_stats.push(user_objects.user_party[user_objects.user_active_character].artifacts[artifact_id].sub_stats[i].id);
-            }
+    current_stats.push(user_objects.user_party[user_objects.user_active_character].artifacts[artifact_id].main_stat);
+    for (var i = 0; i < const_artifact_sub_stats; i++) {
+        if (i != sub_id && user_objects.user_party[user_objects.user_active_character].artifacts[artifact_id].sub_stats[i].id != "blank") {
+            current_stats.push(user_objects.user_party[user_objects.user_active_character].artifacts[artifact_id].sub_stats[i].id);
         }
     }
-    
+       
     var options = [];
     for (var i = 0; i < const_artifact_sub_stats_options.length; i++) {
         if (!current_stats.includes(const_artifact_sub_stats_options[i])) {
@@ -656,6 +749,21 @@ function equip_artifacts_return_sub_options(sub_id, artifact_id) {
     return options;
 }
 
+function equip_artifacts_return_sub_filter_options() {
+    var options = [];
+    for (var i = 1; i < const_artifact_sub_stats_options.length; i++) {
+        var stat = data_stats[const_artifact_sub_stats_options[i]];
+        let option = {};
+        option.text = stat.name;
+        option.id = const_artifact_sub_stats_options[i];
+        options.push(option);
+    }
+    options.push({ "text": "Crit Value", "id": "critvalue" });
+    options.push({ "text": "Roll Value", "id": "rollvalue" });
+
+    return options;
+}
+
 function equip_artifacts_return_active_sets(artifacts) {
     var active_sets = {};
 
@@ -666,31 +774,53 @@ function equip_artifacts_return_active_sets(artifacts) {
     return active_sets;
 }
 
-function equip_artifacts_storage_return_filtered_artifact(artifact_id, artifact) {
+function equip_artifacts_return_all_stats(display_artifact, filter_sub_rv) {
+    var stats = {};
+    for (var i = 1; i < const_artifact_sub_stats_options.length; i++) {
+        stats[const_artifact_sub_stats_options[i]] = 0;
+    }
+    stats.rollvalue = 0;
+    for (var i = 0; i < const_artifact_sub_stats; i++) {
+        var stat_id = display_artifact.sub_stats[i].id;
+        var value = display_artifact.sub_stats[i].value
+        stats[stat_id] = value;
+        if (filter_sub_rv.length == 0 || filter_sub_rv.includes(stat_id)) {
+            stats.rollvalue += equip_artifacts_return_relative_value(stat_id, value, display_artifact.stars)
+        }        
+    }
+    stats.critvalue = stats.crit * 2 + stats.critdmg;
+
+    stats[display_artifact.main_stat] = equip_artifacts_return_main_value(display_artifact);
+    return stats;
+}
+
+function equip_artifacts_return_relative_value(stat_id, value, stars) {
+    if (value) {
+        var single_roll = data_artifact_stats[stars].sub_stats[stat_id].slice(-1)[0];
+        return Math.round(value / single_roll * 10) / 10;
+    } else {
+        return 0;
+    }
+}
+
+function equip_artifacts_storage_return_filtered_artifact(artifact_id, artifact, filter_sub_rv, always) {
     var filter_sets = artifact_storage_objects.filters[artifact_id].sets;
     var filter_main = artifact_storage_objects.filters[artifact_id].main_stat;
     var filter_sub = artifact_storage_objects.filters[artifact_id].sub_stats;
-    if (filter_sets.length > 0 && !filter_sets.includes(artifact.id)) {
+    if (!always && filter_sets.length > 0 && !filter_sets.includes(artifact.id)) {
         return false;
-    } else if (filter_main.length > 0 && !filter_main.includes(artifact.main_stat)) {
+    } else if (!always && filter_main.length > 0 && !filter_main.includes(artifact.main_stat)) {
         return false;
     } else {
-        var filtered = [];
-        for (var i = 0; i < filter_sub.length; i++) {
-            var filtered_sub = 0;
-            for (var ii = 0; ii < artifact.sub_stats.length; ii++) {
-                if (artifact.sub_stats[ii].id == filter_sub[i].id) {
-                    filtered_sub = artifact.sub_stats[ii].value;
-                    break;
+        var stats = equip_artifacts_return_all_stats(artifact, filter_sub_rv);
+        if (!always) {
+            for (var i = 0; i < filter_sub.length; i++) {
+                if (filter_sub[i].value > stats[filter_sub[i].id]) {
+                    return false;
                 }
             }
-            if (filter_sub[i].value > filtered_sub) {
-                return false;
-            } else {
-                filtered.push(filtered_sub);
-            }
-        }
-        return filtered;
+        }               
+        return stats;
     }
 }
 

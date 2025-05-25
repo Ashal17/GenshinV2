@@ -1096,5 +1096,13 @@
     "total_name": "Pyro RES",
     "type": "percent",
     "svg": "pyro"
+  },
+  "critvalue": {
+    "name": "Crit Value",
+    "type": "percent"
+  },
+  "rollvalue": {
+    "name": "Roll Value",
+    "type": "percent"
   }
 }

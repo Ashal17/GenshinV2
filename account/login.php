@@ -2,9 +2,9 @@
 	session_start();
 	require_once "../config/config_db.php";
 	require_once "../config/config_recaptcha.php";
-	require_once "../account/auth/token_auth.php";
-	require_once "../account/auth/register.php";
-	require_once "../account/auth/login_auth.php";
+	require_once "../php/account/token_auth.php";
+	require_once "../php/account/register.php";
+	require_once "../php/account/login_auth.php";
 
 	if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
 		header("location: /account/");
@@ -19,8 +19,8 @@
     <title>Ashal - Genshin</title>
 
 	<?php
-		require_once "../header.php";
-		require_once "../dependencies/account.php";
+		require_once "../php/header.php";
+		require_once "../php/dependencies/account.php";
 	?>
 	<script type="text/javascript">
 		var onloadCallback = function() {
@@ -35,7 +35,7 @@
 <body class="dark_theme" onload="utils_loading_hide()">
 
 	<?php
-		require_once "../nav.php";
+		require_once "../php/nav.php";
 	?>
 
 	<div class="main_window account_window" id="main_window">
