@@ -1,0 +1,1607 @@
+[
+  {
+    "id": 101021,
+    "stat": "hp",
+    "value": 23.9
+  },
+  {
+    "id": 101022,
+    "stat": "hp",
+    "value": 29.88
+  },
+  {
+    "id": 201021,
+    "stat": "hp",
+    "value": 50.19
+  },
+  {
+    "id": 201022,
+    "stat": "hp",
+    "value": 60.95
+  },
+  {
+    "id": 201023,
+    "stat": "hp",
+    "value": 71.7
+  },
+  {
+    "id": 301021,
+    "stat": "hp",
+    "value": 100.38
+  },
+  {
+    "id": 301022,
+    "stat": "hp",
+    "value": 114.72
+  },
+  {
+    "id": 301023,
+    "stat": "hp",
+    "value": 129.06
+  },
+  {
+    "id": 301024,
+    "stat": "hp",
+    "value": 143.4
+  },
+  {
+    "id": 401021,
+    "stat": "hp",
+    "value": 167.3
+  },
+  {
+    "id": 401022,
+    "stat": "hp",
+    "value": 191.2
+  },
+  {
+    "id": 401023,
+    "stat": "hp",
+    "value": 215.1
+  },
+  {
+    "id": 401024,
+    "stat": "hp",
+    "value": 239
+  },
+  {
+    "id": 501021,
+    "stat": "hp",
+    "value": 209.13
+  },
+  {
+    "id": 501022,
+    "stat": "hp",
+    "value": 239
+  },
+  {
+    "id": 501023,
+    "stat": "hp",
+    "value": 268.88
+  },
+  {
+    "id": 501024,
+    "stat": "hp",
+    "value": 298.75
+  },
+  {
+    "id": 101031,
+    "stat": "hp%",
+    "value": 1.17
+  },
+  {
+    "id": 101032,
+    "stat": "hp%",
+    "value": 1.46
+  },
+  {
+    "id": 201031,
+    "stat": "hp%",
+    "value": 1.63
+  },
+  {
+    "id": 201032,
+    "stat": "hp%",
+    "value": 1.9800000000000002
+  },
+  {
+    "id": 201033,
+    "stat": "hp%",
+    "value": 2.33
+  },
+  {
+    "id": 301031,
+    "stat": "hp%",
+    "value": 2.45
+  },
+  {
+    "id": 301032,
+    "stat": "hp%",
+    "value": 2.8000000000000003
+  },
+  {
+    "id": 301033,
+    "stat": "hp%",
+    "value": 3.15
+  },
+  {
+    "id": 301034,
+    "stat": "hp%",
+    "value": 3.5000000000000004
+  },
+  {
+    "id": 401031,
+    "stat": "hp%",
+    "value": 3.26
+  },
+  {
+    "id": 401032,
+    "stat": "hp%",
+    "value": 3.73
+  },
+  {
+    "id": 401033,
+    "stat": "hp%",
+    "value": 4.2
+  },
+  {
+    "id": 401034,
+    "stat": "hp%",
+    "value": 4.66
+  },
+  {
+    "id": 501031,
+    "stat": "hp%",
+    "value": 4.08
+  },
+  {
+    "id": 501032,
+    "stat": "hp%",
+    "value": 4.66
+  },
+  {
+    "id": 501033,
+    "stat": "hp%",
+    "value": 5.25
+  },
+  {
+    "id": 501034,
+    "stat": "hp%",
+    "value": 5.83
+  },
+  {
+    "id": 101051,
+    "stat": "atk",
+    "value": 1.56
+  },
+  {
+    "id": 101052,
+    "stat": "atk",
+    "value": 1.95
+  },
+  {
+    "id": 201051,
+    "stat": "atk",
+    "value": 3.27
+  },
+  {
+    "id": 201052,
+    "stat": "atk",
+    "value": 3.97
+  },
+  {
+    "id": 201053,
+    "stat": "atk",
+    "value": 4.67
+  },
+  {
+    "id": 301051,
+    "stat": "atk",
+    "value": 6.54
+  },
+  {
+    "id": 301052,
+    "stat": "atk",
+    "value": 7.47
+  },
+  {
+    "id": 301053,
+    "stat": "atk",
+    "value": 8.4
+  },
+  {
+    "id": 301054,
+    "stat": "atk",
+    "value": 9.34
+  },
+  {
+    "id": 401051,
+    "stat": "atk",
+    "value": 10.89
+  },
+  {
+    "id": 401052,
+    "stat": "atk",
+    "value": 12.45
+  },
+  {
+    "id": 401053,
+    "stat": "atk",
+    "value": 14
+  },
+  {
+    "id": 401054,
+    "stat": "atk",
+    "value": 15.56
+  },
+  {
+    "id": 501051,
+    "stat": "atk",
+    "value": 13.62
+  },
+  {
+    "id": 501052,
+    "stat": "atk",
+    "value": 15.56
+  },
+  {
+    "id": 501053,
+    "stat": "atk",
+    "value": 17.51
+  },
+  {
+    "id": 501054,
+    "stat": "atk",
+    "value": 19.45
+  },
+  {
+    "id": 101061,
+    "stat": "atk%",
+    "value": 1.17
+  },
+  {
+    "id": 101062,
+    "stat": "atk%",
+    "value": 1.46
+  },
+  {
+    "id": 201061,
+    "stat": "atk%",
+    "value": 1.63
+  },
+  {
+    "id": 201062,
+    "stat": "atk%",
+    "value": 1.9800000000000002
+  },
+  {
+    "id": 201063,
+    "stat": "atk%",
+    "value": 2.33
+  },
+  {
+    "id": 301061,
+    "stat": "atk%",
+    "value": 2.45
+  },
+  {
+    "id": 301062,
+    "stat": "atk%",
+    "value": 2.8000000000000003
+  },
+  {
+    "id": 301063,
+    "stat": "atk%",
+    "value": 3.15
+  },
+  {
+    "id": 301064,
+    "stat": "atk%",
+    "value": 3.5000000000000004
+  },
+  {
+    "id": 401061,
+    "stat": "atk%",
+    "value": 3.26
+  },
+  {
+    "id": 401062,
+    "stat": "atk%",
+    "value": 3.73
+  },
+  {
+    "id": 401063,
+    "stat": "atk%",
+    "value": 4.2
+  },
+  {
+    "id": 401064,
+    "stat": "atk%",
+    "value": 4.66
+  },
+  {
+    "id": 501061,
+    "stat": "atk%",
+    "value": 4.08
+  },
+  {
+    "id": 501062,
+    "stat": "atk%",
+    "value": 4.66
+  },
+  {
+    "id": 501063,
+    "stat": "atk%",
+    "value": 5.25
+  },
+  {
+    "id": 501064,
+    "stat": "atk%",
+    "value": 5.83
+  },
+  {
+    "id": 101081,
+    "stat": "def",
+    "value": 1.85
+  },
+  {
+    "id": 101082,
+    "stat": "def",
+    "value": 2.31
+  },
+  {
+    "id": 201081,
+    "stat": "def",
+    "value": 3.89
+  },
+  {
+    "id": 201082,
+    "stat": "def",
+    "value": 4.72
+  },
+  {
+    "id": 201083,
+    "stat": "def",
+    "value": 5.56
+  },
+  {
+    "id": 301081,
+    "stat": "def",
+    "value": 7.78
+  },
+  {
+    "id": 301082,
+    "stat": "def",
+    "value": 8.89
+  },
+  {
+    "id": 301083,
+    "stat": "def",
+    "value": 10
+  },
+  {
+    "id": 301084,
+    "stat": "def",
+    "value": 11.11
+  },
+  {
+    "id": 401081,
+    "stat": "def",
+    "value": 12.96
+  },
+  {
+    "id": 401082,
+    "stat": "def",
+    "value": 14.82
+  },
+  {
+    "id": 401083,
+    "stat": "def",
+    "value": 16.67
+  },
+  {
+    "id": 401084,
+    "stat": "def",
+    "value": 18.52
+  },
+  {
+    "id": 501081,
+    "stat": "def",
+    "value": 16.2
+  },
+  {
+    "id": 501082,
+    "stat": "def",
+    "value": 18.52
+  },
+  {
+    "id": 501083,
+    "stat": "def",
+    "value": 20.83
+  },
+  {
+    "id": 501084,
+    "stat": "def",
+    "value": 23.15
+  },
+  {
+    "id": 101091,
+    "stat": "def%",
+    "value": 1.46
+  },
+  {
+    "id": 101092,
+    "stat": "def%",
+    "value": 1.82
+  },
+  {
+    "id": 201091,
+    "stat": "def%",
+    "value": 2.04
+  },
+  {
+    "id": 201092,
+    "stat": "def%",
+    "value": 2.48
+  },
+  {
+    "id": 201093,
+    "stat": "def%",
+    "value": 2.91
+  },
+  {
+    "id": 301091,
+    "stat": "def%",
+    "value": 3.06
+  },
+  {
+    "id": 301092,
+    "stat": "def%",
+    "value": 3.5000000000000004
+  },
+  {
+    "id": 301093,
+    "stat": "def%",
+    "value": 3.93
+  },
+  {
+    "id": 301094,
+    "stat": "def%",
+    "value": 4.37
+  },
+  {
+    "id": 401091,
+    "stat": "def%",
+    "value": 4.08
+  },
+  {
+    "id": 401092,
+    "stat": "def%",
+    "value": 4.66
+  },
+  {
+    "id": 401093,
+    "stat": "def%",
+    "value": 5.25
+  },
+  {
+    "id": 401094,
+    "stat": "def%",
+    "value": 5.83
+  },
+  {
+    "id": 501091,
+    "stat": "def%",
+    "value": 5.1
+  },
+  {
+    "id": 501092,
+    "stat": "def%",
+    "value": 5.83
+  },
+  {
+    "id": 501093,
+    "stat": "def%",
+    "value": 6.5600000000000005
+  },
+  {
+    "id": 501094,
+    "stat": "def%",
+    "value": 7.290000000000001
+  },
+  {
+    "id": 101231,
+    "stat": "recharge",
+    "value": 1.3
+  },
+  {
+    "id": 101232,
+    "stat": "recharge",
+    "value": 1.6199999999999999
+  },
+  {
+    "id": 201231,
+    "stat": "recharge",
+    "value": 1.81
+  },
+  {
+    "id": 201232,
+    "stat": "recharge",
+    "value": 2.1999999999999997
+  },
+  {
+    "id": 201233,
+    "stat": "recharge",
+    "value": 2.59
+  },
+  {
+    "id": 301231,
+    "stat": "recharge",
+    "value": 2.7199999999999998
+  },
+  {
+    "id": 301232,
+    "stat": "recharge",
+    "value": 3.11
+  },
+  {
+    "id": 301233,
+    "stat": "recharge",
+    "value": 3.5000000000000004
+  },
+  {
+    "id": 301234,
+    "stat": "recharge",
+    "value": 3.8899999999999997
+  },
+  {
+    "id": 401231,
+    "stat": "recharge",
+    "value": 3.63
+  },
+  {
+    "id": 401232,
+    "stat": "recharge",
+    "value": 4.14
+  },
+  {
+    "id": 401233,
+    "stat": "recharge",
+    "value": 4.66
+  },
+  {
+    "id": 401234,
+    "stat": "recharge",
+    "value": 5.18
+  },
+  {
+    "id": 501231,
+    "stat": "recharge",
+    "value": 4.53
+  },
+  {
+    "id": 501232,
+    "stat": "recharge",
+    "value": 5.18
+  },
+  {
+    "id": 501233,
+    "stat": "recharge",
+    "value": 5.83
+  },
+  {
+    "id": 501234,
+    "stat": "recharge",
+    "value": 6.4799999999999995
+  },
+  {
+    "id": 101241,
+    "stat": "elemastery",
+    "value": 4.66
+  },
+  {
+    "id": 101242,
+    "stat": "elemastery",
+    "value": 5.83
+  },
+  {
+    "id": 201241,
+    "stat": "elemastery",
+    "value": 6.53
+  },
+  {
+    "id": 201242,
+    "stat": "elemastery",
+    "value": 7.93
+  },
+  {
+    "id": 201243,
+    "stat": "elemastery",
+    "value": 9.33
+  },
+  {
+    "id": 301241,
+    "stat": "elemastery",
+    "value": 9.79
+  },
+  {
+    "id": 301242,
+    "stat": "elemastery",
+    "value": 11.19
+  },
+  {
+    "id": 301243,
+    "stat": "elemastery",
+    "value": 12.59
+  },
+  {
+    "id": 301244,
+    "stat": "elemastery",
+    "value": 13.99
+  },
+  {
+    "id": 401241,
+    "stat": "elemastery",
+    "value": 13.06
+  },
+  {
+    "id": 401242,
+    "stat": "elemastery",
+    "value": 14.92
+  },
+  {
+    "id": 401243,
+    "stat": "elemastery",
+    "value": 16.79
+  },
+  {
+    "id": 401244,
+    "stat": "elemastery",
+    "value": 18.65
+  },
+  {
+    "id": 501241,
+    "stat": "elemastery",
+    "value": 16.32
+  },
+  {
+    "id": 501242,
+    "stat": "elemastery",
+    "value": 18.65
+  },
+  {
+    "id": 501243,
+    "stat": "elemastery",
+    "value": 20.98
+  },
+  {
+    "id": 501244,
+    "stat": "elemastery",
+    "value": 23.31
+  },
+  {
+    "id": 101201,
+    "stat": "crit",
+    "value": 0.7799999999999999
+  },
+  {
+    "id": 101202,
+    "stat": "crit",
+    "value": 0.97
+  },
+  {
+    "id": 201201,
+    "stat": "crit",
+    "value": 1.09
+  },
+  {
+    "id": 201202,
+    "stat": "crit",
+    "value": 1.32
+  },
+  {
+    "id": 201203,
+    "stat": "crit",
+    "value": 1.55
+  },
+  {
+    "id": 301201,
+    "stat": "crit",
+    "value": 1.63
+  },
+  {
+    "id": 301202,
+    "stat": "crit",
+    "value": 1.8599999999999999
+  },
+  {
+    "id": 301203,
+    "stat": "crit",
+    "value": 2.1
+  },
+  {
+    "id": 301204,
+    "stat": "crit",
+    "value": 2.33
+  },
+  {
+    "id": 401201,
+    "stat": "crit",
+    "value": 2.18
+  },
+  {
+    "id": 401202,
+    "stat": "crit",
+    "value": 2.4899999999999998
+  },
+  {
+    "id": 401203,
+    "stat": "crit",
+    "value": 2.8000000000000003
+  },
+  {
+    "id": 401204,
+    "stat": "crit",
+    "value": 3.11
+  },
+  {
+    "id": 501201,
+    "stat": "crit",
+    "value": 2.7199999999999998
+  },
+  {
+    "id": 501202,
+    "stat": "crit",
+    "value": 3.11
+  },
+  {
+    "id": 501203,
+    "stat": "crit",
+    "value": 3.5000000000000004
+  },
+  {
+    "id": 501204,
+    "stat": "crit",
+    "value": 3.8899999999999997
+  },
+  {
+    "id": 101221,
+    "stat": "critdmg",
+    "value": 1.55
+  },
+  {
+    "id": 101222,
+    "stat": "critdmg",
+    "value": 1.94
+  },
+  {
+    "id": 201221,
+    "stat": "critdmg",
+    "value": 2.18
+  },
+  {
+    "id": 201222,
+    "stat": "critdmg",
+    "value": 2.64
+  },
+  {
+    "id": 201223,
+    "stat": "critdmg",
+    "value": 3.11
+  },
+  {
+    "id": 301221,
+    "stat": "critdmg",
+    "value": 3.26
+  },
+  {
+    "id": 301222,
+    "stat": "critdmg",
+    "value": 3.73
+  },
+  {
+    "id": 301223,
+    "stat": "critdmg",
+    "value": 4.2
+  },
+  {
+    "id": 301224,
+    "stat": "critdmg",
+    "value": 4.66
+  },
+  {
+    "id": 401221,
+    "stat": "critdmg",
+    "value": 4.35
+  },
+  {
+    "id": 401222,
+    "stat": "critdmg",
+    "value": 4.97
+  },
+  {
+    "id": 401223,
+    "stat": "critdmg",
+    "value": 5.6000000000000005
+  },
+  {
+    "id": 401224,
+    "stat": "critdmg",
+    "value": 6.22
+  },
+  {
+    "id": 501221,
+    "stat": "critdmg",
+    "value": 5.4399999999999995
+  },
+  {
+    "id": 501222,
+    "stat": "critdmg",
+    "value": 6.22
+  },
+  {
+    "id": 501223,
+    "stat": "critdmg",
+    "value": 6.99
+  },
+  {
+    "id": 501224,
+    "stat": "critdmg",
+    "value": 7.7700000000000005
+  },
+  {
+    "id": 999001,
+    "stat": "critdmg",
+    "value": 350.0
+  },
+  {
+    "id": 999002,
+    "stat": "crit",
+    "value": 100
+  },
+  {
+    "id": 999003,
+    "stat": "atk",
+    "value": 233333
+  },
+  {
+    "id": 999004,
+    "stat": "def",
+    "value": 233333
+  },
+  {
+    "id": 998001,
+    "stat": "hp%",
+    "value": 14.57
+  },
+  {
+    "id": 998002,
+    "stat": "atk%",
+    "value": 14.57
+  },
+  {
+    "id": 998003,
+    "stat": "def%",
+    "value": 18.21
+  },
+  {
+    "id": 998004,
+    "stat": "crit",
+    "value": 9.71
+  },
+  {
+    "id": 998005,
+    "stat": "recharge",
+    "value": 16.189999999999998
+  },
+  {
+    "id": 998006,
+    "stat": "elemastery",
+    "value": 58.28
+  },
+  {
+    "id": 998007,
+    "stat": "critdmg",
+    "value": 19.43
+  },
+  {
+    "id": 995001,
+    "stat": "hp%",
+    "value": 14.57
+  },
+  {
+    "id": 995002,
+    "stat": "atk%",
+    "value": 14.57
+  },
+  {
+    "id": 995003,
+    "stat": "def%",
+    "value": 18.21
+  },
+  {
+    "id": 995004,
+    "stat": "crit",
+    "value": 9.71
+  },
+  {
+    "id": 995005,
+    "stat": "recharge",
+    "value": 16.189999999999998
+  },
+  {
+    "id": 995006,
+    "stat": "elemastery",
+    "value": 58.28
+  },
+  {
+    "id": 995007,
+    "stat": "critdmg",
+    "value": 19.43
+  },
+  {
+    "id": 997001,
+    "stat": "hp%",
+    "value": 9.32
+  },
+  {
+    "id": 997002,
+    "stat": "atk%",
+    "value": 9.32
+  },
+  {
+    "id": 997003,
+    "stat": "def%",
+    "value": 11.66
+  },
+  {
+    "id": 997004,
+    "stat": "crit",
+    "value": 6.22
+  },
+  {
+    "id": 997005,
+    "stat": "recharge",
+    "value": 10.36
+  },
+  {
+    "id": 997006,
+    "stat": "elemastery",
+    "value": 37.3
+  },
+  {
+    "id": 997007,
+    "stat": "critdmg",
+    "value": 12.43
+  },
+  {
+    "id": 996001,
+    "stat": "hp%",
+    "value": 9.32
+  },
+  {
+    "id": 996002,
+    "stat": "atk%",
+    "value": 9.32
+  },
+  {
+    "id": 996003,
+    "stat": "def%",
+    "value": 11.66
+  },
+  {
+    "id": 996004,
+    "stat": "crit",
+    "value": 6.22
+  },
+  {
+    "id": 996005,
+    "stat": "recharge",
+    "value": 10.36
+  },
+  {
+    "id": 996006,
+    "stat": "elemastery",
+    "value": 37.3
+  },
+  {
+    "id": 996007,
+    "stat": "critdmg",
+    "value": 12.43
+  },
+  {
+    "id": 996008,
+    "stat": "hp",
+    "value": 478
+  },
+  {
+    "id": 996009,
+    "stat": "atk",
+    "value": 31.12
+  },
+  {
+    "id": 996010,
+    "stat": "def",
+    "value": 37.04
+  },
+  {
+    "id": 961001,
+    "stat": "hp%",
+    "value": 14.57
+  },
+  {
+    "id": 961002,
+    "stat": "atk%",
+    "value": 14.57
+  },
+  {
+    "id": 961003,
+    "stat": "def%",
+    "value": 18.21
+  },
+  {
+    "id": 961004,
+    "stat": "crit",
+    "value": 9.71
+  },
+  {
+    "id": 961005,
+    "stat": "recharge",
+    "value": 16.189999999999998
+  },
+  {
+    "id": 961006,
+    "stat": "elemastery",
+    "value": 58.28
+  },
+  {
+    "id": 961007,
+    "stat": "critdmg",
+    "value": 19.43
+  },
+  {
+    "id": 961008,
+    "stat": "hp",
+    "value": 746.88
+  },
+  {
+    "id": 961009,
+    "stat": "atk",
+    "value": 48.63
+  },
+  {
+    "id": 961010,
+    "stat": "def",
+    "value": 57.87
+  },
+  {
+    "id": 962001,
+    "stat": "hp%",
+    "value": 14.57
+  },
+  {
+    "id": 962002,
+    "stat": "atk%",
+    "value": 14.57
+  },
+  {
+    "id": 962003,
+    "stat": "def%",
+    "value": 18.21
+  },
+  {
+    "id": 962004,
+    "stat": "crit",
+    "value": 9.71
+  },
+  {
+    "id": 962005,
+    "stat": "recharge",
+    "value": 16.189999999999998
+  },
+  {
+    "id": 962006,
+    "stat": "elemastery",
+    "value": 58.28
+  },
+  {
+    "id": 962007,
+    "stat": "critdmg",
+    "value": 19.43
+  },
+  {
+    "id": 962008,
+    "stat": "hp",
+    "value": 746.88
+  },
+  {
+    "id": 962009,
+    "stat": "atk",
+    "value": 48.63
+  },
+  {
+    "id": 962010,
+    "stat": "def",
+    "value": 57.87
+  },
+  {
+    "id": 963001,
+    "stat": "hp%",
+    "value": 14.57
+  },
+  {
+    "id": 963002,
+    "stat": "atk%",
+    "value": 14.57
+  },
+  {
+    "id": 963003,
+    "stat": "def%",
+    "value": 18.21
+  },
+  {
+    "id": 963004,
+    "stat": "crit",
+    "value": 9.71
+  },
+  {
+    "id": 963005,
+    "stat": "recharge",
+    "value": 16.189999999999998
+  },
+  {
+    "id": 963006,
+    "stat": "elemastery",
+    "value": 58.28
+  },
+  {
+    "id": 963007,
+    "stat": "critdmg",
+    "value": 19.43
+  },
+  {
+    "id": 963008,
+    "stat": "hp",
+    "value": 746.88
+  },
+  {
+    "id": 963009,
+    "stat": "atk",
+    "value": 48.63
+  },
+  {
+    "id": 963010,
+    "stat": "def",
+    "value": 57.87
+  },
+  {
+    "id": 964001,
+    "stat": "hp%",
+    "value": 14.57
+  },
+  {
+    "id": 964002,
+    "stat": "atk%",
+    "value": 14.57
+  },
+  {
+    "id": 964003,
+    "stat": "def%",
+    "value": 18.21
+  },
+  {
+    "id": 964004,
+    "stat": "crit",
+    "value": 9.71
+  },
+  {
+    "id": 964005,
+    "stat": "recharge",
+    "value": 16.189999999999998
+  },
+  {
+    "id": 964006,
+    "stat": "elemastery",
+    "value": 58.28
+  },
+  {
+    "id": 964007,
+    "stat": "critdmg",
+    "value": 19.43
+  },
+  {
+    "id": 964008,
+    "stat": "hp",
+    "value": 746.88
+  },
+  {
+    "id": 964009,
+    "stat": "atk",
+    "value": 48.63
+  },
+  {
+    "id": 964010,
+    "stat": "def",
+    "value": 57.87
+  },
+  {
+    "id": 965001,
+    "stat": "hp%",
+    "value": 14.57
+  },
+  {
+    "id": 965002,
+    "stat": "atk%",
+    "value": 14.57
+  },
+  {
+    "id": 965003,
+    "stat": "def%",
+    "value": 18.21
+  },
+  {
+    "id": 965004,
+    "stat": "crit",
+    "value": 9.71
+  },
+  {
+    "id": 965005,
+    "stat": "recharge",
+    "value": 16.189999999999998
+  },
+  {
+    "id": 965006,
+    "stat": "elemastery",
+    "value": 58.28
+  },
+  {
+    "id": 965007,
+    "stat": "critdmg",
+    "value": 19.43
+  },
+  {
+    "id": 965008,
+    "stat": "hp",
+    "value": 746.88
+  },
+  {
+    "id": 965009,
+    "stat": "atk",
+    "value": 48.63
+  },
+  {
+    "id": 965010,
+    "stat": "def",
+    "value": 57.87
+  },
+  {
+    "id": 951001,
+    "stat": "hp%",
+    "value": 14.57
+  },
+  {
+    "id": 951002,
+    "stat": "atk%",
+    "value": 14.57
+  },
+  {
+    "id": 951003,
+    "stat": "def%",
+    "value": 18.21
+  },
+  {
+    "id": 951004,
+    "stat": "crit",
+    "value": 9.71
+  },
+  {
+    "id": 951005,
+    "stat": "recharge",
+    "value": 16.189999999999998
+  },
+  {
+    "id": 951006,
+    "stat": "elemastery",
+    "value": 58.28
+  },
+  {
+    "id": 951007,
+    "stat": "critdmg",
+    "value": 19.43
+  },
+  {
+    "id": 952001,
+    "stat": "hp%",
+    "value": 14.57
+  },
+  {
+    "id": 952002,
+    "stat": "atk%",
+    "value": 14.57
+  },
+  {
+    "id": 952003,
+    "stat": "def%",
+    "value": 18.21
+  },
+  {
+    "id": 952004,
+    "stat": "crit",
+    "value": 9.71
+  },
+  {
+    "id": 952005,
+    "stat": "recharge",
+    "value": 16.189999999999998
+  },
+  {
+    "id": 952006,
+    "stat": "elemastery",
+    "value": 58.28
+  },
+  {
+    "id": 952007,
+    "stat": "critdmg",
+    "value": 19.43
+  },
+  {
+    "id": 953001,
+    "stat": "hp%",
+    "value": 14.57
+  },
+  {
+    "id": 953002,
+    "stat": "atk%",
+    "value": 14.57
+  },
+  {
+    "id": 953003,
+    "stat": "def%",
+    "value": 18.21
+  },
+  {
+    "id": 953004,
+    "stat": "crit",
+    "value": 9.71
+  },
+  {
+    "id": 953005,
+    "stat": "recharge",
+    "value": 16.189999999999998
+  },
+  {
+    "id": 953006,
+    "stat": "elemastery",
+    "value": 58.28
+  },
+  {
+    "id": 953007,
+    "stat": "critdmg",
+    "value": 19.43
+  },
+  {
+    "id": 956001,
+    "stat": "hp%",
+    "value": 14.57
+  },
+  {
+    "id": 956002,
+    "stat": "atk%",
+    "value": 14.57
+  },
+  {
+    "id": 956003,
+    "stat": "def%",
+    "value": 18.21
+  },
+  {
+    "id": 956004,
+    "stat": "crit",
+    "value": 9.71
+  },
+  {
+    "id": 956005,
+    "stat": "recharge",
+    "value": 16.189999999999998
+  },
+  {
+    "id": 956006,
+    "stat": "elemastery",
+    "value": 58.28
+  },
+  {
+    "id": 956007,
+    "stat": "critdmg",
+    "value": 19.43
+  },
+  {
+    "id": 941001,
+    "stat": "hp%",
+    "value": 9.32
+  },
+  {
+    "id": 941002,
+    "stat": "atk%",
+    "value": 9.32
+  },
+  {
+    "id": 941003,
+    "stat": "def%",
+    "value": 11.66
+  },
+  {
+    "id": 941004,
+    "stat": "crit",
+    "value": 6.22
+  },
+  {
+    "id": 941005,
+    "stat": "recharge",
+    "value": 10.36
+  },
+  {
+    "id": 941006,
+    "stat": "elemastery",
+    "value": 37.3
+  },
+  {
+    "id": 941007,
+    "stat": "critdmg",
+    "value": 12.43
+  },
+  {
+    "id": 942001,
+    "stat": "hp%",
+    "value": 9.32
+  },
+  {
+    "id": 942002,
+    "stat": "atk%",
+    "value": 9.32
+  },
+  {
+    "id": 942003,
+    "stat": "def%",
+    "value": 11.66
+  },
+  {
+    "id": 942004,
+    "stat": "crit",
+    "value": 6.22
+  },
+  {
+    "id": 942005,
+    "stat": "recharge",
+    "value": 10.36
+  },
+  {
+    "id": 942006,
+    "stat": "elemastery",
+    "value": 37.3
+  },
+  {
+    "id": 942007,
+    "stat": "critdmg",
+    "value": 12.43
+  },
+  {
+    "id": 943001,
+    "stat": "hp%",
+    "value": 9.32
+  },
+  {
+    "id": 943002,
+    "stat": "atk%",
+    "value": 9.32
+  },
+  {
+    "id": 943003,
+    "stat": "def%",
+    "value": 11.66
+  },
+  {
+    "id": 943004,
+    "stat": "crit",
+    "value": 6.22
+  },
+  {
+    "id": 943005,
+    "stat": "recharge",
+    "value": 10.36
+  },
+  {
+    "id": 943006,
+    "stat": "elemastery",
+    "value": 37.3
+  },
+  {
+    "id": 943007,
+    "stat": "critdmg",
+    "value": 12.43
+  },
+  {
+    "id": 946001,
+    "stat": "hp%",
+    "value": 9.32
+  },
+  {
+    "id": 946002,
+    "stat": "atk%",
+    "value": 9.32
+  },
+  {
+    "id": 946003,
+    "stat": "def%",
+    "value": 11.66
+  },
+  {
+    "id": 946004,
+    "stat": "crit",
+    "value": 6.22
+  },
+  {
+    "id": 946005,
+    "stat": "recharge",
+    "value": 10.36
+  },
+  {
+    "id": 946006,
+    "stat": "elemastery",
+    "value": 37.3
+  },
+  {
+    "id": 946007,
+    "stat": "critdmg",
+    "value": 12.43
+  },
+  {
+    "id": 947001,
+    "stat": "hp%",
+    "value": 3.9600000000000004
+  },
+  {
+    "id": 947002,
+    "stat": "atk%",
+    "value": 3.9600000000000004
+  },
+  {
+    "id": 947003,
+    "stat": "def%",
+    "value": 4.95
+  },
+  {
+    "id": 947004,
+    "stat": "crit",
+    "value": 2.64
+  },
+  {
+    "id": 947005,
+    "stat": "recharge",
+    "value": 4.3999999999999995
+  },
+  {
+    "id": 947006,
+    "stat": "elemastery",
+    "value": 15.85
+  },
+  {
+    "id": 947007,
+    "stat": "critdmg",
+    "value": 5.28
+  },
+  {
+    "id": 947008,
+    "stat": "hp",
+    "value": 203.15
+  },
+  {
+    "id": 947009,
+    "stat": "atk",
+    "value": 13.23
+  },
+  {
+    "id": 947010,
+    "stat": "def",
+    "value": 15.74
+  }
+]

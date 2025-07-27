@@ -1,0 +1,1303 @@
+{
+  "blank": {
+    "name": "None",
+    "type": "flat"
+  },
+  "atk": {
+    "name": "Attack",
+    "shortname": "ATK",
+    "labelname": "ATK",
+    "listname": "ATK",
+    "type": "flat"
+  },
+  "atk_base": {
+    "name": "Base Attack",
+    "type": "flat"
+  },
+  "atk_base_mid": {
+    "name": "Base Attack",
+    "type": "flat"
+  },
+  "atk%": {
+    "name": "Attack %",
+    "shortname": "ATK",
+    "labelname": "ATK",
+    "listname": "ATK",
+    "type": "percent"
+  },
+  "atk%_trans": {
+    "name": "Attack %",
+    "shortname": "ATK",
+    "labelname": "ATK",
+    "listname": "ATK",
+    "type": "percent"
+  },
+  "hp": {
+    "name": "HP",
+    "shortname": "HP",
+    "labelname": "HP",
+    "listname": "HP",
+    "type": "flat"
+  },
+  "hp_base": {
+    "name": "Base HP",
+    "type": "flat"
+  },
+  "hp_base_mid": {
+    "name": "Base HP",
+    "type": "flat"
+  },
+  "hp%": {
+    "name": "HP %",
+    "shortname": "HP",
+    "labelname": "HP",
+    "listname": "HP",
+    "type": "percent"
+  },
+
+  "hp%_trans": {
+    "name": "HP %",
+    "shortname": "HP",
+    "labelname": "HP",
+    "listname": "HP",
+    "type": "percent"
+  },
+  "def": {
+    "name": "Defense",
+    "shortname": "DEF",
+    "labelname": "DEF",
+    "listname": "DEF",
+    "type": "flat"
+  },
+  "def_base": {
+    "name": "Base Defense",
+    "type": "flat"
+  },
+  "def_base_mid": {
+    "name": "Base Defense",
+    "type": "flat"
+  },
+  "def%": {
+    "name": "Defense %",
+    "shortname": "DEF",
+    "labelname": "DEF",
+    "listname": "DEF",
+    "type": "percent"
+  },
+  "def%_trans": {
+    "name": "Defense %",
+    "shortname": "DEF",
+    "labelname": "DEF",
+    "listname": "DEF",
+    "type": "percent"
+  },
+  "fanfare": {
+    "name": "Fanfare",
+    "shortname": "Fanfare",
+    "type": "flat"
+  },
+  "specialmeter": {
+    "name": "Special Meter",
+    "shortname": "Special Meter",
+    "type": "flat"
+  },
+  "specialmeteratk": {
+    "name": "Special Meter × Attack",
+    "shortname": "Special Meter × ATK",
+    "type": "flat"
+  },
+  "specialmeter%": {
+    "name": "Special Meter",
+    "shortname": "Special Meter",
+    "type": "percent"
+  },
+  "specialmeter%atk": {
+    "name": "Special Meter × Attack",
+    "shortname": "Special Meter × ATK",
+    "type": "percent"
+  },
+  "healinghp": {
+    "name": "Healing × HP",
+    "shortname": "Healing × HP",
+    "type": "percent"
+  },
+  "crit": {
+    "name": "Crit Rate",
+    "shortname": "CRIT Rate",
+    "labelname": "CR",
+    "listname": "C.Rate",
+    "type": "percent"
+  },
+  "critalt": {
+    "name": "Crit Alternate Rate",
+    "type": "percent"
+  },
+  "critalt2": {
+    "name": "Crit Alternate Rate",
+    "type": "percent"
+  },
+  "critnormal": {
+    "name": "Normal Attack Crit Rate",
+    "type": "percent"
+  },
+  "critnormalalt": {
+    "name": "Normal Attack Crit Rate",
+    "type": "percent"
+  },
+  "critnormalalt2": {
+    "name": "Normal Attack Crit Rate",
+    "type": "percent"
+  },
+  "critcharged": {
+    "name": "Charged Attack Crit Rate",
+    "type": "percent"
+  },
+  "critchargedalt": {
+    "name": "Charged Attack Crit Rate",
+    "type": "percent"
+  },
+  "critchargedalt2": {
+    "name": "Charged Attack Crit Rate",
+    "type": "percent"
+  },
+  "critplunge": {
+    "name": "Plunge Attack Crit Rate",
+    "type": "percent"
+  },
+  "critplungealt": {
+    "name": "Plunge Attack Crit Rate",
+    "type": "percent"
+  },
+  "critplungealt2": {
+    "name": "Plunge Attack Crit Rate",
+    "type": "percent"
+  },
+  "critskill": {
+    "name": "Elemental Skill Crit Rate",
+    "type": "percent"
+  },
+  "critskillalt": {
+    "name": "Elemental Skill Crit Rate",
+    "type": "percent"
+  },
+  "critskillalt2": {
+    "name": "Elemental Skill Crit Rate",
+    "type": "percent"
+  },
+  "critburst": {
+    "name": "Elemental Burst Crit Rate",
+    "type": "percent"
+  },
+  "critburstalt": {
+    "name": "Elemental Burst Crit Rate",
+    "type": "percent"
+  },
+  "critburstalt2": {
+    "name": "Elemental Burst Crit Rate",
+    "type": "percent"
+  },
+  "critanemo": {
+    "name": "Anemo DMG Crit Rate",
+    "type": "percent"
+  },
+  "critcryo": {
+    "name": "Cryo DMG Crit Rate",
+    "type": "percent"
+  },
+  "critdendro": {
+    "name": "Dendro DMG Crit Rate",
+    "type": "percent"
+  },
+  "critelectro": {
+    "name": "Electro DMG Crit Rate",
+    "type": "percent"
+  },
+  "critgeo": {
+    "name": "Geo DMG Crit Rate",
+    "type": "percent"
+  },
+  "crithydro": {
+    "name": "Hydro DMG Crit Rate",
+    "type": "percent"
+  },
+  "critpyro": {
+    "name": "Pyro DMG Crit Rate",
+    "type": "percent"
+  },
+  "critphysical": {
+    "name": "Physical DMG Crit Rate",
+    "type": "percent"
+  },
+  "critmelt": {
+    "name": "Melt Crit Rate",
+    "type": "percent"
+  },
+  "critvaporize": {
+    "name": "Vaporize Crit Rate",
+    "type": "percent"
+  },
+  "critoverload": {
+    "name": "Overload Crit Rate",
+    "type": "percent"
+  },
+  "critburning": {
+    "name": "Burning Crit Rate",
+    "type": "percent"
+  },
+  "critelectrocharged": {
+    "name": "Electro-Charged Crit Rate",
+    "type": "percent"
+  },
+  "critlunarcharged": {
+    "name": "Lunar-Charged Crit Rate",
+    "type": "percent"
+  },
+  "critsuperconduct": {
+    "name": "Superconduct Crit Rate",
+    "type": "percent"
+  },
+  "critshatter": {
+    "name": "Shatter Crit Rate",
+    "type": "percent"
+  },
+  "critcrystalize": {
+    "name": "Crystalize Crit Rate",
+    "type": "percent"
+  },
+  "critswirl": {
+    "name": "Swirl Crit Rate",
+    "type": "percent"
+  },
+  "critswirlcryo": {
+    "name": "Cryo Swirl Crit Rate",
+    "type": "percent"
+  },
+  "critswirlelectro": {
+    "name": "Electro Swirl Crit Rate",
+    "type": "percent"
+  },
+  "critswirlhydro": {
+    "name": "Hydro Swirl Crit Rate",
+    "type": "percent"
+  },
+  "critswirlpyro": {
+    "name": "Pyro Swirl Crit Rate",
+    "type": "percent"
+  },
+  "critrupture": {
+    "name": "Rupture Crit Rate",
+    "type": "percent"
+  },
+  "critburgeon": {
+    "name": "Burgeon Crit Rate",
+    "type": "percent"
+  },
+  "crithyperbloom": {
+    "name": "Hyperbloom Crit Rate",
+    "type": "percent"
+  },
+  "critaggravate": {
+    "name": "Aggravate Crit Rate",
+    "type": "percent"
+  },
+  "critspread": {
+    "name": "Spread Crit Rate",
+    "type": "percent"
+  },
+  "critdmg": {
+    "name": "Crit DMG",
+    "shortname": "CRIT DMG",
+    "labelname": "CD",
+    "listname": "C.DMG",
+    "type": "percent"
+  },
+  "critdmgalt": {
+    "name": "Crit Alternate DMG",
+    "type": "percent"
+  },
+  "critdmgalt2": {
+    "name": "Crit Alternate DMG",
+    "type": "percent"
+  },
+  "critdmgnormal": {
+    "name": "Normal Attack Crit DMG",
+    "type": "percent"
+  },
+  "critdmgnormalalt": {
+    "name": "Normal Attack Crit DMG",
+    "type": "percent"
+  },
+  "critdmgnormalalt2": {
+    "name": "Normal Attack Crit DMG",
+    "type": "percent"
+  },
+  "critdmgcharged": {
+    "name": "Charged Attack Crit DMG",
+    "type": "percent"
+  },
+  "critdmgchargedalt": {
+    "name": "Charged Attack Crit DMG",
+    "type": "percent"
+  },
+  "critdmgchargedalt2": {
+    "name": "Charged Attack Crit DMG",
+    "type": "percent"
+  },
+  "critdmgplunge": {
+    "name": "Plunge Attack Crit DMG",
+    "type": "percent"
+  },
+  "critdmgplungealt": {
+    "name": "Plunge Attack Crit DMG",
+    "type": "percent"
+  },
+  "critdmgplungealt2": {
+    "name": "Plunge Attack Crit DMG",
+    "type": "percent"
+  },
+  "critdmgskill": {
+    "name": "Elemental Skill Crit DMG",
+    "type": "percent"
+  },
+  "critdmgskillalt": {
+    "name": "Elemental Skill Crit DMG",
+    "type": "percent"
+  },
+  "critdmgskillalt2": {
+    "name": "Elemental Skill Crit DMG",
+    "type": "percent"
+  },
+  "critdmgburst": {
+    "name": "Elemental Burst Crit DMG",
+    "type": "percent"
+  },
+  "critdmgburstalt": {
+    "name": "Elemental Burst Crit DMG",
+    "type": "percent"
+  },
+  "critdmgburstalt2": {
+    "name": "Elemental Burst Crit DMG",
+    "type": "percent"
+  },
+  "critdmganemo": {
+    "name": "Anemo DMG Crit DMG",
+    "type": "percent"
+  },
+  "critdmgcryo": {
+    "name": "Cryo DMG Crit DMG",
+    "type": "percent"
+  },
+  "critdmgdendro": {
+    "name": "Dendro DMG Crit DMG",
+    "type": "percent"
+  },
+  "critdmgelectro": {
+    "name": "Electro DMG Crit DMG",
+    "type": "percent"
+  },
+  "critdmggeo": {
+    "name": "Geo DMG Crit DMG",
+    "type": "percent"
+  },
+  "critdmghydro": {
+    "name": "Hydro DMG Crit DMG",
+    "type": "percent"
+  },
+  "critdmgpyro": {
+    "name": "Pyro DMG Crit DMG",
+    "type": "percent"
+  },
+  "critdmgphysical": {
+    "name": "Physical DMG Crit DMG",
+    "type": "percent"
+  },
+  "critdmgmelt": {
+    "name": "Melt Crit DMG",
+    "type": "percent"
+  },
+  "critdmgvaporize": {
+    "name": "Vaporize Crit DMG",
+    "type": "percent"
+  },
+  "critdmgoverload": {
+    "name": "Overload Crit DMG",
+    "type": "percent"
+  },
+  "critdmgburning": {
+    "name": "Burning Crit DMG",
+    "type": "percent"
+  },
+  "critdmgelectrocharged": {
+    "name": "Electro-Charged Crit DMG",
+    "type": "percent"
+  },
+  "critdmglunarcharged": {
+    "name": "Lunar-Charged Crit DMG",
+    "type": "percent"
+  },
+  "critdmgsuperconduct": {
+    "name": "Superconduct Crit DMG",
+    "type": "percent"
+  },
+  "critdmgshatter": {
+    "name": "Shatter Crit DMG",
+    "type": "percent"
+  },
+  "critdmgcrystalize": {
+    "name": "Crystalize Crit DMG",
+    "type": "percent"
+  },
+  "critdmgswirl": {
+    "name": "Swirl Crit DMG",
+    "type": "percent"
+  },
+  "critdmgswirlcryo": {
+    "name": "Cryo Swirl Crit DMG",
+    "type": "percent"
+  },
+  "critdmgswirlelectro": {
+    "name": "Electro Swirl Crit DMG",
+    "type": "percent"
+  },
+  "critdmgswirlhydro": {
+    "name": "Hydro Swirl Crit DMG",
+    "type": "percent"
+  },
+  "critdmgswirlpyro": {
+    "name": "Pyro Swirl Crit DMG",
+    "type": "percent"
+  },
+  "critdmgrupture": {
+    "name": "Rupture Crit DMG",
+    "type": "percent"
+  },
+  "critdmgburgeon": {
+    "name": "Burgeon Crit DMG",
+    "type": "percent"
+  },
+  "critdmghyperbloom": {
+    "name": "Hyperbloom Crit DMG",
+    "type": "percent"
+  },
+  "critdmgaggravate": {
+    "name": "Aggravate Crit DMG",
+    "type": "percent"
+  },
+  "critdmgspread": {
+    "name": "Spread Crit DMG",
+    "type": "percent"
+  },
+  "normal": {
+    "name": "Normal Attack DMG",
+    "type": "percent"
+  },
+  "normalalt": {
+    "name": "Normal Attack DMG",
+    "type": "percent"
+  },
+  "normalalt2": {
+    "name": "Normal Attack DMG",
+    "type": "percent"
+  },
+  "normal_mult": {
+    "name": "Normal Attack Multiplier",
+    "type": "percent"
+  },
+  "normalalt_mult": {
+    "name": "Normal Attack Multiplier",
+    "type": "percent"
+  },
+  "normalalt2_mult": {
+    "name": "Normal Attack Multiplier",
+    "type": "percent"
+  },
+  "normalelemental": {
+    "name": "Normal Elemental DMG",
+    "type": "percent"
+  },
+  "normalanemo": {
+    "name": "Normal Anemo DMG",
+    "type": "percent"
+  },
+  "normalhydro": {
+    "name": "Normal Hydro DMG",
+    "type": "percent"
+  },
+  "normalgeo": {
+    "name": "Normal Geo DMG",
+    "type": "percent"
+  },
+  "normalelectro": {
+    "name": "Normal Electro DMG",
+    "type": "percent"
+  },
+  "normalpyro": {
+    "name": "Normal Pyro DMG",
+    "type": "percent"
+  },
+  "normalcryo": {
+    "name": "Normal Cryo DMG",
+    "type": "percent"
+  },
+  "normaldendro": {
+    "name": "Normal Dendro DMG",
+    "type": "percent"
+  },
+  "normalphysical": {
+    "name": "Normal Physical DMG",
+    "type": "percent"
+  },
+  "charged": {
+    "name": "Charged Attack DMG",
+    "type": "percent"
+  },
+  "chargedalt": {
+    "name": "Charged Attack DMG",
+    "type": "percent"
+  },
+  "chargedalt2": {
+    "name": "Charged Attack DMG",
+    "type": "percent"
+  },
+  "charged_mult": {
+    "name": "Charged Attack Multiplier",
+    "type": "percent"
+  },
+  "chargedalt_mult": {
+    "name": "Charged Attack Multiplier",
+    "type": "percent"
+  },
+  "chargedalt2_mult": {
+    "name": "Charged Attack Multiplier",
+    "type": "percent"
+  },
+  "chargedelemental": {
+    "name": "Charged Elemental DMG",
+    "type": "percent"
+  },
+  "chargedanemo": {
+    "name": "Charged Anemo DMG",
+    "type": "percent"
+  },
+  "chargedhydro": {
+    "name": "Charged Hydro DMG",
+    "type": "percent"
+  },
+  "chargedgeo": {
+    "name": "Charged Geo DMG",
+    "type": "percent"
+  },
+  "chargedelectro": {
+    "name": "Charged Electro DMG",
+    "type": "percent"
+  },
+  "chargedpyro": {
+    "name": "Charged Pyro DMG",
+    "type": "percent"
+  },
+  "chargedcryo": {
+    "name": "Charged Cryo DMG",
+    "type": "percent"
+  },
+  "chargeddendro": {
+    "name": "Charged Dendro DMG",
+    "type": "percent"
+  },
+  "chargedphysical": {
+    "name": "Charged Physical DMG",
+    "type": "percent"
+  },
+  "plunge": {
+    "name": "Plunge Attack DMG",
+    "type": "percent"
+  },
+  "plungealt": {
+    "name": "Plunge Attack DMG",
+    "type": "percent"
+  },
+  "plungealt2": {
+    "name": "Plunge Attack DMG",
+    "type": "percent"
+  },
+  "plunge_mult": {
+    "name": "Plunge Attack Multiplier",
+    "type": "percent"
+  },
+  "plungealt_mult": {
+    "name": "Plunge Attack Multiplier",
+    "type": "percent"
+  },
+  "plungealt2_mult": {
+    "name": "Plunge Attack Multiplier",
+    "type": "percent"
+  },
+  "plungeelemental": {
+    "name": "Plunge Elemental DMG",
+    "type": "percent"
+  },
+  "plungeanemo": {
+    "name": "Plunge Anemo DMG",
+    "type": "percent"
+  },
+  "plungehydro": {
+    "name": "Plunge Hydro DMG",
+    "type": "percent"
+  },
+  "plungegeo": {
+    "name": "Plunge Geo DMG",
+    "type": "percent"
+  },
+  "plungeelectro": {
+    "name": "Plunge Electro DMG",
+    "type": "percent"
+  },
+  "plungepyro": {
+    "name": "Plunge Pyro DMG",
+    "type": "percent"
+  },
+  "plungecryo": {
+    "name": "Plunge Cryo DMG",
+    "type": "percent"
+  },
+  "plungedendro": {
+    "name": "Plunge Dendro DMG",
+    "type": "percent"
+  },
+  "plungephysical": {
+    "name": "Plunge Physical DMG",
+    "type": "percent"
+  },
+  "stamina": {
+    "name": "Stamina Consumption Decrease",
+    "type": "percent"
+  },
+  "aspeed": {
+    "name": "Attack SPD",
+    "type": "percent"
+  },
+  "mspeed": {
+    "name": "Movement SPD",
+    "type": "percent"
+  },
+  "skill": {
+    "name": "Elemental Skill DMG",
+    "type": "percent"
+  },
+  "skillalt": {
+    "name": "Elemental Skill DMG",
+    "type": "percent"
+  },
+  "skillalt2": {
+    "name": "Elemental Skill DMG",
+    "type": "percent"
+  },
+  "skill_mult": {
+    "name": "Elemental Skill Multiplier",
+    "type": "percent"
+  },
+  "skillalt_mult": {
+    "name": "Elemental Skill Multiplier",
+    "type": "percent"
+  },
+  "skillalt2_mult": {
+    "name": "Elemental Skill Multiplier",
+    "type": "percent"
+  },
+  "skillelemental": {
+    "name": "Skill Elemental DMG",
+    "type": "percent"
+  },
+  "skillanemo": {
+    "name": "Skill Anemo DMG",
+    "type": "percent"
+  },
+  "skillhydro": {
+    "name": "Skill Hydro DMG",
+    "type": "percent"
+  },
+  "skillgeo": {
+    "name": "Skill Geo DMG",
+    "type": "percent"
+  },
+  "skillelectro": {
+    "name": "Skill Electro DMG",
+    "type": "percent"
+  },
+  "skillpyro": {
+    "name": "Skill Pyro DMG",
+    "type": "percent"
+  },
+  "skillcryo": {
+    "name": "Skill Cryo DMG",
+    "type": "percent"
+  },
+  "skilldendro": {
+    "name": "Skill Dendro DMG",
+    "type": "percent"
+  },
+  "skillphysical": {
+    "name": "Skill Physical DMG",
+    "type": "percent"
+  },
+  "burst": {
+    "name": "Elemental Burst DMG",
+    "type": "percent"
+  },
+  "burstalt": {
+    "name": "Elemental Burst DMG",
+    "type": "percent"
+  },
+  "burstalt2": {
+    "name": "Elemental Burst DMG",
+    "type": "percent"
+  },
+  "burst_mult": {
+    "name": "Elemental Burst Multiplier",
+    "type": "percent"
+  },
+  "burstalt_mult": {
+    "name": "Elemental Burst Multiplier",
+    "type": "percent"
+  },
+  "burstalt2_mult": {
+    "name": "Elemental Burst Multiplier",
+    "type": "percent"
+  },
+  "burstelemental": {
+    "name": "Burst Elemental DMG",
+    "type": "percent"
+  },
+  "burstanemo": {
+    "name": "Burst Anemo DMG",
+    "type": "percent"
+  },
+  "bursthydro": {
+    "name": "Burst Hydro DMG",
+    "type": "percent"
+  },
+  "burstgeo": {
+    "name": "Burst Geo DMG",
+    "type": "percent"
+  },
+  "burstelectro": {
+    "name": "Burst Electro DMG",
+    "type": "percent"
+  },
+  "burstpyro": {
+    "name": "Burst Pyro DMG",
+    "type": "percent"
+  },
+  "burstcryo": {
+    "name": "Burst Cryo DMG",
+    "type": "percent"
+  },
+  "burstdendro": {
+    "name": "Burst Dendro DMG",
+    "type": "percent"
+  },
+  "burstphysical": {
+    "name": "Burst Physical DMG",
+    "type": "percent"
+  },
+  "elemastery": {
+    "name": "Elemental Mastery",
+    "shortname": "Elemental Mastery",
+    "labelname": "EM",
+    "listname": "EM",
+    "type": "flat"
+  },
+  "elemasteryatk": {
+    "name": "Elemental Mastery × Attack",
+    "shortname": "Elemental Mastery × ATK",
+    "type": "flat"
+  },
+  "elemasterymult": {
+    "name": "Elemental Mastery",
+    "type": "percent"
+  },
+  "elemasteryadd": {
+    "name": "Elemental Mastery",
+    "type": "percent"
+  },
+  "elemasteryaddshared": {
+    "name": "Elemental Mastery",
+    "type": "percent"
+  },
+  "elemasterybonus": {
+    "name": "Elemental Mastery",
+    "type": "percent"
+  },
+  "elemasterycrystalize": {
+    "name": "Elemental Mastery",
+    "type": "percent"
+  },
+  "melt": {
+    "name": "Melt",
+    "type": "percent"
+  },
+  "vaporize": {
+    "name": "Vaporize",
+    "type": "percent"
+  },
+  "overload": {
+    "name": "Overload",
+    "type": "percent"
+  },
+  "burning": {
+    "name": "Burning",
+    "type": "percent"
+  },
+  "electrocharged": {
+    "name": "Electro-Charged",
+    "type": "percent"
+  },
+  "lunarcharged": {
+    "name": "Lunar-Charged",
+    "type": "percent"
+  },
+  "superconduct": {
+    "name": "Superconduct",
+    "type": "percent"
+  },
+  "shatter": {
+    "name": "Shatter",
+    "type": "percent"
+  },
+  "crystalize": {
+    "name": "Crystalize",
+    "type": "percent"
+  },
+  "swirl": {
+    "name": "Swirl",
+    "type": "percent"
+  },
+  "swirlcryo": {
+    "name": "Cryo Swirl",
+    "type": "percent"
+  },
+  "swirlelectro": {
+    "name": "Electro Swirl",
+    "type": "percent"
+  },
+  "swirlhydro": {
+    "name": "Hydro Swirl",
+    "type": "percent"
+  },
+  "swirlpyro": {
+    "name": "Pyro Swirl",
+    "type": "percent"
+  },
+  "rupture": {
+    "name": "Rupture",
+    "type": "percent"
+  },
+  "burgeon": {
+    "name": "Burgeon",
+    "type": "percent"
+  },
+  "hyperbloom": {
+    "name": "Hyperbloom",
+    "type": "percent"
+  },
+  "aggravate": {
+    "name": "Aggravate",
+    "type": "percent"
+  },
+  "spread": {
+    "name": "Spread",
+    "type": "percent"
+  },
+  "melt_mult": {
+    "name": "Melt Multiplier",
+    "type": "percent"
+  },
+  "vaporize_mult": {
+    "name": "Vaporize Multiplier",
+    "type": "percent"
+  },
+  "overload_mult": {
+    "name": "Overload Multiplier",
+    "type": "percent"
+  },
+  "burning_mult": {
+    "name": "Burning Multiplier",
+    "type": "percent"
+  },
+  "electrocharged_mult": {
+    "name": "Electro-Charged Multiplier",
+    "type": "percent"
+  },
+  "lunarcharged_mult": {
+    "name": "Lunar-Charged Multiplier",
+    "type": "percent"
+  },
+  "superconduct_mult": {
+    "name": "Superconduct Multiplier",
+    "type": "percent"
+  },
+  "shatter_mult": {
+    "name": "Shatter Multiplier",
+    "type": "percent"
+  },
+  "crystalize_mult": {
+    "name": "Crystalize Multiplier",
+    "type": "percent"
+  },
+  "swirl_mult": {
+    "name": "Swirl Multiplier",
+    "type": "percent"
+  },
+  "swirlcryo_mult": {
+    "name": "Cryo Swirl Multiplier",
+    "type": "percent"
+  },
+  "swirlelectro_mult": {
+    "name": "Electro Swirl Multiplier",
+    "type": "percent"
+  },
+  "swirlhydro_mult": {
+    "name": "Hydro Swirl Multiplier",
+    "type": "percent"
+  },
+  "swirlpyro_mult": {
+    "name": "Pyro Swirl Multiplier",
+    "type": "percent"
+  },
+  "rupture_mult": {
+    "name": "Rupture Multiplier",
+    "type": "percent"
+  },
+  "burgeon_mult": {
+    "name": "Burgeon Multiplier",
+    "type": "percent"
+  },
+  "hyperbloom_mult": {
+    "name": "Hyperbloom Multiplier",
+    "type": "percent"
+  },
+  "aggravate_mult": {
+    "name": "Aggravate Multiplier",
+    "type": "percent"
+  },
+  "spread_mult": {
+    "name": "Spread",
+    "type": "percent"
+  },
+  "burst_energy": {
+    "name": "Burst Energy Cost",
+    "type": "flat"
+  },
+  "burst_energy_party": {
+    "name": "Burst Energy Cost - Party",
+    "type": "flat"
+  },
+  "recharge": {
+    "name": "Energy Recharge",
+    "shortname": "Energy Recharge",
+    "labelname": "ER",
+    "listname": "ER",
+    "type": "percent"
+  },
+  "recharge_bonus": {
+    "name": "Energy Recharge Bonus",
+    "type": "percent"
+  },
+  "cdr": {
+    "name": "Reduce CD",
+    "type": "percent"
+  },
+  "alt": {
+    "name": "Alternate DMG",
+    "type": "percent"
+  },
+  "alt2": {
+    "name": "Alternate DMG",
+    "type": "percent"
+  },
+  "alt_mult": {
+    "name": "Alternate Multiplier",
+    "type": "percent"
+  },
+  "alt2_mult": {
+    "name": "Alternate Multiplier",
+    "type": "percent"
+  },
+  "all": {
+    "name": "All DMG",
+    "type": "percent"
+  },
+  "elemental": {
+    "name": "Elemental DMG",
+    "type": "percent"
+  },
+  "anemo": {
+    "name": "Anemo DMG",
+    "shortname": "Anemo DMG Bonus",
+    "labelname": "ANE",
+    "listname": "Anemo",
+    "type": "percent"
+  },
+  "hydro": {
+    "name": "Hydro DMG",
+    "shortname": "Hydro DMG Bonus",
+    "labelname": "HYD",
+    "listname": "Hydro",
+    "type": "percent"
+  },
+  "pyro": {
+    "name": "Pyro DMG",
+    "shortname": "Pyro DMG Bonus",
+    "labelname": "PYR",
+    "listname": "Pyro",
+    "type": "percent"
+  },
+  "cryo": {
+    "name": "Cryo DMG",
+    "shortname": "Cryo DMG Bonus",
+    "labelname": "CRY",
+    "listname": "Cryo",
+    "type": "percent"
+  },
+  "geo": {
+    "name": "Geo DMG",
+    "shortname": "Geo DMG Bonus",
+    "labelname": "GEO",
+    "listname": "Geo",
+    "type": "percent"
+  },
+  "electro": {
+    "name": "Electro DMG",
+    "shortname": "Electro DMG Bonus",
+    "labelname": "ELE",
+    "listname": "Electro",
+    "type": "percent"
+  },
+  "dendro": {
+    "name": "Dendro DMG",
+    "shortname": "Dendro DMG Bonus",
+    "labelname": "DEN",
+    "listname": "Dendro",
+    "type": "percent"
+  },
+  "physical": {
+    "name": "Physical DMG",
+    "shortname": "Physical DMG Bonus",
+    "labelname": "PHY",
+    "listname": "Phys",
+    "type": "percent"
+  },
+  "physicalres": {
+    "name": "Physical RES",
+    "type": "percent"
+  },
+  "elementalres": {
+    "name": "Elemental RES",
+    "type": "percent"
+  },
+  "anemores": {
+    "name": "Anemo RES",
+    "type": "percent"
+  },
+  "hydrores": {
+    "name": "Hydro RES",
+    "type": "percent"
+  },
+  "pyrores": {
+    "name": "Pyro RES",
+    "type": "percent"
+  },
+  "cryores": {
+    "name": "Cryo RES",
+    "type": "percent"
+  },
+  "geores": {
+    "name": "Geo RES",
+    "type": "percent"
+  },
+  "electrores": {
+    "name": "Electro RES",
+    "type": "percent"
+  },
+  "dendrores": {
+    "name": "Dendro RES",
+    "type": "percent"
+  },
+  "healing": {
+    "name": "Healing Bonus",
+    "shortname": "Healing",
+    "labelname": "HEAL",
+    "listname": "Healing",
+    "type": "percent"
+  },
+  "healingalt": {
+    "name": "Healing Bonus",
+    "shortname": "Healing",
+    "labelname": "HEAL",
+    "listname": "Healing",
+    "type": "percent"
+  },
+  "healingalt2": {
+    "name": "Healing Bonus",
+    "shortname": "Healing",
+    "labelname": "HEAL",
+    "listname": "Healing",
+    "type": "percent"
+  },
+  "healing_mult": {
+    "name": "Healing Multiplier",
+    "type": "percent"
+  },
+  "healingalt_mult": {
+    "name": "Healing Multiplier",
+    "type": "percent"
+  },
+  "healingalt2_mult": {
+    "name": "Healing Multiplier",
+    "type": "percent"
+  },
+  "healinginc": {
+    "name": "Incoming Healing Bonus",
+    "type": "percent"
+  },
+  "shield": {
+    "name": "Powerful Shield",
+    "type": "percent"
+  },
+  "shieldalt": {
+    "name": "Powerful Shield",
+    "type": "percent"
+  },
+  "shieldalt2": {
+    "name": "Powerful Shield",
+    "type": "percent"
+  },
+  "shield_mult": {
+    "name": "Shield Bonus",
+    "type": "percent"
+  },
+  "shieldalt_mult": {
+    "name": "Shield Bonus",
+    "type": "percent"
+  },
+  "shieldalt2_mult": {
+    "name": "Shield Bonus",
+    "type": "percent"
+  },
+  "levelnormal": {
+    "name": "Normal Attack Level",
+    "type": "flat"
+  },
+  "levelskill": {
+    "name": "Elemental Skill Level",
+    "type": "flat"
+  },
+  "levelburst": {
+    "name": "Elemental Burst Level",
+    "type": "flat"
+  },
+  "additional": {
+    "name": "Additional Hit",
+    "type": "percent"
+  },
+  "normaldefignore": {
+    "name": "Normal Attack Defense Ignore",
+    "type": "percent"
+  },
+  "chargeddefignore": {
+    "name": "Charged Attack Defense Ignore",
+    "type": "percent"
+  },
+  "plungedefignore": {
+    "name": "Plunge Attack Defense Ignore",
+    "type": "percent"
+  },
+  "skilldefignore": {
+    "name": "Elemental Skill Defense Ignore",
+    "type": "percent"
+  },
+  "burstdefignore": {
+    "name": "Elemental Burst Defense Ignore",
+    "type": "percent"
+  },
+  "enemylvl": {
+    "name": "Enemy Level",
+    "type": "percent"
+  },
+  "enemydef": {
+    "name": "Enemy Defense",
+    "total_name": "Defense",
+    "type": "flat",
+    "svg": "def"
+  },
+  "enemydef%": {
+    "name": "Enemy Defense",
+    "total_name": "Defense",
+    "type": "percent"
+  },
+  "enemyred": {
+    "name": "Enemy Damage Reduction",
+    "total_name": "DMG Reduction",
+    "type": "percent",
+    "svg": "def-p"
+  },
+  "enemyphysicalres": {
+    "name": "Enemy Physical RES",
+    "total_name": "Physical RES",
+    "type": "percent",
+    "svg": "atk"
+  },
+  "enemyelementalres": {
+    "name": "Enemy Elemental RES",
+    "type": "percent"
+  },
+  "enemyanemores": {
+    "name": "Enemy Anemo RES",
+    "total_name": "Anemo RES",
+    "type": "percent",
+    "svg": "anemo"
+  },
+  "enemycryores": {
+    "name": "Enemy Cryo RES",
+    "total_name": "Cryo RES",
+    "type": "percent",
+    "svg": "cryo"
+  },
+  "enemydendrores": {
+    "name": "Enemy Dendro RES",
+    "total_name": "Dendro RES",
+    "type": "percent",
+    "svg": "dendro"
+  },
+  "enemygeores": {
+    "name": "Enemy Geo RES",
+    "total_name": "Geo RES",
+    "type": "percent",
+    "svg": "geo"
+  },
+  "enemyelectrores": {
+    "name": "Enemy Electro RES",
+    "total_name": "Electro RES",
+    "type": "percent",
+    "svg": "electro"
+  },
+  "enemyhydrores": {
+    "name": "Enemy Hydro RES",
+    "total_name": "Hydro RES",
+    "type": "percent",
+    "svg": "hydro"
+  },
+  "enemypyrores": {
+    "name": "Enemy Pyro RES",
+    "total_name": "Pyro RES",
+    "type": "percent",
+    "svg": "pyro"
+  },
+  "critvalue": {
+    "name": "Crit Value",
+    "type": "percent"
+  },
+  "rollvalue": {
+    "name": "Roll Value",
+    "type": "percent"
+  }
+}

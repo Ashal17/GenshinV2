@@ -1,0 +1,230 @@
+@media only screen and (max-width: 1084px) {
+    .frame_skills {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 1084px) {
+    .frame_skills {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .frame_skills {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.frame_skills .container_object {
+    min-width: 400px;
+    padding: 1px;
+}
+
+.container_skills {
+    min-width: 400px;
+    padding: 1px;
+}
+
+.skills_row_permanent, .skills_row_active {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grey-15);
+    padding: 5px;
+    margin: 2px;
+    font-size:0.9em;
+}
+
+    .skills_row_permanent.enabled .skills_name{
+        color: var(--yellow);
+    }
+
+    .skills_row_permanent.disabled {
+        color: var(--grey-50) !important;
+    }
+
+    .skills_name {
+        text-align: center;
+        padding: 5px;
+    }
+
+.skills_row_name {
+    display: flex;
+    flex-direction: row;
+}
+
+    .skills_row_name .skills_part_text, .skills_row_name .skills_part_val, .skills_row_name .skills_part_btn {
+        text-align:center;
+    }
+
+    .skills_passive {
+        display: flex;
+        flex-direction: row;
+        border-top: 1px solid var(--grey-40);
+    }
+
+.skills_part_text_name_obj {
+    align-self: center;
+}
+
+.skills_passive_icon {
+    max-width: 64px;
+    max-height: 64px;
+    margin-right: 5px;
+    object-fit: scale-down;
+}
+
+.skills_passive_desc {
+    font-size:0.9em;
+    padding:5px;
+}
+
+.skills_attack {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--grey-40);
+}
+
+.skills_part {
+    display: flex;
+    flex-direction: row;
+}
+
+    .skills_part:not(:last-child) {
+        border-bottom: 1px dashed var(--grey-40);
+    }
+
+.skills_part_text {
+    flex: 1 1;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.skills_part_text_type {
+    aspect-ratio: 1 / 1;
+    margin-right: 5px;
+    height: 19px;
+    align-self: center;
+}
+
+    .skills_part_text_type:before {
+        width: 100%;
+        height: 100%;
+    }
+
+.pyro .skills_part_text_type:before {
+    background-color: var(--pyro);
+}
+
+.hydro .skills_part_text_type:before {
+    background-color: var(--hydro);
+}
+
+.anemo .skills_part_text_type:before {
+    background-color: var(--anemo);
+}
+
+.geo .skills_part_text_type:before {
+    background-color: var(--geo);
+}
+
+.electro .skills_part_text_type:before {
+    background-color: var(--electro);
+}
+
+.dendro .skills_part_text_type:before {
+    background-color: var(--dendro);
+}
+
+.cryo .skills_part_text_type:before {
+    background-color: var(--cryo);
+}
+
+.skills_part_level {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+}
+
+.skills_part_val, .skills_part_btn, .skills_part_text, .skills_part_count {
+    align-content:center;
+}
+
+.skills_part_val {
+    width: 80px;
+    text-align: right;
+    padding: 5px;
+    border-left: 1px solid var(--grey-40);
+}
+
+.skills_part_btn {
+    width: 21px;
+    padding:4px;
+}
+
+.skills_part_btn_left {
+    border-right: 1px solid var(--grey-40);
+}
+
+.skills_part_btn_right {
+    border-left: 1px solid var(--grey-40);
+}
+
+.skills_part_count {
+    border-right: 1px solid var(--grey-40);
+    padding: 2px;
+}
+
+    .skills_part_count .prompt_input_simple {
+        min-width: 64px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+.skills_part_count_val {
+    height: 23px;
+    width: 23px;
+}
+
+    .skills_part_count_val .icon_selects_text {
+        font-size:0.9em;
+    }
+
+    .skills_row_name .svg-minus-circle-outline:before {
+        background-color: var(--red-light);
+    }
+
+.skills_row_name .svg-plus-circle-outline:before {
+    background-color: var(--green-light);
+}
+
+.skills_row_name .img_icon.svg.svg-minus-circle-outline:hover::before {
+    background-color: var(--red-dark);
+}
+
+.skills_row_name .img_icon.svg.svg-plus-circle-outline:hover::before {
+    background-color: var(--green-dark);
+}
+
+.skills_row_name .svg-minus-circle-outline.disabled,
+.skills_row_name .svg-plus-circle-outline.disabled {
+    cursor: default;
+    pointer-events: none;
+}
+
+.skills_row_name .svg-minus-circle-outline.disabled:before,
+.skills_row_name .svg-plus-circle-outline.disabled:before,
+.skills_row_name .img_icon.svg.svg-minus-circle-outline.disabled:hover::before,
+.skills_row_name .img_icon.svg.svg-plus-circle-outline.disabled:hover::before {
+    background-color: var(--grey-30);
+}
+
+.skills_row_name .skills_part_text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    text-align:left;
+}

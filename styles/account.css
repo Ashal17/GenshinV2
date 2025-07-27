@@ -1,0 +1,61 @@
+.main_window.account_window {
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    flex: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    min-width: 0px;
+}
+
+.account_form {
+    width: 400px;
+}
+
+    .account_form .frame_window_header {
+        margin-bottom: 5px;
+    }
+
+.form_entry {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2px 5px;
+    margin: 2px;
+    align-items: center;
+}
+
+    .form_entry:last-child {
+        margin-bottom:7px;
+    }
+
+.form_error {
+    display:inline;
+    color:var(--red);
+}
+
+.form_entry:has(> :last-child:nth-child(1)) {
+    justify-content: center;
+}
+
+.form_button {
+    width: 150px;
+    padding: 5px 0px;
+    color: var(--white);
+    border: 2px solid var(--white);
+    cursor:pointer;
+}
+
+    .form_button:hover {
+        color: var(--orange);
+        border-color: var(--orange);
+    }
+
+    .form_button:active {
+        margin: 1px -1px -1px 1px;
+    }
+
+.form_recaptcha {
+
+}
+

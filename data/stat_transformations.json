@@ -1,0 +1,960 @@
+{
+  "display": [
+    {
+      "stat": "crit",
+      "change": "add",
+      "mods": [ 5 ]
+    },
+    {
+      "stat": "critdmg",
+      "change": "add",
+      "mods": [ 50 ]
+    },
+    {
+      "stat": "recharge",
+      "change": "add",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "hp_base_mid",
+      "change": "add",
+      "mods": [ "hp_base" ]
+    },
+    {
+      "stat": "hp_base_mid",
+      "change": "mult",
+      "mods": [ "hp%" ]
+    },
+    {
+      "stat": "hp",
+      "change": "add",
+      "mods": [ "hp_base_mid" ]
+    },
+    {
+      "stat": "atk_base_mid",
+      "change": "add",
+      "mods": [ "atk_base" ]
+    },
+    {
+      "stat": "atk_base_mid",
+      "change": "mult",
+      "mods": [ "atk%" ]
+    },
+    {
+      "stat": "atk",
+      "change": "add",
+      "mods": [ "atk_base_mid" ]
+    },
+    {
+      "stat": "def_base_mid",
+      "change": "add",
+      "mods": [ "def_base" ]
+    },
+    {
+      "stat": "def_base_mid",
+      "change": "mult",
+      "mods": [ "def%" ]
+    },
+    {
+      "stat": "def",
+      "change": "add",
+      "mods": [ "def_base_mid" ]
+    },
+    {
+      "stat": "anemo",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "hydro",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "electro",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "cryo",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "pyro",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "dendro",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "geo",
+      "change": "add",
+      "mods": [ "elemental" ]
+    }
+  ],
+  "main": [
+    {
+      "stat": "crit",
+      "change": "add",
+      "mods": [ 5 ]
+    },
+    {
+      "stat": "critdmg",
+      "change": "add",
+      "mods": [ 50 ]
+    },
+    {
+      "stat": "recharge_bonus",
+      "change": "add",
+      "mods": [ "recharge" ]
+    },
+    {
+      "stat": "recharge",
+      "change": "add",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "enemydef",
+      "change": "mult",
+      "mods": [ "enemydef%" ]
+    },
+    {
+      "stat": "normal_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "normalalt_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "normalalt2_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "charged_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "chargedalt_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "chargedalt2_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "plunge_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "plungealt_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "plungealt2_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "skill_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "skillalt_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "skillalt2_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "burst_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "burstalt_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "burstalt2_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "healing_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "healingalt_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "healingalt2_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "shield_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "shieldalt_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "shieldalt2_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "alt_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "alt2_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "swirl_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "swirlhydro_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "swirlelectro_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "swirlcryo_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "swirlpyro_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "overload_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "burning_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "electrocharged_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "lunarcharged_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "superconduct_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "shatter_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "rupture_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "burgeon_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "hyperbloom_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "aggravate_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "spread_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+
+    {
+      "stat": "melt_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "vaporize_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+
+    {
+      "stat": "crystalize_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    }
+  ],
+
+  "mult": [
+    {
+      "stat": "hp_base_mid",
+      "change": "add",
+      "mods": [ "hp_base" ]
+    },
+    {
+      "stat": "hp_base_mid",
+      "change": "mult",
+      "mods": [ "hp%" ]
+    },
+    {
+      "stat": "hp",
+      "change": "add",
+      "mods": [ "hp_base_mid" ]
+    },
+    {
+      "stat": "atk_base_mid",
+      "change": "add",
+      "mods": [ "atk_base" ]
+    },
+    {
+      "stat": "atk_base_mid",
+      "change": "mult",
+      "mods": [ "atk%" ]
+    },
+    {
+      "stat": "atk",
+      "change": "add",
+      "mods": [ "atk_base_mid" ]
+    },
+    {
+      "stat": "def_base_mid",
+      "change": "add",
+      "mods": [ "def_base" ]
+    },
+    {
+      "stat": "def_base_mid",
+      "change": "mult",
+      "mods": [ "def%" ]
+    },
+    {
+      "stat": "def",
+      "change": "add",
+      "mods": [ "def_base_mid" ]
+    }
+  ],
+  "mult_trans": [
+    {
+      "stat": "hp%_trans",
+      "change": "times",
+      "mods": [ "hp_base" ]
+    },
+    {
+      "stat": "hp",
+      "change": "add",
+      "mods": [ "hp%_trans" ]
+    },
+    {
+      "stat": "atk%_trans",
+      "change": "times",
+      "mods": [ "atk_base" ]
+    },
+    {
+      "stat": "atk",
+      "change": "add",
+      "mods": [ "atk%_trans" ]
+    },
+    {
+      "stat": "def%_trans",
+      "change": "times",
+      "mods": [ "def_base" ]
+    },
+    {
+      "stat": "def",
+      "change": "add",
+      "mods": [ "def%_trans" ]
+    }
+  ],
+  "trans": [
+  ],
+  "merge": [
+    {
+      "stat": "anemo",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "hydro",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "electro",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "cryo",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "pyro",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "dendro",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "geo",
+      "change": "add",
+      "mods": [ "elemental" ]
+    },
+    {
+      "stat": "normalanemo",
+      "change": "add",
+      "mods": [ "normalelemental", "normal", "anemo" ]
+    },
+    {
+      "stat": "normalhydro",
+      "change": "add",
+      "mods": [ "normalelemental", "normal", "hydro" ]
+    },
+    {
+      "stat": "normalelectro",
+      "change": "add",
+      "mods": [ "normalelemental", "normal", "electro" ]
+    },
+    {
+      "stat": "normalcryo",
+      "change": "add",
+      "mods": [ "normalelemental", "normal", "cryo" ]
+    },
+    {
+      "stat": "normalpyro",
+      "change": "add",
+      "mods": [ "normalelemental", "normal", "pyro" ]
+    },
+    {
+      "stat": "normaldendro",
+      "change": "add",
+      "mods": [ "normalelemental", "normal", "dendro" ]
+    },
+    {
+      "stat": "normalgeo",
+      "change": "add",
+      "mods": [ "normalelemental", "normal", "geo" ]
+    },
+    {
+      "stat": "normalphysical",
+      "change": "add",
+      "mods": [ "normal", "physical" ]
+    },
+    {
+      "stat": "chargedanemo",
+      "change": "add",
+      "mods": [ "chargedelemental", "charged", "anemo" ]
+    },
+    {
+      "stat": "chargedhydro",
+      "change": "add",
+      "mods": [ "chargedelemental", "charged", "hydro" ]
+    },
+    {
+      "stat": "chargedelectro",
+      "change": "add",
+      "mods": [ "chargedelemental", "charged", "electro" ]
+    },
+    {
+      "stat": "chargedcryo",
+      "change": "add",
+      "mods": [ "chargedelemental", "charged", "cryo" ]
+    },
+    {
+      "stat": "chargedpyro",
+      "change": "add",
+      "mods": [ "chargedelemental", "charged", "pyro" ]
+    },
+    {
+      "stat": "chargeddendro",
+      "change": "add",
+      "mods": [ "chargedelemental", "charged", "dendro" ]
+    },
+    {
+      "stat": "chargedgeo",
+      "change": "add",
+      "mods": [ "chargedelemental", "charged", "geo" ]
+    },
+    {
+      "stat": "chargedphysical",
+      "change": "add",
+      "mods": [ "charged", "physical" ]
+    },
+    {
+      "stat": "plungeanemo",
+      "change": "add",
+      "mods": [ "plungeelemental", "plunge", "anemo" ]
+    },
+    {
+      "stat": "plungehydro",
+      "change": "add",
+      "mods": [ "plungeelemental", "plunge", "hydro" ]
+    },
+    {
+      "stat": "plungeelectro",
+      "change": "add",
+      "mods": [ "plungeelemental", "plunge", "electro" ]
+    },
+    {
+      "stat": "plungecryo",
+      "change": "add",
+      "mods": [ "plungeelemental", "plunge", "cryo" ]
+    },
+    {
+      "stat": "plungepyro",
+      "change": "add",
+      "mods": [ "plungeelemental", "plunge", "pyro" ]
+    },
+    {
+      "stat": "plungedendro",
+      "change": "add",
+      "mods": [ "plungeelemental", "plunge", "dendro" ]
+    },
+    {
+      "stat": "plungegeo",
+      "change": "add",
+      "mods": [ "plungeelemental", "plunge", "geo" ]
+    },
+    {
+      "stat": "plungephysical",
+      "change": "add",
+      "mods": [ "plunge", "physical" ]
+    },
+
+    {
+      "stat": "skillanemo",
+      "change": "add",
+      "mods": [ "skillelemental", "skill", "anemo" ]
+    },
+    {
+      "stat": "skillhydro",
+      "change": "add",
+      "mods": [ "skillelemental", "skill", "hydro" ]
+    },
+    {
+      "stat": "skillelectro",
+      "change": "add",
+      "mods": [ "skillelemental", "skill", "electro" ]
+    },
+    {
+      "stat": "skillcryo",
+      "change": "add",
+      "mods": [ "skillelemental", "skill", "cryo" ]
+    },
+    {
+      "stat": "skillpyro",
+      "change": "add",
+      "mods": [ "skillelemental", "skill", "pyro" ]
+    },
+    {
+      "stat": "skilldendro",
+      "change": "add",
+      "mods": [ "skillelemental", "skill", "dendro" ]
+    },
+    {
+      "stat": "skillgeo",
+      "change": "add",
+      "mods": [ "skillelemental", "skill", "geo" ]
+    },
+    {
+      "stat": "skillphysical",
+      "change": "add",
+      "mods": [ "skill", "physical" ]
+    },
+
+    {
+      "stat": "burstanemo",
+      "change": "add",
+      "mods": [ "burstelemental", "burst", "anemo" ]
+    },
+    {
+      "stat": "bursthydro",
+      "change": "add",
+      "mods": [ "burstelemental", "burst", "hydro" ]
+    },
+    {
+      "stat": "burstelectro",
+      "change": "add",
+      "mods": [ "burstelemental", "burst", "electro" ]
+    },
+    {
+      "stat": "burstcryo",
+      "change": "add",
+      "mods": [ "burstelemental", "burst", "cryo" ]
+    },
+    {
+      "stat": "burstpyro",
+      "change": "add",
+      "mods": [ "burstelemental", "burst", "pyro" ]
+    },
+    {
+      "stat": "burstdendro",
+      "change": "add",
+      "mods": [ "burstelemental", "burst", "dendro" ]
+    },
+    {
+      "stat": "burstgeo",
+      "change": "add",
+      "mods": [ "burstelemental", "burst", "geo" ]
+    },
+    {
+      "stat": "burstphysical",
+      "change": "add",
+      "mods": [ "burst", "physical" ]
+    },
+    {
+      "stat": "swirlhydro",
+      "change": "add",
+      "mods": [ "swirl" ]
+    },
+    {
+      "stat": "swirlelectro",
+      "change": "add",
+      "mods": [ "swirl" ]
+    },
+    {
+      "stat": "swirlcryo",
+      "change": "add",
+      "mods": [ "swirl" ]
+    },
+    {
+      "stat": "swirlpyro",
+      "change": "add",
+      "mods": [ "swirl" ]
+    },
+    {
+      "stat": "swirlhydro_mult",
+      "change": "mult_100",
+      "mods": [ "swirl_mult" ]
+    },
+    {
+      "stat": "swirlelectro_mult",
+      "change": "mult_100",
+      "mods": [ "swirl_mult" ]
+    },
+    {
+      "stat": "swirlcryo_mult",
+      "change": "mult_100",
+      "mods": [ "swirl_mult" ]
+    },
+    {
+      "stat": "swirlpyro_mult",
+      "change": "mult_100",
+      "mods": [ "swirl_mult" ]
+    },
+    {
+      "stat": "critswirlhydro",
+      "change": "add",
+      "mods": [ "critswirl" ]
+    },
+    {
+      "stat": "critswirlelectro",
+      "change": "add",
+      "mods": [ "critswirl" ]
+    },
+    {
+      "stat": "critswirlcryo",
+      "change": "add",
+      "mods": [ "critswirl" ]
+    },
+    {
+      "stat": "critswirlpyro",
+      "change": "add",
+      "mods": [ "critswirl" ]
+    },
+    {
+      "stat": "critdmgswirlhydro",
+      "change": "add",
+      "mods": [ "critdmgswirl" ]
+    },
+    {
+      "stat": "critdmgswirlelectro",
+      "change": "add",
+      "mods": [ "critdmgswirl" ]
+    },
+    {
+      "stat": "critdmgswirlcryo",
+      "change": "add",
+      "mods": [ "critdmgswirl" ]
+    },
+    {
+      "stat": "critdmgswirlpyro",
+      "change": "add",
+      "mods": [ "critdmgswirl" ]
+    },
+    {
+      "stat": "anemores",
+      "change": "add",
+      "mods": [ "elementalres" ]
+    },
+    {
+      "stat": "hydrores",
+      "change": "add",
+      "mods": [ "elementalres" ]
+    },
+    {
+      "stat": "electrores",
+      "change": "add",
+      "mods": [ "elementalres" ]
+    },
+    {
+      "stat": "cryores",
+      "change": "add",
+      "mods": [ "elementalres" ]
+    },
+    {
+      "stat": "pyrores",
+      "change": "add",
+      "mods": [ "elementalres" ]
+    },
+    {
+      "stat": "dendrores",
+      "change": "add",
+      "mods": [ "elementalres" ]
+    },
+    {
+      "stat": "geores",
+      "change": "add",
+      "mods": [ "elementalres" ]
+    },
+    {
+      "stat": "enemyanemores",
+      "change": "add",
+      "mods": [ "enemyelementalres" ]
+    },
+    {
+      "stat": "enemyhydrores",
+      "change": "add",
+      "mods": [ "enemyelementalres" ]
+    },
+    {
+      "stat": "enemyelectrores",
+      "change": "add",
+      "mods": [ "enemyelementalres" ]
+    },
+    {
+      "stat": "enemycryores",
+      "change": "add",
+      "mods": [ "enemyelementalres" ]
+    },
+    {
+      "stat": "enemypyrores",
+      "change": "add",
+      "mods": [ "enemyelementalres" ]
+    },
+    {
+      "stat": "enemydendrores",
+      "change": "add",
+      "mods": [ "enemyelementalres" ]
+    },
+    {
+      "stat": "enemygeores",
+      "change": "add",
+      "mods": [ "enemyelementalres" ]
+    },
+    {
+      "stat": "crit",
+      "change": "minimum",
+      "value": 0
+    },
+    {
+      "stat": "crit",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "specialmeter%atk",
+      "change": "add",
+      "mods": [ "atk" ]
+    },
+    {
+      "stat": "specialmeter%atk",
+      "change": "times",
+      "mods": [ "specialmeter%" ]
+    },
+    {
+      "stat": "specialmeteratk",
+      "change": "add",
+      "mods": [ "atk" ]
+    },
+    {
+      "stat": "specialmeteratk",
+      "change": "times",
+      "mods": [ "specialmeter", 100 ]
+    },
+    {
+      "stat": "elemasteryatk",
+      "change": "add",
+      "mods": [ "atk" ]
+    },
+    {
+      "stat": "elemasteryatk",
+      "change": "times",
+      "mods": [ "elemastery", 100 ]
+    },
+    {
+      "stat": "healinghp",
+      "change": "add",
+      "mods": [ "hp" ]
+    },
+    {
+      "stat": "healinghp",
+      "change": "times",
+      "mods": [ "healing" ]
+    }
+  ],
+
+  "elemastery": [
+    {
+      "stat": "elemasteryadd",
+      "change": "elemastery"
+    },
+    {
+      "stat": "elemasteryaddshared",
+      "change": "elemastery"
+    },
+    {
+      "stat": "elemasterybonus",
+      "change": "elemastery"
+    },
+    {
+      "stat": "elemasterymult",
+      "change": "elemastery"
+    },
+    {
+      "stat": "elemasterycrystalize",
+      "change": "elemastery"
+    },
+    {
+      "stat": "swirl",
+      "change": "add",
+      "mods": [ "elemasteryadd" ]
+    },
+    {
+      "stat": "overload",
+      "change": "add",
+      "mods": [ "elemasteryadd" ]
+    },
+    {
+      "stat": "burning",
+      "change": "add",
+      "mods": [ "elemasteryadd" ]
+    },
+    {
+      "stat": "electrocharged",
+      "change": "add",
+      "mods": [ "elemasteryadd" ]
+    },
+    {
+      "stat": "lunarcharged",
+      "change": "add",
+      "mods": [ "elemasteryaddshared" ]
+    },
+    {
+      "stat": "superconduct",
+      "change": "add",
+      "mods": [ "elemasteryadd" ]
+    },
+    {
+      "stat": "shatter",
+      "change": "add",
+      "mods": [ "elemasteryadd" ]
+    },
+    {
+      "stat": "rupture",
+      "change": "add",
+      "mods": [ "elemasteryadd" ]
+    },
+    {
+      "stat": "burgeon",
+      "change": "add",
+      "mods": [ "elemasteryadd" ]
+    },
+    {
+      "stat": "hyperbloom",
+      "change": "add",
+      "mods": [ "elemasteryadd" ]
+    },
+    {
+      "stat": "aggravate",
+      "change": "add",
+      "mods": [ "elemasterybonus" ]
+    },
+    {
+      "stat": "spread",
+      "change": "add",
+      "mods": [ "elemasterybonus" ]
+    },
+
+    {
+      "stat": "melt",
+      "change": "add",
+      "mods": [ "elemasterymult" ]
+    },
+    {
+      "stat": "vaporize",
+      "change": "add",
+      "mods": [ "elemasterymult" ]
+    },
+
+    {
+      "stat": "crystalize",
+      "change": "add",
+      "mods": [ "elemasterycrystalize" ]
+    }
+  ]
+
+}

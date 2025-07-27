@@ -1,0 +1,58 @@
+{
+  "flower": {
+    "name": "Flower of Life",
+    "enka_name": "EQUIP_BRACER",
+    "main_stats": [
+      "hp"
+    ]
+  },
+  "plume": {
+    "name": "Plume of Death",
+    "enka_name": "EQUIP_NECKLACE",
+    "main_stats": [
+      "atk"
+    ]
+  },
+  "sands": {
+    "name": "Sands of Eon",
+    "enka_name": "EQUIP_SHOES",
+    "main_stats": [
+      "atk%",
+      "hp%",
+      "def%",
+      "elemastery",
+      "recharge"
+    ]
+  },
+  "goblet": {
+    "name": "Goblet of Eonothem",
+    "enka_name": "EQUIP_RING",
+    "main_stats": [
+      "atk%",
+      "hp%",
+      "def%",
+      "elemastery",
+      "physical",
+      "anemo",
+      "cryo",
+      "electro",
+      "geo",
+      "hydro",
+      "pyro",
+      "dendro"
+    ]
+  },
+  "circlet": {
+    "name": "Circlet of Logos",
+    "enka_name": "EQUIP_DRESS",
+    "main_stats": [
+      "atk%",
+      "hp%",
+      "def%",
+      "elemastery",
+      "crit",
+      "critdmg",
+      "healing"
+    ]
+  }
+}

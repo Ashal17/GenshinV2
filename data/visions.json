@@ -1,0 +1,37 @@
+{
+  "anemo": {
+    "name": "Anemo",
+    "reactions": [ "swirlcryo", "swirlelectro", "swirlhydro", "swirlpyro" ],
+    "reactions_mod": []
+  },
+  "cryo": {
+    "name": "Cryo",
+    "reactions": [ "melt", "superconduct", "swirlcryo" ],
+    "reactions_mod": [ "melt" ]
+  },
+  "dendro": {
+    "name": "Dendro",
+    "reactions": [ "burning", "rupture", "spread" ],
+    "reactions_mod": [ "spread" ]
+  },
+  "electro": {
+    "name": "Electro",
+    "reactions": [ "superconduct", "electrocharged", "lunarcharged", "overload", "swirlelectro", "hyperbloom", "aggravate" ],
+    "reactions_mod": [ "aggravate" ]
+  },
+  "geo": {
+    "name": "Geo",
+    "reactions": [ "crystalize" ],
+    "reactions_mod": []
+  },
+  "hydro": {
+    "name": "Hydro",
+    "reactions": [ "vaporize", "electrocharged", "lunarcharged", "swirlhydro", "rupture" ],
+    "reactions_mod": [ "vaporize" ]
+  },
+  "pyro": {
+    "name": "Pyro",
+    "reactions": [ "melt", "vaporize", "overload", "swirlpyro", "burning", "burgeon" ],
+    "reactions_mod": [ "melt", "vaporize" ]
+  }
+}

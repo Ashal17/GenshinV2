@@ -1,0 +1,438 @@
+﻿.svg {
+background: none;
+}
+
+    .svg:before {
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: contain;
+        background-color: var(--white);
+        content: '';
+        display: block;
+    }
+
+.svg-ashal:before, .svg-fox:before {
+    -webkit-mask-image: url(../images/svg/fox.svg);
+    mask-image: url(../images/svg/fox.svg);
+}
+
+.svg-ashal-fox:before {
+    -webkit-mask-image: url(../images/svg/ashal-fox.svg);
+    mask-image: url(../images/svg/ashal-fox.svg);
+}
+
+.svg-legacy:before {
+    -webkit-mask-image: url(../images/svg/legacy.svg);
+    mask-image: url(../images/svg/legacy.svg);
+}
+
+.svg-account-arrow-down-outline:before {
+    -webkit-mask-image: url(../images/svg/account-arrow-down-outline.svg);
+    mask-image: url(../images/svg/account-arrow-down-outline.svg);
+}
+.svg-account-circle:before {
+    -webkit-mask-image: url(../images/svg/account-circle.svg);
+    mask-image: url(../images/svg/account-circle.svg);
+}
+.svg-account-outline:before {
+    -webkit-mask-image: url(../images/svg/account-outline.svg);
+    mask-image: url(../images/svg/account-outline.svg);
+}
+.svg-account-outline-database:before {
+    -webkit-mask-image: url(../images/svg/account-outline-database.svg);
+    mask-image: url(../images/svg/account-outline-database.svg);
+}
+.svg-account-outline-down:before {
+    -webkit-mask-image: url(../images/svg/account-outline-down.svg);
+    mask-image: url(../images/svg/account-outline-down.svg);
+}
+.svg-account-multiple-outline:before {
+    -webkit-mask-image: url(../images/svg/account-multiple-outline.svg);
+    mask-image: url(../images/svg/account-multiple-outline.svg);
+}
+.svg-account-multiple-outline-share:before {
+    -webkit-mask-image: url(../images/svg/account-multiple-outline-share.svg);
+    mask-image: url(../images/svg/account-multiple-outline-share.svg);
+}
+.svg-alert-outline:before {
+    -webkit-mask-image: url(../images/svg/alert-outline.svg);
+    mask-image: url(../images/svg/alert-outline.svg);
+}
+.svg-arrow-right-thin-circle-outline:before {
+    -webkit-mask-image: url(../images/svg/arrow-right-thin-circle-outline.svg);
+    mask-image: url(../images/svg/arrow-right-thin-circle-outline.svg);
+}
+.svg-arrow-up-bold-hexagon-outline:before {
+    -webkit-mask-image: url(../images/svg/arrow-up-bold-hexagon-outline.svg);
+    mask-image: url(../images/svg/arrow-up-bold-hexagon-outline.svg);
+}
+.svg-blank:before {
+    -webkit-mask-image: url(../images/svg/blank.svg);
+    mask-image: url(../images/svg/blank.svg);
+}
+.svg-book-open-variant-outline:before, .svg-catalyst:before {
+    -webkit-mask-image: url(../images/svg/book-open-variant-outline.svg);
+    mask-image: url(../images/svg/book-open-variant-outline.svg);
+}
+.svg-bow-arrow:before, .svg-bow:before {
+    -webkit-mask-image: url(../images/svg/bow-arrow.svg);
+    mask-image: url(../images/svg/bow-arrow.svg);
+}
+.svg-claymore:before {
+    -webkit-mask-image: url(../images/svg/claymore.svg);
+    mask-image: url(../images/svg/claymore.svg);
+}
+.svg-code-tags:before {
+    -webkit-mask-image: url(../images/svg/code-tags.svg);
+    mask-image: url(../images/svg/code-tags.svg);
+}
+.svg-cog-outline:before {
+    -webkit-mask-image: url(../images/svg/cog-outline.svg);
+    mask-image: url(../images/svg/cog-outline.svg);
+}
+.svg-content-copy:before {
+    -webkit-mask-image: url(../images/svg/content-copy.svg);
+    mask-image: url(../images/svg/content-copy.svg);
+}
+.svg-content-save-check-outline:before {
+    -webkit-mask-image: url(../images/svg/content-save-check-outline.svg);
+    mask-image: url(../images/svg/content-save-check-outline.svg);
+}
+.svg-database:before {
+    -webkit-mask-image: url(../images/svg/database.svg);
+    mask-image: url(../images/svg/database.svg);
+}
+.svg-delete-forever:before {
+    -webkit-mask-image: url(../images/svg/delete-forever.svg);
+    mask-image: url(../images/svg/delete-forever.svg);
+}
+.svg-discord:before {
+    -webkit-mask-image: url(../images/svg/discord.svg);
+    mask-image: url(../images/svg/discord.svg);
+}
+.svg-dock-window:before {
+    -webkit-mask-image: url(../images/svg/dock-window.svg);
+    mask-image: url(../images/svg/dock-window.svg);
+}
+.svg-download:before {
+    -webkit-mask-image: url(../images/svg/download.svg);
+    mask-image: url(../images/svg/download.svg);
+}
+.svg-download-multiple:before {
+    -webkit-mask-image: url(../images/svg/download-multiple.svg);
+    mask-image: url(../images/svg/download-multiple.svg);
+}
+.svg-equalizer:before, .svg-rollvalue:before {
+    -webkit-mask-image: url(../images/svg/equalizer.svg);
+    mask-image: url(../images/svg/equalizer.svg);
+}
+.svg-eye-outline:before {
+    -webkit-mask-image: url(../images/svg/eye-outline.svg);
+    mask-image: url(../images/svg/eye-outline.svg);
+}
+.svg-eye-off-outline:before {
+    -webkit-mask-image: url(../images/svg/eye-off-outline.svg);
+    mask-image: url(../images/svg/eye-off-outline.svg);
+}
+.svg-filter-outline:before {
+    -webkit-mask-image: url(../images/svg/filter-outline.svg);
+    mask-image: url(../images/svg/filter-outline.svg);
+}
+.svg-flare:before, .svg-burst:before {
+    -webkit-mask-image: url(../images/svg/flare.svg);
+    mask-image: url(../images/svg/flare.svg);
+}
+.svg-hospital:before, .svg-healing:before {
+    -webkit-mask-image: url(../images/svg/hospital.svg);
+    mask-image: url(../images/svg/hospital.svg);
+}
+.svg-chevron-double-down:before, .svg-plunge:before {
+    -webkit-mask-image: url(../images/svg/chevron-double-down.svg);
+    mask-image: url(../images/svg/chevron-double-down.svg);
+}
+.svg-chevron-down:before {
+    -webkit-mask-image: url(../images/svg/chevron-down.svg);
+    mask-image: url(../images/svg/chevron-down.svg);
+}
+.svg-chevron-left:before {
+    -webkit-mask-image: url(../images/svg/chevron-left.svg);
+    mask-image: url(../images/svg/chevron-left.svg);
+}
+.svg-chevron-right:before {
+    -webkit-mask-image: url(../images/svg/chevron-right.svg);
+    mask-image: url(../images/svg/chevron-right.svg);
+}
+.svg-chevron-up:before {
+    -webkit-mask-image: url(../images/svg/chevron-up.svg);
+    mask-image: url(../images/svg/chevron-up.svg);
+}
+.svg-image:before {
+    -webkit-mask-image: url(../images/svg/image.svg);
+    mask-image: url(../images/svg/image.svg);
+}
+.svg-lock:before {
+    -webkit-mask-image: url(../images/svg/lock.svg);
+    mask-image: url(../images/svg/lock.svg);
+}
+.svg-lock-open:before {
+    -webkit-mask-image: url(../images/svg/lock-open.svg);
+    mask-image: url(../images/svg/lock-open.svg);
+}
+.svg-logout-variant:before {
+    -webkit-mask-image: url(../images/svg/logout-variant.svg);
+    mask-image: url(../images/svg/logout-variant.svg);
+}
+.svg-minus-circle-outline:before {
+    -webkit-mask-image: url(../images/svg/minus-circle-outline.svg);
+    mask-image: url(../images/svg/minus-circle-outline.svg);
+}
+.svg-moon-waning-crescent:before {
+    -webkit-mask-image: url(../images/svg/moon-waning-crescent.svg);
+    mask-image: url(../images/svg/moon-waning-crescent.svg);
+}
+.svg-numeric-1-box-outline:before {
+    -webkit-mask-image: url(../images/svg/numeric-1-box-outline.svg);
+    mask-image: url(../images/svg/numeric-1-box-outline.svg);
+}
+.svg-numeric-2-box-outline:before {
+    -webkit-mask-image: url(../images/svg/numeric-2-box-outline.svg);
+    mask-image: url(../images/svg/numeric-2-box-outline.svg);
+}
+.svg-numeric-3-box-outline:before {
+    -webkit-mask-image: url(../images/svg/numeric-3-box-outline.svg);
+    mask-image: url(../images/svg/numeric-3-box-outline.svg);
+}
+.svg-numeric-4-box-outline:before {
+    -webkit-mask-image: url(../images/svg/numeric-4-box-outline.svg);
+    mask-image: url(../images/svg/numeric-4-box-outline.svg);
+}
+.svg-pin-outline:before {
+    -webkit-mask-image: url(../images/svg/pin-outline.svg);
+    mask-image: url(../images/svg/pin-outline.svg);
+}
+.svg-plus-circle-outline:before {
+    -webkit-mask-image: url(../images/svg/plus-circle-outline.svg);
+    mask-image: url(../images/svg/plus-circle-outline.svg);
+}
+.svg-share:before {
+    -webkit-mask-image: url(../images/svg/share.svg);
+    mask-image: url(../images/svg/share.svg);
+}
+.svg-share-outline:before {
+    -webkit-mask-image: url(../images/svg/share-outline.svg);
+    mask-image: url(../images/svg/share-outline.svg);
+}
+.svg-shield-outline:before, .svg-shield:before {
+    -webkit-mask-image: url(../images/svg/shield-outline.svg);
+    mask-image: url(../images/svg/shield-outline.svg);
+}
+.svg-spear:before, .svg-polearm:before {
+    -webkit-mask-image: url(../images/svg/spear.svg);
+    mask-image: url(../images/svg/spear.svg);
+}
+.svg-square-edit-outline:before {
+    -webkit-mask-image: url(../images/svg/square-edit-outline.svg);
+    mask-image: url(../images/svg/square-edit-outline.svg);
+}
+.svg-star:before, .svg-star-5:before {
+    -webkit-mask-image: url(../images/svg/star.svg);
+    mask-image: url(../images/svg/star.svg);
+}
+.svg-star-four-points:before, .svg-skill:before, .svg-star-4:before {
+    -webkit-mask-image: url(../images/svg/star-four-points.svg);
+    mask-image: url(../images/svg/star-four-points.svg);
+}
+.svg-star-plus:before {
+    -webkit-mask-image: url(../images/svg/star-plus.svg);
+    mask-image: url(../images/svg/star-plus.svg);
+}
+.svg-sword:before, .svg-normal:before {
+    -webkit-mask-image: url(../images/svg/sword.svg);
+    mask-image: url(../images/svg/sword.svg);
+}
+.svg-sword-cross:before, .svg-charged:before {
+    -webkit-mask-image: url(../images/svg/sword-cross.svg);
+    mask-image: url(../images/svg/sword-cross.svg);
+}
+.svg-target-variant:before {
+    -webkit-mask-image: url(../images/svg/target-variant.svg);
+    mask-image: url(../images/svg/target-variant.svg);
+}
+.svg-transfer-left:before {
+    -webkit-mask-image: url(../images/svg/transfer-left.svg);
+    mask-image: url(../images/svg/transfer-left.svg);
+}
+.svg-transfer-right:before {
+    -webkit-mask-image: url(../images/svg/transfer-right.svg);
+    mask-image: url(../images/svg/transfer-right.svg);
+}
+.svg-upload:before {
+    -webkit-mask-image: url(../images/svg/upload.svg);
+    mask-image: url(../images/svg/upload.svg);
+}
+.svg-white-balance-sunny:before {
+    -webkit-mask-image: url(../images/svg/white-balance-sunny.svg);
+    mask-image: url(../images/svg/white-balance-sunny.svg);
+}
+.svg-hp:before {
+    -webkit-mask-image: url(../images/svg/hp.svg);
+    mask-image: url(../images/svg/hp.svg);
+}
+.svg-hp-p:before {
+    -webkit-mask-image: url(../images/svg/hp-p.svg);
+    mask-image: url(../images/svg/hp-p.svg);
+}
+.svg-atk:before {
+    -webkit-mask-image: url(../images/svg/atk.svg);
+    mask-image: url(../images/svg/atk.svg);
+}
+.svg-atk-p:before {
+    -webkit-mask-image: url(../images/svg/atk-p.svg);
+    mask-image: url(../images/svg/atk-p.svg);
+}
+.svg-def:before {
+    -webkit-mask-image: url(../images/svg/def.svg);
+    mask-image: url(../images/svg/def.svg);
+}
+.svg-def-p:before {
+    -webkit-mask-image: url(../images/svg/def-p.svg);
+    mask-image: url(../images/svg/def-p.svg);
+}
+.svg-crit:before {
+    -webkit-mask-image: url(../images/svg/crit.svg);
+    mask-image: url(../images/svg/crit.svg);
+}
+.svg-critdmg:before {
+    -webkit-mask-image: url(../images/svg/critdmg.svg);
+    mask-image: url(../images/svg/critdmg.svg);
+}
+.svg-critvalue:before {
+    -webkit-mask-image: url(../images/svg/critvalue.svg);
+    mask-image: url(../images/svg/critvalue.svg);
+}
+.svg-elemastery:before {
+    -webkit-mask-image: url(../images/svg/elemastery.svg);
+    mask-image: url(../images/svg/elemastery.svg);
+}
+.svg-recharge:before {
+    -webkit-mask-image: url(../images/svg/recharge.svg);
+    mask-image: url(../images/svg/recharge.svg);
+}
+.svg-anemo:before {
+    -webkit-mask-image: url(../images/svg/anemo.svg);
+    mask-image: url(../images/svg/anemo.svg);
+    background-color: var(--anemo);
+}
+.svg-cryo:before {
+    -webkit-mask-image: url(../images/svg/cryo.svg);
+    mask-image: url(../images/svg/cryo.svg);
+    background-color: var(--cryo);
+}
+.svg-dendro:before {
+    -webkit-mask-image: url(../images/svg/dendro.svg);
+    mask-image: url(../images/svg/dendro.svg);
+    background-color: var(--dendro);
+}
+.svg-electro:before {
+    -webkit-mask-image: url(../images/svg/electro.svg);
+    mask-image: url(../images/svg/electro.svg);
+    background-color: var(--electro);
+}
+.svg-geo:before {
+    -webkit-mask-image: url(../images/svg/geo.svg);
+    mask-image: url(../images/svg/geo.svg);
+    background-color: var(--geo);
+}
+.svg-hydro:before {
+    -webkit-mask-image: url(../images/svg/hydro.svg);
+    mask-image: url(../images/svg/hydro.svg);
+    background-color: var(--hydro);
+}
+.svg-pyro:before {
+    -webkit-mask-image: url(../images/svg/pyro.svg);
+    mask-image: url(../images/svg/pyro.svg);
+    background-color: var(--pyro);
+}
+.svg-physical:before {
+    -webkit-mask-image: url(../images/svg/physical.svg);
+    mask-image: url(../images/svg/physical.svg);
+    background-color: var(--white);
+}
+.svg-lunarcharged:before {
+    -webkit-mask-image: url(../images/svg/lunarcharged.svg);
+    mask-image: url(../images/svg/lunarcharged.svg);
+}
+.svg-enka:before {
+    -webkit-mask-image: url(../images/svg/enka.svg);
+    mask-image: url(../images/svg/enka.svg);
+}
+.svg-enka-download:before {
+    -webkit-mask-image: url(../images/svg/enka-download.svg);
+    mask-image: url(../images/svg/enka-download.svg);
+}
+.svg-enka-share:before {
+    -webkit-mask-image: url(../images/svg/enka-share.svg);
+    mask-image: url(../images/svg/enka-share.svg);
+}
+.svg-artifact:before {
+    -webkit-mask-image: url(../images/svg/artifact.svg);
+    mask-image: url(../images/svg/artifact.svg);
+}
+.svg-artifact-down:before {
+    -webkit-mask-image: url(../images/svg/artifact-down.svg);
+    mask-image: url(../images/svg/artifact-down.svg);
+}
+.svg-artifact-circlet:before {
+    -webkit-mask-image: url(../images/svg/artifact-circlet.svg);
+    mask-image: url(../images/svg/artifact-circlet.svg);
+}
+.svg-artifact-circlet-database:before {
+    -webkit-mask-image: url(../images/svg/artifact-circlet-database.svg);
+    mask-image: url(../images/svg/artifact-circlet-database.svg);
+}
+.svg-artifact-circlet-down:before {
+    -webkit-mask-image: url(../images/svg/artifact-circlet-down.svg);
+    mask-image: url(../images/svg/artifact-circlet-down.svg);
+}
+.svg-artifact-flower:before {
+    -webkit-mask-image: url(../images/svg/artifact-flower.svg);
+    mask-image: url(../images/svg/artifact-flower.svg);
+}
+.svg-artifact-flower-database:before {
+    -webkit-mask-image: url(../images/svg/artifact-flower-database.svg);
+    mask-image: url(../images/svg/artifact-flower-database.svg);
+}
+.svg-artifact-goblet:before {
+    -webkit-mask-image: url(../images/svg/artifact-goblet.svg);
+    mask-image: url(../images/svg/artifact-goblet.svg);
+}
+.svg-artifact-goblet-database:before {
+    -webkit-mask-image: url(../images/svg/artifact-goblet-database.svg);
+    mask-image: url(../images/svg/artifact-goblet-database.svg);
+}
+.svg-artifact-plume:before {
+    -webkit-mask-image: url(../images/svg/artifact-plume.svg);
+    mask-image: url(../images/svg/artifact-plume.svg);
+}
+.svg-artifact-plume-database:before {
+    -webkit-mask-image: url(../images/svg/artifact-plume-database.svg);
+    mask-image: url(../images/svg/artifact-plume-database.svg);
+}
+.svg-artifact-sands:before {
+    -webkit-mask-image: url(../images/svg/artifact-sands.svg);
+    mask-image: url(../images/svg/artifact-sands.svg);
+}
+.svg-artifact-sands-database:before {
+    -webkit-mask-image: url(../images/svg/artifact-sands-database.svg);
+    mask-image: url(../images/svg/artifact-sands-database.svg);
+}
+.svg-star-4:before {
+    background-color: var(--star-4);
+}
+.svg-star-5:before {
+    background-color: var(--star-5);
+}
+
