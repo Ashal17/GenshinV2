@@ -3,6 +3,7 @@
     "id": 0,
     "enka_id": 0,
     "name": "None",
+    "scanner_key": "None",
     "icon": "none",
     "stars": [
       0
@@ -1702,7 +1703,8 @@
         "req": 2,
         "apply": {
           "id": 1373,
-          "option": 0
+          "option": 0,
+          "special": "nightsoul"
         }
       },
       {
@@ -1711,7 +1713,8 @@
         "req": 4,
         "apply": {
           "id": 1374,
-          "option": 0
+          "option": 0,
+          "special": "nightsoul"
         }
       }
     ],
@@ -1720,6 +1723,64 @@
     "sands": "Myths of the Night Realm",
     "goblet": "Pre-Banquet of the Contenders",
     "circlet": "Crown of the Saints"
+  },
+  {
+    "id": 54,
+    "enka_id": 15039,
+    "name": "Long Night's Oath",
+    "scanner_key": "LongNightsOath",
+    "icon": "long_nights_oath",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "plunge",
+        "value": 25,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Hitting with Plunge/Charged/Skill gains 1/2/2 stacks. Each stack increases Plunge DMG by 15%. Max 5 Stacks.",
+        "req": 4,
+        "apply": {
+          "id": 1947,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Lightkeeper's Pledge",
+    "plume": "Nightingale's Tail Feather",
+    "sands": "Undying One's Mourning Bell",
+    "goblet": "A Horn Unwinded",
+    "circlet": "Dyed Tassel"
+  },
+  {
+    "id": 55,
+    "enka_id": 15040,
+    "name": "Finale of the Deep Galleries",
+    "scanner_key": "FinaleOfTheDeepGalleries",
+    "icon": "finale_of_the_deep_galleries",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "cryo",
+        "value": 15,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "At 0 Energy, Normal DMG and Burst DMG increases by 60%. Dealing Normal/Burst DMG disables other for 6s.",
+        "req": 4,
+        "apply": {
+          "id": 1948,
+          "option": 0
+        }
+      }
+    ],
+    "flower": "Deep Gallery's Echoing Song",
+    "plume": "Deep Gallery's Distant Pact",
+    "sands": "Deep Gallery's Moment of Oblivion",
+    "goblet": "Deep Gallery's Bestowed Banquet",
+    "circlet": "Deep Gallery's Lost Crown"
   },
   {
     "id": 26,

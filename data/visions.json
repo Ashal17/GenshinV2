@@ -16,7 +16,7 @@
   },
   "electro": {
     "name": "Electro",
-    "reactions": [ "superconduct", "electrocharged", "overload", "swirlelectro", "hyperbloom", "aggravate" ],
+    "reactions": [ "superconduct", "electrocharged", "lunarcharged", "overload", "swirlelectro", "hyperbloom", "aggravate" ],
     "reactions_mod": [ "aggravate" ]
   },
   "geo": {
@@ -26,7 +26,7 @@
   },
   "hydro": {
     "name": "Hydro",
-    "reactions": [ "vaporize", "electrocharged", "swirlhydro", "rupture" ],
+    "reactions": [ "vaporize", "electrocharged", "lunarcharged", "swirlhydro", "rupture" ],
     "reactions_mod": [ "vaporize" ]
   },
   "pyro": {

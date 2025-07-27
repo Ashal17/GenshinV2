@@ -10,6 +10,8 @@ const const_constel_list = [0, 1, 2, 3, 4, 5, 6];
 const const_character_visions = ["anemo", "cryo", "dendro", "electro", "geo", "hydro", "pyro"];
 const const_stats_visions = ["anemo", "cryo", "dendro", "electro", "geo", "hydro", "pyro", "physical", "healing"];
 
+const const_enemy_max_level = 110;
+
 const const_effect_types = ["character", "party", "manual"];
 const const_effect_types_auto = ["character", "party"];
 
@@ -54,14 +56,37 @@ const const_enka_stats_display_table = {
     "26": "healing"
 }
 
+const const_scanner_stats_transform_table = {
+    "atk": "atk",
+    "atk_": "atk%",
+    "def": "def",
+    "def_": "def%",
+    "hp": "hp",
+    "hp_": "hp%",
+    "critRate_": "crit",
+    "critDMG_": "critdmg",
+    "enerRech_": "recharge",
+    "eleMas": "elemastery",
+    "anemo_dmg_": "anemo",
+    "cryo_dmg_": "cryo",
+    "dendro_dmg_": "dendro",
+    "electro_dmg_": "electro",
+    "geo_dmg_": "geo",
+    "hydro_dmg_": "hydro",
+    "pyro_dmg_": "pyro",
+    "physical_dmg_": "physical",
+    "heal_": "healing"
+}
+
 const const_reaction_damage_values = {
     "elemasteryadd": [17.17, 80.58, 80.58, 207.38, 207.38, 323.6, 323.6, 492.88, 492.88, 765.64, 765.64, 1110.0, 1110.0, 1446.85],
+    "elemasteryaddshared": [17.17, 80.58, 80.58, 207.38, 207.38, 323.6, 323.6, 492.88, 492.88, 765.64, 765.64, 1110.0, 1110.0, 1446.85],
     "elemasterybonus": [17.17, 80.58, 80.58, 207.38, 207.38, 323.6, 323.6, 492.88, 492.88, 765.64, 765.64, 1110.0, 1110.0, 1446.85],
     "elemasterycrystalize": [91.18, 303.83, 303.83, 585.00, 585.00, 786.79, 786.79, 1030.08, 1030.08, 1314.75, 1314.75, 1596.81, 1596.81, 1851.06]
 }
 
 const const_bonusdmg_visions = ["all", "anemo", "cryo", "dendro", "electro", "geo", "hydro", "pyro", "physical"];
-const const_bonusdmg_types = ["all", "normal", "charged", "plunge", "skill", "burst"];
+const const_bonusdmg_types = ["all", "normal", "charged", "plunge", "skill", "burst", "healing", "shield"];
 
 const const_output_party_stat_objects = {
     "total": ["basic", "environment", "weapon", "artifacts"]
@@ -94,7 +119,7 @@ const const_display_stats_columns = [
     },
     {
         "main": "elemastery",
-        "stats": ["elemastery", "melt", "vaporize", "overload", "burning", "electrocharged", "superconduct", "shatter", "swirl", "rupture", "burgeon", "hyperbloom", "aggravate", "spread", "crystalize"]
+        "stats": ["elemastery", "melt", "vaporize", "overload", "burning", "electrocharged", "superconduct", "shatter", "swirl", "rupture", "burgeon", "hyperbloom", "lunarcharged", "aggravate", "spread", "crystalize"]
     },
     {
         "main": ["anemo", "hydro", "pyro", "cryo", "geo", "electro", "dendro", "physical"],
@@ -150,7 +175,19 @@ const const_bonusdmg_names = {
     "charged": "Charged Attack",
     "plunge": "Plunging Attack",
     "skill": "Elemental Skill",
-    "burst": "Elemental Burst"
+    "burst": "Elemental Burst",
+    "normalalt": "Normal Attack (Alt)",
+    "chargedalt": "Charged Attack (Alt)",
+    "plungealt": "Plunging Attack (Alt)",
+    "skillalt": "Elemental Skill (Alt)",
+    "burstalt": "Elemental Burst (Alt)",
+    "normalalt2": "Normal Attack (Alt2)",
+    "chargedalt2": "Charged Attack (Alt2)",
+    "plungealt2": "Plunging Attack (Alt2)",
+    "skillalt2": "Elemental Skill (Alt2)",
+    "burstalt2": "Elemental Burst (Alt2)",
+    "alt": "Alt",
+    "alt2": "Alt2"
 }
 
 const const_attack_level_types = ["normal", "skill", "burst"]

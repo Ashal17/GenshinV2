@@ -631,15 +631,15 @@ function equip_artifacts_storage_display(artifact_id, display_artifact, index, f
 function equip_artifacts_storage_display_btns(artifact_id, index) {
     var btns_obj = utils_create_obj("div", "artifact_storage_btns", "artifact_storage_btns_" + index);
     if (index == undefined) {
-        var btn_save = utils_create_img_btn("download", null, "Save Artifact", "char_storage_save_" + index, "artifact_storage_btn");
+        var btn_save = utils_create_img_btn("download", null, "Save Artifact", "artifact_storage_save", "artifact_storage_btn");
         btn_save.onclick = function (event) { equip_artifacts_storage_change_save(artifact_id); event.preventDefault(); };
         btns_obj.appendChild(btn_save);
     } else {
-        var btn_load = utils_create_img_btn("upload", null, "Load Artifact", "char_storage_load_" + index, "artifact_storage_btn");
+        var btn_load = utils_create_img_btn("upload", null, "Load Artifact", "artifact_storage_load_" + index, "artifact_storage_btn");
         btn_load.onclick = function (event) { equip_artifacts_storage_change_load(artifact_id, index); event.preventDefault(); };
         btns_obj.appendChild(btn_load);
 
-        var btn_delete = utils_create_img_btn("delete-forever", null, "Delete Artifact", "char_storage_delete_" + index, "artifact_storage_btn");
+        var btn_delete = utils_create_img_btn("delete-forever", null, "Delete Artifact", "artifact_storage_delete_" + index, "artifact_storage_btn");
         btn_delete.onclick = function (event) { equip_artifacts_storage_change_delete(artifact_id, index); event.preventDefault(); };
         btns_obj.appendChild(btn_delete);
     }

@@ -8,8 +8,7 @@
     "shortname": "ATK",
     "labelname": "ATK",
     "listname": "ATK",
-    "type": "flat",
-    "conversion": "percent"
+    "type": "flat"
   },
   "atk_base": {
     "name": "Base Attack",
@@ -38,8 +37,7 @@
     "shortname": "HP",
     "labelname": "HP",
     "listname": "HP",
-    "type": "flat",
-    "conversion": "percent"
+    "type": "flat"
   },
   "hp_base": {
     "name": "Base HP",
@@ -69,8 +67,7 @@
     "shortname": "DEF",
     "labelname": "DEF",
     "listname": "DEF",
-    "type": "flat",
-    "conversion": "percent"
+    "type": "flat"
   },
   "def_base": {
     "name": "Base Defense",
@@ -94,23 +91,35 @@
     "listname": "DEF",
     "type": "percent"
   },
-  "bondoflife": {
-    "name": "Bond of Life",
-    "shortname": "Bond of life",
-    "type": "percent",
-    "conversion": "percent"
+  "fanfare": {
+    "name": "Fanfare",
+    "shortname": "Fanfare",
+    "type": "flat"
   },
-  "bondoflifeatk": {
-    "name": "Bond of Life × Attack",
-    "shortname": "Bond of Life × ATK",
-    "type": "percent",
-    "conversion": "percent"
+  "specialmeter": {
+    "name": "Special Meter",
+    "shortname": "Special Meter",
+    "type": "flat"
+  },
+  "specialmeteratk": {
+    "name": "Special Meter × Attack",
+    "shortname": "Special Meter × ATK",
+    "type": "flat"
+  },
+  "specialmeter%": {
+    "name": "Special Meter",
+    "shortname": "Special Meter",
+    "type": "percent"
+  },
+  "specialmeter%atk": {
+    "name": "Special Meter × Attack",
+    "shortname": "Special Meter × ATK",
+    "type": "percent"
   },
   "healinghp": {
     "name": "Healing × HP",
     "shortname": "Healing × HP",
-    "type": "percent",
-    "conversion": "percent"
+    "type": "percent"
   },
   "crit": {
     "name": "Crit Rate",
@@ -119,11 +128,23 @@
     "listname": "C.Rate",
     "type": "percent"
   },
+  "critalt": {
+    "name": "Crit Alternate Rate",
+    "type": "percent"
+  },
+  "critalt2": {
+    "name": "Crit Alternate Rate",
+    "type": "percent"
+  },
   "critnormal": {
     "name": "Normal Attack Crit Rate",
     "type": "percent"
   },
   "critnormalalt": {
+    "name": "Normal Attack Crit Rate",
+    "type": "percent"
+  },
+  "critnormalalt2": {
     "name": "Normal Attack Crit Rate",
     "type": "percent"
   },
@@ -135,11 +156,19 @@
     "name": "Charged Attack Crit Rate",
     "type": "percent"
   },
+  "critchargedalt2": {
+    "name": "Charged Attack Crit Rate",
+    "type": "percent"
+  },
   "critplunge": {
     "name": "Plunge Attack Crit Rate",
     "type": "percent"
   },
   "critplungealt": {
+    "name": "Plunge Attack Crit Rate",
+    "type": "percent"
+  },
+  "critplungealt2": {
     "name": "Plunge Attack Crit Rate",
     "type": "percent"
   },
@@ -151,11 +180,19 @@
     "name": "Elemental Skill Crit Rate",
     "type": "percent"
   },
+  "critskillalt2": {
+    "name": "Elemental Skill Crit Rate",
+    "type": "percent"
+  },
   "critburst": {
     "name": "Elemental Burst Crit Rate",
     "type": "percent"
   },
   "critburstalt": {
+    "name": "Elemental Burst Crit Rate",
+    "type": "percent"
+  },
+  "critburstalt2": {
     "name": "Elemental Burst Crit Rate",
     "type": "percent"
   },
@@ -209,6 +246,10 @@
   },
   "critelectrocharged": {
     "name": "Electro-Charged Crit Rate",
+    "type": "percent"
+  },
+  "critlunarcharged": {
+    "name": "Lunar-Charged Crit Rate",
     "type": "percent"
   },
   "critsuperconduct": {
@@ -270,11 +311,23 @@
     "listname": "C.DMG",
     "type": "percent"
   },
+  "critdmgalt": {
+    "name": "Crit Alternate DMG",
+    "type": "percent"
+  },
+  "critdmgalt2": {
+    "name": "Crit Alternate DMG",
+    "type": "percent"
+  },
   "critdmgnormal": {
     "name": "Normal Attack Crit DMG",
     "type": "percent"
   },
   "critdmgnormalalt": {
+    "name": "Normal Attack Crit DMG",
+    "type": "percent"
+  },
+  "critdmgnormalalt2": {
     "name": "Normal Attack Crit DMG",
     "type": "percent"
   },
@@ -286,11 +339,19 @@
     "name": "Charged Attack Crit DMG",
     "type": "percent"
   },
+  "critdmgchargedalt2": {
+    "name": "Charged Attack Crit DMG",
+    "type": "percent"
+  },
   "critdmgplunge": {
     "name": "Plunge Attack Crit DMG",
     "type": "percent"
   },
   "critdmgplungealt": {
+    "name": "Plunge Attack Crit DMG",
+    "type": "percent"
+  },
+  "critdmgplungealt2": {
     "name": "Plunge Attack Crit DMG",
     "type": "percent"
   },
@@ -302,11 +363,19 @@
     "name": "Elemental Skill Crit DMG",
     "type": "percent"
   },
+  "critdmgskillalt2": {
+    "name": "Elemental Skill Crit DMG",
+    "type": "percent"
+  },
   "critdmgburst": {
     "name": "Elemental Burst Crit DMG",
     "type": "percent"
   },
   "critdmgburstalt": {
+    "name": "Elemental Burst Crit DMG",
+    "type": "percent"
+  },
+  "critdmgburstalt2": {
     "name": "Elemental Burst Crit DMG",
     "type": "percent"
   },
@@ -360,6 +429,10 @@
   },
   "critdmgelectrocharged": {
     "name": "Electro-Charged Crit DMG",
+    "type": "percent"
+  },
+  "critdmglunarcharged": {
+    "name": "Lunar-Charged Crit DMG",
     "type": "percent"
   },
   "critdmgsuperconduct": {
@@ -422,11 +495,19 @@
     "name": "Normal Attack DMG",
     "type": "percent"
   },
+  "normalalt2": {
+    "name": "Normal Attack DMG",
+    "type": "percent"
+  },
   "normal_mult": {
     "name": "Normal Attack Multiplier",
     "type": "percent"
   },
   "normalalt_mult": {
+    "name": "Normal Attack Multiplier",
+    "type": "percent"
+  },
+  "normalalt2_mult": {
     "name": "Normal Attack Multiplier",
     "type": "percent"
   },
@@ -474,11 +555,19 @@
     "name": "Charged Attack DMG",
     "type": "percent"
   },
+  "chargedalt2": {
+    "name": "Charged Attack DMG",
+    "type": "percent"
+  },
   "charged_mult": {
     "name": "Charged Attack Multiplier",
     "type": "percent"
   },
   "chargedalt_mult": {
+    "name": "Charged Attack Multiplier",
+    "type": "percent"
+  },
+  "chargedalt2_mult": {
     "name": "Charged Attack Multiplier",
     "type": "percent"
   },
@@ -526,11 +615,19 @@
     "name": "Plunge Attack DMG",
     "type": "percent"
   },
+  "plungealt2": {
+    "name": "Plunge Attack DMG",
+    "type": "percent"
+  },
   "plunge_mult": {
     "name": "Plunge Attack Multiplier",
     "type": "percent"
   },
   "plungealt_mult": {
+    "name": "Plunge Attack Multiplier",
+    "type": "percent"
+  },
+  "plungealt2_mult": {
     "name": "Plunge Attack Multiplier",
     "type": "percent"
   },
@@ -590,11 +687,19 @@
     "name": "Elemental Skill DMG",
     "type": "percent"
   },
+  "skillalt2": {
+    "name": "Elemental Skill DMG",
+    "type": "percent"
+  },
   "skill_mult": {
     "name": "Elemental Skill Multiplier",
     "type": "percent"
   },
   "skillalt_mult": {
+    "name": "Elemental Skill Multiplier",
+    "type": "percent"
+  },
+  "skillalt2_mult": {
     "name": "Elemental Skill Multiplier",
     "type": "percent"
   },
@@ -642,11 +747,19 @@
     "name": "Elemental Burst DMG",
     "type": "percent"
   },
+  "burstalt2": {
+    "name": "Elemental Burst DMG",
+    "type": "percent"
+  },
   "burst_mult": {
     "name": "Elemental Burst Multiplier",
     "type": "percent"
   },
   "burstalt_mult": {
+    "name": "Elemental Burst Multiplier",
+    "type": "percent"
+  },
+  "burstalt2_mult": {
     "name": "Elemental Burst Multiplier",
     "type": "percent"
   },
@@ -691,14 +804,22 @@
     "shortname": "Elemental Mastery",
     "labelname": "EM",
     "listname": "EM",
-    "type": "flat",
-    "conversion": "flat"
+    "type": "flat"
+  },
+  "elemasteryatk": {
+    "name": "Elemental Mastery × Attack",
+    "shortname": "Elemental Mastery × ATK",
+    "type": "flat"
   },
   "elemasterymult": {
     "name": "Elemental Mastery",
     "type": "percent"
   },
   "elemasteryadd": {
+    "name": "Elemental Mastery",
+    "type": "percent"
+  },
+  "elemasteryaddshared": {
     "name": "Elemental Mastery",
     "type": "percent"
   },
@@ -728,6 +849,10 @@
   },
   "electrocharged": {
     "name": "Electro-Charged",
+    "type": "percent"
+  },
+  "lunarcharged": {
+    "name": "Lunar-Charged",
     "type": "percent"
   },
   "superconduct": {
@@ -782,6 +907,82 @@
     "name": "Spread",
     "type": "percent"
   },
+  "melt_mult": {
+    "name": "Melt Multiplier",
+    "type": "percent"
+  },
+  "vaporize_mult": {
+    "name": "Vaporize Multiplier",
+    "type": "percent"
+  },
+  "overload_mult": {
+    "name": "Overload Multiplier",
+    "type": "percent"
+  },
+  "burning_mult": {
+    "name": "Burning Multiplier",
+    "type": "percent"
+  },
+  "electrocharged_mult": {
+    "name": "Electro-Charged Multiplier",
+    "type": "percent"
+  },
+  "lunarcharged_mult": {
+    "name": "Lunar-Charged Multiplier",
+    "type": "percent"
+  },
+  "superconduct_mult": {
+    "name": "Superconduct Multiplier",
+    "type": "percent"
+  },
+  "shatter_mult": {
+    "name": "Shatter Multiplier",
+    "type": "percent"
+  },
+  "crystalize_mult": {
+    "name": "Crystalize Multiplier",
+    "type": "percent"
+  },
+  "swirl_mult": {
+    "name": "Swirl Multiplier",
+    "type": "percent"
+  },
+  "swirlcryo_mult": {
+    "name": "Cryo Swirl Multiplier",
+    "type": "percent"
+  },
+  "swirlelectro_mult": {
+    "name": "Electro Swirl Multiplier",
+    "type": "percent"
+  },
+  "swirlhydro_mult": {
+    "name": "Hydro Swirl Multiplier",
+    "type": "percent"
+  },
+  "swirlpyro_mult": {
+    "name": "Pyro Swirl Multiplier",
+    "type": "percent"
+  },
+  "rupture_mult": {
+    "name": "Rupture Multiplier",
+    "type": "percent"
+  },
+  "burgeon_mult": {
+    "name": "Burgeon Multiplier",
+    "type": "percent"
+  },
+  "hyperbloom_mult": {
+    "name": "Hyperbloom Multiplier",
+    "type": "percent"
+  },
+  "aggravate_mult": {
+    "name": "Aggravate Multiplier",
+    "type": "percent"
+  },
+  "spread_mult": {
+    "name": "Spread",
+    "type": "percent"
+  },
   "burst_energy": {
     "name": "Burst Energy Cost",
     "type": "flat"
@@ -803,6 +1004,22 @@
   },
   "cdr": {
     "name": "Reduce CD",
+    "type": "percent"
+  },
+  "alt": {
+    "name": "Alternate DMG",
+    "type": "percent"
+  },
+  "alt2": {
+    "name": "Alternate DMG",
+    "type": "percent"
+  },
+  "alt_mult": {
+    "name": "Alternate Multiplier",
+    "type": "percent"
+  },
+  "alt2_mult": {
+    "name": "Alternate Multiplier",
     "type": "percent"
   },
   "all": {
@@ -912,8 +1129,30 @@
     "listname": "Healing",
     "type": "percent"
   },
-  "healing_mult": {
+  "healingalt": {
     "name": "Healing Bonus",
+    "shortname": "Healing",
+    "labelname": "HEAL",
+    "listname": "Healing",
+    "type": "percent"
+  },
+  "healingalt2": {
+    "name": "Healing Bonus",
+    "shortname": "Healing",
+    "labelname": "HEAL",
+    "listname": "Healing",
+    "type": "percent"
+  },
+  "healing_mult": {
+    "name": "Healing Multiplier",
+    "type": "percent"
+  },
+  "healingalt_mult": {
+    "name": "Healing Multiplier",
+    "type": "percent"
+  },
+  "healingalt2_mult": {
+    "name": "Healing Multiplier",
     "type": "percent"
   },
   "healinginc": {
@@ -924,7 +1163,23 @@
     "name": "Powerful Shield",
     "type": "percent"
   },
+  "shieldalt": {
+    "name": "Powerful Shield",
+    "type": "percent"
+  },
+  "shieldalt2": {
+    "name": "Powerful Shield",
+    "type": "percent"
+  },
   "shield_mult": {
+    "name": "Shield Bonus",
+    "type": "percent"
+  },
+  "shieldalt_mult": {
+    "name": "Shield Bonus",
+    "type": "percent"
+  },
+  "shieldalt2_mult": {
     "name": "Shield Bonus",
     "type": "percent"
   },
@@ -942,66 +1197,6 @@
   },
   "additional": {
     "name": "Additional Hit",
-    "type": "percent"
-  },
-  "bonusnormalatk": {
-    "name": "ATK to Normal Attack",
-    "type": "percent"
-  },
-  "bonuschargedatk": {
-    "name": "ATK to Charged Attack",
-    "type": "percent"
-  },
-  "bonusnormalhp": {
-    "name": "HP to Normal Attack",
-    "type": "percent"
-  },
-  "bonuschargedhp": {
-    "name": "HP to Charged Attack",
-    "type": "percent"
-  },
-  "bonusskillhp": {
-    "name": "HP to Elemental Skill",
-    "type": "percent"
-  },
-  "bonusbursthp": {
-    "name": "HP to Elemental Burst",
-    "type": "percent"
-  },
-  "bonusnormaldef": {
-    "name": "DEF to Normal Attack",
-    "type": "percent"
-  },
-  "bonuschargeddef": {
-    "name": "DEF to Charged Attack",
-    "type": "percent"
-  },
-  "bonusplungedef": {
-    "name": "DEF to Plunge Attack",
-    "type": "percent"
-  },
-  "bonusskilldef": {
-    "name": "DEF to Elemental Skill",
-    "type": "percent"
-  },
-  "bonusburstdef": {
-    "name": "DEF to Elemental Burst",
-    "type": "percent"
-  },
-  "bonusnormalelemastery": {
-    "name": "Elemental Mastery to Normal Attack",
-    "type": "percent"
-  },
-  "bonuschargedelemastery": {
-    "name": "Elemental Mastery to Charged Attack",
-    "type": "percent"
-  },
-  "bonusskillelemastery": {
-    "name": "Elemental Mastery to Elemental Skill",
-    "type": "percent"
-  },
-  "bonusburstelemastery": {
-    "name": "Elemental Mastery to Elemental Burst",
     "type": "percent"
   },
   "normaldefignore": {

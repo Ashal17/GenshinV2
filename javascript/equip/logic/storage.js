@@ -175,7 +175,9 @@ function equip_storage_change_delete(index) {
 
     if (user_preferences.storage.base == index) {
         user_preferences.storage.base = -1;
-    }   
+    } else if (user_preferences.storage.base > index) {
+        user_preferences.storage.base += -1;
+    }
     
     equip_storage_change_trigger();
 }

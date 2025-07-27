@@ -11,6 +11,11 @@ function equip_control_display_all() {
 }
 
 function equip_control_create_share_storage(btn) {
+    if (!user_account || !user_account.status) {
+        utils_message("Share feature is available only to logged in users!", "automatic_warn");
+        return;
+    }
+
     var prompt = utils_create_prompt(btn, "prompt_select", "main_window");
     if (!prompt) {
         return;
@@ -31,6 +36,49 @@ function equip_control_create_share_storage(btn) {
     
     equip_share_display_all();
     utils_setup_prompt_destroyer(prompt, "active_prompt_share");
+    utils_update_frame_position_center(btn, prompt);
+}
+
+function equip_control_create_artifact_scanner(btn) {
+    var prompt = utils_create_prompt(btn, "prompt_select", "main_window");
+    if (!prompt) {
+        return;
+    }
+
+    var headerline = utils_create_obj("div", "prompt_header");
+    headerline.appendChild(utils_create_obj("div", "prompt_header_text", null, "Load Artifact Scanner"));
+    headerline.appendChild(utils_create_obj("div", "spacer"));
+    var decline = utils_create_obj("button", "prompt_button prompt_button_decline", null, "&#10006");
+    decline.onclick = function () { utils_destroy_current_prompt(); };
+    headerline.appendChild(decline);
+    prompt.appendChild(headerline);
+
+    var inputline = utils_create_obj("div", "enka_load_container");
+    prompt.appendChild(inputline);
+
+    var inputfile_container = utils_create_obj("div", "inputfile_container");
+
+    var inputfile = utils_create_obj("input", "inputfile_input", "scanner_input");
+    inputfile.type = "file";
+    inputfile.name = "scanner_input";
+    inputfile.onchange = function (event) { equip_scanner_change_load_good(event); event.preventDefault(); };
+    inputfile_container.appendChild(inputfile);
+
+    var inputfile_label = utils_create_obj("label", "inputfile_label", "scanner_label");
+    inputfile_label.htmlFor = "scanner_input";
+    if (scanner_objects.file) {
+        inputfile_label.innerHTML = scanner_objects.file;
+    } else {
+        inputfile_label.innerHTML = "Choose File...";
+    } 
+    inputfile_container.appendChild(inputfile_label);
+    inputline.appendChild(inputfile_container);
+
+    prompt.appendChild(utils_create_obj("div", "artifact_storage_column", "artifact_scanner_column"));
+
+    equip_scanner_display_all();
+
+    utils_setup_prompt_destroyer(prompt, "active_prompt_scanner");
     utils_update_frame_position_center(btn, prompt);
 }
 
@@ -57,7 +105,8 @@ function equip_control_create_enka(btn) {
 
     inputline.appendChild(utils_create_img_btn("enka-download", equip_enka_change_load_uid, "Load Enka characters", "enka_load", "enka_load"));
     inputline.appendChild(utils_create_img_btn("enka-share", equip_enka_change_goto_uid, "Go to Enka", "enka_share", "enka_load"));
-    inputline.appendChild(utils_create_img_btn("download", equip_enka_change_save_character_all, "Save All", "enka_save_all", "enka_load"));
+    inputline.appendChild(utils_create_img_btn("account-outline-down", equip_enka_change_save_character_all, "Save All Characters", "enka_save_all_characters", "enka_load"));
+    inputline.appendChild(utils_create_img_btn("artifact-down", equip_enka_change_save_artifact_all, "Save All Artifacts", "enka_save_all_artifacts", "enka_load"));
 
     prompt.appendChild(utils_create_obj("div", "char_storage_column", "enka_column"));
 

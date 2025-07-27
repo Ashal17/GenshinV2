@@ -79,6 +79,7 @@ function equip_character_load(party_id, character_data) {
     equip_character_update_all(false);
     equip_weapon_update_all();
     equip_artifacts_update_all_all();
+    equip_stats_update_total_all();
     equip_effects_update_options_all();  
     equip_effects_update_stats_all();
 
@@ -201,7 +202,7 @@ function equip_enemy_change(enemy_id) {
 }
 
 function equip_enemy_change_level(level) {
-    level = utils_number_verify(level, 0, 0, 103);
+    level = utils_number_verify(level, 0, 0, const_enemy_max_level);
     if (level != null) {
         user_objects.user_enemy.level = level;
         equip_enemy_change_trigger();
@@ -310,6 +311,18 @@ function equip_character_update_stats(party_id) {
                     { "id": character.const[i].bonus[ii].stat, "value": character.const[i].bonus[ii].value }
                 );
             }            
+        }
+    }
+
+    for (var i = 0; i < character.passive.length; i++) {
+        if (character.passive[i].level <= user_objects.user_party[party_id].level) {
+            if (character.passive[i].hasOwnProperty("bonus")) {
+                for (var ii = 0; ii < character.passive[i].bonus.length; ii++) {
+                    stats_basic.push(
+                        { "id": character.passive[i].bonus[ii].stat, "value": character.passive[i].bonus[ii].value }
+                    );
+                }
+            }
         }
     }
 

@@ -2350,7 +2350,7 @@
       ],
       "apply_effect": [
         {
-          "id": 1575,
+          "id": 1585,
           "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0,
           "special": "natlan_different_element"
@@ -2371,6 +2371,195 @@
         }
       ],
       "effect_name": "Flower-Feather Song"
+    },
+    {
+      "id": 42,
+      "enka_id": 15430,
+      "name": "Flower-Wreathed Feathers",
+      "icon": "flower_wreathed_feathers",
+      "type": "bow",
+      "rarity": 4,
+      "atk_base": 42.4,
+      "stats": [
+        {
+          "stat": "atk%",
+          "type": "level",
+          "value": 9.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Decreases Gliding Stamina consumption by 15%. When using Aimed Shots, the DMG dealt by Charged Attacks increases by "
+        },
+        {
+          "type": "refine",
+          "value": [ 6.0, 7.5, 9.0, 10.5, 12.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " every 0.5s. This effect can stack up to 6 times and will be removed 10s after leaving Aiming Mode."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 1949,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Inflorescence Unattainable",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "enka_id": 15514,
+      "name": "Astral Vulture’s Crimson Plumage",
+      "icon": "astral_vulture_s_crimson_plumage",
+      "type": "bow",
+      "rarity": 5,
+      "atk_base": 45.94,
+      "stats": [
+        {
+          "stat": "critdmg",
+          "type": "level",
+          "value": 14.4
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "For 12s after triggering a Swirl reaction, ATK increases by "
+        },
+        {
+          "type": "refine",
+          "value": [ 24.0, 30.0, 36.0, 42.0, 48.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". In addition, when 1/2 or more characters in the party are of a different Elemental Type from the equipping character, the DMG dealt by the equipping character's Charged Attacks is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 20.0, 25.0, 30.0, 35.0, 40.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": "/"
+        },
+        {
+          "type": "refine",
+          "value": [ 48.0, 60.0, 72.0, 84.0, 96.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " and Elemental Burst DMG dealt is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 10.0, 12.5, 15.0, 17.5, 20.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": "/"
+        },
+        {
+          "type": "refine",
+          "value": [ 24.0, 30.0, 36.0, 42.0, 48.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 1964,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "special": "different_element_0_1_2"
+        }
+      ],
+      "effect_name": "The Moonring Sighted",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "enka_id": 15432,
+      "name": "Sequence of Solitude",
+      "icon": "sequence_of_solitude",
+      "type": "bow",
+      "rarity": 4,
+      "atk_base": 42.4,
+      "stats": [
+        {
+          "stat": "hp%",
+          "type": "level",
+          "value": 9.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "When an attack hits an opponent, deal AoE DMG equal to "
+        },
+        {
+          "type": "refine",
+          "value": [ 40.0, 50.0, 60.0, 70.0, 80.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " of Max HP at the target's location. This effect can be triggered once every 15s."
+        }
+      ],
+      "effect_name": "Silent Trigger",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
     }
   ],
   "catalyst": [
@@ -3671,17 +3860,28 @@
           "stat": "healing",
           "type": "refine",
           "value": [ 10, 12.5, 15, 17.5, 20 ]
-        },
-        {
-          "stat": "bonusnormalhp",
-          "type": "refine",
-          "value": [ 1, 1.5, 2, 2.5, 3 ]
         }
       ],
       "display_effects": [
         {
           "type": "text",
-          "value": "For 12s after using an Elemental Burst, Normal Attacks that hit opponents will restore 0.6 Energy. Energy can be restored this way once every 0.1s."
+          "value": "Normal Attack DMG is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 1.0, 1.5, 2.0, 2.5, 3.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " of the Max HP of the character equipping this weapon. For 12s after using an Elemental Burst, Normal Attacks that hit opponents will restore 0.6 Energy. Energy can be restored this way once every 0.1s."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2069,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0
         }
       ],
       "ascension": [
@@ -4725,6 +4925,290 @@
         }
       ],
       "effect_name": "Echoes of the Plentiful Land"
+    },
+    {
+      "id": 42,
+      "enka_id": 14430,
+      "name": "Waveriding Whirl",
+      "icon": "waveriding_whirl",
+      "type": "catalyst",
+      "rarity": 4,
+      "atk_base": 41.07,
+      "stats": [
+        {
+          "stat": "recharge",
+          "type": "level",
+          "value": 13.33
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Decreases Swimming Stamina consumption by 15%. In addition, for 10s after using an Elemental Skill, Max HP is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 20.0, 25.0, 30.0, 35.0, 40.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". For every Hydro Elemental Type character in the party, Max HP is increased by another "
+        },
+        {
+          "type": "refine",
+          "value": [ 12.0, 15.0, 18.0, 21.0, 24.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ", and the maximum increase that can be achieved in this way is "
+        },
+        {
+          "type": "refine",
+          "value": [ 24.0, 30.0, 36.0, 42.0, 48.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". Can be triggered once every 15s."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 1969,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "special": "hydro_0_1_2"
+        }
+      ],
+      "effect_name": "Fangs Flying To and Fro",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "enka_id": 14517,
+      "name": "Starcaller’s Watch",
+      "icon": "starcaller_s_watch",
+      "type": "catalyst",
+      "rarity": 5,
+      "atk_base": 44.34,
+      "stats": [
+        {
+          "stat": "elemastery",
+          "type": "level",
+          "value": 57.6
+        },
+        {
+          "stat": "elemastery",
+          "type": "refine",
+          "value": [ 100.0, 125.0, 150.0, 175.0, 200.0 ]
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Gain the \"Mirror of Night\" effect within 15s after the equipping character creates a shield: The current active party member deals "
+        },
+        {
+          "type": "refine",
+          "value": [ 28.0, 35.0, 42.0, 49.0, 56.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " increased DMG to nearby opponents. You can gain the \"Mirror of Night\" effect once every 14s."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 1984,
+          "option": 0,
+          "party": true,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Offering Unto Wind and Sun",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "enka_id": 14518,
+      "name": "Sunny Morning Sleep-In",
+      "icon": "sunny_morning_sleep_in",
+      "type": "catalyst",
+      "rarity": 5,
+      "atk_base": 44.34,
+      "stats": [
+        {
+          "stat": "elemastery",
+          "type": "level",
+          "value": 57.6
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Elemental Mastery increases by "
+        },
+        {
+          "type": "refine",
+          "value": [ 120.0, 150.0, 180.0, 210.0, 240.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " for 6s after triggering Swirl. Elemental Mastery increases by "
+        },
+        {
+          "type": "refine",
+          "value": [ 96.0, 120.0, 144.0, 168.0, 192.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " for 9s after the wielder's Elemental Skill hits an opponent. Elemental Mastery increases by "
+        },
+        {
+          "type": "refine",
+          "value": [ 32.0, 40.0, 48.0, 56.0, 64.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " for 30s after the wielder's Elemental Burst hits an opponent."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 1989,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        },
+        {
+          "id": 1994,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        },
+        {
+          "id": 1999,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Bathhouses, Hawks, and Narukami",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "enka_id": 14519,
+      "name": "Vivid Notions",
+      "icon": "vivid_notions",
+      "type": "catalyst",
+      "rarity": 5,
+      "atk_base": 47.54,
+      "stats": [
+        {
+          "stat": "critdmg",
+          "type": "level",
+          "value": 9.6
+        },
+        {
+          "stat": "atk%",
+          "type": "refine",
+          "value": [ 28.0, 35.0, 42.0, 49.0, 56.0 ]
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "When you use a Plunging Attack, you will gain the \"Dawn's First Hue\" effect: Plunging Attack CRIT DMG is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 28.0, 35.0, 42.0, 49.0, 56.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". When you use an Elemental Skill or Burst, you will gain the \"Twilight's Splendor\" effect: Plunging Attack CRIT DMG is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 40.0, 50.0, 60.0, 70.0, 80.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". The two effects above each last for 15s, and will be canceled 0.1s after the ground impact hits a target."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2004,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        },
+        {
+          "id": 2009,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Falling Rainbow’s Wish",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
     }
   ],
   "claymore": [
@@ -6057,19 +6541,30 @@
           "stat": "def%",
           "type": "refine",
           "value": [ 28, 35, 42, 49, 56 ]
-        },
-        {
-          "stat": "bonusnormaldef",
-          "type": "refine",
-          "value": [ 40, 50, 60, 70, 80 ]
-        },
-        {
-          "stat": "bonuschargeddef",
-          "type": "refine",
-          "value": [ 40, 50, 60, 70, 80 ]
         }
       ],
-      "display_effects": [],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Normal and Charged Attack DMG is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 40.0, 50.0, 60.0, 70.0, 80.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " of DEF."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2064,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0
+        }
+      ],
       "ascension": [
         {
           "type": "group",
@@ -6839,6 +7334,131 @@
         }
       ],
       "effect_name": "The Weight of Falling Branches"
+    },
+    {
+      "id": 42,
+      "enka_id": 12514,
+      "name": "A Thousand Blazing Suns",
+      "icon": "a_thousand_blazing_suns",
+      "type": "claymore",
+      "rarity": 5,
+      "atk_base": 49.14,
+      "stats": [
+        {
+          "stat": "crit",
+          "type": "level",
+          "value": 2.4
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Gain the \"Scorching Brilliance\" effect when using an Elemental Skill or Burst: CRIT DMG increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 20.0, 25.0, 30.0, 35.0, 40.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " and ATK increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 28.0, 35.0, 42.0, 49.0, 56.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for 6s. This effect can trigger once every 10s.While a \"Scorching Brilliance\" instance is active, its duration is increased by 2s after Normal or Charged attacks deal Elemental DMG. This effect can trigger once every second, and the max duration increase is 6s.Additionally, when the equipping character is in the Nightsoul's Blessing state, \"Scorching Brilliance\" effects are increased by 75%, and its duration will not count down when the equipping character is off-field."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2014,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "special": "nightsoul_1"
+        }
+      ],
+      "effect_name": "Sunset Reignites the Dawn",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "enka_id": 12432,
+      "name": "Flame-Forged Insight",
+      "icon": "flame_forged_insight",
+      "type": "claymore",
+      "rarity": 4,
+      "atk_base": 42.4,
+      "stats": [
+        {
+          "stat": "elemastery",
+          "type": "level",
+          "value": 36.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "When Electro-Charged, Lunar-Charged, or Bloom is triggered, restore "
+        },
+        {
+          "type": "refine",
+          "value": [ 12.0, 15.0, 18.0, 21.0, 24.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " Elemental Energy and increase Elemental Mastery by "
+        },
+        {
+          "type": "refine",
+          "value": [ 60.0, 75.0, 90.0, 105.0, 120.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " for 15 seconds. This effect can be triggered once every 15s and can be triggered even when the equipping character is off-field."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2024,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Mind in Bloom",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
     }
   ],
   "polearm": [
@@ -8750,6 +9370,200 @@
         }
       ],
       "effect_name": "Hope Beyond the Peaks"
+    },
+    {
+      "id": 36,
+      "enka_id": 13432,
+      "name": "Tamayuratei no Ohanashi",
+      "icon": "tamayuratei_no_ohanashi",
+      "type": "polearm",
+      "rarity": 4,
+      "atk_base": 43.73,
+      "stats": [
+        {
+          "stat": "recharge",
+          "type": "level",
+          "value": 6.67
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Increase ATK by "
+        },
+        {
+          "type": "refine",
+          "value": [ 20.0, 25.0, 30.0, 35.0, 40.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " and Movement SPD by 10% for 10s when using an Elemental Skill."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2029,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Busybody’s Running Light",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "enka_id": 13514,
+      "name": "Symphonist of Scents",
+      "icon": "symphonist_of_scents",
+      "type": "polearm",
+      "rarity": 5,
+      "atk_base": 45.94,
+      "stats": [
+        {
+          "stat": "critdmg",
+          "type": "level",
+          "value": 14.4
+        },
+        {
+          "stat": "atk%",
+          "type": "refine",
+          "value": [ 12.0, 15.0, 18.0, 21.0, 24.0 ]
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "When the equipping character is off-field, ATK is increased by an additional "
+        },
+        {
+          "type": "refine",
+          "value": [ 12.0, 15.0, 18.0, 21.0, 24.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". After initiating healing, the equipping character and the character(s) they have healed will obtain the \"Sweet Echoes\" effect, increasing their ATK by "
+        },
+        {
+          "type": "refine",
+          "value": [ 32.0, 40.0, 48.0, 56.0, 64.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for 3s. This effect can be triggered even if the equipping character is off-field."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2034,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        },
+        {
+          "id": 2039,
+          "option": 0,
+          "party": true,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Seasoned Symphony",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "enka_id": 13515,
+      "name": "Fractured Halo",
+      "icon": "fractured_halo",
+      "type": "polearm",
+      "rarity": 5,
+      "atk_base": 45.94,
+      "stats": [
+        {
+          "stat": "critdmg",
+          "type": "level",
+          "value": 14.4
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "After an Elemental Skill or Elemental Burst is used, ATK is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 24.0, 30.0, 36.0, 42.0, 48.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for 20s. If the equipping character creates a Shield while this effect is active, they will gain the Electrifying Edict effect for 20s: All nearby party members deal "
+        },
+        {
+          "type": "refine",
+          "value": [ 40.0, 50.0, 60.0, 70.0, 80.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " more Lunar-Charged DMG."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2044,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        },
+        {
+          "id": 2049,
+          "option": 0,
+          "party": true,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Purifying Crown",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
     }
   ],
   "sword": [
@@ -10176,14 +10990,30 @@
           "stat": "def%",
           "type": "level",
           "value": 15.01
-        },
-        {
-          "stat": "bonusskilldef",
-          "type": "refine",
-          "value": [ 40, 50, 60, 70, 80 ]
         }
       ],
-      "display_effects": [],
+      "apply_effect": [
+        {
+          "id": 2074,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Elemental Skill DMG is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 40.0, 50.0, 60.0, 70.0, 80.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " of DEF. The effect will be triggered no more than once every 1.5s and will be cleared 0.1s after the Elemental Skill deals DMG."
+        }
+      ],
       "ascension": [
         {
           "type": "group",
@@ -11249,6 +12079,139 @@
         }
       ],
       "effect_name": "Trapper's Pride"
+    },
+    {
+      "id": 46,
+      "enka_id": 11432,
+      "name": "Calamity of Eshu",
+      "icon": "calamity_of_eshu",
+      "type": "sword",
+      "rarity": 4,
+      "atk_base": 43.73,
+      "stats": [
+        {
+          "stat": "atk%",
+          "type": "level",
+          "value": 6.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "While characters are protected by a Shield, DMG dealt by Normal and Charged Attacks is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 20.0, 25.0, 30.0, 35.0, 40.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ", and Normal and Charged Attack CRIT Rate is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 8.0, 10.0, 12.0, 14.0, 16.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2054,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Diffusing Boundary",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "enka_id": 11517,
+      "name": "Azurelight",
+      "icon": "azurelight",
+      "type": "sword",
+      "rarity": 5,
+      "atk_base": 47.54,
+      "stats": [
+        {
+          "stat": "crit",
+          "type": "level",
+          "value": 4.8
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Within 12s after an Elemental Skill is used, ATK is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 24.0, 30.0, 36.0, 42.0, 48.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". During this time, when the equipping character has 0 Energy, ATK will be further increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 24.0, 30.0, 36.0, 42.0, 48.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ", and CRIT DMG will be increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 40.0, 50.0, 60.0, 70.0, 80.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2059,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Whitehill’s Bestowal",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
     }
   ]
 }

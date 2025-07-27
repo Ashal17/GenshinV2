@@ -8,10 +8,11 @@ if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
 
 echo'
     <div class="nav">
-	    <a href="/" class="logo nav_btn"><span class="svg svg-ashal-full"></span></a>
+	    <a href="/" class="logo nav_btn"><span class="svg svg-ashal-fox"></span></a>
 	    <a href="/equip" class="nav_btn"><span class="svg svg-sword-cross"></span>Equipment</a>
 	    <div class="spacer"></div>
 	    <a href="/account/" class="nav_btn"><span class="svg svg-account-circle"></span>' . $account_str . '</a>
+        <a href="https://discord.gg/YC6KRvm" target="_blank" class="nav_btn nav_btn_thin"><span class="svg svg-discord"></span></a>
     </div>
 
     <div class="automatic" id="automatic">	

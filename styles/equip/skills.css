@@ -63,6 +63,10 @@
         border-top: 1px solid var(--grey-40);
     }
 
+.skills_part_text_name_obj {
+    align-self: center;
+}
+
 .skills_passive_icon {
     max-width: 64px;
     max-height: 64px;
@@ -184,9 +188,13 @@
     width: 23px;
 }
 
-.skills_row_name .svg-minus-circle-outline:before {
-    background-color: var(--red-light);
-}
+    .skills_part_count_val .icon_selects_text {
+        font-size:0.9em;
+    }
+
+    .skills_row_name .svg-minus-circle-outline:before {
+        background-color: var(--red-light);
+    }
 
 .skills_row_name .svg-plus-circle-outline:before {
     background-color: var(--green-light);

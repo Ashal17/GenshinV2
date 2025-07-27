@@ -273,7 +273,7 @@
     color: var(--white);
 }
 
-.artifact_storage_row {
+.artifact_storage_row, .scanner_row {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -284,24 +284,54 @@
     padding: 0px 3px;
 }
 
-    .artifact_storage_row:nth-child(n + 3) {
-        border-top: 1px dashed var(--grey-40);
+    .scanner_row .artifact_storage_stats {
+        border-left: 1px solid var(--grey-40);
+        border-right: 1px solid var(--grey-40);
     }
+
+        .scanner_row .artifact_storage_stats .statline:nth-child(8) {
+            border-left: 1px dashed var(--grey-40);
+        }
+
+.scanner_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1;
+    max-width: calc(100% - 10px);
+    position: relative;
+    width:764px;
+}
+
+.scanner_header_name {
+    flex: 1 1;
+    padding: 5px 0px;
+}
+
+.scanner_header_count {
+    padding: 5px;
+    border-right: 1px solid var(--grey-40);
+}
+
+.artifact_storage_row:nth-child(n + 3), .scanner_row, .scanner_header:not(:first-child) {
+    border-top: 1px dashed var(--grey-40);
+}
 
     .artifact_storage_row:nth-child(2) {
         border-top: 1px solid var(--grey-40);
     }
 
-    .artifact_storage_row .equipment_icon {
+    .artifact_storage_row .equipment_icon, .scanner_row .equipment_icon {
         margin: 0px;
     }
 
 @media only screen and (min-width: 1055px) {
-    .artifact_storage_stats {
+    .artifact_storage_row .artifact_storage_stats {
         border-left: 1px solid var(--grey-40);
         border-right: 1px solid var(--grey-40);
     }
-        .artifact_storage_stats .statline:nth-child(8) {
+        .artifact_storage_row .artifact_storage_stats .statline:nth-child(8) {
             border-left: 1px dashed var(--grey-40);
         }
 }
@@ -335,58 +365,63 @@
     .artifact_storage_row .equipment_icon {
         margin-left: 5px;
     }
-    .artifact_storage_stats {
-        width:563px;
-    }
-    .artifact_storage_btns {
-        justify-content:flex-end;
-    }
+        .artifact_storage_row .artifact_storage_stats {
+            width: 563px;
+        }
+        .artifact_storage_row .artifact_storage_btns {
+            justify-content: flex-end;
+        }
 }
 
 
 
-    .artifact_storage_row .equipment_img {
-        margin: 0px;
-        height: 26px;
-        width: 26px;
-        border-radius: 5px;
-        cursor: help;
-    }
+.artifact_storage_row .equipment_img, .scanner_row .equipment_img {
+    margin: 0px;
+    height: 26px;
+    width: 26px;
+    border-radius: 5px;
+    cursor: help;
+}
 
-    .artifact_storage_filter_set .equipment_img {
-        margin: 0px;
-        height: 56px;
-        width: 56px;
-    }
+.artifact_storage_filter_set .equipment_img {
+    margin: 0px;
+    height: 56px;
+    width: 56px;
+}
 
-    .artifact_storage_row .label_img, .artifact_storage_row .img_svg, .artifact_storage_row .img_button {
-        height: 21px;
-    }
+.artifact_storage_row .label_img, .artifact_storage_row .img_svg, .artifact_storage_row .img_button,
+.scanner_row .label_img, .scanner_row .img_svg, .scanner_row .img_button,
+.scanner_header .label_img, .scanner_header .img_svg, .scanner_header .img_button {
+    height: 21px;
+}
 
-    .artifact_storage_row:first-child .artifact_storage_name {
-        color: var(--yellow);
-    }
+.artifact_storage_row:first-child .artifact_storage_name {
+    color: var(--yellow);
+}
 
-    .artifact_storage_name {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        width: 300px;
-        padding: 5px;
-    }
+.artifact_storage_name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 300px;
+    padding: 5px;
+}
 
-    .artifact_storage_stats {
-        display: flex;
-        flex-direction: row;
-    }
+.artifact_storage_stats {
+    display: flex;
+    flex-direction: row;
+}
 
 .artifact_storage_sub_stats {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    border-left: 1px dashed var(--grey-40);
+}
+
+.artifact_storage_row .artifact_storage_sub_stats {
     flex-wrap: wrap;
     flex: 1 1;
-    border-left: 1px dashed var(--grey-40);
 }
 
 .artifact_storage_compare {
@@ -438,6 +473,13 @@
         flex-direction: row;
         align-items: center;
     }
+
+.scanner_btns {
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
     .artifact_storage_filter_set, .artifact_storage_filter_main_stat, .artifact_storage_filter_sub_stats {
         display: flex;

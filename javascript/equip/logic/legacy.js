@@ -49,19 +49,24 @@ async function equip_legacy_v1_account_storage_load(storage_account) {
 }
 
 function equip_legacy_v1_character_storage_load_local() {
-    var setup_count = parseInt(localStorage.getItem("equip_setup_count"));
-
-    if (setup_count) {
-        utils_log_debug("Found legacy Characters locally.");
-        for (var i = 0; i < setup_count; i++) {
-            var character_data = equip_legacy_v1_url_return_character(localStorage.getItem("equip_setup_url_" + i));
-            character_data.name = localStorage.getItem("equip_setup_name_" + i);
-            character_data.source = "legacy";
-            equip_character_storage_save_character(character_data, false);
+    
+    var setups_migrated = localStorage.getItem("legacy_setups_check");
+    if (!setups_migrated) {
+        var setup_count = parseInt(localStorage.getItem("equip_setup_count"));
+        if (setup_count) {
+            utils_log_debug("Found legacy Characters locally.");
+            for (var i = 0; i < setup_count; i++) {
+                var character_data = equip_legacy_v1_url_return_character(localStorage.getItem("equip_setup_url_" + i));
+                character_data.name = localStorage.getItem("equip_setup_name_" + i);
+                character_data.source = "legacy";
+                equip_character_storage_save_character(character_data, false);
+            }
+            equip_character_storage_save_last();
         }
-        equip_character_storage_save_last();
+        localStorage.setItem("legacy_setups_check", "1");
     }
-    equip_legacy_v1_character_storage_clear();
+    
+    //equip_legacy_v1_character_storage_clear();
 }
 
 function equip_legacy_v1_character_storage_load_account(setups) {
@@ -91,14 +96,19 @@ function equip_legacy_v1_character_storage_clear() {
 }
 
 function equip_legacy_v1_artifacts_storage_load_local() {
-    var artifact_list_json = localStorage.getItem("equip_artifact_list");
-    if (artifact_list_json) {
-        utils_log_debug("Found legacy Artifacts locally.");
-        var artifact_list = JSON.parse(artifact_list_json);
-        equip_legacy_v1_artifacts_storage_load(artifact_list); 
-        equip_artifacts_storage_save_last();
-        localStorage.removeItem("equip_artifact_list");
-    }
+    
+    var artifact_list_migrated = localStorage.getItem("legacy_artifacts_check");
+    if (!artifact_list_migrated) {
+        var artifact_list_json = localStorage.getItem("equip_artifact_list");
+        if (artifact_list_json) {
+            utils_log_debug("Found legacy Artifacts locally.");
+            var artifact_list = JSON.parse(artifact_list_json);
+            equip_legacy_v1_artifacts_storage_load(artifact_list);
+            equip_artifacts_storage_save_last();                     
+        }
+        localStorage.setItem("legacy_artifacts_check", "1");
+    }    
+    //localStorage.removeItem("equip_artifact_list");
 }
 
 
@@ -108,15 +118,15 @@ function equip_legacy_v1_artifacts_storage_load(artifact_list) {
         for (var ii = 0; ii < artifact_list[artifact_id].length; ii++) {
             var artifact_legacy = artifact_list[artifact_id][ii];
             var artifact = {};
-            artifact.id = artifact_legacy.id;
-            artifact.stars = artifact_legacy.star;
-            artifact.level = artifact_legacy.level;
+            artifact.id = Number(artifact_legacy.id);
+            artifact.stars = Number(artifact_legacy.star);
+            artifact.level = Number(artifact_legacy.level);
             artifact.main_stat = artifact_legacy.main;
             artifact.sub_stats = [];
             for (var iii = 0; iii < const_artifact_sub_stats; iii++) {
                 var sub_stat = {};
                 sub_stat.id = artifact_legacy["sub_" + iii];
-                sub_stat.value = artifact_legacy["sub_val_" + iii];
+                sub_stat.value = Number(artifact_legacy["sub_val_" + iii]);
                 artifact.sub_stats.push(sub_stat);
             }
             equip_artifacts_storage_save_artifact(artifact_id, artifact, false);

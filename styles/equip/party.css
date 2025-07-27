@@ -53,6 +53,7 @@
     margin: 5px;
     background-color: var(--grey-20);
     width: 30px;
+    justify-content: space-evenly;
 }
 
 .enka_btn {
@@ -110,6 +111,7 @@
     padding: 2px 5px;
     width: calc(100% - 60px);
     min-width: 202px;
+    justify-content: space-between;
 }
 
 
@@ -317,8 +319,8 @@
     align-items:center;
 }
 
-    .resonance:not(.active) .resonance_icon {
-        filter: grayscale(1);
+    .resonance:not(.active) .resonance_icons .svg:before {
+        background-color: var(--grey-50) ;
     }
 
     .resonance:not(.active) .resonance_name {
@@ -326,16 +328,18 @@
     }
 
 .resonance_icons {
-
+    display:flex;
+    flex-direction:row;
 }
+
+    .resonance_icons .img_svg {
+        height: 16px;
+        width: 16px;
+        padding-left: 3px;
+    }
 
 .resonance_name {
     font-size:0.9em;
-}
-
-.resonance_icon {
-    max-height:16px;
-    max-width:16px;
 }
 
 .stats_detail_column {

@@ -173,9 +173,9 @@ function utils_number_verify(input_value, decimal_places, min, max) {
     } else {
         input_value = Number(input_value);
         if (input_value > max) {
-            input_value = max
+            input_value = max;
         } else if (input_value < min) {
-            input_value = min
+            input_value = min;
         }
         input_value = Math.round(input_value * Math.pow(10, decimal_places)) / Math.pow(10, decimal_places);
         return input_value;

@@ -22,6 +22,7 @@ echo '
 	<script src="/javascript/equip/logic/storage.js?' . $javascript_logic_ver .'"></script>
 	<script src="/javascript/equip/logic/enka.js?' . $javascript_logic_ver .'"></script>
 	<script src="/javascript/equip/logic/share.js?' . $javascript_logic_ver .'"></script>
+	<script src="/javascript/equip/logic/scanner.js?' . $javascript_logic_ver .'"></script>
 	<script src="/javascript/equip/logic/legacy.js?' . $javascript_logic_ver .'"></script>
 	<script src="/javascript/equip/logic/account.js?' . $javascript_logic_ver .'"></script>
 ';

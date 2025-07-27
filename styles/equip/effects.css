@@ -54,12 +54,16 @@
         font-size: 0.9em;
     }
 
-.effect_col .prompt {
-    max-height:300px;
-    overflow:scroll;
+.effect_col .prompt_values {
+    max-height: 300px;
+    overflow: scroll;
 }
 
-.effect_col .prompt, .effect_col .prompt_value {
+.effect_col .prompt_input_simple {
+    width: 100px;
+}
+
+.effect_col .prompt_values, .effect_col .prompt_value {
     border: none;
 }
 
@@ -75,24 +79,20 @@
     font-size: 0.9em;
 }
 
-.effect_row.disabled {
-    opacity:60%;
+.effect_row.disabled .effect_toggle {
+    opacity: 60%;
 }
 
-    .effect_row.disabled .effect_toggle {
-        opacity: 60%;
-    }
+.effect_row.disabled .icon_selects {
+    cursor:initial;
+}
 
-    .effect_row.disabled .icon_selects {
-        cursor:initial;
-    }
-
-    .effect_toggle {
-        display: flex;
-        height: 20px;
-        width: 20px;
-        border: 2px solid var(--orange-bg);
-    }
+.effect_toggle {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--orange-bg);
+}
 
 .effect_row:not(.disabled) .effect_toggle {
     cursor: pointer;

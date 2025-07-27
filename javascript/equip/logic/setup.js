@@ -7,7 +7,7 @@ window_frame_ids = [
 ];
 
 async function equip_load_all_data() {
-    var ver = "?20250507";
+    var ver = "?20250715";
 
     data_characters = await utils_load_json("/data/characters.json" + ver);
     data_enemies = await utils_load_json("/data/enemies.json" + ver);
@@ -111,6 +111,7 @@ async function equip_setup_preferences_load() {
     equip_skills_load_preferences(pref_data);
     equip_setup_enka_objects(pref_data);
     equip_setup_window_objects(pref_data);
+    equip_setup_scanner_objects();
 
     if (!preferences_account && user_account && user_account.status) {
         utils_log_debug("Saving preferences to account.");
@@ -210,16 +211,18 @@ function equip_setup_ui_party_panel() {
     load_enka.className += " enka_btn"
     load_enka.onclick = function (event) { equip_control_create_enka(load_enka.id); event.preventDefault(); };
     panel.appendChild(load_enka);
+       
+    var artifact_scanner = utils_create_img_btn("artifact", null, "Artifact Scanner", "party_panel_scanner");
+    artifact_scanner.onclick = function (event) { equip_control_create_artifact_scanner(artifact_scanner.id); event.preventDefault(); };
+    panel.appendChild(artifact_scanner);
 
-    var character_storage = utils_create_img_btn("database", null, "Character Storage", "party_panel_storage");
+    var share_storage = utils_create_img_btn("account-multiple-outline-share", null, "Share", "party_panel_share");
+    share_storage.onclick = function (event) { equip_control_create_share_storage(share_storage.id); event.preventDefault(); };
+    panel.appendChild(share_storage);
+
+    var character_storage = utils_create_img_btn("account-outline-database", null, "Character Storage", "party_panel_storage");
     character_storage.onclick = function (event) { equip_control_create_character_storage(character_storage.id); event.preventDefault(); };
     panel.appendChild(character_storage);
-
-    if (user_account && user_account.status) {
-        var share_storage = utils_create_img_btn("share-outline", null, "Share", "party_panel_share");
-        share_storage.onclick = function (event) { equip_control_create_share_storage(share_storage.id); event.preventDefault(); };
-        panel.appendChild(share_storage);
-    }
 
     return panel;
 }
@@ -234,7 +237,7 @@ function equip_setup_ui_resonance() {
         resonance.appendChild(resonance_icons);
         if (data_resonance[i].vision && data_resonance[i].req) {
             for (var ii = 0; ii < data_resonance[i].req; ii++) {
-                resonance_icons.appendChild(utils_create_img("resonance_icon", null, "/images/icons/element/24p/" + data_resonance[i].vision + ".png"))
+                resonance_icons.appendChild(utils_create_img_svg(data_resonance[i].vision));
             }
         }
 
@@ -346,7 +349,7 @@ function equip_setup_ui_artifact(artifact_id) {
 
     var name_row = utils_create_obj("div", "container_namerow");
     name_row.appendChild(utils_create_img_btn(
-        "database",
+        "artifact-" + artifact_id + "-database",
         function () { equip_control_create_artifacts_storage(artifact_id, artifact_id + "_storage"); },
         data_artifact_vars[artifact_id].name + " Storage",
         artifact_id + "_storage",
@@ -620,6 +623,12 @@ function equip_setup_enka_objects(preferences_data = null) {
     enka_objects.characters = [];
 }
 
+function equip_setup_scanner_objects() {
+    scanner_objects = {};
+    scanner_objects.file = null;
+    scanner_objects.artifacts = [];
+}
+
 function equip_setup_share_objects(user_share = null) {
     share_objects = {};
     share_objects.saved_shares = utils_object_get_value(user_share, "saved_shares", []);
@@ -715,7 +724,28 @@ function equip_setup_default_stats() {
         default_bonusdmg[const_bonusdmg_visions[i]] = {};
         for (var ii = 0; ii < const_bonusdmg_types.length; ii++) {
             default_bonusdmg[const_bonusdmg_visions[i]][const_bonusdmg_types[ii]] = 0;
+            default_bonusdmg[const_bonusdmg_visions[i]][const_bonusdmg_types[ii] + "alt"] = 0;
+            default_bonusdmg[const_bonusdmg_visions[i]][const_bonusdmg_types[ii] + "alt2"] = 0;
         }
+        default_bonusdmg[const_bonusdmg_visions[i]]["alt"] = 0;
+        default_bonusdmg[const_bonusdmg_visions[i]]["alt2"] = 0;
+    }
+    default_bonusdmg.reactions = {};
+    for (let reaction_id in data_reactions) {
+        default_bonusdmg.reactions[reaction_id] = 0;
+    }    
+
+    default_artifact = {};
+    default_artifact.id = 0
+    default_artifact.stars = 0
+    default_artifact.level = 0
+    default_artifact.main_stat = "none";
+    default_artifact.sub_stats = [];
+    for (var ii = 0; ii < const_artifact_sub_stats; ii++) {
+        var sub_stat = {};
+        sub_stat.id = const_artifact_sub_stats_options[0];
+        sub_stat.value = 0;
+        default_artifact.sub_stats.push(sub_stat);
     }
 
     default_storage_character = {};
@@ -738,19 +768,8 @@ function equip_setup_default_stats() {
 
     default_storage_character.artifacts = {};
     for (var i = 0; i < const_artifact_types.length; i++) {
-        var artifact = {};
-        artifact.id = 0
-        artifact.stars = 0
-        artifact.level = 0
-        artifact.main_stat = data_artifact_vars[const_artifact_types[i]].main_stats[0];
-        artifact.sub_stats = [];
-        for (var ii = 0; ii < const_artifact_sub_stats; ii++) {
-            var sub_stat = {};
-            sub_stat.id = const_artifact_sub_stats_options[0];
-            sub_stat.value = 0;
-            artifact.sub_stats.push(sub_stat);
-        }
-        default_storage_character.artifacts[const_artifact_types[i]] = artifact;
+        default_storage_character.artifacts[const_artifact_types[i]] = structuredClone(default_artifact);
+        default_storage_character.artifacts[const_artifact_types[i]].main_stat = data_artifact_vars[const_artifact_types[i]].main_stats[0];
     }  
 
     default_active_skill_detail = {};

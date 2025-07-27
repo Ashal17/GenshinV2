@@ -38,9 +38,30 @@ function equip_enka_change_save_character_all() {
     }
     if (saved_characters > 0) {
         equip_character_storage_save_last();
-        utils_message(saved_characters + " characters were saved.", "automatic_success");
+        utils_message(saved_characters + " Characters were saved.", "automatic_success");
     } else {
         utils_message("No character was saved.", "automatic_alert");
+    }
+}
+
+function equip_enka_change_save_artifact_all() {
+    var saved_artifacts = 0;
+    for (var i = 0; i < enka_objects.characters.length; i++) {
+        var character = enka_objects.characters[i];
+        for (var ii = 0; ii < const_artifact_types.length; ii++) {
+            var artifact = structuredClone(character.artifacts[const_artifact_types[ii]]);
+
+            if (equip_artifacts_storage_save_artifact(const_artifact_types[ii], artifact, false)) {
+                saved_artifacts++;
+            }
+        }
+    }
+
+    if (saved_artifacts > 0) {
+        equip_artifacts_storage_save_last();
+        utils_message(saved_artifacts + " Artifacts were saved.", "automatic_success");
+    } else {
+        utils_message("No artifact was saved.", "automatic_alert");
     }
 }
 

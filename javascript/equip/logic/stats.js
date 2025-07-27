@@ -95,7 +95,12 @@ function equip_stats_update_add(stat_type, party_id, stats_obj_name, skill_index
     }
     
     for (var i = 0; i < stats_obj.length; i++) {
-        output_obj[stats_obj[i].id] += stats_obj[i].value;
+        if (stats_obj[i].id.endsWith("_mult") && output_obj[stats_obj[i].id] != 0) {
+            output_obj[stats_obj[i].id] *= stats_obj[i].value/100;
+        } else {
+            output_obj[stats_obj[i].id] += stats_obj[i].value;
+        }
+        
     }
 }
 
@@ -276,18 +281,34 @@ function equip_stats_calculate_tranformation(stats_total, transformation_name) {
 
 function equip_stats_calculate_elemastery(type, value) {
 
-    if (type == "elemasteryadd") {
-        var result = value / (2000 + value);
-        result = 144 / 9 * result;
-    } else if (type == "elemasterymult") {
-        var result = value / (1400 + value);
-        result = 25 / 9 * result;
-    } else if (type == "elemasterycrystalize") {
-        var result = value / (1400 + value);
-        result = 40 / 9 * result;
-    } else if (type == "elemasterybonus") {
-        var result = value / (1200 + value);
-        result = 45 / 9 * result;
+    switch (type) {
+        case "elemasteryadd":
+            var result = value / (2000 + value);
+            result = 144 / 9 * result;
+            break;
+
+        case "elemasteryaddshared":
+            var result = value / (2100 + value);
+            result = 45 / 9 * result;
+            break;
+
+        case "elemasterymult":
+            var result = value / (1400 + value);
+            result = 25 / 9 * result;
+            break;
+
+        case "elemasterycrystalize":
+            var result = value / (1400 + value);
+            result = 40 / 9 * result;
+            break;
+
+        case "elemasterybonus":
+            var result = value / (1200 + value);
+            result = 45 / 9 * result;
+            break;
+
+        default:
+            throw new Error('Invalid Elemental Mastery type');
     }
 
     return result * 100;
