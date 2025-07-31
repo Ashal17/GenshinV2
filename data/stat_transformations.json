@@ -293,6 +293,11 @@
       "mods": [ 0, 100 ]
     },
     {
+      "stat": "lunarbloom_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
       "stat": "rupture_mult",
       "change": "default",
       "mods": [ 0, 100 ]
@@ -912,6 +917,11 @@
       "stat": "shatter",
       "change": "add",
       "mods": [ "elemasteryadd" ]
+    },
+    {
+      "stat": "lunarbloom",
+      "change": "add",
+      "mods": [ "elemasteryaddshared" ]
     },
     {
       "stat": "rupture",

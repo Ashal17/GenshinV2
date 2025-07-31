@@ -284,6 +284,10 @@
     "name": "Pyro Swirl Crit Rate",
     "type": "percent"
   },
+  "critlunarbloom": {
+    "name": "Lunar-Bloom Crit Rate",
+    "type": "percent"
+  },
   "critrupture": {
     "name": "Rupture Crit Rate",
     "type": "percent"
@@ -465,6 +469,10 @@
   },
   "critdmgswirlpyro": {
     "name": "Pyro Swirl Crit DMG",
+    "type": "percent"
+  },
+  "critdmglunarbloom": {
+    "name": "Lunar-Bloom Crit DMG",
     "type": "percent"
   },
   "critdmgrupture": {
@@ -887,6 +895,10 @@
     "name": "Pyro Swirl",
     "type": "percent"
   },
+  "lunarbloom": {
+    "name": "Lunar-Bloom",
+    "type": "percent"
+  },
   "rupture": {
     "name": "Rupture",
     "type": "percent"
@@ -961,6 +973,10 @@
   },
   "swirlpyro_mult": {
     "name": "Pyro Swirl Multiplier",
+    "type": "percent"
+  },
+  "lunarbloom_mult": {
+    "name": "Lunar-Bloom Multiplier",
     "type": "percent"
   },
   "rupture_mult": {

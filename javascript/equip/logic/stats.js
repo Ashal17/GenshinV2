@@ -288,8 +288,8 @@ function equip_stats_calculate_elemastery(type, value) {
             break;
 
         case "elemasteryaddshared":
-            var result = value / (2100 + value);
-            result = 45 / 9 * result;
+            var result = value / (2000 + value);
+            result = 54 / 9 * result;
             break;
 
         case "elemasterymult":

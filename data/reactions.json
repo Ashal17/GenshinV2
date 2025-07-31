@@ -105,6 +105,12 @@
     "multiplier": 1,
     "vision": "geo"
   },
+  "lunarbloom": {
+    "name": "Lunar-Bloom",
+    "type": "elemasteryaddshared",
+    "vision": "dendro",
+    "direct_multiplier": 3
+  },
   "rupture": {
     "name": "Rupture",
     "type": "elemasteryadd",
