@@ -135,7 +135,7 @@
 				For your own safety, do not use username/password that you use for Mihoyo/Genshin Impact/other accounts
 			</div>
 			<div class="form_entry">
-				By registering you agree that any information you enter will be stored and linked to you account.
+				By registering you agree that any information you enter will be stored and linked to your account.
 			</div>
 		</div>
 	</div>

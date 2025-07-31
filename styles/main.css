@@ -534,11 +534,16 @@ input {
     width:100%;
 }
 
-.frame_window.minimized .svg-chevron-up::before,
-.frame_window.minimized .svg-chevron-down::before{
-    //cursor: default;
-    //background-color: var(--grey-30);
-}
+    .frame_window_header .img_icon {
+        width:27px;
+        height:27px;
+    }
+
+    .frame_window.minimized .svg-chevron-up::before,
+    .frame_window.minimized .svg-chevron-down::before {
+        //cursor: default;
+        //background-color: var(--grey-30);
+    }
 
 .frame_window.minimized .svg-chevron-up,
 .frame_window.minimized .svg-chevron-down{

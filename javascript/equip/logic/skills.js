@@ -685,7 +685,11 @@ function equip_skills_display_active_attack(active_skill, index) {
     if (part_objects) {
         var part = part_objects.part;
 
-        var vision = equip_skills_return_part_vision(part, user_objects.user_active_character, index);
+        if (part.reaction) {
+            var vision = data_reactions[part.reaction].vision;
+        } else {
+            var vision = equip_skills_return_part_vision(part, user_objects.user_active_character, index);
+        }
 
         var obj = utils_create_obj("div", "skills_part " + vision);
 
