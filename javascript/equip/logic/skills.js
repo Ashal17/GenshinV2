@@ -1276,7 +1276,11 @@ function equip_skills_return_part_dmg(part, output_part, bonusdmg, vision, react
 
     var result = output_part.basic;
 
-    result += equip_skills_return_part_bonusdmg(part, bonusdmg, vision);
+    var result_bonusdmg = equip_skills_return_part_bonusdmg(part, bonusdmg, vision);
+
+    if (!part.reaction) {
+        result += result_bonusdmg;
+    }
 
     if (reaction_name) {
         if (output_part.reactions[reaction_name].type == "elemasterymult") {
@@ -1287,6 +1291,11 @@ function equip_skills_return_part_dmg(part, output_part, bonusdmg, vision, react
     }
 
     result *= output_part.modifier;
+
+    if (part.reaction) {
+        result += result_bonusdmg;
+    }
+
     result *= output_part.resistance;
     result *= output_part.defense;
 
