@@ -321,12 +321,22 @@ function equip_effects_update_stats_transform_other(party_id, skill_index = null
             var option = equip_effects_return_selected_option(user_effects[i]);
             if (option.transform) {
                 for (var ii = 0; ii < option.transform.length; ii++) {
+                    var party_effect = false;
+                    var source_party_id = user_effects[i].source_party;
+                    var source_skill_index = null;
                     if (option.transform[ii].character) {
-                        stats.push(equip_effects_return_stats_transformed(user_effects[i].source_party, option.transform[ii], option.value, null));
+                        party_effect = true;                        
                     } else if (option.transform[ii].special) {
-                        var source_party_id = equip_character_return_party_id_by_special(option.transform[ii].special);
-                        stats.push(equip_effects_return_stats_transformed(source_party_id, option.transform[ii], option.value, null));
-                    }                  
+                        party_effect = true;
+                        source_party_id = equip_character_return_party_id_by_special(option.transform[ii].special);                        
+                    }   
+                    if (party_effect) {
+                        if (source_party_id == party_id) {
+                            var source_skill_index = skill_index;
+                        }
+                        stats.push(equip_effects_return_stats_transformed(source_party_id, option.transform[ii], option.value, source_skill_index));
+                    }
+                    
                 }
             }
         }       
@@ -1200,6 +1210,8 @@ function equip_effects_return_transform_statline(transform, source_party, input_
         }
         if (transform.character) {
             sourcename = equip_character_return_short_name(user_objects.user_party[source_party].id) + "'s " + sourcename;
+        } else if (transform.party) {
+            sourcename = "Party " + sourcename;
         }
         var text_add = "";
         if (transform.add) {
@@ -1328,10 +1340,19 @@ function equip_effects_return_manual_options(skill_index) {
 }
 
 function equip_effects_return_stats_transformed(source_party_id, transform, input_value = null, skill_index = null) {
+
     if (skill_index === null) {
         var source_value = output_party[source_party_id].stats.total[transform.source];
     } else {
         var source_value = output_party[source_party_id].skills.active.details[skill_index].stats.total[transform.source];
+    }
+
+    if (transform.party) {
+        for (var i = 0; i < const_party_size; i++) {
+            if (i != source_party_id) {
+                source_value += output_party[i].stats.total[transform.source];
+            }
+        }
     }
     
     if (transform.min) {

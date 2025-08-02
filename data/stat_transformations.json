@@ -578,7 +578,6 @@
       "change": "add",
       "mods": [ "plunge", "physical" ]
     },
-
     {
       "stat": "skillanemo",
       "change": "add",
@@ -699,6 +698,26 @@
       "stat": "swirlpyro_mult",
       "change": "mult_100",
       "mods": [ "swirl_mult" ]
+    },
+    {
+      "stat": "swirlhydro_elevate",
+      "change": "mult",
+      "mods": [ "swirl_elevate" ]
+    },
+    {
+      "stat": "swirlelectro_elevate",
+      "change": "mult",
+      "mods": [ "swirl_elevate" ]
+    },
+    {
+      "stat": "swirlcryo_elevate",
+      "change": "mult",
+      "mods": [ "swirl_elevate" ]
+    },
+    {
+      "stat": "swirlpyro_elevate",
+      "change": "mult",
+      "mods": [ "swirl_elevate" ]
     },
     {
       "stat": "critswirlhydro",

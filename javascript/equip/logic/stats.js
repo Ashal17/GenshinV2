@@ -42,7 +42,6 @@ function equip_stats_update_total_all() {
 
     equip_stats_update_vision_stat_all();
     equip_stats_update_enemy_defense_all();
-
 }
 
 function equip_stats_update_reset_total_all() {

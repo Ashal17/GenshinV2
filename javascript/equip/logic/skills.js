@@ -936,6 +936,10 @@ function equip_skills_return_basic_damage(party_id, part, level, skill_index = n
         var result = part.scale[level] / 100 * output_stats[part.stat];
     }
 
+    if (part.flat) {
+        result += part.flat[level];
+    }
+
     if (part.type || part.alt || part.alt2) {
         if (part.type) {
             if (part.alt) {
@@ -953,16 +957,12 @@ function equip_skills_return_basic_damage(party_id, part, level, skill_index = n
             }
         }
         result *= output_stats[mult_stat] / 100;
-    }
+    }    
     
     if (part.reaction) {
         result *= data_reactions[part.reaction].direct_multiplier;
-    }
-
-    if (part.flat) {
-        result += part.flat[level];
-    }
-
+        result *= (1 + output_stats[part.reaction + "_base"] / 100);
+    }   
 
     return result;
     
@@ -1046,12 +1046,14 @@ function equip_skills_return_dmg_modifier(party_id, part, vision, skill_index = 
 
     var result = 100;
 
-    if (vision && damage && type) {
-        result += output_stats[type + vision] + output_stats["all"];
-    } else if (vision && damage) {
-        result += output_stats[vision] + output_stats["all"];
-    } else if (damage) {
+    if (damage) {
         result += output_stats["all"];
+
+        if (vision && type) {
+            result += output_stats[type + vision];
+        } else if (vision) {
+            result += output_stats[vision];
+        }
     } else if (type) {
         result += output_stats[type];
 
@@ -1059,6 +1061,7 @@ function equip_skills_return_dmg_modifier(party_id, part, vision, skill_index = 
             result += output_stats["healinginc"];
         }
     }
+
 
     if (part.alt) {
         if (type) {
@@ -1073,6 +1076,10 @@ function equip_skills_return_dmg_modifier(party_id, part, vision, skill_index = 
         } else {
             result += output_stats["alt2"];
         }
+    }
+
+    if (type) {
+        result *= (1 + output_stats[type + "_elevate"] / 100);
     }
 
     return result / 100;
@@ -1197,12 +1204,13 @@ function equip_skills_return_reaction_value(party_id, reaction_name, vision, ski
         var bonusdmg = equip_skills_return_bonusdmg(party_id, skill_index);
     }
 
-    var reaction_mult = (1 + output_stats[reaction_name] / 100) * (output_stats[reaction_name + "_mult"] / 100);
+    var reaction_mult = (1 + output_stats[reaction_name] / 100) * (output_stats[reaction_name + "_mult"] / 100) * (1 + output_stats[reaction_name + "_base"] / 100);
+    var reaction_elevate = 1 + output_stats[reaction_name + "_elevate"] / 100;
 
     if (reaction.skilltype == "elemasterymult") {
-        var result = reaction.multiplier[vision] * reaction_mult;
+        var result = reaction.multiplier[vision] * reaction_mult * reaction_elevate;
     } else {
-        var result_num = const_reaction_damage_values[reaction.type][user_objects.user_party[party_id].level] * reaction.multiplier * reaction_mult;
+        var result_num = const_reaction_damage_values[reaction.type][user_objects.user_party[party_id].level] * reaction.multiplier * reaction_mult * reaction_elevate;
         if (result_num < 0) {
             result_num = 0;
         }
@@ -1312,8 +1320,10 @@ function equip_skills_return_part_bonusdmg(part, bonusdmg, vision) {
         result += bonusdmg.all.all;
     }
     if (part.reaction) {
-        result += bonusdmg[data_reactions[part.reaction].vision].all;
-    } else if (vision) {
+        vision = data_reactions[part.reaction].vision;
+        result += bonusdmg.reactions[part.reaction];
+    }
+    if (vision) {
         result += bonusdmg[vision].all;
 
         if (part.type && !part.reaction) {
@@ -1323,8 +1333,7 @@ function equip_skills_return_part_bonusdmg(part, bonusdmg, vision) {
             } else if (part.alt2) {
                 result += bonusdmg[vision][part.type + "alt2"];
             }
-        }
-        
+        }        
     }
     if (part.type && !part.reaction) {
         result += bonusdmg.all[part.type];

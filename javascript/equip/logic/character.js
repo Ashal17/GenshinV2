@@ -671,6 +671,7 @@ function equip_character_return_party_id_by_special(special_condition) {
             return highest_index;
 
             break;
+
         default:
             return
     }

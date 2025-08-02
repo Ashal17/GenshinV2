@@ -109,7 +109,7 @@
     "name": "Lunar-Bloom",
     "type": "elemasteryaddshared",
     "vision": "dendro",
-    "direct_multiplier": 3
+    "direct_multiplier": 1
   },
   "rupture": {
     "name": "Rupture",

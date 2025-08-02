@@ -107,7 +107,7 @@ const const_display_stats_columns = [
     },
     {
         "main": "recharge",
-        "stats": ["recharge", "cdr", "mspeed", "aspeed", "healing", "healinginc", "shield"]
+        "stats": ["recharge", "burst_energy", "cdr", "mspeed", "aspeed", "healing", "healinginc", "shield"]
     },
     {
         "main": "crit",
@@ -119,7 +119,7 @@ const const_display_stats_columns = [
     },
     {
         "main": "elemastery",
-        "stats": ["elemastery", "melt", "vaporize", "overload", "burning", "electrocharged", "superconduct", "shatter", "swirl", "rupture", "burgeon", "hyperbloom", "lunarcharged", "aggravate", "spread", "crystalize"]
+        "stats": ["elemastery", "melt", "vaporize", "overload", "burning", "electrocharged", "superconduct", "shatter", "swirl", "rupture", "burgeon", "hyperbloom", "lunarcharged", "lunarbloom", "aggravate", "spread", "crystalize"]
     },
     {
         "main": ["anemo", "hydro", "pyro", "cryo", "geo", "electro", "dendro", "physical"],

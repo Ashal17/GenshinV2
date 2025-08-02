@@ -19413,7 +19413,8 @@
         "order": 1,
         "transform": [
           {
-            "source": "burst_energy_party",
+            "source": "burst_energy",
+            "party": true,
             "target": "burst",
             "ratio": 0.12,
             "max": 40
@@ -19432,7 +19433,8 @@
         "order": 1,
         "transform": [
           {
-            "source": "burst_energy_party",
+            "source": "burst_energy",
+            "party": true,
             "target": "burst",
             "ratio": 0.15,
             "max": 50
@@ -19451,7 +19453,8 @@
         "order": 1,
         "transform": [
           {
-            "source": "burst_energy_party",
+            "source": "burst_energy",
+            "party": true,
             "target": "burst",
             "ratio": 0.18,
             "max": 60
@@ -19470,7 +19473,8 @@
         "order": 1,
         "transform": [
           {
-            "source": "burst_energy_party",
+            "source": "burst_energy",
+            "party": true,
             "target": "burst",
             "ratio": 0.21,
             "max": 70
@@ -19489,7 +19493,8 @@
         "order": 1,
         "transform": [
           {
-            "source": "burst_energy_party",
+            "source": "burst_energy",
+            "party": true,
             "target": "burst",
             "ratio": 0.24,
             "max": 80
@@ -56382,9 +56387,8 @@
           {
             "source": "atk",
             "character": "ineffa",
-            "target": "lunarcharged_mult",
+            "target": "lunarcharged_base",
             "ratio": 0.007,
-            "add": 100,
             "max": 14
           }
         ]
