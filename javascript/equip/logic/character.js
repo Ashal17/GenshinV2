@@ -362,27 +362,11 @@ function equip_character_update_stats(party_id) {
 
 function equip_character_update_resonance() {
     var active_resonances = [];
-    var visions = [];
-
-    for (var i = 0; i < const_party_size; i++) {
-        if (data_characters[user_objects.user_party[i].id].vision) {
-            visions.push(data_characters[user_objects.user_party[i].id].vision);
-        }
-    }
 
     for (var i = 0; i < data_resonance.length; i++) {
-        if (data_resonance[i].vision) {
-            if (visions.length == const_party_size && utils_array_count(visions, data_resonance[i].vision) >= data_resonance[i].req) {
-                active_resonances.push(data_resonance[i].id);
-            }
-        }
-    }
-
-    for (var i = 0; i < data_resonance.length; i++) {
-        if (!data_resonance[i].vision) {
-            if (visions.length == const_party_size && active_resonances.length == 0) {
-                active_resonances.push(data_resonance[i].id);
-            } 
+        var count = equip_character_return_variable_count(data_resonance[i].req.type, data_resonance[i].req.value);
+        if (count >= data_resonance[i].req.count) {
+            active_resonances.push(data_resonance[i].id);
         }
     }
 
@@ -677,38 +661,24 @@ function equip_character_return_party_id_by_special(special_condition) {
     }
 }
 
-function equip_character_return_vision_count(vision) {
+function equip_character_return_variable_count(var_name, var_value=true) {
     var count = 0;
-
-    if (vision == "unique") {
-        var visions = [];
-
+    if (var_value !== null) {
         for (var i = 0; i < const_party_size; i++) {
-            if (!visions.includes(data_characters[user_objects.user_party[i].id].vision)) {
-                visions.push(data_characters[user_objects.user_party[i].id].vision);
+            if (data_characters[user_objects.user_party[i].id][var_name] === var_value) {
                 count += 1;
-            }                
+            }
         }
-
     } else {
+        var unique_values = [];
         for (var i = 0; i < const_party_size; i++) {
-            if (data_characters[user_objects.user_party[i].id].vision == vision) {
+            if (!unique_values.includes(data_characters[user_objects.user_party[i].id][var_name])) {
+                unique_values.push(data_characters[user_objects.user_party[i].id][var_name]);
                 count += 1;
             }
         }
     }
-
     
-    return count;
-}
-
-function equip_character_return_nation_count(nation) {
-    var count = 0;
-    for (var i = 0; i < const_party_size; i++) {
-        if (data_characters[user_objects.user_party[i].id].nation == nation) {
-            count += 1;
-        }
-    }
     return count;
 }
 

@@ -96,6 +96,11 @@
     "shortname": "Fanfare",
     "type": "flat"
   },
+  "verdantdew": {
+    "name": "Verdant Dew",
+    "shortname": "Verdant Dew",
+    "type": "flat"
+  },
   "specialmeter": {
     "name": "Special Meter",
     "shortname": "Special Meter",
@@ -252,6 +257,14 @@
     "name": "Lunar-Charged Crit Rate",
     "type": "percent"
   },
+  "critlunarchargedalt": {
+    "name": "Lunar-Charged Crit Rate",
+    "type": "percent"
+  },
+  "critlunarchargedalt2": {
+    "name": "Lunar-Charged Crit Rate",
+    "type": "percent"
+  },
   "critsuperconduct": {
     "name": "Superconduct Crit Rate",
     "type": "percent"
@@ -285,6 +298,14 @@
     "type": "percent"
   },
   "critlunarbloom": {
+    "name": "Lunar-Bloom Crit Rate",
+    "type": "percent"
+  },
+  "critlunarbloomalt": {
+    "name": "Lunar-Bloom Crit Rate",
+    "type": "percent"
+  },
+  "critlunarbloomalt2": {
     "name": "Lunar-Bloom Crit Rate",
     "type": "percent"
   },
@@ -439,6 +460,14 @@
     "name": "Lunar-Charged Crit DMG",
     "type": "percent"
   },
+  "critdmglunarchargedalt": {
+    "name": "Lunar-Charged Crit DMG",
+    "type": "percent"
+  },
+  "critdmglunarchargedalt2": {
+    "name": "Lunar-Charged Crit DMG",
+    "type": "percent"
+  },
   "critdmgsuperconduct": {
     "name": "Superconduct Crit DMG",
     "type": "percent"
@@ -472,6 +501,14 @@
     "type": "percent"
   },
   "critdmglunarbloom": {
+    "name": "Lunar-Bloom Crit DMG",
+    "type": "percent"
+  },
+  "critdmglunarbloomalt": {
+    "name": "Lunar-Bloom Crit DMG",
+    "type": "percent"
+  },
+  "critdmglunarbloomalt2": {
     "name": "Lunar-Bloom Crit DMG",
     "type": "percent"
   },
@@ -883,6 +920,14 @@
     "name": "Lunar-Charged",
     "type": "percent"
   },
+  "lunarchargedalt": {
+    "name": "Lunar-Charged Alternative",
+    "type": "percent"
+  },
+  "lunarchargedalt2": {
+    "name": "Lunar-Charged Alternative",
+    "type": "percent"
+  },
   "superconduct": {
     "name": "Superconduct",
     "type": "percent"
@@ -919,6 +964,14 @@
     "name": "Lunar-Bloom",
     "type": "percent"
   },
+  "lunarbloomalt": {
+    "name": "Lunar-Bloom Alternative",
+    "type": "percent"
+  },
+  "lunarbloomalt2": {
+    "name": "Lunar-Bloom Alternative",
+    "type": "percent"
+  },
   "rupture": {
     "name": "Rupture",
     "type": "percent"
@@ -937,6 +990,10 @@
   },
   "spread": {
     "name": "Spread",
+    "type": "percent"
+  },
+  "moonlight": {
+    "name": "Lunar Reactions",
     "type": "percent"
   },
   "melt_base": {
@@ -1123,6 +1180,14 @@
     "name": "Lunar-Charged Multiplier",
     "type": "percent"
   },
+  "lunarchargedalt_mult": {
+    "name": "Lunar-Charged Multiplier",
+    "type": "percent"
+  },
+  "lunarchargedalt2_mult": {
+    "name": "Lunar-Charged Multiplier",
+    "type": "percent"
+  },
   "superconduct_mult": {
     "name": "Superconduct Multiplier",
     "type": "percent"
@@ -1156,6 +1221,14 @@
     "type": "percent"
   },
   "lunarbloom_mult": {
+    "name": "Lunar-Bloom Multiplier",
+    "type": "percent"
+  },
+  "lunarbloomalt_mult": {
+    "name": "Lunar-Bloom Multiplier",
+    "type": "percent"
+  },
+  "lunarbloomalt2_mult": {
     "name": "Lunar-Bloom Multiplier",
     "type": "percent"
   },

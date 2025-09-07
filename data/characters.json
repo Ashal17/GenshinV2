@@ -7076,10 +7076,15 @@
       {
         "name": "Shaken, Not Purred",
         "desc": "Increases Icy Paws' DMG by 15%, and increases its shield's DMG Absorption by 15%. Additionally, when paws hit their targets, creates a shield for other nearby characters on the field with 50 % of the Icy Paws shield's DMG Absorption for 5s.",
-        "apply": {
-          "id": 1154,
-          "auto": true
-        }
+        "apply": [
+          {
+            "id": 1154,
+            "auto": true
+          },
+          {
+            "id": 2083
+          }
+        ]
       },
       {
         "name": "A—Another Round?",
@@ -12112,8 +12117,7 @@
         ],
         "apply": [
           {
-            "id": 83,
-            "auto": true
+            "id": 83
           }
         ]
       }
@@ -23240,8 +23244,7 @@
         "desc": "For each 1% of Neuvillette's current HP greater than 30% of Max HP, he will gain 0.6% Hydro DMG Bonus. A maximum bonus of 30% can be obtained this way.",
         "level": 8,
         "apply": {
-          "id": 1159,
-          "auto": true
+          "id": 1159
         }
       }
     ],
@@ -23542,8 +23545,7 @@
           {
             "id": 1674,
             "party": true,
-            "special": "const_1_2",
-            "auto": true
+            "special": "const_1_2"
           }
         ]
       }
@@ -26169,8 +26171,7 @@
         "name": "\"To Enshrine Tears, Life, and Love\"",
         "desc": "When Last Lightfall deals DMG to opponent(s), DMG dealt is increased based on Clorinde's Bond of Life percentage. Every 1% of her current Bond of Life will increase Last Lightfall DMG by 2%. The maximum Last Lightfall DMG increase achievable this way is 200%.",
         "apply": {
-          "id": 1285,
-          "auto": true
+          "id": 1285
         }
       },
       {
@@ -29324,8 +29325,7 @@
           },
           {
             "id": 1862,
-            "option": 100,
-            "auto": true
+            "option": 100
           }
         ]
       }
@@ -32097,8 +32097,7 @@
           },
           {
             "id": 1935,
-            "special": "const_2",
-            "auto": true
+            "special": "const_2"
           }
         ]
       }
@@ -32509,7 +32508,7 @@
     "vision": "electro",
     "rarity": 5,
     "nation": "nodkrai",
-    "unreleased": true,
+    "moonsign": true,
     "stats": [
       {
         "stat": "hp_base",
@@ -32810,6 +32809,1036 @@
             ]
           }
         ]
+      }
+    ],
+    "ascension": [
+      {
+        "type": "item",
+        "id": "unknown_ascension"
+      },
+      {
+        "type": "group",
+        "id": "unknown_regular"
+      },
+      {
+        "type": "item",
+        "id": "unknown_speciality"
+      }
+    ]
+  },
+  "lauma": {
+    "id": 107,
+    "enka_id": 10000119,
+    "name": "Lauma",
+    "weapon": "catalyst",
+    "vision": "dendro",
+    "rarity": 5,
+    "nation": "nodkrai",
+    "moonsign": true,
+    "unreleased": true,
+    "stats": [
+      {
+        "stat": "hp_base",
+        "values": [ 829.0, 2151.0, 2863.0, 4283.0, 4789.0, 5509.0, 6183.0, 6911.0, 7416.0, 8151.0, 8657.0, 9400.0, 9905.0, 10654.0 ]
+      },
+      {
+        "stat": "atk_base",
+        "values": [ 19.85, 51.49, 68.51, 102.51, 114.6, 131.85, 147.97, 165.4, 177.49, 195.07, 207.16, 224.95, 237.04, 254.96 ]
+      },
+      {
+        "stat": "def_base",
+        "values": [ 52.05, 135.02, 179.65, 268.82, 300.53, 345.76, 388.05, 433.75, 465.46, 511.58, 543.29, 589.93, 621.64, 668.64 ]
+      },
+      {
+        "stat": "elemastery",
+        "values": [ 200.0, 200.0, 200.0, 200.0, 228.8, 228.8, 257.6, 257.6, 257.6, 257.6, 286.4, 286.4, 315.2, 315.2 ]
+      },
+      {
+        "stat": "burst_energy",
+        "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Peregrination of Linnunrata",
+        "type": "normal",
+        "damage": true,
+        "id": 0,
+        "vision": "dendro",
+        "parts": [
+          {
+            "name": "1-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "dendro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 33.7, 36.23, 38.76, 42.13, 44.66, 47.18, 50.55, 53.92, 57.29, 60.66, 64.03, 67.4, 71.62, 75.83, 80.04 ],
+            "id": 0
+          },
+          {
+            "name": "2-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "dendro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 31.8, 34.19, 36.58, 39.76, 42.14, 44.53, 47.71, 50.89, 54.07, 57.25, 60.43, 63.61, 67.59, 71.56, 75.54 ],
+            "id": 1
+          },
+          {
+            "name": "3-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "dendro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 44.5, 47.83, 51.17, 55.62, 58.96, 62.3, 66.75, 71.19, 75.64, 80.09, 84.54, 88.99, 94.56, 100.12, 105.68 ],
+            "id": 2
+          },
+          {
+            "name": "Spiritcall Prayer",
+            "type": "normal",
+            "damage": true,
+            "vision": "dendro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 129.04, 138.72, 148.4, 161.3, 170.98, 180.66, 193.56, 206.46, 219.37, 232.27, 245.18, 258.08, 274.21, 290.34, 306.47 ],
+            "id": 3
+          },
+          {
+            "name": "Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "dendro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 56.83, 61.45, 66.08, 72.69, 77.31, 82.6, 89.87, 97.14, 104.41, 112.34, 120.27, 128.2, 136.12, 144.05, 151.98 ],
+            "id": 4
+          },
+          {
+            "name": "Low Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "dendro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 113.63, 122.88, 132.13, 145.35, 154.59, 165.17, 179.7, 194.23, 208.77, 224.62, 240.48, 256.34, 272.19, 288.05, 303.9 ],
+            "id": 5
+          },
+          {
+            "name": "High Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "dendro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 141.93, 153.49, 165.04, 181.54, 193.1, 206.3, 224.45, 242.61, 260.76, 280.57, 300.37, 320.18, 339.98, 359.79, 379.59 ],
+            "id": 6
+          }
+        ]
+      },
+      {
+        "name": "Runo: Dawnless Rest of Karsikko",
+        "type": "skill",
+        "damage": true,
+        "id": 1,
+        "vision": "dendro",
+        "parts": [
+          {
+            "name": "Press",
+            "type": "skill",
+            "damage": true,
+            "vision": "dendro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 121.6, 130.72, 139.84, 152.0, 161.12, 170.24, 182.4, 194.56, 206.72, 218.88, 231.04, 243.2, 258.4, 273.6, 288.8 ],
+            "id": 0
+          },
+          {
+            "name": "1-Hit Hold",
+            "type": "skill",
+            "damage": true,
+            "vision": "dendro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 158.08, 169.94, 181.79, 197.6, 209.46, 221.31, 237.12, 252.93, 268.74, 284.54, 300.35, 316.16, 335.92, 355.68, 375.44 ],
+            "id": 1
+          },
+          {
+            "name": "2-Hit Hold",
+            "type": "lunarbloom",
+            "damage": false,
+            "vision": null,
+            "reaction": "lunarbloom",
+            "stat": [ "elemastery", "verdantdew" ],
+            "crit": true,
+            "multiplication": true,
+            "scale": [ 152.0, 163.4, 174.8, 190.0, 201.4, 212.8, 228.0, 243.2, 258.4, 273.6, 288.8, 304.0, 323.0, 342.0, 361.0 ],
+            "id": 2
+          },
+          {
+            "name": "Frostgrove Sanctuary Attack",
+            "type": "skill",
+            "damage": true,
+            "vision": "dendro",
+            "stat": [
+              "atk",
+              "elemastery"
+            ],
+            "crit": true,
+            "scale": [
+              [ 96.0, 103.2, 110.4, 120.0, 127.2, 134.4, 144.0, 153.6, 163.2, 172.8, 182.4, 192.0, 204.0, 216.0, 228.0 ],
+              [ 192.0, 206.4, 220.8, 240.0, 254.4, 268.8, 288.0, 307.2, 326.4, 345.6, 364.8, 384.0, 408.0, 432.0, 456.0 ]
+            ],
+            "id": 3
+          }
+        ],
+        "apply": [
+          {
+            "id": 1217,
+            "party": true,
+            "offset": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]
+          },
+          {
+            "id": 2084
+          }
+        ]
+      },
+      {
+        "name": "Runo: All Hearts Become the Beating Moon",
+        "type": "burst",
+        "damage": true,
+        "id": 2,
+        "vision": "dendro",
+        "parts": [],
+        "apply": {
+          "id": 2085,
+          "party": true,
+          "special": "const_2",
+          "offset": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]
+        }
+      }
+    ],
+    "passive": [
+      {
+        "name": "Moonsign Benediction: Nature's Chorus",
+        "desc": "When a party member triggers a Bloom reaction, it will be converted into the Lunar-Bloom reaction, with every point of Elemental Mastery that Lauma has increasing Lunar-Bloom's Base DMG by 0.0175%, up to a maximum of 14%.Additionally, when Lauma is in the party, the party's Moonsign will increase by 1 level.",
+        "level": 0,
+        "apply": {
+          "id": 2115,
+          "party": true,
+          "auto": true
+        }
+      },
+      {
+        "name": "Light for the Frosty Night",
+        "desc": "For the next 20s after Lauma uses her Elemental Skill Runo: Dawnless Rest of Karsikko, corresponding differing buff effects will be granted depending on the party's Moonsign. The buffs provided by different Moonsign levels cannot stack.Moonsign: Nascent GleamBloom, Hyperbloom, and Burgeon DMG dealt by all nearby party members can score CRIT Hits, with CRIT Rate fixed at 15%, and CRIT DMG fixed at 100%. CRIT Rate from this effect stacks with CRIT Rate from similar effects that allow these Elemental Reactions to CRIT.Moonsign: Ascendant GleamAll nearby party members' Lunar-Bloom DMG CRIT Rate +10%, CRIT DMG +20%.",
+        "level": 2,
+        "apply": {
+          "id": 2116,
+          "party": true,
+          "special": "moonsign_1_2"
+        }
+      },
+      {
+        "name": "Cleansing for the Spring",
+        "desc": "Each point of Elemental Mastery Lauma has will give her the following bonuses:<br> DMG dealt by her Elemental Skill is increased by 0.04%. The maximum increase obtainable this way is 32%.<br> The cooldown of her Charged Attack Spirit Envoy Metamorphosis is reduced by 0.02%. The maximum reduction obtainable this way is 20%.",
+        "level": 8,
+        "apply": {
+          "id": 2118,
+          "auto": true
+        }
+      },
+      {
+        "name": "Prayers for the Forest",
+        "desc": "Displays the location of nearby resources unique to Nod-Krai on the mini-map.Additionally, Lauma appears to have a special affinity with some small animals affected by kuuvahki...",
+        "level": 0
+      }
+    ],
+    "const": [
+      {
+        "name": "\"O Lips, Weave Me Songs and Psalms\"",
+        "desc": "After Lauma uses her Elemental Skill Runo: Dawnless Rest of Karsikko or her Elemental Burst Runo: All Hearts Become the Beating Moon, she will gain Threads of Life for 20s.During this time, when nearby party members trigger Lunar-Bloom reactions, nearby active characters will recover HP equal to 500% of Lauma's Elemental Mastery. This effect can be triggered once every 1.9s.Additionally, the Stamina cost for Lauma's Spirit Envoy Form will be reduced by 40%, and its Max Duration will be extended by 5s.",
+        "attacks": [
+          {
+            "name": "\"O Lips, Weave Me Songs and Psalms\"",
+            "id": 0,
+            "parts": [
+              {
+                "name": "Regeneration",
+                "type": "healing",
+                "damage": false,
+                "vision": "dendro",
+                "stat": "elemastery",
+                "crit": false,
+                "scale": [ 400 ],
+                "id": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "\"Twine Warnings and Tales From the North\"",
+        "desc": "The Elemental Burst Runo: All Hearts Become the Beating Moon is enhanced:<br> Pale Hymn effects are increased: All nearby party members' Bloom, Hyperbloom, and Burgeon DMG is further increased by 500% of Lauma's Elemental Mastery, and their Lunar-Bloom DMG is further increased by 400% of Lauma's Elemental Mastery.Moonsign: Ascendant Gleam: All nearby party members' Lunar-Bloom DMG is increased by 40%.",
+        "apply": {
+          "id": 2119,
+          "party": true,
+          "auto": true,
+          "special": "moonsign_2"
+        }
+      },
+      {
+        "name": "\"Seek Not to Tread the Sly Fox's Path\"",
+        "desc": "Increases the Level of Runo: All Hearts Become the Beating Moon by 3.",
+        "bonus": [
+          {
+            "stat": "levelburst",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "\"Nor Yearn for the Great Bear's Might\"",
+        "desc": "When attacks from the Frostgrove Sanctuary summoned by her Elemental Skill Runo: Dawnless Rest of Karsikko hit opponents, Lauma will regain 4 Elemental Energy. This effect can be triggered once every 5s."
+      },
+      {
+        "name": "\"If Truth May Be Subject to Witness\"",
+        "desc": "Increases the Level of Runo: Dawnless Rest of Karsikko by 3.",
+        "bonus": [
+          {
+            "stat": "levelskill",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "\"I Offer Blood and Tears to the Moonlight\"",
+        "desc": "When the Frostgrove Sanctuary attacks opponents, it will deal 1 additional instance of AoE Dendro DMG equal to 185% of Lauma's Elemental Mastery. This DMG is considered Lunar-Bloom DMG. This instance of DMG will not consume any Pale Hymn stacks and will provide Lauma with 2 stacks of Pale Hymn, as well as refreshing the duration of Pale Hymn stacks gained in this manner.This effect can occur up to 8 times during each Frostgrove Sanctuary. When using the Elemental Skill Runo: Dawnless Rest of Karsikko, all Pale Hymn stacks gained in this manner will be removed.Additionally, when Lauma uses a Normal Attack while she has Pale Hymn stacks, she will consume 1 stack to convert this to deal Dendro DMG equal to 150% of her Elemental Mastery. This DMG is considered Lunar-Bloom DMG.Moonsign: Ascendant Gleam: All nearby party members' Lunar-Bloom DMG is elevated by 25%.",
+        "apply": {
+          "id": 2120,
+          "party": true,
+          "auto": true,
+          "special": "moonsign_2"
+        },
+        "attacks": [
+          {
+            "name": "\"I Offer Blood and Tears to the Moonlight\"",
+            "id": 0,
+            "parts": [
+              {
+                "name": "Frostgrove Sanctuary",
+                "type": "lunarbloom",
+                "damage": false,
+                "vision": null,
+                "reaction": "lunarbloom",
+                "stat": "elemastery",
+                "crit": true,
+                "scale": [ 185 ],
+                "id": 0
+              },
+              {
+                "name": "Normal Attack",
+                "type": "lunarbloom",
+                "damage": false,
+                "vision": null,
+                "reaction": "lunarbloom",
+                "stat": "elemastery",
+                "crit": true,
+                "scale": [ 150 ],
+                "id": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "ascension": [
+      {
+        "type": "item",
+        "id": "unknown_ascension"
+      },
+      {
+        "type": "group",
+        "id": "unknown_regular"
+      },
+      {
+        "type": "item",
+        "id": "unknown_speciality"
+      }
+    ]
+  },
+  "flins": {
+    "id": 108,
+    "enka_id": 10000120,
+    "name": "Flins",
+    "weapon": "polearm",
+    "vision": "electro",
+    "rarity": 5,
+    "nation": "nodkrai",
+    "moonsign": true,
+    "unreleased": true,
+    "stats": [
+      {
+        "stat": "hp_base",
+        "values": [ 972.0, 2522.0, 3356.0, 5022.0, 5614.0, 6459.0, 7249.0, 8103.0, 8695.0, 9557.0, 10149.0, 11020.0, 11613.0, 12491.0 ]
+      },
+      {
+        "stat": "atk_base",
+        "values": [ 27.37, 71.0, 94.47, 141.36, 158.03, 181.81, 204.05, 228.08, 244.75, 269.0, 285.68, 310.2, 326.88, 351.59 ]
+      },
+      {
+        "stat": "def_base",
+        "values": [ 62.94, 163.27, 217.24, 325.06, 363.4, 418.1, 469.22, 524.49, 562.83, 618.6, 656.94, 713.34, 751.68, 808.52 ]
+      },
+      {
+        "stat": "critdmg",
+        "values": [ 0.0, 0.0, 0.0, 0.0, 9.6, 9.6, 19.2, 19.2, 19.2, 19.2, 28.8, 28.8, 38.4, 38.4 ]
+      },
+      {
+        "stat": "burst_energy",
+        "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Pocztowy Demonspear",
+        "type": "normal",
+        "damage": true,
+        "id": 0,
+        "vision": "physical",
+        "parts": [
+          {
+            "name": "1-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 44.73, 48.37, 52.01, 57.21, 60.85, 65.01, 70.73, 76.45, 82.17, 88.41, 94.65, 100.89, 107.13, 113.38, 119.62 ],
+            "id": 0
+          },
+          {
+            "name": "2-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 45.15, 48.82, 52.5, 57.75, 61.42, 65.62, 71.4, 77.17, 82.95, 89.25, 95.55, 101.85, 108.15, 114.45, 120.75 ],
+            "id": 1
+          },
+          {
+            "name": "3-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 55.92, 60.47, 65.02, 71.53, 76.08, 81.28, 88.43, 95.58, 102.74, 110.54, 118.34, 126.14, 133.95, 141.75, 149.55 ],
+            "id": 2
+          },
+          {
+            "name": "4-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 32.04, 34.65, 37.25, 40.98, 43.59, 46.57, 50.67, 54.76, 58.86, 63.33, 67.8, 72.27, 76.74, 81.21, 85.69 ],
+            "id": 3
+          },
+          {
+            "name": "5-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 76.79, 83.05, 89.3, 98.23, 104.48, 111.62, 121.44, 131.27, 141.09, 151.8, 162.52, 173.23, 183.95, 194.67, 205.38 ],
+            "id": 4
+          },
+          {
+            "name": "Charged Attack",
+            "type": "charged",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 103.03, 111.41, 119.8, 131.78, 140.17, 149.75, 162.93, 176.11, 189.28, 203.66, 218.04, 232.41, 246.79, 261.16, 275.54 ],
+            "id": 5
+          },
+          {
+            "name": "Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 63.93, 69.14, 74.34, 81.77, 86.98, 92.93, 101.1, 109.28, 117.46, 126.38, 135.3, 144.22, 153.14, 162.06, 170.98 ],
+            "id": 6
+          },
+          {
+            "name": "Low Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 127.84, 138.24, 148.65, 163.51, 173.92, 185.81, 202.16, 218.51, 234.86, 252.7, 270.54, 288.38, 306.22, 324.05, 341.89 ],
+            "id": 7
+          },
+          {
+            "name": "High Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 159.68, 172.67, 185.67, 204.24, 217.23, 232.09, 252.51, 272.93, 293.36, 315.64, 337.92, 360.2, 382.48, 404.76, 427.04 ],
+            "id": 8
+          }
+        ]
+      },
+      {
+        "name": "Ancient Rite: Arcane Light",
+        "type": "skill",
+        "damage": true,
+        "id": 1,
+        "vision": "electro",
+        "parts": [
+          {
+            "name": "1-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 58.25, 62.62, 66.99, 72.81, 77.18, 81.55, 87.37, 93.2, 99.02, 104.85, 110.67, 116.5, 123.78, 131.06, 138.34 ],
+            "id": 0
+          },
+          {
+            "name": "2-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 58.8, 63.21, 67.62, 73.5, 77.91, 82.32, 88.2, 94.08, 99.96, 105.84, 111.72, 117.6, 124.94, 132.29, 139.64 ],
+            "id": 1
+          },
+          {
+            "name": "3-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 72.83, 78.29, 83.75, 91.03, 96.49, 101.96, 109.24, 116.52, 123.8, 131.09, 138.37, 145.65, 154.75, 163.86, 172.96 ],
+            "id": 2
+          },
+          {
+            "name": "4-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 41.73, 44.85, 47.98, 52.16, 55.29, 58.42, 62.59, 66.76, 70.93, 75.11, 79.28, 83.45, 88.67, 93.88, 99.1 ],
+            "id": 3
+          },
+          {
+            "name": "5-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 100.01, 107.51, 115.01, 125.01, 132.51, 140.02, 150.02, 160.02, 170.02, 180.02, 190.02, 200.02, 212.52, 225.03, 237.53 ],
+            "id": 4
+          },
+          {
+            "name": "Charged Attack",
+            "type": "charged",
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 114.96, 123.58, 132.2, 143.7, 152.32, 160.94, 172.44, 183.94, 195.43, 206.93, 218.42, 229.92, 244.29, 258.66, 273.03 ],
+            "id": 5
+          },
+          {
+            "name": "Northland Spearstorm",
+            "type": "skill",
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 178.4, 191.78, 205.16, 223.0, 236.38, 249.76, 267.6, 285.44, 303.28, 321.12, 338.96, 356.8, 379.1, 401.4, 423.7 ],
+            "id": 6
+          }
+        ]
+      },
+      {
+        "name": "Ancient Ritual: Cometh the Night",
+        "type": "burst",
+        "damage": true,
+        "id": 2,
+        "vision": "electro",
+        "parts": [
+          {
+            "name": "Initial Skill",
+            "type": "burst",
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 259.84, 279.33, 298.82, 324.8, 344.29, 363.78, 389.76, 415.74, 441.73, 467.71, 493.7, 519.68, 552.16, 584.64, 617.12 ],
+            "id": 0
+          },
+          {
+            "name": "Middle Phase Lunar-Charged",
+            "type": "lunarcharged",
+            "damage": false,
+            "vision": null,
+            "reaction": "lunarcharged",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 16.24, 17.46, 18.68, 20.3, 21.52, 22.74, 24.36, 25.98, 27.61, 29.23, 30.86, 32.48, 34.51, 36.54, 38.57 ],
+            "id": 1
+          },
+          {
+            "name": "Final Phase Lunar-Charged",
+            "type": "lunarcharged",
+            "damage": false,
+            "vision": null,
+            "reaction": "lunarcharged",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 116.93, 125.7, 134.47, 146.16, 154.93, 163.7, 175.39, 187.08, 198.78, 210.47, 222.16, 233.86, 248.47, 263.09, 277.7 ],
+            "id": 2
+          },
+          {
+            "name": "Thunderous Symphony",
+            "type": "lunarcharged",
+            "damage": false,
+            "vision": null,
+            "reaction": "lunarcharged",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 71.46, 76.82, 82.17, 89.32, 94.68, 100.04, 107.18, 114.33, 121.48, 128.62, 135.77, 142.91, 151.84, 160.78, 169.71 ],
+            "id": 3
+          },
+          {
+            "name": "Thunderous Symphony Additional",
+            "type": "lunarcharged",
+            "damage": false,
+            "vision": null,
+            "reaction": "lunarcharged",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 103.94, 111.73, 119.53, 129.92, 137.72, 145.51, 155.9, 166.3, 176.69, 187.08, 197.48, 207.87, 220.86, 233.86, 246.85 ],
+            "id": 4
+          }
+        ]
+      }
+    ],
+    "passive": [
+      {
+        "name": "Moonsign Benediction: Old World Secrets",
+        "desc": "When a party member triggers an Electro-Charged reaction, it will be converted into the Lunar-Charged reaction, with every 100 ATK that Flins has increasing Lunar-Charged's Base DMG by 0.7%, up to a maximum of 14%.Additionally, when Flins is in the party, the party's Moonsign will increase by 1 level.",
+        "level": 0,
+        "apply": {
+          "id": 2121,
+          "party": true,
+          "auto": true
+        }
+      },
+      {
+        "name": "Symphony of Winter",
+        "desc": "Flins will gain a corresponding buff effect based on the party's Moonsign.Moonsign: Ascendant Gleam: Lunar-Charged reactions triggered by Flins will deal an additional 20% DMG.",
+        "level": 2,
+        "apply": {
+          "id": 2122,
+          "auto": true,
+          "special": "moonsign_2"
+        }
+      },
+      {
+        "name": "Whispering Flame",
+        "desc": "Flins's Elemental Mastery is increased by 8% of his ATK. The maximum increase obtainable this way is 160.",
+        "level": 8,
+        "apply": {
+          "id": 2123,
+          "auto": true,
+          "special": "const_4"
+        }
+      },
+      {
+        "name": "A Light in the Dark",
+        "desc": "Displays the location of nearby resources unique to Nod-Krai on the mini-map.Additionally, Flins appears to be able to decipher the whispers of the Wild Hunt...",
+        "level": 2
+      }
+    ],
+    "const": [
+      {
+        "name": "Part the Veil of Snow",
+        "desc": "The basic cooldown of the special Elemental Skill Northland Spearstorm is reduced to 4s.Additionally, when party members trigger Lunar-Charged reactions, Flins will recover 8 Elemental Energy. This effect can occur once every 5.5s."
+      },
+      {
+        "name": "The Devil's Wall",
+        "desc": "For the next 6s after using the special Elemental Skill Northland Spearstorm, when Flins's next Normal Attack hits an opponent, it will deal an additional 50% of Flins's ATK as AoE Electro DMG. This DMG is considered Lunar-Charged DMG.Moonsign: Ascendant Gleam: While Flins is on the field, when his Electro attacks hit an opponent, that opponent's Electro RES will be decreased by 25% for 7s.",
+        "apply": {
+          "id": 2125,
+          "party": true,
+          "special": "moonsign_2"
+        },
+        "attacks": [
+          {
+            "name": "The Devil's Wall",
+            "id": 0,
+            "parts": [
+              {
+                "name": "Additional Hit",
+                "type": "lunarcharged",
+                "damage": false,
+                "vision": null,
+                "reaction": "lunarcharged",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 50 ],
+                "id": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Stranger in the Night",
+        "desc": "Increases the Level of Ancient Ritual: Cometh the Night by 3.",
+        "bonus": [
+          {
+            "stat": "levelburst",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "Night on Bald Mountain",
+        "desc": "Flins's ATK is increased by 20%. Additionally, his Passive Talent \"Whispering Flame\" is enhanced: Flins's Elemental Mastery is increased by 10% of his ATK. The maximum increase obtainable this way is 220.",
+        "bonus": [
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "name": "Exile's Shadow",
+        "desc": "Increases the Level of Ancient Rite: Arcane Light by 3.",
+        "bonus": [
+          {
+            "stat": "levelskill",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "Songs and Dances of Death",
+        "desc": "The DMG dealt to opponents by Flins's Lunar-Charged reactions is elevated by 35%.Moonsign: Ascendant Gleam: Nearby party members' Lunar-Charged DMG is elevated by 10%.",
+        "apply": [
+          {
+            "id": 2126,
+            "auto": true
+          },
+          {
+            "id": 2127,
+            "auto": true,
+            "party": true,
+            "special": "moonsign_2"
+          }
+        ]
+      }
+    ],
+    "ascension": [
+      {
+        "type": "item",
+        "id": "unknown_ascension"
+      },
+      {
+        "type": "group",
+        "id": "unknown_regular"
+      },
+      {
+        "type": "item",
+        "id": "unknown_speciality"
+      }
+    ]
+  },
+  "aino": {
+    "id": 109,
+    "enka_id": 10000121,
+    "name": "Aino",
+    "weapon": "claymore",
+    "vision": "hydro",
+    "rarity": 4,
+    "nation": "nodkrai",
+    "moonsign": true,
+    "unreleased": true,
+    "stats": [
+      {
+        "stat": "hp_base",
+        "values": [ 939.0, 2413.0, 3114.0, 4665.0, 5163.0, 5939.0, 6604.0, 7379.0, 7878.0, 8653.0, 9151.0, 9927.0, 10425.0, 11201.0 ]
+      },
+      {
+        "stat": "atk_base",
+        "values": [ 20.3, 52.15, 67.32, 100.84, 111.61, 128.38, 142.75, 159.52, 170.29, 187.04, 197.82, 214.59, 225.36, 242.13 ]
+      },
+      {
+        "stat": "def_base",
+        "values": [ 50.93, 130.84, 168.89, 252.97, 280.01, 322.08, 358.12, 400.19, 427.22, 469.24, 496.27, 538.34, 565.38, 607.44 ]
+      },
+      {
+        "stat": "elemastery",
+        "values": [ 0.0, 0.0, 0.0, 0.0, 24.0, 24.0, 48.0, 48.0, 48.0, 48.0, 72.0, 72.0, 96.0, 96.0 ]
+      },
+      {
+        "stat": "burst_energy",
+        "values": [ 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50 ]
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Bish-Bash-Bosh Repair",
+        "type": "normal",
+        "damage": true,
+        "id": 0,
+        "vision": "physical",
+        "parts": [
+          {
+            "name": "1-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 66.5, 71.91, 77.32, 85.06, 90.47, 96.66, 105.16, 113.67, 122.17, 131.45, 140.73, 150.01, 159.29, 168.57, 177.85 ],
+            "id": 0
+          },
+          {
+            "name": "2-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 66.19, 71.58, 76.97, 84.66, 90.05, 96.21, 104.68, 113.14, 121.61, 130.84, 140.08, 149.32, 158.55, 167.79, 177.02 ],
+            "id": 1
+          },
+          {
+            "name": "3-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 49.22, 53.22, 57.23, 62.95, 66.96, 71.54, 77.83, 84.13, 90.42, 97.29, 104.16, 111.02, 117.89, 124.76, 131.63 ],
+            "id": 2
+          },
+          {
+            "name": "Charged Attack Loop",
+            "type": "charged",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 62.52, 67.61, 72.7, 79.97, 85.06, 90.88, 98.87, 106.87, 114.87, 123.59, 132.31, 141.04, 149.76, 158.49, 167.21 ],
+            "id": 3
+          },
+          {
+            "name": "Charged Attack Final",
+            "type": "charged",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 113.09, 122.3, 131.5, 144.65, 153.86, 164.38, 178.84, 193.31, 207.77, 223.55, 239.33, 255.11, 270.89, 286.67, 302.45 ],
+            "id": 4
+          },
+          {
+            "name": "Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 74.59, 80.66, 86.73, 95.4, 101.47, 108.41, 117.95, 127.49, 137.03, 147.44, 157.85, 168.26, 178.66, 189.07, 199.48 ],
+            "id": 5
+          },
+          {
+            "name": "Low Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 149.14, 161.28, 173.42, 190.77, 202.91, 216.78, 235.86, 254.93, 274.01, 294.82, 315.63, 336.44, 357.25, 378.06, 398.87 ],
+            "id": 6
+          },
+          {
+            "name": "High Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 186.29, 201.45, 216.62, 238.28, 253.44, 270.77, 294.6, 318.42, 342.25, 368.25, 394.24, 420.23, 446.23, 472.22, 498.21 ],
+            "id": 7
+          }
+        ]
+      },
+      {
+        "name": "Musecatcher",
+        "type": "skill",
+        "damage": true,
+        "id": 1,
+        "vision": "hydro",
+        "parts": [
+          {
+            "name": "Stage 1",
+            "type": "skill",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 65.6, 70.52, 75.44, 82.0, 86.92, 91.84, 98.4, 104.96, 111.52, 118.08, 124.64, 131.2, 139.4, 147.6, 155.8 ],
+            "id": 0
+          },
+          {
+            "name": "Stage 2",
+            "type": "skill",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 188.8, 202.96, 217.12, 236.0, 250.16, 264.32, 283.2, 302.08, 320.96, 339.84, 358.72, 377.6, 401.2, 424.8, 448.4 ],
+            "id": 1
+          }
+        ]
+      },
+      {
+        "name": "Precision Hydronic Cooler",
+        "type": "burst",
+        "damage": true,
+        "id": 2,
+        "vision": "hydro",
+        "parts": [
+          {
+            "name": "Water Ball",
+            "type": "burst",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 20.11, 21.62, 23.13, 25.14, 26.65, 28.16, 30.17, 32.18, 34.19, 36.2, 38.21, 40.22, 42.74, 45.25, 47.77 ],
+            "id": 0
+          }
+        ]
+      }
+    ],
+    "passive": [
+      {
+        "name": "Moonsign Benediction: Force Limit Analysis",
+        "desc": "When Aino is in the party, the party's Moonsign will increase by 1 level.",
+        "level": 0
+      },
+      {
+        "name": "Modular Efficiency Protocol",
+        "desc": "Aino will be granted the corresponding buff effects based on the party's Moonsign.Moonsign: Ascendant Gleam: Her Elemental Burst Precision Hydronic Cooler is enhanced: The Cool Your Jets Ducky will fire water balls more frequently, and the water balls will deal AoE Hydro DMG over a larger area of effect.",
+        "level": 2
+      },
+      {
+        "name": "Structured Power Booster",
+        "desc": "Aino's Elemental Burst DMG is increased by 50% of her Elemental Mastery.",
+        "level": 8,
+        "apply": {
+          "id": 2128,
+          "auto": true
+        }
+      },
+      {
+        "name": "Miniaturized Detection Sensor",
+        "desc": "Displays the location of nearby resources unique to Nod-Krai on the mini-map.Additionally, Aino appears to be able to alter the Cool Your Jets Ducky's appearance in some way...",
+        "level": 0
+      }
+    ],
+    "const": [
+      {
+        "name": "The Theory of Ash-Field Equilibrium",
+        "desc": "After Aino uses her Elemental Skill Musecatcher or her Elemental Burst Precision Hydronic Cooler, her Elemental Mastery will be increased by 80. The Elemental Mastery of nearby active party members will be increased by 80 for 15s.The Elemental Mastery-increasing effects of this Constellation do not stack.",
+        "apply": {
+          "id": 2129,
+          "party": true
+        }
+      },
+      {
+        "name": "The Principle of Transference in Gear Differentials",
+        "desc": "If Aino is off-field while the Focused Hydronic Cooling Zone of her Elemental Burst Precision Hydronic Cooler is active, when your active party member hits a nearby opponent with an attack, the Cool Your Jets Ducky will fire an additional water ball at that opponent, dealing AoE Hydro DMG equal to 25% of Aino's ATK and 100% of her Elemental Mastery. This DMG is considered Elemental Burst DMG. This effect can be triggered once every 5s.",
+        "attacks": [
+          {
+            "name": "The Devil's Wall",
+            "id": 0,
+            "parts": [
+              {
+                "name": "Additional Hit",
+                "type": "burst",
+                "damage": true,
+                "vision": "hydro",
+                "stat": [ "atk" , "elemastery"],
+                "crit": true,
+                "scale": [
+                  [ 25 ],
+                  [ 100 ]
+                ],
+                "id": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cake and the Art of Mechanism Repair",
+        "desc": "Increases the Level of Precision Hydronic Cooler by 3.",
+        "bonus": [
+          {
+            "stat": "levelburst",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "Butter and Cats and the Law of Energy Supply",
+        "desc": "When the Elemental Skill Musecatcher hits an opponent, it will restore 10 Elemental Energy for Aino. Energy can be restored to her in this manner once every 10s."
+      },
+      {
+        "name": "Perpetual Turbine of Metal and Light",
+        "desc": "Increases the Level of Musecatcher by 3.",
+        "bonus": [
+          {
+            "stat": "levelskill",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "The Burden of Creative Genius",
+        "desc": "For the next 15s after using the Elemental Burst Precision Hydronic Cooler, DMG from nearby active characters' Electro-Charged, Bloom, Lunar-Charged, and Lunar-Bloom reactions is increased by 15%.Moonsign: Ascendant Gleam: DMG from the aforementioned reactions will be further increased by 20%.",
+        "apply": {
+          "id": 2130,
+          "party": true,
+          "special": "moonsign_1_2"
+        }
       }
     ],
     "ascension": [

@@ -7,7 +7,7 @@ window_frame_ids = [
 ];
 
 async function equip_load_all_data() {
-    var ver = "?20250803";
+    var ver = "?20250906";
 
     data_characters = await utils_load_json("/data/characters.json" + ver);
     data_enemies = await utils_load_json("/data/enemies.json" + ver);
@@ -232,12 +232,12 @@ function equip_setup_ui_resonance() {
 
     for (var i = 0; i < data_resonance.length; i++) {
         var resonance = utils_create_obj("div", "resonance tooltip_trigger", "resonance_" + i);
-        resonance.appendChild(utils_create_obj("p", "resonance_name " + data_resonance[i].vision, null, data_resonance[i].name));
+        resonance.appendChild(utils_create_obj("p", "resonance_name " + data_resonance[i].req.value, null, data_resonance[i].name));
         var resonance_icons = utils_create_obj("div", "resonance_icons");
         resonance.appendChild(resonance_icons);
-        if (data_resonance[i].vision && data_resonance[i].req) {
-            for (var ii = 0; ii < data_resonance[i].req; ii++) {
-                resonance_icons.appendChild(utils_create_img_svg(data_resonance[i].vision));
+        if (typeof data_resonance[i].req.value === "string") {
+            for (var ii = 0; ii < data_resonance[i].req.count; ii++) {
+                resonance_icons.appendChild(utils_create_img_svg(data_resonance[i].req.value));
             }
         }
 

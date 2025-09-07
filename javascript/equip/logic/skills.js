@@ -895,7 +895,8 @@ function equip_skills_return_damage(party_id, attack, attack_type) {
         var resistance = equip_skills_return_resistance(party_id, part, vision, null);
         var crit = equip_skills_return_critrate(party_id, part, vision, null);
         var critdmg = equip_skills_return_critdmg(party_id, part, vision, null);
-        var reactions = equip_skills_return_reactions(party_id, part);
+        var reactions = equip_skills_return_reactions(party_id, part);     
+        
         if (part.damage && !part.reaction) {
             var defense = enemy_defense;
         } else {

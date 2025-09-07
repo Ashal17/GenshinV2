@@ -418,11 +418,13 @@ function equip_effects_update_options(party_id) {
 
     for (var i = 0; i < output_resonances.length; i++) {
         var resonance = utils_array_get_by_lookup(data_resonance, "id", output_resonances[i]);
-        for (var ii = 0; ii < resonance.bonus.length; ii++) {
-            if (resonance.bonus[ii].apply) {
-                equip_effects_update_single_option(party_effect_list, resonance.bonus[ii].apply, false, 0, { "type": "resonance", "id": resonance.vision }, party_id)
+        if (!resonance.personal) {
+            for (var ii = 0; ii < resonance.bonus.length; ii++) {
+                if (resonance.bonus[ii].apply) {
+                    equip_effects_update_single_option(party_effect_list, resonance.bonus[ii].apply, false, 0, { "type": "resonance", "id": resonance.req.value }, party_id)
+                }
             }
-        }
+        }        
     }
 
     for (var i = 0; i < const_party_size; i++) {       
@@ -438,6 +440,17 @@ function equip_effects_update_options(party_id) {
 
 function equip_effects_update_character_options(effect_list, source_party, party_id, party) {
     var current_character = data_characters[user_objects.user_party[source_party].id];
+
+    for (var i = 0; i < output_resonances.length; i++) {
+        var resonance = utils_array_get_by_lookup(data_resonance, "id", output_resonances[i]);
+        if (resonance.personal) {
+            for (var ii = 0; ii < resonance.bonus.length; ii++) {
+                if (resonance.bonus[ii].apply) {
+                    equip_effects_update_single_option(effect_list, resonance.bonus[ii].apply, party, 0, { "type": "resonance", "id": resonance.req.value }, source_party, party_id)
+                }
+            }
+        }
+    }
 
     for (var i = 0; i < current_character.attacks.length; i++) {
         if (current_character.attacks[i].apply) {
@@ -522,7 +535,7 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
 
     switch (apply.special) {
         case "illusory_heart":
-            var pyro_count = equip_character_return_vision_count("pyro");
+            var pyro_count = equip_character_return_variable_count("vision", "pyro");
             if (user_objects.user_party[equip_character_return_party_id_by_name("nahida")].constel >= 1) {
                 pyro_count += 1;
             }           
@@ -538,7 +551,7 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             break;
 
         case "return_to_oblivion":
-            var cryo_hydro_count = equip_character_return_vision_count("cryo") + equip_character_return_vision_count("hydro");
+            var cryo_hydro_count = equip_character_return_variable_count("vision", "cryo") + equip_character_return_variable_count("vision", "hydro");
             if (cryo_hydro_count > 1) {
                 var max_id = apply.id + 5;
                 var offset_val = cryo_hydro_count - 2;
@@ -579,8 +592,96 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             new_effect.id = apply.id + offset_val;
             new_effect.max_id = max_id;
             break;
+        case "moonsign_1_2":
+            var moonsign = equip_character_return_variable_count("moonsign");
+            if (moonsign > 0) {
+                moonsign += -1;
+                if (apply.offset) {
+                    var offset_val = apply.offset[offset] + moonsign * apply.offset.length;
+                    var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length;
+                } else {
+                    var offset_val = moonsign;
+                    var max_id = apply.id + 1;
+                }
+
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = max_id;
+            }
+            
+            break;
+        case "moonsign_0_2":
+            var moonsign = equip_character_return_variable_count("moonsign");
+            if (moonsign >= 2) {
+                moonsign += -1;
+                if (apply.offset) {
+                    var offset_val = apply.offset[offset] + moonsign * apply.offset.length;
+                    var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length;
+                } else {
+                    var offset_val = moonsign;
+                    var max_id = apply.id + 1;
+                }
+
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = max_id;
+            }
+
+            break;
+        case "moonsign_1":
+            var moonsign = equip_character_return_variable_count("moonsign");
+            if (moonsign >= 1) {
+                if (apply.offset) {
+                    var offset_val = apply.offset[offset];
+                    var max_id = apply.id + apply.offset.slice(-1)[0];
+                } else {
+                    var offset_val = 0;
+                    var max_id = apply.id;
+                }
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = max_id;
+            }
+            break;
+        case "moonsign_2":
+            var moonsign = equip_character_return_variable_count("moonsign");
+            if (moonsign >= 2) {
+                if (apply.offset) {
+                    var offset_val = apply.offset[offset];
+                    var max_id = apply.id + apply.offset.slice(-1)[0];
+                } else {
+                    var offset_val = 0;
+                    var max_id = apply.id;
+                }
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = max_id;
+            }
+            break;
+        case "blessing_of_moonlight":
+            if (!data_characters[user_objects.user_party[source_party].id].moonsign) {
+                var offset_val = 0;
+                var vision = data_characters[user_objects.user_party[source_party].id].vision;
+                switch (vision) {
+                    case "hydro":
+                        offset_val = 1;
+                        break;
+                    case "geo":
+                        offset_val = 2;
+                        break;
+                    case "anemo":
+                        offset_val = 3;
+                        break;
+                    case "dendro":
+                        offset_val = 3;
+                        break;
+                    default:
+                        offset_val = 0;
+                }
+
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = apply.id + 3;
+            } 
+
+            break;
         case "lithic":
-            var liyue_count = equip_character_return_nation_count("liyue");
+            var liyue_count = equip_character_return_variable_count("nation", "liyue");;
             if (liyue_count > 0) {
                 var max_id = apply.id + 19;
                 var offset_val = apply.offset[offset] + (liyue_count-1)*5;
@@ -590,40 +691,40 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             }
             break;
         case "min_cryo_hydro_4":
-            if ((equip_character_return_vision_count("cryo") + equip_character_return_vision_count("hydro")) >= 4) {
+            if ((equip_character_return_variable_count("vision", "cryo") + equip_character_return_variable_count("vision", "hydro")) >= 4) {
                 effect_list.push(
                     { "id": apply.id, "option": 0, "source": source, "base_id": apply.id, "max_id": apply.id, "source_party": source_party }
                 )
             }
             break;
         case "min_cryo_hydro_4_each":
-            if ((equip_character_return_vision_count("cryo") + equip_character_return_vision_count("hydro")) >= 4
-                && equip_character_return_vision_count("cryo") >= 1 && equip_character_return_vision_count("hydro") >= 1) {
+            if ((equip_character_return_variable_count("vision", "cryo") + equip_character_return_variable_count("vision", "hydro")) >= 4
+                && equip_character_return_variable_count("vision", "cryo") >= 1 && equip_character_return_variable_count("vision", "hydro") >= 1) {
                 new_effect.id = apply.id;
                 new_effect.max_id = apply.id;
             }
             break;
         case "min_geo_3":
-            if (equip_character_return_vision_count("geo") >= 3) {
+            if (equip_character_return_variable_count("vision", "geo") >= 3) {
                 new_effect.id = apply.id;
                 new_effect.max_id = apply.id;
             }
             break;
         case "min_pyro_electro_4":
-            if ((equip_character_return_vision_count("pyro") + equip_character_return_vision_count("electro")) >= 4) {
+            if ((equip_character_return_variable_count("vision", "pyro") + equip_character_return_variable_count("vision", "electro")) >= 4) {
                 new_effect.id = apply.id;
                 new_effect.max_id = apply.id;
             }
             break;
         case "min_dendro_hydro_4":
-            if ((equip_character_return_vision_count("dendro") + equip_character_return_vision_count("hydro")) >= 4) {
+            if ((equip_character_return_variable_count("vision", "dendro") + equip_character_return_variable_count("vision", "hydro")) >= 4) {
                 new_effect.id = apply.id;
                 new_effect.max_id = apply.id;
             }
             break;
 
         case "cryo_hydro":
-            var cryo_hydro_count = equip_character_return_vision_count("cryo") + equip_character_return_vision_count("hydro");
+            var cryo_hydro_count = equip_character_return_variable_count("vision", "cryo") + equip_character_return_variable_count("vision", "hydro");
             if (cryo_hydro_count > 0) {
                 var max_id = apply.id + 3;
                 var offset_val = cryo_hydro_count - 1;
@@ -634,7 +735,7 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             break;
 
         case "geo_1_2_3": 
-            var geo_count = equip_character_return_vision_count("geo");
+            var geo_count = equip_character_return_variable_count("vision", "geo");
             if (geo_count > 0) {
                 var max_id = apply.id + 2;
                 var offset_val = geo_count - 1;
@@ -648,7 +749,7 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             break;
 
         case "hydro_0_1_2":
-            var hydro_count = equip_character_return_vision_count("hydro");
+            var hydro_count = equip_character_return_variable_count("vision", "hydro");
 
             var max_id = apply.id + 2;
             if (hydro_count > 2) {
@@ -669,7 +770,7 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             break;
 
         case "pyro_1_2_3":
-            var pyro_count = equip_character_return_vision_count("pyro");
+            var pyro_count = equip_character_return_variable_count("vision", "pyro");
             if (pyro_count > 0) {
                 var max_id = apply.id + 2;
                 var offset_val = pyro_count - 1;
@@ -683,10 +784,10 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             break;
 
         case "phec_1_2":
-            var pyro_count = equip_character_return_vision_count("pyro");
-            var hydro_count = equip_character_return_vision_count("hydro");
-            var electro_count = equip_character_return_vision_count("electro");
-            var cryo_count = equip_character_return_vision_count("cryo");
+            var pyro_count = equip_character_return_variable_count("vision", "pyro");
+            var hydro_count = equip_character_return_variable_count("vision", "hydro");
+            var electro_count = equip_character_return_variable_count("vision", "electro");
+            var cryo_count = equip_character_return_variable_count("vision", "cryo");
 
             var phec_count = pyro_count + hydro_count + electro_count + cryo_count;
 
@@ -703,7 +804,7 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             break;
 
         case "elemental_types":
-            var different_elements = equip_character_return_vision_count("unique");
+            var different_elements = equip_character_return_variable_count("vision", null);
             var max_id = apply.id + 3;
             var offset_val = different_elements - 1;
 
@@ -713,7 +814,7 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
 
         case "same_element":
             var vision = data_characters[user_objects.user_party[party_id].id].vision;
-            var same_element = equip_character_return_vision_count(vision);
+            var same_element = equip_character_return_variable_count("vision", vision);
            
             if (apply.offset) {
                 var offset_val = apply.offset[offset] + (same_element - 1) * apply.offset.length;
@@ -729,7 +830,7 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
 
         case "different_element_0_1_2":
             var vision = data_characters[user_objects.user_party[party_id].id].vision;
-            var different_element = 4 - equip_character_return_vision_count(vision);
+            var different_element = 4 - equip_character_return_variable_count("vision", vision);
 
             if (different_element > 2) {
                 different_element = 2;
@@ -763,7 +864,7 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             break;
 
         case "fontaine":
-            var fontaine_count = equip_character_return_nation_count("fontaine");
+            var fontaine_count = equip_character_return_variable_count("nation", "fontaine");
             var max_id = apply.id + 3;
             var offset_val = fontaine_count - 1;
 
@@ -823,6 +924,25 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             var const_effect_ids = equip_effects_return_const_offset(source_party, apply, offset, [6]);
             new_effect.id = const_effect_ids.id;
             new_effect.max_id = const_effect_ids.max_id;
+            break;
+
+        case "energy_60_40":
+            var energy = output_party[party_id].stats.total.energy_burst;
+            if (energy <= 60 ) {
+                var energy_count = 0;
+                if (energy <=40) {
+                    energy_count = 1;
+                }
+
+                if (apply.offset) {
+                    var offset_val = apply.offset[offset] + energy_count * apply.offset.length;
+                    var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length;
+                } else {
+                    var offset_val = energy_count;
+                    var max_id = apply.id + 1;
+                }
+            }
+
             break;
 
         default:
@@ -1020,7 +1140,7 @@ function equip_effects_display(effect_type, skill_index = null) {
         let user_select = equip_effects_return_user_select(user_objects.user_active_character, effect.id, possible_eff, skill_index);
         let selected_option = equip_effects_return_selected_option(user_select);        
 
-        if ((skill_index === null || !user_select.selected || user_select.skill_index !== null) && !user_select.auto) {
+        if ((skill_index === null || !user_select.selected || user_select.skill_index !== null) && !possible_eff.auto) {
             var enabled = true;
             var effect_obj = utils_create_obj("div", "effect_row");
         } else {
@@ -1157,18 +1277,20 @@ function equip_effects_return_effect_right(selected_option, source_party) {
     
     if (selected_option.stats) {
         for (var ii = 0; ii < selected_option.stats.length; ii++) {
-            if (selected_option.stats[ii].multiplier) {
-                var bonus = {};
-                bonus.stat = selected_option.stats[ii].stat;
-                bonus.value = selected_option.value * selected_option.stats[ii].multiplier;
-                if (selected_option.stats[ii].add) {
-                    bonus.value += selected_option.stats[ii].add;
-                }
-                bonus.custom_name = selected_option.stats[ii].custom_name;
-                effect_right.appendChild(utils_create_bonus(bonus));
-            } else {
-                effect_right.appendChild(utils_create_bonus(selected_option.stats[ii]));
-            }            
+            if (!selected_option.stats[ii].hidden) {
+                if (selected_option.stats[ii].multiplier) {
+                    var bonus = {};
+                    bonus.stat = selected_option.stats[ii].stat;
+                    bonus.value = selected_option.value * selected_option.stats[ii].multiplier;
+                    if (selected_option.stats[ii].add) {
+                        bonus.value += selected_option.stats[ii].add;
+                    }
+                    bonus.custom_name = selected_option.stats[ii].custom_name;
+                    effect_right.appendChild(utils_create_bonus(bonus));
+                } else {
+                    effect_right.appendChild(utils_create_bonus(selected_option.stats[ii]));
+                }  
+            }                      
         }
     }
     if (selected_option.transform) {

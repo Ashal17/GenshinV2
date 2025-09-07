@@ -369,7 +369,7 @@ input {
     background-color: var(--orange-bg);
 }
 
-.img_icon:hover + .img_button_hover, .img_icon:hover + .label_img_hover, .filter_icon:hover > .label_img_hover {
+.img_icon:hover + .img_button_hover, .img_icon:hover + .label_img_hover, .filter_icon:hover > .label_img_hover, .filter_icon:hover > .label_img > .label_img_hover {
     display: flex;
 }
 
@@ -434,7 +434,7 @@ input {
         transform: scaleX(-1);
     }
 
-    .filter_icon .img_icon.svg:hover::before {
+    .filter_icon:hover .img_icon.svg::before {
         background-color: var(--orange-bg);
     }
 

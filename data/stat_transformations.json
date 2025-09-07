@@ -283,6 +283,16 @@
       "mods": [ 0, 100 ]
     },
     {
+      "stat": "lunarchargedalt_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "lunarchargedalt2_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
       "stat": "superconduct_mult",
       "change": "default",
       "mods": [ 0, 100 ]
@@ -294,6 +304,16 @@
     },
     {
       "stat": "lunarbloom_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "lunarbloomalt_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "lunarbloomalt2_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     },
@@ -840,6 +860,61 @@
       "mods": [ 100 ]
     },
     {
+      "stat": "critdmgburning",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgelectrocharged",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgsuperconduct",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgshatter",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgswirlcryo",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgswirlelectro",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgswirlhydro",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgswirlpyro",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgrupture",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgburgeon",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmghyperbloom",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
       "stat": "specialmeter%atk",
       "change": "add",
       "mods": [ "atk" ]
@@ -967,7 +1042,6 @@
       "change": "add",
       "mods": [ "elemasterybonus" ]
     },
-
     {
       "stat": "melt",
       "change": "add",
@@ -978,11 +1052,25 @@
       "change": "add",
       "mods": [ "elemasterymult" ]
     },
-
     {
       "stat": "crystalize",
       "change": "add",
       "mods": [ "elemasterycrystalize" ]
+    },
+    {
+      "stat": "moonlight",
+      "change": "cap",
+      "mods": [ 36 ]
+    },
+    {
+      "stat": "lunarcharged",
+      "change": "add",
+      "mods": [ "moonlight" ]
+    },
+    {
+      "stat": "lunarbloom",
+      "change": "add",
+      "mods": [ "moonlight" ]
     }
   ]
 

@@ -2404,6 +2404,10 @@
             "value": 15
           },
           {
+            "stat": "lunarcharged",
+            "value": 15
+          },
+          {
             "stat": "vaporize",
             "value": 15
           },
@@ -26672,7 +26676,7 @@
   },
   {
     "id": 960,
-    "name": "Desert Pavilion Chronicle",
+    "name": "Flower of Paradise Lost",
     "options": [
       {
         "id": 0,
@@ -26680,15 +26684,19 @@
         "stats": [
           {
             "stat": "rupture",
-            "value": 100
+            "value": 40
           },
           {
             "stat": "hyperbloom",
-            "value": 100
+            "value": 40
           },
           {
             "stat": "burgeon",
-            "value": 100
+            "value": 40
+          },
+          {
+            "stat": "lunarbloom",
+            "value": 10
           }
         ]
       },
@@ -26698,15 +26706,19 @@
         "stats": [
           {
             "stat": "rupture",
-            "value": 75
+            "value": 30
           },
           {
             "stat": "hyperbloom",
-            "value": 75
+            "value": 30
           },
           {
             "stat": "burgeon",
-            "value": 75
+            "value": 30
+          },
+          {
+            "stat": "lunarbloom",
+            "value": 7.5
           }
         ]
       },
@@ -26716,15 +26728,19 @@
         "stats": [
           {
             "stat": "rupture",
-            "value": 50
+            "value": 20
           },
           {
             "stat": "hyperbloom",
-            "value": 50
+            "value": 20
           },
           {
             "stat": "burgeon",
-            "value": 50
+            "value": 20
+          },
+          {
+            "stat": "lunarbloom",
+            "value": 5
           }
         ]
       },
@@ -26734,15 +26750,19 @@
         "stats": [
           {
             "stat": "rupture",
-            "value": 25
+            "value": 10
           },
           {
             "stat": "hyperbloom",
-            "value": 25
+            "value": 10
           },
           {
             "stat": "burgeon",
-            "value": 25
+            "value": 10
+          },
+          {
+            "stat": "lunarbloom",
+            "value": 2.5
           }
         ]
       }
@@ -28153,6 +28173,13 @@
             "target": "burgeon",
             "ratio": 0.002,
             "max": 100
+          },
+          {
+            "source": "hp",
+            "character": "baizhu",
+            "target": "lunarbloom",
+            "ratio": 0.0007,
+            "max": 40
           },
           {
             "source": "hp",
@@ -31346,20 +31373,6 @@
             "value": 115
           }
         ]
-      },
-      {
-        "id": 1,
-        "name": "Party",
-        "stats": [
-          {
-            "stat": "skill",
-            "value": 15
-          },
-          {
-            "stat": "shield_mult",
-            "value": 57.5
-          }
-        ]
       }
     ]
   },
@@ -33431,78 +33444,303 @@
   },
   {
     "id": 1217,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -2.5
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -2.5
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1218,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -5
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -5
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1219,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -7.5
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -7.5
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1220,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -10
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1221,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -12.5
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -12.5
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1222,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 6",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -15
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -15
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1223,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 7",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -17.5
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -17.5
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1224,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 8",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -20
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -20
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1225,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 9",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -22.5
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -22.5
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1226,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 10",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -25
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -25
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1227,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 11",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -28
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -28
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1228,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 12",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -31
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -31
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1229,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 13",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -34
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -34
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1230,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 14",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -37
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -37
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1231,
-    "name": "FREELEVEL",
-    "options": []
+    "name": "Runo: Dawnless Rest of Karsikko - Level 15",
+    "options": [
+      {
+        "id": 0,
+        "name": "Moon Song",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -40
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -40
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1232,
@@ -52519,6 +52757,10 @@
         },
         {
           "stat": "electrocharged",
+          "multiplier": 1.5
+        },
+        {
+          "stat": "lunarcharged",
           "multiplier": 0.2
         }
       ]
@@ -52539,6 +52781,10 @@
         },
         {
           "stat": "electrocharged",
+          "multiplier": 1.5
+        },
+        {
+          "stat": "lunarcharged",
           "multiplier": 0.2
         }
       ]
@@ -56443,6 +56689,2970 @@
           {
             "stat": "shield_mult",
             "value": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2083,
+    "name": "Shaken, Not Purred - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "shield_mult",
+            "value": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2084,
+    "name": "Verdant Dew",
+    "input": {
+      "min": 1,
+      "max": 3,
+      "decimal": 0,
+      "stats": [
+        {
+          "stat": "verdantdew",
+          "multiplier": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 2085,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 277.76,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 277.76,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 277.76,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 222.24,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2086,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 298.59,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 298.59,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 298.59,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 238.91,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2087,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 319.42,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 319.42,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 319.42,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 255.58,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2088,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 347.2,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 347.2,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 347.2,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 277.8,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2089,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 368.03,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 368.03,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 368.03,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 294.47,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2090,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 6",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 388.86,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 388.86,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 388.86,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 311.14,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2091,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 7",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 416.64,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 416.64,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 416.64,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 333.36,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2092,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 8",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 444.42,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 444.42,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 444.42,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 355.58,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2093,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 9",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 472.19,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 472.19,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 472.19,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 377.81,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2094,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 10",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 499.97,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 499.97,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 499.97,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 400.03,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2095,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 11",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 527.74,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 527.74,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 527.74,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 422.26,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2096,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 12",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 555.52,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 555.52,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 555.52,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 444.48,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2097,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 13",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 590.24,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 590.24,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 590.24,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 472.26,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2098,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 14",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 624.96,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 624.96,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 624.96,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 500.04,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2099,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 15",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 659.68,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 659.68,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 659.68,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 527.82,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2100,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 1 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 777.76,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 777.76,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 777.76,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 622.24,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2101,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 2 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 798.59,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 798.59,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 798.59,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 638.91,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2102,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 3 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 819.42,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 819.42,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 819.42,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 655.58,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2103,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 4 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 847.2,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 847.2,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 847.2,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 677.8,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2104,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 5 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 868.03,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 868.03,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 868.03,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 694.47,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2105,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 6 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 888.86,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 888.86,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 888.86,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 711.14,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2106,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 7 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 916.64,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 916.64,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 916.64,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 733.36,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2107,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 8 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 944.42,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 944.42,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 944.42,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 755.58,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2108,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 9 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 972.19,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 972.19,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 972.19,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 777.81,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2109,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 10 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 999.97,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 999.97,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 999.97,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 800.03,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2110,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 11 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 1027.74,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 1027.74,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 1027.74,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 822.26,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2111,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 12 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 1055.52,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 1055.52,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 1055.52,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 844.48,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2112,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 13 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 1090.24,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 1090.24,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 1090.24,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 872.26,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2113,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 14 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 1124.96,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 1124.96,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 1124.96,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 900.04,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2114,
+    "name": "Runo: All Hearts Become the Beating Moon - Level 15 - \"Twine Warnings and Tales From the North\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 1159.68,
+            "target_reaction": "rupture",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 1159.68,
+            "target_reaction": "hyperbloom",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 1159.68,
+            "target_reaction": "burgeon",
+            "character": "lauma"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 927.82,
+            "target_reaction": "lunarbloom",
+            "character": "lauma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2115,
+    "name": "Moonsign Benediction: Nature's Chorus",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "elemastery",
+            "character": "lauma",
+            "target": "lunarbloom_base",
+            "ratio": 0.0175,
+            "max": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2116,
+    "name": "Light for the Frosty Night - Nascent Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "critrupture",
+            "value": 15
+          },
+          {
+            "stat": "critburgeon",
+            "value": 15
+          },
+          {
+            "stat": "crithyperbloom",
+            "value": 15
+          },
+          {
+            "stat": "critdmgrupture",
+            "value": 100
+          },
+          {
+            "stat": "critdmgburgeon",
+            "value": 100
+          },
+          {
+            "stat": "critdmghyperbloom",
+            "value": 100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2117,
+    "name": "Light for the Frosty Night - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "critlunarbloom",
+            "value": 10
+          },
+          {
+            "stat": "critdmglunarbloom",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2118,
+    "name": "Cleansing for the Spring",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "transform": [
+          {
+            "source": "elemastery",
+            "ratio": 0.04,
+            "target": "skill"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2119,
+    "name": "\"Twine Warnings and Tales From the North\" - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "lunarbloom",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2120,
+    "name": "\"I Offer Blood and Tears to the Moonlight\" - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "lunarbloom_elevate",
+            "value": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2121,
+    "name": "Moonsign Benediction: Old World Secrets",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "atk",
+            "character": "flins",
+            "target": "lunarcharged_base",
+            "ratio": 0.007,
+            "max": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2122,
+    "name": "Symphony of Winter",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "lunarbloom",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2123,
+    "name": "Whispering Flame",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "elemastery",
+            "ratio": 0.08,
+            "max": 160
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2124,
+    "name": "Whispering Flame - Night on Bald Mountain",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "elemastery",
+            "ratio": 0.1,
+            "max": 220
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2125,
+    "name": "The Devil's Wall",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "enemyelectrores",
+            "value": -25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2126,
+    "name": "Songs and Dances of Death",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "lunarcharged_elevate",
+            "value": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2127,
+    "name": "Songs and Dances of Death - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "lunarcharged_elevate",
+            "value": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2128,
+    "name": "Structured Power Booster",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 50,
+            "target_vision": "all",
+            "target_type": "burst"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2129,
+    "name": "The Theory of Ash–Field Equilibrium",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 80
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2130,
+    "name": "The Burden of Creative Genius",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "electrocharged",
+            "value": 15
+          },
+          {
+            "stat": "rupture",
+            "value": 15
+          },
+          {
+            "stat": "lunarcharged",
+            "value": 15
+          },
+          {
+            "stat": "lunarbloom",
+            "value": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2131,
+    "name": "The Burden of Creative Genius - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "electrocharged",
+            "value": 35
+          },
+          {
+            "stat": "rupture",
+            "value": 35
+          },
+          {
+            "stat": "lunarcharged",
+            "value": 35
+          },
+          {
+            "stat": "lunarbloom",
+            "value": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2132,
+    "name": "Night of the Sky's Unveiling - Nascent Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "crit",
+            "value": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2133,
+    "name": "Night of the Sky's Unveiling - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "crit",
+            "value": 30
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2134,
+    "name": "Silken Moon's Serenade - Nascent Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2135,
+    "name": "Silken Moon's Serenade - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2136,
+    "name": "Night of the Sky's Unveiling - Gleaming Moon",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "lunarcharged",
+            "value": 10
+          },
+          {
+            "stat": "lunarbloom",
+            "value": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2137,
+    "name": "Silken Moon's Serenade - Gleaming Moon",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "lunarcharged",
+            "value": 10
+          },
+          {
+            "stat": "lunarbloom",
+            "value": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2138,
+    "name": "Blessing of Moonlight - Attack",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active Character",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "target": "moonlight",
+            "ratio": 0.009,
+            "character": "resonance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2139,
+    "name": "Blessing of Moonlight - HP",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active Character",
+        "order": 1,
+        "transform": [
+          {
+            "source": "hp",
+            "target": "moonlight",
+            "ratio": 0.0006,
+            "character": "resonance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2140,
+    "name": "Blessing of Moonlight - Defense",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active Character",
+        "order": 1,
+        "transform": [
+          {
+            "source": "def",
+            "target": "moonlight",
+            "ratio": 0.01,
+            "character": "resonance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2141,
+    "name": "Blessing of Moonlight - Elemental Mastery",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active Character",
+        "order": 1,
+        "transform": [
+          {
+            "source": "elemastery",
+            "target": "moonlight",
+            "ratio": 0.0225,
+            "character": "resonance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2142,
+    "name": "Solemn Silence - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "hp%",
+            "value": 16
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2143,
+    "name": "Solemn Silence - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "hp%",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2144,
+    "name": "Solemn Silence - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "hp%",
+            "value": 24
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2145,
+    "name": "Solemn Silence - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "hp%",
+            "value": 28
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2146,
+    "name": "Solemn Silence - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "hp%",
+            "value": 32
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2147,
+    "name": "Solemn Silence - Refine 1 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "hp%",
+            "value": 32
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2148,
+    "name": "Solemn Silence - Refine 2 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "hp%",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2149,
+    "name": "Solemn Silence - Refine 3 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "hp%",
+            "value": 48
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2151,
+    "name": "Solemn Silence - Refine 4 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "hp%",
+            "value": 56
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2151,
+    "name": "Solemn Silence - Refine 5 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "hp%",
+            "value": 64
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2152,
+    "name": "Secret Silver’s Testament - Refine 1 - Energy <= 60",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 16
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2153,
+    "name": "Secret Silver’s Testament - Refine 2 - Energy <= 60",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2154,
+    "name": "Secret Silver’s Testament - Refine 3 - Energy <= 60",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 24
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2155,
+    "name": "Secret Silver’s Testament - Refine 4 - Energy <= 60",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 28
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2156,
+    "name": "Secret Silver’s Testament - Refine 5 - Energy <= 60",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 32
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2157,
+    "name": "Secret Silver’s Testament - Refine 1 - Energy <= 40",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 28
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2158,
+    "name": "Secret Silver’s Testament - Refine 2 - Energy <= 40",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2159,
+    "name": "Secret Silver’s Testament - Refine 3 - Energy <= 40",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 42
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2160,
+    "name": "Secret Silver’s Testament - Refine 4 - Energy <= 40",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 49
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2161,
+    "name": "Secret Silver’s Testament - Refine 5 - Energy <= 40",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 56
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2162,
+    "name": "Fall Into Place - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2163,
+    "name": "Fall Into Place - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 75
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2164,
+    "name": "Fall Into Place - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2165,
+    "name": "Fall Into Place - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 105
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2166,
+    "name": "Fall Into Place - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2167,
+    "name": "Fall Into Place - Refine 1 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2168,
+    "name": "Fall Into Place - Refine 2 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 150
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2169,
+    "name": "Fall Into Place - Refine 3 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 180
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2170,
+    "name": "Fall Into Place - Refine 4 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 210
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2171,
+    "name": "Fall Into Place - Refine 5 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 240
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2172,
+    "name": "Swift and Sure - Refine 1 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarcharged",
+            "value": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2173,
+    "name": "Swift and Sure - Refine 2 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarcharged",
+            "value": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2174,
+    "name": "Swift and Sure - Refine 3 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarcharged",
+            "value": 18
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2175,
+    "name": "Swift and Sure - Refine 4 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarcharged",
+            "value": 21
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2176,
+    "name": "Swift and Sure - Refine 5 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarcharged",
+            "value": 24
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2177,
+    "name": "Mournful Tribute - Refine 1 - Elemental Burst",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarcharged",
+            "value": 36
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2178,
+    "name": "Mournful Tribute - Refine 2 - Elemental Burst",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarcharged",
+            "value": 48
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2179,
+    "name": "Mournful Tribute - Refine 3 - Elemental Burst",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarcharged",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2180,
+    "name": "Mournful Tribute - Refine 4 - Elemental Burst",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarcharged",
+            "value": 75
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2181,
+    "name": "Mournful Tribute - Refine 5 - Elemental Burst",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarcharged",
+            "value": 84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2182,
+    "name": "Mournful Tribute - Refine 1 - Lunar-Charged",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 28
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2183,
+    "name": "Mournful Tribute - Refine 2 - Lunar-Charged",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2184,
+    "name": "Mournful Tribute - Refine 3 - Lunar-Charged",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 42
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2185,
+    "name": "Mournful Tribute - Refine 4 - Lunar-Charged",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 49
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2186,
+    "name": "Mournful Tribute - Refine 5 - Lunar-Charged",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 59
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2187,
+    "name": "The Final Voice - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2188,
+    "name": "The Final Voice - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2189,
+    "name": "The Final Voice - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 150
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2190,
+    "name": "The Final Voice - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 175
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2191,
+    "name": "The Final Voice - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2192,
+    "name": "Token of Covenant - Refine 1 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarbloom",
+            "value": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2193,
+    "name": "Token of Covenant - Refine 2 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarbloom",
+            "value": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2194,
+    "name": "Token of Covenant - Refine 3 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarbloom",
+            "value": 18
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2195,
+    "name": "Token of Covenant - Refine 4 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarbloom",
+            "value": 21
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2196,
+    "name": "Token of Covenant - Refine 5 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "lunarbloom",
+            "value": 24
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2197,
+    "name": "Millennial Hymn - Refine 1 - Prayer of the Far North",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2198,
+    "name": "Millennial Hymn - Refine 2 - Prayer of the Far North",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 75
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2199,
+    "name": "Millennial Hymn - Refine 3 - Prayer of the Far North",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2200,
+    "name": "Millennial Hymn - Refine 4 - Prayer of the Far North",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 105
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2201,
+    "name": "Millennial Hymn - Refine 5 - Prayer of the Far North",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2202,
+    "name": "Millennial Hymn - Refine 1 - New Moon Verse",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2203,
+    "name": "Millennial Hymn - Refine 2 - New Moon Verse",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 75
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2204,
+    "name": "Millennial Hymn - Refine 3 - New Moon Verse",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2205,
+    "name": "Millennial Hymn - Refine 4 - New Moon Verse",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 105
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2206,
+    "name": "Millennial Hymn - Refine 5 - New Moon Verse",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2207,
+    "name": "Millennial Hymn - Refine 1 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "rupture",
+            "value": 120
+          },
+          {
+            "stat": "hyperbloom",
+            "value": 80
+          },
+          {
+            "stat": "burgeon",
+            "value": 80
+          },
+          {
+            "stat": "lunarbloom",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2208,
+    "name": "Millennial Hymn - Refine 2 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "rupture",
+            "value": 150
+          },
+          {
+            "stat": "hyperbloom",
+            "value": 100
+          },
+          {
+            "stat": "burgeon",
+            "value": 100
+          },
+          {
+            "stat": "lunarbloom",
+            "value": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2209,
+    "name": "Millennial Hymn - Refine 3 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "rupture",
+            "value": 180
+          },
+          {
+            "stat": "hyperbloom",
+            "value": 120
+          },
+          {
+            "stat": "burgeon",
+            "value": 120
+          },
+          {
+            "stat": "lunarbloom",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2210,
+    "name": "Millennial Hymn - Refine 4 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "rupture",
+            "value": 210
+          },
+          {
+            "stat": "hyperbloom",
+            "value": 140
+          },
+          {
+            "stat": "burgeon",
+            "value": 140
+          },
+          {
+            "stat": "lunarbloom",
+            "value": 70
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2211,
+    "name": "Millennial Hymn - Refine 5 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "rupture",
+            "value": 240
+          },
+          {
+            "stat": "hyperbloom",
+            "value": 160
+          },
+          {
+            "stat": "burgeon",
+            "value": 160
+          },
+          {
+            "stat": "lunarbloom",
+            "value": 80
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2212,
+    "name": "Phantom Flash - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2213,
+    "name": "Phantom Flash - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 75
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2214,
+    "name": "Phantom Flash - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2215,
+    "name": "Phantom Flash - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 105
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2216,
+    "name": "Phantom Flash - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2217,
+    "name": "Phantom Flash - Refine 1 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2218,
+    "name": "Phantom Flash - Refine 2 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 150
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2219,
+    "name": "Phantom Flash - Refine 3 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 180
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2220,
+    "name": "Phantom Flash - Refine 4 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 210
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2221,
+    "name": "Phantom Flash - Refine 5 - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "0 Different Elements",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 240
           }
         ]
       }
