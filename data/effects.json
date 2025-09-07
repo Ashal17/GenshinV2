@@ -59657,5 +59657,100 @@
         ]
       }
     ]
+  },
+  {
+    "id": 2222,
+    "name": "Sunken Song of the Sands - Refine 1 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks - Active Character",
+        "order": 1,
+        "transform": [
+          {
+            "source": "hp",
+            "target": "elemastery",
+            "ratio": 0.002,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2223,
+    "name": "Sunken Song of the Sands - Refine 2 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks - Active Character",
+        "order": 1,
+        "transform": [
+          {
+            "source": "hp",
+            "target": "elemastery",
+            "ratio": 0.0025,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2224,
+    "name": "Sunken Song of the Sands - Refine 3 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks - Active Character",
+        "order": 1,
+        "transform": [
+          {
+            "source": "hp",
+            "target": "elemastery",
+            "ratio": 0.003,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2225,
+    "name": "Sunken Song of the Sands - Refine 4 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks - Active Character",
+        "order": 1,
+        "transform": [
+          {
+            "source": "hp",
+            "target": "elemastery",
+            "ratio": 0.0035,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2226,
+    "name": "Sunken Song of the Sands - Refine 5 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks - Active Character",
+        "order": 1,
+        "transform": [
+          {
+            "source": "hp",
+            "target": "elemastery",
+            "ratio": 0.004,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
   }
 ]

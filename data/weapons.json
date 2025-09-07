@@ -11735,6 +11735,13 @@
           "id": 878,
           "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
+        },
+        {
+          "id": 2222,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0,
+          "party": true,
+          "noself": true
         }
       ],
       "ascension": [
