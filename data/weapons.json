@@ -5489,6 +5489,140 @@
           "id": "unknown_regular"
         }
       ]
+    },
+    {
+      "id": 49,
+      "enka_id": 14521,
+      "name": "Reliquary of Truth",
+      "icon": "reliquary_of_truth",
+      "type": "catalyst",
+      "rarity": 5,
+      "atk_base": 44.34,
+      "stats": [
+        {
+          "stat": "critdmg",
+          "type": "level",
+          "value": 19.2
+        },
+        {
+          "stat": "crit",
+          "type": "refine",
+          "value": [ 8.0, 10.0, 12.0, 14.0, 16.0 ]
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "When the equipping character unleashes an Elemental Skill, they gain the Secret of Lies effect: Elemental Mastery is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 80.0, 100.0, 120.0, 140.0, 160.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " for 12s. When the equipping character deals Lunar-Bloom DMG to opponents, they gain the Moon of Truth effect: CRIT DMG is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 24.0, 30.0, 36.0, 42.0, 48.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for 4s. When both the Secret of Lies and Moon of Truth effects are active at the same time, the results of both effects will be increased by 50%."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2249,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Essence of Falsity",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "enka_id": 14434,
+      "name": "Dawning Frost",
+      "icon": "froststar",
+      "type": "catalyst",
+      "rarity": 4,
+      "atk_base": 42.4,
+      "stats": [
+        {
+          "stat": "critdmg",
+          "type": "level",
+          "value": 12.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "For 10s after a Charged Attack hits an opponent, Elemental Mastery is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 72.0, 90.0, 108.0, 126.0, 144.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " For 10s after an Elemental Skill hits an opponent, Elemental Mastery is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 48.0, 60.0, 72.0, 84.0, 96.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": ""
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2254,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        },
+        {
+          "id": 2259,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Nocturnal Dreams",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
     }
   ],
   "claymore": [
@@ -10033,6 +10167,68 @@
         }
       ],
       "effect_name": "Mournful Tribute",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "enka_id": 13434,
+      "name": "Sacrificer’s Staff",
+      "icon": "sacrificer_s_staff",
+      "type": "polearm",
+      "rarity": 4,
+      "atk_base": 45.07,
+      "stats": [
+        {
+          "stat": "crit",
+          "type": "level",
+          "value": 2.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "For 6s after an Elemental Skill hits an opponent, ATK is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 8.0, 10.0, 12.0, 14.0, 16.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " and Energy Recharge is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 6.0, 7.5, 9.0, 10.5, 12.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". Max 3 stacks. This effect can be triggered even when the equipping character is off-field."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2264,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Untainted Desire",
       "ascension": [
         {
           "type": "item",

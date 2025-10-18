@@ -960,10 +960,7 @@ function equip_skills_return_basic_damage(party_id, part, level, skill_index = n
         result *= output_stats[mult_stat] / 100;
     }    
     
-    if (part.reaction) {
-        result *= data_reactions[part.reaction].direct_multiplier;
-        result *= (1 + output_stats[part.reaction + "_base"] / 100);
-    }   
+      
 
     return result;
     
@@ -1078,6 +1075,11 @@ function equip_skills_return_dmg_modifier(party_id, part, vision, skill_index = 
             result += output_stats["alt2"];
         }
     }
+
+    if (part.reaction) {
+        result *= data_reactions[part.reaction].direct_multiplier;
+        result *= (1 + output_stats[part.reaction + "_base"] / 100);
+    } 
 
     if (type) {
         result *= (1 + output_stats[type + "_elevate"] / 100);
@@ -1279,7 +1281,9 @@ function equip_skills_return_part_dmg(part, output_part, bonusdmg, vision, react
 
     var result_bonusdmg = equip_skills_return_part_bonusdmg(part, bonusdmg, vision);
 
-    if (!part.reaction) {
+    if (part.reaction) {
+        result += equip_skills_return_part_bonusdmg_reaction_base(part, bonusdmg);
+    } else {
         result += result_bonusdmg;
     }
 
@@ -1332,7 +1336,19 @@ function equip_skills_return_part_bonusdmg(part, bonusdmg, vision) {
     if (part.reaction) {
         vision = data_reactions[part.reaction].vision;
         result += bonusdmg.reactions[part.reaction];
+    } else if (part.type) {
+        result += bonusdmg.all[part.type];
+        if (part.alt) {
+            result += bonusdmg.all[part.type + "alt"];
+        } else if (part.alt2) {
+            result += bonusdmg.all[part.type + "alt2"];
+        }
+    } else if (part.alt) {
+        result += bonusdmg.all["alt"];
+    } else if (part.alt2) {
+        result += bonusdmg.all["alt2"];
     }
+
     if (vision) {
         result += bonusdmg[vision].all;
 
@@ -1345,22 +1361,17 @@ function equip_skills_return_part_bonusdmg(part, bonusdmg, vision) {
             }
         }        
     }
-    if (part.type && !part.reaction) {
-        result += bonusdmg.all[part.type];
-        if (part.alt) {
-            result += bonusdmg.all[part.type + "alt"];
-        } else if (part.alt2) {
-            result += bonusdmg.all[part.type + "alt2"];
-        }
-    } else if (part.alt) {
-        result += bonusdmg.all["alt"];
-    } else if (part.alt2) {
-        result += bonusdmg.all["alt2"];
-    }
     
-
     return result;
 
+}
+
+function equip_skills_return_part_bonusdmg_reaction_base(part, bonusdmg) {
+    var result = 0;
+    if (part.reaction) {
+        result += bonusdmg.reactions[part.reaction + "base"];
+    }
+    return result;
 }
 
 function equip_skills_return_reaction_dmg(reaction, output_reaction, count) {

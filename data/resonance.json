@@ -2,6 +2,7 @@
   {
     "id": 0,
     "name": "Protective Canopy",
+    "icon": null,
     "req": {
       "type": "vision",
       "value": null,
@@ -17,6 +18,7 @@
   {
     "id": 1,
     "name": "Impetuous Winds",
+    "icon": "anemo",
     "req": {
       "type": "vision",
       "value": "anemo",
@@ -40,6 +42,7 @@
   {
     "id": 2,
     "name": "Shattering Ice",
+    "icon": "cryo",
     "req": {
       "type": "vision",
       "value": "cryo",
@@ -63,6 +66,7 @@
   {
     "id": 3,
     "name": "Sprawling Greenery",
+    "icon": "dendro",
     "req": {
       "type": "vision",
       "value": "dendro",
@@ -94,6 +98,7 @@
   {
     "id": 4,
     "name": "High Voltage",
+    "icon": "electro",
     "req": {
       "type": "vision",
       "value": "electro",
@@ -113,6 +118,7 @@
   {
     "id": 5,
     "name": "Enduring Rock",
+    "icon": "geo",
     "req": {
       "type": "vision",
       "value": "geo",
@@ -144,6 +150,7 @@
   {
     "id": 6,
     "name": "Soothing Water",
+    "icon": "hydro",
     "req": {
       "type": "vision",
       "value": "hydro",
@@ -163,6 +170,7 @@
   {
     "id": 7,
     "name": "Fervent Flames",
+    "icon": "pyro",
     "req": {
       "type": "vision",
       "value": "pyro",
@@ -182,6 +190,7 @@
   {
     "id": 8,
     "name": "Blessing of Moonlight",
+    "icon": "moonsign",
     "req": {
       "type": "moonsign",
       "value": true,
@@ -195,8 +204,7 @@
         "apply": {
           "id": 2138,
           "special": "blessing_of_moonlight",
-          "party": true,
-          "multi": true
+          "party": true
         }
       }
     ]

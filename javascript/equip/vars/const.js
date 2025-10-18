@@ -4,8 +4,8 @@ const const_artifact_sub_stats = 4;
 const const_artifact_sub_stats_options = ["blank", "atk", "atk%", "hp", "hp%", "def", "def%", "crit", "critdmg", "elemastery", "recharge"];
 
 const const_party_size = 4;
-const const_level_list = ["1", "20", "20+", "40", "40+", "50", "50+", "60", "60+", "70", "70+", "80", "80+", "90"];
-const const_level_list_values = [1, 20, 20, 40, 40, 50, 50, 60, 60, 70, 70, 80, 80, 90];
+const const_level_list = ["1", "20", "20+", "40", "40+", "50", "50+", "60", "60+", "70", "70+", "80", "80+", "90", "95", "100"];
+const const_level_list_values = [1, 20, 20, 40, 40, 50, 50, 60, 60, 70, 70, 80, 80, 90, 95, 100];
 const const_constel_list = [0, 1, 2, 3, 4, 5, 6];
 const const_character_visions = ["anemo", "cryo", "dendro", "electro", "geo", "hydro", "pyro"];
 const const_stats_visions = ["anemo", "cryo", "dendro", "electro", "geo", "hydro", "pyro", "physical", "healing"];
@@ -79,10 +79,10 @@ const const_scanner_stats_transform_table = {
 }
 
 const const_reaction_damage_values = {
-    "elemasteryadd": [17.17, 80.58, 80.58, 207.38, 207.38, 323.6, 323.6, 492.88, 492.88, 765.64, 765.64, 1110.0, 1110.0, 1446.85],
-    "elemasteryaddshared": [17.17, 80.58, 80.58, 207.38, 207.38, 323.6, 323.6, 492.88, 492.88, 765.64, 765.64, 1110.0, 1110.0, 1446.85],
-    "elemasterybonus": [17.17, 80.58, 80.58, 207.38, 207.38, 323.6, 323.6, 492.88, 492.88, 765.64, 765.64, 1110.0, 1110.0, 1446.85],
-    "elemasterycrystalize": [91.18, 303.83, 303.83, 585.00, 585.00, 786.79, 786.79, 1030.08, 1030.08, 1314.75, 1314.75, 1596.81, 1596.81, 1851.06]
+    "elemasteryadd": [17.17, 80.58, 80.58, 207.38, 207.38, 323.6, 323.6, 492.88, 492.88, 765.64, 765.64, 1110.0, 1110.0, 1446.8535, 1561.468, 1674.8092],
+    "elemasteryaddshared": [17.17, 80.58, 80.58, 207.38, 207.38, 323.6, 323.6, 492.88, 492.88, 765.64, 765.64, 1110.0, 1110.0, 1446.8535, 1561.468, 1674.8092],
+    "elemasterybonus": [17.17, 80.58, 80.58, 207.38, 207.38, 323.6, 323.6, 492.88, 492.88, 765.64, 765.64, 1110.0, 1110.0, 1446.8535, 1561.468, 1674.8092],
+    "elemasterycrystalize": [91.18, 303.83, 303.83, 585.00, 585.00, 786.79, 786.79, 1030.08, 1030.08, 1314.75, 1314.75, 1596.81, 1596.81, 1851.06, 1851.06, 1851.06]
 }
 
 const const_bonusdmg_visions = ["all", "anemo", "cryo", "dendro", "electro", "geo", "hydro", "pyro", "physical"];

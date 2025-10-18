@@ -935,6 +935,16 @@
       "mods": [ "specialmeter", 100 ]
     },
     {
+      "stat": "specialmeterelemastery",
+      "change": "add",
+      "mods": [ "elemastery" ]
+    },
+    {
+      "stat": "specialmeterelemastery",
+      "change": "times",
+      "mods": [ "specialmeter", 100 ]
+    },
+    {
       "stat": "elemasteryatk",
       "change": "add",
       "mods": [ "atk" ]
@@ -1056,21 +1066,6 @@
       "stat": "crystalize",
       "change": "add",
       "mods": [ "elemasterycrystalize" ]
-    },
-    {
-      "stat": "moonlight",
-      "change": "cap",
-      "mods": [ 36 ]
-    },
-    {
-      "stat": "lunarcharged",
-      "change": "add",
-      "mods": [ "moonlight" ]
-    },
-    {
-      "stat": "lunarbloom",
-      "change": "add",
-      "mods": [ "moonlight" ]
     }
   ]
 

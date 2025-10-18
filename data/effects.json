@@ -25696,6 +25696,14 @@
           {
             "stat": "critdmghyperbloom",
             "value": 100
+          },
+          {
+            "stat": "critlunarbloom",
+            "value": 10
+          },
+          {
+            "stat": "critdmglunarbloom",
+            "value": 20
           }
         ]
       },
@@ -25734,6 +25742,14 @@
           {
             "stat": "critdmghyperbloom",
             "value": 100
+          },
+          {
+            "stat": "critlunarbloom",
+            "value": 10
+          },
+          {
+            "stat": "critdmglunarbloom",
+            "value": 20
           }
         ]
       }
@@ -25798,7 +25814,7 @@
             "source": "elemastery",
             "special": "highest_elemastery",
             "target": "elemastery",
-            "custom_name": "Party's Highest Elemental Mastery to Elemental Mastery",
+            "custom_name": "Party's Highest Elemental Mastery to Elemental Mastery (Max 250)",
             "ratio": 0.25,
             "max": 250
           }
@@ -58253,7 +58269,13 @@
         "transform": [
           {
             "source": "atk",
-            "target": "moonlight",
+            "target": "lunarcharged",
+            "ratio": 0.009,
+            "character": "resonance"
+          },
+          {
+            "source": "atk",
+            "target": "lunarbloom",
             "ratio": 0.009,
             "character": "resonance"
           }
@@ -58272,7 +58294,13 @@
         "transform": [
           {
             "source": "hp",
-            "target": "moonlight",
+            "target": "lunarcharged",
+            "ratio": 0.0006,
+            "character": "resonance"
+          },
+          {
+            "source": "hp",
+            "target": "lunarbloom",
             "ratio": 0.0006,
             "character": "resonance"
           }
@@ -58291,7 +58319,13 @@
         "transform": [
           {
             "source": "def",
-            "target": "moonlight",
+            "target": "lunarcharged",
+            "ratio": 0.01,
+            "character": "resonance"
+          },
+          {
+            "source": "def",
+            "target": "lunarbloom",
             "ratio": 0.01,
             "character": "resonance"
           }
@@ -58310,7 +58344,13 @@
         "transform": [
           {
             "source": "elemastery",
-            "target": "moonlight",
+            "target": "lunarcharged",
+            "ratio": 0.0225,
+            "character": "resonance"
+          },
+          {
+            "source": "elemastery",
+            "target": "lunarbloom",
             "ratio": 0.0225,
             "character": "resonance"
           }
@@ -59748,6 +59788,1170 @@
             "target": "elemastery",
             "ratio": 0.004,
             "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2227,
+    "name": "\tMoonsign Benediction: Dusklit Eaves",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "elemastery",
+            "character": "nefer",
+            "target": "lunarbloom_base",
+            "ratio": 0.0175,
+            "max": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2228,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 13,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2229,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 16,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2230,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 19,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2231,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 22,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2232,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 25,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2233,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 6",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 28,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2234,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 7",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 31,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2235,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 8",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 34,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2236,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 9",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 37,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2237,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 10",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 40,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2238,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 11",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 43,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2239,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 12",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 46,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2240,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 13",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 49,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2241,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 14",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 52,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2242,
+    "name": "Sacred Vow: True Eye's Phantasm - Level 15",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 55,
+            "custom_name": "Veils of Falsehood to Elemental Burst DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2243,
+    "name": "Veils of Falsehood",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "specialmeter",
+            "value": 3,
+            "custom_name": "Veils of Falsehood"
+          },
+          {
+            "stat": "lunarbloom_mult",
+            "value": 124,
+            "custom_name": "Phantasm Performance Multiplier"
+          },
+          {
+            "stat": "skillalt_mult",
+            "value": 124,
+            "hidden": true
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "specialmeter",
+            "value": 2,
+            "custom_name": "Veils of Falsehood"
+          },
+          {
+            "stat": "lunarbloom_mult",
+            "value": 116,
+            "custom_name": "Phantasm Performance Multiplier"
+          },
+          {
+            "stat": "skillalt_mult",
+            "value": 116,
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "specialmeter",
+            "value": 1,
+            "custom_name": "Veils of Falsehood"
+          },
+          {
+            "stat": "lunarbloom_mult",
+            "value": 108,
+            "custom_name": "Phantasm Performance Multiplier"
+          },
+          {
+            "stat": "skillalt_mult",
+            "value": 108,
+            "hidden": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2244,
+    "name": "Veils of Falsehood - Observation Feeds Strategy",
+    "options": [
+      {
+        "id": 0,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "specialmeter",
+            "value": 5,
+            "custom_name": "Veils of Falsehood"
+          },
+          {
+            "stat": "lunarbloom_mult",
+            "value": 140,
+            "custom_name": "Phantasm Performance Multiplier"
+          },
+          {
+            "stat": "skillalt_mult",
+            "value": 140,
+            "hidden": true
+          },
+          {
+            "stat": "elemastery",
+            "value": 200
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "specialmeter",
+            "value": 4,
+            "custom_name": "Veils of Falsehood"
+          },
+          {
+            "stat": "lunarbloom_mult",
+            "value": 132,
+            "custom_name": "Phantasm Performance Multiplier"
+          },
+          {
+            "stat": "skillalt_mult",
+            "value": 132,
+            "hidden": true
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "specialmeter",
+            "value": 3,
+            "custom_name": "Veils of Falsehood"
+          },
+          {
+            "stat": "lunarbloom_mult",
+            "value": 124,
+            "custom_name": "Phantasm Performance Multiplier"
+          },
+          {
+            "stat": "skillalt_mult",
+            "value": 124,
+            "hidden": true
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "specialmeter",
+            "value": 2,
+            "custom_name": "Veils of Falsehood"
+          },
+          {
+            "stat": "lunarbloom_mult",
+            "value": 116,
+            "custom_name": "Phantasm Performance Multiplier"
+          },
+          {
+            "stat": "skillalt_mult",
+            "value": 116,
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "specialmeter",
+            "value": 1,
+            "custom_name": "Veils of Falsehood"
+          },
+          {
+            "stat": "lunarbloom_mult",
+            "value": 108,
+            "custom_name": "Phantasm Performance Multiplier"
+          },
+          {
+            "stat": "skillalt_mult",
+            "value": 108,
+            "hidden": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2245,
+    "name": "free",
+    "options": []
+  },
+  {
+    "id": 2246,
+    "name": "Planning Breeds Success",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 60,
+            "target_vision": "all",
+            "target_reaction": "lunarbloombase",
+            "custom_name": "Elemental Mastery to Phantasm Performance (Lunar-Bloom) Base"
+          },
+          {
+            "source": "specialmeterelemastery",
+            "ratio": 6,
+            "target_vision": "all",
+            "target_reaction": "lunarbloombase",
+            "custom_name": "Elemental Mastery to Phantasm Performance (Lunar-Bloom) Base",
+            "hidden": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2247,
+    "name": "Delusion Ensnares Reason",
+    "options": [
+      {
+        "id": 0,
+        "name": "Hit",
+        "stats": [
+          {
+            "stat": "enemydendrores",
+            "value": -20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2248,
+    "name": "Victory Flows from the Turning of Tides - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "Self",
+        "stats": [
+          {
+            "stat": "lunarbloom_elevate",
+            "value": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2249,
+    "name": "Essence of Falsity - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          },
+          {
+            "stat": "critdmg",
+            "value": 36
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Secret of Lies",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 80
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Moon of Truth",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 24
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2250,
+    "name": "Essence of Falsity - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 150
+          },
+          {
+            "stat": "critdmg",
+            "value": 45
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Secret of Lies",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Moon of Truth",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 30
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2251,
+    "name": "Essence of Falsity - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 180
+          },
+          {
+            "stat": "critdmg",
+            "value": 54
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Secret of Lies",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Moon of Truth",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 36
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2252,
+    "name": "Essence of Falsity - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 210
+          },
+          {
+            "stat": "critdmg",
+            "value": 63
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Secret of Lies",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 140
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Moon of Truth",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 42
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2253,
+    "name": "Essence of Falsity - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 240
+          },
+          {
+            "stat": "critdmg",
+            "value": 72
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Secret of Lies",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 160
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Moon of Truth",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 48
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2254,
+    "name": "Nocturnal Dreams - Refine 1 - Charged Attack",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 72
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2255,
+    "name": "Nocturnal Dreams - Refine 2 - Charged Attack",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2256,
+    "name": "Nocturnal Dreams - Refine 3 - Charged Attack",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 108
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2257,
+    "name": "Nocturnal Dreams - Refine 4 - Charged Attack",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 126
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2258,
+    "name": "Nocturnal Dreams - Refine 5 - Charged Attack",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 144
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2259,
+    "name": "Nocturnal Dreams - Refine 1 - Elemental Skill",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 48
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2260,
+    "name": "Nocturnal Dreams - Refine 2 - Elemental Skill",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2261,
+    "name": "Nocturnal Dreams - Refine 3 - Elemental Skill",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 72
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2262,
+    "name": "Nocturnal Dreams - Refine 4 - Elemental Skill",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2263,
+    "name": "Nocturnal Dreams - Refine 5 - Elemental Skill",
+    "options": [
+      {
+        "id": 0,
+        "name": "Secret of Lies and Moon of Truth",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 96
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2264,
+    "name": "Untainted Desire - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 24
+          },
+          {
+            "stat": "recharge",
+            "value": 18
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 16
+          },
+          {
+            "stat": "recharge",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 8
+          },
+          {
+            "stat": "recharge",
+            "value": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2265,
+    "name": "Untainted Desire - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 30
+          },
+          {
+            "stat": "recharge",
+            "value": 22.5
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20
+          },
+          {
+            "stat": "recharge",
+            "value": 15
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 10
+          },
+          {
+            "stat": "recharge",
+            "value": 7.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2266,
+    "name": "Untainted Desire - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 36
+          },
+          {
+            "stat": "recharge",
+            "value": 27
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 24
+          },
+          {
+            "stat": "recharge",
+            "value": 18
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 12
+          },
+          {
+            "stat": "recharge",
+            "value": 9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2267,
+    "name": "Untainted Desire - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 44
+          },
+          {
+            "stat": "recharge",
+            "value": 31.5
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 28
+          },
+          {
+            "stat": "recharge",
+            "value": 21
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 14
+          },
+          {
+            "stat": "recharge",
+            "value": 10.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2268,
+    "name": "Untainted Desire - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 48
+          },
+          {
+            "stat": "recharge",
+            "value": 36
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 32
+          },
+          {
+            "stat": "recharge",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 16
+          },
+          {
+            "stat": "recharge",
+            "value": 12
           }
         ]
       }

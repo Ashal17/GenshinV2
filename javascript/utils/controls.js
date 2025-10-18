@@ -165,10 +165,23 @@ function utils_create_checkbox(classes, id, svg_name, hover_text) {
     return label;
 }
 
-function utils_create_img(classes, id, img) {
+function utils_create_img(classes, id, img, hover_text) {
     var newimg = utils_create_obj("img", classes, id);
     newimg.src = img;
-    return newimg;
+
+    if (hover_text) {
+        var btn = utils_create_obj("div", "img_button")
+        btn.appendChild(newimg);
+        var btn_hover = document.createElement("div");
+        btn_hover.className = "img_button_hover";
+        btn_hover.innerHTML = hover_text;
+        btn.appendChild(btn_hover);
+        btn.onmouseover = function () { utils_update_frame_position_contain(this, btn_hover, "top"); };
+        return btn;
+    } else {
+        return newimg;
+    }    
+    
 }
 
 function utils_create_frames(parent_id, frame_definitions) {

@@ -7,7 +7,7 @@ window_frame_ids = [
 ];
 
 async function equip_load_all_data() {
-    var ver = "?20250906";
+    var ver = "?20251018";
 
     data_characters = await utils_load_json("/data/characters.json" + ver);
     data_enemies = await utils_load_json("/data/enemies.json" + ver);
@@ -22,7 +22,7 @@ async function equip_load_all_data() {
     data_artifact_stats = await utils_load_json("/data/artifact_stats.json");
     data_artifact_sets = await utils_load_json("/data/artifact_sets.json");
     data_artifact_enka_stats = await utils_load_json("/data/artifact_enka_stats.json");
-    data_effects = await utils_load_json("/data/effects.json");
+    data_effects = await utils_load_json("/data/effects.json" + ver);
 
     for (var i = 0; i < data_enemies.length; i++) {
         for (var ii = 0; ii < data_enemies[i].stats.length; ii++) {
@@ -235,9 +235,9 @@ function equip_setup_ui_resonance() {
         resonance.appendChild(utils_create_obj("p", "resonance_name " + data_resonance[i].req.value, null, data_resonance[i].name));
         var resonance_icons = utils_create_obj("div", "resonance_icons");
         resonance.appendChild(resonance_icons);
-        if (typeof data_resonance[i].req.value === "string") {
+        if (data_resonance[i].icon) {
             for (var ii = 0; ii < data_resonance[i].req.count; ii++) {
-                resonance_icons.appendChild(utils_create_img_svg(data_resonance[i].req.value));
+                resonance_icons.appendChild(utils_create_img_svg(data_resonance[i].icon));
             }
         }
 
@@ -478,9 +478,7 @@ function equip_setup_ui_skills(skill_window) {
     name_row.appendChild(utils_create_obj("p", "container_name", null, utils_capitalize(skill_window)));
     obj.appendChild(name_row);
 
-    obj.appendChild(utils_create_obj("div", "skills_column", "skills_container_" + skill_window));
-
-    
+    obj.appendChild(utils_create_obj("div", "skills_column", "skills_container_" + skill_window));      
 
     return obj;
 }
@@ -545,6 +543,8 @@ function equip_setup_ui_storage_pin() {
 }
 
 function equip_setup_user_objects(user_data = null) {
+    user_data = structuredClone(user_data);
+
     user_objects = {};
 
     user_objects.user_active_character = utils_object_get_value(user_data, "user_active_character", 0);
@@ -593,16 +593,19 @@ function equip_setup_user_objects(user_data = null) {
 }
 
 function equip_setup_storage_objects(user_storage = null) {
+    user_storage = structuredClone(user_storage);
     storage_objects = {};
     storage_objects.saved_storage = utils_object_get_value(user_storage, "saved_storage", []);
 }
 
 function equip_setup_character_storage_objects(user_characters = null) {
+    user_characters = structuredClone(user_characters);
     character_storage_objects = {};
     character_storage_objects.saved_characters = utils_object_get_value(user_characters, "saved_characters", []);
 }
 
 function equip_setup_artifacts_storage_objects(user_artifacts = null) {
+    user_artifacts = structuredClone(user_artifacts);
     artifact_storage_objects = {};
     artifact_storage_objects.artifacts = {};
     artifact_storage_objects.filters = {};
@@ -616,6 +619,7 @@ function equip_setup_artifacts_storage_objects(user_artifacts = null) {
 }
 
 function equip_setup_enka_objects(preferences_data = null) {
+    preferences_data = structuredClone(preferences_data);
     user_preferences.enka = {};
     user_preferences.enka.last_uid = utils_object_get_value(preferences_data, "enka.last_uid", "");
 
@@ -630,11 +634,13 @@ function equip_setup_scanner_objects() {
 }
 
 function equip_setup_share_objects(user_share = null) {
+    user_share = structuredClone(user_share);
     share_objects = {};
     share_objects.saved_shares = utils_object_get_value(user_share, "saved_shares", []);
 }
 
 function equip_setup_window_objects(preferences_data = null) {
+    preferences_data = structuredClone(preferences_data);
     user_preferences.window = {};
 
     user_preferences.window.equip = utils_object_get_value(preferences_data, "window.equip", structuredClone(window_frame_ids));
@@ -733,6 +739,7 @@ function equip_setup_default_stats() {
     default_bonusdmg.reactions = {};
     for (let reaction_id in data_reactions) {
         default_bonusdmg.reactions[reaction_id] = 0;
+        default_bonusdmg.reactions[reaction_id + "base"] = 0;
     }    
 
     default_artifact = {};

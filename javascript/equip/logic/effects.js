@@ -421,7 +421,7 @@ function equip_effects_update_options(party_id) {
         if (!resonance.personal) {
             for (var ii = 0; ii < resonance.bonus.length; ii++) {
                 if (resonance.bonus[ii].apply) {
-                    equip_effects_update_single_option(party_effect_list, resonance.bonus[ii].apply, false, 0, { "type": "resonance", "id": resonance.req.value }, party_id)
+                    equip_effects_update_single_option(party_effect_list, resonance.bonus[ii].apply, false, 0, { "type": "svg", "id": resonance.icon, "name": resonance.name }, party_id)
                 }
             }
         }        
@@ -446,7 +446,7 @@ function equip_effects_update_character_options(effect_list, source_party, party
         if (resonance.personal) {
             for (var ii = 0; ii < resonance.bonus.length; ii++) {
                 if (resonance.bonus[ii].apply) {
-                    equip_effects_update_single_option(effect_list, resonance.bonus[ii].apply, party, 0, { "type": "resonance", "id": resonance.req.value }, source_party, party_id)
+                    equip_effects_update_single_option(effect_list, resonance.bonus[ii].apply, party, 0, { "type": "svg", "id": resonance.icon, "name": current_character.name }, source_party, party_id)
                 }
             }
         }
@@ -455,35 +455,35 @@ function equip_effects_update_character_options(effect_list, source_party, party
     for (var i = 0; i < current_character.attacks.length; i++) {
         if (current_character.attacks[i].apply) {
             var level = equip_skills_return_skill_level(source_party, current_character.attacks[i].type);
-            equip_effects_update_single_option(effect_list, current_character.attacks[i].apply, party, level, { "type": "character", "id": user_objects.user_party[source_party].id }, source_party, party_id)
+            equip_effects_update_single_option(effect_list, current_character.attacks[i].apply, party, level, { "type": "character", "id": user_objects.user_party[source_party].id, "name": current_character.name }, source_party, party_id)
         }
     }
 
     for (var i = 0; i < current_character.passive.length; i++) {
         if (user_objects.user_party[source_party].level >= current_character.passive[i].level && current_character.passive[i].apply) {
             var level = equip_skills_return_skill_level(source_party, current_character.passive[i].type);
-            equip_effects_update_single_option(effect_list, current_character.passive[i].apply, party, level, { "type": "character", "id": user_objects.user_party[source_party].id }, source_party, party_id)
+            equip_effects_update_single_option(effect_list, current_character.passive[i].apply, party, level, { "type": "character", "id": user_objects.user_party[source_party].id, "name": current_character.name }, source_party, party_id)
         }
     }
 
     for (var i = 0; i < current_character.const.length; i++) {
         if (user_objects.user_party[source_party].constel > i && current_character.const[i].apply) {
             var level = equip_skills_return_skill_level(source_party, current_character.const[i].type);
-            equip_effects_update_single_option(effect_list, current_character.const[i].apply, party, level, { "type": "character", "id": user_objects.user_party[source_party].id }, source_party, party_id)
+            equip_effects_update_single_option(effect_list, current_character.const[i].apply, party, level, { "type": "character", "id": user_objects.user_party[source_party].id, "name": current_character.name }, source_party, party_id)
         }
     }
 
     var current_weapon = utils_array_get_by_lookup(data_weapons[output_party[source_party].weapon_type], "id", user_objects.user_party[source_party].weapon.id);
 
     if (current_weapon.apply_effect) {
-        equip_effects_update_single_option(effect_list, current_weapon.apply_effect, party, user_objects.user_party[source_party].weapon.refine, { "type": "weapon", "id": current_weapon.id }, source_party, party_id)
+        equip_effects_update_single_option(effect_list, current_weapon.apply_effect, party, user_objects.user_party[source_party].weapon.refine, { "type": "weapon", "id": current_weapon.id, "name": current_weapon.name }, source_party, party_id)
     }
 
     for (const [key, value] of Object.entries(output_party[source_party].artifacts.sets)) {
         var artifact_set = utils_array_get_by_lookup(data_artifact_sets, "id", key);
         for (var i = 0; i < artifact_set.set_bonus.length; i++) {
             if (value >= artifact_set.set_bonus[i].req && artifact_set.set_bonus[i].apply) {
-                equip_effects_update_single_option(effect_list, artifact_set.set_bonus[i].apply, party, 0, { "type": "artifact_set", "id": artifact_set.id }, source_party, party_id)
+                equip_effects_update_single_option(effect_list, artifact_set.set_bonus[i].apply, party, 0, { "type": "artifact_set", "id": artifact_set.id, "name": artifact_set.name }, source_party, party_id)
             }
         }
     }
@@ -595,7 +595,11 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
         case "moonsign_1_2":
             var moonsign = equip_character_return_variable_count("moonsign");
             if (moonsign > 0) {
-                moonsign += -1;
+                if (moonsign > 1) {
+                    moonsign = 1;
+                } else {
+                    moonsign = 0;
+                }
                 if (apply.offset) {
                     var offset_val = apply.offset[offset] + moonsign * apply.offset.length;
                     var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length;
@@ -612,18 +616,21 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
         case "moonsign_0_2":
             var moonsign = equip_character_return_variable_count("moonsign");
             if (moonsign >= 2) {
-                moonsign += -1;
-                if (apply.offset) {
-                    var offset_val = apply.offset[offset] + moonsign * apply.offset.length;
-                    var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length;
-                } else {
-                    var offset_val = moonsign;
-                    var max_id = apply.id + 1;
-                }
-
-                new_effect.id = apply.id + offset_val;
-                new_effect.max_id = max_id;
+                moonsign = 1;
+            } else {
+                moonsign = 0;
             }
+            if (apply.offset) {
+                var offset_val = apply.offset[offset] + moonsign * apply.offset.length;
+                var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length;
+            } else {
+                var offset_val = moonsign;
+                var max_id = apply.id + 1;
+            }
+
+            new_effect.id = apply.id + offset_val;
+            new_effect.max_id = max_id;
+            
 
             break;
         case "moonsign_1":
@@ -653,6 +660,16 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
                 new_effect.id = apply.id + offset_val;
                 new_effect.max_id = max_id;
             }
+            break;
+
+        case "veil_of_falsehood":
+            var moonsign = equip_character_return_variable_count("moonsign");
+            if (moonsign >= 2) {
+                var const_effect_ids = equip_effects_return_const_offset(source_party, apply, offset, [2]);
+                new_effect.id = const_effect_ids.id;
+                new_effect.max_id = const_effect_ids.max_id;
+            }
+
             break;
         case "blessing_of_moonlight":
             if (!data_characters[user_objects.user_party[source_party].id].moonsign) {
@@ -1165,7 +1182,11 @@ function equip_effects_display(effect_type, skill_index = null) {
         effect_obj.appendChild(effect_toggle);
 
         var display_source = utils_create_obj("div", "effect_source");
-        display_source.appendChild(utils_create_img("effect_source_img", null, equip_effects_return_source_icon(possible_eff)));
+        if (possible_eff.source.type == "svg") {
+            display_source.appendChild(utils_create_label_img(possible_eff.source.id, possible_eff.source.name, null, null, "effect_source_img"))
+        } else {
+            display_source.appendChild(utils_create_img("effect_source_img img_icon", null, equip_effects_return_source_icon(possible_eff), possible_eff.source.name));
+        }
         effect_obj.appendChild(display_source);
 
         var effect_left = utils_create_obj("div", "effect_col");
@@ -1295,13 +1316,17 @@ function equip_effects_return_effect_right(selected_option, source_party) {
     }
     if (selected_option.transform) {
         for (var ii = 0; ii < selected_option.transform.length; ii++) {
-            effect_right.appendChild(equip_effects_return_transform_statline(selected_option.transform[ii], source_party, selected_option.value));
+            if (!selected_option.transform[ii].hidden) {
+                effect_right.appendChild(equip_effects_return_transform_statline(selected_option.transform[ii], source_party, selected_option.value));
+            }
         }
     }
 
     if (selected_option.bonusdmg) {
         for (var ii = 0; ii < selected_option.bonusdmg.length; ii++) {
-            effect_right.appendChild(equip_effects_return_bonusdmg_statline(selected_option.bonusdmg[ii]));
+            if (!selected_option.bonusdmg[ii].hidden) {
+                effect_right.appendChild(equip_effects_return_bonusdmg_statline(selected_option.bonusdmg[ii]));
+            }
         }
     }
 
@@ -1320,8 +1345,13 @@ function equip_effects_return_transform_statline(transform, source_party, input_
     if (transform.custom_name) {
         var text = transform.custom_name;
     } else {
-        var sourcename = data_stats[transform.source].name;
-        var targetname = data_stats[transform.target].name;
+        try {
+            var sourcename = data_stats[transform.source].name;
+            var targetname = data_stats[transform.target].name;
+        } catch (e) {
+            console.log(transform);
+        }
+        
         var text_min = "";
         if (transform.min) {
             text_min = " over&nbsp;" + utils_number_format(transform.min);

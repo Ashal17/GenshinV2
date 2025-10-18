@@ -111,6 +111,11 @@
     "shortname": "Special Meter × ATK",
     "type": "flat"
   },
+  "specialmeterelemastery": {
+    "name": "Special Meter × Elemental Mastery",
+    "shortname": "Special Meter × EM",
+    "type": "flat"
+  },
   "specialmeter%": {
     "name": "Special Meter",
     "shortname": "Special Meter",
@@ -990,10 +995,6 @@
   },
   "spread": {
     "name": "Spread",
-    "type": "percent"
-  },
-  "moonlight": {
-    "name": "Lunar Reactions",
     "type": "percent"
   },
   "melt_base": {

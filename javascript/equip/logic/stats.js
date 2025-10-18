@@ -500,7 +500,7 @@ function equip_stats_return_artifacts_stats(artifacts, sets) {
 
         for (var ii = 0; ii < const_artifact_sub_stats; ii++) {
             stats.push(
-                { "id": current_artifact.sub_stats[ii].id, "value": current_artifact.sub_stats[ii].value }
+                { "id": current_artifact.sub_stats[ii].id, "value": Number(current_artifact.sub_stats[ii].value) }
             );
         }
     }
