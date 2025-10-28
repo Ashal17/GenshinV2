@@ -111,20 +111,24 @@ const const_display_stats_columns = [
     },
     {
         "main": "crit",
-        "stats": ["crit", "critnormal", "critcharged", "critplunge", "critskill", "critburst", "critanemo", "crithydro", "critpyro", "critcryo", "critgeo", "critelectro", "critdendro", "critphysical"]
+        "stats": ["crit", "critnormal", "critcharged", "critplunge", "critskill", "critburst", "critanemo", "crithydro", "critpyro", "critcryo", "critgeo", "critelectro", "critdendro", "critphysical", "critoverload", "critburning", "critelectrocharged", "critsuperconduct", "critshatter", "critswirl", "critrupture", "critburgeon", "crithyperbloom", "critlunarcharged", "critlunarbloom"],
+        "hide": true
     },
     {
         "main": "critdmg",
-        "stats": ["critdmg", "critdmgnormal", "critdmgcharged", "critdmgplunge", "critdmgskill", "critdmgburst", "critdmganemo", "critdmghydro", "critdmgpyro", "critdmgcryo", "critdmggeo", "critdmgelectro", "critdmgdendro", "critdmgphysical"]
+        "stats": ["critdmg", "critdmgnormal", "critdmgcharged", "critdmgplunge", "critdmgskill", "critdmgburst", "critdmganemo", "critdmghydro", "critdmgpyro", "critdmgcryo", "critdmggeo", "critdmgelectro", "critdmgdendro", "critdmgphysical", "critdmgoverload", "critdmgburning", "critdmgelectrocharged", "critdmgsuperconduct", "critdmgshatter", "critdmgswirl", "critdmgrupture", "critdmgburgeon", "critdmghyperbloom", "critdmglunarcharged", "critdmglunarbloom"],
+        "hide": true
     },
     {
         "main": "elemastery",
-        "stats": ["elemastery", "melt", "vaporize", "overload", "burning", "electrocharged", "superconduct", "shatter", "swirl", "rupture", "burgeon", "hyperbloom", "lunarcharged", "lunarbloom", "aggravate", "spread", "crystalize"]
+        "stats": ["elemastery", "melt", "vaporize", "overload", "burning", "electrocharged", "superconduct", "shatter", "swirl", "rupture", "burgeon", "hyperbloom", "lunarcharged", "lunarbloom", "aggravate", "spread", "crystalize"],
+        "hide": true
     },
     {
         "main": ["anemo", "hydro", "pyro", "cryo", "geo", "electro", "dendro", "physical"],
         "default": "vision_auto",
-        "stats": ["anemo", "hydro", "pyro", "cryo", "geo", "electro", "dendro", "physical", "normal", "charged", "plunge", "skill", "burst", "all"]
+        "stats": ["anemo", "hydro", "pyro", "cryo", "geo", "electro", "dendro", "physical", "normal", "charged", "plunge", "skill", "burst", "all"],
+        "hide": true
     }
 ]
 

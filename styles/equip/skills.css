@@ -88,6 +88,7 @@
 .skills_part {
     display: flex;
     flex-direction: row;
+    position:relative;
 }
 
     .skills_part:not(:last-child) {
@@ -159,9 +160,30 @@
     border-left: 1px solid var(--grey-40);
 }
 
+.skills_part_val_detail {
+    display: none;
+    position: absolute;
+    top: calc(85%);
+    right: 34px;
+    padding: 5px;
+    background-color: var(--grey-10);
+    border: 2px solid var(--orange-bg-dark);
+    color: var(--white);
+    text-shadow: none;
+    white-space: nowrap;
+    z-index: 20;
+
+    width: 159px;
+    flex-direction:column;
+}
+
+.skills_part_val:nth-last-child(3):hover ~ .skills_part_val_detail, .skills_part_val:nth-last-child(4):hover ~ .skills_part_val_detail {
+    display: flex;
+}
+
 .skills_part_btn {
     width: 21px;
-    padding:4px;
+    padding: 4px;
 }
 
 .skills_part_btn_left {

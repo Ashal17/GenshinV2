@@ -7,7 +7,7 @@ window_frame_ids = [
 ];
 
 async function equip_load_all_data() {
-    var ver = "?20251018";
+    var ver = "?20251022";
 
     data_characters = await utils_load_json("/data/characters.json" + ver);
     data_enemies = await utils_load_json("/data/enemies.json" + ver);
