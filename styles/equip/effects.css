@@ -123,6 +123,7 @@
 .effect_source_img {
     height: 26px;
     width: 26px;
+    cursor:help;
 }
 
 .value_transform {

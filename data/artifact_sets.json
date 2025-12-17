@@ -1327,6 +1327,11 @@
         "req": 4
       },
       {
+        "stat": "lunarbloom",
+        "value": 10,
+        "req": 4
+      },
+      {
         "stat": null,
         "value": "Triggering Bloom, Hyperbloom or Burgeon increases all of their damage by {{25%}} for 10 seconds. Max 4 Stacks.",
         "req": 4,
@@ -1739,7 +1744,7 @@
       },
       {
         "stat": null,
-        "value": "Hitting with Plunge/Charged/Skill gains 1/2/2 stacks. Each stack increases Plunge DMG by 15%. Max 5 Stacks.",
+        "value": "Hitting with Plunge/Charged/Skill gains 1/2/2 stacks. Each stack increases Plunge DMG by {{15%}}. Max 5 Stacks.",
         "req": 4,
         "apply": {
           "id": 1947,
@@ -1768,7 +1773,7 @@
       },
       {
         "stat": null,
-        "value": "At 0 Energy, Normal DMG and Burst DMG increases by 60%. Dealing Normal/Burst DMG disables other for 6s.",
+        "value": "At 0 Energy, Normal DMG and Burst DMG increases by {{60%}}. Dealing Normal/Burst DMG disables other for 6s.",
         "req": 4,
         "apply": {
           "id": 1948,
@@ -1781,6 +1786,141 @@
     "sands": "Deep Gallery's Moment of Oblivion",
     "goblet": "Deep Gallery's Bestowed Banquet",
     "circlet": "Deep Gallery's Lost Crown"
+  },
+  {
+    "id": 56,
+    "enka_id": 15041,
+    "name": "Night of the Sky’s Unveiling",
+    "scanner_key": "NightOfTheSkysUnveiling",
+    "icon": "night_of_the_sky_s_unveiling",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "elemastery",
+        "value": 80,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "When nearby party members trigger Lunar Reactions, if the equipping character is on the field, gain the Gleaming Moon: Intent effect for 4s: Increases CRIT Rate by {{15%}}/{{30%}} when the party's Moonsign is Nascent Gleam/Ascendant Gleam. All party members' Lunar Reaction DMG is increased by {{10%}} for each different Gleaming Moon effect that party members have. Effects from Gleaming Moon cannot stack.",
+        "req": 4,
+        "apply": [
+          {
+            "id": 2132,
+            "special": "moonsign_1_2"
+          },
+          {
+            "id": 2136,
+            "special": "moonsign_1",
+            "party": true
+          }
+        ]
+      }
+    ],
+    "flower": "Bloom of the Mind's Desire",
+    "plume": "Feather of Indelible Sin",
+    "sands": "Revelation's Toll",
+    "goblet": "Vessel of Plenty",
+    "circlet": "Crown of the Befallen"
+  },
+  {
+    "id": 57,
+    "enka_id": 15042,
+    "name": "Silken Moon's Serenade",
+    "scanner_key": "SilkenMoonsSerenade",
+    "icon": "silken_moon_s_serenade",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "recharge",
+        "value": 20,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "When dealing Elemental DMG, gain the Gleaming Moon: Devotion effect for 8s: Increases all party members' Elemental Mastery by {{60}}/{{120}} when the party's Moonsign is Nascent Gleam/Ascendant Gleam. The equipping character can trigger this effect while off-field. All party members' Lunar Reaction DMG is increased by {{10%}} for each different Gleaming Moon effect that party members have. Effects from Gleaming Moon cannot stack.",
+        "req": 4,
+        "apply": [
+          {
+            "id": 2134,
+            "special": "moonsign_1_2",
+            "party": true
+          },
+          {
+            "id": 2137,
+            "special": "moonsign_1",
+            "party": true
+          }
+        ]
+      }
+    ],
+    "flower": "Crystal Tear of the Wanderer",
+    "plume": "Pristine Plume of the Blessed",
+    "sands": "Frost Devotee's Delirium",
+    "goblet": "Joyous Glory of the Pure",
+    "circlet": "Holy Crown of the Believer"
+  },
+  {
+    "id": 58,
+    "enka_id": 15043,
+    "name": "Moonlight Offering",
+    "scanner_key": "MoonlightOffering",
+    "icon": "moonlight_offering",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "elemastery",
+        "value": 80,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "When the equipping character is off-field, Lunar Reaction DMG is increased by {{20%}}. When the party's Moonsign Level is at least Ascendant Gleam, Lunar Reaction DMG will be further increased by {{40%}}. This effect will disappear after the equipping character is active for 3s.",
+        "req": 4,
+        "apply": [
+          {
+            "id": 2433,
+            "special": "moonsign_0_2"
+          }
+        ]
+      }
+    ],
+    "flower": "Moonlit Offering's Opulent Dream",
+    "plume": "Moonlit Offering's Parting Light",
+    "sands": "Moonlit Offering's Final Hour",
+    "goblet": "Moonlit Offering's Libation",
+    "circlet": "Moonlit Offering's Silver Crown"
+  },
+  {
+    "id": 59,
+    "enka_id": 15044,
+    "name": "6.3 Set 2",
+    "scanner_key": "TODO",
+    "icon": "witch_artifact",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "atk%",
+        "value": 18,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "When a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, gain the Blessing of Pastoral Winds effect for 6s: ATK is increased by {{25%}}. If the equipping character has completed Witch's Homework, Blessing of Pastoral Winds will be upgraded to Resolve of Pastoral Winds, which also increases the CRIT Rate of the equipping character by {{20%}}. This effect can be triggered even when the character is off-field.",
+        "req": 4,
+        "apply": [
+          {
+            "id": 2435,
+            "special": "hexenzirkel_personal"
+          }
+        ]
+      }
+    ],
+    "flower": "Windborne Flower's Inscription",
+    "plume": "Daylight's Brilliant Oath",
+    "sands": "Banquet's Unspoken Tale",
+    "goblet": "A Note in Spring's Song",
+    "circlet": "Ballad of Love and Lament"
   },
   {
     "id": 26,

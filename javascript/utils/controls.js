@@ -70,7 +70,7 @@ function utils_copy_clipboard(copiedtext, displayedtext, parent) {
     parent.removeChild(text_area);
 }
 
-function utils_update_frame_position_contain(element, child_element, position) {
+function utils_update_frame_position_contain(element, child_element, position, horizontal = true, vertical = true) {
 
     var padding = 20;
     if (!element) {
@@ -80,39 +80,41 @@ function utils_update_frame_position_contain(element, child_element, position) {
     var child_element_coordinates = child_element.getBoundingClientRect();
     var initial_left = coordinates.x + coordinates.width / 2 - child_element_coordinates.width / 2;
     var initial_right = coordinates.x + coordinates.width / 2 + child_element_coordinates.width / 2;
-    
 
-    if (initial_left < padding) {
-        var offset_left = padding - initial_left;
-        child_element.style.right = "calc(50% - " + offset_left + "px)";
-    } else if (initial_right > (window.innerWidth - padding)) {
-        var offset_right = initial_right - (window.innerWidth - padding);
-        child_element.style.right = "calc(50% + " + offset_right + "px)";
-    } else {
-        child_element.style.right = null;
-    }
-
-    if (position == "bottom") {
-        var initial_bottom = coordinates.y + coordinates.height + child_element_coordinates.height;
-        var possible_top = coordinates.y - child_element_coordinates.height;
-        if (initial_bottom > (window.innerHeight - padding) && possible_top > 0) {
-            child_element.style.top = "auto";
-            child_element.style.bottom = "100%";
+    if (horizontal) {
+        if (initial_left < padding) {
+            var offset_left = padding - initial_left;
+            child_element.style.right = "calc(50% - " + offset_left + "px)";
+        } else if (initial_right > (window.innerWidth - padding)) {
+            var offset_right = initial_right - (window.innerWidth - padding);
+            child_element.style.right = "calc(50% + " + offset_right + "px)";
         } else {
-            child_element.style.top = "100%";
-            child_element.style.bottom = "auto";
-        }
-    } else {
-        var initial_top = coordinates.y - child_element_coordinates.height;
-        if (initial_top < padding) {
-            child_element.style.top = "100%";
-            child_element.style.bottom = "auto";
-        } else {
-            child_element.style.top = "auto";
-            child_element.style.bottom = "100%";
+            child_element.style.right = null;
         }
     }
 
+    if (vertical) {
+        if (position == "bottom") {
+            var initial_bottom = coordinates.y + coordinates.height + child_element_coordinates.height;
+            var possible_top = coordinates.y - child_element_coordinates.height;
+            if (initial_bottom > (window.innerHeight - padding) && possible_top > 0) {
+                child_element.style.top = "auto";
+                child_element.style.bottom = "100%";
+            } else {
+                child_element.style.top = "100%";
+                child_element.style.bottom = "auto";
+            }
+        } else {
+            var initial_top = coordinates.y - child_element_coordinates.height;
+            if (initial_top < padding) {
+                child_element.style.top = "100%";
+                child_element.style.bottom = "auto";
+            } else {
+                child_element.style.top = "auto";
+                child_element.style.bottom = "100%";
+            }
+        }
+    }  
 }
 
 function utils_update_frame_position_center(relative_parent, element) {
@@ -165,10 +167,23 @@ function utils_create_checkbox(classes, id, svg_name, hover_text) {
     return label;
 }
 
-function utils_create_img(classes, id, img) {
+function utils_create_img(classes, id, img, hover_text) {
     var newimg = utils_create_obj("img", classes, id);
     newimg.src = img;
-    return newimg;
+
+    if (hover_text) {
+        var btn = utils_create_obj("div", "img_button")
+        btn.appendChild(newimg);
+        var btn_hover = document.createElement("div");
+        btn_hover.className = "img_button_hover";
+        btn_hover.innerHTML = hover_text;
+        btn.appendChild(btn_hover);
+        btn.onmouseover = function () { utils_update_frame_position_contain(this, btn_hover, "top"); };
+        return btn;
+    } else {
+        return newimg;
+    }    
+    
 }
 
 function utils_create_frames(parent_id, frame_definitions) {

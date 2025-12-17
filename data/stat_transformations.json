@@ -128,27 +128,7 @@
       "mods": [ 0, 100 ]
     },
     {
-      "stat": "normalalt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "normalalt2_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
       "stat": "charged_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "chargedalt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "chargedalt2_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     },
@@ -158,27 +138,7 @@
       "mods": [ 0, 100 ]
     },
     {
-      "stat": "plungealt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "plungealt2_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
       "stat": "skill_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "skillalt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "skillalt2_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     },
@@ -188,27 +148,7 @@
       "mods": [ 0, 100 ]
     },
     {
-      "stat": "burstalt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "burstalt2_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
       "stat": "healing_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "healingalt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "healingalt2_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     },
@@ -218,22 +158,17 @@
       "mods": [ 0, 100 ]
     },
     {
-      "stat": "shieldalt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "shieldalt2_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "alt_mult",
+      "stat": "alt1_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     },
     {
       "stat": "alt2_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "alt3_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     },
@@ -293,6 +228,11 @@
       "mods": [ 0, 100 ]
     },
     {
+      "stat": "lunarbloom_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
       "stat": "rupture_mult",
       "change": "default",
       "mods": [ 0, 100 ]
@@ -331,6 +271,11 @@
 
     {
       "stat": "crystalize_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "lunarcrystalize_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     }
@@ -573,7 +518,6 @@
       "change": "add",
       "mods": [ "plunge", "physical" ]
     },
-
     {
       "stat": "skillanemo",
       "change": "add",
@@ -696,6 +640,26 @@
       "mods": [ "swirl_mult" ]
     },
     {
+      "stat": "swirlhydro_elevate",
+      "change": "mult",
+      "mods": [ "swirl_elevate" ]
+    },
+    {
+      "stat": "swirlelectro_elevate",
+      "change": "mult",
+      "mods": [ "swirl_elevate" ]
+    },
+    {
+      "stat": "swirlcryo_elevate",
+      "change": "mult",
+      "mods": [ "swirl_elevate" ]
+    },
+    {
+      "stat": "swirlpyro_elevate",
+      "change": "mult",
+      "mods": [ "swirl_elevate" ]
+    },
+    {
       "stat": "critswirlhydro",
       "change": "add",
       "mods": [ "critswirl" ]
@@ -816,6 +780,61 @@
       "mods": [ 100 ]
     },
     {
+      "stat": "critdmgburning",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgelectrocharged",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgsuperconduct",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgshatter",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgswirlcryo",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgswirlelectro",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgswirlhydro",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgswirlpyro",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgrupture",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmgburgeon",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
+      "stat": "critdmghyperbloom",
+      "change": "cap",
+      "mods": [ 100 ]
+    },
+    {
       "stat": "specialmeter%atk",
       "change": "add",
       "mods": [ "atk" ]
@@ -832,6 +851,16 @@
     },
     {
       "stat": "specialmeteratk",
+      "change": "times",
+      "mods": [ "specialmeter", 100 ]
+    },
+    {
+      "stat": "specialmeterelemastery",
+      "change": "add",
+      "mods": [ "elemastery" ]
+    },
+    {
+      "stat": "specialmeterelemastery",
       "change": "times",
       "mods": [ "specialmeter", 100 ]
     },
@@ -914,6 +943,11 @@
       "mods": [ "elemasteryadd" ]
     },
     {
+      "stat": "lunarbloom",
+      "change": "add",
+      "mods": [ "elemasteryaddshared" ]
+    },
+    {
       "stat": "rupture",
       "change": "add",
       "mods": [ "elemasteryadd" ]
@@ -938,7 +972,6 @@
       "change": "add",
       "mods": [ "elemasterybonus" ]
     },
-
     {
       "stat": "melt",
       "change": "add",
@@ -949,11 +982,15 @@
       "change": "add",
       "mods": [ "elemasterymult" ]
     },
-
     {
       "stat": "crystalize",
       "change": "add",
       "mods": [ "elemasterycrystalize" ]
+    },
+    {
+      "stat": "lunarcrystalize",
+      "change": "add",
+      "mods": [ "elemasteryaddshared" ]
     }
   ]
 

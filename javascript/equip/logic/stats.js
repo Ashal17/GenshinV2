@@ -42,7 +42,6 @@ function equip_stats_update_total_all() {
 
     equip_stats_update_vision_stat_all();
     equip_stats_update_enemy_defense_all();
-
 }
 
 function equip_stats_update_reset_total_all() {
@@ -71,7 +70,7 @@ function equip_stats_update_add_all(stat_type, stats_obj_name, skills) {
     for (var i = 0; i < const_party_size; i++) {
         equip_stats_update_add(stat_type, i, stats_obj_name, null);
         if (skills) {
-            equip_stats_update_add_skills(stat_type, i, stats_obj_name)
+            equip_stats_update_add_skills(stat_type, i, stats_obj_name);
         }
     }
 }
@@ -80,7 +79,7 @@ function equip_stats_update_add_skills(stat_type, party_id, stats_obj_name) {
     for (var i = 0; i < user_objects.user_party[party_id].active_skills.length; i++) {
         var skill_effects = user_objects.user_party[party_id].active_skills[i].effects;
         if (skill_effects && skill_effects.length > 0) {
-            equip_stats_update_add(stat_type, party_id, stats_obj_name, i)
+            equip_stats_update_add(stat_type, party_id, stats_obj_name, i);
         }
     }
 }
@@ -106,7 +105,7 @@ function equip_stats_update_add(stat_type, party_id, stats_obj_name, skill_index
 
 function equip_stats_update_copy_total_all(stat_type) {
     for (var i = 0; i < const_party_size; i++) {
-        equip_stats_update_copy_total(stat_type, i)
+        equip_stats_update_copy_total(stat_type, i);
     }
 }
 
@@ -288,8 +287,8 @@ function equip_stats_calculate_elemastery(type, value) {
             break;
 
         case "elemasteryaddshared":
-            var result = value / (2100 + value);
-            result = 45 / 9 * result;
+            var result = value / (2000 + value);
+            result = 54 / 9 * result;
             break;
 
         case "elemasterymult":
@@ -366,7 +365,10 @@ function equip_stats_display_detail(index) {
     if (user_preferences.stats.detail[index]) {
         for (var i = 0; i < const_display_stats_columns[index].stats.length; i++) {
             var stat_id = const_display_stats_columns[index].stats[i];
-            parent.append(utils_create_stat(stat_id, output_party[user_objects.user_active_character].stats.total[stat_id]));
+            var stat_value = output_party[user_objects.user_active_character].stats.total[stat_id];
+            if (stat_id == main_stat_id || !const_display_stats_columns[index].hide || stat_value) {
+                parent.append(utils_create_stat(stat_id, stat_value));
+            }            
         }
     } else {
         main_stat_line.className += " detail_hidden";
@@ -501,7 +503,7 @@ function equip_stats_return_artifacts_stats(artifacts, sets) {
 
         for (var ii = 0; ii < const_artifact_sub_stats; ii++) {
             stats.push(
-                { "id": current_artifact.sub_stats[ii].id, "value": current_artifact.sub_stats[ii].value }
+                { "id": current_artifact.sub_stats[ii].id, "value": Number(current_artifact.sub_stats[ii].value) }
             );
         }
     }

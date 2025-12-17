@@ -305,7 +305,7 @@ function equip_character_update_stats(party_id) {
     }
 
     for (var i = 0; i < user_objects.user_party[party_id].constel; i++) {
-        if (character.const[i].hasOwnProperty("bonus")) {
+        if (character.const[i] && character.const[i].hasOwnProperty("bonus")) {
             for (var ii = 0; ii < character.const[i].bonus.length; ii++) {
                 stats_basic.push(
                     { "id": character.const[i].bonus[ii].stat, "value": character.const[i].bonus[ii].value }
@@ -316,7 +316,7 @@ function equip_character_update_stats(party_id) {
 
     for (var i = 0; i < character.passive.length; i++) {
         if (character.passive[i].level <= user_objects.user_party[party_id].level) {
-            if (character.passive[i].hasOwnProperty("bonus")) {
+            if (character.passive[i] && character.passive[i].hasOwnProperty("bonus")) {
                 for (var ii = 0; ii < character.passive[i].bonus.length; ii++) {
                     stats_basic.push(
                         { "id": character.passive[i].bonus[ii].stat, "value": character.passive[i].bonus[ii].value }
@@ -327,14 +327,18 @@ function equip_character_update_stats(party_id) {
     }
 
     for (var i = 0; i < output_resonances.length; i++) {
-        var resonance = utils_array_get_by_lookup(data_resonance, "id", output_resonances[i]);
-        for (var ii = 0; ii < resonance.bonus.length; ii++) {
-            if (resonance.bonus[ii].stat) {
-                stats_env.push(
-                    { "id": resonance.bonus[ii].stat, "value": resonance.bonus[ii].value }
-                );
+        if (output_resonances[i].active) {
+            var resonance = data_resonance[i];
+            for (var ii = 0; ii < resonance.bonus.length; ii++) {
+                if (resonance.bonus[ii].stat) {
+                    stats_env.push(
+                        { "id": resonance.bonus[ii].stat, "value": resonance.bonus[ii].value }
+                    );
+                }
             }
         }
+
+        
         
     }
 
@@ -362,28 +366,17 @@ function equip_character_update_stats(party_id) {
 
 function equip_character_update_resonance() {
     var active_resonances = [];
-    var visions = [];
-
-    for (var i = 0; i < const_party_size; i++) {
-        if (data_characters[user_objects.user_party[i].id].vision) {
-            visions.push(data_characters[user_objects.user_party[i].id].vision);
-        }
-    }
 
     for (var i = 0; i < data_resonance.length; i++) {
-        if (data_resonance[i].vision) {
-            if (visions.length == const_party_size && utils_array_count(visions, data_resonance[i].vision) >= data_resonance[i].req) {
-                active_resonances.push(data_resonance[i].id);
-            }
+        var count = equip_character_return_variable_count(data_resonance[i].req.type, data_resonance[i].req.value);
+        var active = false;
+        var hidden = false;
+        if (count >= data_resonance[i].req.count) {
+            active = true;
+        } else if (data_resonance[i].req.value === null) {
+            hidden = true;
         }
-    }
-
-    for (var i = 0; i < data_resonance.length; i++) {
-        if (!data_resonance[i].vision) {
-            if (visions.length == const_party_size && active_resonances.length == 0) {
-                active_resonances.push(data_resonance[i].id);
-            } 
-        }
+        active_resonances.push({ "count": count, "active": active, "hidden":hidden })
     }
 
     output_resonances = active_resonances;
@@ -426,7 +419,7 @@ function equip_character_display(party_id) {
 
     var character_id = user_objects.user_party[party_id].id;
     var character = data_characters[character_id];
-    var name = document.getElementById("character_name_" + party_id);
+    var name = document.getElementById("character_name_" + party_id);    
     var icon = document.getElementById("character_icon_" + party_id);
     var img = document.getElementById("character_img_" + party_id);
     var level = document.getElementById("character_level_" + party_id);
@@ -436,6 +429,7 @@ function equip_character_display(party_id) {
 
     name.innerHTML = character.name;
     name.className = "container_name " + character.vision;
+    equip_character_display_name_icons(party_id, character);
     icon.className = "character_icon " + character.vision;
     img.src = "/images/icons/character/" + character_id + "/char.png";
     level.className = "icon_selects character_level select_gradient l" + user_objects.user_party[party_id].level;
@@ -444,14 +438,29 @@ function equip_character_display(party_id) {
     constel_text.innerHTML = "C" + const_constel_list[user_objects.user_party[party_id].constel];
 }
 
+function equip_character_display_name_icons(party_id, character) {
+    var icons_right = document.getElementById("character_icons_right_" + party_id);
+    utils_delete_children(icons_right, 0);
+    if (character.nation) {
+        //icons_right.appendChild(utils_create_img_svg(character.nation));
+    }
+    for (var i = 0; i < const_character_groups.length; i++) {
+        if (character[const_character_groups[i]]) {
+            icons_right.appendChild(utils_create_img_svg(const_character_groups[i]));
+        }
+    }
+}
+
 function equip_character_display_resonance() {
 
     for (var i = 0; i < data_resonance.length; i++) {
-        if (output_resonances.includes(data_resonance[i].id)) {
-            document.getElementById("resonance_" + i).className = "resonance tooltip_trigger active";
-        } else {
-            document.getElementById("resonance_" + i).className = "resonance tooltip_trigger";
-        }
+        var resonance_class = "resonance tooltip_trigger count_" + output_resonances[i].count;
+        if (output_resonances[i].active) {
+            resonance_class += " active";
+        } else if (output_resonances[i].hidden || output_resonances[i].count === 0) {
+            resonance_class += " hidden";
+        } 
+        document.getElementById("resonance_" + i).className = resonance_class;
     }
 }
 
@@ -671,43 +680,30 @@ function equip_character_return_party_id_by_special(special_condition) {
             return highest_index;
 
             break;
+
         default:
             return
     }
 }
 
-function equip_character_return_vision_count(vision) {
+function equip_character_return_variable_count(var_name, var_value=true) {
     var count = 0;
-
-    if (vision == "unique") {
-        var visions = [];
-
+    if (var_value !== null) {
         for (var i = 0; i < const_party_size; i++) {
-            if (!visions.includes(data_characters[user_objects.user_party[i].id].vision)) {
-                visions.push(data_characters[user_objects.user_party[i].id].vision);
+            if (data_characters[user_objects.user_party[i].id][var_name] === var_value) {
                 count += 1;
-            }                
+            }
         }
-
     } else {
+        var unique_values = [];
         for (var i = 0; i < const_party_size; i++) {
-            if (data_characters[user_objects.user_party[i].id].vision == vision) {
+            if (!unique_values.includes(data_characters[user_objects.user_party[i].id][var_name])) {
+                unique_values.push(data_characters[user_objects.user_party[i].id][var_name]);
                 count += 1;
             }
         }
     }
-
     
-    return count;
-}
-
-function equip_character_return_nation_count(nation) {
-    var count = 0;
-    for (var i = 0; i < const_party_size; i++) {
-        if (data_characters[user_objects.user_party[i].id].nation == nation) {
-            count += 1;
-        }
-    }
     return count;
 }
 

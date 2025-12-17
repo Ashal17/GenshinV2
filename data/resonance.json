@@ -2,8 +2,12 @@
   {
     "id": 0,
     "name": "Protective Canopy",
-    "vision": false,
-    "req": false,
+    "icon": null,
+    "req": {
+      "type": "vision",
+      "value": null,
+      "count": 4
+    },
     "bonus": [
       {
         "stat": "elementalres",
@@ -14,8 +18,12 @@
   {
     "id": 1,
     "name": "Impetuous Winds",
-    "vision": "anemo",
-    "req": 2,
+    "icon": "anemo",
+    "req": {
+      "type": "vision",
+      "value": "anemo",
+      "count": 2
+    },
     "bonus": [
       {
         "stat": "stamina",
@@ -34,8 +42,12 @@
   {
     "id": 2,
     "name": "Shattering Ice",
-    "vision": "cryo",
-    "req": 2,
+    "icon": "cryo",
+    "req": {
+      "type": "vision",
+      "value": "cryo",
+      "count": 2
+    },
     "bonus": [
       {
         "stat": null,
@@ -54,8 +66,12 @@
   {
     "id": 3,
     "name": "Sprawling Greenery",
-    "vision": "dendro",
-    "req": 2,
+    "icon": "dendro",
+    "req": {
+      "type": "vision",
+      "value": "dendro",
+      "count": 2
+    },
     "bonus": [
       {
         "stat": "elemastery",
@@ -82,8 +98,12 @@
   {
     "id": 4,
     "name": "High Voltage",
-    "vision": "electro",
-    "req": 2,
+    "icon": "electro",
+    "req": {
+      "type": "vision",
+      "value": "electro",
+      "count": 2
+    },
     "bonus": [
       {
         "stat": null,
@@ -98,8 +118,12 @@
   {
     "id": 5,
     "name": "Enduring Rock",
-    "vision": "geo",
-    "req": 2,
+    "icon": "geo",
+    "req": {
+      "type": "vision",
+      "value": "geo",
+      "count": 2
+    },
     "bonus": [
       {
         "stat": "shield",
@@ -126,8 +150,12 @@
   {
     "id": 6,
     "name": "Soothing Water",
-    "vision": "hydro",
-    "req": 2,
+    "icon": "hydro",
+    "req": {
+      "type": "vision",
+      "value": "hydro",
+      "count": 2
+    },
     "bonus": [
       {
         "stat": null,
@@ -142,8 +170,12 @@
   {
     "id": 7,
     "name": "Fervent Flames",
-    "vision": "pyro",
-    "req": 2,
+    "icon": "pyro",
+    "req": {
+      "type": "vision",
+      "value": "pyro",
+      "count": 2
+    },
     "bonus": [
       {
         "stat": null,
@@ -152,6 +184,44 @@
       {
         "stat": "atk%",
         "value": 25
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Blessing of Moonlight",
+    "icon": "moonsign",
+    "req": {
+      "type": "moonsign",
+      "value": true,
+      "count": 2
+    },
+    "personal": true,
+    "bonus": [
+      {
+        "stat": null,
+        "value": "Non-Moonsign characters increase Lunar Reactions based on their stats up to {{36%}}",
+        "apply": {
+          "id": 2138,
+          "special": "blessing_of_moonlight",
+          "party": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Hexerei: Secret Rite",
+    "icon": "hexenzirkel",
+    "req": {
+      "type": "hexenzirkel",
+      "value": true,
+      "count": 2
+    },
+    "bonus": [
+      {
+        "stat": null,
+        "value": "The Hexerei Characters in the party have been further enhanced."
       }
     ]
   }

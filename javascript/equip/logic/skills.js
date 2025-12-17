@@ -165,7 +165,7 @@ function equip_skills_update_effects_dmg(party_id) {
             var avg = 0;
             var ncrt = 0;
             var crt = 0;
-
+            var detail = null;
             
             if (active_skill.attack_type == "reaction") {
                 var reaction_values = equip_skills_return_reaction_value(party_id, active_skill.part_id, active_skill.attack_id, i);
@@ -173,6 +173,7 @@ function equip_skills_update_effects_dmg(party_id) {
                 avg = reaction_dmg.avg;
                 ncrt = reaction_dmg.ncrt;
                 crt = reaction_dmg.crt;
+                detail = reaction_dmg.detail;
             } else {
                 var output_stats = output_party[party_id].skills.active.details[i].stats.total;               
                 var part_objects = equip_skills_return_attack_part_objects_simple(party_id, active_skill);
@@ -195,6 +196,7 @@ function equip_skills_update_effects_dmg(party_id) {
                 output_part.resistance = equip_skills_return_resistance(party_id, part_objects.part, vision, i);
                 output_part.crit = equip_skills_return_critrate(party_id, part_objects.part, vision, i);
                 output_part.critdmg = equip_skills_return_critdmg(party_id, part_objects.part, vision, i);
+                output_part.elevate = equip_skills_return_elevate(party_id, part_objects.part, i);
 
                 
                 if (active_skill.reaction) {
@@ -209,12 +211,13 @@ function equip_skills_update_effects_dmg(party_id) {
                 avg = result_dmg.avg;
                 ncrt = result_dmg.ncrt;
                 crt = result_dmg.crt;
+                detail = result_dmg.detail;
             }
 
             output_party[party_id].skills.active.details[i].avg = avg;
             output_party[party_id].skills.active.details[i].ncrt = ncrt;
             output_party[party_id].skills.active.details[i].crt = crt;
-            
+            output_party[party_id].skills.active.details[i].detail = detail;
         } 
     }
 }
@@ -382,6 +385,13 @@ function equip_skills_display_permanent_reaction(vision, reaction) {
     obj.appendChild(reaction_dmg_objects.crt);
     obj.appendChild(reaction_dmg_objects.avg);
 
+
+    if (reaction_dmg_objects.detail) {
+        var dmg_detail = reaction_dmg_objects.detail;
+        obj.appendChild(dmg_detail);
+        obj.onmouseover = function () { utils_update_frame_position_contain(this, dmg_detail, "bottom", false); };
+    }
+
     var active_btn = utils_create_obj("div", "skills_part_btn skills_part_btn_right");
     if (data_reactions[reaction].skilltype == "elemasteryadd") {
         var output_id = {
@@ -471,6 +481,12 @@ function equip_skills_display_permanent_attack_part(part, output_part, active) {
     obj.appendChild(part_dmg_objects.ncrt);
     obj.appendChild(part_dmg_objects.crt);
     obj.appendChild(part_dmg_objects.avg);
+
+    if (part_dmg_objects.detail) {
+        var dmg_detail = part_dmg_objects.detail;
+        obj.appendChild(dmg_detail);
+        obj.onmouseover = function () { utils_update_frame_position_contain(this, dmg_detail, "bottom", false); };
+    }
     
     var active_btn = utils_create_obj("div", "skills_part_btn skills_part_btn_right");
     if (active) {
@@ -548,21 +564,36 @@ function equip_skills_display_reaction_text(reaction) {
     return text
 }
 
+function equip_skills_display_part_dmg(output_part) {
+
+    if (output_part.detail) {
+        var dmg_detail = utils_create_obj("div", "skills_part_val_detail");
+        dmg_detail.appendChild(utils_create_stat("crit", output_part.detail.crit * 100));
+        dmg_detail.appendChild(utils_create_stat("critdmg", output_part.detail.critdmg * 100));
+    } else {
+        dmg_detail = null;
+    } 
+
+    return {
+        "ncrt": equip_skills_display_dmg(output_part, "ncrt"),
+        "crt": equip_skills_display_dmg(output_part, "crt"),
+        "avg": equip_skills_display_dmg(output_part, "avg"),
+        "detail": dmg_detail
+    };
+}
+
+function equip_skills_display_dmg(output_part, dmg_type) {
+    var dmg_obj = utils_create_obj("div", "skills_part_val", null, utils_number_format(output_part[dmg_type].toFixed(1)));
+    return dmg_obj;
+}
+
 function equip_skills_display_attack_part_value(part, output_part, reaction, count, effects) {
     if (effects) {
-        return {
-            "ncrt": utils_create_obj("div", "skills_part_val", null, utils_number_format(output_part.ncrt.toFixed(1))),
-            "crt": utils_create_obj("div", "skills_part_val", null, utils_number_format(output_part.crt.toFixed(1))),
-            "avg": utils_create_obj("div", "skills_part_val", null, utils_number_format(output_part.avg.toFixed(1)))
-        };
+        return equip_skills_display_part_dmg(output_part);
     } else {
         var vision = equip_skills_return_part_vision(part, user_objects.user_active_character, null);
         var part_dmg = equip_skills_return_part_dmg(part, output_part, output_party[user_objects.user_active_character].skills.bonusdmg, vision, reaction, count);
-        return {
-            "ncrt": utils_create_obj("div", "skills_part_val", null, utils_number_format(part_dmg.ncrt.toFixed(1))),
-            "crt": utils_create_obj("div", "skills_part_val", null, utils_number_format(part_dmg.crt.toFixed(1))),
-            "avg": utils_create_obj("div", "skills_part_val", null, utils_number_format(part_dmg.avg.toFixed(1)))
-        };
+        return equip_skills_display_part_dmg(part_dmg);
     } 
 }
 
@@ -577,11 +608,7 @@ function equip_skills_display_reaction_value(reaction, output_reaction, count, e
     switch (data_reactions[reaction].skilltype) {
 
         case "elemasteryadd":
-            var part_dmg_objects = {
-                "ncrt": utils_create_obj("div", "skills_part_val", null, utils_number_format(reaction_val.ncrt.toFixed(1))),
-                "crt": utils_create_obj("div", "skills_part_val", null, utils_number_format(reaction_val.crt.toFixed(1))),
-                "avg": utils_create_obj("div", "skills_part_val", null, utils_number_format(reaction_val.avg.toFixed(1)))
-            };
+            var part_dmg_objects = equip_skills_display_part_dmg(reaction_val);
             break;
         case "elemasterymult":
             var part_dmg_objects = {
@@ -685,7 +712,11 @@ function equip_skills_display_active_attack(active_skill, index) {
     if (part_objects) {
         var part = part_objects.part;
 
-        var vision = equip_skills_return_part_vision(part, user_objects.user_active_character, index);
+        if (part.reaction) {
+            var vision = data_reactions[part.reaction].vision;
+        } else {
+            var vision = equip_skills_return_part_vision(part, user_objects.user_active_character, index);
+        }
 
         var obj = utils_create_obj("div", "skills_part " + vision);
 
@@ -725,6 +756,12 @@ function equip_skills_display_active_attack(active_skill, index) {
         obj.appendChild(part_dmg_objects.ncrt);
         obj.appendChild(part_dmg_objects.crt);
         obj.appendChild(part_dmg_objects.avg);
+
+        if (part_dmg_objects.detail) {
+            var dmg_detail = part_dmg_objects.detail;
+            obj.appendChild(dmg_detail);
+            obj.onmouseover = function () { utils_update_frame_position_contain(this, dmg_detail, "bottom", false); };
+        }
 
         obj.appendChild(utils_create_img_btn("delete-forever", function () { equip_skills_change_delete_active(index) }, "Deactivate", null, "skills_part_btn skills_part_btn_right"));
 
@@ -775,6 +812,12 @@ function equip_skills_display_active_reaction(active_reaction, index) {
     obj.appendChild(reaction_dmg_objects.ncrt);
     obj.appendChild(reaction_dmg_objects.crt);
     obj.appendChild(reaction_dmg_objects.avg);
+
+    if (reaction_dmg_objects.detail) {
+        var dmg_detail = reaction_dmg_objects.detail;
+        obj.appendChild(dmg_detail);
+        obj.onmouseover = function () { utils_update_frame_position_contain(this, dmg_detail, "bottom", false); };
+    }
 
     var del_btn = utils_create_obj("div", "skills_part_btn skills_part_btn_right");
     del_btn.appendChild(utils_create_img_btn("delete-forever", function () { equip_skills_change_delete_active(index) }, "Deactivate", null));
@@ -848,6 +891,7 @@ function equip_skills_return_effects_output_dmg(party_id, index) {
         "avg": output_party[party_id].skills.active.details[index].avg,
         "ncrt": output_party[party_id].skills.active.details[index].ncrt,
         "crt": output_party[party_id].skills.active.details[index].crt,
+        "detail": output_party[party_id].skills.active.details[index].detail,
     }
 }
 
@@ -891,7 +935,10 @@ function equip_skills_return_damage(party_id, attack, attack_type) {
         var resistance = equip_skills_return_resistance(party_id, part, vision, null);
         var crit = equip_skills_return_critrate(party_id, part, vision, null);
         var critdmg = equip_skills_return_critdmg(party_id, part, vision, null);
-        var reactions = equip_skills_return_reactions(party_id, part);
+        var reactions = equip_skills_return_reactions(party_id, part);  
+        var elevate = equip_skills_return_elevate(party_id, part, null);
+        
+        
         if (part.damage && !part.reaction) {
             var defense = enemy_defense;
         } else {
@@ -900,7 +947,17 @@ function equip_skills_return_damage(party_id, attack, attack_type) {
         var id = { "attack_type": attack_type, "attack_id": attack.id, "part_id": part.id };
 
         result.push(
-            { "basic": basic_damage, "modifier": dmg_modifier, "resistance": resistance, "defense": defense, "crit": crit, "critdmg": critdmg, "id": id, "reactions": reactions }
+            {
+                "basic": basic_damage,
+                "modifier": dmg_modifier,
+                "resistance": resistance,
+                "defense": defense,
+                "crit": crit,
+                "critdmg": critdmg,
+                "elevate": elevate,
+                "id": id,
+                "reactions": reactions
+            }
         );
     }
     return result;
@@ -932,33 +989,15 @@ function equip_skills_return_basic_damage(party_id, part, level, skill_index = n
         var result = part.scale[level] / 100 * output_stats[part.stat];
     }
 
-    if (part.type || part.alt || part.alt2) {
-        if (part.type) {
-            if (part.alt) {
-                var mult_stat = part.type + "alt_mult";
-            } else if (part.alt2) {
-                var mult_stat = part.type + "alt2_mult";
-            } else {
-                var mult_stat = part.type + "_mult";
-            }
-        } else {
-            if (part.alt) {
-                var mult_stat = "alt_mult";
-            } else if (part.alt2) {
-                var mult_stat = "alt2_mult";
-            }
-        }
-        result *= output_stats[mult_stat] / 100;
-    }
-    
-    if (part.reaction) {
-        result *= data_reactions[part.reaction].direct_multiplier;
-    }
-
     if (part.flat) {
         result += part.flat[level];
     }
 
+    if (part.alt) {
+        result *= output_stats["alt" + part.alt + "_mult"] / 100;
+    } else if (part.type) {
+        result *= output_stats[part.type + "_mult"] / 100;
+    }
 
     return result;
     
@@ -1042,12 +1081,14 @@ function equip_skills_return_dmg_modifier(party_id, part, vision, skill_index = 
 
     var result = 100;
 
-    if (vision && damage && type) {
-        result += output_stats[type + vision] + output_stats["all"];
-    } else if (vision && damage) {
-        result += output_stats[vision] + output_stats["all"];
-    } else if (damage) {
+    if (damage) {
         result += output_stats["all"];
+
+        if (vision && type) {
+            result += output_stats[type + vision];
+        } else if (vision) {
+            result += output_stats[vision];
+        }
     } else if (type) {
         result += output_stats[type];
 
@@ -1056,23 +1097,34 @@ function equip_skills_return_dmg_modifier(party_id, part, vision, skill_index = 
         }
     }
 
+
     if (part.alt) {
-        if (type) {
-            result += output_stats[type + "alt"];
-        } else {
-            result += output_stats["alt"];
-        }        
+        result += output_stats["alt" + part.alt];
     }
-    if (part.alt2) {
-        if (type) {
-            result += output_stats[type + "alt2"];
-        } else {
-            result += output_stats["alt2"];
-        }
-    }
+
+    if (part.reaction) {
+        result *= data_reactions[part.reaction].direct_multiplier;
+        result *= (1 + output_stats[part.reaction + "_base"] / 100);
+    } 
 
     return result / 100;
 
+}
+
+function equip_skills_return_elevate(party_id, part, skill_index = null) {
+    var type = part.type;
+    var result = 1;
+
+    if (skill_index === null) {
+        var output_stats = output_party[party_id].stats.total;
+    } else {
+        var output_stats = output_party[party_id].skills.active.details[skill_index].stats.total;
+    }
+
+    if (type) {
+        result += output_stats[type + "_elevate"] / 100;
+    }
+    return result;
 }
 
 function equip_skills_return_resistance(party_id, part, vision, skill_index = null) {
@@ -1102,6 +1154,9 @@ function equip_skills_return_resistance_modifier(party_id, vision, skill_index =
 }
 
 function equip_skills_return_critrate(party_id, part, vision, skill_index = null) {
+    if (part.reaction) {
+        vision = data_reactions[part.reaction].vision;
+    }
     var crit = 0
     if (skill_index === null) {
         var output_stats = output_party[party_id].stats.total;
@@ -1112,15 +1167,10 @@ function equip_skills_return_critrate(party_id, part, vision, skill_index = null
         crit += output_stats["crit"]/100;
         if (part.type) {
             crit += output_stats["crit" + part.type] / 100;
-            if (part.alt) {
-                crit += output_stats["crit" + part.type + "alt"] / 100;
-            }else if (part.alt2) {
-                crit += output_stats["crit" + part.type + "alt2"] / 100;
-            }
-        } else if (part.alt) {
-            crit += output_stats["critalt"] / 100;
-        } else if (part.alt2) {
-            crit += output_stats["critalt2"] / 100;
+        }
+
+        if (part.alt) {
+            crit += output_stats["critalt" + part.alt] / 100;
         }
         
         if (vision) {
@@ -1137,6 +1187,9 @@ function equip_skills_return_critrate(party_id, part, vision, skill_index = null
 }
 
 function equip_skills_return_critdmg(party_id, part, vision, skill_index = null) {
+    if (part.reaction) {
+        vision = data_reactions[part.reaction].vision;
+    }
     var critdmg = 0
     if (skill_index === null) {
         var output_stats = output_party[party_id].stats.total;
@@ -1147,16 +1200,11 @@ function equip_skills_return_critdmg(party_id, part, vision, skill_index = null)
         critdmg += output_stats["critdmg"] / 100;
         if (part.type) {
             critdmg += output_stats["critdmg" + part.type] / 100;
-            if (part.alt) {
-                critdmg += output_stats["critdmg" + part.type + "alt"] / 100;
-            } else if (part.alt2) {
-                critdmg += output_stats["critdmg" + part.type + "alt"] / 100;
-            }
-        } else if (part.alt) {
-            critdmg += output_stats["critdmgalt"] / 100;
-        } else if (part.alt2) {
-            critdmg += output_stats["critdmgalt2"] / 100;
         }
+
+        if (part.alt) {
+            critdmg += output_stats["critdmgalt" + part.alt] / 100;
+        } 
         
         if (vision) {
             critdmg += output_stats["critdmg" + vision] / 100;
@@ -1193,7 +1241,7 @@ function equip_skills_return_reaction_value(party_id, reaction_name, vision, ski
         var bonusdmg = equip_skills_return_bonusdmg(party_id, skill_index);
     }
 
-    var reaction_mult = (1 + output_stats[reaction_name] / 100) * (output_stats[reaction_name + "_mult"] / 100);
+    var reaction_mult = (1 + output_stats[reaction_name] / 100) * (output_stats[reaction_name + "_mult"] / 100) * (1 + output_stats[reaction_name + "_base"] / 100);
 
     if (reaction.skilltype == "elemasterymult") {
         var result = reaction.multiplier[vision] * reaction_mult;
@@ -1220,6 +1268,7 @@ function equip_skills_return_reaction_value(party_id, reaction_name, vision, ski
                 "resistance": equip_skills_return_resistance_modifier(party_id, data_reactions[reaction_name].vision, skill_index) / 100,
                 "crit": crit,
                 "critdmg": critdmg,
+                "elevate": 1 + output_stats[reaction_name + "_elevate"] / 100,
                 "id": {
                     "attack_type":"reaction", "vision":vision, "reaction":reaction_name
                 }
@@ -1247,7 +1296,7 @@ function equip_skills_return_skill_level(party_id, attack_type, skill_index = nu
 }
 
 function equip_skills_return_part_vision(part, party_id, skill_index = null) {
-    if ((part.type == "normal" || part.type == "charged" || part.type == "plunge") && part.vision == "physical") {
+    if (equip_skills_return_infusable(part, party_id)) {
         if (skill_index !== null && output_party[party_id].skills.active.details[skill_index] && output_party[party_id].skills.active.details[skill_index].infusion) {
             return output_party[party_id].skills.active.details[skill_index].infusion;
         } else if (output_party[party_id].effects.infusion) {
@@ -1260,11 +1309,29 @@ function equip_skills_return_part_vision(part, party_id, skill_index = null) {
     }
 }
 
+function equip_skills_return_infusable(part, party_id) {
+    var infusable = false;
+    if (part.vision == "physical") {
+        if (part.type == "normal") {
+            infusable = true;
+        } else if ((part.type == "charged" || part.type == "plunge") && output_party[party_id].weapon_type != "bow") {
+            infusable = true;
+        }
+    }
+    return infusable;
+}
+
 function equip_skills_return_part_dmg(part, output_part, bonusdmg, vision, reaction_name = false, count = 1) {
 
     var result = output_part.basic;
 
-    result += equip_skills_return_part_bonusdmg(part, bonusdmg, vision);
+    var result_bonusdmg = equip_skills_return_part_bonusdmg(part, bonusdmg, vision);
+
+    if (part.reaction) {
+        result += equip_skills_return_part_bonusdmg_reaction_base(part, bonusdmg);
+    } else {
+        result += result_bonusdmg;
+    }
 
     if (reaction_name) {
         if (output_part.reactions[reaction_name].type == "elemasterymult") {
@@ -1275,8 +1342,14 @@ function equip_skills_return_part_dmg(part, output_part, bonusdmg, vision, react
     }
 
     result *= output_part.modifier;
+
+    if (part.reaction) {
+        result += result_bonusdmg;
+    }
+
     result *= output_part.resistance;
     result *= output_part.defense;
+    result *= output_part.elevate;
 
     if (count > 1) {
         result *= count;
@@ -1295,7 +1368,11 @@ function equip_skills_return_part_dmg(part, output_part, bonusdmg, vision, react
     var result_obj = {
         "ncrt": result_ncrt,
         "crt": result_crt,
-        "avg": result_avg
+        "avg": result_avg,
+        "detail": {
+            "crit": output_part.crit,
+            "critdmg": output_part.critdmg
+        }
     }
     
     return result_obj;
@@ -1308,36 +1385,37 @@ function equip_skills_return_part_bonusdmg(part, bonusdmg, vision) {
         result += bonusdmg.all.all;
     }
     if (part.reaction) {
-        result += bonusdmg[data_reactions[part.reaction].vision].all;
-    } else if (vision) {
+        vision = data_reactions[part.reaction].vision;
+        result += bonusdmg.reactions[part.reaction];
+    } else if (part.type) {
+        result += bonusdmg.all[part.type];
+    }
+
+    if (part.alt) {
+        result += bonusdmg.alt["alt" + part.alt];
+    } 
+
+    if (vision) {
         result += bonusdmg[vision].all;
 
         if (part.type && !part.reaction) {
             result += bonusdmg[vision][part.type];
-            if (part.alt) {
-                result += bonusdmg[vision][part.type + "alt"];
-            } else if (part.alt2) {
-                result += bonusdmg[vision][part.type + "alt2"];
-            }
-        }
-        
-    }
-    if (part.type && !part.reaction) {
-        result += bonusdmg.all[part.type];
-        if (part.alt) {
-            result += bonusdmg.all[part.type + "alt"];
-        } else if (part.alt2) {
-            result += bonusdmg.all[part.type + "alt2"];
-        }
-    } else if (part.alt) {
-        result += bonusdmg.all["alt"];
-    } else if (part.alt2) {
-        result += bonusdmg.all["alt2"];
+        }        
     }
     
-
     return result;
 
+}
+
+function equip_skills_return_part_bonusdmg_reaction_base(part, bonusdmg) {
+    var result = 0;
+    if (part.reaction) {
+        result += bonusdmg.reactions[part.reaction + "base"];
+        if (part.alt) {
+            result += bonusdmg.alt["alt" + part.alt +"base"];
+        }
+    }
+    return result;
 }
 
 function equip_skills_return_reaction_dmg(reaction, output_reaction, count) {
@@ -1345,6 +1423,7 @@ function equip_skills_return_reaction_dmg(reaction, output_reaction, count) {
     if (data_reactions[reaction].skilltype == "elemasteryadd") {
         var result = output_reaction.basic;
         result *= output_reaction.resistance;
+        result *= output_reaction.elevate;
 
         if (count > 1) {
             result *= count;
@@ -1364,7 +1443,11 @@ function equip_skills_return_reaction_dmg(reaction, output_reaction, count) {
     var result_obj = {
         "ncrt": result_ncrt,
         "crt": result_crt,
-        "avg": result_avg
+        "avg": result_avg,
+        "detail": {
+            "crit": output_reaction.crit,
+            "critdmg": output_reaction.critdmg
+        }
     }
 
     return result_obj;
@@ -1389,3 +1472,4 @@ function equip_skills_return_party_total_active() {
 
     return result_obj;
 }
+

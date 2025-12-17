@@ -99,11 +99,26 @@
     "vision": "physical"
   },
   "crystalize": {
-    "name": "Crystalize",
+    "name": "Crystallize",
     "type": "elemasterycrystalize",
     "skilltype": "elemasterycrystalize",
     "multiplier": 1,
     "vision": "geo"
+  },
+  "lunarcrystalize": {
+    "name": "Lunar-Crystallize",
+    "type": "elemasteryaddshared",
+    "crit": true,
+    "skilltype": "elemasteryadd",
+    "multiplier": 0.96,
+    "vision": "geo",
+    "direct_multiplier": 1.6
+  },
+  "lunarbloom": {
+    "name": "Lunar-Bloom",
+    "type": "elemasteryaddshared",
+    "vision": "dendro",
+    "direct_multiplier": 1
   },
   "rupture": {
     "name": "Rupture",

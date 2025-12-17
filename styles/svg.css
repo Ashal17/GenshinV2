@@ -361,9 +361,21 @@ background: none;
     mask-image: url(../images/svg/physical.svg);
     background-color: var(--white);
 }
+.svg-moonsign:before {
+    -webkit-mask-image: url(../images/svg/moonsign.svg);
+    mask-image: url(../images/svg/moonsign.svg);
+}
+.svg-hexenzirkel:before {
+    -webkit-mask-image: url(../images/svg/hexenzirkel.svg);
+    mask-image: url(../images/svg/hexenzirkel.svg);
+}
 .svg-lunarcharged:before {
     -webkit-mask-image: url(../images/svg/lunarcharged.svg);
     mask-image: url(../images/svg/lunarcharged.svg);
+}
+.svg-lunarbloom:before {
+    -webkit-mask-image: url(../images/svg/lunarbloom.svg);
+    mask-image: url(../images/svg/lunarbloom.svg);
 }
 .svg-enka:before {
     -webkit-mask-image: url(../images/svg/enka.svg);
