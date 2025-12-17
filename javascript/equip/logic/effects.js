@@ -417,14 +417,17 @@ function equip_effects_update_options(party_id) {
     var party_effect_list = [];
 
     for (var i = 0; i < output_resonances.length; i++) {
-        var resonance = utils_array_get_by_lookup(data_resonance, "id", output_resonances[i]);
-        if (!resonance.personal) {
-            for (var ii = 0; ii < resonance.bonus.length; ii++) {
-                if (resonance.bonus[ii].apply) {
-                    equip_effects_update_single_option(party_effect_list, resonance.bonus[ii].apply, false, 0, { "type": "svg", "id": resonance.icon, "name": resonance.name }, party_id)
+        if (output_resonances[i].active) {
+            var resonance = data_resonance[i];
+            if (!resonance.personal) {
+                for (var ii = 0; ii < resonance.bonus.length; ii++) {
+                    if (resonance.bonus[ii].apply) {
+                        equip_effects_update_single_option(party_effect_list, resonance.bonus[ii].apply, false, 0, { "type": "svg", "id": resonance.icon, "name": resonance.name }, party_id)
+                    }
                 }
-            }
-        }        
+            } 
+        }
+               
     }
 
     for (var i = 0; i < const_party_size; i++) {       
@@ -442,14 +445,16 @@ function equip_effects_update_character_options(effect_list, source_party, party
     var current_character = data_characters[user_objects.user_party[source_party].id];
 
     for (var i = 0; i < output_resonances.length; i++) {
-        var resonance = utils_array_get_by_lookup(data_resonance, "id", output_resonances[i]);
-        if (resonance.personal) {
-            for (var ii = 0; ii < resonance.bonus.length; ii++) {
-                if (resonance.bonus[ii].apply) {
-                    equip_effects_update_single_option(effect_list, resonance.bonus[ii].apply, party, 0, { "type": "svg", "id": resonance.icon, "name": current_character.name }, source_party, party_id)
+        if (output_resonances[i].active) {
+            var resonance = data_resonance[i];
+            if (resonance.personal) {
+                for (var ii = 0; ii < resonance.bonus.length; ii++) {
+                    if (resonance.bonus[ii].apply) {
+                        equip_effects_update_single_option(effect_list, resonance.bonus[ii].apply, party, 0, { "type": "svg", "id": resonance.icon, "name": current_character.name }, source_party, party_id)
+                    }
                 }
             }
-        }
+        }        
     }
 
     for (var i = 0; i < current_character.attacks.length; i++) {
@@ -573,6 +578,49 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             new_effect.id = apply.id + offset_val;
             new_effect.max_id = max_id;
             break;
+
+        case "plan_to_get_paid":
+            var pyro_count = equip_character_return_variable_count("vision", "pyro");
+            var hydro_count = equip_character_return_variable_count("vision", "hydro");
+            var electro_count = equip_character_return_variable_count("vision", "electro");
+            var cryo_count = equip_character_return_variable_count("vision", "cryo");
+            var constel = user_objects.user_party[source_party].constel;
+            var moonsign = equip_character_return_variable_count("moonsign");
+
+            var vision_counts = [pyro_count, hydro_count, electro_count, cryo_count];
+            vision_counts.sort().reverse();
+
+            new_effect.max_id = apply.id + 2;
+
+            var pyro = false;
+            var hydro = false;
+
+            if (moonsign >= 2 && constel >= 2) {
+                if (pyro_count >= 1 && pyro_count >= vision_counts[1]) {
+                    pyro = true;
+                }
+                if (hydro_count >= 1 && hydro_count >= vision_counts[1]) {
+                    hydro = true;
+                }
+            } else {
+                if (pyro_count >= 1 && pyro_count == vision_counts[0]) {
+                    pyro = true;
+                } else if (hydro_count >= 1 && hydro_count == vision_counts[0]) {
+                    hydro = true;
+                }
+            }
+
+            if (pyro && hydro) {
+                new_effect.id = apply.id + 2;
+            } else if (pyro) {
+                new_effect.id = apply.id;
+            } else if (hydro) {
+                new_effect.id = apply.id + 1;
+            }
+
+            
+            break;
+
         case "nightsoul":
             if (data_characters[user_objects.user_party[party_id].id].nightsoul) {
                 new_effect.id = apply.id;
@@ -662,12 +710,143 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             }
             break;
 
+        case "moonsign_2_personal_only":
+            var moonsign = equip_character_return_variable_count("moonsign");
+            if (moonsign >= 2 && data_characters[user_objects.user_party[party_id].id].moonsign) {
+
+                if (apply.offset) {
+                    var offset_val = apply.offset[offset] + apply.offset.length;
+                    var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length;
+                } else {
+                    var offset_val = 0;
+                    var max_id = apply.id + 1;
+                }
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = max_id;
+            }
+
+            break;
+
+        case "hexenzirkel_0_2":
+            var hexenzirkel = equip_character_return_variable_count("hexenzirkel");
+            if (hexenzirkel >= 2) {
+                hexenzirkel = 1;
+            } else {
+                hexenzirkel = 0;
+            }
+            if (apply.offset) {
+                var offset_val = apply.offset[offset] + hexenzirkel * apply.offset.length;
+                var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length;
+            } else {
+                var offset_val = hexenzirkel;
+                var max_id = apply.id + 1;
+            }
+
+            new_effect.id = apply.id + offset_val;
+            new_effect.max_id = max_id;
+
+
+            break;
+
+        case "hexenzirkel_2":
+            var hexenzirkel = equip_character_return_variable_count("hexenzirkel");
+            if (hexenzirkel >= 2) {
+                if (apply.offset) {
+                    var offset_val = apply.offset[offset];
+                    var max_id = apply.id + apply.offset.slice(-1)[0];
+                } else {
+                    var offset_val = 0;
+                    var max_id = apply.id;
+                }
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = max_id;
+            }
+            break;
+
+        case "hexenzirkel_2_personal":
+            var hexenzirkel = equip_character_return_variable_count("hexenzirkel");
+            if (hexenzirkel >= 2) {
+                var hexenzirkel_personal = 0;
+                if (data_characters[user_objects.user_party[party_id].id].hexenzirkel) {
+                    hexenzirkel_personal = 1;
+                }
+
+                if (apply.offset) {
+                    var offset_val = apply.offset[offset] + hexenzirkel_personal * apply.offset.length;
+                    var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length;
+                } else {
+                    var offset_val = hexenzirkel_personal;
+                    var max_id = apply.id + 1;
+                }
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = max_id;
+            }
+
+            break;
+
+        case "hexenzirkel_personal":
+            var hexenzirkel_personal = 0;
+            if (data_characters[user_objects.user_party[party_id].id].hexenzirkel) {
+                hexenzirkel_personal = 1;
+            }
+
+            if (apply.offset) {
+                var offset_val = apply.offset[offset] + hexenzirkel_personal * apply.offset.length;
+                var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length;
+            } else {
+                var offset_val = hexenzirkel_personal;
+                var max_id = apply.id + 1;
+            }
+            new_effect.id = apply.id + offset_val;
+            new_effect.max_id = max_id;
+
+            break;
+
+        case "hexenzirkel_2_personal_only":
+            var hexenzirkel = equip_character_return_variable_count("hexenzirkel");
+            if (hexenzirkel >= 2 && data_characters[user_objects.user_party[party_id].id].hexenzirkel) {
+
+                if (apply.offset) {
+                    var offset_val = apply.offset[offset] + apply.offset.length;
+                    var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length;
+                } else {
+                    var offset_val = 0;
+                    var max_id = apply.id + 1;
+                }
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = max_id;
+            }
+
+            break;
+
+        case "phantasmal_nocturne":
+            var hexenzirkel = equip_character_return_variable_count("hexenzirkel");
+            if (hexenzirkel >= 2) {
+                var const_effect_ids = equip_effects_return_const_offset(source_party, apply, offset, [6]);
+                new_effect.id = const_effect_ids.id;
+                new_effect.max_id = const_effect_ids.max_id;               
+            }
+            break;
+
         case "veil_of_falsehood":
             var moonsign = equip_character_return_variable_count("moonsign");
             if (moonsign >= 2) {
                 var const_effect_ids = equip_effects_return_const_offset(source_party, apply, offset, [2]);
                 new_effect.id = const_effect_ids.id;
                 new_effect.max_id = const_effect_ids.max_id;
+            }
+
+            break;
+
+        case "selenic_adeptus":
+            var moonsign = equip_character_return_variable_count("moonsign");
+            if (moonsign >= 2) {
+                var const_effect_ids = equip_effects_return_const_offset(source_party, apply, offset, [2]);
+                new_effect.id = const_effect_ids.id;
+                new_effect.max_id = const_effect_ids.max_id;
+            } else {
+                new_effect.id = apply.id;
+                new_effect.max_id = apply.id + 1;
             }
 
             break;
@@ -694,9 +873,10 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
 
                 new_effect.id = apply.id + offset_val;
                 new_effect.max_id = apply.id + 3;
-            } 
+            }
 
             break;
+
         case "lithic":
             var liyue_count = equip_character_return_variable_count("nation", "liyue");;
             if (liyue_count > 0) {
@@ -765,6 +945,20 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             }            
             break;
 
+        case "geo_2_3_4":
+            var geo_count = equip_character_return_variable_count("vision", "geo");
+            if (geo_count > 1) {
+                var max_id = apply.id + 2;
+                var offset_val = geo_count - 2;
+                if (offset_val > 2) {
+                    offset_val = 2;
+                }
+
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = max_id;
+            }
+            break;
+
         case "hydro_0_1_2":
             var hydro_count = equip_character_return_variable_count("vision", "hydro");
 
@@ -784,6 +978,20 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             new_effect.id = apply.id + offset_val;
             new_effect.max_id = max_id;
             
+            break;
+
+        case "hydro_1_2_3":
+            var hydro_count = equip_character_return_variable_count("vision", "hydro");
+            if (hydro_count > 0) {
+                var max_id = apply.id + 2;
+                var offset_val = hydro_count - 1;
+                if (offset_val > 2) {
+                    offset_val = 2;
+                }
+
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = max_id;
+            }
             break;
 
         case "pyro_1_2_3":
@@ -880,7 +1088,7 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             new_effect.max_id = max_id;
             break;
 
-        case "fontaine":
+        case "fontaine_count":
             var fontaine_count = equip_character_return_variable_count("nation", "fontaine");
             var max_id = apply.id + 3;
             var offset_val = fontaine_count - 1;
@@ -939,6 +1147,12 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
 
         case "const_6":
             var const_effect_ids = equip_effects_return_const_offset(source_party, apply, offset, [6]);
+            new_effect.id = const_effect_ids.id;
+            new_effect.max_id = const_effect_ids.max_id;
+            break;
+
+        case "const_2_3_4_5_6":
+            var const_effect_ids = equip_effects_return_const_offset(source_party, apply, offset, [2,3,4,5,6]);
             new_effect.id = const_effect_ids.id;
             new_effect.max_id = const_effect_ids.max_id;
             break;
@@ -1003,6 +1217,9 @@ function equip_effects_update_active_options_sub(party_id, skill_index) {
 
             if (user_effect.selected == false && user_effect.option == 0) {
                 user_effects.splice(i, 1);
+            } else if (!equip_effects_return_selected_option(user_effect)) {
+                utils_log_debug("Resetting effect option id: " + user_effect.id);
+                user_effect.option = 0;
             } else {
                 for (var ii = 0; ii < output_party[party_id].effects["character"].length; ii++) {
                     var output_effect = output_party[party_id].effects["character"][ii];

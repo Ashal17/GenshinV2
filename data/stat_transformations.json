@@ -128,27 +128,7 @@
       "mods": [ 0, 100 ]
     },
     {
-      "stat": "normalalt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "normalalt2_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
       "stat": "charged_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "chargedalt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "chargedalt2_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     },
@@ -158,27 +138,7 @@
       "mods": [ 0, 100 ]
     },
     {
-      "stat": "plungealt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "plungealt2_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
       "stat": "skill_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "skillalt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "skillalt2_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     },
@@ -188,27 +148,7 @@
       "mods": [ 0, 100 ]
     },
     {
-      "stat": "burstalt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "burstalt2_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
       "stat": "healing_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "healingalt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "healingalt2_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     },
@@ -218,22 +158,17 @@
       "mods": [ 0, 100 ]
     },
     {
-      "stat": "shieldalt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "shieldalt2_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "alt_mult",
+      "stat": "alt1_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     },
     {
       "stat": "alt2_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "alt3_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     },
@@ -283,16 +218,6 @@
       "mods": [ 0, 100 ]
     },
     {
-      "stat": "lunarchargedalt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "lunarchargedalt2_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
       "stat": "superconduct_mult",
       "change": "default",
       "mods": [ 0, 100 ]
@@ -304,16 +229,6 @@
     },
     {
       "stat": "lunarbloom_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "lunarbloomalt_mult",
-      "change": "default",
-      "mods": [ 0, 100 ]
-    },
-    {
-      "stat": "lunarbloomalt2_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     },
@@ -356,6 +271,11 @@
 
     {
       "stat": "crystalize_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "lunarcrystalize_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     }
@@ -1066,6 +986,11 @@
       "stat": "crystalize",
       "change": "add",
       "mods": [ "elemasterycrystalize" ]
+    },
+    {
+      "stat": "lunarcrystalize",
+      "change": "add",
+      "mods": [ "elemasteryaddshared" ]
     }
   ]
 

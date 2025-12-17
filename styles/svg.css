@@ -365,6 +365,10 @@ background: none;
     -webkit-mask-image: url(../images/svg/moonsign.svg);
     mask-image: url(../images/svg/moonsign.svg);
 }
+.svg-hexenzirkel:before {
+    -webkit-mask-image: url(../images/svg/hexenzirkel.svg);
+    mask-image: url(../images/svg/hexenzirkel.svg);
+}
 .svg-lunarcharged:before {
     -webkit-mask-image: url(../images/svg/lunarcharged.svg);
     mask-image: url(../images/svg/lunarcharged.svg);

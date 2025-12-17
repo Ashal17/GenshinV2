@@ -107,11 +107,21 @@
         padding: 0px;
     }
 
+    .container_character .container_namerow .namerow_right {
+        display:flex;
+        flex-direction:row;
+    }
+
+    .container_character .container_namerow .namerow_right .img_svg {
+        height:21px;
+        padding:2px;
+    }
+
 .container_resonance {
     padding: 2px 5px;
     width: calc(100% - 60px);
     min-width: 202px;
-    justify-content: space-between;
+    //justify-content: space-between;
 }
 
 
@@ -313,14 +323,20 @@
 }
 
 .resonance {
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    align-items:center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 0px;
 }
 
-    .resonance:not(.active) .resonance_icons .svg:before {
-        background-color: var(--grey-50) ;
+    .resonance .count_0 {
+        display:none;
+    }
+
+    .resonance:not(.active):not(.count_1):not(.count_2) .resonance_icons .resonance_0 .svg:before,
+    .resonance:not(.active):not(.count_2) .resonance_icons .resonance_1 .svg:before {
+        background-color: var(--grey-50);
     }
 
     .resonance:not(.active) .resonance_name {
@@ -333,8 +349,8 @@
 }
 
     .resonance_icons .img_svg {
-        height: 16px;
-        width: 16px;
+        height: 20px;
+        width: 20px;
         padding-left: 3px;
     }
 
@@ -664,7 +680,7 @@
     background-image: linear-gradient(to right, var(--orange-bg) 90%, transparent 0%);
 }
 
-.character_level.l13 {
+.character_level.l13, .character_level.l14, .character_level.l15 {
     background: var(--orange-bg);
 }
 

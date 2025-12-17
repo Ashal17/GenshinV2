@@ -7,7 +7,7 @@ window_frame_ids = [
 ];
 
 async function equip_load_all_data() {
-    var ver = "?20251022";
+    var ver = "?20251205";
 
     data_characters = await utils_load_json("/data/characters.json" + ver);
     data_enemies = await utils_load_json("/data/enemies.json" + ver);
@@ -174,6 +174,9 @@ function equip_setup_ui_character(index) {
     var char_name = utils_create_obj("p", "container_name", "character_name_" + index, "None");
     name_row.appendChild(char_name);
 
+    var char_icons_right = utils_create_obj("div", "namerow_right", "character_icons_right_" + index);
+    name_row.appendChild(char_icons_right);
+
     var row = utils_create_obj("div", "container_subrow");
     obj.appendChild(row);
       
@@ -237,7 +240,7 @@ function equip_setup_ui_resonance() {
         resonance.appendChild(resonance_icons);
         if (data_resonance[i].icon) {
             for (var ii = 0; ii < data_resonance[i].req.count; ii++) {
-                resonance_icons.appendChild(utils_create_img_svg(data_resonance[i].icon));
+                resonance_icons.appendChild(utils_create_img_svg(data_resonance[i].icon, null, "resonance_" + ii));
             }
         }
 
@@ -730,17 +733,20 @@ function equip_setup_default_stats() {
         default_bonusdmg[const_bonusdmg_visions[i]] = {};
         for (var ii = 0; ii < const_bonusdmg_types.length; ii++) {
             default_bonusdmg[const_bonusdmg_visions[i]][const_bonusdmg_types[ii]] = 0;
-            default_bonusdmg[const_bonusdmg_visions[i]][const_bonusdmg_types[ii] + "alt"] = 0;
-            default_bonusdmg[const_bonusdmg_visions[i]][const_bonusdmg_types[ii] + "alt2"] = 0;
         }
-        default_bonusdmg[const_bonusdmg_visions[i]]["alt"] = 0;
-        default_bonusdmg[const_bonusdmg_visions[i]]["alt2"] = 0;
     }
     default_bonusdmg.reactions = {};
     for (let reaction_id in data_reactions) {
         default_bonusdmg.reactions[reaction_id] = 0;
         default_bonusdmg.reactions[reaction_id + "base"] = 0;
-    }    
+    }  
+    default_bonusdmg.alt = {};
+    default_bonusdmg.alt.alt1 = 0;
+    default_bonusdmg.alt.alt2 = 0;
+    default_bonusdmg.alt.alt3 = 0;
+    default_bonusdmg.alt.alt1base = 0;
+    default_bonusdmg.alt.alt2base = 0;
+    default_bonusdmg.alt.alt3base = 0;
 
     default_artifact = {};
     default_artifact.id = 0

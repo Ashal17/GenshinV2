@@ -21,12 +21,12 @@
   },
   "geo": {
     "name": "Geo",
-    "reactions": [ "crystalize" ],
+    "reactions": [ "crystalize", "lunarcrystalize" ],
     "reactions_mod": []
   },
   "hydro": {
     "name": "Hydro",
-    "reactions": [ "vaporize", "electrocharged", "lunarcharged", "swirlhydro", "rupture" ],
+    "reactions": [ "vaporize", "electrocharged", "lunarcharged", "swirlhydro", "rupture", "lunarcrystalize" ],
     "reactions_mod": [ "vaporize" ]
   },
   "pyro": {

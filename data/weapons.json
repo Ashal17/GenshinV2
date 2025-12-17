@@ -2623,6 +2623,158 @@
           "id": "unknown_regular"
         }
       ]
+    },
+    {
+      "id": 46,
+      "enka_id": 15515,
+      "name": "The Daybreak Chronicles",
+      "icon": "6_2_bow",
+      "type": "bow",
+      "rarity": 5,
+      "atk_base": 47.54,
+      "stats": [
+        {
+          "stat": "critdmg",
+          "type": "level",
+          "value": 9.6
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Gain the Time's Rhapsody effect for 3s after leaving combat: Normal Attack/Elemental Skill/Elemental Burst DMG is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 60.0, 75.0, 90.0, 105.0, 120.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". The equipping character can trigger this effect while off-field.While in combat, the Time's Rhapsody effect will decrease by "
+        },
+        {
+          "type": "refine",
+          "value": [ 10.0, 12.5, 15.0, 17.5, 20.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " per second until it reaches 0%. When a Normal Attack/Elemental Skill/Elemental Burst hits an opponent, the Time's Rhapsody effect for the corresponding DMG type is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 10.0, 12.5, 15.0, 17.5, 20.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " until it reaches "
+        },
+        {
+          "type": "refine",
+          "value": [ 60.0, 75.0, 90.0, 105.0, 120.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". Two Witches: The above effect for when opponents are hit is changed so that hits increase the Time's Rhapsody effect for all DMG types by "
+        },
+        {
+          "type": "refine",
+          "value": [ 20.0, 25.0, 30.0, 35.0, 40.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". Each type of DMG-type increase can be triggered once every 0.1s. The equipping character can trigger this effect while off-field."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2289,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        },
+        {
+          "id": 2294,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        },
+        {
+          "id": 2299,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Dawning Song of Daybreak",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "enka_id": 15434,
+      "name": "Rainbow Serpent's Rain Bow",
+      "icon": "6_2_event_bow",
+      "type": "bow",
+      "rarity": 4,
+      "atk_base": 42.4,
+      "stats": [
+        {
+          "stat": "recharge",
+          "type": "level",
+          "value": 10.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "ATK is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 28.0, 35.0, 42.0, 49.0, 56.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for 8s when the character's attacks hit an opponent while the character is off-field."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2304,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Astral Whispers Beyond the Sacred Throne",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
     }
   ],
   "catalyst": [
@@ -5609,6 +5761,82 @@
         }
       ],
       "effect_name": "Nocturnal Dreams",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "enka_id": 14522,
+      "name": "Nocturne’s Curtain Call",
+      "icon": "nocturne_s_curtain_call",
+      "type": "catalyst",
+      "rarity": 5,
+      "atk_base": 44.34,
+      "stats": [
+        {
+          "stat": "critdmg",
+          "type": "level",
+          "value": 19.2
+        },
+        {
+          "stat": "hp%",
+          "type": "refine",
+          "value": [ 10.0, 12.0, 14.0, 16.0, 18.0 ]
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "After triggering Lunar reactions or inflicting Lunar Reaction DMG, the equipping character will recover "
+        },
+        {
+          "type": "refine",
+          "value": [ 12.0, 13.0, 14.0, 15.0, 16.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": "Energy, and receive the Bountiful Sea's Sacred Wine effect for 12s: Max HP increases by an additional "
+        },
+        {
+          "type": "refine",
+          "value": [ 14.0, 16.0, 18.0, 20.0, 22.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ", Crit DMG from Lunar Reaction DMG increases by"
+        },
+        {
+          "type": "refine",
+          "value": [ 60.0, 80.0, 100.0, 120.0, 140.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". This effect can be triggered at most once every 18s, and can be triggered even when the equipping character is off-field."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2398,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Ballad of the Crossroads",
       "ascension": [
         {
           "type": "item",
@@ -13014,7 +13242,141 @@
           "special": "energy_60_40"
         }
       ],
-      "effect_name": "Secret Silver�s Testament",
+      "effect_name": "Secret Silver's Testament",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "enka_id": 11518,
+      "name": "Athame Artis",
+      "icon": "6_2_sword",
+      "type": "sword",
+      "rarity": 5,
+      "atk_base": 45.94,
+      "stats": [
+        {
+          "stat": "crit",
+          "type": "level",
+          "value": 7.2
+        },
+        {
+          "stat": "critdmgburst",
+          "type": "refine",
+          "value": [ 16.0, 20.0, 24.0, 28.0, 32.0 ]
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "After an Elemental Burst hits an opponent, gain Limpid for 3s: ATK is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 20, 25, 30, 35, 40 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ", and ATK for current active characters excluding the equipping character is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 16, 20, 24, 28, 30 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". Additionally, when the party activates Witchcraft effects, the effects of Limpid are further increased by 75%. The equipping character can trigger this effect while off-field."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2269,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "special": "hexenzirkel_0_2"
+        },
+        {
+          "id": 2279,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "party": true,
+          "noself": true,
+          "special": "hexenzirkel_0_2"
+        }
+      ],
+      "effect_name": "Day King's Splendor Solis",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "enka_id": 11519,
+      "name": "Lightbearing Moonshard",
+      "icon": "lightbearing_moonshard",
+      "type": "sword",
+      "rarity": 5,
+      "atk_base": 44.34,
+      "stats": [
+        {
+          "stat": "critdmg",
+          "type": "level",
+          "value": 19.2
+        },
+        {
+          "stat": "def%",
+          "type": "refine",
+          "value": [ 20.0, 25.0, 30.0, 35.0, 40.0 ]
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "DMG inflicted by Lunar-Crystallize reactions increases by "
+        },
+        {
+          "type": "refine",
+          "value": [ 64.0, 80.0, 96.0, 112.0, 128.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for 5s after the equipping character uses an Elemental Skill."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2437,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Legacy of Lang-Gan",
       "ascension": [
         {
           "type": "item",

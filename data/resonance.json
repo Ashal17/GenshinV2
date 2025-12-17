@@ -208,5 +208,21 @@
         }
       }
     ]
+  },
+  {
+    "id": 9,
+    "name": "Hexerei: Secret Rite",
+    "icon": "hexenzirkel",
+    "req": {
+      "type": "hexenzirkel",
+      "value": true,
+      "count": 2
+    },
+    "bonus": [
+      {
+        "stat": null,
+        "value": "The Hexerei Characters in the party have been further enhanced."
+      }
+    ]
   }
 ]

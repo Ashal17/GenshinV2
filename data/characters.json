@@ -187,7 +187,7 @@
           {
             "id": 0,
             "name": "Inherited HP",
-            "type": "",
+            "type": null,
             "vision": "physical",
             "stat": "hp",
             "crit": false,
@@ -1065,7 +1065,7 @@
             "id": 2,
             "name": "Charge Level 1 (2/2)",
             "type": "skill",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -1807,6 +1807,7 @@
     "vision": "electro",
     "rarity": 4,
     "nation": "mondstadt",
+    "hexenzirkel": true,
     "stats": [
       {
         "stat": "hp_base",
@@ -1901,7 +1902,7 @@
             "id": 6,
             "name": "Fully-Charged Aimed Shot",
             "type": "charged",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "electro",
             "stat": "atk",
@@ -1960,7 +1961,7 @@
           {
             "id": 1,
             "name": "Summoning",
-            "alt": true,
+            "alt": 2,
             "type": "skill",
             "damage": true,
             "vision": "electro",
@@ -2067,7 +2068,7 @@
       },
       {
         "name": "Evernight Raven",
-        "desc": "Extends the duration of Oz's presence on the field by 2s. Additionally, Oz attacks with your active character when present, dealing 30% of Fischl's ATK as Electro DMG.",
+        "desc": "Extends the duration of Oz's presence on the field by 2s. Additionally, Oz attacks with your active character when present, dealing 30% of Fischl's ATK as Electro DMG.<br>After Oz performs a coordinated attack, the increased ATK and Elemental Mastery effects of Witch's Eve Rite: Phantasmal Nocturne are further increased by 100% for 10s.",
         "attacks": [
           {
             "type": "skill",
@@ -2108,7 +2109,6 @@
         "level": 8,
         "attacks": [
           {
-            "type": "skill",
             "name": "Undone Be Thy Sinful Hex",
             "parts": [
               {
@@ -2118,10 +2118,27 @@
                 "vision": "electro",
                 "stat": "atk",
                 "crit": true,
-                "scale": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+                "scale": [ 80 ]
               }
             ],
             "id": 0
+          }
+        ]
+      },
+      {
+        "name": "Witch's Eve Rite: Phantasmal Nocturne",
+        "desc": "After completing Witch's Homework: Of the Unexpected, Fischl will become a Magic character. When the party includes at least 2 Magic characters, you will gain the Hexerei: Secret Rite effect, which enhances Magic characters.Hexerei: Secret RiteHark, Prince Nachtraben, Ozvaldo Hrafnavins, he who has witnessed the fall of countless worlds. Sing now the starry septet for your sovereign, for this is the moment of deepest sin, when the gathered souls at the end of causality shatter the darkness of fate.Additionally, when Oz is on the field, party members will gain additional buff effects:<br> After a nearby party member triggers an Overloaded reaction, Fischl and other nearby active party members have their ATK increased by 22.5% for 10s.<br> After a nearby party member triggers an Electro-Charged or Lunar-Charged reaction, Fischl and other nearby active party members have their Elemental Mastery increased by 90 for 10s.",
+        "level": 8,
+        "apply": [
+          {
+            "id": 2383,
+            "party": true,
+            "special": "phantasmal_nocturne"
+          },
+          {
+            "id": 2385,
+            "party": true,
+            "special": "phantasmal_nocturne"
           }
         ]
       }
@@ -3065,6 +3082,7 @@
     "vision": "pyro",
     "rarity": 5,
     "nation": "mondstadt",
+    "hexenzirkel": true,
     "stats": [
       {
         "stat": "hp_base",
@@ -3219,14 +3237,19 @@
     "const": [
       {
         "name": "Chained Reactions",
-        "desc": "Attacks and Skills have a certain chance to summon sparks that bombard enemies, dealing DMG equal to 120% of Sparks 'n' Splash's DMG.",
-        "apply": {
-          "id": 1740
-        }
+        "desc": "Attacks and Skills have a certain chance to summon sparks that bombard opponents, dealing DMG equal to 120% of Sparks 'n' Splash's DMG.For 12s after triggering the above effect, Klee's ATK is increased by 60%.",
+        "apply": [
+          {
+            "id": 1740
+          },
+          {
+            "id": 2354
+          }
+        ]
       },
       {
         "name": "Explosive Frags",
-        "desc": "Being hit by Jumpy Dumpty's mines decreases enemy DEF by 23% for 10s.",
+        "desc": "When Klee deals Elemental Skill DMG to an opponent, that opponent's DEF will be decreased by 23% for 10s.",
         "apply": {
           "id": 48,
           "party": true
@@ -3244,26 +3267,29 @@
       },
       {
         "name": "Sparkly Explosion",
-        "desc": "If Klee leaves the field during the duration of Sparks 'n' Splash, her departure triggers an explosion that deals 555% of her ATK as AoE Pyro DMG.",
+        "desc": "An explosion will be triggered if Klee leaves the field while Sparks 'n' Splash is active or when Sparks 'n' Splash ends, dealing 555% of ATK as AoE Pyro DMG. If Klee is on-field when the explosion occurs, its DMG will be increased by 100%.",
         "attacks": [
           {
-            "type": "burst",
             "name": "Sparkly Explosion",
             "parts": [
               {
                 "id": 0,
                 "name": "Sparkly Explosion",
-                "type": "",
+                "type": null,
+                "alt": 1,
                 "damage": true,
                 "vision": "pyro",
                 "stat": "atk",
                 "crit": true,
-                "scale": [ 555, 555, 555, 555, 555, 555, 555, 555, 555, 555, 555, 555, 555, 555, 555 ]
+                "scale": [ 555 ]
               }
             ],
             "id": 0
           }
-        ]
+        ],
+        "apply": {
+          "id": 2355
+        }
       },
       {
         "name": "Nova Burst",
@@ -3277,11 +3303,17 @@
       },
       {
         "name": "Blazing Delight",
-        "desc": "While under the effects of Sparks 'n' Splash, Klee will regenerate 3 Energy for all members of the party (excluding Klee) every 3s. When Sparks 'n' Splash is used, all party members will gain a 10% Pyro DMG Bonus for 25s.",
-        "apply": {
-          "id": 49,
-          "party": true
-        }
+        "desc": "While under the effects of Sparks 'n' Splash, Klee will regenerate 3 Energy for all members of the party (excluding Klee) every 3s.For 25s after Sparks 'n' Splash is used, all other party members will gain a 10% Pyro DMG Bonus, and Klee will gain a 50% Pyro DMG Bonus.Hexerei: Secret Rite<br> When Klee uses an Explosive Spark, there is a 50% chance it will not be consumed. Additionally, while Sparks 'n' Splash is active, Klee's Normal Attacks have a 40% chance on the first and second hits to consume an Explosive Spark, dealing an additional attack equivalent to Boom-Boom Strike to her opponent(s).",
+        "apply": [
+          {
+            "id": 49,
+            "party": true,
+            "noself": true
+          },
+          {
+            "id": 2356
+          }
+        ]
       }
     ],
     "passive": [
@@ -3292,7 +3324,7 @@
       },
       {
         "name": "Pounding Surprise",
-        "desc": "When Jumpy Dumpty and Normal Attacks deal DMG, Klee has a 50% chance to obtain an Explosive Spark. This Explosive Spark is consumed by the next Charged Attack, which costs no Stamina and deals 50% increased DMG.",
+        "desc": "When Klee's Elemental Skill Jumpy Dumpty and Normal Attacks deal DMG, there is a 50% chance to grant her an Explosive Spark. Using her Elemental Skill Jumpy Dumpty or Elemental Burst Sparks 'n' Splash also grants 1 Explosive Spark. Klee can hold up to 3 Explosive Sparks.While holding an Explosive Spark, Klee's Charged Attack will consume 1 Spark to perform a special stamina-free Charged Attack, Boom-Boom Strike, dealing 50% increased DMG.Hexerei: Secret RiteDuring the duration of Klee's Elemental Burst Sparks 'n' Splash, her Normal Attack sequence does not reset. If Klee holds an Explosive Spark while performing Normal Attacks, the third attack in the sequence will consume 1 Spark to unleash an additional attack equivalent to Boom-Boom Strike.",
         "level": 2,
         "apply": {
           "id": 47
@@ -3302,6 +3334,15 @@
         "name": "Sparkling Burst",
         "desc": "When Klee's Charged Attack results in a CRIT, all party members gain 2 Elemental Energy.",
         "level": 8
+      },
+      {
+        "name": "Witch's Eve Rite: Sparkborne Magic",
+        "desc": "After completing Witch's Homework: Of Leaves That Spark, Klee will become a Magic character. When the party includes at least 2 Magic characters, you will gain the Hexerei: Secret Rite effect, which enhances Magic characters.Hexerei: Secret RiteWhen Klee deals DMG with Normal Attacks, Elemental Skill, or Elemental Burst, she gains 1 Boom Badge, lasting 20s. Each type of attack can grant at most 1 Boom Badge this way, and each badge has its own independent timer. While Klee has 1/2/3 Boom Badges, her special Charged Attack Boom-Boom Strike deals 115%/130%/150% of its original DMG.",
+        "level": 8,
+        "apply": {
+          "id": 2353,
+          "special": "hexenzirkel_2"
+        }
       }
     ],
     "ascension": [
@@ -3603,6 +3644,7 @@
     "vision": "hydro",
     "rarity": 5,
     "nation": "mondstadt",
+    "hexenzirkel": true,
     "stats": [
       {
         "stat": "hp_base",
@@ -3772,7 +3814,7 @@
     "const": [
       {
         "name": "Prophecy of Submersion",
-        "desc": "When any of your own party members hits an opponent affected by an Omen, the effects of Hydro-related Elemental Reactions are enhanced for 8s:<br>Electro-Charged DMG increases by 15 %.<br>Vaporize DMG increases by 15 %.<br>Hydro Swirl DMG increases by 15 %.<br>Frozen duration is extended by 15 %.",
+        "desc": "When any of your own party members hits an opponent affected by an Omen, the effects of Hydro-related Elemental Reactions are enhanced for 8s:<br> Electro-Charged DMG increases by 15%.<br> Vaporize DMG increases by 15%.<br> Hydro Swirl DMG increases by 15%.<br> Frozen duration is extended by 15%.Additionally, when your off-field party members trigger the above effect, the DMG Bonus to the above Hydro-related Elemental Reactions is enhanced to 160% of its original effect.",
         "apply": {
           "id": 52,
           "party": true
@@ -3780,7 +3822,11 @@
       },
       {
         "name": "Lunar Chain",
-        "desc": "When a Normal Attack hits, there is a 20% chance that it will be automatically followed by a Charged Attack. This effect can only occur once every 5s."
+        "desc": "When a Normal Attack hits, there is a 20% chance that it will be automatically followed by a Charged Attack.This effect can only occur once every 5s.Additionally, within 5s after Mona unleashes her Elemental Burst Stellaris Phantasm, her next Normal Attack that hits an enemy will automatically trigger a Charged Attack.When Mona's Charged Attack hits an opponent, all nearby party members will have their Elemental Mastery increased by 80 for 12s.",
+        "apply": {
+          "id": 2363,
+          "party": true
+        }
       },
       {
         "name": "Restless Revolution",
@@ -3794,10 +3840,11 @@
       },
       {
         "name": "Prophecy of Oblivion",
-        "desc": "When any party member attacks an opponent affected by an Omen, their CRIT Rate is increased by 15%.",
+        "desc": "When any party member attacks an opponent affected by an Omen, their CRIT Rate is increased by 15%.When any Magic party member attacks an opponent affected by an Omen, their CRIT DMG is increased by 15%.",
         "apply": {
-          "id": 53,
-          "party": true
+          "id": 2364,
+          "party": true,
+          "special": "hexenzirkel_personal"
         }
       },
       {
@@ -3812,10 +3859,15 @@
       },
       {
         "name": "Rhetorics of Calamitas",
-        "desc": "Upon entering Illusory Torrent, Mona gains a 60% increase to the DMG of her next Charged Attack per second of movement. A maximum DMG Bonus of 180% can be achieved in this manner.The effect lasts for no more than 8s.",
-        "apply": {
-          "id": 54
-        }
+        "desc": "When Mona enters Illusory Torrent or there are opponents affected by an Omen nearby, she gains a 60% increase to the DMG of her next Charged Attack per second. A maximum DMG Bonus of 180% can be achieved in this manner. The effect lasts for no more than 8s.Additionally, the DMG Mona's Charged Attacks deal to opponents affected by an Omen will be increased to 200% of the original DMG.",
+        "apply": [
+          {
+            "id": 53
+          },
+          {
+            "id": 54
+          }
+        ]
       }
     ],
     "passive": [
@@ -3839,6 +3891,16 @@
         "apply": {
           "id": 82,
           "auto": true
+        }
+      },
+      {
+        "name": "Witch's Eve Rite: Genesis of Starsigns",
+        "desc": "After completing Witch's Homework: Of Untested Insight, Mona will become a Magic character. When the party includes at least 2 Magic characters, you will gain the Hexerei: Secret Rite effect, which enhances Magic characters.Hexerei: Secret RiteWhen Mona's Normal Attacks or Charged Attacks hit an opponent, she gains 1 stack of Astral Glow of Mercury, for 8s. Max 3 stacks. This effect can grant at most one stack every 0.1s. When other party members trigger a Vaporize reaction on an enemy, all Astral Glow of Mercury stacks are consumed. Each stack consumed increases the damage of that Vaporize reaction by 10%.Additionally, when Mona's Normal Attacks or Charged Attacks hit an opponent, the enemy's Omen duration is extended by 2s. This effect can trigger at most once every 0.5s, and can extend the Omen by up to 8s through this method.",
+        "level": 8,
+        "apply": {
+          "id": 2362,
+          "party": true,
+          "special": "hexenzirkel_2"
         }
       }
     ],
@@ -3967,7 +4029,7 @@
           {
             "id": 0,
             "name": "Inherited HP",
-            "type": "",
+            "type": null,
             "vision": "physical",
             "stat": "hp",
             "crit": false,
@@ -4697,6 +4759,7 @@
     "vision": "electro",
     "rarity": 4,
     "nation": "mondstadt",
+    "hexenzirkel": true,
     "stats": [
       {
         "stat": "hp_base",
@@ -4816,6 +4879,50 @@
             "stat": "atk",
             "crit": true,
             "scale": [ 186.29, 201.45, 216.62, 238.28, 253.44, 270.77, 294.6, 318.42, 342.25, 368.25, 394.24, 420.23, 446.23, 472.22, 498.21 ]
+          },
+          {
+            "id": 9,
+            "name": "1-Hit - Soul Companion",
+            "type": "burst",
+            "alt": 1,
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 79.12, 85.56, 92, 101.2, 107.64, 115, 125.12, 135.24, 145.36, 156.4, 167.44, 178.48, 189.52, 200.56, 211.6 ]
+          },
+          {
+            "id": 10,
+            "name": "2-Hit - Soul Companion",
+            "type": "burst",
+            "alt": 1,
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 73.36, 79.33, 85.3, 93.83, 99.8, 106.63, 116.01, 125.39, 134.77, 145.01, 155.25, 165.48, 175.72, 185.95, 196.19 ]
+          },
+          {
+            "id": 11,
+            "name": "3-Hit - Soul Companion",
+            "type": "burst",
+            "alt": 1,
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 86.26, 93.28, 100.3, 110.33, 117.35, 125.38, 136.41, 147.44, 158.47, 170.51, 182.55, 194.58, 206.62, 218.65, 230.69 ]
+          },
+          {
+            "id": 12,
+            "name": "4-Hit - Soul Companion",
+            "type": "burst",
+            "alt": 1,
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 113.43, 122.67, 131.9, 145.09, 154.32, 164.88, 179.38, 193.89, 208.4, 224.23, 240.06, 255.89, 271.71, 287.54, 303.37 ]
           }
         ]
       },
@@ -4865,7 +4972,12 @@
             "crit": true,
             "scale": [ 160, 172, 184, 200, 212, 224, 240, 256, 272, 288, 304, 320, 340, 360, 380 ]
           }
-        ]
+        ],
+        "apply": {
+          "id": 2368,
+          "auto": true,
+          "offset": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+        }
       }
     ],
     "const": [
@@ -4913,10 +5025,9 @@
       },
       {
         "name": "Lupus Fulguris",
-        "desc": "Every 10s, Razor's sword charges up, causing the next Normal Attack to release lightning that deals 100% of Razor's ATK as Electro DMG. When Razor is not using Lightning Fang, a lightning strike on an enemy will grant Razor an Electro Sigil for Claw and Thunder.",
+        "desc": "Every 10s, Razor's sword charges up, causing the next Normal Attack to release lightning that deals 100% of Razor's ATK as Electro DMG.When Razor is not using Lightning Fang, lightning strikes on an opponent will grant 3 Electro Sigils for his Elemental Skill Claw and Thunder.Additionally, when Razor gains Electro Sigils through his Elemental Skill Claw and Thunder, he will gain 3 Sigils instead.For 15s after consuming Electro Sigils, Razor's CRIT Rate is increased by 10% and CRIT DMG by 50%.",
         "attacks": [
           {
-            "type": "normal",
             "name": "Lupus Fulguris",
             "parts": [
               {
@@ -4927,12 +5038,15 @@
                 "vision": "electro",
                 "stat": "atk",
                 "crit": true,
-                "scale": [ 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100 ]
+                "scale": [ 100 ]
               }
             ],
             "id": 0
           }
-        ]
+        ],
+        "apply": {
+          "id": 2366
+        }
       }
     ],
     "passive": [
@@ -4952,6 +5066,33 @@
         "level": 8,
         "apply": {
           "id": 59
+        }
+      },
+      {
+        "name": "Witch's Eve Rite: Surge of Lightning",
+        "desc": "After completing Witch's Homework: Of the Little Wolf Pack, Razor will become a Magic character. When the party includes at least 2 Magic characters, you will gain the Hexerei: Secret Rite effect, which enhances Magic characters.Additionally, Razor's Elemental Burst Lightning Fang is enhanced: The Wolf Within's DMG dealt is increased by 70% of Razor's ATK.Hexerei: Secret RiteWhile the Wolf Within summoned by Razor's Elemental Burst Lightning Fang is active, if the Electro Sigils from Razor's Elemental Skill Claw and Thunder overflow, the Wolf Within will call down a lightning strike on nearby enemies, dealing AoE Electro DMG equal to 150% of Razor's ATK and restoring 7 Energy to Razor. This effect can be triggered once every 1s.",
+        "level": 8,
+        "attacks": [
+          {
+            "name": "Surge of Lightning",
+            "parts": [
+              {
+                "id": 0,
+                "name": "Lupus Fulguris",
+                "type": false,
+                "damage": true,
+                "vision": "electro",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 150 ]
+              }
+            ],
+            "id": 0
+          }
+        ],
+        "apply": {
+          "id": 2367,
+          "auto": true
         }
       }
     ],
@@ -4984,6 +5125,7 @@
     ],
     "rarity": 4,
     "nation": "mondstadt",
+    "hexenzirkel": true,
     "stats": [
       {
         "stat": "hp_base",
@@ -5210,10 +5352,11 @@
       },
       {
         "name": "Chaotic Entropy",
-        "desc": "If Forbidden Creation - Isomer 75 / Type II triggers an Elemental Absorption, all party members gain a 20% Elemental DMG Bonus for the corresponding absorbed element during its duration.",
+        "desc": "If Forbidden Creation - Isomer 75 / Type II triggers an Elemental Absorption, all party members gain a 20% Elemental DMG Bonus for the corresponding absorbed element, and nearby Magic characters in the party gain an additional 8.57142% Elemental DMG Bonus for the corresponding absorbed element during its duration.",
         "apply": {
-          "id": 64,
-          "party": true
+          "id": 2389,
+          "party": true,
+          "special": "hexenzirkel_personal"
         }
       }
     ],
@@ -5242,6 +5385,23 @@
           "party": true,
           "noself": true
         }
+      },
+      {
+        "name": "Witch's Eve Rite: Sevenfold Transmutation",
+        "desc": "After completing Witch's Homework: Of Wonderland Flowers, Sucrose will become a Magic character. When the party includes at least 2 Magic characters, you will gain the Hexerei: Secret Rite effect, which enhances Magic characters.Hexerei: Secret Rite<br> After creating a Small Wind Spirit, nearby party members' Normal Attack, Charged Attack, Plunging Attack, Elemental Skill, and Elemental Burst DMG are increased by 5.71428% for 15s.<br> After creating a Large Wind Spirit, nearby Magic party members' Normal Attack, Charged Attack, Plunging Attack, Elemental Skill, and Elemental Burst DMG are increased by 7.14285% for 20s.",
+        "level": 8,
+        "apply": [
+          {
+            "id": 2387,
+            "party": true,
+            "special": "hexenzirkel_2"
+          },
+          {
+            "id": 2388,
+            "party": true,
+            "special": "hexenzirkel_2_personal_only"
+          }
+        ]
       }
     ],
     "ascension": [
@@ -5879,6 +6039,7 @@
     ],
     "rarity": 5,
     "nation": "mondstadt",
+    "hexenzirkel": true,
     "stats": [
       {
         "stat": "hp_base",
@@ -6019,7 +6180,12 @@
             "crit": true,
             "scale": [ 141.93, 153.49, 165.04, 181.54, 193.1, 206.3, 224.45, 242.61, 260.76, 280.57, 300.37, 320.18, 339.98, 359.79, 379.59 ]
           }
-        ]
+        ],
+        "apply": {
+          "id": 2332,
+          "offset": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
+          "special": "hexenzirkel_2"
+        }
       },
       {
         "id": 1,
@@ -6113,18 +6279,29 @@
     "const": [
       {
         "name": "Splitting Gales",
-        "desc": "Fires 2 additional arrows per Aimed Shot, each dealing 33% of the original arrow's DMG.",
-        "apply": {
-          "id": 1820
-        }
+        "desc": "Fires 2 additional arrows per Aimed Shot, each dealing 33% of the original arrow's DMG. Additionally, 2 additional arrows that track opponents will be fired per Windsunder Arrow, each dealing 20% of the original arrow's DMG. This effect can be triggered once every 0.25s.",
+        "apply": [
+          {
+            "id": 1820
+          },
+          {
+            "id": 2350,
+            "special": "hexenzirkel_2"
+          }
+        ]
       },
       {
         "name": "Breeze of Reminiscence",
-        "desc": "Skyward Sonnet decreases enemy Anemo RES and Physical RES by 12% for 10s. Enemies launched by Skyward Sonnet suffer an additional 12% Anemo RES and Physical RES decrease while airborne.",
-        "apply": {
-          "id": 67,
-          "party": true
-        }
+        "desc": "Skyward Sonnet decreases opponents' Anemo RES and Physical RES by 24% for 10s.Additionally, after unleashing the Elemental Burst Wind's Grand Ode, Venti gains the Wherever a Breeze Blows effect, and the cooldown for his Elemental Skill Skyward Sonnet is reset. After a Windsunder Arrow hits an opponent, there is also a 25% chance for Venti to gain the Wherever a Breeze Blows effect.Wherever a Breeze BlowsWhen pressing to unleash the Elemental Skill Skyward Sonnet, 300% of the original amount of DMG is dealt. This effect lasts for 15s and is removed after Venti presses to use the Elemental Skill Skyward Sonnet.",
+        "apply": [
+          {
+            "id": 2351
+          },
+          {
+            "id": 67,
+            "party": true
+          }
+        ]
       },
       {
         "name": "Ode to Thousand Winds",
@@ -6138,9 +6315,10 @@
       },
       {
         "name": "Hurricane of Freedom",
-        "desc": "When Venti picks up an Elemental Orb or Particle, he receives a 25% Anemo DMG Bonus for 10s.",
+        "desc": "After unleashing his Elemental Skill Skyward Sonnet or Elemental Burst Wind's Grand Ode, Venti and his own active party members gain a 25% Anemo DMG Bonus for 10s.",
         "apply": {
-          "id": 68
+          "id": 68,
+          "party": true
         }
       },
       {
@@ -6155,11 +6333,16 @@
       },
       {
         "name": "Storm of Defiance",
-        "desc": "Targets who take DMG from Wind's Grand Ode have their Anemo RES decreased by 20%. If an Elemental Absorption occurred, then their RES towards the corresponding Element is also decreased by 20%.",
-        "apply": {
-          "id": 69,
-          "party": true
-        }
+        "desc": "Targets who take DMG from Wind's Grand Ode have their Anemo RES decreased by 20%.If an Elemental Absorption occurred, then their RES towards the corresponding Element is also decreased by 20%.Additionally, the DMG Venti deals to these opponents will gain a CRIT DMG Bonus of 100%.",
+        "apply": [
+          {
+            "id": 2352
+          },
+          {
+            "id": 69,
+            "party": true
+          }
+        ]
       }
     ],
     "passive": [
@@ -6177,6 +6360,22 @@
         "name": "Stormeye",
         "desc": "Regenerates 15 Energy for Venti after the effects of Wind's Grand Ode end. If an Elemental Absorption occurred, this also restores 15 Energy to all characters of that corresponding element in the party.",
         "level": 8
+      },
+      {
+        "name": "Witch's Eve Rite: Temporal Wind's Eulogy",
+        "desc": "After completing Witch's Homework: On the Waking of Wind, Venti will become a Magic character. When the party includes at least 2 Magic characters, you will gain the Hexerei: Secret Rite effect, which enhances Magic characters.Hexerei: Secret RiteWhile the Stormeye created by the Elemental Burst Wind's Grand Ode is active, for 4s after a nearby active character triggers a Swirl reaction, that character's DMG is increased by 50%, and the Stormeye deals 135% of its original DMG.",
+        "level": 8,
+        "apply": [
+          {
+            "id": 2348,
+            "special": "hexenzirkel_2"
+          },
+          {
+            "id": 2349,
+            "party": true,
+            "special": "hexenzirkel_2"
+          }
+        ]
       }
     ],
     "ascension": [
@@ -7964,7 +8163,7 @@
             "id": 0,
             "name": "Skill",
             "type": "burst",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "physical",
             "stat": "atk",
@@ -7997,7 +8196,7 @@
         "desc": "Riff Revolution's Physical DMG has its Crit Rate increased by 100%, and will form a shield at Shield Level 3: Rave when cast.",
         "bonus": [
           {
-            "stat": "critburstalt",
+            "stat": "critalt1",
             "value": 100
           }
         ]
@@ -8083,6 +8282,7 @@
     "vision": "geo",
     "rarity": 5,
     "nation": "mondstadt",
+    "hexenzirkel": true,
     "stats": [
       {
         "stat": "hp_base",
@@ -8236,6 +8436,7 @@
             "id": 1,
             "name": "Transient Blossom",
             "type": "skill",
+            "alt": 1,
             "damage": true,
             "vision": "geo",
             "stat": "def",
@@ -8277,14 +8478,35 @@
     "const": [
       {
         "name": "Flower of Eden",
-        "desc": "Transient Blossoms generated by Albedo's Abiogenesis: Solar Isotoma regenerate 1.2 Energy for Albedo."
+        "desc": "Transient Blossoms generated by Albedo's Elemental Skill Abiogenesis: Solar Isotoma regenerate 1.2 Energy for Albedo.Additionally, the use of Albedo's Elemental Skill Abiogenesis: Solar Isotoma also increases his DEF by 50% for the next 20s.",
+        "apply": {
+          "id": 2360
+        }
       },
       {
         "name": "Opening of Phanerozoic",
-        "desc": "Transient Blossoms generated by Abiogenesis: Solar Isotoma grant Albedo Fatal Reckoning for 30s:<br>Unleashing Rite of Progeniture: Tectonic Tide consumes all stacks of Fatal Reckoning. Each stack of Fatal Reckoning consumed increases the DMG dealt by Fatal Blossoms and Rite of Progeniture: Tectonic Tide's burst DMG by 30% of Albedo's DEF.<br>This effect stacks up to 4 times.",
+        "desc": "Transient Blossoms generated by the Elemental Skill Abiogenesis: Solar Isotoma grant Albedo Fatal Reckoning for 30s:<br> Unleashing the Elemental Burst Rite of Progeniture: Tectonic Tide consumes all stacks of Fatal Reckoning. Each stack of Fatal Reckoning consumed increases the DMG dealt by Fatal Blossoms and Rite of Progeniture: Tectonic Tide's burst DMG by 30% of Albedo's DEF.<br> This effect stacks up to 4 times.Additionally, when Albedo is not on the field and when the stack count of Fatal Reckoning reaches 4, all stacks of Fatal Reckoning are consumed. This generates 3 Fatal Blossoms near your character, which will violently bloom to deal AoE Geo DMG equal to 300% of Albedo's DEF, DMG that will also be considered Elemental Burst DMG. Where the Passive Talent Homuncular Nature has also been unlocked, the Elemental Mastery of nearby party members will also increase by 125 for 10s.",
         "apply": {
           "id": 687
-        }
+        },
+        "attacks": [
+          {
+            "name": "Opening of Phanerozoic",
+            "parts": [
+              {
+                "id": 0,
+                "name": "Fatal Blossom",
+                "type": "burst",
+                "damage": true,
+                "vision": "geo",
+                "stat": "def",
+                "crit": true,
+                "scale": [ 300 ]
+              }
+            ],
+            "id": 0
+          }
+        ]
       },
       {
         "name": "Grace of Helios",
@@ -8298,7 +8520,7 @@
       },
       {
         "name": "Descent of Divinity",
-        "desc": "Solar Isotoma increases Plunging Attack DMG by 30% for active party members within the AoE.",
+        "desc": "Active party members within the Solar Isotoma field have their Plunging Attack DMG increased by 30%.Additionally, when a nearby active character on the team jumps near an Silver Isotoma, the Silver Isotoma will be destroyed while greatly increasing the height of that jump, and for the next 3s, said character can deal 30% more Plunging Attack DMG. This effect is removed 0.1s after Plunging Attack DMG is dealt.",
         "apply": {
           "id": 138,
           "party": true
@@ -8316,11 +8538,16 @@
       },
       {
         "name": "Dust of Purification",
-        "desc": "Active party members within the Solar Isotoma field who are protected by a shield created by Crystallize have their DMG increased by 17%.",
-        "apply": {
-          "id": 137,
-          "party": true
-        }
+        "desc": "Active party members within the Solar Isotoma field who are protected by a shield created by Crystallize have their DMG increased by 17%.Additionally, use of the Elemental Burst Rite of Progeniture: Tectonic Tide destroys all Silver Isotomas present on the field, and whenever a Silver Isotoma is destroyed this way the current instance of Elemental Burst will also remove 4 stacks of Fatal Reckoning from the Constellation Opening of Phanerozoic. This increases the DMG dealt by Fatal Blossom by 250% of Albedo's DEF for the next 20s.",
+        "apply": [
+          {
+            "id": 2361
+          },
+          {
+            "id": 137,
+            "party": true
+          }
+        ]
       }
     ],
     "passive": [
@@ -8331,11 +8558,17 @@
       },
       {
         "name": "Calcite Might",
-        "desc": "Transient Blossoms generated by Abiogenesis: Solar Isotoma deal 25% more DMG to opponents whose HP is below 50%.",
+        "desc": "Transient Blossoms generated by the Elemental Skill Abiogenesis: Solar Isotoma deal 25% more DMG to opponents whose HP is below 50%.Additionally, when the Transient Blossoms deal DMG to opponents, the DMG dealt is increased by 120% of Albedo's DEF for each Silver Isotoma on the field that was created by Albedo.",
         "level": 2,
-        "apply": {
-          "id": 139
-        }
+        "apply": [
+          {
+            "id": 139
+          },
+          {
+            "id": 2357,
+            "special": "hexenzirkel_2"
+          }
+        ]
       },
       {
         "name": "Homuncular Nature",
@@ -8343,6 +8576,16 @@
         "level": 8,
         "apply": {
           "id": 140,
+          "party": true
+        }
+      },
+      {
+        "name": "Witch's Eve Rite: Primum Mobile",
+        "desc": "After completing Witch's Homework: Beyond the Lesson, Albedo will become a Magic character. When the party includes at least 2 Magic characters, you will gain the Hexerei: Secret Rite effect, which enhances Magic characters.Hexerei: Secret Rite<br> Dealing Elemental Skill DMG to opponents within 20s of using an Elemental Skill will generate Silver Isotomas near opponents that last for 10s. When there are no Solar Isotomas created by Albedo on the field, and as long as Albedo is not downed, a Silver Isotoma will begin generating Transient Blossoms, just as Solar Isotomas would. There can be up to two Silver Isotomas generated by Albedo on the field at any one time.<br> After creating a Solar Isotoma, nearby party members' Normal Attack, Charged Attack, Plunging Attack, Elemental Skill, and Elemental Burst DMG are increased by 4% for every 1,000 DEF Albedo has for 20s. The maximum increase that can be achieved this way is 12%.<br> After generating a Silver Isotoma, nearby Magic party members' Normal Attack, Charged Attack, Plunging Attack, Elemental Skill, and Elemental Burst DMG are increased by 10% for every 1,000 DEF Albedo has for 20s. The maximum increase that can be achieved this way is 30%.",
+        "level": 8,
+        "apply": {
+          "id": 2358,
+          "special": "hexenzirkel_2_personal",
           "party": true
         }
       }
@@ -8484,7 +8727,7 @@
             "id": 8,
             "name": "Frostflake Arrow",
             "type": "charged",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -8495,7 +8738,7 @@
             "id": 9,
             "name": "Frostflake Arrow Bloom",
             "type": "charged",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -8544,7 +8787,7 @@
           {
             "id": 0,
             "name": "Inherited HP",
-            "type": "",
+            "type": null,
             "vision": "physical",
             "stat": "hp",
             "crit": false,
@@ -10067,7 +10310,7 @@
               "specialmeteratk"
             ],
             "crit": true,
-            "alt": true,
+            "alt": 1,
             "scale": [
               [ 367.05, 396.92, 426.8, 469.48, 499.36, 533.5, 580.45, 627.4, 674.34, 725.56, 784.25, 853.26, 922.27, 991.29, 1066.57 ],
               [ 74.99, 81.1, 87.2, 95.92, 102.02, 109, 118.59, 128.18, 137.78, 148.24, 160.23, 174.33, 188.43, 202.53, 217.91 ]
@@ -10796,7 +11039,7 @@
             "id": 1,
             "name": "Muji Muji Daruma",
             "type": "burst",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "anemo",
             "stat": "atk",
@@ -10817,7 +11060,7 @@
             "id": 3,
             "name": "Muji Muji Daruma Regeneration",
             "type": "healing",
-            "alt": true,
+            "alt": 2,
             "vision": "anemo",
             "stat": "atk",
             "crit": false,
@@ -11651,7 +11894,7 @@
             "id": 1,
             "name": "Falling Thunder",
             "type": "burst",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "electro",
             "stat": "atk",
@@ -12852,7 +13095,7 @@
             "vision": "hydro",
             "stat": "hp",
             "crit": false,
-            "alt": true,
+            "alt": 1,
             "scale": [ 4.4, 4.73, 5.06, 5.5, 5.83, 6.16, 6.6, 7.04, 7.48, 7.92, 8.36, 8.8, 9.35, 9.9, 10.45 ],
             "flat": [ 424, 466, 512, 561, 614, 671, 731, 795, 862, 932, 1006, 1084, 1165, 1250, 1338 ]
           }
@@ -12883,7 +13126,7 @@
             "vision": "hydro",
             "stat": "hp",
             "crit": false,
-            "alt2": true,
+            "alt": 2,
             "scale": [ 0.81, 0.87, 0.93, 1.01, 1.07, 1.13, 1.21, 1.29, 1.37, 1.45, 1.54, 1.62, 1.72, 1.82, 1.92 ],
             "flat": [ 77, 85, 93, 102, 112, 122, 133, 144, 157, 169, 183, 197, 212, 227, 243 ]
           }
@@ -13187,7 +13430,7 @@
             "id": 1,
             "name": "Fiery Collapse",
             "type": "burst",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -13371,7 +13614,7 @@
           {
             "id": 4,
             "name": "Arataki Kesagiri Combo Slash",
-            "alt": true,
+            "alt": 1,
             "type": "charged",
             "damage": true,
             "vision": "physical",
@@ -13382,7 +13625,7 @@
           {
             "id": 5,
             "name": "Arataki Kesagiri Final Slash",
-            "alt": true,
+            "alt": 1,
             "type": "charged",
             "damage": true,
             "vision": "physical",
@@ -14868,7 +15111,7 @@
             "vision": "hydro",
             "stat": "atk",
             "crit": true,
-            "alt": true,
+            "alt": 1,
             "scale": [ 52.89, 57.2, 61.5, 67.65, 71.96, 76.88, 83.64, 90.41, 97.17, 104.55, 111.93, 119.31, 126.69, 134.07, 141.45 ]
           },
           {
@@ -14879,7 +15122,7 @@
             "vision": "hydro",
             "stat": "atk",
             "crit": true,
-            "alt": true,
+            "alt": 1,
             "scale": [ 58.91, 63.71, 68.5, 75.35, 80.15, 85.63, 93.16, 100.7, 108.23, 116.45, 124.67, 132.89, 141.11, 149.33, 157.55 ]
           },
           {
@@ -14890,7 +15133,7 @@
             "vision": "hydro",
             "stat": "atk",
             "crit": true,
-            "alt": true,
+            "alt": 1,
             "scale": [ 64.93, 70.22, 75.5, 83.05, 88.34, 94.38, 102.68, 110.99, 119.29, 128.35, 137.41, 146.47, 155.53, 164.59, 173.65 ]
           }
         ],
@@ -15124,7 +15367,7 @@
             "name": "Breakthrough Barb",
             "type": "charged",
             "damage": true,
-            "alt": true,
+            "alt": 1,
             "vision": "hydro",
             "stat": "hp",
             "crit": true,
@@ -15468,7 +15711,7 @@
             "id": 1,
             "name": "Grass Ring of Sanctification Healing",
             "type": "healing",
-            "alt": true,
+            "alt": 1,
             "damage": false,
             "vision": "electro",
             "stat": "hp",
@@ -16115,7 +16358,7 @@
               {
                 "id": 0,
                 "name": "Jinni Toop",
-                "type": "",
+                "type": null,
                 "damage": true,
                 "vision": "electro",
                 "stat": "atk",
@@ -17257,7 +17500,7 @@
             "name": "Luminous Illusion",
             "type": "skill",
             "damage": true,
-            "alt": true,
+            "alt": 1,
             "vision": "hydro",
             "stat": "hp",
             "crit": true,
@@ -17311,7 +17554,7 @@
         "desc": "Dance of the Seven Realms will be enhanced as follows:<br>Luminous Illusion DMG is increased by 65%.<br>The Tranquility Aura’s duration is extended by 6s.",
         "bonus": [
           {
-            "stat": "skillalt",
+            "stat": "alt1",
             "value": 65
           }
         ]
@@ -17549,7 +17792,7 @@
             "stat": "atk",
             "crit": true,
             "scale": [ 156.8, 168.56, 180.32, 196, 207.76, 219.52, 235.2, 250.88, 266.56, 282.24, 297.92, 313.6, 333.2, 352.8, 372.4 ],
-            "alt2": true
+            "alt": 2
           }
         ]
       },
@@ -17568,7 +17811,7 @@
             "vision": "electro",
             "stat": "atk",
             "crit": true,
-            "alt": true,
+            "alt": 1,
             "scale": [ 78.28, 84.66, 91.03, 100.13, 106.5, 113.78, 123.8, 133.81, 143.82, 154.75, 165.67, 176.59, 187.52, 198.44, 209.36 ]
           },
           {
@@ -17579,7 +17822,7 @@
             "vision": "electro",
             "stat": "atk",
             "crit": true,
-            "alt": true,
+            "alt": 1,
             "scale": [ 82.47, 89.18, 95.89, 105.48, 112.2, 119.87, 130.42, 140.96, 151.51, 163.02, 174.53, 186.03, 197.54, 209.05, 220.56 ]
           },
           {
@@ -17590,7 +17833,7 @@
             "vision": "electro",
             "stat": "atk",
             "crit": true,
-            "alt": true,
+            "alt": 1,
             "scale": [ 104.63, 113.15, 121.67, 133.83, 142.35, 152.08, 165.47, 178.85, 192.23, 206.83, 221.43, 236.03, 250.63, 265.23, 279.83 ]
           },
           {
@@ -17601,7 +17844,7 @@
             "vision": "electro",
             "stat": "atk",
             "crit": true,
-            "alt": true,
+            "alt": 1,
             "scale": [ 51.69, 55.9, 60.11, 66.12, 70.33, 75.14, 81.75, 88.36, 94.97, 102.19, 109.4, 116.61, 123.83, 131.04, 138.25 ]
           },
           {
@@ -17612,7 +17855,7 @@
             "vision": "electro",
             "stat": "atk",
             "crit": true,
-            "alt": true,
+            "alt": 1,
             "scale": [ 130.84, 141.49, 152.15, 167.36, 178.01, 190.18, 206.92, 223.65, 240.39, 258.65, 276.9, 295.16, 313.42, 331.68, 349.93 ]
           },
           {
@@ -17731,7 +17974,7 @@
                 "vision": "electro",
                 "stat": "atk",
                 "crit": true,
-                "alt": true,
+                "alt": 3,
                 "scale": [ 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100 ]
               }
             ],
@@ -18206,7 +18449,7 @@
             "id": 1,
             "name": "Shooting Star",
             "type": "skill",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -18236,7 +18479,7 @@
             "id": 0,
             "name": "Starlight Slug",
             "type": "burst",
-            "alt": true,
+            "alt": 2,
             "damage": true,
             "vision": "cryo",
             "stat": "hp",
@@ -18491,7 +18734,7 @@
             "id": 2,
             "name": "Tri-Karma Purification",
             "type": "skill",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "dendro",
             "stat": [
@@ -18572,7 +18815,7 @@
                 "id": 0,
                 "name": "Tri-Karma Purification: Karmic Oblivion",
                 "type": "skill",
-                "alt": true,
+                "alt": 1,
                 "damage": true,
                 "vision": "dendro",
                 "stat": [
@@ -19123,7 +19366,7 @@
                 "id": 0,
                 "name": "Gales of Reverie (1/4)",
                 "type": null,
-                "alt": true,
+                "alt": 1,
                 "damage": true,
                 "vision": "anemo",
                 "stat": "atk",
@@ -19964,7 +20207,7 @@
             "type": "skill",
             "damage": true,
             "vision": "pyro",
-            "alt": true,
+            "alt": 1,
             "stat": [
               "atk",
               "hp"
@@ -21518,7 +21761,7 @@
           {
             "id": 1,
             "name": "Surging Blade",
-            "type": "",
+            "type": null,
             "damage": true,
             "vision": "anemo",
             "stat": "atk",
@@ -21809,7 +22052,7 @@
             "id": 8,
             "name": "Pyrotechnic Strike",
             "type": "charged",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -21819,7 +22062,7 @@
           {
             "id": 9,
             "name": "Spiritbreath Thorn",
-            "type": "",
+            "type": null,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -21869,7 +22112,6 @@
             "id": 0,
             "name": "Skill",
             "type": "skill",
-            "alt": true,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -22159,7 +22401,7 @@
             "id": 1,
             "name": "Frost",
             "type": "skill",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -22249,7 +22491,7 @@
           {
             "id": 10,
             "name": "Spiritbreath Thorn",
-            "type": "",
+            "type": null,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -22518,7 +22760,7 @@
             "id": 0,
             "name": "Torrent Surge",
             "type": "skill",
-            "alt2": true,
+            "alt": 2,
             "damage": true,
             "vision": "hydro",
             "stat": "atk",
@@ -22529,7 +22771,7 @@
             "id": 1,
             "name": "Dewdrop",
             "type": "skill",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "hydro",
             "stat": "atk",
@@ -22539,7 +22781,7 @@
           {
             "id": 2,
             "name": "Spiritbreath Thorn",
-            "type": "",
+            "type": null,
             "damage": true,
             "vision": "hydro",
             "stat": "atk",
@@ -22868,7 +23110,7 @@
           {
             "id": 1,
             "name": "Surging Blade",
-            "type": "",
+            "type": null,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -23096,7 +23338,7 @@
             "id": 4,
             "name": "Charged Attack: Equitable Judgment",
             "type": "charged",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "hydro",
             "stat": "hp",
@@ -23165,7 +23407,7 @@
           {
             "id": 1,
             "name": "Spiritbreath Thorn",
-            "type": "",
+            "type": null,
             "damage": true,
             "vision": "hydro",
             "stat": "atk",
@@ -23273,7 +23515,7 @@
                 "id": 0,
                 "name": "Wrathful Recompense (1/2)",
                 "type": "charged",
-                "alt": true,
+                "alt": 1,
                 "damage": true,
                 "vision": "hydro",
                 "stat": "hp",
@@ -23422,7 +23664,7 @@
           {
             "id": 8,
             "name": "Spiritbreath Thorn/Surging Blade",
-            "type": "",
+            "type": null,
             "damage": true,
             "vision": "hydro",
             "stat": "atk",
@@ -23452,7 +23694,7 @@
             "id": 1,
             "name": "Gentilhomme Usher",
             "type": "skill",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "hydro",
             "stat": "hp",
@@ -23463,7 +23705,7 @@
             "id": 2,
             "name": "Surintendante Chevalmarin",
             "type": "skill",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "hydro",
             "stat": "hp",
@@ -23474,7 +23716,7 @@
             "id": 3,
             "name": "Mademoiselle Crabaletta",
             "type": "skill",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "hydro",
             "stat": "hp",
@@ -23740,7 +23982,7 @@
           {
             "id": 7,
             "name": "Spiritbreath Thorn",
-            "type": "",
+            "type": null,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -23867,7 +24109,7 @@
         "level": 8,
         "apply": {
           "id": 1528,
-          "special": "fontaine",
+          "special": "fontaine_count",
           "auto": true
         }
       }
@@ -24129,7 +24371,7 @@
           {
             "id": 1,
             "name": "Surging Blade",
-            "type": "",
+            "type": null,
             "damage": true,
             "vision": "geo",
             "stat": "atk",
@@ -24445,7 +24687,7 @@
           {
             "id": 4,
             "name": "Surging Blade",
-            "type": "",
+            "type": null,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -24745,7 +24987,7 @@
           {
             "id": 1,
             "name": "Driftcloud Wave 1 Stack",
-            "alt": true,
+            "alt": 1,
             "type": "plunge",
             "damage": true,
             "vision": "anemo",
@@ -24756,7 +24998,7 @@
           {
             "id": 2,
             "name": "Driftcloud Wave 2 Stacks",
-            "alt": true,
+            "alt": 1,
             "type": "plunge",
             "damage": true,
             "vision": "anemo",
@@ -24767,7 +25009,7 @@
           {
             "id": 3,
             "name": "Driftcloud Wave 3 Stacks",
-            "alt": true,
+            "alt": 1,
             "type": "plunge",
             "damage": true,
             "vision": "anemo",
@@ -25095,7 +25337,7 @@
           {
             "id": 0,
             "name": "Plunging Attack: Charmed Cloudstrider",
-            "alt": true,
+            "alt": 1,
             "type": "plunge",
             "damage": true,
             "vision": "pyro",
@@ -25216,11 +25458,11 @@
         "desc": "Bestial Ascent's Plunging Attack: Charmed Cloudstrider CRIT Rate increased by 20% and CRIT DMG increased by 40%, and its attack radius will be increased.",
         "bonus": [
           {
-            "stat": "critplungealt",
+            "stat": "critalt1",
             "value": 20
           },
           {
-            "stat": "critdmgplungealt",
+            "stat": "critdmgalt1",
             "value": 40
           }
         ]
@@ -25374,7 +25616,7 @@
             "type": "skill",
             "damage": true,
             "vision": "geo",
-            "alt": true,
+            "alt": 1,
             "stat": [
               "atk",
               "def"
@@ -26056,7 +26298,7 @@
           {
             "id": 5,
             "name": "Surging Blade",
-            "type": "",
+            "type": null,
             "damage": true,
             "vision": "electro",
             "stat": "atk",
@@ -26377,7 +26619,7 @@
           {
             "id": 3,
             "name": "Surging Blade",
-            "type": "",
+            "type": null,
             "damage": true,
             "vision": "hydro",
             "stat": "hp",
@@ -26629,7 +26871,7 @@
               [ 140.0, 150.5, 161.0, 175.0, 185.5, 196.0, 210.0, 224.0, 238.0, 252.0, 266.0, 280.0, 297.5, 315.0, 332.5 ],
               [ 134.56, 144.65, 154.74, 168.2, 178.29, 188.38, 201.84, 215.3, 228.75, 242.21, 255.66, 269.12, 285.94, 302.76, 319.58 ]
             ],
-            "alt": true
+            "alt": 1
           },
           {
             "id": 7,
@@ -26640,7 +26882,7 @@
             "stat": "atk",
             "crit": true,
             "scale": [ 52.61, 56.9, 61.18, 67.3, 71.58, 76.47, 83.2, 89.93, 96.66, 104.0, 111.35, 118.69, 126.03, 133.37, 140.71 ],
-            "alt2": true
+            "alt": 2
           },
           {
             "id": 8,
@@ -26651,7 +26893,7 @@
             "stat": "atk",
             "crit": true,
             "scale": [ 23.8, 25.73, 27.67, 30.44, 32.37, 34.59, 37.63, 40.67, 43.72, 47.04, 50.36, 53.68, 57.0, 60.32, 63.64 ],
-            "alt2": true
+            "alt": 2
           },
           {
             "id": 9,
@@ -26662,7 +26904,7 @@
             "stat": "atk",
             "crit": true,
             "scale": [ 26.61, 28.77, 30.94, 34.03, 36.2, 38.68, 42.08, 45.48, 48.89, 52.6, 56.31, 60.02, 63.74, 67.45, 71.16 ],
-            "alt2": true
+            "alt": 2
           },
           {
             "id": 10,
@@ -26673,7 +26915,7 @@
             "stat": "atk",
             "crit": true,
             "scale": [ 73.99, 80.01, 86.03, 94.63, 100.66, 107.54, 117.0, 126.47, 135.93, 146.25, 156.58, 166.9, 177.22, 187.55, 197.87 ],
-            "alt2": true
+            "alt": 2
           },
           {
             "id": 11,
@@ -26765,7 +27007,7 @@
         "desc": "The CRIT Rate of Shadowpiercing Shot is increased by 15%.",
         "bonus": [
           {
-            "stat": "critchargedalt",
+            "stat": "critalt1",
             "value": 15
           }
         ]
@@ -27046,7 +27288,7 @@
                 "stat": "atk",
                 "crit": true,
                 "scale": [ 600 ],
-                "alt": true
+                "alt": 1
               }
             ]
           }
@@ -27071,7 +27313,7 @@
             "value": 20
           },
           {
-            "stat": "alt",
+            "stat": "alt1",
             "value": 20
           }
         ]
@@ -27572,7 +27814,7 @@
             "vision": "dendro",
             "stat": "atk",
             "crit": true,
-            "alt": true,
+            "alt": 1,
             "scale": [ 687.44, 739.0, 790.56, 859.3, 910.86, 962.42, 1031.16, 1099.9, 1168.65, 1237.39, 1306.14, 1374.88, 1460.81, 1546.74, 1632.67 ]
           }
         ]
@@ -27641,7 +27883,7 @@
         },
         "bonus": [
           {
-            "stat": "critdmgskillalt",
+            "stat": "critdmgalt1",
             "value": 100
           }
         ]
@@ -27708,7 +27950,7 @@
                 "vision": "dendro",
                 "stat": "atk",
                 "crit": true,
-                "alt": true,
+                "alt": 1,
                 "scale": [ 700 ]
               }
             ]
@@ -27854,7 +28096,7 @@
             "name": "Sharky's Bite",
             "type": "normal",
             "damage": true,
-            "alt": true,
+            "alt": 1,
             "vision": "hydro",
             "stat": "hp",
             "crit": true,
@@ -28477,7 +28719,7 @@
           {
             "name": "Shadowhunt Shell",
             "type": "charged",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "anemo",
             "stat": "atk",
@@ -28488,8 +28730,7 @@
           {
             "name": "Shining Shadowhunt Shell (Cryo)",
             "type": "charged",
-            "alt": true,
-            "alt2": true,
+            "alt": 2,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -28500,8 +28741,7 @@
           {
             "name": "Shining Shadowhunt Shell (Electro)",
             "type": "charged",
-            "alt": true,
-            "alt2": true,
+            "alt": 2,
             "damage": true,
             "vision": "electro",
             "stat": "atk",
@@ -28512,8 +28752,7 @@
           {
             "name": "Shining Shadowhunt Shell (Hydro)",
             "type": "charged",
-            "alt": true,
-            "alt2": true,
+            "alt": 2,
             "damage": true,
             "vision": "hydro",
             "stat": "atk",
@@ -28524,8 +28763,7 @@
           {
             "name": "Shining Shadowhunt Shell (Pyro)",
             "type": "charged",
-            "alt": true,
-            "alt2": true,
+            "alt": 2,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -28942,8 +29180,8 @@
               {
                 "id": 0,
                 "name": "Hypersense",
-                "type": "",
-                "alt": true,
+                "type": null,
+                "alt": 1,
                 "damage": true,
                 "vision": "electro",
                 "stat": "atk",
@@ -29185,7 +29423,7 @@
           {
             "name": "Flamestrider Normal Attack 1-Hit",
             "type": "normal",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -29196,7 +29434,7 @@
           {
             "name": "Flamestrider Normal Attack 2-Hit",
             "type": "normal",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -29207,7 +29445,7 @@
           {
             "name": "Flamestrider Normal Attack 3-Hit",
             "type": "normal",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -29218,7 +29456,7 @@
           {
             "name": "Flamestrider Normal Attack 4-Hit",
             "type": "normal",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -29229,7 +29467,7 @@
           {
             "name": "Flamestrider Normal Attack 5-Hit",
             "type": "normal",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -29239,8 +29477,7 @@
           },
           {
             "name": "Flamestrider Sprint",
-            "type": "skill",
-            "alt": true,
+            "type": null,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -29251,7 +29488,7 @@
           {
             "name": "Flamestrider Charged Attack Cyclic",
             "type": "charged",
-            "alt": true,
+            "alt": 2,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -29262,7 +29499,7 @@
           {
             "name": "Flamestrider Charged Attack Final",
             "type": "charged",
-            "alt": true,
+            "alt": 2,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -29273,7 +29510,6 @@
           {
             "name": "Flamestrider Plunge",
             "type": "plunge",
-            "alt": true,
             "damage": true,
             "vision": "pyro",
             "stat": "atk",
@@ -29399,8 +29635,7 @@
               {
                 "id": 0,
                 "name": "Flamestrider",
-                "type": "",
-                "alt": true,
+                "type": "skill",
                 "damage": true,
                 "vision": "pyro",
                 "stat": "atk",
@@ -29410,8 +29645,7 @@
               {
                 "id": 1,
                 "name": "Scorching Ring of Searing Radiance",
-                "type": "",
-                "alt": true,
+                "type": "skill",
                 "damage": true,
                 "vision": "pyro",
                 "stat": "atk",
@@ -29581,7 +29815,7 @@
           {
             "name": "Frostfall Storm",
             "type": "skill",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -29602,7 +29836,7 @@
             "name": "Ice Storm",
             "type": "burst",
             "damage": true,
-            "alt": true,
+            "alt": 2,
             "vision": "cryo",
             "stat": "atk",
             "crit": true,
@@ -29697,8 +29931,7 @@
               {
                 "id": 0,
                 "name": "Obsidian Spiritvessel Skull",
-                "type": "",
-                "alt": true,
+                "type": null,
                 "damage": true,
                 "vision": "cryo",
                 "stat": "elemastery",
@@ -30765,7 +30998,7 @@
             "name": "Fiery Passion Plunge",
             "type": "plunge",
             "damage": true,
-            "alt": true,
+            "alt": 1,
             "vision": "electro",
             "stat": "atk",
             "crit": true,
@@ -30776,7 +31009,7 @@
             "name": "Fiery Passion Low Plunge",
             "type": "plunge",
             "damage": true,
-            "alt": true,
+            "alt": 1,
             "vision": "electro",
             "stat": "atk",
             "crit": true,
@@ -30787,7 +31020,7 @@
             "name": "Fiery Passion High Plunge",
             "type": "plunge",
             "damage": true,
-            "alt": true,
+            "alt": 1,
             "vision": "electro",
             "stat": "atk",
             "crit": true,
@@ -31374,7 +31607,7 @@
           },
           {
             "name": "Surging Blade",
-            "type": "",
+            "type": null,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -31950,7 +32183,7 @@
           {
             "name": "1-Hit",
             "type": "normal",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -31961,7 +32194,7 @@
           {
             "name": "2-Hit",
             "type": "normal",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -31972,7 +32205,7 @@
           {
             "name": "3-Hit (1/2)",
             "type": "normal",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -31983,7 +32216,7 @@
           {
             "name": "4-Hit (1/2)",
             "type": "normal",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -31994,7 +32227,7 @@
           {
             "name": "5-Hit",
             "type": "normal",
-            "alt": true,
+            "alt": 1,
             "damage": true,
             "vision": "cryo",
             "stat": "atk",
@@ -33861,7 +34094,6 @@
     "vision": "dendro",
     "rarity": 5,
     "nation": "nodkrai",
-    "unreleased": true,
     "moonsign": true,
     "stats": [
       {
@@ -34017,7 +34249,7 @@
               [ 49.28, 52.98, 56.67, 61.6, 65.3, 68.99, 73.92, 78.85, 83.78, 88.7, 93.63, 98.56, 104.72, 110.88, 117.04 ]
             ],
             "id": 1,
-            "alt": true
+            "alt": 1
           },
           {
             "name": "Phantasm Performance 2-Hit (Nefer)",
@@ -34034,7 +34266,7 @@
               [ 64.06, 68.87, 73.67, 80.08, 84.88, 89.69, 96.1, 102.5, 108.91, 115.32, 121.72, 128.13, 136.14, 144.14, 152.15 ]
             ],
             "id": 2,
-            "alt": true
+            "alt": 1
           },
           {
             "name": "Phantasm Performance 1-Hit (Shade)",
@@ -34111,11 +34343,11 @@
             "id": 1
           }
         ],
-        "apply": [          
+        "apply": [
           {
             "id": 2228,
             "auto": true,
-            "offset": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+            "offset": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]
           }
         ]
       }
@@ -34230,6 +34462,1533 @@
             ]
           }
         ]
+      }
+    ],
+    "ascension": [
+      {
+        "type": "item",
+        "id": "unknown_ascension"
+      },
+      {
+        "type": "group",
+        "id": "unknown_regular"
+      },
+      {
+        "type": "item",
+        "id": "unknown_speciality"
+      }
+    ]
+  },
+  "durin": {
+    "id": 111,
+    "enka_id": 10000123,
+    "name": "Durin",
+    "weapon": "sword",
+    "vision": "pyro",
+    "rarity": 5,
+    "nation": "mondstadt",
+    "hexenzirkel": true,
+    "stats": [
+      {
+        "stat": "hp_base",
+        "values": [ 968.0, 2510.0, 3340.0, 4997.0, 5587.0, 6428.0, 7214.0, 8063.0, 8653.0, 9510.0, 10099.0, 10966.0, 11556.0, 12430.0, 12871.5, 13313.0 ]
+      },
+      {
+        "stat": "atk_base",
+        "values": [ 27.0, 70.04, 93.18, 139.43, 155.88, 179.34, 201.27, 224.98, 241.42, 265.34, 281.79, 305.98, 322.43, 346.81, 385.82, 424.84 ]
+      },
+      {
+        "stat": "def_base",
+        "values": [ 64.02, 166.06, 220.95, 330.62, 369.62, 425.25, 477.25, 533.46, 572.46, 629.18, 668.18, 725.54, 764.54, 822.35, 851.58, 880.8 ]
+      },
+      {
+        "stat": "critdmg",
+        "values": [ 0.0, 0.0, 0.0, 0.0, 9.6, 9.6, 19.2, 19.2, 19.2, 19.2, 28.8, 28.8, 38.4, 38.4, 38.4, 38.4 ]
+      },
+      {
+        "stat": "burst_energy",
+        "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Radiant Wingslash",
+        "type": "normal",
+        "damage": true,
+        "id": 0,
+        "vision": "physical",
+        "parts": [
+          {
+            "name": "1-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 45.65, 49.37, 53.08, 58.39, 62.11, 66.35, 72.19, 78.03, 83.87, 90.24, 96.61, 102.98, 109.35, 115.72, 122.09 ],
+            "id": 0
+          },
+          {
+            "name": "2-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 41.0, 44.34, 47.68, 52.45, 55.79, 59.6, 64.84, 70.09, 75.33, 81.06, 86.78, 92.5, 98.22, 103.94, 109.66 ],
+            "id": 1
+          },
+          {
+            "name": "3-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 29.16, 31.54, 33.91, 37.3, 39.67, 42.39, 46.12, 49.85, 53.58, 57.65, 61.71, 65.78, 69.85, 73.92, 77.99 ],
+            "id": 2
+          },
+          {
+            "name": "4-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 71.15, 76.94, 82.74, 91.01, 96.8, 103.42, 112.52, 121.62, 130.72, 140.65, 150.58, 160.51, 170.43, 180.36, 190.29 ],
+            "id": 3
+          },
+          {
+            "name": "Charged Attack",
+            "type": "charged",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 113.43, 122.67, 131.9, 145.09, 154.32, 164.88, 179.38, 193.89, 208.4, 224.23, 240.06, 255.89, 271.71, 287.54, 303.37 ],
+            "id": 4
+          },
+          {
+            "name": "Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 63.93, 69.14, 74.34, 81.77, 86.98, 92.93, 101.1, 109.28, 117.46, 126.38, 135.3, 144.22, 153.14, 162.06, 170.98 ],
+            "id": 5
+          },
+          {
+            "name": "Low Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 127.84, 138.24, 148.65, 163.51, 173.92, 185.81, 202.16, 218.51, 234.86, 252.7, 270.54, 288.38, 306.22, 324.05, 341.89 ],
+            "id": 6
+          },
+          {
+            "name": "High Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 159.68, 172.67, 185.67, 204.24, 217.23, 232.09, 252.51, 272.93, 293.36, 315.64, 337.92, 360.2, 382.48, 404.76, 427.04 ],
+            "id": 7
+          }
+        ]
+      },
+      {
+        "name": "Binary Form: Convergence and Division",
+        "type": "skill",
+        "damage": true,
+        "id": 1,
+        "vision": "pyro",
+        "parts": [
+          {
+            "name": "Transmutation: Confirmation of Purity",
+            "type": "skill",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 105.6, 113.52, 121.44, 132.0, 139.92, 147.84, 158.4, 168.96, 179.52, 190.08, 200.64, 211.2, 224.4, 237.6, 250.8 ],
+            "id": 0
+          },
+          {
+            "name": "Transmutation: Denial of Darkness (1/3)",
+            "type": "skill",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 72.24, 77.66, 83.08, 90.3, 95.72, 101.14, 108.36, 115.58, 122.81, 130.03, 137.26, 144.48, 153.51, 162.54, 171.57 ],
+            "id": 1
+          },
+          {
+            "name": "Transmutation: Denial of Darkness (2/3)",
+            "type": "skill",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 53.2, 57.19, 61.18, 66.5, 70.49, 74.48, 79.8, 85.12, 90.44, 95.76, 101.08, 106.4, 113.05, 119.7, 126.35 ],
+            "id": 2
+          },
+          {
+            "name": "Transmutation: Denial of Darkness (3/3)",
+            "type": "skill",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 64.64, 69.49, 74.34, 80.8, 85.65, 90.5, 96.96, 103.42, 109.89, 116.35, 122.82, 129.28, 137.36, 145.44, 153.52 ],
+            "id": 3
+          }
+        ]
+      },
+      {
+        "name": "Principle of Purity: As the Light Shifts",
+        "type": "burst",
+        "damage": true,
+        "id": 2,
+        "vision": "pyro",
+        "parts": [
+          {
+            "name": "Principle of Purity: As the Light Shifts (1/3)",
+            "type": "burst",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 118.96, 127.88, 136.8, 148.7, 157.62, 166.54, 178.44, 190.34, 202.23, 214.13, 226.02, 237.92, 252.79, 267.66, 282.53 ],
+            "id": 0
+          },
+          {
+            "name": "Principle of Purity: As the Light Shifts (2/3)",
+            "type": "burst",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 96.4, 103.63, 110.86, 120.5, 127.73, 134.96, 144.6, 154.24, 163.88, 173.52, 183.16, 192.8, 204.85, 216.9, 228.95 ],
+            "id": 1
+          },
+          {
+            "name": "Principle of Purity: As the Light Shifts (3/3)",
+            "type": "burst",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 111.84, 120.23, 128.62, 139.8, 148.19, 156.58, 167.76, 178.94, 190.13, 201.31, 212.5, 223.68, 237.66, 251.64, 265.62 ],
+            "id": 2
+          },
+          {
+            "name": "Principle of Darkness: As the Stars Smolder (1/3)",
+            "type": "burst",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 125.44, 134.85, 144.26, 156.8, 166.21, 175.62, 188.16, 200.7, 213.25, 225.79, 238.34, 250.88, 266.56, 282.24, 297.92 ],
+            "id": 3
+          },
+          {
+            "name": "Principle of Darkness: As the Stars Smolder (2/3)",
+            "type": "burst",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 101.76, 109.39, 117.02, 127.2, 134.83, 142.46, 152.64, 162.82, 172.99, 183.17, 193.34, 203.52, 216.24, 228.96, 241.68 ],
+            "id": 4
+          },
+          {
+            "name": "Principle of Darkness: As the Stars Smolder (3/3)",
+            "type": "burst",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 111.84, 120.23, 128.62, 139.8, 148.19, 156.58, 167.76, 178.94, 190.13, 201.31, 212.5, 223.68, 237.66, 251.64, 265.62 ],
+            "id": 5
+          },
+          {
+            "name": "Dragon of White Flame",
+            "type": "burst",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 94.64, 101.74, 108.84, 118.3, 125.4, 132.5, 141.96, 151.42, 160.89, 170.35, 179.82, 189.28, 201.11, 212.94, 224.77 ],
+            "id": 6
+          },
+          {
+            "name": "Dragon of Dark Decay",
+            "type": "burst",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 129.84, 139.58, 149.32, 162.3, 172.04, 181.78, 194.76, 207.74, 220.73, 233.71, 246.7, 259.68, 275.91, 292.14, 308.37 ],
+            "id": 7
+          }
+        ]
+      }
+    ],
+    "passive": [
+      {
+        "name": "Echoes of the Surging Earth",
+        "desc": "Gains 25% more rewards when dispatched on a Mondstadt Expedition for 20 hours.",
+        "level": 0
+      },
+      {
+        "name": "Light Manifest of the Divine Calculus",
+        "desc": "Durin will trigger different buffs depending on the form that his power manifests as when he unleashes his Elemental Burst. When that form is: Dragon of White Flame: When nearby party members trigger Burning, Overloaded, Pyro Swirl, or Pyro Crystallize reactions on an opponent, or deal Pyro DMG or Dendro DMG to an opponent affected by Burning, that opponent's Pyro RES, and the RES for the corresponding Element involved in the reaction, are decreased by 20% for 6s.Dragon of Dark Decay: Durin's Vaporize DMG is increased by 40% and his Melt DMG is increased by 40%.",
+        "level": 2,
+        "apply": [
+          {
+            "id": 2309,
+            "party": true,
+            "special": "hexenzirkel_0_2"
+          },
+          {
+            "id": 2311,
+            "party": true,
+            "special": "hexenzirkel_0_2"
+          },
+          {
+            "id": 2313,
+            "party": true,
+            "special": "hexenzirkel_0_2"
+          },
+          {
+            "id": 2315,
+            "party": true,
+            "special": "hexenzirkel_0_2"
+          },
+          {
+            "id": 2317,
+            "party": true,
+            "special": "hexenzirkel_0_2"
+          },
+          {
+            "id": 2319,
+            "special": "hexenzirkel_0_2"
+          }
+        ]
+      },
+      {
+        "name": "Chaos Formed Like the Night",
+        "desc": "After unleashing an Elemental Burst, Durin gains the Primordial Fusion of Forms effect for 20s: Durin gains 10 stacks of Primordial Fusion. When a periodic attack from Dragon of White Flame or Dragon of Dark Decay deals DMG, 1 stack of Primordial Fusion will be consumed to increase the DMG dealt by 3% of the original DMG for every 100 ATK. A maximum of 75% additional DMG can be dealt this way. When a single attack from Dragon of White Flame or Dragon of Dark Decay hits multiple opponents, only one stack of Primordial Fusion is consumed.Primordial Fusion stacks are reset when the Elemental Burst is unleashed again.",
+        "level": 8,
+        "apply": {
+          "id": 2321
+        }
+      },
+      {
+        "name": "Witch's Eve Rite: Ode to Ascension",
+        "desc": "After completing Witch's Homework: Of This World, Durin will become a Magic character. When the party includes at least 2 Magic characters, you will gain the Hexerei: Secret Rite effect, which enhances Magic characters.Hexerei: Secret Rite Increases all effects of the Passive Talent Light Manifest of the Divine Calculus (except for Duration) by 75%.",
+        "level": 8
+      }
+    ],
+    "const": [
+      {
+        "name": "Adamah's Redemption",
+        "desc": "After casting his Elemental Burst, Durin's effects will vary depending on the form of his Elemental Burst:<br>Principle of Purity: As the Light Shifts: All other nearby party members gain 18 stacks of Cycle of Enlightenment lasting 20s. When nearby active characters deal Normal Attack, Charged Attack, Plunging Attack, Elemental Skill, or Elemental Burst DMG, 1 stack of Cycle of Enlightenment will be consumed to increase the DMG dealt by 60% of Durin's ATK. Stack counts for characters in the party who have Cycle of Enlightenment are managed individually.<br>Principle of Darkness: As the Stars Smolder: Durin gains 18 stacks of Cycle of Enlightenment lasting 20s. When Durin deals Elemental Burst DMG, 2 stacks of Cycle of Enlightenment will be consumed to increase the DMG dealt by 200% of Durin's ATK.When an Elemental Burst is used, Cycle of Enlightenment stacks will be reset.",
+        "apply": [
+          {
+            "id": 2322,
+            "party": true,
+            "noself": true
+          },
+          {
+            "id": 2323
+          }
+        ]
+      },
+      {
+        "name": "Unground Visions",
+        "desc": "For 20s after Durin uses an Elemental Burst, when nearby party members trigger Vaporize, Melt, Burning, Overloaded, Pyro Swirl, or Pyro Crystallize reactions, or deal Pyro DMG or Dendro DMG to an opponent affected by Burning, all nearby party members gain a 50% increase to their Pyro DMG and to the corresponding elemental DMG involved in the reaction for 6s.",
+        "apply": [
+          {
+            "id": 2324,
+            "party": true
+          },
+          {
+            "id": 2325,
+            "party": true
+          },
+          {
+            "id": 2326,
+            "party": true
+          },
+          {
+            "id": 2327,
+            "party": true
+          },
+          {
+            "id": 2328,
+            "party": true
+          },
+          {
+            "id": 2396,
+            "party": true
+          },
+          {
+            "id": 2397,
+            "party": true
+          }
+        ]
+      },
+      {
+        "name": "Flame Mirror's Revelation",
+        "desc": "Increases the Level of Principle of Purity: As the Light Shifts by 3.",
+        "bonus": [
+          {
+            "stat": "levelburst",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "Emanare's Source",
+        "desc": "For 20s after triggering Adamah's Redemption and gaining the Cycle of Enlightenment effect, Durin's Elemental Burst DMG is increased by 40%, while Cycles of Enlightenment will gain a 30% chance to not be consumed when their consumption is triggered.",
+        "apply": {
+          "id": 2329
+        }
+      },
+      {
+        "name": "Scouring Flame's Sundering",
+        "desc": "Increases the Level of Binary Form: Convergence and Division by 3.",
+        "bonus": [
+          {
+            "stat": "levelskill",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "Dual Birth",
+        "desc": "Durin's Elemental Burst DMG ignores 30% of opponents' DEF.Additionally, Durin's Elemental Bursts Principle of Purity: As the Light Shifts and Principle of Darkness: As the Stars Smolder are each enhanced:<br> After Principle of Purity: As the Light Shifts and Dragon of White Flame hit an opponent, that opponent's DEF is decreased by 30% for 6s.<br> DMG from Principle of Darkness: As the Stars Smolder and Dragon of Dark Decay will ignore an additional 40% of opponents' DEF.",
+        "apply": [
+          {
+            "id": 2330
+          },
+          {
+            "id": 2331,
+            "party": true,
+            "noself": true
+          }
+        ]
+      }
+    ],
+    "ascension": [
+      {
+        "type": "item",
+        "id": "unknown_ascension"
+      },
+      {
+        "type": "group",
+        "id": "unknown_regular"
+      },
+      {
+        "type": "item",
+        "id": "unknown_speciality"
+      }
+    ]
+  },
+  "jahoda": {
+    "id": 112,
+    "enka_id": 10000124,
+    "name": "Jahoda",
+    "weapon": "bow",
+    "vision": "anemo",
+    "reactions": [
+      "cryo",
+      "electro",
+      "hydro",
+      "pyro"
+    ],
+    "rarity": 4,
+    "nation": "nodkrai",
+    "moonsign": true,
+    "stats": [
+      {
+        "stat": "hp_base",
+        "values": [ 809.0, 2078.0, 2682.0, 4017.0, 4446.0, 5114.0, 5687.0, 6355.0, 6784.0, 7451.0, 7881.0, 8549.0, 8978.0, 9646.0, 9979.5, 10313.0 ]
+      },
+      {
+        "stat": "atk_base",
+        "values": [ 18.7, 48.04, 62.01, 92.88, 102.8, 118.25, 131.48, 146.93, 156.85, 172.28, 182.2, 197.65, 207.57, 223.02, 251.47, 279.92 ]
+      },
+      {
+        "stat": "def_base",
+        "values": [ 48.64, 124.96, 161.3, 241.6, 267.42, 307.6, 342.02, 382.2, 408.02, 448.15, 473.97, 514.15, 539.97, 580.14, 600.2, 620.27 ]
+      },
+      {
+        "stat": "healing",
+        "values": [ 0.0, 0.0, 0.0, 0.0, 4.62, 4.62, 9.23, 9.23, 9.23, 9.23, 13.85, 13.85, 18.46, 18.46, 18.46, 18.46 ]
+      },
+      {
+        "stat": "burst_energy",
+        "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Strike While the Arrow's Hot",
+        "type": "normal",
+        "damage": true,
+        "id": 0,
+        "vision": "physical",
+        "parts": [
+          {
+            "name": "1-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 41.67, 45.07, 48.46, 53.3, 56.7, 60.57, 65.9, 71.23, 76.56, 82.38, 88.19, 94.01, 99.82, 105.64, 111.45 ],
+            "id": 0
+          },
+          {
+            "name": "2-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 19.23, 20.8, 22.36, 24.6, 26.16, 27.95, 30.41, 32.87, 35.33, 38.02, 40.7, 43.38, 46.07, 48.75, 51.43 ],
+            "id": 1
+          },
+          {
+            "name": "3-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 51.2, 55.36, 59.53, 65.49, 69.65, 74.42, 80.96, 87.51, 94.06, 101.2, 108.35, 115.49, 122.64, 129.78, 136.92 ],
+            "id": 2
+          },
+          {
+            "name": "Aimed Shot",
+            "type": "charged",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 43.86, 47.43, 51.0, 56.1, 59.67, 63.75, 69.36, 74.97, 80.58, 86.7, 92.82, 98.94, 105.06, 111.18, 117.3 ],
+            "id": 3
+          },
+          {
+            "name": "Fully-Charged Aimed Shot",
+            "type": "charged",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 124.0, 133.3, 142.6, 155.0, 164.3, 173.6, 186.0, 198.4, 210.8, 223.2, 235.6, 248.0, 263.5, 279.0, 294.5 ],
+            "id": 4
+          },
+          {
+            "name": "Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 56.83, 61.45, 66.08, 72.69, 77.31, 82.6, 89.87, 97.14, 104.41, 112.34, 120.27, 128.2, 136.12, 144.05, 151.98 ],
+            "id": 5
+          },
+          {
+            "name": "Low Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 113.63, 122.88, 132.13, 145.35, 154.59, 165.17, 179.7, 194.23, 208.77, 224.62, 240.48, 256.34, 272.19, 288.05, 303.9 ],
+            "id": 6
+          },
+          {
+            "name": "High Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 141.93, 153.49, 165.04, 181.54, 193.1, 206.3, 224.45, 242.61, 260.76, 280.57, 300.37, 320.18, 339.98, 359.79, 379.59 ],
+            "id": 7
+          }
+        ]
+      },
+      {
+        "name": "Savvy Strategy: Splitting the Spoils",
+        "type": "skill",
+        "damage": true,
+        "id": 1,
+        "vision": "anemo",
+        "parts": [
+          {
+            "name": "Smoke Bomb",
+            "type": "skill",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 159.0, 170.93, 182.85, 198.75, 210.68, 222.6, 238.5, 254.4, 270.3, 286.2, 302.1, 318.0, 337.88, 357.75, 377.63 ],
+            "id": 0
+          },
+          {
+            "name": "Unfilled Treasure Flask",
+            "type": "skill",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 190.8, 205.11, 219.42, 238.5, 252.81, 267.12, 286.2, 305.28, 324.36, 343.44, 362.52, 381.6, 405.45, 429.3, 453.15 ],
+            "id": 1
+          },
+          {
+            "name": "Filled Treasure Flask",
+            "type": "skill",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 212.0, 227.9, 243.8, 265.0, 280.9, 296.8, 318.0, 339.2, 360.4, 381.6, 402.8, 424.0, 450.5, 477.0, 503.5 ],
+            "id": 2
+          },
+          {
+            "name": "Meowball",
+            "type": "skill",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 128.0, 137.6, 147.2, 160.0, 169.6, 179.2, 192.0, 204.8, 217.6, 230.4, 243.2, 256.0, 272.0, 288.0, 304.0 ],
+            "id": 3
+          },
+          {
+            "name": "Meowball - Cryo",
+            "type": "skill",
+            "damage": true,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 128.0, 137.6, 147.2, 160.0, 169.6, 179.2, 192.0, 204.8, 217.6, 230.4, 243.2, 256.0, 272.0, 288.0, 304.0 ],
+            "id": 4
+          },
+          {
+            "name": "Meowball - Electro",
+            "type": "skill",
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 128.0, 137.6, 147.2, 160.0, 169.6, 179.2, 192.0, 204.8, 217.6, 230.4, 243.2, 256.0, 272.0, 288.0, 304.0 ],
+            "id": 5
+          },
+          {
+            "name": "Meowball - Hydro",
+            "type": "skill",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 128.0, 137.6, 147.2, 160.0, 169.6, 179.2, 192.0, 204.8, 217.6, 230.4, 243.2, 256.0, 272.0, 288.0, 304.0 ],
+            "id": 6
+          },
+          {
+            "name": "Meowball - Pyro",
+            "type": "skill",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 128.0, 137.6, 147.2, 160.0, 169.6, 179.2, 192.0, 204.8, 217.6, 230.4, 243.2, 256.0, 272.0, 288.0, 304.0 ],
+            "id": 7
+          }
+        ]
+      },
+      {
+        "name": "Hidden Aces: Seven Tools of the Hunter",
+        "type": "burst",
+        "damage": true,
+        "id": 2,
+        "vision": "anemo",
+        "parts": [
+          {
+            "name": "Skill",
+            "type": "burst",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 207.2, 222.74, 238.28, 259.0, 274.54, 290.08, 310.8, 331.52, 352.24, 372.96, 393.68, 414.4, 440.3, 466.2, 492.1 ],
+            "id": 0
+          },
+          {
+            "name": "Purrsonal Coordinated Assistance Robot",
+            "type": "burst",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 17.27, 18.56, 19.86, 21.58, 22.88, 24.17, 25.9, 27.63, 29.35, 31.08, 32.81, 34.53, 36.69, 38.85, 41.01 ],
+            "id": 1
+          },
+          {
+            "name": "Purrsonal Coordinated Assistance Robot - Cryo",
+            "type": "burst",
+            "damage": true,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 17.27, 18.56, 19.86, 21.58, 22.88, 24.17, 25.9, 27.63, 29.35, 31.08, 32.81, 34.53, 36.69, 38.85, 41.01 ],
+            "id": 2
+          },
+          {
+            "name": "Purrsonal Coordinated Assistance Robot - Electro",
+            "type": "burst",
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 17.27, 18.56, 19.86, 21.58, 22.88, 24.17, 25.9, 27.63, 29.35, 31.08, 32.81, 34.53, 36.69, 38.85, 41.01 ],
+            "id": 3
+          },
+          {
+            "name": "Purrsonal Coordinated Assistance Robot - Hydro",
+            "type": "burst",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 17.27, 18.56, 19.86, 21.58, 22.88, 24.17, 25.9, 27.63, 29.35, 31.08, 32.81, 34.53, 36.69, 38.85, 41.01 ],
+            "id": 4
+          },
+          {
+            "name": "Purrsonal Coordinated Assistance Robot - Pyro",
+            "type": "burst",
+            "damage": true,
+            "vision": "pyro",
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 17.27, 18.56, 19.86, 21.58, 22.88, 24.17, 25.9, 27.63, 29.35, 31.08, 32.81, 34.53, 36.69, 38.85, 41.01 ],
+            "id": 5
+          },
+          {
+            "name": "Purrsonal Coordinated Assistance Robot Healing",
+            "type": "healing",
+            "damage": false,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": false,
+            "alt": 2,
+            "scale": [ 79.87, 85.86, 91.85, 99.84, 105.83, 111.82, 119.81, 127.8, 135.78, 143.77, 151.76, 159.74, 169.73, 179.71, 189.7 ],
+            "flat": [ 500.74, 550.82, 605.07, 663.5, 726.1, 792.88, 863.82, 938.94, 1018.24, 1101.71, 1189.35, 1281.16, 1377.15, 1477.31, 1581.65 ],
+            "id": 6
+          },
+          {
+            "name": "Lowest HP Character Additional Healing",
+            "type": "healing",
+            "damage": false,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": false,
+            "alt": 2,
+            "scale": [ 30.72, 33.02, 35.33, 38.4, 40.7, 43.01, 46.08, 49.15, 52.22, 55.3, 58.37, 61.44, 65.28, 69.12, 72.96 ],
+            "flat": [ 192.6, 211.86, 232.73, 255.2, 279.28, 304.96, 332.25, 361.14, 391.64, 423.75, 457.46, 492.77, 529.69, 568.21, 608.34 ],
+            "id": 7
+          }
+        ]
+      }
+    ],
+    "passive": [
+      {
+        "name": "Moonsign Benediction: Rooftop Dash",
+        "desc": "When Jahoda is in the party, the party's Moonsign will increase by 1 level.",
+        "level": 0
+      },
+      {
+        "name": "Plan to Get Paid",
+        "desc": "When your team has at least one Pyro, Hydro, Electro, or Cryo character, the Purrsonal Coordinated Assistance Robots from the Elemental Burst Hidden Aces: Seven Tools of the Hunter will be enhanced based on the number of characters of each corresponding element.Jahoda secretly keeps track of these characters. Among them, the element with the highest number of characters determines the enhancement effect:<br> Pyro: Purrsonal Coordinated Assistance Robots deal 130% of their original DMG.<br> Hydro: Purrsonal Coordinated Assistance Robots heal for 120% of their original healing amount.<br> Electro: The number of Purrsonal Coordinated Assistance Robots increases by one.<br> Cryo: The attack interval of Purrsonal Coordinated Assistance Robots is reduced by 10%.If there's a tie between elements, the order of priority that determines which enhancement takes effect is: Pyro, Hydro, Electro, then Cryo. Only one elemental effect can initially be triggered.",
+        "level": 0,
+        "apply": {
+          "id": 2391,
+          "special": "plan_to_get_paid"
+        }
+      },
+      {
+        "name": "Sweet Berry Bounty",
+        "desc": "When a Purrsonal Coordinated Assistance Robot from the Elemental Burst Hidden Aces: Seven Tools of the Hunter triggers healing on an active team member, if that character's HP is above 70%, their Elemental Mastery will be increased by 100 for 6s.",
+        "level": 2,
+        "apply": {
+          "id": 2394,
+          "party": true
+        }
+      },
+      {
+        "name": "Backstreet Guile",
+        "desc": "When dispatched on an expedition in Nod-Krai, time consumed is reduced by 25%.",
+        "level": 0
+      }
+    ],
+    "const": [
+      {
+        "name": "One More Flask!",
+        "desc": "When a Fluffy Meowball fired by the Purr-loined Treasure Flask from the Elemental Skill Savvy Strategy: Splitting the Spoils hits an enemy, there is a 50% chance for it to bounce, dealing the corresponding Elemental DMG to nearby opponents."
+      },
+      {
+        "name": "Rogue's Quick Thinking",
+        "desc": "Moonsign: Ascendant Gleam: In the Ascension Talent \"Plan to Get Paid,\" Jahoda can secretly track, in addition to the element with the highest number of characters, the element with the next highest number of characters among the remaining types. This allows up to two elemental effects to be active at once. You must first unlock the Ascension Talent \"Plan to Get Paid.\""
+      },
+      {
+        "name": "Desperate Gamble",
+        "desc": "Increases the Level of Hidden Aces: Seven Tools of the Hunter by 3.",
+        "bonus": [
+          {
+            "stat": "levelburst",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "Wild Berry Amid the Dust",
+        "desc": "When a Purrsonal Coordinated Assistance Robot from the Elemental Burst Hidden Aces: Seven Tools of the Hunter undergoes an Elemental Conversion, Jahoda will recover 4 Elemental Energy."
+      },
+      {
+        "name": "The Greatest Treasure",
+        "desc": "Increases the Level of Savvy Strategy: Splitting the Spoils by 3.",
+        "bonus": [
+          {
+            "stat": "levelskill",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "The Littlest Luck",
+        "desc": "Moonsign: Ascendant Gleam: After the Purr-loined Treasure Flask from the Elemental Skill Savvy Strategy: Splitting the Spoils is full, nearby Moonsign characters in your party have their CRIT Rate increased by 5% and CRIT DMG increased by 40% for 20s.",
+        "apply": {
+          "id": 2395,
+          "party": true,
+          "special": "moonsign_2_personal_only"
+        }
+      }
+    ],
+    "ascension": [
+      {
+        "type": "item",
+        "id": "unknown_ascension"
+      },
+      {
+        "type": "group",
+        "id": "unknown_regular"
+      },
+      {
+        "type": "item",
+        "id": "unknown_speciality"
+      }
+    ]
+  },
+  "columbina": {
+    "id": 113,
+    "enka_id": 10000125,
+    "name": "Columbina",
+    "weapon": "catalyst",
+    "vision": "hydro",
+    "rarity": 5,
+    "nation": "nodkrai",
+    "moonsign": true,
+    "unreleased": true,
+    "stats": [
+      {
+        "stat": "hp_base",
+        "values": [ 1144.0, 2967.0, 3948.0, 5908.0, 6605.0, 7599.0, 8528.0, 9533.0, 10230.0, 11243.0, 11940.0, 12965.0, 13662.0, 14695.0, 15217.5, 15740.0 ]
+      },
+      {
+        "stat": "atk_base",
+        "values": [ 7.45, 19.32, 25.71, 38.46, 43.0, 49.47, 55.52, 62.06, 66.6, 73.2, 77.74, 84.41, 88.95, 95.67, 106.44, 117.2 ]
+      },
+      {
+        "stat": "def_base",
+        "values": [ 40.09, 103.98, 138.35, 207.02, 231.44, 266.28, 298.84, 334.04, 358.46, 393.97, 418.4, 454.31, 478.73, 514.93, 533.23, 551.53 ]
+      },
+      {
+        "stat": "crit",
+        "values": [ 0.0, 0.0, 0.0, 0.0, 4.8, 4.8, 9.6, 9.6, 9.6, 9.6, 14.4, 14.4, 19.2, 19.2, 19.2, 19.2 ]
+      },
+      {
+        "stat": "burst_energy",
+        "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Moondew Cascade",
+        "type": "normal",
+        "damage": true,
+        "id": 0,
+        "vision": "hydro",
+        "parts": [
+          {
+            "name": "1-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 46.79, 50.3, 53.81, 58.49, 62.0, 65.51, 70.19, 74.87, 79.55, 84.23, 88.9, 93.58, 99.43, 105.28, 111.13 ],
+            "id": 0
+          },
+          {
+            "name": "2-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 36.63, 39.37, 42.12, 45.78, 48.53, 51.28, 54.94, 58.6, 62.26, 65.93, 69.59, 73.25, 77.83, 82.41, 86.99 ],
+            "id": 1
+          },
+          {
+            "name": "3-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 58.48, 62.87, 67.26, 73.11, 77.49, 81.88, 87.73, 93.57, 99.42, 105.27, 111.12, 116.97, 124.28, 131.59, 138.9 ],
+            "id": 2
+          },
+          {
+            "name": "Charged Attack",
+            "type": "charged",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 116.08, 124.79, 133.49, 145.1, 153.81, 162.51, 174.12, 185.73, 197.34, 208.94, 220.55, 232.16, 246.67, 261.18, 275.69 ],
+            "id": 3
+          },
+          {
+            "name": "Moondew Cleanse (1/3)",
+            "type": "lunarbloom",
+            "damage": false,
+            "vision": null,
+            "stat": "hp",
+            "reaction": "lunarbloom",
+            "crit": true,
+            "scale": [ 1.51, 1.62, 1.74, 1.89, 2.0, 2.12, 2.27, 2.42, 2.57, 2.72, 2.87, 3.02, 3.21, 3.4, 3.59 ],
+            "id": 4
+          },
+          {
+            "name": "Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 56.83, 61.45, 66.08, 72.69, 77.31, 82.6, 89.87, 97.14, 104.41, 112.34, 120.27, 128.2, 136.12, 144.05, 151.98 ],
+            "id": 5
+          },
+          {
+            "name": "Low Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 113.63, 122.88, 132.13, 145.35, 154.59, 165.17, 179.7, 194.23, 208.77, 224.62, 240.48, 256.34, 272.19, 288.05, 303.9 ],
+            "id": 6
+          },
+          {
+            "name": "High Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 141.93, 153.49, 165.04, 181.54, 193.1, 206.3, 224.45, 242.61, 260.76, 280.57, 300.37, 320.18, 339.98, 359.79, 379.59 ],
+            "id": 7
+          }
+        ]
+      },
+      {
+        "name": "Eternal Tides",
+        "type": "skill",
+        "damage": true,
+        "id": 1,
+        "vision": "hydro",
+        "parts": [
+          {
+            "name": "Skill",
+            "type": "skill",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "hp",
+            "crit": true,
+            "scale": [ 16.72, 17.97, 19.23, 20.9, 22.15, 23.41, 25.08, 26.75, 28.42, 30.1, 31.77, 33.44, 35.53, 37.62, 39.71 ],
+            "id": 0
+          },
+          {
+            "name": "Moonreel Continuous",
+            "type": "skill",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "hp",
+            "crit": true,
+            "scale": [ 9.36, 10.06, 10.76, 11.7, 12.4, 13.1, 14.04, 14.98, 15.91, 16.85, 17.78, 18.72, 19.89, 21.06, 22.23 ],
+            "id": 1
+          },
+          {
+            "name": "Gravity Interference: Lunar-Charged",
+            "type": "lunarcharged",
+            "damage": false,
+            "vision": null,
+            "stat": "hp",
+            "alt": 1,
+            "reaction": "lunarcharged",
+            "crit": true,
+            "scale": [ 4.7, 5.06, 5.41, 5.88, 6.23, 6.59, 7.06, 7.53, 8.0, 8.47, 8.94, 9.41, 10.0, 10.58, 11.17 ],
+            "id": 2
+          },
+          {
+            "name": "Gravity Interference: Lunar-Bloom (1/5)",
+            "type": "lunarbloom",
+            "damage": false,
+            "vision": null,
+            "stat": "hp",
+            "alt": 2,
+            "reaction": "lunarbloom",
+            "crit": true,
+            "scale": [ 1.41, 1.51, 1.62, 1.76, 1.87, 1.97, 2.11, 2.25, 2.39, 2.53, 2.68, 2.82, 2.99, 3.17, 3.34 ],
+            "id": 3
+          },
+          {
+            "name": "Gravity Interference: Lunar-Crystallize",
+            "type": "lunarcrystalize",
+            "damage": false,
+            "vision": null,
+            "stat": "hp",
+            "alt": 3,
+            "reaction": "lunarcrystalize",
+            "crit": true,
+            "scale": [ 8.82, 9.49, 10.15, 11.03, 11.69, 12.35, 13.24, 14.12, 15.0, 15.88, 16.77, 17.65, 18.75, 19.85, 20.96 ],
+            "id": 4
+          }
+        ]
+      },
+      {
+        "name": "Moonlit Melancholy",
+        "type": "burst",
+        "damage": true,
+        "id": 2,
+        "vision": "hydro",
+        "parts": [
+          {
+            "name": "Skill",
+            "type": "burst",
+            "damage": true,
+            "vision": "hydro",
+            "stat": "hp",
+            "crit": true,
+            "scale": [ 32.24, 34.66, 37.08, 40.3, 42.72, 45.14, 48.36, 51.58, 54.81, 58.03, 61.26, 64.48, 68.51, 72.54, 76.57 ],
+            "id": 0
+          }
+        ],
+        "apply": {
+          "id": 2403,
+          "party": true,
+          "offset": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]
+        }
+      }
+    ],
+    "passive": [
+      {
+        "name": "Moonsign Benediction: Borrowed Moonlight",
+        "desc": "When a party member triggers an Electro-Charged/Bloom/Hydro-Crystallize reaction, it will be converted into a Lunar-Charged/Lunar-Bloom/Lunar-Crystallize reaction. Lunar Reaction DMG inflicted by party members gain a Base DMG increase based on Columbina's Max HP. For every 1,000 points of Max HP, the Base DMG of Lunar reactions is increased by 0.2%, up to a maximum of 7%.Additionally, when Columbina is in the party, the party's Moonsign will increase by 1 level.",
+        "level": 0,
+        "apply": {
+          "id": 2418,
+          "party": true,
+          "auto": true
+        }
+      },
+      {
+        "name": "Call of the Moon",
+        "desc": "When triggering Kuuvahki Interference, Columbina gains the Lunacy effect, increasing her CRIT Rate by 5% for 10s. This effect can be stacked up to 3 times.",
+        "level": 2,
+        "apply": {
+          "id": 2419
+        }
+      },
+      {
+        "name": "Law of the New Moon",
+        "desc": "When characters within the Lunar Domain trigger Lunar reactions, they will gain the following effects respectively: <br> Lunar-Charged: Thundercloud attack interval is reduced by 0.5s. <br> Lunar-Bloom: When triggering Lunar-Bloom reactions, the party gains a special Moonridge Dew. Up to 3 Moonridge Dews can be gained every 18s. <br> Lunar-Crystallize: When Moondrift Harmony is triggered, every Moondrift has a 33% chance to inflict an extra attack.",
+        "level": 8
+      },
+      {
+        "name": "Lunar Vigil",
+        "desc": "If one of your party members is incapacitated while in the Nod-Krai region, Columbina will revive this character. The amount of HP the character will have upon revival is based on Columbina's Friendship Level. This effect can occur once every 100s.Additionally, Columbina appears to have a special affinity for certain animals who are influenced by kuuvahki...",
+        "level": 0
+      }
+    ],
+    "const": [
+      {
+        "name": "Radiance Over Blossoms and Peaks",
+        "desc": "Unleashing her Elemental Skill Eternal Tides will immediately trigger an effect equivalent to the effect of Kuuvahki Interference. This effect can be triggered once every 15s.Moonsign: Ascendant GleamWhen Kuuvahki Interference is triggered, if the Lunar reaction type that has accumulated the most Gravity for Columbina is:<br> Lunar-Charged: Current active character will recover 6 Energy.<br> Lunar-Bloom: Active character's interruption resistance will be increased for 8s.<br> Lunar-Crystallize: Summons aRainsea Shield. The Rainsea Shield's DMG absorption is based on 12% of Columbina's Max HP, and it will absorb Hydro DMG with 250% effectiveness for 8s.All nearby party members' Lunar Reaction DMG is elevated by 3%.",
+        "apply": {
+          "id": 2420,
+          "party": true,
+          "special": "const_2_3_4_5_6",
+          "auto": true
+        }
+      },
+      {
+        "name": "Not in Lone Splendor",
+        "desc": "Rate of accumulating Gravity increases by 34%. When Kuuvahki Interference is triggered, Columbina will receive the Lunar Brilliance effect, which increases her Max HP by 40% for 8s.Moonsign: Ascendant Gleam:When Lunar Brilliance is active, if, during the current trigger of Kuuvahki Interference, the Lunar reaction type that has accumulated the most Gravity for Columbina is:<br> Lunar-Charged: The party's current active character gains ATK equal to 1% of Columbina's Max HP.<br> Lunar-Bloom: Elemental Mastery of the party's current active character increases. Increase in Elemental Mastery is equal to 0.35% of Columbina's Max HP.<br> Lunar-Crystallize: DEF of the party's current active character increases. Increase in DEF is equal to 1% of Columbina's Max HP.All nearby party members' Lunar Reaction DMG is elevated by 3%.",
+        "apply": [
+          {
+            "id": 2426
+          },
+          {
+            "id": 2427,
+            "party": true
+          }
+        ]
+      },
+      {
+        "name": "Dreamlike Glow Across Tranquil Waters",
+        "desc": "Increases the Level of Elemental SkillEternal Tides by 3.All nearby party members' Lunar Reaction DMG is elevated by 3%.",
+        "bonus": [
+          {
+            "stat": "levelskill",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "Cloudveiled Ridges in Floral Mists",
+        "desc": "When Kuuvahki Interference is triggered, 4 Elemental Energy will be restored to Columbina;Additionally, if the Lunar reaction type that accumulates the most Gravity for Columbina is Lunar-Charged, Lunar-Bloom, or Lunar-Crystallize, the current trigger of Kuuvahki Interference will increase the Lunar Reaction DMG dealt. Increase in DMG is equal to 12.5%/2.5%/12.5% of Columbina's Max HP respectively. This effect can be triggered at most once every 15s.Lunar Reaction DMG dealt by the entire party is increased by 3%.All nearby party members' Lunar Reaction DMG is elevated by 3%.",
+        "apply": {
+          "id": 2428
+        }
+      },
+      {
+        "name": "Silence Tending One Lone Song",
+        "desc": "Increases the Level of Elemental Burst Moonlit Melancholy by 3.All nearby party members' Lunar Reaction DMG is elevated by 3%.",
+        "bonus": [
+          {
+            "stat": "levelburst",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "Through Darkness Led by Moonlight",
+        "desc": "For 8s after characters in the Lunar Domain trigger a Lunar reaction, based on the element involved in the reaction, the CRIT DMG of the corresponding Elemental DMG is increased by 80%. The CRIT DMG-increasing effects for the same Elemental Type do not stack.All nearby party members' Lunar Reaction DMG is elevated by 3%.",
+        "apply": [
+          {
+            "id": 2429,
+            "party": true
+          },
+          {
+            "id": 2430,
+            "party": true
+          },
+          {
+            "id": 2431,
+            "party": true
+          },
+          {
+            "id": 2432,
+            "party": true
+          }
+        ]
+      }
+    ],
+    "ascension": [
+      {
+        "type": "item",
+        "id": "unknown_ascension"
+      },
+      {
+        "type": "group",
+        "id": "unknown_regular"
+      },
+      {
+        "type": "item",
+        "id": "unknown_speciality"
+      }
+    ]
+  },
+  "zibai": {
+    "id": 114,
+    "enka_id": 10000126,
+    "name": "Zibai",
+    "weapon": "sword",
+    "vision": "geo",
+    "rarity": 5,
+    "nation": "liyue",
+    "moonsign": true,
+    "unreleased": true,
+    "stats": [
+      {
+        "stat": "hp_base",
+        "values": [ 1006.0, 2609.0, 3471.0, 5194.0, 5807.0, 6681.0, 7498.0, 8381.0, 8994.0, 9885.0, 10497.0, 11399.0, 12011.0, 12919.0, 13378.5, 13838.0 ]
+      },
+      {
+        "stat": "atk_base",
+        "values": [ 17.5, 45.4, 60.41, 90.39, 101.05, 116.26, 130.48, 145.85, 156.51, 172.02, 182.68, 198.36, 209.02, 224.83, 250.12, 275.41 ]
+      },
+      {
+        "stat": "def_base",
+        "values": [ 74.49, 193.22, 257.09, 384.69, 430.07, 494.8, 555.31, 620.71, 666.09, 732.09, 777.47, 844.21, 889.59, 956.85, 990.86, 1024.86 ]
+      },
+      {
+        "stat": "critdmg",
+        "values": [ 0.0, 0.0, 0.0, 0.0, 9.6, 9.6, 19.2, 19.2, 19.2, 19.2, 28.8, 28.8, 38.4, 38.4, 38.4, 38.4 ]
+      },
+      {
+        "stat": "burst_energy",
+        "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Golden Blade's Petaled Touch",
+        "type": "normal",
+        "damage": true,
+        "id": 0,
+        "vision": "physical",
+        "parts": [
+          {
+            "name": "1-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 50.55, 54.67, 58.78, 64.66, 68.78, 73.48, 79.95, 86.41, 92.88, 99.93, 106.99, 114.04, 121.1, 128.15, 135.2 ],
+            "id": 0
+          },
+          {
+            "name": "2-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 46.55, 50.34, 54.13, 59.54, 63.33, 67.66, 73.62, 79.57, 85.53, 92.02, 98.52, 105.01, 111.51, 118.01, 124.5 ],
+            "id": 1
+          },
+          {
+            "name": "3-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 30.89, 33.4, 35.92, 39.51, 42.02, 44.9, 48.85, 52.8, 56.75, 61.06, 65.37, 69.68, 73.99, 78.3, 82.61 ],
+            "id": 2
+          },
+          {
+            "name": "4-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 77.9, 84.24, 90.58, 99.63, 105.97, 113.22, 123.18, 133.15, 143.11, 153.98, 164.85, 175.72, 186.59, 197.46, 208.32 ],
+            "id": 3
+          },
+          {
+            "name": "Charged Attack (1/2)",
+            "type": "charged",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 73.66, 79.65, 85.65, 94.22, 100.21, 107.06, 116.48, 125.91, 135.33, 145.61, 155.88, 166.16, 176.44, 186.72, 197.0 ],
+            "id": 4
+          },
+          {
+            "name": "Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 63.93, 69.14, 74.34, 81.77, 86.98, 92.93, 101.1, 109.28, 117.46, 126.38, 135.3, 144.22, 153.14, 162.06, 170.98 ],
+            "id": 5
+          },
+          {
+            "name": "Low Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 127.84, 138.24, 148.65, 163.51, 173.92, 185.81, 202.16, 218.51, 234.86, 252.7, 270.54, 288.38, 306.22, 324.05, 341.89 ],
+            "id": 6
+          },
+          {
+            "name": "High Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 159.68, 172.67, 185.67, 204.24, 217.23, 232.09, 252.51, 272.93, 293.36, 315.64, 337.92, 360.2, 382.48, 404.76, 427.04 ],
+            "id": 7
+          }
+        ]
+      },
+      {
+        "name": "Heaven and Earth Made Manifest",
+        "type": "skill",
+        "damage": true,
+        "id": 1,
+        "vision": "geo",
+        "parts": [
+          {
+            "name": "Lunar Phase Shift 1-Hit",
+            "type": "skill",
+            "damage": true,
+            "vision": "geo",
+            "stat": "def",
+            "crit": true,
+            "scale": [ 56.58, 60.82, 65.07, 70.72, 74.97, 79.21, 84.87, 90.53, 96.18, 101.84, 107.5, 113.16, 120.23, 127.3, 134.38 ],
+            "id": 0
+          },
+          {
+            "name": "Lunar Phase Shift 2-Hit",
+            "type": "skill",
+            "damage": true,
+            "vision": "geo",
+            "stat": "def",
+            "crit": true,
+            "scale": [ 52.1, 56.01, 59.92, 65.13, 69.03, 72.94, 78.15, 83.36, 88.57, 93.78, 98.99, 104.2, 110.71, 117.23, 123.74 ],
+            "id": 1
+          },
+          {
+            "name": "Lunar Phase Shift 3-Hit",
+            "type": "skill",
+            "damage": true,
+            "vision": "geo",
+            "stat": [
+              "atk",
+              "def"
+            ],
+            "crit": true,
+            "scale": [
+              [ 34.57, 37.16, 39.75, 43.21, 45.8, 48.4, 51.85, 55.31, 58.77, 62.22, 65.68, 69.14, 73.46, 77.78, 82.1 ],
+              [ 34.57, 37.16, 39.75, 43.21, 45.8, 48.4, 51.85, 55.31, 58.77, 62.22, 65.68, 69.14, 73.46, 77.78, 82.1 ]
+            ],
+            "id": 2
+          },
+          {
+            "name": "Lunar Phase Shift 4-Hit",
+            "type": "skill",
+            "damage": true,
+            "vision": "geo",
+            "stat": "def",
+            "crit": true,
+            "scale": [ 87.18, 93.72, 100.26, 108.97, 115.51, 122.05, 130.77, 139.49, 148.2, 156.92, 165.64, 174.36, 185.25, 196.15, 207.05 ],
+            "id": 3
+          },
+          {
+            "name": "Lunar Phase Shift Charged Attack",
+            "type": "skill",
+            "damage": true,
+            "vision": "geo",
+            "stat": [
+              "atk",
+              "def"
+            ],
+            "crit": true,
+            "scale": [
+              [ 65.95, 70.9, 75.84, 82.44, 87.38, 92.33, 98.93, 105.52, 112.12, 118.71, 125.31, 131.9, 140.14, 148.39, 156.63 ],
+              [ 65.95, 70.9, 75.84, 82.44, 87.38, 92.33, 98.93, 105.52, 112.12, 118.71, 125.31, 131.9, 140.14, 148.39, 156.63 ]
+            ],
+            "id": 4
+          },
+          {
+            "name": "Spirit Steed's Stride 1-Hit",
+            "type": "skill",
+            "damage": true,
+            "vision": "geo",
+            "stat": "def",
+            "crit": true,
+            "scale": [ 172.53, 185.47, 198.41, 215.66, 228.6, 241.54, 258.79, 276.04, 293.3, 310.55, 327.8, 345.06, 366.62, 388.19, 409.75 ],
+            "id": 5
+          },
+          {
+            "name": "Spirit Steed's Stride 2-Hit",
+            "type": "lunarcrystalize",
+            "damage": false,
+            "vision": null,
+            "reaction": "lunarcrystalize",
+            "stat": "def",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 140.97, 151.54, 162.11, 176.21, 186.78, 197.36, 211.45, 225.55, 239.65, 253.74, 267.84, 281.94, 299.56, 317.18, 334.8 ],
+            "id": 6
+          },
+          {
+            "name": "Lunar Phase Shift 4-Hit Ascendant Gleam",
+            "type": "lunarcrystalize",
+            "damage": false,
+            "vision": null,
+            "reaction": "lunarcrystalize",
+            "stat": "def",
+            "crit": true,
+            "alt": 2,
+            "scale": [ 29.46, 31.67, 33.87, 36.82, 39.03, 41.24, 44.18, 47.13, 50.08, 53.02, 55.97, 58.91, 62.59, 66.28, 69.96 ],
+            "id": 7
+          }
+        ]
+      },
+      {
+        "name": "Tri-Sphere Eminence",
+        "type": "burst",
+        "damage": true,
+        "id": 2,
+        "vision": "geo",
+        "parts": [
+          {
+            "name": "Skill 1-Hit",
+            "type": "burst",
+            "damage": true,
+            "vision": "geo",
+            "stat": "def",
+            "crit": true,
+            "scale": [ 126.96, 136.48, 146.0, 158.7, 168.22, 177.74, 190.44, 203.14, 215.83, 228.53, 241.22, 253.92, 269.79, 285.66, 301.53 ],
+            "id": 0
+          },
+          {
+            "name": "Skill 2-Hit",
+            "type": "lunarcrystalize",
+            "damage": false,
+            "vision": null,
+            "reaction": "lunarcrystalize",
+            "stat": "def",
+            "crit": true,
+            "scale": [ 177.74, 191.07, 204.41, 222.18, 235.51, 248.84, 266.62, 284.39, 302.16, 319.94, 337.71, 355.49, 377.71, 399.92, 422.14 ],
+            "id": 1
+          }
+        ]
+      }
+    ],
+    "passive": [
+      {
+        "name": "Moonsign Benediction: The Coursing Sun and Moon",
+        "desc": "When a party member triggers a Hydro Crystallize reaction, it will be converted into the Lunar-Crystallize reaction, with every 100 DEF that Zibai has increasing Lunar-Crystallize's Base DMG by 0.7%, up to a maximum of 14%.Additionally, when Zibai is in the party, the party's Moonsign will increase by 1 level.",
+        "level": 0,
+        "apply": {
+          "id": 2442,
+          "party": true,
+          "auto": true
+        }
+      },
+      {
+        "name": "The Selenic Adeptus Descends",
+        "desc": "When casting the Elemental Skill Heaven and Earth Made Manifest, or when triggering Moondrift Harmony, Zibai gains the Moonfall effect for 4s: The DMG dealt by the 2nd hit of Spirit Steed's Stride is increased by 40% of Zibai's DEF.",
+        "level": 2,
+        "apply": {
+          "id": 2443,
+          "special": "selenic_adeptus"
+        }
+      },
+      {
+        "name": "Layered Peaks Pierce the Clouds",
+        "desc": "Other Geo party members increase Zibai's DEF by 15% each. Other Hydro party members increase her Elemental Mastery by 60 each.",
+        "level": 8,
+        "apply": [
+          {
+            "id": 2445,
+            "auto": true,
+            "special": "geo_2_3_4"
+          },
+          {
+            "id": 2448,
+            "auto": true,
+            "special": "hydro_1_2_3"
+          }
+        ]
+      },
+      {
+        "name": "Moonlit Flower Forest",
+        "desc": "At night (18:00 - 06:00), when not in combat, restore 1 Elemental Energy to Zibai every 2 seconds.This effect does not work in Domains, Trounce Domains, or the Spiral Abyss.",
+        "level": 0
+      }
+    ],
+    "const": [
+      {
+        "name": "Burst Forth With Vigor, But Enter in Silence",
+        "desc": "After using the Elemental Skill Heaven and Earth Made Manifest, Zibai will immediately gain 100 Phase Shift Radiance, and the max number of Spirit Steed's Stride usages per Lunar Phase Shift mode is increased to 5 times.Additionally, each time you switch to the Lunar Phase Shift mode, the first Spirit Steed's Stride's 2nd-hit Lunar-Crystallize Reaction DMG is increased by 200%.",
+        "apply": {
+          "id": 2451
+        }
+      },
+      {
+        "name": "At Birth Are Souls Born, and in Death Leave But Husks",
+        "desc": "When in the Lunar Phase Shift mode, all nearby party members' Lunar-Crystallize Reaction DMG is increased by 30%.Moonsign: Ascendant Gleam: Ascension Talent The Selenic Adeptus Descends is enhanced: the 2nd hit of Spirit Steed's Stride deals additional DMG equal to 360% of Zibai's DEF. You must first unlock the Ascension Talent \"The Selenic Adeptus Descends.\"",
+        "apply": {
+            "id": 2452,
+            "party": true,
+            "auto": true
+          }
+      },
+      {
+        "name": "Free From Constraints and Worldly Ties",
+        "desc": "Increases the Level of Elemental Skill Heaven and Earth Made Manifest by 3.",
+        "bonus": [
+          {
+            "stat": "levelskill",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "The Spirit Passes, Then Form Follows",
+        "desc": "While in the Lunar Phase Shift mode, Zibai's Normal Attack sequence will not reset, and when Spirit Steed's Stride hits opponents, Zibai will gain the \"Scattermoon Splendor\" effect: The next time she uses Normal Attacks, her 4th hit will deal 250% of the original Lunar-Crystallize Reaction DMG.",
+        "apply": {
+          "id": 2453
+        }
+      },
+      {
+        "name": "Perceive the Worthless and Debate It Not",
+        "desc": "Increases the Level of Tri-Sphere Eminence by 3.",
+        "bonus": [
+          {
+            "stat": "levelburst",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "The World, A Journey in Passing",
+        "desc": "While Zibai is in the Lunar Phase Shift mode, her Phase Shift Radiance gain rate is increased by 50%.Additionally, Spirit Steed's Stride will change such that it will consume all Phase Shift Radiance. This will elevate the DMG dealt by this instance of Spirit Steed's Stride and the Lunar-Crystallize Reaction DMG dealt by Zibai within the next 3s by 1.6% for every point consumed above 70. This effect cannot stack.",
+        "apply": {
+          "id": 2454
+        }
       }
     ],
     "ascension": [

@@ -43,6 +43,7 @@
     "name": "Anemo Slime",
     "icon": "anemo_slime",
     "vision": "anemo",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -83,6 +84,7 @@
     "name": "Cryo Slime",
     "icon": "cryo_slime",
     "vision": "cryo",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -123,6 +125,7 @@
     "name": "Dendro Slime",
     "icon": "dendro_slime",
     "vision": "dendro",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -163,6 +166,7 @@
     "name": "Electro Slime",
     "icon": "electro_slime",
     "vision": "electro",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -203,6 +207,7 @@
     "name": "Geo Slime",
     "icon": "geo_slime",
     "vision": "geo",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -243,6 +248,7 @@
     "name": "Hydro Slime",
     "icon": "hydro_slime",
     "vision": "hydro",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -283,6 +289,7 @@
     "name": "Pyro Slime",
     "icon": "pyro_slime",
     "vision": "pyro",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -322,6 +329,7 @@
     "id": 26,
     "name": "Hilichurl",
     "icon": "hilichurl",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -361,6 +369,7 @@
     "id": 8,
     "name": "Mitachurl",
     "icon": "mitachurl",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -401,6 +410,7 @@
     "name": "Anemo Samachurl",
     "icon": "anemo_samachurl",
     "vision": "anemo",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -441,6 +451,7 @@
     "name": "Dendro Samachurl",
     "icon": "dendro_samachurl",
     "vision": "dendro",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -481,6 +492,7 @@
     "name": "Geo Samachurl",
     "icon": "geo_samachurl",
     "vision": "geo",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -521,6 +533,7 @@
     "name": "Hydro Samachurl",
     "icon": "hydro_samachurl",
     "vision": "hydro",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -561,6 +574,7 @@
     "name": "Pyro Samachurl",
     "icon": "pyro_samachurl",
     "vision": "pyro",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -601,6 +615,7 @@
     "name": "Stonehide Lawachurl",
     "icon": "stonehide_lawachurl",
     "vision": "geo",
+    "type": "elite",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -641,6 +656,7 @@
     "name": "Geovishap Hatchilng",
     "icon": "geovishap_hatchling",
     "vision": "geo",
+    "type": "elite",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -680,6 +696,7 @@
     "id": 16,
     "name": "Ruin Guard",
     "icon": "ruin_guard",
+    "type": "elite",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -719,6 +736,7 @@
     "id": 17,
     "name": "Ruin Hunter",
     "icon": "ruin_hunter",
+    "type": "elite",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -758,6 +776,7 @@
     "id": 18,
     "name": "Abyss Mage",
     "icon": "abyss_mage",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -798,6 +817,7 @@
     "name": "Cryo Whopperflower",
     "icon": "cryo_whopperflower",
     "vision": "cryo",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -838,6 +858,7 @@
     "name": "Pyro Whopperflower",
     "icon": "pyro_whopperflower",
     "vision": "pyro",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -877,6 +898,7 @@
     "id": 21,
     "name": "Fatui Skirmisher",
     "icon": "fatui_skirmisher",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -917,6 +939,7 @@
     "name": "Fatui Electro Cicin Mage",
     "icon": "fatui_electro_cicin_mage",
     "vision": "electro",
+    "type": "elite",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -957,6 +980,7 @@
     "name": "Fatui Pyro Agent",
     "icon": "fatui_pyro_agent",
     "vision": "pyro",
+    "type": "elite",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -996,6 +1020,7 @@
     "id": 24,
     "name": "Treasure Hoarder",
     "icon": "treasure_hoarder",
+    "type": "normal",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -1036,6 +1061,7 @@
     "name": "Eye of the Storm",
     "icon": "eye_of_the_storm",
     "vision": "anemo",
+    "type": "elite",
     "stats": [
       {
         "id": "enemyphysicalres",
@@ -1044,6 +1070,2352 @@
       {
         "id": "enemyanemores",
         "value": "Infinity"
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Stormterror",
+    "icon": "stormterror",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Lupus Boreas",
+    "icon": "lupus_boreas",
+    "vision": "cryo",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": "Infinity"
+      },
+      {
+        "id": "enemycryores",
+        "value": "Infinity"
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Childe Phase 1",
+    "icon": "childe_1",
+    "vision": "hydro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 0
+      },
+      {
+        "id": "enemyanemores",
+        "value": 0
+      },
+      {
+        "id": "enemycryores",
+        "value": 0
+      },
+      {
+        "id": "enemydendrores",
+        "value": 0
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 0
+      },
+      {
+        "id": "enemygeores",
+        "value": 0
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 50
+      },
+      {
+        "id": "enemypyrores",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Childe Phase 1 Weak",
+    "icon": "childe_1",
+    "vision": "hydro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": -30
+      },
+      {
+        "id": "enemyanemores",
+        "value": -30
+      },
+      {
+        "id": "enemycryores",
+        "value": -30
+      },
+      {
+        "id": "enemydendrores",
+        "value": -30
+      },
+      {
+        "id": "enemyelectrores",
+        "value": -30
+      },
+      {
+        "id": "enemygeores",
+        "value": -30
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 20
+      },
+      {
+        "id": "enemypyrores",
+        "value": -30
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Childe Phase 2",
+    "icon": "childe_2",
+    "vision": "electro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 0
+      },
+      {
+        "id": "enemyanemores",
+        "value": 0
+      },
+      {
+        "id": "enemycryores",
+        "value": 0
+      },
+      {
+        "id": "enemydendrores",
+        "value": 0
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 50
+      },
+      {
+        "id": "enemygeores",
+        "value": 0
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 0
+      },
+      {
+        "id": "enemypyrores",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Childe Phase 2 Weak",
+    "icon": "childe_2",
+    "vision": "electro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": -50
+      },
+      {
+        "id": "enemyanemores",
+        "value": -50
+      },
+      {
+        "id": "enemycryores",
+        "value": -50
+      },
+      {
+        "id": "enemydendrores",
+        "value": -50
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 0
+      },
+      {
+        "id": "enemygeores",
+        "value": -50
+      },
+      {
+        "id": "enemyhydrores",
+        "value": -50
+      },
+      {
+        "id": "enemypyrores",
+        "value": -50
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Childe Phase 3",
+    "icon": "childe_3",
+    "vision": "electro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 0
+      },
+      {
+        "id": "enemyanemores",
+        "value": 0
+      },
+      {
+        "id": "enemycryores",
+        "value": 0
+      },
+      {
+        "id": "enemydendrores",
+        "value": 0
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 70
+      },
+      {
+        "id": "enemygeores",
+        "value": 0
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 70
+      },
+      {
+        "id": "enemypyrores",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Azhdaha",
+    "icon": "azhdaha",
+    "vision": "geo",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 40
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 70
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "La Signora",
+    "icon": "la_signora",
+    "vision": "cryo",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 50
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Crimson Witch of Embers",
+    "icon": "la_signora",
+    "vision": "pyro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Narukami no Mikoto",
+    "icon": "narukami_no_mikoto",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Baleful Shadowlord",
+    "icon": "narukami_no_mikoto",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 210
+      },
+      {
+        "id": "enemyanemores",
+        "value": 210
+      },
+      {
+        "id": "enemycryores",
+        "value": 210
+      },
+      {
+        "id": "enemydendrores",
+        "value": 210
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 210
+      },
+      {
+        "id": "enemygeores",
+        "value": 210
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 210
+      },
+      {
+        "id": "enemypyrores",
+        "value": 210
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Shouki no Kami P1",
+    "icon": "shouki_no_kami",
+    "vision": "electro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 50
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Shouki no Kami P2 - Regular",
+    "icon": "shouki_no_kami",
+    "vision": "electro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 30
+      },
+      {
+        "id": "enemyanemores",
+        "value": 30
+      },
+      {
+        "id": "enemycryores",
+        "value": 30
+      },
+      {
+        "id": "enemydendrores",
+        "value": 30
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 90
+      },
+      {
+        "id": "enemygeores",
+        "value": 30
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 30
+      },
+      {
+        "id": "enemypyrores",
+        "value": 30
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Shouki no Kami P2 - Shield",
+    "icon": "shouki_no_kami",
+    "vision": "electro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 230
+      },
+      {
+        "id": "enemyanemores",
+        "value": 230
+      },
+      {
+        "id": "enemycryores",
+        "value": 230
+      },
+      {
+        "id": "enemydendrores",
+        "value": 230
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 290
+      },
+      {
+        "id": "enemygeores",
+        "value": 230
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 230
+      },
+      {
+        "id": "enemypyrores",
+        "value": 230
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Shouki no Kami P2 - Weak",
+    "icon": "shouki_no_kami",
+    "vision": "electro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": -140
+      },
+      {
+        "id": "enemyanemores",
+        "value": -140
+      },
+      {
+        "id": "enemycryores",
+        "value": -140
+      },
+      {
+        "id": "enemydendrores",
+        "value": -140
+      },
+      {
+        "id": "enemyelectrores",
+        "value": -80
+      },
+      {
+        "id": "enemygeores",
+        "value": -140
+      },
+      {
+        "id": "enemyhydrores",
+        "value": -140
+      },
+      {
+        "id": "enemypyrores",
+        "value": -140
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Warden of Oasis Prime",
+    "icon": "warden_of_oasis_prime",
+    "vision": "dendro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 70
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "All-Devouring Narwhal",
+    "icon": "all_devouring_narwhal",
+    "vision": "hydro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 70
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "All-Devouring Narwhal - Phantom",
+    "icon": "all_devouring_narwhal",
+    "vision": "electro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 70
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "The Knave",
+    "icon": "knave",
+    "type": "weekly_boss",
+    "vision": "pyro",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Gosoythoth",
+    "icon": "gosoythoth",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Sublimated Queen",
+    "icon": "sublimated_queen",
+    "vision": "hydro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 70
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 70
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Ascended King",
+    "icon": "ascended_king",
+    "vision": "pyro",
+    "type": "weekly_boss",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 70
+      },
+      {
+        "id": "enemypyrores",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "SO 5.7 - Secret Source Automaton - Improved",
+    "icon": "secret_source_automaton",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 270
+      },
+      {
+        "id": "enemyanemores",
+        "value": 270
+      },
+      {
+        "id": "enemycryores",
+        "value": 270
+      },
+      {
+        "id": "enemydendrores",
+        "value": 270
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 270
+      },
+      {
+        "id": "enemygeores",
+        "value": 270
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 270
+      },
+      {
+        "id": "enemypyrores",
+        "value": 270
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "SO 5.7 - Secret Source Automaton - Low Power",
+    "icon": "secret_source_automaton",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 30
+      },
+      {
+        "id": "enemyanemores",
+        "value": 30
+      },
+      {
+        "id": "enemycryores",
+        "value": -30
+      },
+      {
+        "id": "enemydendrores",
+        "value": 30
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 30
+      },
+      {
+        "id": "enemygeores",
+        "value": 30
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 30
+      },
+      {
+        "id": "enemypyrores",
+        "value": 30
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "SO 5.7 - Secret Source Automaton - Nightsoul",
+    "icon": "secret_source_automaton",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 110
+      },
+      {
+        "id": "enemyanemores",
+        "value": 110
+      },
+      {
+        "id": "enemycryores",
+        "value": 110
+      },
+      {
+        "id": "enemydendrores",
+        "value": 110
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 110
+      },
+      {
+        "id": "enemygeores",
+        "value": 110
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 110
+      },
+      {
+        "id": "enemypyrores",
+        "value": 110
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "SO 5.7 - Lava Dragon Statue - Abyss",
+    "icon": "lava_dragon_statue",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 200
+      },
+      {
+        "id": "enemyanemores",
+        "value": 200
+      },
+      {
+        "id": "enemycryores",
+        "value": 200
+      },
+      {
+        "id": "enemydendrores",
+        "value": 200
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 200
+      },
+      {
+        "id": "enemygeores",
+        "value": 200
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 200
+      },
+      {
+        "id": "enemypyrores",
+        "value": 200
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "SO 5.7 - Lava Dragon Statue - Molten",
+    "icon": "lava_dragon_statue",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 45
+      },
+      {
+        "id": "enemyanemores",
+        "value": 45
+      },
+      {
+        "id": "enemycryores",
+        "value": 45
+      },
+      {
+        "id": "enemydendrores",
+        "value": 45
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 45
+      },
+      {
+        "id": "enemygeores",
+        "value": 45
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 45
+      },
+      {
+        "id": "enemypyrores",
+        "value": 200
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "name": "SO 5.7 - Lava Dragon Statue - Weakened",
+    "icon": "lava_dragon_statue",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "SO 5.7 - Hydro Tulpa",
+    "icon": "hydro_tulpa",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": "Infinity"
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "SO 5.7 - Hydro Tulpa - Rage",
+    "icon": "hydro_tulpa",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 210
+      },
+      {
+        "id": "enemyanemores",
+        "value": 210
+      },
+      {
+        "id": "enemycryores",
+        "value": 210
+      },
+      {
+        "id": "enemydendrores",
+        "value": 210
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 210
+      },
+      {
+        "id": "enemygeores",
+        "value": 210
+      },
+      {
+        "id": "enemyhydrores",
+        "value": "Infinity"
+      },
+      {
+        "id": "enemypyrores",
+        "value": 210
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "name": "SO 5.8 - Pipilpan Idol",
+    "icon": "pipilpan_idol",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "name": "SO 5.8 - Pipilpan Idol - Hat",
+    "icon": "pipilpan_idol",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 135
+      },
+      {
+        "id": "enemyanemores",
+        "value": 135
+      },
+      {
+        "id": "enemycryores",
+        "value": 135
+      },
+      {
+        "id": "enemydendrores",
+        "value": 135
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 135
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 135
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "SO 5.8 - Pipilpan Idol - Weak",
+    "icon": "pipilpan_idol",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": -90
+      },
+      {
+        "id": "enemyanemores",
+        "value": -90
+      },
+      {
+        "id": "enemycryores",
+        "value": -90
+      },
+      {
+        "id": "enemydendrores",
+        "value": -90
+      },
+      {
+        "id": "enemyelectrores",
+        "value": -90
+      },
+      {
+        "id": "enemygeores",
+        "value": -90
+      },
+      {
+        "id": "enemyhydrores",
+        "value": -90
+      },
+      {
+        "id": "enemypyrores",
+        "value": -90
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "name": "SO 5.8 - Tent Tortoise",
+    "icon": "tent_tortoise",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 50
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 70
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "name": "SO 5.8 - Tenebrous Papilla",
+    "icon": "tenebrous_papilla",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "name": "SO 5.8 - Tenebrous Papilla - Weak",
+    "icon": "tenebrous_papilla",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": -15
+      },
+      {
+        "id": "enemyanemores",
+        "value": -15
+      },
+      {
+        "id": "enemycryores",
+        "value": -15
+      },
+      {
+        "id": "enemydendrores",
+        "value": -15
+      },
+      {
+        "id": "enemyelectrores",
+        "value": -15
+      },
+      {
+        "id": "enemygeores",
+        "value": -15
+      },
+      {
+        "id": "enemyhydrores",
+        "value": -15
+      },
+      {
+        "id": "enemypyrores",
+        "value": -15
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "name": "SO 6.0 - Shock Trooper",
+    "icon": "shock_trooper",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": -20
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "name": "SO 6.0 - Shock Trooper - Shield",
+    "icon": "shock_trooper",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 40
+      },
+      {
+        "id": "enemyanemores",
+        "value": 70
+      },
+      {
+        "id": "enemycryores",
+        "value": 70
+      },
+      {
+        "id": "enemydendrores",
+        "value": 70
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 70
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 70
+      },
+      {
+        "id": "enemypyrores",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "name": "SO 6.0 - Shock Trooper - Weak",
+    "icon": "shock_trooper",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": -70
+      },
+      {
+        "id": "enemyanemores",
+        "value": -40
+      },
+      {
+        "id": "enemycryores",
+        "value": -40
+      },
+      {
+        "id": "enemydendrores",
+        "value": -40
+      },
+      {
+        "id": "enemyelectrores",
+        "value": -40
+      },
+      {
+        "id": "enemygeores",
+        "value": -40
+      },
+      {
+        "id": "enemyhydrores",
+        "value": -40
+      },
+      {
+        "id": "enemypyrores",
+        "value": -40
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "name": "SO 6.0 - Shock Trooper - Recover",
+    "icon": "shock_trooper",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": -20
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": -50
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "name": "SO 6.0 - Rock Crab",
+    "icon": "rock_crab",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "name": "SO 6.0 - Rock Crab - Weak",
+    "icon": "rock_crab",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": -30
+      },
+      {
+        "id": "enemyanemores",
+        "value": -30
+      },
+      {
+        "id": "enemycryores",
+        "value": -30
+      },
+      {
+        "id": "enemydendrores",
+        "value": -30
+      },
+      {
+        "id": "enemyelectrores",
+        "value": -30
+      },
+      {
+        "id": "enemygeores",
+        "value": -30
+      },
+      {
+        "id": "enemyhydrores",
+        "value": -30
+      },
+      {
+        "id": "enemypyrores",
+        "value": -30
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "name": "SO 6.0 - Aeonblight Drake",
+    "icon": "aeonblight_drake",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 70
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "name": "SO 6.0 - Aeonblight Drake - Pyro",
+    "icon": "aeonblight_drake",
+    "vision": "pyro",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 70
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 200
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "name": "SO 6.0 - Aeonblight Drake - Hydro",
+    "icon": "aeonblight_drake",
+    "vision": "hydro",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 70
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 200
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "name": "SO 6.0 - Aeonblight Drake - Geo",
+    "icon": "aeonblight_drake",
+    "vision": "geo",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 70
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 200
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "name": "SO 6.0 - Aeonblight Drake - Electro",
+    "icon": "aeonblight_drake",
+    "vision": "electro",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 70
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 200
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "name": "SO 6.0 - Aeonblight Drake - Dendro",
+    "icon": "aeonblight_drake",
+    "vision": "dendro",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 70
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 20
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "name": "SO 6.0 - Aeonblight Drake - Cryo",
+    "icon": "aeonblight_drake",
+    "vision": "cryo",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 70
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 200
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "name": "SO 6.0 - Aeonblight Drake - Anemo",
+    "icon": "aeonblight_drake",
+    "vision": "anemo",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 70
+      },
+      {
+        "id": "enemyanemores",
+        "value": 200
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "name": "SO 6.1 - Frost Operative",
+    "icon": "frost_operative",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": -20
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 70
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "name": "SO 6.1 - Lightkeeper",
+    "icon": "lightkeeper",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "name": "SO 6.1 - Frostnight Herra",
+    "icon": "frostnight_herra",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 10
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "name": "SO 6.1 - Frostnight Herra - Enhance",
+    "icon": "frostnight_herra",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 130
+      },
+      {
+        "id": "enemyanemores",
+        "value": 130
+      },
+      {
+        "id": "enemycryores",
+        "value": 130
+      },
+      {
+        "id": "enemydendrores",
+        "value": 130
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 130
+      },
+      {
+        "id": "enemygeores",
+        "value": 130
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 130
+      },
+      {
+        "id": "enemypyrores",
+        "value": 130
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "name": "SO 6.2 - Experimental Field Generator",
+    "icon": "experimental_field_generator",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
+      },
+      {
+        "id": "enemycryores",
+        "value": 10
+      },
+      {
+        "id": "enemydendrores",
+        "value": 10
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 10
+      },
+      {
+        "id": "enemygeores",
+        "value": 70
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 10
+      },
+      {
+        "id": "enemypyrores",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "name": "SO 6.2 - Iktomisaurus",
+    "icon": "iktomisaurus",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 70
+      },
+      {
+        "id": "enemyanemores",
+        "value": 70
+      },
+      {
+        "id": "enemycryores",
+        "value": 110
+      },
+      {
+        "id": "enemydendrores",
+        "value": 70
+      },
+      {
+        "id": "enemyelectrores",
+        "value": 70
+      },
+      {
+        "id": "enemygeores",
+        "value": 70
+      },
+      {
+        "id": "enemyhydrores",
+        "value": 70
+      },
+      {
+        "id": "enemypyrores",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "name": "SO 6.2 - Iniquitous Baptist",
+    "icon": "iniquitous_baptist",
+    "type": "stygian_onslought",
+    "stats": [
+      {
+        "id": "enemyphysicalres",
+        "value": 10
+      },
+      {
+        "id": "enemyanemores",
+        "value": 10
       },
       {
         "id": "enemycryores",

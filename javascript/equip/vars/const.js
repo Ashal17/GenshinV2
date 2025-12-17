@@ -9,6 +9,7 @@ const const_level_list_values = [1, 20, 20, 40, 40, 50, 50, 60, 60, 70, 70, 80, 
 const const_constel_list = [0, 1, 2, 3, 4, 5, 6];
 const const_character_visions = ["anemo", "cryo", "dendro", "electro", "geo", "hydro", "pyro"];
 const const_stats_visions = ["anemo", "cryo", "dendro", "electro", "geo", "hydro", "pyro", "physical", "healing"];
+const const_character_groups = ["moonsign", "hexenzirkel"];
 
 const const_enemy_max_level = 110;
 
@@ -121,7 +122,7 @@ const const_display_stats_columns = [
     },
     {
         "main": "elemastery",
-        "stats": ["elemastery", "melt", "vaporize", "overload", "burning", "electrocharged", "superconduct", "shatter", "swirl", "rupture", "burgeon", "hyperbloom", "lunarcharged", "lunarbloom", "aggravate", "spread", "crystalize"],
+        "stats": ["elemastery", "melt", "vaporize", "overload", "burning", "electrocharged", "superconduct", "shatter", "swirl", "rupture", "burgeon", "hyperbloom", "lunarcharged", "lunarbloom", "lunarcrystalize", "aggravate", "spread", "crystalize", "lunarcharged_elevate", "lunarbloom_elevate", "lunarcrystalize_elevate"],
         "hide": true
     },
     {
