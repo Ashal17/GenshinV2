@@ -40201,6 +40201,12 @@
             "target_vision": "all",
             "target_type": "burst"
           }
+        ],
+        "stats": [
+          {
+            "stat": "hp%",
+            "value": 20
+          }
         ]
       }
     ]
@@ -51329,78 +51335,259 @@
   },
   {
     "id": 1847,
-    "name": "FREE",
-    "options": []
+    "name": "Every Arrow Finds Its Target",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critburst",
+            "value": 10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1848,
-    "name": "FREE",
-    "options": []
+    "name": "Combat Maid",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "charged",
+            "value": 15
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1849,
-    "name": "FREE",
-    "options": []
+    "name": "Uprising Whirlwind",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "recharge",
+            "value": 16
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1850,
-    "name": "FREE",
-    "options": []
+    "name": "Blades Amidst Raindrops",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "hydro",
+            "value": 20
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1851,
-    "name": "FREE",
-    "options": []
+    "name": "Impromptu Opening",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critalt1",
+            "value": 100,
+            "custom_name": "Riff Revolution's Initial Crit Rate"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1852,
-    "name": "FREE",
-    "options": []
+    "name": "Flawless Strategy",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "healing",
+            "value": 25
+          },
+          {
+            "stat": "crit",
+            "value": -100
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1853,
-    "name": "FREE",
-    "options": []
+    "name": "Arataki Itto, Present!",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critdmgcharged",
+            "value": 70
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1854,
-    "name": "FREE",
-    "options": []
+    "name": "Forbidden Art: Daisesshou",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "skilldefignore",
+            "value": 60
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1855,
-    "name": "FREE",
-    "options": []
+    "name": "Beginnings Determined at the Roots",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critcharged",
+            "value": 15
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1856,
-    "name": "FREE",
-    "options": []
+    "name": "Dance of the Waning Moon",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "alt1",
+            "value": 65,
+            "custom_name": "Luminous Illusion DMG"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1857,
-    "name": "FREE",
-    "options": []
+    "name": "The Burning Claws Cleaving",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critburst",
+            "value": 10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1858,
-    "name": "FREE",
-    "options": []
+    "name": "Feast of Apadana",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "rupture",
+            "value": 60
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1859,
-    "name": "FREE",
-    "options": []
+    "name": "Dreams of the Seething Deep",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critskill",
+            "value": 15
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1860,
-    "name": "FREE",
-    "options": []
+    "name": "Esteem for the Innocent",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critcharged",
+            "value": 10
+          },
+          {
+            "stat": "critdmgcharged",
+            "value": 80
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1861,
-    "name": "FREE",
-    "options": []
+    "name": "To Tame All Beasts",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critalt1",
+            "value": 20,
+            "custom_name": "Charmed Cloudstrider CRIT Rate"
+          },
+          {
+            "stat": "critdmgalt1",
+            "value": 40,
+            "custom_name": "Charmed Cloudstrider CRIT DMG"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 1862,
@@ -65140,5 +65327,140 @@
         }
       ]
     }
+  },
+  {
+    "id": 2455,
+    "name": "Cinders Alone Shall Nourish",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "pyro",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2456,
+    "name": "Sealed Shrine's Spiritsong",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critalt1",
+            "value": 15,
+            "custom_name": "Shadowpiercing Shot Crit Rate"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2457,
+    "name": "Light Fragrance Leaching",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "skill",
+            "value": 20
+          },
+          {
+            "stat": "alt1",
+            "value": 20,
+            "custom_name": "Lingering Fragrance DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2458,
+    "name": "Parrot's Beak",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critdmgalt1",
+            "value": 100,
+            "custom_name": "Scalespiker Cannon's CRIT DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2459,
+    "name": "Hummingbird's Feather",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 70
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2460,
+    "name": "Sharky Eats Puffies",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 75
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2461,
+    "name": "Heart Devourer's Travail",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2462,
+    "name": "Night on Bald Mountain",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      }
+    ]
   }
 ]

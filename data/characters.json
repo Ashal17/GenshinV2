@@ -283,12 +283,10 @@
         "name": "Every Arrow Finds Its Target",
         "desc": "Increases the CRIT Rate of Fiery Rain by 10% and widens its AoE by 30%.",
         "level": 2,
-        "bonus": [
-          {
-            "stat": "critburst",
-            "value": 10
-          }
-        ]
+        "apply": {
+          "id": 1847,
+          "auto": true
+        }
       },
       {
         "name": "Precise Shot",
@@ -4359,12 +4357,10 @@
       {
         "name": "Combat Maid",
         "desc": "Decreases the Stamina Consumption of Noelle's Charged Attacks by 20% and increases her Charged Attack DMG by 15%.",
-        "bonus": [
-          {
-            "stat": "charged",
-            "value": 15
-          }
-        ]
+        "apply": {
+          "id": 1848,
+          "auto": true
+        }
       },
       {
         "name": "Invulnerable Maid",
@@ -5673,12 +5669,10 @@
       {
         "name": "Uprising Whirlwind",
         "desc": "Increases Energy Recharge by 16%.",
-        "bonus": [
-          {
-            "stat": "recharge",
-            "value": 16
-          }
-        ]
+        "apply": {
+          "id": 1849,
+          "auto": true
+        }
       },
       {
         "name": "Sweeping Gust",
@@ -6959,12 +6953,10 @@
         "name": "Blades Amidst Raindrops",
         "desc": "Xingqiu gains a 20% Hydro DMG Bonus.",
         "level": 8,
-        "bonus": [
-          {
-            "stat": "hydro",
-            "value": 20
-          }
-        ]
+        "apply": {
+          "id": 1850,
+          "auto": true
+        }
       }
     ],
     "ascension": [
@@ -8194,12 +8186,10 @@
       {
         "name": "Impromptu Opening",
         "desc": "Riff Revolution's Physical DMG has its Crit Rate increased by 100%, and will form a shield at Shield Level 3: Rave when cast.",
-        "bonus": [
-          {
-            "stat": "critalt1",
-            "value": 100
-          }
-        ]
+        "apply": {
+          "id": 1851,
+          "auto": true
+        }
       },
       {
         "name": "Double-Stop",
@@ -13210,16 +13200,10 @@
         "name": "Flawless Strategy",
         "desc": "Sangonomiya Kokomi has a 25% Healing Bonus, but a 100% decrease in CRIT Rate.",
         "level": 0,
-        "bonus": [
-          {
-            "stat": "healing",
-            "value": 25
-          },
-          {
-            "stat": "crit",
-            "value": -100
-          }
-        ]
+        "apply": {
+          "id": 1852,
+          "auto": true
+        }
       },
       {
         "name": "Tamanooya's Casket",
@@ -13747,12 +13731,10 @@
       {
         "name": "Arataki Itto, Present!",
         "desc": "Arataki Itto's Charged Attacks deal 70% increased Crit DMG. Additionally, when he uses Arataki Kesagiri, he has a 50% chance to not consume stacks of Superlative Superstrength.",
-        "bonus": [
-          {
-            "stat": "critdmgcharged",
-            "value": 70
-          }
-        ]
+        "apply": {
+          "id": 1853,
+          "auto": true
+        }
       }
     ],
     "passive": [
@@ -14911,12 +14893,10 @@
       {
         "name": "Forbidden Art: Daisesshou",
         "desc": "The Sesshou Sakura's attacks will ignore 60% of the opponents' DEF.",
-        "bonus": [
-          {
-            "stat": "skilldefignore",
-            "value": 60
-          }
-        ]
+        "apply": {
+          "id": 1854,
+          "auto": true
+        }
       }
     ],
     "passive": [
@@ -16952,12 +16932,10 @@
       {
         "name": "Beginnings Determined at the Roots",
         "desc": "Tighnari’s Charged Attack CRIT Rate is increased by 15%.",
-        "bonus": [
-          {
-            "stat": "critcharged",
-            "value": 15
-          }
-        ]
+        "apply": {
+          "id": 1855,
+          "auto": true
+        }
       },
       {
         "name": "Origins Known From the Stem",
@@ -17552,12 +17530,10 @@
       {
         "name": "Dance of the Waning Moon",
         "desc": "Dance of the Seven Realms will be enhanced as follows:<br>Luminous Illusion DMG is increased by 65%.<br>The Tranquility Aura’s duration is extended by 6s.",
-        "bonus": [
-          {
-            "stat": "alt1",
-            "value": 65
-          }
-        ]
+        "apply": {
+          "id": 1856,
+          "auto": true
+        }
       },
       {
         "name": "The Starry Skies Their Flowers Rain",
@@ -20292,12 +20268,6 @@
       {
         "name": "The Flame Incandescent",
         "desc": "Dehya's Max HP is increased by 20%, and she deals bonus DMG based on her Max HP when using the following attacks:<br>Molten Inferno's DMG will be increased by 3.6% of her Max HP.<br>Leonine Bite's DMG will be increased by 6% of her Max HP.",
-        "bonus": [
-          {
-            "stat": "hp%",
-            "value": 20
-          }
-        ],
         "apply": {
           "id": 1473,
           "auto": true
@@ -20337,15 +20307,15 @@
       {
         "name": "The Burning Claws Cleaving",
         "desc": "The CRIT Rate of Leonine Bite is increased by 10%.Additionally, after a Flame-Mane's Fist attack hits an opponent and deals CRIT Hits during a single Blazing Lioness state, it will cause the CRIT DMG of Leonine Bite to increase by 15% for the rest of Blazing Lioness's duration and extend that duration by 0.5s. This effect can be triggered every 0.2s. The duration can be extended for a maximum of 2s and CRIT DMG can be increased by a maximum of 60% this way.",
-        "bonus": [
+        "apply": [
           {
-            "stat": "critburst",
-            "value": 10
+            "id": 985
+          },
+          {
+            "id": 1857,
+            "auto": true
           }
-        ],
-        "apply": {
-          "id": 985
-        }
+        ]
       }
     ],
     "ascension": [
@@ -21194,12 +21164,10 @@
       {
         "name": "Feast of Apadana",
         "desc": "Dendro Cores created from Bloom reactions Kaveh triggers will deal 60% more DMG when they burst.",
-        "bonus": [
-          {
-            "stat": "rupture",
-            "value": 60
-          }
-        ]
+        "apply": {
+          "id": 1858,
+          "auto": true
+        }
       },
       {
         "name": "Treasures of Bonkhanak",
@@ -22547,12 +22515,10 @@
       {
         "name": "Dreams of the Seething Deep",
         "desc": "The CRIT Rate of Pressurized Floe: Shattering Pressure will be increased by 15%.",
-        "bonus": [
-          {
-            "stat": "critskill",
-            "value": 15
-          }
-        ]
+        "apply": {
+          "id": 1859,
+          "auto": true
+        }
       },
       {
         "name": "Penguins and the Land of Plenty",
@@ -23229,16 +23195,9 @@
       {
         "name": "Esteem for the Innocent",
         "desc": "The CRIT Rate of Rebuke: Vaulting Fist will be increased by 10%, and its CRIT DMG by 80%. When unleashed, it will also create an additional icicle that deals 100% of Rebuke: Vaulting Fist's Base DMG as Cryo DMG. DMG dealt this way is regarded as Charged Attack DMG.You must first unlock the Passive Talent \"There Shall Be a Plea for Justice.\"",
-        "bonus": [
-          {
-            "stat": "critcharged",
-            "value": 10
-          },
-          {
-            "stat": "critdmgcharged",
-            "value": 80
-          }
-        ]
+        "apply": {
+          "id": 1860
+        }
       }
     ],
     "ascension": [
@@ -25456,16 +25415,10 @@
       {
         "name": "To Tame All Beasts",
         "desc": "Bestial Ascent's Plunging Attack: Charmed Cloudstrider CRIT Rate increased by 20% and CRIT DMG increased by 40%, and its attack radius will be increased.",
-        "bonus": [
-          {
-            "stat": "critalt1",
-            "value": 20
-          },
-          {
-            "stat": "critdmgalt1",
-            "value": 40
-          }
-        ]
+        "apply": {
+          "id": 1861,
+          "auto": true
+        }
       }
     ],
     "ascension": [
@@ -26002,12 +25955,10 @@
         "name": "Cinders Alone Shall Nourish",
         "desc": "While in combat, Arlecchino gains a 40% Pyro DMG Bonus and can only be healed through Balemoon Rising.",
         "level": 0,
-        "bonus": [
-          {
-            "stat": "pyro",
-            "value": 40
-          }
-        ]
+        "apply": {
+          "id": 2455,
+          "auto": true
+        }
       },
       {
         "name": "Agony Alone May Be Repaid",
@@ -27005,12 +26956,10 @@
       {
         "name": "Sealed Shrine's Spiritsong",
         "desc": "The CRIT Rate of Shadowpiercing Shot is increased by 15%.",
-        "bonus": [
-          {
-            "stat": "critalt1",
-            "value": 15
-          }
-        ]
+        "apply": {
+          "id": 2456,
+          "auto": true
+        }
       },
       {
         "name": "Papyrus Scripture of Silent Secrets",
@@ -27307,16 +27256,10 @@
       {
         "name": "Light Fragrance Leaching",
         "desc": "Increases the DMG dealt by Fragrance Extraction and her Passive Talent's Cleardew Cologne \"Lingering Fragrance\" by 20%. The latter requires unlocking said Passive Talent first.Additionally, when nearby party members trigger the Burning reaction on opponents or deal Dendro DMG to Burning opponents, they will generate an additional Scent. This effect can be triggered once every 2.9s.",
-        "bonus": [
-          {
-            "stat": "skill",
-            "value": 20
-          },
-          {
-            "stat": "alt1",
-            "value": 20
-          }
-        ]
+        "apply": {
+          "id": 2457,
+          "auto": true
+        }
       },
       {
         "name": "Lakelight Top Note",
@@ -27878,13 +27821,13 @@
       {
         "name": "Parrot's Beak",
         "desc": "After Kinich lands from Canopy Hunter: Riding High's mid-air swing, his Movement SPD will increase by 30% for 6s.Additionally, Scalespiker Cannon's CRIT DMG is increased by 100%.",
-        "apply": {
-          "id": 1335
-        },
-        "bonus": [
+        "apply": [
           {
-            "stat": "critdmgalt1",
-            "value": 100
+            "id": 1335
+          },
+          {
+            "id": 2458,
+            "auto": true
           }
         ]
       },
@@ -27914,12 +27857,10 @@
       {
         "name": "Hummingbird's Feather",
         "desc": "When in Nightsoul's Blessing, Kinich will restore 5 Energy after using his Loop Shots or after unleashing the Scalespiker Cannon. Energy can be regenerated this way once every 2.8s.Additionally, Hail to the Almighty Dragonlord deals 70% more DMG.",
-        "bonus": [
-          {
-            "stat": "burst",
-            "value": 70
-          }
-        ]
+        "apply": {
+          "id": 2459,
+          "auto": true
+        }
       },
       {
         "name": "Howler Monkey's Tail",
@@ -28183,12 +28124,10 @@
       {
         "name": "Sharky Eats Puffies",
         "desc": "Mualani regenerates 8 Energy when obtaining a Puffer. Must first unlock the Passive Talent \"Heat-Resistant Freshwater Puffer.\"Additionally, Stormburst Shot deals 75% increased DMG.",
-        "bonus": [
-          {
-            "stat": "burst",
-            "value": 75
-          }
-        ]
+        "apply": {
+          "id": 2460,
+          "auto": true
+        }
       },
       {
         "name": "Same Style of Surfboard on Sale!",
@@ -29224,7 +29163,7 @@
         "desc": "Increases the Level of Dark Voices Echo by 3.",
         "bonus": [
           {
-            "stat": "level",
+            "stat": "levelburst",
             "value": 3
           }
         ]
@@ -29899,17 +29838,17 @@
       {
         "name": "Heart Devourer's Travail",
         "desc": "Citlali gains 125 Elemental Mastery, and other characters shielded by her Opal Shield, or who have Itzpapa following them, gain 250 Elemental Mastery.Additionally, when the Elemental Skill Dawnfrost Darkstar is used, nearby active characters will also be granted an Opal Shield.Also, the Passive Talent \"Mamaloaco's Frigid Rain\" has its effects enhanced:While Itzpapa is on the field, after nearby party members trigger Frozen or Melt, the opponent(s) affected by this reaction will have their Pyro and Hydro RES additionally decreased by 20% for 12s. You must first unlock the Passive Talent \"Mamaloaco's Frigid Rain\" to gain access to the above effect.",
-        "bonus": [
+        "apply": [
           {
-            "stat": "elemastery",
-            "value": 125
+            "id": 1873,
+            "party": true,
+            "noself": true
+          },
+          {
+            "id": 2461,
+            "auto": true
           }
-        ],
-        "apply": {
-          "id": 1873,
-          "party": true,
-          "noself": true
-        }
+        ]
       },
       {
         "name": "Cloud Serpent's Feathered Crown",
@@ -33755,12 +33694,10 @@
       {
         "name": "Night on Bald Mountain",
         "desc": "Flins's ATK is increased by 20%. Additionally, his Passive Talent \"Whispering Flame\" is enhanced: Flins's Elemental Mastery is increased by 10% of his ATK. The maximum increase obtainable this way is 220.",
-        "bonus": [
-          {
-            "stat": "atk%",
-            "value": 20
-          }
-        ]
+        "apply": {
+          "id": 2462,
+          "auto": true
+        }
       },
       {
         "name": "Exile's Shadow",
@@ -35552,7 +35489,7 @@
     "const": [
       {
         "name": "Radiance Over Blossoms and Peaks",
-        "desc": "Unleashing her Elemental Skill Eternal Tides will immediately trigger an effect equivalent to the effect of Kuuvahki Interference. This effect can be triggered once every 15s.Moonsign: Ascendant GleamWhen Kuuvahki Interference is triggered, if the Lunar reaction type that has accumulated the most Gravity for Columbina is:<br> Lunar-Charged: Current active character will recover 6 Energy.<br> Lunar-Bloom: Active character's interruption resistance will be increased for 8s.<br> Lunar-Crystallize: Summons aRainsea Shield. The Rainsea Shield's DMG absorption is based on 12% of Columbina's Max HP, and it will absorb Hydro DMG with 250% effectiveness for 8s.All nearby party members' Lunar Reaction DMG is elevated by 3%.",
+        "desc": "Unleashing her Elemental Skill Eternal Tides will immediately trigger an effect equivalent to the effect of Kuuvahki Interference. This effect can be triggered once every 15s.Moonsign: Ascendant GleamWhen Kuuvahki Interference is triggered, if the Lunar reaction type that has accumulated the most Gravity for Columbina is:<br> Lunar-Charged: Current active character will recover 6 Energy.<br> Lunar-Bloom: Active character's interruption resistance will be increased for 8s.<br> Lunar-Crystallize: Summons aRainsea Shield. The Rainsea Shield's DMG absorption is based on 12% of Columbina's Max HP, and it will absorb Hydro DMG with 250% effectiveness for 8s. All nearby party members' Lunar Reaction DMG is elevated by 1.5%.",
         "apply": {
           "id": 2420,
           "party": true,
@@ -35562,7 +35499,7 @@
       },
       {
         "name": "Not in Lone Splendor",
-        "desc": "Rate of accumulating Gravity increases by 34%. When Kuuvahki Interference is triggered, Columbina will receive the Lunar Brilliance effect, which increases her Max HP by 40% for 8s.Moonsign: Ascendant Gleam:When Lunar Brilliance is active, if, during the current trigger of Kuuvahki Interference, the Lunar reaction type that has accumulated the most Gravity for Columbina is:<br> Lunar-Charged: The party's current active character gains ATK equal to 1% of Columbina's Max HP.<br> Lunar-Bloom: Elemental Mastery of the party's current active character increases. Increase in Elemental Mastery is equal to 0.35% of Columbina's Max HP.<br> Lunar-Crystallize: DEF of the party's current active character increases. Increase in DEF is equal to 1% of Columbina's Max HP.All nearby party members' Lunar Reaction DMG is elevated by 3%.",
+        "desc": "Rate of accumulating Gravity increases by 34%. When Kuuvahki Interference is triggered, Columbina will receive the Lunar Brilliance effect, which increases her Max HP by 40% for 8s.Moonsign: Ascendant Gleam:When Lunar Brilliance is active, if, during the current trigger of Kuuvahki Interference, the Lunar reaction type that has accumulated the most Gravity for Columbina is:<br> Lunar-Charged: The party's current active character gains ATK equal to 1% of Columbina's Max HP.<br> Lunar-Bloom: Elemental Mastery of the party's current active character increases. Increase in Elemental Mastery is equal to 0.35% of Columbina's Max HP.<br> Lunar-Crystallize: DEF of the party's current active character increases. Increase in DEF is equal to 1% of Columbina's Max HP. All nearby party members' Lunar Reaction DMG is elevated by 7%.",
         "apply": [
           {
             "id": 2426
@@ -35575,7 +35512,7 @@
       },
       {
         "name": "Dreamlike Glow Across Tranquil Waters",
-        "desc": "Increases the Level of Elemental SkillEternal Tides by 3.All nearby party members' Lunar Reaction DMG is elevated by 3%.",
+        "desc": "Increases the Level of Eternal Tides by 3. All nearby party members' Lunar Reaction DMG is elevated by 1.5%.",
         "bonus": [
           {
             "stat": "levelskill",
@@ -35585,14 +35522,14 @@
       },
       {
         "name": "Cloudveiled Ridges in Floral Mists",
-        "desc": "When Kuuvahki Interference is triggered, 4 Elemental Energy will be restored to Columbina;Additionally, if the Lunar reaction type that accumulates the most Gravity for Columbina is Lunar-Charged, Lunar-Bloom, or Lunar-Crystallize, the current trigger of Kuuvahki Interference will increase the Lunar Reaction DMG dealt. Increase in DMG is equal to 12.5%/2.5%/12.5% of Columbina's Max HP respectively. This effect can be triggered at most once every 15s.Lunar Reaction DMG dealt by the entire party is increased by 3%.All nearby party members' Lunar Reaction DMG is elevated by 3%.",
+        "desc": "When Kuuvahki Interference is triggered, 4 Elemental Energy will be restored to Columbina;Additionally, if the Lunar reaction type that accumulates the most Gravity for Columbina is Lunar-Charged, Lunar-Bloom, or Lunar-Crystallize, the current trigger of Kuuvahki Interference will increase the Lunar Reaction DMG dealt. Increase in DMG is equal to 12.5%/2.5%/12.5% of Columbina's Max HP respectively. This effect can be triggered at most once every 15s. All nearby party members' Lunar Reaction DMG is elevated by 1.5%.",
         "apply": {
           "id": 2428
         }
       },
       {
         "name": "Silence Tending One Lone Song",
-        "desc": "Increases the Level of Elemental Burst Moonlit Melancholy by 3.All nearby party members' Lunar Reaction DMG is elevated by 3%.",
+        "desc": "Increases the Level of Moonlit Melancholy by 3. All nearby party members' Lunar Reaction DMG is elevated by 1.5%.",
         "bonus": [
           {
             "stat": "levelburst",
@@ -35602,7 +35539,7 @@
       },
       {
         "name": "Through Darkness Led by Moonlight",
-        "desc": "For 8s after characters in the Lunar Domain trigger a Lunar reaction, based on the element involved in the reaction, the CRIT DMG of the corresponding Elemental DMG is increased by 80%. The CRIT DMG-increasing effects for the same Elemental Type do not stack.All nearby party members' Lunar Reaction DMG is elevated by 3%.",
+        "desc": "For 8s after characters in the Lunar Domain trigger a Lunar reaction, based on the element involved in the reaction, the CRIT DMG of the corresponding Elemental DMG is increased by 80%. The CRIT DMG-increasing effects for the same Elemental Type do not stack. All nearby party members' Lunar Reaction DMG is elevated by 7%.",
         "apply": [
           {
             "id": 2429,
