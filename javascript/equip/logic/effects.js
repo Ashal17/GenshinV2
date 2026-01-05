@@ -850,6 +850,18 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             }
 
             break;
+        case "torchforger_covenant":
+            var moonsign = equip_character_return_variable_count("moonsign");
+            if (moonsign >= 2) {
+                var offset_val = 2;
+            } else {
+                var offset_val = 0;
+            }
+            var const_effect_ids = equip_effects_return_const_offset(source_party, apply, offset, [6]);
+            new_effect.id = const_effect_ids.id + offset_val;
+            new_effect.max_id = const_effect_ids.max_id + 2;
+
+            break;
         case "blessing_of_moonlight":
             if (!data_characters[user_objects.user_party[source_party].id].moonsign) {
                 var offset_val = 0;
@@ -929,6 +941,27 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
                 new_effect.id = apply.id + offset_val;
                 new_effect.max_id = max_id;
             }
+            break;
+
+        case "geo_hydro_0_1_2_3":
+            var geo_hydro_count = equip_character_return_variable_count("vision", "geo")  + equip_character_return_variable_count("vision", "hydro");
+
+            var max_id = apply.id + 3;
+            if (geo_hydro_count > 3) {
+                geo_hydro_count = 3;
+            }
+
+            if (apply.offset) {
+                var offset_val = apply.offset[offset] + geo_hydro_count * apply.offset.length;
+                var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length * 3;
+            } else {
+                var offset_val = geo_hydro_count;
+                var max_id = apply.id + 3;
+            }
+
+            new_effect.id = apply.id + offset_val;
+            new_effect.max_id = max_id;
+
             break;
 
         case "geo_1_2_3": 
@@ -1604,7 +1637,27 @@ function equip_effects_return_bonusdmg_statline(bonusdmg) {
     if (bonusdmg.custom_name) {
         var text = bonusdmg.custom_name;
     } else {
+        
+        var targetname = "";
+        if (bonusdmg.target_vision && bonusdmg.target_vision != "all" && bonusdmg.target_vision != "reactions") {
+            targetname += " " + data_visions[bonusdmg.target_vision].name;
+        }
+        if (bonusdmg.target_type && bonusdmg.target_type != "all") {
+            if (bonusdmg.target_type == "reactions" || !const_bonusdmg_names.hasOwnProperty(bonusdmg.target_type)) {
+                targetname += " " + data_reactions[bonusdmg.target_type].name;
+            } else {
+                targetname += " " + const_bonusdmg_names[bonusdmg.target_type];
+            }
+            
+        }
+        if (targetname == "") {
+            targetname = " All Damage";
+        }
+
         var sourcename = data_stats[bonusdmg.source].name;
+        if (bonusdmg.character) {
+            sourcename = equip_character_return_short_name(bonusdmg.character) + "'s " + sourcename;
+        }
 
         var text_min = "";
         if (bonusdmg.min) {
@@ -1614,23 +1667,7 @@ function equip_effects_return_bonusdmg_statline(bonusdmg) {
         if (bonusdmg.max) {
             text_max = " (Max&nbsp;" + utils_number_format(bonusdmg.max) + ")";
         }
-        var targetname = "";
-        if (bonusdmg.target_vision && bonusdmg.target_vision != "all") {
-            targetname += " " + data_visions[bonusdmg.target_vision].name;
-        }
-        if (bonusdmg.target_type && bonusdmg.target_type != "all") {
-            targetname += " " + const_bonusdmg_names[bonusdmg.target_type];
-        }
-        if (bonusdmg.target_reaction) {
-            targetname += " " + data_reactions[bonusdmg.target_reaction].name;
-        }
-        if (targetname == "") {
-            targetname = " All Damage";
-        }
 
-        if (bonusdmg.character) {
-            sourcename = equip_character_return_short_name(bonusdmg.character) + "'s " + sourcename;
-        }
         var text = sourcename + text_min + " to" + targetname + text_max;
     }
     return utils_create_statline(text, utils_number_format(Math.round(bonusdmg.ratio * 10000) / 10000) + "%", "value_bonusdmg");

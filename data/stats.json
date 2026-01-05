@@ -235,7 +235,7 @@
     "type": "percent"
   },
   "critcrystalize": {
-    "name": "Crystalize Crit Rate",
+    "name": "Crystallize Crit Rate",
     "type": "percent"
   },
   "critlunarcrystalize": {
@@ -390,7 +390,7 @@
     "type": "percent"
   },
   "critdmgcrystalize": {
-    "name": "Crystalize Crit DMG",
+    "name": "Crystallize Crit DMG",
     "type": "percent"
   },
   "critdmglunarcrystalize": {
@@ -758,11 +758,11 @@
     "type": "percent"
   },
   "crystalize": {
-    "name": "Crystalize",
+    "name": "Crystallize",
     "type": "percent"
   },
   "lunarcrystalize": {
-    "name": "Lunar-Crystalize",
+    "name": "Lunar-Crystallize",
     "type": "percent"
   },
   "swirl": {
@@ -842,11 +842,11 @@
     "type": "percent"
   },
   "crystalize_base": {
-    "name": "Crystalize Base DMG",
+    "name": "Crystallize Base DMG",
     "type": "percent"
   },
   "lunarcrystalize_base": {
-    "name": "Lunar-Crystalize Base DMG",
+    "name": "Lunar-Crystallize Base DMG",
     "type": "percent"
   },
   "swirl_base": {
@@ -1010,11 +1010,11 @@
     "type": "percent"
   },
   "crystalize_mult": {
-    "name": "Crystalize Multiplier",
+    "name": "Crystallize Multiplier",
     "type": "percent"
   },
   "lunarcrystalize_mult": {
-    "name": "Lunar-Crystalize Multiplier",
+    "name": "Lunar-Crystallize Multiplier",
     "type": "percent"
   },
   "swirl_mult": {
@@ -1247,8 +1247,20 @@
     "name": "Elemental Burst Level",
     "type": "flat"
   },
-  "additional": {
-    "name": "Additional Hit",
+  "additionalatk": {
+    "name": "Additional Hit Attack Scaling",
+    "type": "percent"
+  },
+  "additionalatk_atk": {
+    "name": "Additional Hit Attack Scaling × Attack",
+    "type": "percent"
+  },
+  "additionalhp": {
+    "name": "Additional Hit HP Scaling",
+    "type": "percent"
+  },
+  "additionalhp_hp": {
+    "name": "Additional Hit HP Scaling × HP",
     "type": "percent"
   },
   "normaldefignore": {

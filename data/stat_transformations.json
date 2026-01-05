@@ -883,6 +883,26 @@
       "stat": "healinghp",
       "change": "times",
       "mods": [ "healing" ]
+    },
+    {
+      "stat": "additionalatk_atk",
+      "change": "add",
+      "mods": [ "additionalatk" ]
+    },
+    {
+      "stat": "additionalatk_atk",
+      "change": "times",
+      "mods": [ "atk", 100 ]
+    },
+    {
+      "stat": "additionalhp_hp",
+      "change": "add",
+      "mods": [ "additionalhp" ]
+    },
+    {
+      "stat": "additionalhp_hp",
+      "change": "times",
+      "mods": [ "hp", 100 ]
     }
   ],
 

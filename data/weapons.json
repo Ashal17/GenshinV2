@@ -835,6 +835,11 @@
           "stat": "critdmg",
           "type": "refine",
           "value": [ 20, 25, 30, 35, 40 ]
+        },
+        {
+          "stat": "additionalatk",
+          "type": "flat",
+          "value": [ 125 ]
         }
       ],
       "display_effects": [
@@ -985,6 +990,11 @@
           "stat": "crit",
           "type": "level",
           "value": 6
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 40, 50, 60, 70, 80 ]
         }
       ],
       "display_effects": [
@@ -1804,6 +1814,11 @@
           "stat": "atk%",
           "type": "level",
           "value": 12
+        },
+        {
+          "stat": "additionalatk",
+          "type": "flat",
+          "value": 100
         }
       ],
       "display_effects": [
@@ -1908,6 +1923,11 @@
           "stat": "crit",
           "type": "level",
           "value": 4
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 60, 75, 90, 105, 120 ]
         }
       ],
       "display_effects": [
@@ -2528,6 +2548,11 @@
           "stat": "hp%",
           "type": "level",
           "value": 9.0
+        },
+        {
+          "stat": "additionalhp",
+          "type": "refine",
+          "value": [ 40.0, 50.0, 60.0, 70.0, 80.0 ]
         }
       ],
       "display_effects": [
@@ -2974,6 +2999,11 @@
           "stat": "atk%",
           "type": "level",
           "value": 12
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 240, 300, 360, 420, 480 ]
         }
       ],
       "display_effects": [
@@ -2998,6 +3028,13 @@
         {
           "type": "text",
           "value": "."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2479,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0
         }
       ],
       "ascension": [
@@ -3487,6 +3524,11 @@
           "stat": "elemental",
           "type": "refine",
           "value": [ 12, 15, 18, 21, 24 ]
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 160, 200, 240, 280, 320 ]
         }
       ],
       "display_effects": [
@@ -3899,6 +3941,11 @@
           "stat": "atk%",
           "type": "level",
           "value": 9
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 80, 100, 120, 140, 160 ]
         }
       ],
       "display_effects": [
@@ -3923,6 +3970,13 @@
         {
           "type": "text",
           "value": " ATK DMG. Can only occur once every 10s."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 392,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0
         }
       ],
       "ascension": [
@@ -4988,6 +5042,11 @@
           "stat": "hp%",
           "type": "level",
           "value": 9.0
+        },
+        {
+          "stat": "additionalhp",
+          "type": "refine",
+          "value": [ 40.0, 50.0, 60.0, 70.0, 80.0 ]
         }
       ],
       "display_effects": [
@@ -5985,6 +6044,11 @@
           "stat": "atk%",
           "type": "level",
           "value": 7.66
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 60, 75, 90, 105, 120 ]
         }
       ],
       "display_effects": [
@@ -6237,6 +6301,11 @@
           "stat": "atk%",
           "type": "level",
           "value": 6
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 240, 300, 360, 420, 480 ]
         }
       ],
       "display_effects": [
@@ -6603,6 +6672,11 @@
           "stat": "all",
           "type": "refine",
           "value": [ 8, 10, 12, 14, 16 ]
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 80, 100, 120, 140, 160 ]
         }
       ],
       "display_effects": [
@@ -6953,6 +7027,11 @@
           "stat": "physical",
           "type": "level",
           "value": 7.51
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 80, 100, 120, 140, 160 ]
         }
       ],
       "display_effects": [
@@ -6977,6 +7056,13 @@
         {
           "type": "text",
           "value": " ATK DMG. Can only occur once every 10s."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 392,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0
         }
       ],
       "ascension": [
@@ -8324,6 +8410,11 @@
           "stat": "physical",
           "type": "level",
           "value": 7.51
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 20, 25, 30, 35, 40 ]
         }
       ],
       "display_effects": [
@@ -8339,13 +8430,6 @@
         {
           "type": "text",
           "value": " ATK as DMG for 5s."
-        }
-      ],
-      "apply_effect": [
-        {
-          "id": 392,
-          "offset": [ 0, 1, 2, 3, 4 ],
-          "option": 0
         }
       ],
       "ascension": [
@@ -8859,6 +8943,11 @@
           "stat": "crit",
           "type": "refine",
           "value": [ 8, 10, 12, 14, 16 ]
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 40, 55, 70, 85, 100 ]
         }
       ],
       "display_effects": [
@@ -9053,6 +9142,11 @@
           "stat": "physical",
           "type": "level",
           "value": 15.01
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 80, 100, 120, 140, 160 ]
         }
       ],
       "display_effects": [
@@ -9077,6 +9171,13 @@
         {
           "type": "text",
           "value": " ATK DMG. Can only occur once every 10s."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 392,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "option": 0
         }
       ],
       "ascension": [
@@ -10504,6 +10605,11 @@
           "stat": "atk%",
           "type": "refine",
           "value": [ 20, 25, 30, 35, 40 ]
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 200, 230, 260, 290, 320 ]
         }
       ],
       "display_effects": [
@@ -10799,6 +10905,11 @@
           "stat": "atk%",
           "type": "level",
           "value": 7.66
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 240, 280, 320, 360, 400 ]
         }
       ],
       "display_effects": [
@@ -11258,6 +11369,11 @@
           "stat": "crit",
           "type": "refine",
           "value": [ 4, 5, 6, 7, 8 ]
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 20, 25, 30, 35, 40 ]
         }
       ],
       "display_effects": [
@@ -11277,9 +11393,7 @@
       ],
       "apply_effect": [
         {
-          "id": 377,
-          "offset": [ 0, 1, 2, 3, 4 ],
-          "option": 0
+          "id": 377
         }
       ],
       "ascension": [
@@ -11311,6 +11425,11 @@
           "stat": "atk%",
           "type": "level",
           "value": 7.66
+        },
+        {
+          "stat": "additionalatk",
+          "type": "flat",
+          "value": 200
         }
       ],
       "display_effects": [
@@ -11457,6 +11576,11 @@
           "stat": "atk%",
           "type": "level",
           "value": 9
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 100, 125, 150, 175, 200 ]
         }
       ],
       "display_effects": [
@@ -12711,6 +12835,11 @@
           "stat": "atk%",
           "type": "level",
           "value": 9
+        },
+        {
+          "stat": "additionalatk",
+          "type": "refine",
+          "value": [ 160, 200, 240, 280, 320 ]
         }
       ],
       "display_effects": [

@@ -7,7 +7,7 @@ window_frame_ids = [
 ];
 
 async function equip_load_all_data() {
-    var ver = "?20251205";
+    var ver = "?20260105";
 
     data_characters = await utils_load_json("/data/characters.json" + ver);
     data_enemies = await utils_load_json("/data/enemies.json" + ver);
@@ -739,6 +739,8 @@ function equip_setup_default_stats() {
     for (let reaction_id in data_reactions) {
         default_bonusdmg.reactions[reaction_id] = 0;
         default_bonusdmg.reactions[reaction_id + "base"] = 0;
+        default_bonusdmg.all[reaction_id] = 0;
+        default_bonusdmg.all[reaction_id + "base"] = 0;
     }  
     default_bonusdmg.alt = {};
     default_bonusdmg.alt.alt1 = 0;

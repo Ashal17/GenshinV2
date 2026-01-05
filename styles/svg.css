@@ -377,6 +377,10 @@ background: none;
     -webkit-mask-image: url(../images/svg/lunarbloom.svg);
     mask-image: url(../images/svg/lunarbloom.svg);
 }
+.svg-lunarcrystalize:before {
+    -webkit-mask-image: url(../images/svg/lunarcrystalize.svg);
+    mask-image: url(../images/svg/lunarcrystalize.svg);
+}
 .svg-enka:before {
     -webkit-mask-image: url(../images/svg/enka.svg);
     mask-image: url(../images/svg/enka.svg);

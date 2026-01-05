@@ -11688,16 +11688,12 @@
   },
   {
     "id": 377,
-    "name": "Sky-Piercing Fang - Refine 1",
+    "name": "Sky-Piercing Fang",
     "options": [
       {
         "id": 0,
         "name": "After Elemental Burst",
         "stats": [
-          {
-            "stat": "additional",
-            "value": 20
-          },
           {
             "stat": "aspeed",
             "value": 10
@@ -11712,99 +11708,23 @@
   },
   {
     "id": 378,
-    "name": "Sky-Piercing Fang - Refine 2",
-    "options": [
-      {
-        "id": 0,
-        "name": "After Elemental Burst",
-        "stats": [
-          {
-            "stat": "additional",
-            "value": 25
-          },
-          {
-            "stat": "aspeed",
-            "value": 10
-          },
-          {
-            "stat": "mspeed",
-            "value": 10
-          }
-        ]
-      }
-    ]
+    "name": "FREE",
+    "options": []
   },
   {
     "id": 379,
-    "name": "Sky-Piercing Fang - Refine 3",
-    "options": [
-      {
-        "id": 0,
-        "name": "After Elemental Burst",
-        "stats": [
-          {
-            "stat": "additional",
-            "value": 30
-          },
-          {
-            "stat": "aspeed",
-            "value": 10
-          },
-          {
-            "stat": "mspeed",
-            "value": 10
-          }
-        ]
-      }
-    ]
+    "name": "FREE",
+    "options": []
   },
   {
     "id": 380,
-    "name": "Sky-Piercing Fang - Refine 4",
-    "options": [
-      {
-        "id": 0,
-        "name": "After Elemental Burst",
-        "stats": [
-          {
-            "stat": "additional",
-            "value": 35
-          },
-          {
-            "stat": "aspeed",
-            "value": 10
-          },
-          {
-            "stat": "mspeed",
-            "value": 10
-          }
-        ]
-      }
-    ]
+    "name": "FREE",
+    "options": []
   },
   {
     "id": 381,
-    "name": "Sky-Piercing Fang - Refine 5",
-    "options": [
-      {
-        "id": 0,
-        "name": "After Elemental Burst",
-        "stats": [
-          {
-            "stat": "additional",
-            "value": 40
-          },
-          {
-            "stat": "aspeed",
-            "value": 10
-          },
-          {
-            "stat": "mspeed",
-            "value": 10
-          }
-        ]
-      }
-    ]
+    "name": "FREE",
+    "options": []
   },
   {
     "id": 382,
@@ -12418,15 +12338,15 @@
   },
   {
     "id": 392,
-    "name": "Infusion Needle - Refine 1",
+    "name": "Frost Burial - Refine 1 - Against Cryo",
     "options": [
       {
         "id": 0,
-        "name": "After Picking Orb/Particle",
+        "name": "Buff",
         "stats": [
           {
-            "stat": "additional",
-            "value": 20
+            "stat": "additionalatk",
+            "value": 120
           }
         ]
       }
@@ -12434,15 +12354,15 @@
   },
   {
     "id": 393,
-    "name": "Infusion Needle - Refine 2",
+    "name": "Frost Burial - Refine 2 - Against Cryo",
     "options": [
       {
         "id": 0,
-        "name": "After Picking Orb/Particle",
+        "name": "Buff",
         "stats": [
           {
-            "stat": "additional",
-            "value": 25
+            "stat": "additionalatk",
+            "value": 150
           }
         ]
       }
@@ -12450,15 +12370,15 @@
   },
   {
     "id": 394,
-    "name": "Infusion Needle - Refine 3",
+    "name": "Frost Burial - Refine 3 - Against Cryo",
     "options": [
       {
         "id": 0,
-        "name": "After Picking Orb/Particle",
+        "name": "Buff",
         "stats": [
           {
-            "stat": "additional",
-            "value": 30
+            "stat": "additionalatk",
+            "value": 180
           }
         ]
       }
@@ -12466,15 +12386,15 @@
   },
   {
     "id": 395,
-    "name": "Infusion Needle - Refine 4",
+    "name": "Frost Burial - Refine 4 - Against Cryo",
     "options": [
       {
         "id": 0,
-        "name": "After Picking Orb/Particle",
+        "name": "Buff",
         "stats": [
           {
-            "stat": "additional",
-            "value": 35
+            "stat": "additionalatk",
+            "value": 210
           }
         ]
       }
@@ -12482,15 +12402,15 @@
   },
   {
     "id": 396,
-    "name": "Infusion Needle - Refine 5",
+    "name": "Frost Burial - Refine 5 - Against Cryo",
     "options": [
       {
         "id": 0,
-        "name": "After Picking Orb/Particle",
+        "name": "Buff",
         "stats": [
           {
-            "stat": "additional",
-            "value": 40
+            "stat": "additionalatk",
+            "value": 240
           }
         ]
       }
@@ -26645,35 +26565,35 @@
         "name": "During Burst",
         "bonusdmg": [
           {
-            "source": "atk",
+            "source": "atk_base",
             "character": "faruzan",
             "ratio": 32,
             "target_vision": "anemo",
             "target_type": "normal"
           },
           {
-            "source": "atk",
+            "source": "atk_base",
             "character": "faruzan",
             "ratio": 32,
             "target_vision": "anemo",
             "target_type": "charged"
           },
           {
-            "source": "atk",
+            "source": "atk_base",
             "character": "faruzan",
             "ratio": 32,
             "target_vision": "anemo",
             "target_type": "plunge"
           },
           {
-            "source": "atk",
+            "source": "atk_base",
             "character": "faruzan",
             "ratio": 32,
             "target_vision": "anemo",
             "target_type": "skill"
           },
           {
-            "source": "atk",
+            "source": "atk_base",
             "character": "faruzan",
             "ratio": 32,
             "target_vision": "anemo",
@@ -31035,7 +30955,7 @@
   },
   {
     "id": 1112,
-    "name": "Scion of the Blazing Sun - Refine 1",
+    "name": "The Way of Sunfire - Refine 1",
     "options": [
       {
         "id": 0,
@@ -31051,7 +30971,7 @@
   },
   {
     "id": 1113,
-    "name": "Scion of the Blazing Sun - Refine 2",
+    "name": "The Way of Sunfire - Refine 2",
     "options": [
       {
         "id": 0,
@@ -31067,7 +30987,7 @@
   },
   {
     "id": 1114,
-    "name": "Scion of the Blazing Sun - Refine 3",
+    "name": "The Way of Sunfire - Refine 3",
     "options": [
       {
         "id": 0,
@@ -31083,7 +31003,7 @@
   },
   {
     "id": 1115,
-    "name": "Scion of the Blazing Sun - Refine 4",
+    "name": "The Way of Sunfire - Refine 4",
     "options": [
       {
         "id": 0,
@@ -31099,7 +31019,7 @@
   },
   {
     "id": 1116,
-    "name": "Scion of the Blazing Sun - Refine 5",
+    "name": "The Way of Sunfire - Refine 5",
     "options": [
       {
         "id": 0,
@@ -52315,25 +52235,29 @@
           {
             "source": "elemastery",
             "ratio": 1100,
-            "target_reaction": "swirlcryo",
+            "target_vision": "reactions",
+            "target_type": "swirlcryo",
             "character": "yumemizuki_mizuki"
           },
           {
             "source": "elemastery",
             "ratio": 1100,
-            "target_reaction": "swirlelectro",
+            "target_vision": "reactions",
+            "target_type": "swirlelectro",
             "character": "yumemizuki_mizuki"
           },
           {
             "source": "elemastery",
             "ratio": 1100,
-            "target_reaction": "swirlhydro",
+            "target_vision": "reactions",
+            "target_type": "swirlhydro",
             "character": "yumemizuki_mizuki"
           },
           {
             "source": "elemastery",
             "ratio": 1100,
-            "target_reaction": "swirlpyro",
+            "target_vision": "reactions",
+            "target_type": "swirlpyro",
             "character": "yumemizuki_mizuki"
           }
         ]
@@ -52468,7 +52392,7 @@
   },
   {
     "id": 1904,
-    "name": "The Courage to Press On",
+    "name": "The Courage to Press On - Buff",
     "options": [
       {
         "id": 0,
@@ -52482,18 +52406,7 @@
             "max": 20000
           }
         ]
-      },
-      {
-        "id": 1,
-        "name": "Fiery Passion or Apex Drive",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 100
-          }
-        ]
       }
-    ]
   },
   {
     "id": 1905,
@@ -56708,25 +56621,29 @@
           {
             "source": "elemastery",
             "ratio": 277.76,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 277.76,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 277.76,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 222.24,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -56744,25 +56661,29 @@
           {
             "source": "elemastery",
             "ratio": 298.59,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 298.59,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 298.59,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 238.91,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -56780,25 +56701,29 @@
           {
             "source": "elemastery",
             "ratio": 319.42,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 319.42,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 319.42,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 255.58,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -56816,25 +56741,29 @@
           {
             "source": "elemastery",
             "ratio": 347.2,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 347.2,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 347.2,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 277.8,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -56852,25 +56781,29 @@
           {
             "source": "elemastery",
             "ratio": 368.03,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 368.03,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 368.03,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 294.47,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -56888,25 +56821,29 @@
           {
             "source": "elemastery",
             "ratio": 388.86,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 388.86,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 388.86,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 311.14,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -56924,25 +56861,29 @@
           {
             "source": "elemastery",
             "ratio": 416.64,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 416.64,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 416.64,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 333.36,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -56960,25 +56901,29 @@
           {
             "source": "elemastery",
             "ratio": 444.42,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 444.42,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 444.42,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 355.58,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -56996,25 +56941,29 @@
           {
             "source": "elemastery",
             "ratio": 472.19,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 472.19,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 472.19,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 377.81,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57032,25 +56981,29 @@
           {
             "source": "elemastery",
             "ratio": 499.97,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 499.97,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 499.97,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 400.03,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57068,25 +57021,29 @@
           {
             "source": "elemastery",
             "ratio": 527.74,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 527.74,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 527.74,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 422.26,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57104,25 +57061,29 @@
           {
             "source": "elemastery",
             "ratio": 555.52,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 555.52,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 555.52,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 444.48,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57140,25 +57101,29 @@
           {
             "source": "elemastery",
             "ratio": 590.24,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 590.24,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 590.24,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 472.26,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57176,25 +57141,29 @@
           {
             "source": "elemastery",
             "ratio": 624.96,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 624.96,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 624.96,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 500.04,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57212,25 +57181,29 @@
           {
             "source": "elemastery",
             "ratio": 659.68,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 659.68,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 659.68,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 527.82,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57248,25 +57221,29 @@
           {
             "source": "elemastery",
             "ratio": 777.76,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 777.76,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 777.76,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 622.24,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57284,25 +57261,29 @@
           {
             "source": "elemastery",
             "ratio": 798.59,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 798.59,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 798.59,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 638.91,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57320,25 +57301,29 @@
           {
             "source": "elemastery",
             "ratio": 819.42,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 819.42,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 819.42,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 655.58,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57356,25 +57341,29 @@
           {
             "source": "elemastery",
             "ratio": 847.2,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 847.2,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 847.2,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 677.8,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57392,25 +57381,29 @@
           {
             "source": "elemastery",
             "ratio": 868.03,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 868.03,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 868.03,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 694.47,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57428,25 +57421,29 @@
           {
             "source": "elemastery",
             "ratio": 888.86,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 888.86,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 888.86,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 711.14,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57464,25 +57461,29 @@
           {
             "source": "elemastery",
             "ratio": 916.64,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 916.64,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 916.64,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 733.36,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57500,25 +57501,29 @@
           {
             "source": "elemastery",
             "ratio": 944.42,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 944.42,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 944.42,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 755.58,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57536,25 +57541,29 @@
           {
             "source": "elemastery",
             "ratio": 972.19,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 972.19,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 972.19,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 777.81,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57572,25 +57581,29 @@
           {
             "source": "elemastery",
             "ratio": 999.97,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 999.97,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 999.97,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 800.03,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57608,25 +57621,29 @@
           {
             "source": "elemastery",
             "ratio": 1027.74,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 1027.74,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 1027.74,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 822.26,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57644,25 +57661,29 @@
           {
             "source": "elemastery",
             "ratio": 1055.52,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 1055.52,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 1055.52,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 844.48,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57680,25 +57701,29 @@
           {
             "source": "elemastery",
             "ratio": 1090.24,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 1090.24,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 1090.24,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 872.26,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57716,25 +57741,29 @@
           {
             "source": "elemastery",
             "ratio": 1124.96,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 1124.96,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 1124.96,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 900.04,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -57752,25 +57781,29 @@
           {
             "source": "elemastery",
             "ratio": 1159.68,
-            "target_reaction": "rupture",
+            "target_vision": "reactions",
+            "target_type": "rupture",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 1159.68,
-            "target_reaction": "hyperbloom",
+            "target_vision": "reactions",
+            "target_type": "hyperbloom",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 1159.68,
-            "target_reaction": "burgeon",
+            "target_vision": "reactions",
+            "target_type": "burgeon",
             "character": "lauma"
           },
           {
             "source": "elemastery",
             "ratio": 927.82,
-            "target_reaction": "lunarbloom",
+            "target_vision": "reactions",
+            "target_type": "lunarbloom",
             "character": "lauma"
           }
         ]
@@ -60319,14 +60352,14 @@
             "source": "elemastery",
             "ratio": 60,
             "target_vision": "all",
-            "target_reaction": "lunarbloombase",
+            "target_type": "lunarbloombase",
             "custom_name": "Elemental Mastery to Phantasm Performance (Lunar-Bloom) Base"
           },
           {
             "source": "specialmeterelemastery",
             "ratio": 4.8,
             "target_vision": "all",
-            "target_reaction": "lunarbloombase",
+            "target_type": "lunarbloombase",
             "custom_name": "Elemental Mastery to Phantasm Performance (Lunar-Bloom) Base",
             "hidden": true
           }
@@ -65159,7 +65192,7 @@
             "source": "def",
             "ratio": 360,
             "target_vision": "alt",
-            "target_reaction": "alt1",
+            "target_type": "alt1",
             "custom_name": "DEF to Spirit Steed's Stride's 2nd-hit"
           }
         ]
@@ -65458,6 +65491,3432 @@
           {
             "stat": "atk%",
             "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2463,
+    "name": "Torchforger's Covenant",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critgeo",
+            "value": 5
+          },
+          {
+            "stat": "critdmggeo",
+            "value": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2464,
+    "name": "Nightmare Orioles",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critgeo",
+            "value": 10
+          },
+          {
+            "stat": "critdmggeo",
+            "value": 30
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2465,
+    "name": "Torchforger's Covenant - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critgeo",
+            "value": 5
+          },
+          {
+            "stat": "critdmggeo",
+            "value": 10
+          },
+          {
+            "stat": "elemastery",
+            "value": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2466,
+    "name": "Nightmare Orioles - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critgeo",
+            "value": 10
+          },
+          {
+            "stat": "critdmggeo",
+            "value": 30
+          },
+          {
+            "stat": "elemastery",
+            "value": 80
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2467,
+    "name": "Solarhunter Wolf",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "def",
+            "value": 200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2468,
+    "name": "Shadowless Reflection - Level 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 33.6,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 33.6,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 33.6,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 33.6,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 33.6,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 225.92,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2469,
+    "name": "Shadowless Reflection - Level 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 36.12,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 36.12,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 36.12,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 36.12,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 36.12,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 242.86,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2470,
+    "name": "Shadowless Reflection - Level 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 38.64,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 38.64,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 38.64,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 38.64,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 38.64,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 259.81,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2471,
+    "name": "Shadowless Reflection - Level 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 42,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 42,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 42,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 42,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 42,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 282.4,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2472,
+    "name": "Shadowless Reflection - Level 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 44.52,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 44.52,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 44.52,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 44.52,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 44.52,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 299.34,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2473,
+    "name": "Shadowless Reflection - Level 6",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 47.04,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 47.04,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 47.04,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 47.04,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 47.04,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 316.29,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2474,
+    "name": "Shadowless Reflection - Level 7",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 50.4,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 50.4,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 50.4,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 50.4,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 50.4,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 338.88,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2475,
+    "name": "Shadowless Reflection - Level 8",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 53.76,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 53.76,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 53.76,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 53.76,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 53.76,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 361.47,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2476,
+    "name": "Shadowless Reflection - Level 9",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.12,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.12,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.12,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.12,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.12,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 384.06,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2477,
+    "name": "Shadowless Reflection - Level 10",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.48,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.48,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.48,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.48,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.48,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 406.66,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2478,
+    "name": "Shadowless Reflection - Level 11",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 63.84,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 63.84,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 63.84,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 63.84,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 63.84,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 429.25,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2479,
+    "name": "Shadowless Reflection - Level 12",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.2,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.2,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.2,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.2,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.2,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 451.84,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2480,
+    "name": "Shadowless Reflection - Level 13",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.4,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.4,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.4,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.4,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.4,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 480.08,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2481,
+    "name": "Shadowless Reflection - Level 14",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 75.6,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 75.6,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 75.6,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 75.6,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 75.6,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 508.32,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2482,
+    "name": "Shadowless Reflection - Level 15",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 79.8,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 79.8,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 79.8,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 79.8,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 79.8,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 536.56,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2483,
+    "name": "Shadowless Reflection - Level 1 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 40.6,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 40.6,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 40.6,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 40.6,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 40.6,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 285.92,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2484,
+    "name": "Shadowless Reflection - Level 2 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 43.12,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 43.12,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 43.12,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 43.12,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 43.12,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 302.86,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2485,
+    "name": "Shadowless Reflection - Level 3 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 45.64,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 45.64,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 45.64,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 45.64,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 45.64,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 319.81,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2486,
+    "name": "Shadowless Reflection - Level 4 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 49,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 49,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 49,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 49,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 49,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 342.4,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2487,
+    "name": "Shadowless Reflection - Level 5 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 51.52,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 51.52,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 51.52,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 51.52,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 51.52,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 359.34,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2488,
+    "name": "Shadowless Reflection - Level 6 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 54.04,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 54.04,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 54.04,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 54.04,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 54.04,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 376.29,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2489,
+    "name": "Shadowless Reflection - Level 7 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.4,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.4,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.4,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.4,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.4,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 398.88,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2490,
+    "name": "Shadowless Reflection - Level 8 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.76,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.76,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.76,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.76,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.76,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 421.47,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2491,
+    "name": "Shadowless Reflection - Level 9 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 64.12,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 64.12,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 64.12,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 64.12,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 64.12,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 444.06,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2492,
+    "name": "Shadowless Reflection - Level 10 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.48,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.48,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.48,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.48,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.48,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 466.66,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2493,
+    "name": "Shadowless Reflection - Level 11 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 70.84,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 70.84,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 70.84,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 70.84,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 70.84,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 489.25,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2494,
+    "name": "Shadowless Reflection - Level 12 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.2,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.2,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.2,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.2,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.2,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 511.84,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2495,
+    "name": "Shadowless Reflection - Level 13 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 78.4,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 78.4,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 78.4,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 78.4,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 78.4,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 540.08,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2496,
+    "name": "Shadowless Reflection - Level 14 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 82.6,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 82.6,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 82.6,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 82.6,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 82.6,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 568.32,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2497,
+    "name": "Shadowless Reflection - Level 15 - Demonhunter's Dusk - 1 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 86.8,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 86.8,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 86.8,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 86.8,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 86.8,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 596.56,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2498,
+    "name": "Shadowless Reflection - Level 1 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 47.6,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 47.6,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 47.6,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 47.6,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 47.6,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 345.92,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2499,
+    "name": "Shadowless Reflection - Level 2 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 50.12,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 50.12,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 50.12,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 50.12,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 50.12,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 362.86,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2500,
+    "name": "Shadowless Reflection - Level 3 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 52.64,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 52.64,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 52.64,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 52.64,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 52.64,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 379.81,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2501,
+    "name": "Shadowless Reflection - Level 4 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 56,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 56,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 56,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 56,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 56,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 402.4,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2502,
+    "name": "Shadowless Reflection - Level 5 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 58.52,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 58.52,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 58.52,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 58.52,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 58.52,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 419.34,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2503,
+    "name": "Shadowless Reflection - Level 6 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 61.04,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 61.04,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 61.04,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 61.04,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 61.04,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 436.29,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2504,
+    "name": "Shadowless Reflection - Level 7 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 64.4,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 64.4,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 64.4,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 64.4,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 64.4,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 458.88,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2505,
+    "name": "Shadowless Reflection - Level 8 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.76,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.76,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.76,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.76,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 67.76,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 481.47,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2506,
+    "name": "Shadowless Reflection - Level 9 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.12,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.12,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.12,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.12,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.12,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 504.06,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2507,
+    "name": "Shadowless Reflection - Level 10 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.48,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.48,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.48,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.48,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.48,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 526.66,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2508,
+    "name": "Shadowless Reflection - Level 11 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 77.84,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 77.84,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 77.84,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 77.84,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 77.84,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 549.25,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2509,
+    "name": "Shadowless Reflection - Level 12 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 81.2,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 81.2,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 81.2,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 81.2,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 81.2,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 571.84,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2510,
+    "name": "Shadowless Reflection - Level 13 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 85.4,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 85.4,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 85.4,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 85.4,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 85.4,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 600.08,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2511,
+    "name": "Shadowless Reflection - Level 14 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 89.6,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 89.6,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 89.6,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 89.6,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 89.6,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 628.32,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2512,
+    "name": "Shadowless Reflection - Level 15 - Demonhunter's Dusk - 2 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 93.8,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 93.8,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 93.8,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 93.8,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 93.8,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 656.56,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2513,
+    "name": "Shadowless Reflection - Level 1 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.6,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.6,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.6,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.6,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 57.6,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 425.92,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2514,
+    "name": "Shadowless Reflection - Level 2 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.12,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.12,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.12,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.12,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 60.12,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 442.86,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2515,
+    "name": "Shadowless Reflection - Level 3 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 62.64,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 62.64,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 62.64,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 62.64,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 62.64,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 459.81,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2516,
+    "name": "Shadowless Reflection - Level 4 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 66,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 66,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 66,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 66,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 66,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 482.4,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2517,
+    "name": "Shadowless Reflection - Level 5 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 68.52,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 68.52,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 68.52,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 68.52,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 68.52,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 499.34,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2518,
+    "name": "Shadowless Reflection - Level 6 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.04,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.04,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.04,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.04,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 71.04,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 516.29,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2519,
+    "name": "Shadowless Reflection - Level 7 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.4,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.4,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.4,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.4,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 74.4,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 538.88,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2520,
+    "name": "Shadowless Reflection - Level 8 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 77.76,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 77.76,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 77.76,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 77.76,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 77.76,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 561.47,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2521,
+    "name": "Shadowless Reflection - Level 9 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 81.12,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 81.12,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 81.12,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 81.12,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 81.12,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 584.06,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2522,
+    "name": "Shadowless Reflection - Level 10 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 84.48,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 84.48,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 84.48,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 84.48,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 84.48,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 606.66,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2523,
+    "name": "Shadowless Reflection - Level 11 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 87.84,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 87.84,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 87.84,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 87.84,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 87.84,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 629.25,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2524,
+    "name": "Shadowless Reflection - Level 12 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 91.2,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 91.2,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 91.2,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 91.2,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 91.2,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 651.84,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2525,
+    "name": "Shadowless Reflection - Level 13 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 95.4,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 95.4,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 95.4,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 95.4,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 95.4,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 680.08,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2526,
+    "name": "Shadowless Reflection - Level 14 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 99.6,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 99.6,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 99.6,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 99.6,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 99.6,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 708.32,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2527,
+    "name": "Shadowless Reflection - Level 15 - Demonhunter's Dusk - 3 Hydro/Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 103.8,
+            "target_vision": "geo",
+            "target_type": "normal"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 103.8,
+            "target_vision": "geo",
+            "target_type": "charged"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 103.8,
+            "target_vision": "geo",
+            "target_type": "plunge"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 103.8,
+            "target_vision": "geo",
+            "target_type": "skill"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 103.8,
+            "target_vision": "geo",
+            "target_type": "burst"
+          },
+          {
+            "source": "elemastery",
+            "character": "illuga",
+            "ratio": 736.56,
+            "target_vision": "all",
+            "target_type": "lunarcrystalize",
+            "custom_name": "Illuga's Elemental Mastery to Direct Lunar-Crystallize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2528,
+    "name": "The Courage to Press On - Fiery Passion",
+    "options": [
+      {
+        "id": 1,
+        "name": "Fiery Passion or Apex Drive",
+        "stats": [
+          {
+            "stat": "alt1",
+            "value": 100,
+            "custom_name": "Fiery Passion Flying Kick DMG"
+          },
+          {
+            "stat": "alt2",
+            "value": 100,
+            "custom_name": "Volcano Kablam DMG"
           }
         ]
       }

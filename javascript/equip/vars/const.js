@@ -181,18 +181,9 @@ const const_bonusdmg_names = {
     "plunge": "Plunging Attack",
     "skill": "Elemental Skill",
     "burst": "Elemental Burst",
-    "normalalt": "Normal Attack (Alt)",
-    "chargedalt": "Charged Attack (Alt)",
-    "plungealt": "Plunging Attack (Alt)",
-    "skillalt": "Elemental Skill (Alt)",
-    "burstalt": "Elemental Burst (Alt)",
-    "normalalt2": "Normal Attack (Alt2)",
-    "chargedalt2": "Charged Attack (Alt2)",
-    "plungealt2": "Plunging Attack (Alt2)",
-    "skillalt2": "Elemental Skill (Alt2)",
-    "burstalt2": "Elemental Burst (Alt2)",
     "alt": "Alt",
-    "alt2": "Alt2"
+    "alt2": "Alt 2",
+    "alt2": "Alt 3"
 }
 
 const const_attack_level_types = ["normal", "skill", "burst"]
@@ -222,4 +213,34 @@ const const_legacy_setup_local_storage = [
     "url",
     "comparison",
     "warning"
+]
+
+const const_skills_other = [
+    {
+        "name": "Extra",
+        "type": null,
+        "id": 0,
+        "parts": [
+            {
+                "name": "Additional Hit Attack Scaling",
+                "id": 0,
+                "vision": "physical",
+                "type": null,
+                "damage": true,
+                "crit": true,
+                "stat": "additionalatk_atk",
+                "scale": [1]
+            },
+            {
+                "name": "Additional Hit HP Scaling",
+                "id": 0,
+                "vision": "physical",
+                "type": null,
+                "damage": true,
+                "crit": true,
+                "stat": "additionalhp_hp",
+                "scale": [1]
+            }
+        ]
+    }
 ]
