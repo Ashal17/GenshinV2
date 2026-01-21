@@ -52407,6 +52407,7 @@
           }
         ]
       }
+    ]
   },
   {
     "id": 1905,
@@ -68905,18 +68906,165 @@
     "name": "The Courage to Press On - Fiery Passion",
     "options": [
       {
-        "id": 1,
+        "id": 0,
         "name": "Fiery Passion or Apex Drive",
         "stats": [
           {
-            "stat": "alt1",
+            "stat": "alt2",
             "value": 100,
             "custom_name": "Fiery Passion Flying Kick DMG"
           },
           {
-            "stat": "alt2",
+            "stat": "alt3",
             "value": 100,
             "custom_name": "Volcano Kablam DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2529,
+    "name": "Foreign Star - Anemo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "crit",
+            "value": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2530,
+    "name": "Foreign Star - Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "def%",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2531,
+    "name": "Foreign Star - Electro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "recharge",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2532,
+    "name": "Foreign Star - Dendro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2533,
+    "name": "Foreign Star - Hydro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "hp%",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2534,
+    "name": "Foreign Star - Pyro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2535,
+    "name": "Foreign Star - Cryo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2536,
+    "name": "Foreign Adamantine - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "shield",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2537,
+    "name": "Foreign Aqualis >=50% HP",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "ratio": 100,
+            "target_vision": "alt",
+            "target_type": "alt3",
+            "custom_name": "ATK to Charged Attack: Tidebound"
           }
         ]
       }

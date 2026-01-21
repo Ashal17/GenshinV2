@@ -127,11 +127,11 @@ input {
 }
 
 .positive {
-    color: var(--green-light);
+    color: var(--green-light) !important;
 }
 
 .negative {
-    color: var(--red-light);
+    color: var(--red-light) !important;
 }
 
 .neutral {

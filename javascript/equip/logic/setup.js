@@ -7,7 +7,7 @@ window_frame_ids = [
 ];
 
 async function equip_load_all_data() {
-    var ver = "?20260105";
+    var ver = "?20260120";
 
     data_characters = await utils_load_json("/data/characters.json" + ver);
     data_enemies = await utils_load_json("/data/enemies.json" + ver);
@@ -372,24 +372,37 @@ function equip_setup_ui_artifact(artifact_id) {
     var icon = utils_create_obj("div", "equipment_icon", "artifact_icon_" + artifact_id);
     row.appendChild(icon);
 
+    var top_container = utils_create_obj("div", "container split_container", "artifact_top_container_" + artifact_id)
+    icon.appendChild(top_container);
+
     var level_container = utils_create_obj("div", "container", "artifact_level_container_" + artifact_id)
-    icon.appendChild(level_container);
+    top_container.appendChild(level_container);
+
+    var stars_container = utils_create_obj("div", "container", "artifact_stars_container_" + artifact_id)
+    top_container.appendChild(stars_container);
+
     var level = utils_create_obj("div", "icon_selects artifact_level", "artifact_level_" + artifact_id);
     level.onclick = function (event) { utils_create_prompt_values(level.id, equip_artifacts_change_level, equip_artifacts_return_level_options(artifact_id), artifact_id, level_container); event.preventDefault(); };
     level_container.appendChild(level);
     level.appendChild(utils_create_obj("div", "icon_selects_text", "artifact_level_text_" + artifact_id, "+ 0"));
+
+    var stars = utils_create_obj("div", "icon_selects artifact_stars", "artifact_stars_" + artifact_id);
+    stars.onclick = function (event) { utils_create_prompt_values(stars.id, equip_artifacts_change_stars, equip_artifacts_return_stars_options(artifact_id), artifact_id, stars_container); event.preventDefault(); };
+    stars_container.appendChild(stars);
+    stars.appendChild(utils_create_obj("div", "icon_selects_text", "artifact_stars_text_" + artifact_id, "0 &#9733;"));
 
     var icon_container = utils_create_obj("div", "equipment_img", "artifact_icon_container_" + artifact_id);
     icon_container.onclick = function (event) { equip_control_create_artifacts_select(artifact_id, icon_container); event.preventDefault(); };
     icon.appendChild(icon_container);
     icon_container.appendChild(utils_create_img(null, "artifact_img_" + artifact_id, "/images/icons/artifact/" + artifact_id + "/none.png"));
 
-    var stars_container = utils_create_obj("div", "container", "artifact_stars_container_" + artifact_id)
-    icon.appendChild(stars_container);
-    var stars = utils_create_obj("div", "icon_selects artifact_stars", "artifact_stars_" + artifact_id);
-    stars.onclick = function (event) { utils_create_prompt_values(stars.id, equip_artifacts_change_stars, equip_artifacts_return_stars_options(artifact_id), artifact_id, stars_container); event.preventDefault(); };
-    stars_container.appendChild(stars);
-    stars.appendChild(utils_create_obj("div", "icon_selects_text", "artifact_stars_text_" + artifact_id, "0 &#9733;"));
+    var rel_container = utils_create_obj("div", "container", "artifact_rel_container_" + artifact_id)
+    icon.appendChild(rel_container);
+
+    var rel_rating = utils_create_obj("div", "icon_selects artifact_rel", "artifact_rel_" + artifact_id);
+    rel_container.appendChild(rel_rating);
+    rel_rating.appendChild(utils_create_obj("div", "icon_selects_text", "artifact_rel_text_" + artifact_id, "0/0"));
+    
 
     var stats = utils_create_obj("div", "equipment_stats artifact_stats", "artifact_stats_" + artifact_id);
     row.appendChild(stats);
@@ -423,7 +436,13 @@ function equip_setup_ui_artifact(artifact_id) {
         sub_val_container.appendChild(sub_val);
         sub_val.appendChild(utils_create_obj("div", "icon_selects_text", "artifact_sub_val_text_" + artifact_id + i, "0"));
 
-        sub_stat_line.appendChild(utils_create_obj("div", "artifact_rel_val", "artifact_rel_val_text_" + artifact_id + i, "0"));
+        let sub_rel_container = utils_create_obj("div", "container", "artifact_sub_rel_container_" + artifact_id + i);
+        sub_stat_line.appendChild(sub_rel_container);
+        let sub_rel = utils_create_obj("div", "icon_selects artifact_sub_rel", "artifact_sub_rel_" + artifact_id + i);
+        sub_rel.onclick = function (event) { utils_create_prompt_input(null, sub_rel.id, equip_artifacts_change_sub_relative, artifact_id + i, utils_number_round(output_party[user_objects.user_active_character].artifacts[artifact_id].relative_values[i], 1), sub_rel_container); event.preventDefault(); };
+        sub_rel_container.appendChild(sub_rel);
+        sub_rel.appendChild(utils_create_obj("div", "icon_selects_text", "artifact_sub_rel_text_" + artifact_id + i, "0"));
+
     }
 
     return obj;
@@ -665,6 +684,8 @@ function equip_setup_output_objects() {
         for (var ii = 0; ii < const_artifact_types.length; ii++) {
             var artifact = {};
             artifact.relative_values = [];
+            artifact.relative_values_max = 0;
+            artifact.relative_total = 0;
             for (var iii = 0; iii < const_artifact_sub_stats; iii++) {
                 artifact.relative_values.push(0);
             }

@@ -42,22 +42,37 @@
     margin-right: 3px;
 }
 
-    .equipment_icon .icon_selects {
-        width: 80px;
-        height: 17px;
-    }
-
-.equipment_img {
-    height: 80px;
-    width: 80px;
-    margin: 5px 0px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    cursor: pointer;
+.equipment_icon .container {
+    display:flex;
+    flex-direction:row;
 }
+
+.equipment_icon .split_container {
+    width:82px;
+    justify-content:space-between;
+}
+
+
+.equipment_icon .icon_selects {
+    width: 80px;
+    height: 17px;
+}
+
+.equipment_icon .split_container .icon_selects {
+    width: 37px;
+}
+
+    .equipment_img {
+        height: 80px;
+        width: 80px;
+        margin: 5px 0px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
 
     .equipment_img img {
         max-height: calc(100% - 6px);
@@ -135,9 +150,13 @@
     font-size: 0.8em;
 }
 
+.artifact_stars .icon_selects_text {
+    margin-top:-1px;
+}
+
 .artifact_main_container .prompt_values {
     min-width: 190px;
-    left: 50%;
+    left: calc(50% - 1px);
     transform: translateX(-50%);
 }
 
@@ -147,16 +166,17 @@
 }
 
     .artifact_sub_line .container:first-child {
-        //width: calc(63% - 4px);
-        //flex: 1 1;
         margin-right: 4px;
-        width: calc(100% - 79px);
+        width: calc(100% - 82px);
     }
 
     .artifact_sub_line > .container:nth-child(2) {
-        //width: calc(25% - 2px);
         width: 50px;
-        //margin-right: 2px;
+        margin-right: 4px;
+    }
+
+    .artifact_sub_line > .container:nth-child(3) {
+        width: 24px;
     }
 
     .artifact_sub_line .prompt_values {
@@ -165,12 +185,16 @@
         transform: translateX(-50%);
     }
 
-.artifact_sub_val {
+.artifact_sub_val, .artifact_sub_rel {
     width: calc(100% - 2px);
 }
 
     .artifact_sub_val .icon_selects_text {
         color: var(--yellow);
+    }
+
+    .artifact_sub_rel .icon_selects_text {
+        font-size: 0.8em;
     }
 
 .artifact_sub_line .prompt_input_simple {

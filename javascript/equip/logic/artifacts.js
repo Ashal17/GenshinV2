@@ -145,6 +145,21 @@ function equip_artifacts_change_sub_value(value, artifact_sub_id) {
     }
 }
 
+function equip_artifacts_change_sub_relative(rel_value, artifact_sub_id) {
+    var sub_id = artifact_sub_id.slice(-1);
+    var artifact_id = artifact_sub_id.slice(0, -1);
+
+    var artifact = user_objects.user_party[user_objects.user_active_character].artifacts[artifact_id];
+    var max_rolls = artifact.stars + Math.floor(artifact.level / 4) - 4;
+    rel_value = utils_number_verify(rel_value, 1, 0, max_rolls);
+    var value = equip_artifacts_return_value_from_relative_value(artifact.sub_stats[sub_id].id, rel_value, artifact.stars);
+    value = equip_artifacts_verify_sub_value(value, artifact, sub_id);
+    if (value != null) {
+        artifact.sub_stats[sub_id].value = value;
+        equip_artifacts_change_trigger(artifact_id)
+    }
+}
+
 function equip_artifacts_storage_change_save(artifact_id) {
     var artifact = structuredClone(user_objects.user_party[user_objects.user_active_character].artifacts[artifact_id]);
     if (equip_artifacts_storage_save_artifact(artifact_id, artifact)) {
@@ -261,9 +276,15 @@ function equip_artifacts_update_stats(party_id) {
 function equip_artifacts_update_relative_values(party_id, artifact_id) {
     var artifact = user_objects.user_party[party_id].artifacts[artifact_id];
     var stars = artifact.stars;
+    var total_relative = 0;
     for (var i = 0; i < const_artifact_sub_stats; i++) {
-        output_party[party_id].artifacts[artifact_id].relative_values[i] = equip_artifacts_return_relative_value(artifact.sub_stats[i].id, artifact.sub_stats[i].value, stars);       
+        var relative = equip_artifacts_return_relative_value(artifact.sub_stats[i].id, artifact.sub_stats[i].value, stars)
+        total_relative += relative;
+        output_party[party_id].artifacts[artifact_id].relative_values[i] = relative;       
     }
+    var max_rolls = artifact.stars + Math.floor(artifact.level / 4) - 4;
+    output_party[party_id].artifacts[artifact_id].relative_values_max = max_rolls;
+    output_party[party_id].artifacts[artifact_id].relative_total = total_relative;
 }
 
 function equip_artifacts_update_all_all() {
@@ -307,6 +328,8 @@ function equip_artifacts_display(artifact_id) {
     var level_text = document.getElementById("artifact_level_text_" + artifact_id);
     var stars = document.getElementById("artifact_stars_" + artifact_id);
     var stars_text = document.getElementById("artifact_stars_text_" + artifact_id);
+    var rel = document.getElementById("artifact_rel_" + artifact_id);
+    var rel_text = document.getElementById("artifact_rel_text_" + artifact_id);
     var main_text = document.getElementById("artifact_main_text_" + artifact_id);
     var set_text = document.getElementById("artifact_set_text_" + artifact_id);
     var set_description = document.getElementById("artifact_set_description_" + artifact_id);
@@ -318,6 +341,17 @@ function equip_artifacts_display(artifact_id) {
     level_text.innerHTML = "+ " + current_artifact.level;
     stars.className = "icon_selects artifact_stars s" + current_artifact.stars;
     stars_text.innerHTML = current_artifact.stars + " &#9733;";
+
+    var max_rolls = output_party[user_objects.user_active_character].artifacts[artifact_id].relative_values_max;
+    var relative_total = output_party[user_objects.user_active_character].artifacts[artifact_id].relative_total;
+
+    rel_text.innerHTML = utils_number_round(relative_total, 1) + " / " + utils_number_round((max_rolls + 3),0);
+    if (relative_total > max_rolls + 3) {
+        rel_text.className = "icon_selects_text negative";
+    } else {
+        rel_text.className = "icon_selects_text";
+    }
+
     main_text.innerHTML = equip_artifacts_return_main_text(current_artifact.main_stat, artifact_id);
     
     set_text.innerHTML = "&times;" + output_party[user_objects.user_active_character].artifacts.sets[current_artifact.id];
@@ -338,8 +372,14 @@ function equip_artifacts_display(artifact_id) {
         var sub_val = document.getElementById("artifact_sub_val_text_" + artifact_id + i);
         sub_val.innerHTML = utils_number_round(current_artifact.sub_stats[i].value, 2);
 
-        var rel_val = document.getElementById("artifact_rel_val_text_" + artifact_id + i);
+        var rel_val = document.getElementById("artifact_sub_rel_text_" + artifact_id + i);
         rel_val.innerHTML = output_party[user_objects.user_active_character].artifacts[artifact_id].relative_values[i];
+
+        if (output_party[user_objects.user_active_character].artifacts[artifact_id].relative_values[i] > max_rolls) {
+            rel_val.className = "icon_selects_text negative";
+        } else {
+            rel_val.className = "icon_selects_text";
+        }
     }
 }
 
@@ -667,7 +707,7 @@ function equip_artifacts_verify_main_stat(artifact_id) {
 
 function equip_artifacts_verify_sub_value(value, artifact, sub_id) {
     var stat_id = artifact.sub_stats[sub_id].id;
-    var max_rolls = 1 + Math.floor(artifact.level / 4);
+    var max_rolls = artifact.stars + Math.floor(artifact.level / 4) - 4;
     var max = data_artifact_stats[artifact.stars].sub_stats[stat_id].slice(-1)[0] * max_rolls;
     return utils_number_verify(value, 2, 0, max);
 }
@@ -798,6 +838,15 @@ function equip_artifacts_return_relative_value(stat_id, value, stars) {
     if (value) {
         var single_roll = data_artifact_stats[stars].sub_stats[stat_id].slice(-1)[0];
         return Math.round(value / single_roll * 10) / 10;
+    } else {
+        return 0;
+    }
+}
+
+function equip_artifacts_return_value_from_relative_value(stat_id, rel_value, stars) {
+    if (rel_value) {
+        var single_roll = data_artifact_stats[stars].sub_stats[stat_id].slice(-1)[0];
+        return Math.round(rel_value * single_roll * 100) / 100;
     } else {
         return 0;
     }
