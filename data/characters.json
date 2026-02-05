@@ -6,6 +6,9 @@
     "vision": "physical",
     "rarity": 0,
     "nation": "none",
+    "optimize_artifact_stats": [
+      "elemastery"
+    ],
     "stats": [],
     "weapon": "none",
     "attacks": [
@@ -31,12 +34,8 @@
         "parts": []
       }
     ],
-    "const": [
-      
-    ],
-    "passive": [
-      
-    ]
+    "const": [],
+    "passive": []
   },
   "amber": {
     "id": 0,
@@ -46,6 +45,13 @@
     "vision": "pyro",
     "rarity": 4,
     "nation": "mondstadt",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -320,6 +326,13 @@
     "vision": "hydro",
     "rarity": 4,
     "nation": "mondstadt",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -577,6 +590,13 @@
     "vision": "electro",
     "rarity": 4,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -900,6 +920,13 @@
     "vision": "pyro",
     "rarity": 4,
     "nation": "mondstadt",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -1228,6 +1255,11 @@
     "vision": "cryo",
     "rarity": 4,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -1508,6 +1540,11 @@
     "vision": "pyro",
     "rarity": 5,
     "nation": "mondstadt",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -1806,6 +1843,11 @@
     "rarity": 4,
     "nation": "mondstadt",
     "hexenzirkel": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -2164,6 +2206,11 @@
     "vision": "anemo",
     "rarity": 5,
     "nation": "mondstadt",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -2462,6 +2509,11 @@
     "vision": "cryo",
     "rarity": 4,
     "nation": "mondstadt",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -2750,6 +2802,11 @@
     "vision": "electro",
     "rarity": 5,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -3081,6 +3138,11 @@
     "rarity": 5,
     "nation": "mondstadt",
     "hexenzirkel": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -3366,6 +3428,11 @@
     "vision": "electro",
     "rarity": 4,
     "nation": "mondstadt",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -3643,6 +3710,11 @@
     "rarity": 5,
     "nation": "mondstadt",
     "hexenzirkel": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -3925,6 +3997,13 @@
     "vision": "geo",
     "rarity": 4,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -4151,6 +4230,13 @@
     "vision": "geo",
     "rarity": 4,
     "nation": "mondstadt",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "def",
+      "def%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -4469,6 +4555,11 @@
     "vision": "cryo",
     "rarity": 5,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -4756,6 +4847,11 @@
     "rarity": 4,
     "nation": "mondstadt",
     "hexenzirkel": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -4972,7 +5068,7 @@
         "apply": {
           "id": 2368,
           "auto": true,
-          "offset": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+          "offset": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]
         }
       }
     ],
@@ -5122,6 +5218,11 @@
     "rarity": 4,
     "nation": "mondstadt",
     "hexenzirkel": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -5430,6 +5531,11 @@
     ],
     "rarity": 5,
     "nation": "none",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -5510,7 +5616,6 @@
             "crit": true,
             "scale": [ 70.78, 76.54, 82.3, 90.53, 96.29, 102.88, 111.93, 120.98, 130.03, 139.91, 149.79, 159.66, 169.54, 179.41, 189.29 ]
           },
-
           {
             "name": "Charged Attack (1/2)",
             "type": "charged",
@@ -5874,6 +5979,11 @@
     "vision": "geo",
     "rarity": 5,
     "nation": "none",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -6213,6 +6323,11 @@
     "rarity": 5,
     "nation": "mondstadt",
     "hexenzirkel": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -6574,6 +6689,11 @@
     "vision": "pyro",
     "rarity": 4,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -6873,6 +6993,11 @@
     "vision": "hydro",
     "rarity": 4,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -7161,6 +7286,13 @@
     "vision": "cryo",
     "rarity": 4,
     "nation": "mondstadt",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -7467,6 +7599,11 @@
     "vision": "hydro",
     "rarity": 5,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -7851,6 +7988,13 @@
     "vision": "geo",
     "rarity": 5,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -8142,6 +8286,13 @@
     "vision": "pyro",
     "rarity": 4,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "def",
+      "def%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -8452,6 +8603,13 @@
     "rarity": 5,
     "nation": "mondstadt",
     "hexenzirkel": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "def",
+      "def%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -8782,6 +8940,13 @@
     "vision": "cryo",
     "rarity": 5,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -9087,6 +9252,11 @@
     "vision": "anemo",
     "rarity": 5,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -9338,6 +9508,13 @@
     "vision": "pyro",
     "rarity": 5,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -9666,6 +9843,11 @@
     "vision": "cryo",
     "rarity": 4,
     "nation": "mondstadt",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -9960,6 +10142,11 @@
     "vision": "pyro",
     "rarity": 4,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -10267,6 +10454,12 @@
     "vision": "cryo",
     "rarity": 5,
     "nation": "mondstadt",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "specialmeteratk"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -10582,6 +10775,11 @@
     ],
     "rarity": 5,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -11006,6 +11204,11 @@
     "vision": "anemo",
     "rarity": 4,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -11343,6 +11546,11 @@
     "vision": "pyro",
     "rarity": 5,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -11622,6 +11830,11 @@
     "vision": "cryo",
     "rarity": 5,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -11897,6 +12110,11 @@
     "vision": "electro",
     "rarity": 5,
     "nation": "none",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -12239,6 +12457,12 @@
     "vision": "electro",
     "rarity": 5,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "specialmeteratk"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -12678,6 +12902,11 @@
     "vision": "electro",
     "rarity": 4,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -12949,6 +13178,11 @@
     "vision": "cryo",
     "rarity": 5,
     "nation": "none",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -13214,6 +13448,13 @@
     "vision": "hydro",
     "rarity": 5,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -13498,6 +13739,13 @@
     "vision": "pyro",
     "rarity": 4,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -13781,6 +14029,11 @@
     "vision": "geo",
     "rarity": 5,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -14040,6 +14293,13 @@
     "vision": "geo",
     "rarity": 4,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "def",
+      "def%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -14338,6 +14598,11 @@
     "vision": "cryo",
     "rarity": 5,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -14612,6 +14877,15 @@
     "vision": "geo",
     "rarity": 4,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "def",
+      "def%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -14928,6 +15202,11 @@
     "vision": "electro",
     "rarity": 5,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -15200,6 +15479,11 @@
     "vision": "hydro",
     "rarity": 5,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -15508,6 +15792,13 @@
     "vision": "hydro",
     "rarity": 5,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -15804,6 +16095,13 @@
     "vision": "electro",
     "rarity": 4,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -16115,6 +16413,11 @@
     "vision": "anemo",
     "rarity": 4,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -16397,6 +16700,13 @@
     "vision": "electro",
     "rarity": 4,
     "nation": "sumeru",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -16700,6 +17010,11 @@
     "vision": "dendro",
     "rarity": 4,
     "nation": "sumeru",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -16994,6 +17309,11 @@
     "vision": "dendro",
     "rarity": 5,
     "nation": "sumeru",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -17300,6 +17620,11 @@
     "vision": "dendro",
     "rarity": 5,
     "nation": "none",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -17637,6 +17962,13 @@
     "vision": "hydro",
     "rarity": 5,
     "nation": "sumeru",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -17963,6 +18295,11 @@
     "vision": "electro",
     "rarity": 5,
     "nation": "sumeru",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -18324,6 +18661,13 @@
     "vision": "hydro",
     "rarity": 4,
     "nation": "sumeru",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -18625,6 +18969,13 @@
     "vision": "cryo",
     "rarity": 4,
     "nation": "sumeru",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -18901,6 +19252,11 @@
     "vision": "dendro",
     "rarity": 5,
     "nation": "sumeru",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -19191,6 +19547,11 @@
     "vision": "anemo",
     "rarity": 4,
     "nation": "sumeru",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -19453,6 +19814,11 @@
     "vision": "anemo",
     "rarity": 5,
     "nation": "sumeru",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -19710,6 +20076,11 @@
     "vision": "dendro",
     "rarity": 5,
     "nation": "sumeru",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -20032,6 +20403,13 @@
     "vision": "dendro",
     "rarity": 4,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -20361,6 +20739,13 @@
     "vision": "pyro",
     "rarity": 5,
     "nation": "sumeru",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -20674,6 +21059,13 @@
     "vision": "cryo",
     "rarity": 4,
     "nation": "mondstadt",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -20955,6 +21347,13 @@
     "vision": "dendro",
     "rarity": 5,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -21267,6 +21666,11 @@
     "vision": "dendro",
     "rarity": 4,
     "nation": "sumeru",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -21560,6 +21964,13 @@
     "vision": "dendro",
     "rarity": 4,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -21910,6 +22321,13 @@
     ],
     "rarity": 4,
     "nation": "fontaine",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -22240,6 +22658,13 @@
     "vision": "pyro",
     "rarity": 5,
     "nation": "fontaine",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -22559,6 +22984,11 @@
     "vision": "cryo",
     "rarity": 4,
     "nation": "fontaine",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -22916,6 +23346,11 @@
     "vision": "hydro",
     "rarity": 5,
     "nation": "none",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -23327,6 +23762,11 @@
     "vision": "cryo",
     "rarity": 5,
     "nation": "fontaine",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -23628,6 +24068,13 @@
     "vision": "hydro",
     "rarity": 5,
     "nation": "fontaine",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -23915,6 +24362,13 @@
     "vision": "hydro",
     "rarity": 5,
     "nation": "fontaine",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -24243,6 +24697,11 @@
     "vision": "cryo",
     "rarity": 4,
     "nation": "fontaine",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -24593,6 +25052,11 @@
     "vision": "geo",
     "rarity": 5,
     "nation": "fontaine",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -24878,6 +25342,13 @@
     "vision": "pyro",
     "rarity": 4,
     "nation": "fontaine",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -25219,6 +25690,11 @@
     "vision": "anemo",
     "rarity": 5,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -25569,6 +26045,13 @@
     "vision": "pyro",
     "rarity": 4,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -25849,6 +26332,13 @@
     "vision": "geo",
     "rarity": 5,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "def",
+      "def%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -26119,6 +26609,12 @@
     "vision": "pyro",
     "rarity": 5,
     "nation": "fontaine",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "specialmeter%atk"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -26472,6 +26968,11 @@
     "vision": "electro",
     "rarity": 5,
     "nation": "fontaine",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -26812,6 +27313,13 @@
     "vision": "hydro",
     "rarity": 5,
     "nation": "fontaine",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -27122,6 +27630,11 @@
     "vision": "electro",
     "rarity": 4,
     "nation": "sumeru",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -27429,6 +27942,11 @@
     "vision": "dendro",
     "rarity": 5,
     "nation": "fontaine",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -27730,6 +28248,13 @@
     "rarity": 4,
     "nation": "natlan",
     "nightsoul": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "def",
+      "def%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -28025,6 +28550,11 @@
     "rarity": 5,
     "nation": "natlan",
     "nightsoul": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -28328,6 +28858,13 @@
     "rarity": 5,
     "nation": "natlan",
     "nightsoul": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -28573,6 +29110,13 @@
     "rarity": 5,
     "nation": "natlan",
     "nightsoul": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "def",
+      "def%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -28911,6 +29455,11 @@
     "rarity": 5,
     "nation": "natlan",
     "nightsoul": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -29346,6 +29895,11 @@
     "rarity": 4,
     "nation": "natlan",
     "nightsoul": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -29625,6 +30179,11 @@
     "rarity": 5,
     "nation": "natlan",
     "nightsoul": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -30026,6 +30585,11 @@
     "rarity": 5,
     "nation": "natlan",
     "nightsoul": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -30337,6 +30901,11 @@
     "rarity": 5,
     "nation": "none",
     "nightsoul": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -30675,6 +31244,11 @@
     ],
     "rarity": 4,
     "nation": "liyue",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -30985,6 +31559,11 @@
     "vision": "anemo",
     "rarity": 5,
     "nation": "inazuma",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -31255,6 +31834,11 @@
     "vision": "electro",
     "rarity": 5,
     "nation": "natlan",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -31604,6 +32188,11 @@
     "vision": "electro",
     "rarity": 4,
     "nation": "natlan",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -31875,6 +32464,11 @@
     "vision": "cryo",
     "rarity": 5,
     "nation": "fontaine",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -32186,6 +32780,11 @@
     "vision": "anemo",
     "rarity": 4,
     "nation": "natlan",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -32460,6 +33059,12 @@
     "vision": "cryo",
     "rarity": 5,
     "nation": "scourge",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "specialmeteratk"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -32875,6 +33480,13 @@
     "vision": "hydro",
     "rarity": 4,
     "nation": "mondstadt",
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -33145,6 +33757,11 @@
     "rarity": 5,
     "nation": "nodkrai",
     "moonsign": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -33471,6 +34088,12 @@
     "rarity": 5,
     "nation": "nodkrai",
     "moonsign": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "verdantdew"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -33816,6 +34439,11 @@
     "rarity": 5,
     "nation": "nodkrai",
     "moonsign": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -34220,6 +34848,11 @@
     "rarity": 4,
     "nation": "nodkrai",
     "moonsign": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -34502,6 +35135,11 @@
     "rarity": 5,
     "nation": "nodkrai",
     "moonsign": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -34895,6 +35533,11 @@
     "rarity": 5,
     "nation": "mondstadt",
     "hexenzirkel": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -35325,6 +35968,11 @@
     "rarity": 4,
     "nation": "nodkrai",
     "moonsign": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -35722,7 +36370,13 @@
     "rarity": 5,
     "nation": "nodkrai",
     "moonsign": true,
-    "unreleased": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "hp",
+      "hp%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -36054,7 +36708,13 @@
     "rarity": 5,
     "nation": "liyue",
     "moonsign": true,
-    "unreleased": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "def",
+      "def%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -36422,7 +37082,13 @@
     "rarity": 4,
     "nation": "nodkrai",
     "moonsign": true,
-    "unreleased": true,
+    "optimize_artifact_stats": [
+      "elemastery",
+      "atk",
+      "atk%",
+      "def",
+      "def%"
+    ],
     "stats": [
       {
         "stat": "hp_base",
@@ -36653,7 +37319,10 @@
                 "type": null,
                 "damage": true,
                 "vision": "geo",
-                "stat": [ "elemastery", "def" ],
+                "stat": [
+                  "elemastery",
+                  "def"
+                ],
                 "crit": true,
                 "scale": [
                   [ 400 ],

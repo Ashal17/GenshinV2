@@ -360,8 +360,8 @@ function equip_character_update_stats(party_id) {
         { "id": "enemydef", "value": defense }
     );
 
-    output_party[party_id].stats.basic = stats_basic;
-    output_party[party_id].stats.environment = stats_env;
+    output_party[party_id].stats.blank.basic = stats_basic;
+    output_party[party_id].stats.blank.environment = stats_env;
 }
 
 function equip_character_update_resonance() {
@@ -666,14 +666,22 @@ function equip_character_return_party_id_by_name(character_id) {
     return -1;
 }
 
-function equip_character_return_party_id_by_special(special_condition) {
+function equip_character_return_party_id_by_special(special_condition, party_id, skill_index) {
+
     switch (special_condition) {
         case "highest_elemastery":
             var highest_index = 0;
             var highest_value = 0;
             for (var i = 0; i < const_party_size; i++) {
-                if (output_party[i].stats.total["elemastery"] > highest_value) {
-                    highest_value = output_party[i].stats.total["elemastery"];
+
+                if (skill_index === null || i != party_id) {
+                    var output_stats = output_party[party_id].stats.blank.total;
+                } else {
+                    var output_stats = output_party[party_id].skills.active.details[skill_index].stats;
+                }
+
+                if (output_stats["elemastery"] > highest_value) {
+                    highest_value = output_stats["elemastery"];
                     highest_index = i;
                 }
             }

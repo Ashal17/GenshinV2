@@ -533,7 +533,7 @@ function equip_skills_display_attack_name(attack_name, attack_type_level=null) {
 
     if (attack_type_level) {
         var base_level = user_objects.user_party[user_objects.user_active_character]["level" + attack_type_level];
-        var bonus_level = output_party[user_objects.user_active_character].stats.total["level" + attack_type_level];
+        var bonus_level = output_party[user_objects.user_active_character].stats.blank.total["level" + attack_type_level];
         var actual_level = 1 + base_level + bonus_level;
 
         var minus_level_class = "";
@@ -940,7 +940,7 @@ function equip_skills_return_damage(party_id, attack, attack_type) {
     var result = [];
 
     var level = equip_skills_return_skill_level(party_id, attack.type, null);
-    var enemy_defense = (100 - output_party[party_id].stats.total["enemyred"]) / 100;
+    var enemy_defense = (100 - output_party[party_id].stats.blank.total["enemyred"]) / 100;
 
     for (var i = 0; i < attack.parts.length; i++) {
         var part = attack.parts[i];
@@ -979,10 +979,10 @@ function equip_skills_return_damage(party_id, attack, attack_type) {
     return result;
 }
 
-function equip_skills_return_basic_damage(party_id, part, level, skill_index = null) {
+function equip_skills_return_basic_damage(party_id, part, level, skill_index = null, artifact_stat = "blank") {
 
     if (skill_index === null) {
-        var output_stats = output_party[party_id].stats.total;
+        var output_stats = output_party[party_id].stats[artifact_stat].total;
     } else {
         var output_stats = output_party[party_id].skills.active.details[skill_index].stats.total;
     }
@@ -1052,10 +1052,10 @@ function equip_skills_return_bonusdmg(party_id, skill_index) {
     return bonusdmg;
 }
 
-function equip_skills_return_add_damage(source_party_id, bonusdmg, skill_index = null) {
+function equip_skills_return_add_damage(source_party_id, bonusdmg, skill_index = null, artifact_stat = "blank") {
 
     if (skill_index === null) {
-        var source_value = output_party[source_party_id].stats.total[bonusdmg.source];
+        var source_value = output_party[source_party_id].stats[artifact_stat].total[bonusdmg.source];
     } else {
         var source_value = output_party[source_party_id].skills.active.details[skill_index].stats.total[bonusdmg.source];
     }
@@ -1077,12 +1077,12 @@ function equip_skills_return_add_damage(source_party_id, bonusdmg, skill_index =
 }
 
 
-function equip_skills_return_dmg_modifier(party_id, part, vision, skill_index = null) {
+function equip_skills_return_dmg_modifier(party_id, part, vision, skill_index = null, artifact_stat = "blank") {
     var damage = part.damage;
     var type = part.type;
 
     if (skill_index === null) {
-        var output_stats = output_party[party_id].stats.total;
+        var output_stats = output_party[party_id].stats[artifact_stat].total;
     } else {
         var output_stats = output_party[party_id].skills.active.details[skill_index].stats.total;
     }
@@ -1119,12 +1119,12 @@ function equip_skills_return_dmg_modifier(party_id, part, vision, skill_index = 
 
 }
 
-function equip_skills_return_elevate(party_id, part, skill_index = null) {
+function equip_skills_return_elevate(party_id, part, skill_index = null, artifact_stat = "blank") {
     var type = part.type;
     var result = 1;
 
     if (skill_index === null) {
-        var output_stats = output_party[party_id].stats.total;
+        var output_stats = output_party[party_id].stats[artifact_stat].total;
     } else {
         var output_stats = output_party[party_id].skills.active.details[skill_index].stats.total;
     }
@@ -1145,9 +1145,9 @@ function equip_skills_return_resistance(party_id, part, vision, skill_index = nu
     }
 }
 
-function equip_skills_return_resistance_modifier(party_id, vision, skill_index = null) {
+function equip_skills_return_resistance_modifier(party_id, vision, skill_index = null, artifact_stat = "blank") {
     if (skill_index === null) {
-        var res = output_party[party_id].stats.total["enemy" + vision + "res"];
+        var res = output_party[party_id].stats[artifact_stat].total["enemy" + vision + "res"];
     } else {
         var res = output_party[party_id].skills.active.details[skill_index].stats.total["enemy" + vision + "res"];
     }
@@ -1161,13 +1161,13 @@ function equip_skills_return_resistance_modifier(party_id, vision, skill_index =
     }
 }
 
-function equip_skills_return_critrate(party_id, part, vision, skill_index = null) {
+function equip_skills_return_critrate(party_id, part, vision, skill_index = null, artifact_stat = "blank") {
     if (part.reaction) {
         vision = data_reactions[part.reaction].vision;
     }
     var crit = 0
     if (skill_index === null) {
-        var output_stats = output_party[party_id].stats.total;
+        var output_stats = output_party[party_id].stats[artifact_stat].total;
     } else {
         var output_stats = output_party[party_id].skills.active.details[skill_index].stats.total;
     }
@@ -1194,13 +1194,13 @@ function equip_skills_return_critrate(party_id, part, vision, skill_index = null
     return crit;
 }
 
-function equip_skills_return_critdmg(party_id, part, vision, skill_index = null) {
+function equip_skills_return_critdmg(party_id, part, vision, skill_index = null, artifact_stat = "blank") {
     if (part.reaction) {
         vision = data_reactions[part.reaction].vision;
     }
     var critdmg = 0
     if (skill_index === null) {
-        var output_stats = output_party[party_id].stats.total;
+        var output_stats = output_party[party_id].stats[artifact_stat].total;
     } else {
         var output_stats = output_party[party_id].skills.active.details[skill_index].stats.total;
     }
@@ -1237,12 +1237,12 @@ function equip_skills_return_reactions(party_id, part) {
     return reactions;
 }
 
-function equip_skills_return_reaction_value(party_id, reaction_name, vision, skill_index = null) {
+function equip_skills_return_reaction_value(party_id, reaction_name, vision, skill_index = null, artifact_stat = "blank") {
 
     var reaction = data_reactions[reaction_name];
 
     if (skill_index === null) {
-        var output_stats = output_party[party_id].stats.total;
+        var output_stats = output_party[party_id].stats[artifact_stat].total;
         var bonusdmg = output_party[party_id].skills.bonusdmg;
     } else {
         var output_stats = output_party[party_id].skills.active.details[skill_index].stats.total;
@@ -1295,7 +1295,7 @@ function equip_skills_return_skill_level(party_id, attack_type, skill_index = nu
     if (attack_type) {
         level = user_objects.user_party[party_id]["level" + attack_type];
         if (skill_index === null) {
-            level += output_party[party_id].stats.total["level" + attack_type];
+            level += output_party[party_id].stats.blank.total["level" + attack_type];
         } else {
             level += output_party[party_id].skills.active.details[skill_index].stats.total["level" + attack_type];
         }        

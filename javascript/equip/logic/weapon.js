@@ -50,8 +50,7 @@ function equip_weapon_update_all() {
 }
 
 function equip_weapon_update(party_id) {
-
-    output_party[party_id].stats.weapon = equip_stats_return_weapon_stats(
+    output_party[party_id].stats.blank.weapon = equip_stats_return_weapon_stats(
         user_objects.user_party[party_id].weapon, output_party[party_id].weapon_type);
 
 }

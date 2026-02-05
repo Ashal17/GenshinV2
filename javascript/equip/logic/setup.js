@@ -694,16 +694,20 @@ function equip_setup_output_objects() {
 
         char.artifacts.sets = [];
 
-        char.stats = {};
-        char.stats.total = { ...default_stats };
-        char.stats.basic = [];
-        char.stats.environment = [];
-        char.stats.weapon = [];
-        char.stats.artifacts = [];
-        char.stats.effects = [];
-        char.stats.effects_transform_other = [];
-        char.stats.effects_transform_personal = [];
-        char.stats.vision_stat = "none";
+        char.stats = {};        
+        char.stats.blank = {};
+        char.stats.blank.total = { ...default_stats };
+        char.stats.blank.basic = [];
+        char.stats.blank.environment = [];
+        char.stats.blank.weapon = [];
+        char.stats.blank.artifacts = [];
+        char.stats.blank.effects = [];
+        char.stats.blank.effects_transform_other = [];
+        char.stats.blank.effects_transform_personal = [];
+        char.stats.blank.vision_stat = "none";
+        for (var ii = 1; ii < const_artifact_sub_stats_options.length; ii++) {
+            char.stats[const_artifact_sub_stats_options[ii]] = { ...default_short_stats };
+        }
 
         char.effects = {};
         char.effects.infusion = false;
@@ -808,12 +812,14 @@ function equip_setup_default_stats() {
         default_storage_character.artifacts[const_artifact_types[i]].main_stat = data_artifact_vars[const_artifact_types[i]].main_stats[0];
     }  
 
+    default_short_stats = {};
+    default_short_stats.total = { ...default_stats };
+    default_short_stats.effects = [];
+    default_short_stats.effects_transform_other = [];
+    default_short_stats.effects_transform_personal = [];
+
     default_active_skill_detail = {};
-    default_active_skill_detail.stats = {};
-    default_active_skill_detail.stats.total = { ...default_stats };
-    default_active_skill_detail.stats.effects = [];
-    default_active_skill_detail.stats.effects_transform_other = [];
-    default_active_skill_detail.stats.effects_transform_personal = [];
+    default_active_skill_detail.stats = { ...default_short_stats };
     default_active_skill_detail.ncrt = 0;
     default_active_skill_detail.crt = 0;
     default_active_skill_detail.avg = 0;
