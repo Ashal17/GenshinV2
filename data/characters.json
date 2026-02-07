@@ -2512,7 +2512,9 @@
     "optimize_artifact_stats": [
       "elemastery",
       "atk",
-      "atk%"
+      "atk%",
+      "hp",
+      "hp%"
     ],
     "stats": [
       {
@@ -10145,7 +10147,9 @@
     "optimize_artifact_stats": [
       "elemastery",
       "atk",
-      "atk%"
+      "atk%",
+      "hp",
+      "hp%"
     ],
     "stats": [
       {
@@ -10457,8 +10461,7 @@
     "optimize_artifact_stats": [
       "elemastery",
       "atk",
-      "atk%",
-      "specialmeteratk"
+      "atk%"
     ],
     "stats": [
       {
@@ -12460,8 +12463,7 @@
     "optimize_artifact_stats": [
       "elemastery",
       "atk",
-      "atk%",
-      "specialmeteratk"
+      "atk%"
     ],
     "stats": [
       {
@@ -25343,7 +25345,6 @@
     "rarity": 4,
     "nation": "fontaine",
     "optimize_artifact_stats": [
-      "elemastery",
       "atk",
       "atk%",
       "hp",
@@ -26612,8 +26613,7 @@
     "optimize_artifact_stats": [
       "elemastery",
       "atk",
-      "atk%",
-      "specialmeter%atk"
+      "atk%"
     ],
     "stats": [
       {
@@ -33062,8 +33062,7 @@
     "optimize_artifact_stats": [
       "elemastery",
       "atk",
-      "atk%",
-      "specialmeteratk"
+      "atk%"
     ],
     "stats": [
       {
@@ -34091,8 +34090,7 @@
     "optimize_artifact_stats": [
       "elemastery",
       "atk",
-      "atk%",
-      "verdantdew"
+      "atk%"
     ],
     "stats": [
       {

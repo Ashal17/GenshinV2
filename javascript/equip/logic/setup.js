@@ -7,7 +7,7 @@ window_frame_ids = [
 ];
 
 async function equip_load_all_data() {
-    var ver = "?20260120";
+    var ver = "?20260206";
 
     data_characters = await utils_load_json("/data/characters.json" + ver);
     data_enemies = await utils_load_json("/data/enemies.json" + ver);
@@ -693,20 +693,26 @@ function equip_setup_output_objects() {
         }
 
         char.artifacts.sets = [];
+        char.artifacts.optimize_stats = [];
+        for (var ii = 0; ii < const_party_size; ii++) {
+            char.artifacts.optimize_stats.push([]);
+        }
 
         char.stats = {};        
-        char.stats.blank = {};
-        char.stats.blank.total = { ...default_stats };
-        char.stats.blank.basic = [];
-        char.stats.blank.environment = [];
-        char.stats.blank.weapon = [];
-        char.stats.blank.artifacts = [];
-        char.stats.blank.effects = [];
-        char.stats.blank.effects_transform_other = [];
-        char.stats.blank.effects_transform_personal = [];
-        char.stats.blank.vision_stat = "none";
-        for (var ii = 1; ii < const_artifact_sub_stats_options.length; ii++) {
-            char.stats[const_artifact_sub_stats_options[ii]] = { ...default_short_stats };
+        char.stats.initial = {};
+        char.stats.initial.total = { ...default_stats };
+        char.stats.initial.basic = [];
+        char.stats.initial.environment = [];
+        char.stats.initial.weapon = [];
+        char.stats.initial.artifacts = [];
+        char.stats.initial.effects = [];
+        char.stats.initial.effects_transform_other = [];
+        char.stats.initial.effects_transform_personal = [];
+        char.stats.initial.vision_stat = "none";
+
+        char.stats.optimize = [];
+        for (var ii = 0; ii < const_party_size; ii++) {
+            char.stats.optimize.push({});
         }
 
         char.effects = {};
@@ -819,7 +825,12 @@ function equip_setup_default_stats() {
     default_short_stats.effects_transform_personal = [];
 
     default_active_skill_detail = {};
-    default_active_skill_detail.stats = { ...default_short_stats };
+    default_active_skill_detail.stats = {};
+    default_active_skill_detail.stats.initial = { ...default_short_stats };
+    default_active_skill_detail.stats.optimize = [];
+    for (var ii = 0; ii < const_party_size; ii++) {
+        default_active_skill_detail.stats.optimize.push({});
+    }
     default_active_skill_detail.ncrt = 0;
     default_active_skill_detail.crt = 0;
     default_active_skill_detail.avg = 0;

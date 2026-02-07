@@ -268,7 +268,7 @@ function equip_artifacts_storage_save_artifact(artifact_id, artifact, show_warns
 
 function equip_artifacts_update_stats(party_id) {
 
-    output_party[party_id].stats.blank.artifacts = equip_stats_return_artifacts_stats(
+    output_party[party_id].stats.initial.artifacts = equip_stats_return_artifacts_stats(
         user_objects.user_party[party_id].artifacts, output_party[party_id].artifacts.sets);
 
 }
