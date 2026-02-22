@@ -81,7 +81,7 @@ function equip_stats_update_artifact_optimize_setup(party_id, skill_index) {
     if (skill_index == null) {
         var output_stats = output_party[party_id].stats;
     } else {
-        var output_stats = output_party[party_id].skills.active.details[skill_index].stats;
+        var output_stats = output_party[party_id].skills.stats[skill_index];
     }
     var optimize_stats = output_party[party_id].artifacts.optimize_stats;
 
@@ -172,7 +172,7 @@ function equip_stats_update_add(stat_type, party_id, stats_obj_name, skill_index
     if (skill_index === null) {        
         var stats_obj = output_party[party_id].stats;
     } else {
-        var stats_obj = output_party[party_id].skills.active.details[skill_index].stats;
+        var stats_obj = output_party[party_id].skills.stats[skill_index];
     }
 
     if (artifact_stat === null) {
@@ -207,9 +207,9 @@ function equip_stats_update_copy_total(stat_type, party_id, initialize_skill) {
         var skill_effects = user_objects.user_party[party_id].active_skills[i].effects;
         if (skill_effects && skill_effects.length > 0) {
             if (initialize_skill) {
-                output_party[party_id].skills.active.details[i].stats.initial[stat_type] = structuredClone(output_party[party_id].stats.initial[stat_type]);
+                output_party[party_id].skills.stats[i].initial[stat_type] = structuredClone(output_party[party_id].stats.initial[stat_type]);
             }            
-            equip_stats_update_copy_total_optimize(stat_type, party_id, output_party[party_id].skills.active.details[i].stats)
+            equip_stats_update_copy_total_optimize(stat_type, party_id, output_party[party_id].skills.stats[i])
         }
     }    
 }
@@ -234,17 +234,17 @@ function equip_stats_update_add_artifact_optimize(party_id) {
     for (var i = 0; i < user_objects.user_party[party_id].active_skills.length; i++) {
         var skill_effects = user_objects.user_party[party_id].active_skills[i].effects;
         if (skill_effects && skill_effects.length > 0) {
-            equip_stats_update_add_artifact_optimize_stats(party_id, output_party[party_id].skills.active.details[i].stats);
+            equip_stats_update_add_artifact_optimize_stats(party_id, output_party[party_id].skills.stats[i]);
         }
     }
 }
 
 function equip_stats_update_add_artifact_optimize_stats(party_id, stats_obj) {
-    for (var i = 0; i < output_party[party_id].artifacts.optimize_stats.length; i++) {
-        var optimize_char = output_party[party_id].artifacts.optimize_stats[i];
-        for (var ii = 0; ii < optimize_char.length; ii++) {
-            stats_obj.optimize[i][optimize_char[ii]].total[optimize_char[ii]] += data_artifact_stats.slice(-1)[0].sub_stats[optimize_char[ii]].slice(-1)[0];
-        }
+
+
+    var optimize_char = output_party[party_id].artifacts.optimize_stats[party_id];
+    for (var ii = 0; ii < optimize_char.length; ii++) {
+        stats_obj.optimize[party_id][optimize_char[ii]].total[optimize_char[ii]] += data_artifact_stats.slice(-1)[0].sub_stats[optimize_char[ii]].slice(-1)[0];
     }
 }
 
@@ -258,8 +258,8 @@ function equip_stats_update_transformation_all(transformation_name) {
             for (var ii = 0; ii < user_objects.user_party[i].active_skills.length; ii++) {
                 var skill_effects = user_objects.user_party[i].active_skills[ii].effects;
                 if (skill_effects && skill_effects.length > 0) {
-                    output_party[i].skills.active.details[ii].stats.initial[stat_type] = equip_stats_calculate_tranformation(output_party[i].skills.active.details[ii].stats.initial[stat_type], transformation_name);
-                    equip_stats_update_transformation_optimize(transformation_name, i, stat_type, output_party[i].skills.active.details[ii].stats)
+                    output_party[i].skills.stats[ii].initial[stat_type] = equip_stats_calculate_tranformation(output_party[i].skills.stats[ii].initial[stat_type], transformation_name);
+                    equip_stats_update_transformation_optimize(transformation_name, i, stat_type, output_party[i].skills.stats[ii])
                 }
             }
         }          
@@ -299,8 +299,8 @@ function equip_stats_update_enemy_defense(party_id) {
     for (var i = 0; i < user_objects.user_party[party_id].active_skills.length; i++) {
         var skill_effects = user_objects.user_party[party_id].active_skills[i].effects;
         if (skill_effects && skill_effects.length > 0) {
-            output_party[party_id].skills.active.details[i].stats.initial.total["enemyred"] = equip_stats_calculate_enemyred(output_party[party_id].skills.active.details[i].stats.initial.total, party_id);
-            equip_stats_update_enemy_defense_optimize(party_id, output_party[party_id].skills.active.details[i].stats);
+            output_party[party_id].skills.stats[i].initial.total["enemyred"] = equip_stats_calculate_enemyred(output_party[party_id].skills.stats[i].initial.total, party_id);
+            equip_stats_update_enemy_defense_optimize(party_id, output_party[party_id].skills.stats[i]);
         }
     }
 }
@@ -548,6 +548,64 @@ function equip_stats_display_unit(unit, unit_id = null) {
     }
 }
 
+function equip_stats_display_optimize_artifacts_all() {
+    var parent = document.getElementById("stats_optimize_container");
+    utils_delete_children(parent, 0);
+
+    for (var i = 0; i < output_party[user_objects.user_active_character].artifacts.optimize_stats[user_objects.user_active_character].length; i++) {
+        var artifact_stat = output_party[user_objects.user_active_character].artifacts.optimize_stats[user_objects.user_active_character][i];
+        parent.appendChild(equip_stats_display_optimize_artifact(artifact_stat));
+    }
+}
+
+function equip_stats_display_optimize_artifact(artifact_stat) {
+    var obj = utils_create_obj("div", "stats_optimize_artifact", "stats_optimize_artifact_" + artifact_stat);
+
+    var stat_name = utils_create_obj("div", "optimize_statline");
+    stat_name.appendChild(utils_create_img_svg(artifact_stat));
+    stat_name.appendChild(utils_create_obj("p", null, null, data_stats[artifact_stat].name));
+    obj.appendChild(stat_name);
+
+    if (user_preferences.storage.party == "party") {
+        var active_dmg = equip_skills_return_party_total_active();
+        active_dmg = active_dmg[user_preferences.storage.comparison];
+
+        var optimize_dmg = equip_skills_return_party_total_active(artifact_stat, user_objects.user_active_character);
+        optimize_dmg = optimize_dmg[user_preferences.storage.comparison];
+    } else {
+        var active_dmg = output_party[user_objects.user_active_character].skills.output.initial.active[user_preferences.storage.comparison];
+        var optimize_dmg = output_party[user_objects.user_active_character].skills.output.optimize[user_objects.user_active_character][artifact_stat].active[user_preferences.storage.comparison];
+    }
+
+    var total_line = utils_create_obj("div", "stats_optimize_line");
+    total_line.appendChild(utils_create_img_svg("charged"));
+    total_line.appendChild(utils_create_obj("p", null, null, utils_number_format(optimize_dmg.toFixed(1))));
+    var total_hover = utils_create_obj("div", "img_button_hover", null, "Total with 1 Sub-Stat");
+    total_line.appendChild(total_hover);
+    total_line.onmouseover = function () { utils_update_frame_position_contain(this, total_hover, "top"); };
+    obj.appendChild(total_line);
+
+    var comparison_line = utils_create_obj("div", "stats_optimize_line");
+    comparison_line.appendChild(utils_create_img_svg("arrow-up-bold-hexagon-outline"));
+    var comparison = optimize_dmg / active_dmg - 1;
+    var comparison_text = utils_number_format((comparison * 100).toFixed(2)) + " %";
+    if (comparison > 0) {
+        comparison_line.appendChild(utils_create_obj("p", "positive", null, "+" + comparison_text));
+    } else if (comparison < 0) {
+        comparison_line.appendChild(utils_create_obj("p", "negative", null, comparison_text));
+    } else {
+        comparison_line.appendChild(utils_create_obj("p", null, null, comparison_text));
+    }
+    var comparison_hover = utils_create_obj("div", "img_button_hover", null, "Difference with 1 Sub-Stat");
+    comparison_line.appendChild(comparison_hover);
+    comparison_line.onmouseover = function () { utils_update_frame_position_contain(this, comparison_hover, "top"); };
+    obj.appendChild(comparison_line);
+
+    
+
+    return obj;
+}
+
 function equip_stats_return_vision_stat(party_id) {
     return equip_stats_return_calculated_vision_stat(
         user_objects.user_party[party_id].id, output_party[party_id].stats.initial.total);
@@ -678,21 +736,27 @@ function equip_stats_return_artifacts_stats(artifacts, sets) {
 }
 
 function equip_stats_return_output_stats(party_id, skill_index, artifact_stat, artifact_stat_party, specific_stat = null) {
-    if (skill_index === null) {
-        var output_stats = output_party[party_id].stats;
-    } else {
-        var output_stats = output_party[party_id].skills.active.details[skill_index].stats;
-    }
+    try {
+        if (skill_index === null) {
+            var output_stats = output_party[party_id].stats;
+        } else {
+            var output_stats = output_party[party_id].skills.stats[skill_index];
+        }
 
-    if (artifact_stat === null) {
-        output_stats = output_stats.initial.total;
-    } else {
-        output_stats = output_stats.optimize[artifact_stat_party][artifact_stat].total;
-    }
+        if (artifact_stat === null) {
+            output_stats = output_stats.initial.total;
+        } else {
+            output_stats = output_stats.optimize[artifact_stat_party][artifact_stat].total;
+        }
 
-    if (specific_stat == null) {
-        return output_stats;
-    } else {
-        return output_stats[specific_stat];
+        if (specific_stat === null) {
+            return output_stats;
+        } else {
+            return output_stats[specific_stat];
+        }
+    } catch (e) {
+        console.log("party_id: " + party_id + ", skill_index: " + skill_index + ", artifact_stat: " + artifact_stat + ", artifact_stat_party: " + artifact_stat_party)
+        utils_log_error(e)
     }
+    
 }

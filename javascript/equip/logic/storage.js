@@ -96,6 +96,7 @@ function equip_storage_change_trigger(save_storage = true) {
     equip_storage_update_comparison_all();
     equip_storage_display_active();
     equip_storage_display_all();
+    equip_stats_display_optimize_artifacts_all();
     if (save_storage) {
         equip_storage_save_user_storage();
     }   
@@ -122,7 +123,7 @@ function equip_storage_change_new(new_name) {
     equip_storage_update_set_storage(
         -1,
         new_name,
-        output_party[user_objects.user_active_character].skills.active,
+        output_party[user_objects.user_active_character].skills.output.initial.active,
         equip_skills_return_party_total_active(),
         user_objects
     );
@@ -156,7 +157,7 @@ function equip_storage_change_save(index) {
     equip_storage_update_set_storage(
         index,
         storage_objects.saved_storage[index].name,
-        output_party[user_objects.user_active_character].skills.active,
+        output_party[user_objects.user_active_character].skills.output.initial.active,
         equip_skills_return_party_total_active(),
         user_objects
     );
@@ -337,7 +338,7 @@ function equip_storage_display_active() {
         var active_dmg = equip_skills_return_party_total_active();
         active_dmg = active_dmg[user_preferences.storage.comparison];
     } else {
-        var active_dmg = output_party[user_objects.user_active_character].skills.active[user_preferences.storage.comparison];
+        var active_dmg = output_party[user_objects.user_active_character].skills.output.initial.active[user_preferences.storage.comparison];
     }
 
     var comparison_class = "storage_text storage_text_comparison";

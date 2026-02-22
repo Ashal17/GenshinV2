@@ -8250,6 +8250,74 @@
           "id": "unknown_regular"
         }
       ]
+    },
+    {
+      "id": 45,
+      "enka_id": 12515,
+      "name": "Gest of the Mighty Wolf",
+      "icon": "gest_of_the_mighty_wolf",
+      "type": "claymore",
+      "rarity": 5,
+      "atk_base": 45.94,
+      "stats": [
+        {
+          "stat": "crit",
+          "type": "level",
+          "value": 7.2
+        },
+        {
+          "stat": "aspeed",
+          "type": "flat",
+          "value": 10
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Every time the equipping character's Normal Attack(s) hit opponent(s)/casts their Elemental Skill/performs Charged Attack(s), gain 1/2/2 stacks of Four Winds' Hymn respectively: DMG dealt is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 7.5, 9.5, 11.5, 13.5, 15.5 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for 4s. Max 4 stacks. This effect can be triggered once every 0.01s. Additionally, when the party has the \"Hexerei: Secret Rite\" effect, each stack of Four Winds' Hymn will increase the CRIT DMG of the equipping character by "
+        },
+        {
+          "type": "refine",
+          "value": [ 7.5, 9.5, 11.5, 13.5, 15.5 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2538,
+          "option": 0,
+          "special": "hexenzirkel_0_2",
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Indomitable Chivalry",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
     }
   ],
   "polearm": [

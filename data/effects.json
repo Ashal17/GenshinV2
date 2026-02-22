@@ -69069,5 +69069,1003 @@
         ]
       }
     ]
+  },
+  {
+    "id": 2538,
+    "name": "Indomitable Chivalry - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 22.5
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 15
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 7.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2539,
+    "name": "Indomitable Chivalry - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 38
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 28.5
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 19
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 9.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2540,
+    "name": "Indomitable Chivalry - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 46
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 34.5
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 23
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 11.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2541,
+    "name": "Indomitable Chivalry - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 54
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 40.5
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 27
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 13.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2542,
+    "name": "Indomitable Chivalry - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 62
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 36.5
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 31
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 15.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2543,
+    "name": "Indomitable Chivalry - Refine 1 - Hexerei: Secret Rite",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 30
+          },
+          {
+            "stat": "critdmg",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 22.5
+          },
+          {
+            "stat": "critdmg",
+            "value": 22.5
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 15
+          },
+          {
+            "stat": "critdmg",
+            "value": 15
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 7.5
+          },
+          {
+            "stat": "critdmg",
+            "value": 7.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2544,
+    "name": "Indomitable Chivalry - Refine 2 - Hexerei: Secret Rite",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 38
+          },
+          {
+            "stat": "critdmg",
+            "value": 38
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 28.5
+          },
+          {
+            "stat": "critdmg",
+            "value": 28.5
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 19
+          },
+          {
+            "stat": "critdmg",
+            "value": 19
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 9.5
+          },
+          {
+            "stat": "critdmg",
+            "value": 9.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2545,
+    "name": "Indomitable Chivalry - Refine 3 - Hexerei: Secret Rite",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 46
+          },
+          {
+            "stat": "critdmg",
+            "value": 46
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 34.5
+          },
+          {
+            "stat": "critdmg",
+            "value": 34.5
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 23
+          },
+          {
+            "stat": "critdmg",
+            "value": 23
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 11.5
+          },
+          {
+            "stat": "critdmg",
+            "value": 11.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2546,
+    "name": "Indomitable Chivalry - Refine 4 - Hexerei: Secret Rite",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 54
+          },
+          {
+            "stat": "critdmg",
+            "value": 54
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 40.5
+          },
+          {
+            "stat": "critdmg",
+            "value": 40.5
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 27
+          },
+          {
+            "stat": "critdmg",
+            "value": 27
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 13.5
+          },
+          {
+            "stat": "critdmg",
+            "value": 13.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2547,
+    "name": "Indomitable Chivalry - Refine 5 - Hexerei: Secret Rite",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 62
+          },
+          {
+            "stat": "critdmg",
+            "value": 62
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 36.5
+          },
+          {
+            "stat": "critdmg",
+            "value": 36.5
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 31
+          },
+          {
+            "stat": "critdmg",
+            "value": 31
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "all",
+            "value": 15.5
+          },
+          {
+            "stat": "critdmg",
+            "value": 15.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2548,
+    "name": "Windbound Execution - Pyro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "conversion_special": "pyro"
+      }
+    ]
+  },
+  {
+    "id": 2549,
+    "name": "Windbound Execution - Hydro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "conversion_special": "hydro"
+      }
+    ]
+  },
+  {
+    "id": 2550,
+    "name": "Windbound Execution - Electro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "conversion_special": "electro"
+      }
+    ]
+  },
+  {
+    "id": 2551,
+    "name": "Windbound Execution - Cryo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "conversion_special": "cryo"
+      }
+    ]
+  },
+  {
+    "id": 2552,
+    "name": "Dawn Wind's March - Pyro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "anemo",
+            "ratio": 0.01,
+            "max": 25
+          },
+          {
+            "source": "atk",
+            "target": "pyro",
+            "ratio": 0.01,
+            "max": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2553,
+    "name": "Dawn Wind's March - Hydro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "anemo",
+            "ratio": 0.01,
+            "max": 25
+          },
+          {
+            "source": "atk",
+            "target": "hydro",
+            "ratio": 0.01,
+            "max": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2554,
+    "name": "Dawn Wind's March - Electro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "anemo",
+            "ratio": 0.01,
+            "max": 25
+          },
+          {
+            "source": "atk",
+            "target": "electro",
+            "ratio": 0.01,
+            "max": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2555,
+    "name": "Dawn Wind's March - Cryo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "anemo",
+            "ratio": 0.01,
+            "max": 25
+          },
+          {
+            "source": "atk",
+            "target": "cryo",
+            "ratio": 0.01,
+            "max": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2556,
+    "name": "Dawn Wind's March - 1st Stage",
+    "options": [
+      {
+        "id": 0,
+        "name": "Passive",
+        "stats": [
+          {
+            "stat": "alt1_mult",
+            "value": 140,
+            "custom_name": "Attacks during Sturm und Drang Multiplier"
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 140,
+            "hidden": true
+          },
+          {
+            "stat": "alt3_mult",
+            "value": 140,
+            "hidden": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2557,
+    "name": "Dawn Wind's March - 2nd Stage",
+    "options": [
+      {
+        "id": 0,
+        "name": "Passive",
+        "stats": [
+          {
+            "stat": "alt1_mult",
+            "value": 220,
+            "custom_name": "Attacks during Sturm und Drang Multiplier"
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 220,
+            "hidden": true
+          },
+          {
+            "stat": "alt3_mult",
+            "value": 220,
+            "hidden": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2558,
+    "name": "Wind's Vanguard",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 30
+          },
+          {
+            "stat": "charged",
+            "value": 30
+          },
+          {
+            "stat": "alt2",
+            "value": 30,
+            "custom_name": "Four Winds' Ascension DMG"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 22.5
+          },
+          {
+            "stat": "charged",
+            "value": 22.5
+          },
+          {
+            "stat": "alt2",
+            "value": 22.5,
+            "custom_name": "Four Winds' Ascension DMG"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 15
+          },
+          {
+            "stat": "charged",
+            "value": 15
+          },
+          {
+            "stat": "alt2",
+            "value": 15,
+            "custom_name": "Four Winds' Ascension DMG"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 7.5
+          },
+          {
+            "stat": "charged",
+            "value": 7.5
+          },
+          {
+            "stat": "alt2",
+            "value": 7.5,
+            "custom_name": "Four Winds' Ascension DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2559,
+    "name": "Wind's Vanguard - \"Beloved Mondstadt, Steadfast You Shall Shine\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 30
+          },
+          {
+            "stat": "charged",
+            "value": 30
+          },
+          {
+            "stat": "alt2",
+            "value": 30,
+            "custom_name": "Four Winds' Ascension DMG"
+          },
+          {
+            "stat": "critdmg",
+            "value": 80
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 22.5
+          },
+          {
+            "stat": "charged",
+            "value": 22.5
+          },
+          {
+            "stat": "alt2",
+            "value": 22.5,
+            "custom_name": "Four Winds' Ascension DMG"
+          },
+          {
+            "stat": "critdmg",
+            "value": 60
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 15
+          },
+          {
+            "stat": "charged",
+            "value": 15
+          },
+          {
+            "stat": "alt2",
+            "value": 15,
+            "custom_name": "Four Winds' Ascension DMG"
+          },
+          {
+            "stat": "critdmg",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 7.5
+          },
+          {
+            "stat": "charged",
+            "value": 7.5
+          },
+          {
+            "stat": "alt2",
+            "value": 7.5,
+            "custom_name": "Four Winds' Ascension DMG"
+          },
+          {
+            "stat": "critdmg",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2560,
+    "name": "\"Come, Friend, Let Us Dance Beneath the Moon's Soft Glow\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Passive",
+        "stats": [
+          {
+            "stat": "alt2_mult",
+            "value": 200,
+            "custom_name": "Four Winds' Ascension Multiplier"
+          },
+          {
+            "stat": "alt3_mult",
+            "value": 200,
+            "custom_name": "Azure Devour Multiplier"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2561,
+    "name": "\"For None May Take From Us Our Freedom of Song\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Pyro",
+        "stats": [
+          {
+            "stat": "anemo",
+            "value": 20
+          },
+          {
+            "stat": "pyro",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Hydro",
+        "stats": [
+          {
+            "stat": "anemo",
+            "value": 20
+          },
+          {
+            "stat": "hydro",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Electro",
+        "stats": [
+          {
+            "stat": "anemo",
+            "value": 20
+          },
+          {
+            "stat": "electro",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Cryo",
+        "stats": [
+          {
+            "stat": "anemo",
+            "value": 20
+          },
+          {
+            "stat": "cryo",
+            "value": 20
+          }
+        ]
+      }
+    ]
   }
 ]

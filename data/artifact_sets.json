@@ -1863,8 +1863,8 @@
   {
     "id": 58,
     "enka_id": 15043,
-    "name": "Moonlight Offering",
-    "scanner_key": "MoonlightOffering",
+    "name": "Aubade of Morningstar and Moon",
+    "scanner_key": "AubadeOfMorningstarAndMoon",
     "icon": "moonlight_offering",
     "stars": [ 5, 4 ],
     "set_bonus": [
@@ -1894,8 +1894,8 @@
   {
     "id": 59,
     "enka_id": 15044,
-    "name": "6.3 Set 2",
-    "scanner_key": "TODO",
+    "name": "A Day Carved from Rising Winds",
+    "scanner_key": "ADayCarvedFromRisingWinds",
     "icon": "witch_artifact",
     "stars": [ 5, 4 ],
     "set_bonus": [

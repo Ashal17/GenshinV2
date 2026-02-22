@@ -37379,5 +37379,534 @@
         "id": "unknown_speciality"
       }
     ]
+  },
+  "varka": {
+    "id": 116,
+    "enka_id": 10000128,
+    "name": "Varka",
+    "weapon": "claymore",
+    "vision": "anemo",
+    "rarity": 5,
+    "nation": "mondstadt",
+    "hexenzirkel": true,
+    "unreleased": true,
+    "stats": [
+      {
+        "stat": "hp_base",
+        "values": [ 982.0, 2547.0, 3389.0, 5071.0, 5669.0, 6523.0, 7320.0, 8182.0, 8780.0, 9650.0, 10249.0, 11128.0, 11727.0, 12613.0, 13061.5, 13510.0 ]
+      },
+      {
+        "stat": "atk_base",
+        "values": [ 27.46, 71.24, 94.79, 141.84, 158.57, 182.43, 204.74, 228.85, 245.58, 269.92, 286.65, 311.26, 327.99, 352.79, 392.48, 432.16 ]
+      },
+      {
+        "stat": "def_base",
+        "values": [ 61.92, 160.63, 213.73, 319.8, 357.53, 411.34, 461.64, 516.01, 553.74, 608.6, 646.33, 701.81, 739.54, 795.45, 823.72, 851.99 ]
+      },
+      {
+        "stat": "critdmg",
+        "values": [ 0.0, 0.0, 0.0, 0.0, 9.6, 9.6, 19.2, 19.2, 19.2, 19.2, 28.8, 28.8, 38.4, 38.4, 38.4, 38.4 ]
+      },
+      {
+        "stat": "burst_energy",
+        "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Favonius Bladework: Dancing Radiance",
+        "type": "normal",
+        "damage": true,
+        "id": 0,
+        "vision": "physical",
+        "parts": [
+          {
+            "name": "1-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 65.46, 70.79, 76.12, 83.73, 89.06, 95.15, 103.52, 111.89, 120.26, 129.4, 138.53, 147.67, 156.8, 165.93, 175.07 ],
+            "id": 0
+          },
+          {
+            "name": "2-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 23.99, 25.94, 27.89, 30.68, 32.64, 34.87, 37.94, 41.0, 44.07, 47.42, 50.77, 54.11, 57.46, 60.81, 64.16 ],
+            "id": 1
+          },
+          {
+            "name": "2-Hit (2/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 44.55, 48.18, 51.8, 56.98, 60.61, 64.75, 70.45, 76.15, 81.85, 88.06, 94.28, 100.5, 106.71, 112.93, 119.15 ],
+            "id": 2
+          },
+          {
+            "name": "3-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 32.44, 35.08, 37.72, 41.49, 44.13, 47.15, 51.29, 55.44, 59.59, 64.12, 68.64, 73.17, 77.7, 82.22, 86.75 ],
+            "id": 3
+          },
+          {
+            "name": "3-Hit (2/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 60.24, 65.14, 70.05, 77.05, 81.95, 87.56, 95.26, 102.97, 110.67, 119.08, 127.48, 135.89, 144.29, 152.7, 161.1 ],
+            "id": 4
+          },
+          {
+            "name": "4-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 55.43, 59.94, 64.46, 70.9, 75.41, 80.57, 87.66, 94.75, 101.84, 109.57, 117.31, 125.04, 132.78, 140.51, 148.25 ],
+            "id": 5
+          },
+          {
+            "name": "4-Hit (2/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 29.85, 32.28, 34.71, 38.18, 40.61, 43.38, 47.2, 51.02, 54.84, 59.0, 63.17, 67.33, 71.5, 75.66, 79.83 ],
+            "id": 6
+          },
+          {
+            "name": "5-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 69.75, 75.43, 81.1, 89.21, 94.89, 101.38, 110.3, 119.22, 128.15, 137.88, 147.61, 157.34, 167.08, 176.81, 186.54 ],
+            "id": 7
+          },
+          {
+            "name": "5-Hit (2/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 37.56, 40.61, 43.67, 48.04, 51.1, 54.59, 59.39, 64.2, 69.0, 74.24, 79.48, 84.72, 89.96, 95.2, 100.44 ],
+            "id": 8
+          },
+          {
+            "name": "Charged Attack (1/2)",
+            "type": "charged",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 85.64, 92.61, 99.58, 109.54, 116.51, 124.48, 135.43, 146.38, 157.34, 169.29, 181.24, 193.19, 205.13, 217.08, 229.03 ],
+            "id": 9
+          },
+          {
+            "name": "Charged Attack (2/2)",
+            "type": "charged",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 46.11, 49.87, 53.62, 58.98, 62.74, 67.03, 72.92, 78.82, 84.72, 91.15, 97.59, 104.02, 110.46, 116.89, 123.33 ],
+            "id": 10
+          },
+          {
+            "name": "Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 74.59, 80.66, 86.73, 95.4, 101.47, 108.41, 117.95, 127.49, 137.03, 147.44, 157.85, 168.26, 178.66, 189.07, 199.48 ],
+            "id": 11
+          },
+          {
+            "name": "Low Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 149.14, 161.28, 173.42, 190.77, 202.91, 216.78, 235.86, 254.93, 274.01, 294.82, 315.63, 336.44, 357.25, 378.06, 398.87 ],
+            "id": 12
+          },
+          {
+            "name": "High Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 186.29, 201.45, 216.62, 238.28, 253.44, 270.77, 294.6, 318.42, 342.25, 368.25, 394.24, 420.23, 446.23, 472.22, 498.21 ],
+            "id": 13
+          }
+        ]
+      },
+      {
+        "name": "Windbound Execution",
+        "type": "skill",
+        "damage": true,
+        "id": 1,
+        "vision": "anemo",
+        "parts": [
+          {
+            "name": "Skill",
+            "type": "skill",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 278.4, 299.28, 320.16, 348.0, 368.88, 389.76, 417.6, 445.44, 473.28, 501.12, 528.96, 556.8, 591.6, 626.4, 661.2 ],
+            "id": 0
+          },
+          {
+            "name": "Sturm und Drang 1-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "anemo",
+            "conversion_special": true,
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 81.82, 88.48, 95.15, 104.66, 111.32, 118.93, 129.4, 139.86, 150.33, 161.75, 173.16, 184.58, 196.0, 207.42, 218.83 ],
+            "id": 1
+          },
+          {
+            "name": "Sturm und Drang 2-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 29.99, 32.43, 34.87, 38.35, 40.79, 43.58, 47.42, 51.25, 55.09, 59.27, 63.46, 67.64, 71.83, 76.01, 80.19 ],
+            "id": 2
+          },
+          {
+            "name": "Sturm und Drang 2-Hit (2/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "anemo",
+            "conversion_special": true,
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 55.69, 60.22, 64.75, 71.23, 75.76, 80.94, 88.06, 95.19, 102.31, 110.08, 117.85, 125.62, 133.39, 141.16, 148.93 ],
+            "id": 3
+          },
+          {
+            "name": "Sturm und Drang 3-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "anemo",
+            "vision_special": true,
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 40.55, 43.85, 47.15, 51.86, 55.16, 58.93, 64.12, 69.3, 74.49, 80.15, 85.81, 91.46, 97.12, 102.78, 108.44 ],
+            "id": 4
+          },
+          {
+            "name": "Sturm und Drang 3-Hit (2/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "anemo",
+            "conversion_special": true,
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 75.3, 81.43, 87.56, 96.31, 102.44, 109.45, 119.08, 128.71, 138.34, 148.85, 159.35, 169.86, 180.37, 190.87, 201.38 ],
+            "id": 5
+          },
+          {
+            "name": "Sturm und Drang 4-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "anemo",
+            "conversion_special": true,
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 69.29, 74.93, 80.57, 88.63, 94.27, 100.71, 109.57, 118.44, 127.3, 136.97, 146.64, 156.3, 165.97, 175.64, 185.31 ],
+            "id": 6
+          },
+          {
+            "name": "Sturm und Drang 4-Hit (2/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 37.31, 40.35, 43.38, 47.72, 50.76, 54.23, 59.0, 63.77, 68.55, 73.75, 78.96, 84.16, 89.37, 94.58, 99.78 ],
+            "id": 7
+          },
+          {
+            "name": "Sturm und Drang 5-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "anemo",
+            "conversion_special": true,
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 87.19, 94.28, 101.38, 111.52, 118.62, 126.73, 137.88, 149.03, 160.18, 172.35, 184.51, 196.68, 208.84, 221.01, 233.18 ],
+            "id": 8
+          },
+          {
+            "name": "Sturm und Drang 5-Hit (2/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 46.95, 50.77, 54.59, 60.05, 63.87, 68.24, 74.24, 80.25, 86.25, 92.8, 99.35, 105.9, 112.45, 119.01, 125.56 ],
+            "id": 9
+          },
+          {
+            "name": "Sturm und Drang Charged Attack (1/2)",
+            "type": "charged",
+            "damage": true,
+            "vision": "anemo",
+            "conversion_special": true,
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 107.05, 115.76, 124.48, 136.92, 145.64, 155.59, 169.29, 182.98, 196.67, 211.61, 226.54, 241.48, 256.42, 271.36, 286.29 ],
+            "id": 10
+          },
+          {
+            "name": "Sturm und Drang Charged Attack (2/2)",
+            "type": "charged",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "alt": 1,
+            "scale": [ 57.64, 62.33, 67.03, 73.73, 78.42, 83.78, 91.15, 98.53, 105.9, 113.94, 121.99, 130.03, 138.07, 146.11, 154.16 ],
+            "id": 11
+          },
+          {
+            "name": "Four Winds' Ascension (1/2)",
+            "type": "skill",
+            "damage": true,
+            "vision": "anemo",
+            "conversion_special": true,
+            "stat": "atk",
+            "crit": true,
+            "alt": 2,
+            "scale": [ 175.76, 188.94, 202.12, 219.7, 232.88, 246.06, 263.64, 281.22, 298.79, 316.37, 333.94, 351.52, 373.49, 395.46, 417.43 ],
+            "id": 12
+          },
+          {
+            "name": "Four Winds' Ascension (2/2)",
+            "type": "skill",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "alt": 2,
+            "scale": [ 94.64, 101.74, 108.84, 118.3, 125.4, 132.5, 141.96, 151.42, 160.89, 170.35, 179.82, 189.28, 201.11, 212.94, 224.77 ],
+            "id": 13
+          },
+          {
+            "name": "Azure Devour (1/2) (1/2)",
+            "type": "charged",
+            "damage": true,
+            "vision": "anemo",
+            "conversion_special": true,
+            "stat": "atk",
+            "crit": true,
+            "alt": 3,
+            "scale": [ 93.6, 100.62, 107.64, 117.0, 124.02, 131.04, 140.4, 149.76, 159.12, 168.48, 177.84, 187.2, 198.9, 210.6, 222.3 ],
+            "id": 14
+          },
+          {
+            "name": "Azure Devour (1/2) (2/2)",
+            "type": "charged",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "alt": 3,
+            "scale": [ 50.4, 54.18, 57.96, 63.0, 66.78, 70.56, 75.6, 80.64, 85.68, 90.72, 95.76, 100.8, 107.1, 113.4, 119.7 ],
+            "id": 15
+          }
+        ],
+        "apply": {
+          "id": 2548,
+          "special": "sturm_und_drang",
+          "auto": true
+        }
+      },
+      {
+        "name": "Northwind Avatar",
+        "type": "burst",
+        "damage": true,
+        "id": 2,
+        "vision": "anemo",
+        "parts": [
+          {
+            "name": "Skill 1-Hit",
+            "type": "burst",
+            "damage": true,
+            "vision": "anemo",
+            "conversion_special": true,
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 336.96, 362.23, 387.5, 421.2, 446.47, 471.74, 505.44, 539.14, 572.83, 606.53, 640.22, 673.92, 716.04, 758.16, 800.28 ],
+            "id": 0
+          },
+          {
+            "name": "Skill 2-Hit",
+            "type": "burst",
+            "damage": true,
+            "vision": "anemo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 181.44, 195.05, 208.66, 226.8, 240.41, 254.02, 272.16, 290.3, 308.45, 326.59, 344.74, 362.88, 385.56, 408.24, 430.92 ],
+            "id": 1
+          }
+        ]
+      }
+    ],
+    "passive": [
+      {
+        "name": "Homebound Wind's Paean",
+        "desc": "For every party member from Mondstadt, the Hold version of Varka's Elemental Skill Windbound Execution's CD is decreased by 5%.This effect does not trigger in Domains, Trounce Domains, or the Spiral Abyss.",
+        "level": 0
+      },
+      {
+        "name": "Dawn Wind's March",
+        "desc": "When there are Pyro, Hydro, Electro or Cryo characters in the party, according to the aforementioned priority order of the Elemental Types, every 1,000 points of Varka's ATK will grant Varka a 10% Anemo DMG Bonus and corresponding Elemental DMG Bonus (among the aforementioned Elemental Types, only one element can gain bonus DMG this way). Up to 25% bonus DMG can be gained this way. Additionally, if there are at least 2 Anemo characters, or at least 2 characters of the same Element among Pyro, Hydro, Electro or Cryo in the party, the Normal Attacks, Charged Attacks, Special Charged Attack Azure Devour and the special Elemental Skill Four Winds' Ascension that Varka deals or unleashes while in the Sturm und Drang mode will deal 140% of their original DMG. If there are at least 2 Anemo characters and at least 2 other characters of the same element among Pyro, Hydro, Electro or Cryo present in the party at the same time, the aforementioned effect will be increased to 220%.",
+        "level": 2,
+        "apply": [
+          {
+            "id": 2552,
+            "special": "sturm_und_drang",
+            "auto": true
+          },
+          {
+            "id": 2556,
+            "special": "dawn_wind_march",
+            "auto": true
+          }
+        ]
+      },
+      {
+        "name": "Wind's Vanguard",
+        "desc": "When nearby party members trigger Swirl reaction(s), Varka gains one stack of Azure Fang's Oath, increasing the DMG dealt by his Normal Attacks, Charged Attacks, special Charged Attack Azure Devour and special Elemental Skill Four Winds' Ascension by 7.5% for 8s. Max 4 stacks. Each character can grant Varka with 1 stack of Azure Fang's Oath every second this way.",
+        "level": 8,
+        "apply": {
+          "id": 2558,
+          "special": "const_6"
+        }
+      },
+      {
+        "name": "Witch's Eve Rite: Dawn's Return",
+        "desc": "After completing Witch's Homework: The Untitled Question, Varka will become a Hexerei character. When the party includes at least 2 Hexerei characters, you will gain the Hexerei: Secret Rite effect, which enhances Hexerei characters.Hexerei: Secret RiteEnhances the special Elemental Skill Four Winds' Ascension: When Varka hits an opponent with Normal Attack(s) in Sturm und Drang, the CD of Four Winds' Ascension will be reduced by 1s.",
+        "level": 0
+      }
+    ],
+    "const": [
+      {
+        "name": "\"Come, Friend, Let Us Dance Beneath the Moon's Soft Glow\"",
+        "desc": "When Varka switches to Sturm und Drang, he will obtain an additional use of the special Elemental Skill Four Winds' Ascension.Additionally, after switching to Sturm und Drang, Varka will gain the Lyrical Libation effect: When unleashing the special Elemental Skill Four Winds' Ascension, or when performing the special Charged Attack Azure Devour, Varka can consume this effect to deal 200% of the original DMG dealt by Four Winds' Ascension or Azure Devour.",
+        "apply": {
+          "id": 2560
+        }
+      },
+      {
+        "name": "\"When Dawn Breaks, Our Journey Shall Take Flight\"",
+        "desc": "When unleashing the special Elemental Skill Four Winds' Ascension, or when performing the special Charged Attack Azure Devour, Varka will perform an additional strike, dealing AoE Anemo DMG equal to 800% of Varka's ATK.",
+        "attacks": [
+          {
+            "name": "\"When Dawn Breaks, Our Journey Shall Take Flight\"",
+            "parts": [
+              {
+                "id": 0,
+                "name": "\"When Dawn Breaks, Our Journey Shall Take Flight\"",
+                "type": null,
+                "alt": 1,
+                "damage": true,
+                "vision": "anemo",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 800 ]
+              }
+            ],
+            "id": 0
+          }
+        ]
+      },
+      {
+        "name": "\"O Friend, Quaff Not the Bitter Wine That Brings Tears of Woe\"",
+        "desc": "Increases Elemental Skill Windbound Execution Level by 3. Maximum upgrade level is 15.",
+        "bonus": [
+          {
+            "stat": "levelskill",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "\"For None May Take From Us Our Freedom of Song\"",
+        "desc": "When Varka triggers a Swirl reaction, based on the Elemental Types involved in the reaction, all nearby party members gain a 20% Anemo DMG Bonus and the corresponding Elemental DMG Bonus for 10s.",
+        "apply": {
+          "id": 2561,
+          "party": true
+        }
+      },
+      {
+        "name": "\"Fill High the Cup With Fine Wine, for Tyrants Come and Go\"",
+        "desc": "Increases Elemental Burst Northwind Avatar Level by 3. Maximum upgrade level is 15.",
+        "bonus": [
+          {
+            "stat": "levelburst",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "\"Beloved Mondstadt, Steadfast You Shall Shine\"",
+        "desc": "Sturm und Drang is enhanced:<br> For a short time after unleashing the special Elemental Skill Four Winds' Ascension, Tapping on Varka's Elemental Skill or Holding his Normal Attack will not expend any uses of Four Winds' Ascension, and will perform one additional instance of the special Charged Attack, Azure Devour.<br> For a short time after performing the special Charged Attack Azure Devour, tap on Varka's Elemental Skill to unleash an additional instance of Four Winds' Ascension without expending any uses of Four Winds' Ascension.When triggering an additional special Charged Attack, Azure Devour, or unleashing an additional special Elemental Skill, Four Winds' Ascension, in this manner, the above effect cannot be triggered.Additionally, the Azure Fang's Oath effect in Ascension Talent Wind's Vanguard is enhanced: Every stack of Azure Fang's Oath will increase Varka's CRIT DMG by 20%."
+      }
+    ],
+    "ascension": [
+      {
+        "type": "item",
+        "id": "unknown_ascension"
+      },
+      {
+        "type": "group",
+        "id": "unknown_regular"
+      },
+      {
+        "type": "item",
+        "id": "unknown_speciality"
+      }
+    ]
   }
 }

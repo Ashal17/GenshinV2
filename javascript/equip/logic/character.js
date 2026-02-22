@@ -681,7 +681,7 @@ function equip_character_return_party_id_by_special(special_condition, party_id,
                         var output_stats = output_party[i].stats.optimize[artifact_stat_party][artifact_stat];
                     }                    
                 } else {
-                    var output_stats = output_party[party_id].skills.active.details[skill_index].stats;
+                    var output_stats = output_party[party_id].skills.stats[skill_index].initial.total;
                 }
 
                 if (output_stats["elemastery"] > highest_value) {

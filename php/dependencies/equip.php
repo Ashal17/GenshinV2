@@ -4,6 +4,7 @@ echo '
 	<link rel="stylesheet" type="text/css" href="/styles/equip/equipment.css?' . $styles_ver .'" media="screen" />	
 	<link rel="stylesheet" type="text/css" href="/styles/equip/effects.css?' . $styles_ver .'" media="screen" />	
 	<link rel="stylesheet" type="text/css" href="/styles/equip/skills.css?' . $styles_ver .'" media="screen" />	
+	<link rel="stylesheet" type="text/css" href="/styles/equip/stats.css?' . $styles_ver .'" media="screen" />
 	<link rel="stylesheet" type="text/css" href="/styles/equip/storage.css?' . $styles_ver .'" media="screen" />	
 
 	<script src="/javascript/equip/vars/const.js?' . $javascript_logic_ver .'"></script>

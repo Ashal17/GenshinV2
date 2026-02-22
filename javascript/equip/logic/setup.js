@@ -7,7 +7,7 @@ window_frame_ids = [
 ];
 
 async function equip_load_all_data() {
-    var ver = "?20260206";
+    var ver = "?20260214";
 
     data_characters = await utils_load_json("/data/characters.json" + ver);
     data_enemies = await utils_load_json("/data/enemies.json" + ver);
@@ -291,11 +291,35 @@ function equip_setup_ui_enemy() {
 
 function equip_setup_ui_frame_stats() {
     var parent = document.getElementById("frame_stats_content");
-    parent.className += " frame_stats";
+    parent.className += " frame_stats";    
+
+    parent.appendChild(equip_setup_ui_stats_totals());
+    parent.appendChild(equip_setup_ui_stats_optimize());
+}
+
+
+function equip_setup_ui_stats_totals() {
+    var obj = utils_create_obj("div", "container_object container_stats");
+
+    obj.appendChild(utils_create_obj("div", "container_name", null, "Stats Totals"));
+
+    var stats_columns = utils_create_obj("div", "stats_detail_container");
+    obj.appendChild(stats_columns);
 
     for (var i = 0; i < const_display_stats_columns.length; i++) {
-        parent.appendChild(utils_create_obj("div", "stats_detail_column", "stats_detail_column_" + i));       
+        stats_columns.appendChild(utils_create_obj("div", "stats_detail_column", "stats_detail_column_" + i));
     }
+
+    return obj;
+}
+
+function equip_setup_ui_stats_optimize() {
+    var obj = utils_create_obj("div", "container_object container_stats");
+    obj.appendChild(utils_create_obj("div", "container_name", null, "Artifact Sub-Stats Weights"));
+
+    obj.appendChild(utils_create_obj("div", "stats_optimize_container", "stats_optimize_container"))
+
+    return obj;
 }
 
 function equip_setup_ui_frame_equipment() {
@@ -700,7 +724,7 @@ function equip_setup_output_objects() {
 
         char.stats = {};        
         char.stats.initial = {};
-        char.stats.initial.total = { ...default_stats };
+        char.stats.initial.total = structuredClone(default_stats);
         char.stats.initial.basic = [];
         char.stats.initial.environment = [];
         char.stats.initial.weapon = [];
@@ -717,22 +741,16 @@ function equip_setup_output_objects() {
 
         char.effects = {};
         char.effects.infusion = false;
+        char.effects.conversion_special = false;
         char.effects.character = [];
         char.effects.party = [];
 
         char.skills = {};
-        char.skills.attacks = [];
-        char.skills.passive = [];
-        char.skills.const = [];
-        char.skills.reactions = {};
-        char.skills.bonusdmg = {};
-        char.skills.other = [];
-        char.skills.active = {};
-        char.skills.active.ncrt = 0;
-        char.skills.active.crt = 0;
-        char.skills.active.avg = 0;
-        char.skills.active.comparison = 0;
-        char.skills.active.details = [];
+        char.skills.output = {};
+        char.skills.output.initial = structuredClone(default_skills_detail);
+        char.skills.output.optimize = [];
+       
+        char.skills.stats = [];
 
         output_party.push(char);
     }
@@ -819,20 +837,37 @@ function equip_setup_default_stats() {
     }  
 
     default_short_stats = {};
-    default_short_stats.total = { ...default_stats };
+    default_short_stats.total = structuredClone(default_stats);
     default_short_stats.effects = [];
     default_short_stats.effects_transform_other = [];
     default_short_stats.effects_transform_personal = [];
 
-    default_active_skill_detail = {};
-    default_active_skill_detail.stats = {};
-    default_active_skill_detail.stats.initial = { ...default_short_stats };
-    default_active_skill_detail.stats.optimize = [];
+    default_active_skill_stats = {};
+    default_active_skill_stats.initial = structuredClone(default_short_stats);
+    default_active_skill_stats.optimize = [];
     for (var ii = 0; ii < const_party_size; ii++) {
-        default_active_skill_detail.stats.optimize.push({});
+        default_active_skill_stats.optimize.push({});
     }
+
+    default_active_skill_detail = {};
     default_active_skill_detail.ncrt = 0;
     default_active_skill_detail.crt = 0;
     default_active_skill_detail.avg = 0;
     default_active_skill_detail.infusion = false;
+
+    default_active_skill = {};
+    default_active_skill.ncrt = 0;
+    default_active_skill.crt = 0;
+    default_active_skill.avg = 0;
+    default_active_skill.comparison = 0;
+    default_active_skill.details = [];
+
+    default_skills_detail = {};
+    default_skills_detail.attacks = [];
+    default_skills_detail.passive = [];
+    default_skills_detail.const = [];
+    default_skills_detail.reactions = {};
+    default_skills_detail.bonusdmg = {};
+    default_skills_detail.other = [];
+    default_skills_detail.active = structuredClone(default_active_skill);
 }
