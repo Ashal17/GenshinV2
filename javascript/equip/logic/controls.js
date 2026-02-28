@@ -417,3 +417,25 @@ function equip_control_create_active_skill_effects(index, btn) {
     utils_setup_prompt_destroyer("active_prompt", "active_prompt_skill_effects");
     utils_update_frame_position_center(btn, prompt);
 }
+
+function equip_control_create_comparison_options(btn, parent) {
+
+    var prompt = utils_create_prompt(btn, "prompt_options", parent);
+    if (!prompt) {
+        return;
+    }
+
+    var headerline = utils_create_obj("div", "prompt_header");
+    prompt.appendChild(headerline);
+    headerline.appendChild(utils_create_obj("div", "prompt_header_text", null, "Comparison Options"));
+    headerline.appendChild(utils_create_obj("div", "spacer"));
+    var decline = utils_create_obj("button", "prompt_button prompt_button_decline", null, "&#10006");
+    decline.onclick = function (event) { utils_destroy_current_prompt("active_prompt"); event.preventDefault(); };
+    headerline.appendChild(decline);
+
+    prompt.appendChild(utils_create_obj("div", "prompt_options_container", "comparison_options_container"))
+
+    equip_storage_display_option_all();
+
+    utils_update_frame_position_contain(null, prompt, "bottom");
+}

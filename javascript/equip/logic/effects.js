@@ -1330,7 +1330,7 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
                     var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length * 3;
                 } else {
                     var offset_val = (stage - 1);
-                    var max_id = apply.id + 3;
+                    var max_id = apply.id + 1;
                 }
 
                 new_effect.id = apply.id + offset_val;
@@ -1595,10 +1595,10 @@ function equip_effects_display(effect_type, skill_index = null) {
 
         if ((skill_index === null || !user_select.selected || user_select.skill_index !== null) && !possible_eff.auto) {
             var enabled = true;
-            var effect_obj = utils_create_obj("div", "effect_row");
+            var effect_obj = utils_create_obj("div", "effect_row toggle_row");
         } else {
             var enabled = false;
-            var effect_obj = utils_create_obj("div", "effect_row disabled");
+            var effect_obj = utils_create_obj("div", "effect_row toggle_row disabled");
         }
 
         if (user_select.selected) {
@@ -1607,7 +1607,7 @@ function equip_effects_display(effect_type, skill_index = null) {
             var toggle_class = "inactive";
         }
         
-        var effect_toggle = utils_create_obj("div", "effect_toggle " + toggle_class, effect_super_type + "_toggle_" + effect_type + "_" + effect.id);
+        var effect_toggle = utils_create_obj("div", "toggle " + toggle_class, effect_super_type + "_toggle_" + effect_type + "_" + effect.id);
         if (enabled) {    
             if (skill_index === null) {
                 effect_toggle.onclick = function (event) { equip_effects_change_selected(possible_eff, skill_index); };

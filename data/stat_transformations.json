@@ -330,6 +330,11 @@
   ],
   "mult_trans": [
     {
+      "stat": "hp%",
+      "change": "add",
+      "mods": [ "hp%_trans" ]
+    },
+    {
       "stat": "hp%_trans",
       "change": "times",
       "mods": [ "hp_base" ]
@@ -340,6 +345,11 @@
       "mods": [ "hp%_trans" ]
     },
     {
+      "stat": "atk%",
+      "change": "add",
+      "mods": [ "atk%_trans" ]
+    },
+    {
       "stat": "atk%_trans",
       "change": "times",
       "mods": [ "atk_base" ]
@@ -348,6 +358,11 @@
       "stat": "atk",
       "change": "add",
       "mods": [ "atk%_trans" ]
+    },
+    {
+      "stat": "def%",
+      "change": "add",
+      "mods": [ "def%_trans" ]
     },
     {
       "stat": "def%_trans",

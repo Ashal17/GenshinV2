@@ -687,12 +687,22 @@ input {
     width: 200px;
 }
 
+.prompt_options {
+    width: 300px;
+    transform: translateX(50%);
+    padding: 10px;
+}
+
+.prompt_options_container {
+
+}
+
 .prompt_select {
     width: 95%;
     top: calc(100% - 5px);
     left: 50%;
     transform: translateX(-50%);
-    min-height:200px;
+    min-height: 200px;
 }
 
 .prompt_header {
@@ -938,5 +948,49 @@ input {
         .new_button:hover::before, .new_button:hover::after {
             background-color: var(--orange-bg-glow);
         }
+
+.prompt_options_container {
+    width:100%;
+}
+
+.option_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    margin: 2px;
+}
+
+.toggle_row.disabled .toggle {
+    opacity: 60%;
+}
+
+.toggle {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--orange-bg);
+}
+
+.toggle_row:not(.disabled) .toggle {
+    cursor: pointer;
+}
+
+.toggle_row:not(.disabled) .toggle:hover {
+    border-color: var(--orange-bg-glow);
+}
+
+.toggle.active {
+    background-color: var(--orange-bg);
+}
+
+.toggle.inactive {
+    background-color: transparent;
+}
+
+    .toggle.inactive:hover {
+        box-shadow: inset 0 0 15px var(--orange-bg);
+    }
 
 

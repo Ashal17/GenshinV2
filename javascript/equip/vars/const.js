@@ -3,7 +3,7 @@ const const_artifact_max_levels = [0, 4, 4, 12, 16, 20];
 const const_artifact_sub_stats = 4;
 const const_artifact_sub_stats_options = ["blank", "atk", "atk%", "hp", "hp%", "def", "def%", "crit", "critdmg", "elemastery", "recharge"];
 const const_artifact_sub_stats_optimize_default = ["crit", "critdmg", "elemastery"];
-const const_artifact_sub_stats_optimize_table = { "hp": "hp%", "atk": "atk%", "def": "def%" };
+const const_artifact_sub_stats_optimize_table = { "hp": "hp%", "atk": "atk%", "def": "def%", "recharge_bonus": "recharge" };
 
 const const_party_size = 4;
 const const_level_list = ["1", "20", "20+", "40", "40+", "50", "50+", "60", "60+", "70", "70+", "80", "80+", "90", "95", "100"];
@@ -246,3 +246,26 @@ const const_skills_other = [
         ]
     }
 ]
+
+const const_storage_options = {
+    "crit": {
+        "name": "Include Crits",
+        "group": ["crit", "noncrit"]
+    },
+    "noncrit": {
+        "name": "Include Non-Crits",
+        "group": ["crit", "noncrit"]
+    },
+    "party": {
+        "name": "Entire Party"
+    },
+    "dps": {
+        "name": "Compare DPS"
+    },
+    "filter": {
+        "name": "Filter Active Character"
+    },
+    "pin": {
+        "name": "Pin Active Result"
+    }
+}

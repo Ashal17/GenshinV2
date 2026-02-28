@@ -10,6 +10,7 @@
     align-items: center;
     min-height: 31px;
     font-size: 0.9em;
+    position:relative;
 }
     .storage_row:not(:last-child) {
         border-bottom: 1px dashed var(--grey-40);
@@ -27,16 +28,28 @@
     text-align:center;
 }
 
+.storage_text_detail {
+    font-size:0.8em;
+    opacity: 0.6;
+}
+
 .storage_column .storage_text_name {
-    width: calc((100% - 255px) * 25 / 60);
+    width: calc((100% - 215px) * 25 / 60);
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .storage_column .storage_text_damage {
-    width: calc((100% - 255px) * 20 / 60);
+    width: calc((100% - 215px) * 20 / 60);
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .storage_column .storage_text_comparison {
-    width: calc((100% - 255px) * 15 / 60);
+    width: calc((100% - 215px) * 15 / 60);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .storage_btn {
@@ -48,20 +61,20 @@
     }
 
 .storage_party {
-    height: 26px;
-    width: 26px;
+    height: 16px;
+    width: 16px;
     margin: 2px;
 }
 
 .storage_party_img {
-    height: 26px;
-    width: 26px;
+    height: 16px;
+    width: 16px;
 }
 
 .storage_party_container {
     display: flex;
     flex-direction: row;
-    width: 120px;
+    width: 80px;
     justify-content: center;
     align-items: center;
 }

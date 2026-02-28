@@ -86,10 +86,26 @@ function equip_storage_load_preferences(preferences_data = null) {
     user_preferences.storage = {};
 
     user_preferences.storage.base = utils_object_get_value(preferences_data, "storage.base", -1);
-    user_preferences.storage.comparison = utils_object_get_value(preferences_data, "storage.comparison", "avg");
-    user_preferences.storage.party = utils_object_get_value(preferences_data, "storage.party", "character");
+    var comparison = utils_object_get_value(preferences_data, "storage.comparison", null);
+    if (comparison == "crt") {
+        user_preferences.storage.crit = utils_object_get_value(preferences_data, "storage.crit", true);
+        user_preferences.storage.noncrit = utils_object_get_value(preferences_data, "storage.noncrit", false);
+    } else if (comparison == "ncrt") {
+        user_preferences.storage.crit = utils_object_get_value(preferences_data, "storage.crit", false);
+        user_preferences.storage.noncrit = utils_object_get_value(preferences_data, "storage.noncrit", true);
+    } else {
+        user_preferences.storage.crit = utils_object_get_value(preferences_data, "storage.crit", true);
+        user_preferences.storage.noncrit = utils_object_get_value(preferences_data, "storage.noncrit", true);
+    }
+    var party = utils_object_get_value(preferences_data, "storage.party", "character");
+    if (party == "character" || !party) {
+        user_preferences.storage.party = false;
+    } else {
+        user_preferences.storage.party = true;
+    }
     user_preferences.storage.filter = utils_object_get_value(preferences_data, "storage.filter", false);
     user_preferences.storage.pin = utils_object_get_value(preferences_data, "storage.pin", false);
+    user_preferences.storage.dps = utils_object_get_value(preferences_data, "storage.dps", false);
 }
 
 function equip_storage_change_trigger(save_storage = true) {
@@ -125,13 +141,9 @@ function equip_storage_change_new(new_name) {
         new_name,
         output_party[user_objects.user_active_character].skills.output.initial.active,
         equip_skills_return_party_total_active(),
-        user_objects
+        user_objects,
+        equip_storage_return_duration(-1)
     );
-
-    equip_storage_change_trigger();
-}
-
-function equip_storage_change_move(index, direction) {
 
     equip_storage_change_trigger();
 }
@@ -141,6 +153,17 @@ function equip_storage_change_rename(new_name, index) {
         storage_objects.saved_storage[index].name = new_name;
         equip_storage_change_trigger();
     }    
+}
+
+function equip_storage_change_duration(new_duration, index) {
+
+    if (index == -1) {
+        storage_objects.active.duration = utils_number_verify(new_duration, 2, 1, 120);
+    } else {
+        storage_objects.saved_storage[index].duration = utils_number_verify(new_duration, 2, 1, 120);
+    }
+
+    equip_storage_change_trigger();
 }
 
 function equip_storage_change_base(index) {
@@ -159,7 +182,8 @@ function equip_storage_change_save(index) {
         storage_objects.saved_storage[index].name,
         output_party[user_objects.user_active_character].skills.output.initial.active,
         equip_skills_return_party_total_active(),
-        user_objects
+        user_objects,
+        equip_storage_return_duration(-1)
     );
 
     equip_storage_change_trigger();
@@ -168,6 +192,7 @@ function equip_storage_change_save(index) {
 function equip_storage_change_load(index) {
 
     equip_storage_load(storage_objects.saved_storage[index].user_data);
+    storage_objects.active.duration = equip_storage_return_duration(index),
     equip_storage_save_last();
 
     equip_storage_change_trigger(false);
@@ -186,61 +211,24 @@ function equip_storage_change_delete(index) {
     equip_storage_change_trigger();
 }
 
-function equip_storage_change_filter() {
-    if (user_preferences.storage.filter) {
-        user_preferences.storage.filter = false;
+function equip_storage_change_option(option_name) {
+    if (user_preferences.storage[option_name]) {
+        user_preferences.storage[option_name] = false;
     } else {
-        user_preferences.storage.filter = true;
+        user_preferences.storage[option_name] = true;
     }
 
     equip_storage_display_header_type();
+    equip_storage_display_option_all();
     utils_preferences_change_trigger();
     equip_storage_change_trigger(false);
 }
 
-function equip_storage_change_pin() {
-    if (user_preferences.storage.pin) {
-        user_preferences.storage.pin = false;
-    } else {
-        user_preferences.storage.pin = true;
-    }
-
-    equip_storage_display_header_type();
-    utils_preferences_change_trigger();
-    equip_storage_change_trigger(false);
-}
-
-function equip_storage_change_party_type() {
-
-    if (user_preferences.storage.party == "party") {
-        user_preferences.storage.party = "character";
-    } else {
-        user_preferences.storage.party = "party";
-    }
-
-    equip_storage_display_header_type();
-    utils_preferences_change_trigger();
-    equip_storage_change_trigger(false);
-}
-
-function equip_storage_change_comparison_type() {
-    if (user_preferences.storage.comparison == "avg") {
-        user_preferences.storage.comparison = "ncrt";
-    } else if (user_preferences.storage.comparison == "ncrt") {
-        user_preferences.storage.comparison = "crt";
-    } else {
-        user_preferences.storage.comparison = "avg";
-    }
-
-    equip_storage_display_header_type();
-    utils_preferences_change_trigger();
-    equip_storage_change_trigger(false);
-}
-
-function equip_storage_update_set_storage(index, name, damage_character, damage_party, user_data) {
+function equip_storage_update_set_storage(index, name, damage_character, damage_party, user_data, duration) {
     var data = {};
 
     data.name = name;
+    data.duration = duration;
 
     data.damage_data = {
         "character": {
@@ -269,7 +257,7 @@ function equip_storage_update_set_storage(index, name, damage_character, damage_
 function equip_storage_update_comparison_all() {   
 
     if (user_preferences.storage.base > -1) {
-        var base_dmg = Number(storage_objects.saved_storage[user_preferences.storage.base].damage_data[user_preferences.storage.party][user_preferences.storage.comparison]);
+        var base_dmg = equip_storage_return_saved_dmg(user_preferences.storage.base);
         for (var i = 0; i < storage_objects.saved_storage.length; i++) {
             equip_storage_update_comparison(i, base_dmg);
         }
@@ -277,7 +265,7 @@ function equip_storage_update_comparison_all() {
 }
 
 function equip_storage_update_comparison(index, base_dmg) {
-    var index_dmg = Number(storage_objects.saved_storage[index].damage_data[user_preferences.storage.party][user_preferences.storage.comparison]);
+    var index_dmg = equip_storage_return_saved_dmg(index);
     var dmg_diff = index_dmg / base_dmg - 1;
     storage_objects.saved_storage[index].comparison = utils_number_round(dmg_diff, 4);
 }
@@ -286,45 +274,38 @@ function equip_storage_display_header_type() {
     var comparison_header = document.getElementById("storage_text_damage_header");
     var comparison_pin_header = document.getElementById("storage_text_damage_header_pin");
 
-    if (user_preferences.storage.comparison == "crt") {
-        comparison_header.innerHTML = "Crit";
-        comparison_pin_header.innerHTML = "Crit";
-    } else if (user_preferences.storage.comparison == "ncrt") {
-        comparison_header.innerHTML = "Non-Crit";
-        comparison_pin_header.innerHTML = "Non-Crit";
+    if (user_preferences.storage.crit && user_preferences.storage.noncrit) {
+        var comparison_header_text = "Average";
+    } else if (user_preferences.storage.crit) {
+        var comparison_header_text = "Crit";
     } else {
-        comparison_header.innerHTML = "Average";
-        comparison_pin_header.innerHTML = "Average";
+        var comparison_header_text = "Non-Crit";
     }
+
+    if (user_preferences.storage.dps) {
+        comparison_header_text += " DPS";
+    } else {
+        comparison_header_text += " Total";
+    }
+
+    comparison_header.innerHTML = comparison_header_text;
+    comparison_pin_header.innerHTML = comparison_header_text;
 
     var party_header = document.getElementById("storage_party_container_header");
     var party_pin_header = document.getElementById("storage_party_container_header_pin");
-    var party_icon = document.getElementById("storage_party_active").firstChild;
 
-    if (user_preferences.storage.party == "character") {
+    if (user_preferences.storage.party) {
+        party_header.innerHTML = "Party";
+        party_pin_header.innerHTML = "Party";        
+    } else {
         party_header.innerHTML = "Character";
         party_pin_header.innerHTML = "Character";
-        party_icon.className = "img_icon svg svg-account-outline";
-    } else {
-        party_header.innerHTML = "Party";
-        party_pin_header.innerHTML = "Party";
-        party_icon.className = "img_icon svg svg-account-multiple-outline";
     }
 
-    var filter_icon = document.getElementById("storage_filter_active").firstChild;
-    if (user_preferences.storage.filter) {
-        filter_icon.className = "img_icon svg svg-filter-outline img_icon_active";
-    } else {
-        filter_icon.className = "img_icon svg svg-filter-outline";
-    }
-
-    var pin_icon = document.getElementById("storage_pin_active").firstChild;
     var storage_pin = document.getElementById("storage_pin");
     if (user_preferences.storage.pin) {
-        pin_icon.className = "img_icon svg svg-pin-outline img_icon_active";
         storage_pin.className = "container_storage_pin";
     } else {
-        pin_icon.className = "img_icon svg svg-pin-outline";
         storage_pin.className = "container_storage_pin hidden";
     }
 }
@@ -334,19 +315,24 @@ function equip_storage_display_active() {
     equip_storage_display_active_party("storage_party_container_active");
     equip_storage_display_active_party("storage_party_container_pin");
 
-    if (user_preferences.storage.party == "party") {
+    if (user_preferences.storage.party) {
         var active_dmg = equip_skills_return_party_total_active();
-        active_dmg = active_dmg[user_preferences.storage.comparison];
+        active_dmg = active_dmg[equip_storage_return_comparison_type()];
     } else {
-        var active_dmg = output_party[user_objects.user_active_character].skills.output.initial.active[user_preferences.storage.comparison];
+        var active_dmg = output_party[user_objects.user_active_character].skills.output.initial.active[equip_storage_return_comparison_type()];
     }
+    var active_duration = equip_storage_return_duration(-1);
 
     var comparison_class = "storage_text storage_text_comparison";
     var comparison_text = "";
 
     if (user_preferences.storage.base > -1) {
-        var base_dmg = Number(storage_objects.saved_storage[user_preferences.storage.base].damage_data[user_preferences.storage.party][user_preferences.storage.comparison]);
+        var base_dmg = equip_storage_return_saved_dmg(user_preferences.storage.base);
+        if (user_preferences.storage.dps) {
+            var active_dmg = active_dmg / active_duration;
+        } 
         var comparison = active_dmg / base_dmg - 1;
+        
 
         comparison_text = utils_number_format((comparison * 100).toFixed(2)) + " %";
         if (comparison > 0) {
@@ -356,9 +342,9 @@ function equip_storage_display_active() {
             comparison_class += " negative";
         }
     }
-
-    document.getElementById("storage_text_damage_active").innerHTML = utils_number_format(active_dmg.toFixed(1));
-    document.getElementById("storage_text_damage_pin").innerHTML = utils_number_format(active_dmg.toFixed(1));
+    var display_dmg = equip_storage_display_dmg(active_dmg, active_duration);
+    document.getElementById("storage_text_damage_active").innerHTML = display_dmg;
+    document.getElementById("storage_text_damage_pin").innerHTML = display_dmg;
 
     var storage_text_comparison_active = document.getElementById("storage_text_comparison_active");
     storage_text_comparison_active.className = comparison_class;
@@ -368,6 +354,7 @@ function equip_storage_display_active() {
     storage_text_comparison_pin.className = comparison_class;
     storage_text_comparison_pin.innerHTML = comparison_text;
 
+    utils_update_obj("storage_duration_active", utils_create_img_button_prompt_input("timer-outline", "Set Rotation Duration", "storage_duration_active", "Enter Rotation Duration (seconds)", equip_storage_change_duration, -1, equip_storage_return_duration(-1), "storage_btn"));
 }
 
 function equip_storage_display_all() {
@@ -399,16 +386,19 @@ function equip_storage_display(index) {
     obj.sort = storage_objects.saved_storage[index].name;
 
     var party_container = utils_create_obj("div", "storage_party_container");
-    if (user_preferences.storage.party == "party") {
+    if (user_preferences.storage.party) {
         equip_storage_display_party(storage_objects.saved_storage[index].user_data.user_party, party_container);
     } else {
         equip_storage_display_character(storage_objects.saved_storage[index].user_data.user_party[storage_objects.saved_storage[index].user_data.user_active_character].id, party_container);
     }
     
     obj.appendChild(party_container);
-
-    obj.appendChild(utils_create_obj("div", "storage_text storage_text_damage", null, utils_number_format(Number(storage_objects.saved_storage[index].damage_data[user_preferences.storage.party][user_preferences.storage.comparison]).toFixed(1))));
+    
+    var duration = equip_storage_return_duration(index);
+    obj.appendChild(utils_create_obj("div", "storage_text storage_text_damage", null, equip_storage_display_dmg(equip_storage_return_saved_dmg(index), duration)));
     obj.appendChild(equip_storage_display_comparison(index, user_preferences.storage.base));
+
+    obj.appendChild(utils_create_img_button_prompt_input("timer-outline", "Set Rotation Duration", "storage_duration_" + index, "Enter Rotation Duration (seconds)", equip_storage_change_duration, index, duration, "storage_btn"));
 
     if (user_preferences.storage.base == index) {
         obj.appendChild(utils_create_img_btn("target-variant img_icon_active", function () { equip_storage_change_base(index) }, "Set Comparison", "storage_base_" + index, "storage_btn"));
@@ -448,7 +438,7 @@ function equip_storage_display_active_party(party_container_id) {
     var party_container = document.getElementById(party_container_id);
     utils_delete_children(party_container, 0);
 
-    if (user_preferences.storage.party == "party") {
+    if (user_preferences.storage.party) {
         equip_storage_display_party(user_objects.user_party, party_container);
     } else {
         equip_storage_display_character(user_objects.user_party[user_objects.user_active_character].id, party_container)
@@ -473,6 +463,101 @@ function equip_storage_display_character(char_id, party_container) {
     var character = data_characters[char_id];
     var vision = character.vision;
 
-    party_container.appendChild(utils_create_img_svg(vision));    
+    //party_container.appendChild(utils_create_img_svg(vision));    
     party_container.appendChild(utils_create_obj("div", vision, null, utils_object_get_value(character, "short_name", character.name)));
 }
+
+function equip_storage_display_option_all() {
+    var options_container = document.getElementById("comparison_options_container");
+
+    if (options_container) {
+        utils_delete_children(options_container, 0);
+
+        for (const [option, option_detail] of Object.entries(const_storage_options)) {
+            options_container.appendChild(equip_storage_display_option(option, option_detail))
+        }
+    }    
+}
+
+function equip_storage_display_option(option, option_detail) {
+
+    if (option_detail.group && user_preferences.storage[option]) {
+        var enabled = false;
+        for (var i = 0; i < option_detail.group.length; i++) {
+            if (option_detail.group[i] != option && user_preferences.storage[option_detail.group[i]]) {
+                enabled = true;
+                break;
+            }
+        }
+    } else {
+        var enabled = true;
+    }
+    if (enabled) {
+        var opt_row = utils_create_obj("div", "toggle_row option_row");
+    } else {
+        var opt_row = utils_create_obj("div", "toggle_row option_row disabled");
+    }
+    
+    opt_row.appendChild(utils_create_obj("div", "toggle_name", "comparison_option_name_" + option, option_detail.name));
+
+    if (user_preferences.storage[option]) {
+        var toggle_class = "active";
+    } else {
+        var toggle_class = "inactive";
+    }
+
+    var opt_toggle = utils_create_obj("div", "toggle " + toggle_class, "comparison_option_toggle_" + option);
+    if (enabled) {
+        opt_toggle.onclick = function (event) { equip_storage_change_option(option); event.preventDefault(); };
+    }
+    
+    opt_row.appendChild(opt_toggle);
+
+    return opt_row;
+}
+
+function equip_storage_display_dmg(dmg_value, duration) {
+
+    if (user_preferences.storage.dps) {
+        return utils_number_format(dmg_value.toFixed(1)) + '<span class="storage_text_detail"> /&#8288;s&nbsp;(' + duration + 's)</span>';
+    } else {
+        return utils_number_format(dmg_value.toFixed(1)) + '<span class="storage_text_detail"> /&#8288;' + duration + 's</span>';
+    }
+}
+
+
+function equip_storage_return_saved_dmg(index) {
+
+    if (user_preferences.storage.party) {
+        var party = "party";
+    } else {
+        var party = "character";
+    }
+
+    var damage = Number(storage_objects.saved_storage[index].damage_data[party][equip_storage_return_comparison_type()]);
+
+    if (user_preferences.storage.dps) {
+        return damage / equip_storage_return_duration(index);
+    } else {
+        return damage;
+    }
+}
+
+function equip_storage_return_duration(index) {
+    if (index > -1) {
+        return Number(utils_object_get_value(storage_objects.saved_storage[index], "duration", 20))
+    } else {
+        return Number(utils_object_get_value(storage_objects.active, "duration", 20))
+    }
+}
+
+function equip_storage_return_comparison_type() {
+    if (user_preferences.storage.crit && user_preferences.storage.noncrit) {
+       return "avg";
+    } else if (user_preferences.storage.crit) {
+        return "crt";
+    } else {
+        return "ncrt";
+    }
+}
+

@@ -261,6 +261,10 @@ background: none;
     -webkit-mask-image: url(../images/svg/target-variant.svg);
     mask-image: url(../images/svg/target-variant.svg);
 }
+.svg-timer-outline:before {
+    -webkit-mask-image: url(../images/svg/timer-outline.svg);
+    mask-image: url(../images/svg/timer-outline.svg);
+}
 .svg-transfer-left:before {
     -webkit-mask-image: url(../images/svg/transfer-left.svg);
     mask-image: url(../images/svg/transfer-left.svg);

@@ -551,10 +551,20 @@ function equip_stats_display_unit(unit, unit_id = null) {
 function equip_stats_display_optimize_artifacts_all() {
     var parent = document.getElementById("stats_optimize_container");
     utils_delete_children(parent, 0);
+    var optimize_count = 0;
 
     for (var i = 0; i < output_party[user_objects.user_active_character].artifacts.optimize_stats[user_objects.user_active_character].length; i++) {
         var artifact_stat = output_party[user_objects.user_active_character].artifacts.optimize_stats[user_objects.user_active_character][i];
-        parent.appendChild(equip_stats_display_optimize_artifact(artifact_stat));
+        var optimize_obj = equip_stats_display_optimize_artifact(artifact_stat);
+        if (optimize_obj) {
+            parent.appendChild(optimize_obj);
+            optimize_count++;
+        }        
+    }
+    if (optimize_count) {
+        document.getElementById("stats_optimize_container_object").style.display = "flex";
+    } else {
+        document.getElementById("stats_optimize_container_object").style.display = "none";
     }
 }
 
@@ -566,15 +576,18 @@ function equip_stats_display_optimize_artifact(artifact_stat) {
     stat_name.appendChild(utils_create_obj("p", null, null, data_stats[artifact_stat].name));
     obj.appendChild(stat_name);
 
-    if (user_preferences.storage.party == "party") {
+    if (user_preferences.storage.party) {
         var active_dmg = equip_skills_return_party_total_active();
-        active_dmg = active_dmg[user_preferences.storage.comparison];
+        active_dmg = active_dmg[equip_storage_return_comparison_type()];
 
         var optimize_dmg = equip_skills_return_party_total_active(artifact_stat, user_objects.user_active_character);
-        optimize_dmg = optimize_dmg[user_preferences.storage.comparison];
+        optimize_dmg = optimize_dmg[equip_storage_return_comparison_type()];
     } else {
-        var active_dmg = output_party[user_objects.user_active_character].skills.output.initial.active[user_preferences.storage.comparison];
-        var optimize_dmg = output_party[user_objects.user_active_character].skills.output.optimize[user_objects.user_active_character][artifact_stat].active[user_preferences.storage.comparison];
+        var active_dmg = output_party[user_objects.user_active_character].skills.output.initial.active[equip_storage_return_comparison_type()];
+        var optimize_dmg = output_party[user_objects.user_active_character].skills.output.optimize[user_objects.user_active_character][artifact_stat].active[equip_storage_return_comparison_type()];
+    }
+    if (active_dmg == optimize_dmg) {
+        return null;
     }
 
     var total_line = utils_create_obj("div", "stats_optimize_line");
@@ -599,9 +612,7 @@ function equip_stats_display_optimize_artifact(artifact_stat) {
     var comparison_hover = utils_create_obj("div", "img_button_hover", null, "Difference with 1 Sub-Stat");
     comparison_line.appendChild(comparison_hover);
     comparison_line.onmouseover = function () { utils_update_frame_position_contain(this, comparison_hover, "top"); };
-    obj.appendChild(comparison_line);
-
-    
+    obj.appendChild(comparison_line);    
 
     return obj;
 }

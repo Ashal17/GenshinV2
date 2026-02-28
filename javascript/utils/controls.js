@@ -143,6 +143,17 @@ function utils_preferences_save() {
     }
 }
 
+function utils_update_obj(id, new_obj) {
+
+    var element = document.getElementById(id);
+
+    if (element) {
+        parent = element.parentNode;
+        parent.insertBefore(new_obj, element);
+        parent.removeChild(element);
+    }
+}
+
 function utils_create_obj(type = "div", classes = null, id = null, content = null) {
     var newobj = document.createElement(type);
     if (classes) {

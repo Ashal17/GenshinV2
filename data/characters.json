@@ -37389,7 +37389,6 @@
     "rarity": 5,
     "nation": "mondstadt",
     "hexenzirkel": true,
-    "unreleased": true,
     "stats": [
       {
         "stat": "hp_base",

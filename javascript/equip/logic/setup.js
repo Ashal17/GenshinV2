@@ -3,11 +3,12 @@ window_frame_ids = [
     { "id": "frame_stats", "text": "Stats", "order": 1, "display": true },
     { "id": "frame_equipment", "text": "Equipment", "order": 2, "display": true },
     { "id": "frame_effects", "text": "Effects", "order": 3, "display": true },
-    { "id": "frame_skills", "text": "Skills // Storage", "order": 4, "display": true },
+    { "id": "frame_recharge", "text": "Energy Recharge", "order": 4, "display": true },
+    { "id": "frame_skills", "text": "Skills // Storage", "order": 5, "display": true },
 ];
 
 async function equip_load_all_data() {
-    var ver = "?20260214";
+    var ver = "?20260223";
 
     data_characters = await utils_load_json("/data/characters.json" + ver);
     data_enemies = await utils_load_json("/data/enemies.json" + ver);
@@ -55,6 +56,7 @@ async function equip_setup_all() {
         equip_setup_ui_frame_stats();
         equip_setup_ui_frame_equipment();
         equip_setup_ui_frame_effects();
+        equip_setup_ui_frame_recharge();
         equip_setup_ui_frame_skills();
 
         var storage_account = await equip_account_return_storage();
@@ -314,7 +316,7 @@ function equip_setup_ui_stats_totals() {
 }
 
 function equip_setup_ui_stats_optimize() {
-    var obj = utils_create_obj("div", "container_object container_stats");
+    var obj = utils_create_obj("div", "container_object container_stats", "stats_optimize_container_object");
     obj.appendChild(utils_create_obj("div", "container_name", null, "Artifact Sub-Stats Weights"));
 
     obj.appendChild(utils_create_obj("div", "stats_optimize_container", "stats_optimize_container"))
@@ -500,6 +502,13 @@ function equip_setup_ui_effects(effect_type, skill_index = null) {
     return obj;
 }
 
+function equip_setup_ui_frame_recharge() {
+    var parent = document.getElementById("frame_recharge_content");
+    parent.className += " frame_recharge";
+
+    
+}
+
 function equip_setup_ui_frame_skills() {
     var parent = document.getElementById("frame_skills_content");
     parent.className += " frame_skills";
@@ -545,6 +554,7 @@ function equip_setup_ui_storage() {
     storage_header.appendChild(utils_create_obj("div", "storage_btn"));
     storage_header.appendChild(utils_create_obj("div", "storage_btn"));
     storage_header.appendChild(utils_create_obj("div", "storage_btn"));
+    storage_header.appendChild(utils_create_obj("div", "storage_btn"));
     storage_column.appendChild(storage_header);
 
     var storage_active = utils_create_obj("div", "storage_row");
@@ -553,10 +563,18 @@ function equip_setup_ui_storage() {
     storage_active.appendChild(utils_create_obj("div", "storage_party_container", "storage_party_container_active"));
     storage_active.appendChild(utils_create_obj("div", "storage_text storage_text_damage", "storage_text_damage_active"), "0");
     storage_active.appendChild(utils_create_obj("div", "storage_text storage_text_comparison", "storage_text_comparison_active", "0"));
-    storage_active.appendChild(utils_create_img_btn("filter-outline", equip_storage_change_filter, "Filter Active Character", "storage_filter_active", "storage_btn"));
-    storage_active.appendChild(utils_create_img_btn("pin-outline", equip_storage_change_pin, "Pin Active Damage", "storage_pin_active", "storage_btn"));
-    storage_active.appendChild(utils_create_img_btn("account-outline", equip_storage_change_party_type, "Change Party/Character", "storage_party_active", "storage_btn"));
-    storage_active.appendChild(utils_create_img_btn("cog-outline", equip_storage_change_comparison_type, "Change Damage Type", "storage_comparison_active", "storage_btn"));
+
+    storage_active.appendChild(utils_create_img_button_prompt_input("timer-outline", "Set Rotation Duration", "storage_duration_active", "Enter Rotation Duration (seconds)", equip_storage_change_duration, -1, equip_storage_return_duration(-1), "storage_btn"));
+    storage_active.appendChild(utils_create_obj("div", "storage_btn"));
+    storage_active.appendChild(utils_create_obj("div", "storage_btn"));
+    storage_active.appendChild(utils_create_obj("div", "storage_btn"));
+
+    var storage_options_container = utils_create_obj("div", "img_button_container storage_btn", "storage_options_btn_container");
+    var storage_options_btn = utils_create_img_btn("cog-outline", null, "Storage Options", "storage_options_btn");
+    storage_options_btn.onclick = function (event) { equip_control_create_comparison_options(storage_options_btn.id, storage_options_container.id); event.preventDefault(); };
+    storage_options_container.appendChild(storage_options_btn);
+    storage_active.appendChild(storage_options_container);
+    
     storage_column.appendChild(storage_active);
 
     obj.appendChild(storage_column);
@@ -577,12 +595,20 @@ function equip_setup_ui_storage_pin() {
     storage_header.appendChild(utils_create_obj("div", "storage_party_container", "storage_party_container_header_pin", "Party"));
     storage_header.appendChild(utils_create_obj("div", "storage_text", "storage_text_damage_header_pin", "Damage"));
     storage_header.appendChild(utils_create_obj("div", "storage_text", null, "Comparison"));
+    storage_header.appendChild(utils_create_obj("div", "storage_btn"));
     obj.appendChild(storage_header);
 
     var storage_active = utils_create_obj("div", "storage_row");
     storage_active.appendChild(utils_create_obj("div", "storage_party_container", "storage_party_container_pin", "Party"));
     storage_active.appendChild(utils_create_obj("div", "storage_text", "storage_text_damage_pin", "Damage"));
     storage_active.appendChild(utils_create_obj("div", "storage_text", "storage_text_comparison_pin", "Comparison"));
+
+    var storage_options_container_pin = utils_create_obj("div", "img_button_container storage_btn", "storage_options_btn_container_pin");
+    var storage_options_btn_pin = utils_create_img_btn("cog-outline", null, "Storage Options", "storage_options_btn_pin");
+    storage_options_btn_pin.onclick = function (event) { equip_control_create_comparison_options(storage_options_btn_pin.id, storage_options_container_pin.id); event.preventDefault(); };
+    storage_options_container_pin.appendChild(storage_options_btn_pin);
+    storage_active.appendChild(storage_options_container_pin);
+
     obj.appendChild(storage_active);
 
     return obj;
@@ -642,6 +668,8 @@ function equip_setup_storage_objects(user_storage = null) {
     user_storage = structuredClone(user_storage);
     storage_objects = {};
     storage_objects.saved_storage = utils_object_get_value(user_storage, "saved_storage", []);
+    storage_objects.active = {};
+    storage_objects.active.duration = utils_object_get_value(user_storage, "active.duration", 0);
 }
 
 function equip_setup_character_storage_objects(user_characters = null) {
