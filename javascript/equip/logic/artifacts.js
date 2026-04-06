@@ -50,6 +50,7 @@ function equip_artifacts_change_trigger(artifact_id, change_set = false) {
     equip_effects_update_stats_all();
     equip_stats_update_total_all();
     equip_skills_update_all();
+    equip_energy_update_all();
 
     equip_effects_display_all();
     equip_skills_display_all();
@@ -59,6 +60,7 @@ function equip_artifacts_change_trigger(artifact_id, change_set = false) {
         equip_artifacts_display(artifact_id);
     }
     equip_stats_display();
+    equip_energy_display();
     equip_storage_save_last();
 }
 

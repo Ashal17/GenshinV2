@@ -1,10 +1,10 @@
 <?php
 $favicon_ver = 20241106;
 $imports_ver = 20241106;
-$styles_ver = 20241106;
-$javascript_utils_ver = 20241106;
-$javascript_logic_ver = 20241106;
-$javascript_resources_ver = 20241106;
+$styles_ver = 20260228;
+$javascript_utils_ver = 20260228;
+$javascript_logic_ver = 20260228;
+$javascript_resources_ver = 20260228;
 
 echo '
 	<meta charset="UTF-8" />

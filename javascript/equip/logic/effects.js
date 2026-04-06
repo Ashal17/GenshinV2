@@ -7,10 +7,13 @@ function equip_effects_change_trigger() {
     equip_effects_update_stats_all();
     equip_stats_update_total_all();
     equip_skills_update_all();
+    equip_energy_update_all();
 
     equip_effects_display_all();
     equip_skills_display_all();
     equip_stats_display();
+    equip_energy_display();
+
     equip_storage_save_last();
 }
 
@@ -541,8 +544,7 @@ function equip_effects_update_options(party_id) {
                     }
                 }
             } 
-        }
-               
+        }               
     }
 
     for (var i = 0; i < const_party_size; i++) {       
@@ -754,6 +756,12 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
 
             new_effect.id = apply.id + offset_val;
             new_effect.max_id = max_id;
+            break;
+        case "moonsign":
+            if (data_characters[user_objects.user_party[party_id].id].moonsign) {
+                new_effect.id = apply.id;
+                new_effect.max_id = apply.id;
+            }
             break;
         case "moonsign_1_2":
             var moonsign = equip_character_return_variable_count("moonsign");
@@ -1105,6 +1113,21 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
                 new_effect.id = apply.id + offset_val;
                 new_effect.max_id = max_id;
             }
+            break;
+
+        case "hydro_geo_personal":
+            var current_vision = data_characters[user_objects.user_party[party_id].id].vision;
+            if (current_vision == "geo" || current_vision == "hydro") {
+                if (apply.offset) {
+                    var offset_val = apply.offset[offset];
+                    var max_id = apply.id + apply.offset.slice(-1)[0];
+                } else {
+                    var offset_val = 0;
+                    var max_id = apply.id;
+                }
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = max_id;
+            } 
             break;
 
         case "hydro_0_1_2":
@@ -1621,7 +1644,7 @@ function equip_effects_display(effect_type, skill_index = null) {
         if (possible_eff.source.type == "svg") {
             display_source.appendChild(utils_create_label_img(possible_eff.source.id, possible_eff.source.name, null, null, "effect_source_img"))
         } else {
-            display_source.appendChild(utils_create_img("effect_source_img img_icon", null, equip_effects_return_source_icon(possible_eff), possible_eff.source.name));
+            display_source.appendChild(utils_create_img("effect_source_img img_icon", null, equip_effects_return_source_icon(possible_eff.source, possible_eff.source_party), possible_eff.source.name));
         }
         effect_obj.appendChild(display_source);
 
@@ -1988,22 +2011,22 @@ function equip_effects_return_stats_transformed(source_party_id, transform, inpu
     return { "id": transform.target, "value": target_value };
 }
 
-function equip_effects_return_source_icon(possible_eff) {
-    switch (possible_eff.source.type) {
+function equip_effects_return_source_icon(source, source_party) {
+    switch (source.type) {
         case "character":
-            return "/images/icons/character/" + possible_eff.source.id + "/char.png";
+            return "/images/icons/character/" + source.id + "/char.png";
             break;
         case "weapon":
-            var weapon_type = output_party[possible_eff.source_party].weapon_type;
-            var weapon = utils_array_get_by_lookup(data_weapons[weapon_type], "id", possible_eff.source.id);
+            var weapon_type = output_party[source_party].weapon_type;
+            var weapon = utils_array_get_by_lookup(data_weapons[weapon_type], "id", source.id);
             return "/images/icons/weapon/" + weapon_type + "/" + weapon.icon + ".png";
             break;
 
         case "resonance":
-            return "/images/icons/element/24p/" + possible_eff.source.id + ".png";
+            return "/images/icons/element/24p/" + source.id + ".png";
             break;
         case "artifact_set":
-            var artifact = utils_array_get_by_lookup(data_artifact_sets, "id", possible_eff.source.id);
+            var artifact = utils_array_get_by_lookup(data_artifact_sets, "id", source.id);
             return "/images/icons/artifact/flower/" + artifact.icon + ".png";
             break;
 

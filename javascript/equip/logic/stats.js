@@ -628,8 +628,11 @@ function equip_stats_return_calculated_vision_stat(character_id, stats) {
 
 function equip_stats_return_highest_stat(stats, stats_ids, default_stat) {
     
+    var highest_val = 0;
     var highest_stat = default_stat;
-    var highest_val = stats[default_stat];
+    if (stats[default_stat]) {
+        highest_val = stats[default_stat];
+    }
     for (var i = 0; i < stats_ids.length; i++) {
         if (stats[stats_ids[i]] > highest_val) {
             highest_val = stats[stats_ids[i]];

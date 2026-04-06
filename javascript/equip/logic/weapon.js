@@ -6,11 +6,14 @@ function equip_weapon_change_trigger() {
     equip_effects_update_stats_all();
     equip_stats_update_total_all();
     equip_skills_update_all();
+    equip_energy_update_all();
 
     equip_effects_display_all();
     equip_skills_display_all();
     equip_weapon_display();
     equip_stats_display();
+    equip_energy_display();
+
     equip_storage_save_last();
 }
 

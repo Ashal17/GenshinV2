@@ -1,0 +1,1673 @@
+[
+  {
+    "id": 0,
+    "name": "Same Element Particle",
+    "type": "particle",
+    "vision": "same",
+    "value": 1
+  },
+  {
+    "id": 1,
+    "name": "Other Element Particle",
+    "type": "particle",
+    "vision": "other",
+    "value": 1
+  },
+  {
+    "id": 2,
+    "name": "Same Element Orb",
+    "type": "orb",
+    "vision": "same",
+    "value": 1
+  },
+  {
+    "id": 3,
+    "name": "Other Element Orb",
+    "type": "orb",
+    "vision": "other",
+    "value": 1
+  },
+  {
+    "id": 4,
+    "name": "Direct Energy",
+    "type": "energy",
+    "party": true,
+    "value": 1
+  },
+  {
+    "id": 5,
+    "name": "High Voltage",
+    "type": "particle",
+    "vision": "electro",
+    "value": 1
+  },
+  {
+    "id": 6,
+    "name": "The Exile",
+    "type": "energy",
+    "party": true,
+    "value": 6
+  },
+  {
+    "id": 7,
+    "name": "Scholar (Bow or Catalyst)",
+    "type": "energy",
+    "party": true,
+    "value": 3
+  },
+  {
+    "id": 8,
+    "name": "Shimenawa's Reminiscence",
+    "type": "energy",
+    "value": -15
+  },
+  {
+    "id": 9,
+    "name": "Scroll of the Hero of Cinder City",
+    "type": "energy",
+    "value": 6
+  },
+  {
+    "id": 10,
+    "name": "Windfall",
+    "type": "orb",
+    "value": 1
+  },
+  {
+    "id": 11,
+    "name": "Gilding",
+    "type": "energy",
+    "source": "weapon",
+    "value": [ 4, 4.5, 5, 5.5, 6 ]
+  },
+  {
+    "id": 12,
+    "name": "Byakuya Kougetsu",
+    "type": "energy",
+    "value": 0.6
+  },
+  {
+    "id": 13,
+    "name": "Aeon Wave (12s CD)",
+    "type": "energy",
+    "source": "weapon",
+    "value": [ 8, 9, 10, 11, 12 ]
+  },
+  {
+    "id": 13,
+    "name": "Cloudfall Axiom",
+    "type": "energy",
+    "party": true,
+    "source": "weapon",
+    "value": [ 2.5, 2.75, 3, 3.25, 3.5 ]
+  },
+  {
+    "id": 14,
+    "name": "Samurai Conduct (Decrease, 10s CD)",
+    "type": "energy",
+    "value": -3
+  },
+  {
+    "id": 15,
+    "name": "Samurai Conduct (Restoration, 10s CD)",
+    "type": "energy",
+    "source": "weapon",
+    "value": [ 9, 10.5, 12, 13.5, 15 ]
+  },
+  {
+    "id": 16,
+    "name": "Sea Shanty (Max 3, 15s CD)",
+    "type": "energy",
+    "party": true,
+    "source": "weapon",
+    "value": [ 2, 2.5, 3, 3.5, 4 ]
+  },
+  {
+    "id": 17,
+    "name": "Mind in Bloom (15s CD)",
+    "type": "energy",
+    "source": "weapon",
+    "value": [ 12.0, 15.0, 18.0, 21.0, 24.0 ]
+  },
+  {
+    "id": 18,
+    "name": "Mournful Tribute (14s CD)",
+    "type": "energy",
+    "source": "weapon",
+    "value": [ 12.0, 13.0, 14.0, 15.0, 16.0 ]
+  },
+  {
+    "id": 19,
+    "name": "Iwakura Succession (Max 3 per Burst)",
+    "type": "energy",
+    "source": "weapon",
+    "value": [ 6, 7.5, 9, 10.5, 12 ]
+  },
+  {
+    "id": 20,
+    "name": "Principle of Equilibrium (10s CD)",
+    "type": "energy",
+    "source": "weapon",
+    "value": [ 8, 10, 12, 14, 16 ]
+  },
+  {
+    "id": 21,
+    "name": "Bright Dawn Overture (12s CD)",
+    "type": "energy",
+    "source": "weapon",
+    "value": [ 18, 23, 28, 33, 38 ]
+  },
+  {
+    "id": 22,
+    "name": "Ballad of the Crossroads (18s CD)",
+    "type": "energy",
+    "source": "weapon",
+    "value": [ 12.0, 13.0, 14.0, 15.0, 16.0 ]
+  },
+  {
+    "id": 23,
+    "name": "Tip of the Spear (10s CD)",
+    "type": "energy",
+    "source": "weapon",
+    "value": [ 8, 10, 12, 14, 16 ]
+  },
+  {
+    "id": 24,
+    "name": "Primordial Jade Regalia",
+    "type": "energy",
+    "source": "weapon",
+    "value": [ 4.5, 5, 5.5, 6, 6.5 ]
+  },
+  {
+    "id": 25,
+    "name": "Blank Particle",
+    "type": "particle",
+    "value": 1
+  },
+  {
+    "id": 26,
+    "name": "Blank Orb",
+    "type": "orb",
+    "value": 1
+  },
+  {
+    "id": 27,
+    "name": "Gleeful Songs (10s CD)",
+    "type": "energy",
+    "value": 1
+  },
+  {
+    "id": 28,
+    "name": "Attentiveness be My Power (Max 5 per Charged Attack)",
+    "type": "energy",
+    "value": 1
+  },
+  {
+    "id": 29,
+    "name": "Frozen Skies (2s CD)",
+    "type": "energy",
+    "value": 1
+  },
+  {
+    "id": 30,
+    "name": "Let the Wind Lead",
+    "type": "energy",
+    "value": 16
+  },
+  {
+    "id": 31,
+    "name": "Glacial Whirlwind",
+    "type": "energy",
+    "value": 15
+  },
+  {
+    "id": 32,
+    "name": "Blazing Delight (3s CD)",
+    "type": "energy",
+    "party": true,
+    "noself": true,
+    "value": 3
+  },
+  {
+    "id": 33,
+    "name": "Sparkling Burst",
+    "type": "energy",
+    "party": true,
+    "value": 2
+  },
+  {
+    "id": 34,
+    "name": "Infinite Circuit (Max 10 per Hold Skill)",
+    "type": "energy",
+    "value": 2
+  },
+  {
+    "id": 35,
+    "name": "Ascetics of Frost",
+    "type": "energy",
+    "value": 2
+  },
+  {
+    "id": 36,
+    "name": "Witch's Eve Rite: Surge of Lightning",
+    "type": "energy",
+    "special": "hexenzirkel_2",
+    "value": 7
+  },
+  {
+    "id": 37,
+    "name": "Reaction Force (Max 25 per Burst)",
+    "type": "energy",
+    "value": 5
+  },
+  {
+    "id": 38,
+    "name": "Stormeye",
+    "type": "energy",
+    "special": "anemo_pyro_hydro_electro_cryo",
+    "value": 15
+  },
+  {
+    "id": 39,
+    "name": "Hence, Call Them My Own Verses",
+    "type": "energy",
+    "value": 3
+  },
+  {
+    "id": 40,
+    "name": "A Lingering Flavor",
+    "type": "energy",
+    "value": 15
+  },
+  {
+    "id": 41,
+    "name": "Foul Legacy: Understream",
+    "type": "energy",
+    "value": 4
+  },
+  {
+    "id": 42,
+    "name": "Flower of Eden",
+    "type": "energy",
+    "value": 1.2
+  },
+  {
+    "id": 43,
+    "name": "Dew-Drinker",
+    "type": "energy",
+    "value": 2
+  },
+  {
+    "id": 44,
+    "name": "Painful Grace",
+    "type": "energy",
+    "value": 5
+  },
+  {
+    "id": 45,
+    "name": "Oozora Genpou (Press)",
+    "type": "energy",
+    "value": 3
+  },
+  {
+    "id": 46,
+    "name": "Oozora Genpou (Hold)",
+    "type": "energy",
+    "value": 4
+  },
+  {
+    "id": 47,
+    "name": "Skiving: New and Improved (2s CD)",
+    "type": "energy",
+    "value": 1.2
+  },
+  {
+    "id": 48,
+    "name": "World-Shaker",
+    "party": true,
+    "type": "energy",
+    "value": 1
+  },
+  {
+    "id": 49,
+    "name": "Lightning Blade (per Amulet)",
+    "party": true,
+    "type": "energy",
+    "value": 3
+  },
+  {
+    "id": 50,
+    "name": "Bellowing Thunder",
+    "party": true,
+    "type": "energy",
+    "source": "burst",
+    "value": [ 0.8, 0.8, 0.8, 0.9, 0.9, 0.9, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+  },
+  {
+    "id": 51,
+    "name": "Ancient Rite: The Thundering Sands",
+    "type": "particle",
+    "vision": "electro",
+    "value": 2
+  },
+  {
+    "id": 52,
+    "name": "\"They Know Not Life, Who Dwelt in the Netherworld Not!\" (5s CD)",
+    "type": "energy",
+    "value": 4
+  },
+  {
+    "id": 53,
+    "name": "Decorum (per 100% Sara's Energy Recharge)",
+    "party": true,
+    "type": "energy",
+    "value": 1.2
+  },
+  {
+    "id": 54,
+    "name": "The Moon Overlooks the Waters",
+    "type": "energy",
+    "value": 0.8
+  },
+  {
+    "id": 55,
+    "name": "Long-Term Planning",
+    "type": "energy",
+    "value": 15
+  },
+  {
+    "id": 56,
+    "name": "Gather 'Round, It's a Brawl! (per Geo party member, Max 18)",
+    "type": "energy",
+    "value": 6
+  },
+  {
+    "id": 57,
+    "name": "Chronicles of the Kitsune Cohort (per Sky Kitsune Thunderbolt)",
+    "type": "energy",
+    "value": 8
+  },
+  {
+    "id": 58,
+    "name": "Kamisato Art: Katsusui Senkoku (1s CD)",
+    "type": "energy",
+    "value": 1.5
+  },
+  {
+    "id": 59,
+    "name": "Tome of Lies (first Explosion)",
+    "type": "energy",
+    "value": 9
+  },
+  {
+    "id": 60,
+    "name": "Tome of Lies (subsequent Explosions, Max 4.5)",
+    "type": "energy",
+    "value": 1.5
+  },
+  {
+    "id": 61,
+    "name": "Compound Interest (per 100% Energy Recharge, Max 15)",
+    "type": "energy",
+    "value": 5
+  },
+  {
+    "id": 62,
+    "name": "Symbiotic Creeper",
+    "type": "energy",
+    "value": 3.5
+  },
+  {
+    "id": 63,
+    "name": "Fricative Pulse",
+    "type": "energy",
+    "value": 15
+  },
+  {
+    "id": 64,
+    "name": "Austerity: Forbidding Guard",
+    "party": true,
+    "type": "energy",
+    "value": 3
+  },
+  {
+    "id": 65,
+    "name": "Light’s Remit",
+    "type": "energy",
+    "value": 1
+  },
+  {
+    "id": 66,
+    "name": "Jade-Claimed Flower (Electro)",
+    "type": "energy",
+    "value": 0.8
+  },
+  {
+    "id": 67,
+    "name": "Innocent",
+    "type": "energy",
+    "value": 3
+  },
+  {
+    "id": 68,
+    "name": "An Oath Abiding",
+    "type": "energy",
+    "value": 1.5
+  },
+  {
+    "id": 69,
+    "name": "Sunfrost Encomium (Max 15 per Skill)",
+    "type": "energy",
+    "value": 3
+  },
+  {
+    "id": 70,
+    "name": "Penguins and the Land of Plenty (Pressure Level 1-3)",
+    "type": "energy",
+    "value": 3
+  },
+  {
+    "id": 71,
+    "name": "Penguins and the Land of Plenty (Pressure Level 4)",
+    "type": "energy",
+    "value": 2
+  },
+  {
+    "id": 72,
+    "name": "Swelling Lake",
+    "type": "energy",
+    "value": 2
+  },
+  {
+    "id": 73,
+    "name": "A Responsibility to Oversee (Max 10 per 20s)",
+    "type": "energy",
+    "value": 2
+  },
+  {
+    "id": 74,
+    "name": "A Lady's Rules for Keeping a Courteous Distance (Max 6 per Skill)",
+    "type": "energy",
+    "value": 2
+  },
+  {
+    "id": 75,
+    "name": "Stable Front Line's Resolve (10s CD)",
+    "type": "energy",
+    "party": true,
+    "value": 6
+  },
+  {
+    "id": 76,
+    "name": "Soar Across Mountains",
+    "type": "energy",
+    "value": 2
+  },
+  {
+    "id": 77,
+    "name": "\"You Shall Love and Protect Each Other Henceforth...\" (10s CD)",
+    "type": "energy",
+    "value": 15
+  },
+  {
+    "id": 78,
+    "name": "Shards Are Gems Too (5s CD)",
+    "type": "energy",
+    "value": 3
+  },
+  {
+    "id": 79,
+    "name": "Hummingbird's Feather (2.8s CD)",
+    "type": "energy",
+    "value": 5
+  },
+  {
+    "id": 80,
+    "name": "Sharky Eats Puffies",
+    "type": "energy",
+    "value": 8
+  },
+  {
+    "id": 81,
+    "name": "Chiucue Mix (Electro)",
+    "type": "energy",
+    "party": true,
+    "special": "electro",
+    "value": 25
+  },
+  {
+    "id": 82,
+    "name": "Sparks, the Sudden Shot",
+    "type": "energy",
+    "value": 1.5
+  },
+  {
+    "id": 83,
+    "name": "Aspect Catalyst (Max 3 per Skill)",
+    "type": "energy",
+    "party": true,
+    "value": 3
+  },
+  {
+    "id": 84,
+    "name": "As the Mysteries of the Night Wind",
+    "type": "energy",
+    "value": 8
+  },
+  {
+    "id": 85,
+    "name": "Death Defier's Spirit Skull (8s CD)",
+    "type": "energy",
+    "value": 8
+  },
+  {
+    "id": 86,
+    "name": "Embers Unspent (Pyro reactions, 12s CD)",
+    "type": "energy",
+    "value": 5
+  },
+  {
+    "id": 87,
+    "name": "Embers Unspent (Nightsoul Burst)",
+    "type": "energy",
+    "value": 4
+  },
+  {
+    "id": 88,
+    "name": "Buds Warm Lucid Springs (Max 20 per Burst)",
+    "type": "energy",
+    "value": 5
+  },
+  {
+    "id": 89,
+    "name": "Beyond the Edge of Light",
+    "type": "energy",
+    "value": 11.5
+  },
+  {
+    "id": 90,
+    "name": "A Hero of Justice's Triumph",
+    "type": "energy",
+    "value": 30
+  },
+  {
+    "id": 91,
+    "name": "Starting's Never Easy (18s CD)",
+    "type": "energy",
+    "value": 15
+  },
+  {
+    "id": 92,
+    "name": "Secret Rosemary Recipe (Max 14 per Skill)",
+    "type": "energy",
+    "value": 7
+  },
+  {
+    "id": 93,
+    "name": "Vitiferous Elixir's Concoction (5s CD)",
+    "type": "energy",
+    "value": 6
+  },
+  {
+    "id": 94,
+    "name": "Infallible Procession",
+    "type": "energy",
+    "value": 2.5
+  },
+  {
+    "id": 95,
+    "name": "The Edictless Path (4s CD)",
+    "type": "energy",
+    "value": 5
+  },
+  {
+    "id": 96,
+    "name": "\"Nor Yearn for the Great Bear's Might\" (5s CD)",
+    "type": "energy",
+    "value": 4
+  },
+  {
+    "id": 97,
+    "name": "Part the Veil of Snow (5.5s CD)",
+    "type": "energy",
+    "value": 8
+  },
+  {
+    "id": 98,
+    "name": "Butter and Cats and the Law of Energy Supply (10s CD)",
+    "type": "energy",
+    "value": 10
+  },
+  {
+    "id": 99,
+    "name": "Wild Berry Amid the Dust",
+    "type": "energy",
+    "value": 4
+  },
+  {
+    "id": 100,
+    "name": "Radiance Over Blossoms and Peaks (Lunar-Charged, 15s CD)",
+    "type": "energy",
+    "party": true,
+    "value": 6
+  },
+  {
+    "id": 101,
+    "name": "Cloudveiled Ridges in Floral Mists",
+    "type": "energy",
+    "value": 4
+  },
+  {
+    "id": 102,
+    "name": "Vigilant Sentinel (15s CD)",
+    "type": "energy",
+    "value": 12
+  },
+  {
+    "id": 103,
+    "name": "Explosive Puppet",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 4
+  },
+  {
+    "id": 104,
+    "name": "Tidecaller (Press)",
+    "type": "particle",
+    "vision": "electro",
+    "value": 2
+  },
+  {
+    "id": 105,
+    "name": "Tidecaller (Hold)",
+    "type": "particle",
+    "vision": "electro",
+    "value": 4
+  },
+  {
+    "id": 106,
+    "name": "Passion Overload (Press)",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 2.25
+  },
+  {
+    "id": 107,
+    "name": "Passion Overload (Hold)",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 3
+  },
+  {
+    "id": 108,
+    "name": "Spirit Blade - Chonghua's Layered Frost",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 4
+  },
+  {
+    "id": 109,
+    "name": "Searing Onslaught",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 1.33
+  },
+  {
+    "id": 110,
+    "name": "Nightrider",
+    "type": "particle",
+    "vision": "electro",
+    "value": 0.67
+  },
+  {
+    "id": 111,
+    "name": "Gale Blade",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 2.67
+  },
+  {
+    "id": 112,
+    "name": "Frostgnaw",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 2.67
+  },
+  {
+    "id": 113,
+    "name": "Glacial Heart (Max 2 per Skill)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 1
+  },
+  {
+    "id": 114,
+    "name": "Stellar Restoration",
+    "type": "particle",
+    "vision": "electro",
+    "value": 2.5
+  },
+  {
+    "id": 115,
+    "name": "Jumpy Dumpty",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 4
+  },
+  {
+    "id": 116,
+    "name": "Violet Arc (Hold)",
+    "type": "particle",
+    "vision": "electro",
+    "value": 5
+  },
+  {
+    "id": 117,
+    "name": "Mirror Reflection of Doom",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 3.33
+  },
+  {
+    "id": 118,
+    "name": "Jade Screen (6s CD)",
+    "type": "particle",
+    "vision": "geo",
+    "value": 3.33
+  },
+  {
+    "id": 119,
+    "name": "Claw and Thunder (Press)",
+    "type": "particle",
+    "vision": "electro",
+    "value": 3
+  },
+  {
+    "id": 120,
+    "name": "Claw and Thunder (Hold)",
+    "type": "particle",
+    "vision": "electro",
+    "value": 4
+  },
+  {
+    "id": 121,
+    "name": "Astable Anemohypostasis Creation - 6308",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 4
+  },
+  {
+    "id": 122,
+    "name": "Palm Vortex (Press)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 2
+  },
+  {
+    "id": 123,
+    "name": "Palm Vortex (Hold)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 3.33
+  },
+  {
+    "id": 124,
+    "name": "Starfell Sword",
+    "type": "particle",
+    "vision": "geo",
+    "value": 3.33
+  },
+  {
+    "id": 125,
+    "name": "Skyward Sonnet (Press)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 3
+  },
+  {
+    "id": 126,
+    "name": "Skyward Sonnet (Hold)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 4
+  },
+  {
+    "id": 127,
+    "name": "Guoba Attack",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 1
+  },
+  {
+    "id": 128,
+    "name": "Guhua Sword - Fatal Rainscreen",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 5
+  },
+  {
+    "id": 129,
+    "name": "Icy Paws (Press)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 1.6
+  },
+  {
+    "id": 130,
+    "name": "Icy Paws (Hold)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 4
+  },
+  {
+    "id": 131,
+    "name": "Foul Legacy: Raging Tide - Riptide Slash",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 1
+  },
+  {
+    "id": 132,
+    "name": "Dominus Lapidis",
+    "type": "particle",
+    "vision": "geo",
+    "value": 0.5
+  },
+  {
+    "id": 133,
+    "name": "Sweeping Fervor",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 4
+  },
+  {
+    "id": 134,
+    "name": "Abiogenesis: Solar Isotoma",
+    "type": "particle",
+    "vision": "geo",
+    "value": 0.67
+  },
+  {
+    "id": 135,
+    "name": "Trail of the Qilin",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 2
+  },
+  {
+    "id": 136,
+    "name": "Lemniscatic Wind Cycling",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 3
+  },
+  {
+    "id": 137,
+    "name": "Guide to Afterlife (5s CD)",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 2.5
+  },
+  {
+    "id": 138,
+    "name": "Ravaging Confession",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 3
+  },
+  {
+    "id": 139,
+    "name": "Signed Edict",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 3
+  },
+  {
+    "id": 140,
+    "name": "Icetide Vortex (Press)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 1.5
+  },
+  {
+    "id": 141,
+    "name": "Icetide Vortex (Hold)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 2.5
+  },
+  {
+    "id": 142,
+    "name": "Chihayaburu (Press)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 3
+  },
+  {
+    "id": 143,
+    "name": "Chihayaburu (Hold)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 4
+  },
+  {
+    "id": 144,
+    "name": "Yoohoo Art: Fuuin Dash (Windwheel Hit, 3s CD)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 1
+  },
+  {
+    "id": 145,
+    "name": "Yoohoo Art: Fuuin Dash (Press, Windwheel Kick)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 2
+  },
+  {
+    "id": 146,
+    "name": "Niwabi Fire-Dance (2s CD)",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 1
+  },
+  {
+    "id": 147,
+    "name": "Lightning Blade",
+    "type": "particle",
+    "vision": "electro",
+    "value": 1
+  },
+  {
+    "id": 148,
+    "name": "Transcendence: Baleful Light",
+    "type": "particle",
+    "vision": "electro",
+    "value": 0.5
+  },
+  {
+    "id": 149,
+    "name": "Secret Art: Musou Shinsetsu",
+    "type": "energy",
+    "source": "burst",
+    "value": [ 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.5, 2.5, 2.5, 2.5, 2.5 ]
+  },
+  {
+    "id": 150,
+    "name": "Kamisato Art: Hyouka",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 4.5
+  },
+  {
+    "id": 151,
+    "name": "FREE",
+    "type": "energy",
+    "value": 0
+  },
+  {
+    "id": 152,
+    "name": "FREE",
+    "type": "energy",
+    "value": 0
+  },
+  {
+    "id": 153,
+    "name": "FREE",
+    "type": "energy",
+    "value": 0
+  },
+  {
+    "id": 154,
+    "name": "FREE",
+    "type": "energy",
+    "value": 0
+  },
+  {
+    "id": 155,
+    "name": "FREE",
+    "type": "energy",
+    "value": 0
+  },
+  {
+    "id": 156,
+    "name": "FREE",
+    "type": "energy",
+    "value": 0
+  },
+  {
+    "id": 157,
+    "name": "FREE",
+    "type": "energy",
+    "value": 0
+  },
+  {
+    "id": 158,
+    "name": "FREE",
+    "type": "energy",
+    "value": 0
+  },
+  {
+    "id": 159,
+    "name": "Tengu Stormcall",
+    "type": "particle",
+    "vision": "electro",
+    "value": 3
+  },
+  {
+    "id": 160,
+    "name": "Frozen Wilds",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 5
+  },
+  {
+    "id": 161,
+    "name": "Kurage's Oath",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 0.67
+  },
+  {
+    "id": 162,
+    "name": "Blazing Blessing",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 3.5
+  },
+  {
+    "id": 163,
+    "name": "Masatsu Zetsugi: Akaushi Burst!",
+    "type": "particle",
+    "vision": "geo",
+    "value": 3.5
+  },
+  {
+    "id": 164,
+    "name": "Inuzaka All-Round Defense",
+    "type": "particle",
+    "vision": "geo",
+    "value": 2
+  },
+  {
+    "id": 165,
+    "name": "Spring Spirit Summoning (Press)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 3
+  },
+  {
+    "id": 166,
+    "name": "Spring Spirit Summoning (Hold)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 4
+  },
+  {
+    "id": 167,
+    "name": "Opening Flourish (Press)",
+    "type": "particle",
+    "vision": "geo",
+    "value": 2
+  },
+  {
+    "id": 168,
+    "name": "Opening Flourish (Hold, Charge Lv. 2)",
+    "type": "particle",
+    "vision": "geo",
+    "value": 2.5
+  },
+  {
+    "id": 169,
+    "name": "Opening Flourish (Hold, Charge Lv. 3)",
+    "type": "particle",
+    "vision": "geo",
+    "value": 3
+  },
+  {
+    "id": 170,
+    "name": "Yakan Evocation: Sesshou Sakura (2.5s CD)",
+    "type": "particle",
+    "vision": "electro",
+    "value": 1
+  },
+  {
+    "id": 171,
+    "name": "Kamisato Art: Kyouka (2.5s CD)",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 1.5
+  },
+  {
+    "id": 172,
+    "name": "Lingering Lifeline",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 4
+  },
+  {
+    "id": 173,
+    "name": "Sanctifying Ring",
+    "type": "particle",
+    "vision": "electro",
+    "value": 0.45
+  },
+  {
+    "id": 174,
+    "name": "Heartstopper Strike (0-1 STacks)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 2
+  },
+  {
+    "id": 175,
+    "name": "Heartstopper Strike (2-3 STacks)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 2.5
+  },
+  {
+    "id": 176,
+    "name": "Heartstopper Strike (4 STacks)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 3
+  },
+  {
+    "id": 177,
+    "name": "Spirit-Warding Lamp: Troubleshooter Cannon",
+    "type": "particle",
+    "vision": "electro",
+    "value": 2
+  },
+  {
+    "id": 178,
+    "name": "Floral Brush",
+    "type": "particle",
+    "vision": "dendro",
+    "value": 3
+  },
+  {
+    "id": 179,
+    "name": "Vijnana-Phala Mine",
+    "type": "particle",
+    "vision": "dendro",
+    "value": 3.5
+  },
+  {
+    "id": 180,
+    "name": "Razorgrass Blade",
+    "type": "particle",
+    "vision": "dendro",
+    "value": 2.5
+  },
+  {
+    "id": 181,
+    "name": "Dance of the Seven Realms (Skill)",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 1.5
+  },
+  {
+    "id": 182,
+    "name": "Dance of the Seven Realms (Attack)",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 1
+  },
+  {
+    "id": 183,
+    "name": "Secret Rite: Chasmic Soulfarer (Normal)",
+    "type": "particle",
+    "vision": "electro",
+    "value": 3
+  },
+  {
+    "id": 184,
+    "name": "Secret Rite: Chasmic Soulfarer (Burst)",
+    "type": "particle",
+    "vision": "electro",
+    "value": 1.33
+  },
+  {
+    "id": 185,
+    "name": "Sacred Rite: Heron’s Sanctum (Press)",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 2
+  },
+  {
+    "id": 186,
+    "name": "Sacred Rite: Heron’s Sanctum (Hold)",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 3
+  },
+  {
+    "id": 187,
+    "name": "Nights of Formal Focus (3s CD)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 1.33
+  },
+  {
+    "id": 188,
+    "name": "All Schemes to Know (7s CD)",
+    "type": "particle",
+    "vision": "dendro",
+    "value": 3
+  },
+  {
+    "id": 189,
+    "name": "Wind Realm of Nasamjnin (5.5s CD)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 2
+  },
+  {
+    "id": 190,
+    "name": "Hanega: Song of the Wind (2s CD)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 1
+  },
+  {
+    "id": 191,
+    "name": "Universality: An Elaboration on Form (1.6 CD)",
+    "type": "particle",
+    "vision": "dendro",
+    "value": 1
+  },
+  {
+    "id": 192,
+    "name": "Raphanus Sky Cluster (1.5s CD)",
+    "type": "particle",
+    "vision": "dendro",
+    "value": 1
+  },
+  {
+    "id": 193,
+    "name": "Molten Inferno (2.5s CD)",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 1
+  },
+  {
+    "id": 194,
+    "name": "Starfrost Swirl",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 4
+  },
+  {
+    "id": 195,
+    "name": "Universal Diagnosis",
+    "type": "particle",
+    "vision": "dendro",
+    "value": 3.5
+  },
+  {
+    "id": 196,
+    "name": "Artistic Ingenuity",
+    "type": "particle",
+    "vision": "dendro",
+    "value": 2
+  },
+  {
+    "id": 197,
+    "name": "Meow-teor Kick (Urgent Neko Parcel Hit, 4s CD)",
+    "type": "particle",
+    "vision": "dendro",
+    "value": 1
+  },
+  {
+    "id": 198,
+    "name": "Meow-teor Kick (Press, Flipclaw Strike)",
+    "type": "particle",
+    "vision": "dendro",
+    "value": 3
+  },
+  {
+    "id": 199,
+    "name": "Enigmatic Feint",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 4
+  },
+  {
+    "id": 200,
+    "name": "Bewildering Lights",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 5
+  },
+  {
+    "id": 201,
+    "name": "Pressurized Floe (Burst, Level 4)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 1
+  },
+  {
+    "id": 202,
+    "name": "Pressurized Floe (Normal)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 2
+  },
+  {
+    "id": 203,
+    "name": "Aquacrest Saber",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 3.33
+  },
+  {
+    "id": 204,
+    "name": "Icefang Rush (2s CD)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 1
+  },
+  {
+    "id": 205,
+    "name": "O Tears, I Shall Repay",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 4
+  },
+  {
+    "id": 206,
+    "name": "Salon Solitaire (2.5s CD)",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 1
+  },
+  {
+    "id": 207,
+    "name": "Framing: Freezing Point Composition (Press)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 3
+  },
+  {
+    "id": 208,
+    "name": "Framing: Freezing Point Composition (Press)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 5
+  },
+  {
+    "id": 209,
+    "name": "Ceremonial Crystalshot",
+    "type": "particle",
+    "vision": "geo",
+    "value": 3.5
+  },
+  {
+    "id": 210,
+    "name": "Short-Range Rapid Interdiction Fire (10s CD)",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 4
+  },
+  {
+    "id": 211,
+    "name": "White Clouds at Dawn",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 5
+  },
+  {
+    "id": 212,
+    "name": "Bestial Ascent (3s CD)",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 2
+  },
+  {
+    "id": 213,
+    "name": "Fluttering Hasode",
+    "type": "particle",
+    "vision": "geo",
+    "value": 1.2
+  },
+  {
+    "id": 214,
+    "name": "All is Ash",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 5
+  },
+  {
+    "id": 215,
+    "name": "Hunter's Vigil (2s CD)",
+    "type": "particle",
+    "vision": "electro",
+    "value": 1
+  },
+  {
+    "id": 216,
+    "name": "Rebound Hydrotherapy",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 4
+  },
+  {
+    "id": 217,
+    "name": "Fragrance Extraction (2.5s CD)",
+    "type": "particle",
+    "vision": "dendro",
+    "value": 1
+  },
+  {
+    "id": 218,
+    "name": "Go, Go Turbo Twirly!",
+    "type": "particle",
+    "vision": "geo",
+    "value": 0.67
+  },
+  {
+    "id": 219,
+    "name": "Canopy Hunter: Riding High",
+    "type": "particle",
+    "vision": "dendro",
+    "value": 5
+  },
+  {
+    "id": 220,
+    "name": "Surfshark Wavebreaker",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 4.5
+  },
+  {
+    "id": 221,
+    "name": "Yohual's Scratch",
+    "type": "particle",
+    "vision": "geo",
+    "value": 4
+  },
+  {
+    "id": 222,
+    "name": "Spirit Reins, Shadow Hunt",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 5
+  },
+  {
+    "id": 223,
+    "name": "Night's Sling",
+    "type": "particle",
+    "vision": "electro",
+    "value": 3
+  },
+  {
+    "id": 224,
+    "name": "The Named Moment",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 5
+  },
+  {
+    "id": 225,
+    "name": "Dawnfrost Darkstar",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 5
+  },
+  {
+    "id": 226,
+    "name": "Flowfire Blade (2.9s CD)",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 1
+  },
+  {
+    "id": 227,
+    "name": "Swallow-Wisp Pinion Dance",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 3
+  },
+  {
+    "id": 228,
+    "name": "Aisa Utamakura Pilgrimage (Max 4 per Skill)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 1
+  },
+  {
+    "id": 229,
+    "name": "Riding the Night-Rainbow (?)",
+    "type": "particle",
+    "vision": "electro",
+    "value": 1
+  },
+  {
+    "id": 230,
+    "name": "Thunderbolt Rush (?)",
+    "type": "particle",
+    "vision": "electro",
+    "value": 1
+  },
+  {
+    "id": 231,
+    "name": "Low-Temperature Cooking",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 4
+  },
+  {
+    "id": 232,
+    "name": "Airborne Disease Prevention",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 4.5
+  },
+  {
+    "id": 233,
+    "name": "Havoc: Warp (15s CD)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 4
+  },
+  {
+    "id": 234,
+    "name": "Immersive Ordinance",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 3
+  },
+  {
+    "id": 235,
+    "name": "Cleaning Mode: Carrier Frequency (?)",
+    "type": "particle",
+    "vision": "electro",
+    "value": 1
+  },
+  {
+    "id": 236,
+    "name": "Runo: Dawnless Rest of Karsikko (3.3s CD)",
+    "type": "particle",
+    "vision": "dendro",
+    "value": 1.33
+  },
+  {
+    "id": 237,
+    "name": "Ancient Rite: Arcane Light (?)",
+    "type": "particle",
+    "vision": "electro",
+    "value": 1
+  },
+  {
+    "id": 238,
+    "name": "Musecatcher",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 3
+  },
+  {
+    "id": 239,
+    "name": "Senet Strategy: Dance of a Thousand Nights",
+    "type": "particle",
+    "vision": "dendro",
+    "value": 2.67
+  },
+  {
+    "id": 240,
+    "name": "Binary Form: Convergence and Division",
+    "type": "energy",
+    "source": "skill",
+    "value": [ 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48 ]
+  },
+  {
+    "id": 241,
+    "name": "Binary Form: Convergence and Division (?)",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 1
+  },
+  {
+    "id": 242,
+    "name": "Savvy Strategy: Splitting the Spoils (?)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 1
+  },
+  {
+    "id": 243,
+    "name": "Eternal Tides",
+    "type": "particle",
+    "vision": "hydro",
+    "value": 1.33
+  },
+  {
+    "id": 244,
+    "name": "Heaven and Earth Made Manifest (2s CD)",
+    "type": "particle",
+    "vision": "geo",
+    "value": 1
+  },
+  {
+    "id": 245,
+    "name": "Dawnbearing Songbird",
+    "type": "particle",
+    "vision": "geo",
+    "value": 4.5
+  },
+  {
+    "id": 246,
+    "name": "Windbound Execution",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 6
+  },
+  {
+    "id": 247,
+    "name": "Countermeasure: Lumi's Battle Cry! (?)",
+    "type": "particle",
+    "vision": "geo",
+    "value": 1
+  }
+]

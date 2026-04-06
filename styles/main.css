@@ -36,6 +36,7 @@ body {
     --red-light: #ff3333;
     --red-dark: #cc0000;
     --yellow: #ffe51a;
+    --yellow-dim: #ccb400;
     --orange: #ff8000;
     --orange-alpha-25: rgba(255, 128, 0, 0.5);
     --orange-bg-dark: #804000;

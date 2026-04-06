@@ -63,7 +63,8 @@ function equip_storage_load(storage_data) {
         equip_effects_update_options_all();
         equip_effects_update_stats_all();
         equip_stats_update_total_all();
-        equip_skills_update_all();        
+        equip_skills_update_all();
+        equip_energy_update_all();
 
         equip_character_display_all();
         equip_control_display_all();
@@ -75,6 +76,7 @@ function equip_storage_load(storage_data) {
         equip_skills_display_all();        
         equip_storage_display_active();
         equip_stats_display();
+        equip_energy_display();
        
         utils_log_debug("Storage loaded.")
     } else {

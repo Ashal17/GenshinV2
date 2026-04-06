@@ -269,3 +269,36 @@ const const_storage_options = {
         "name": "Pin Active Result"
     }
 }
+
+const const_energy_other = [
+    {
+        "id": 0
+    },
+    {
+        "id": 25
+    },
+    {
+        "id": 1
+    },
+    {
+        "id": 2
+    },
+    {
+        "id": 26
+    },
+    {
+        "id": 3
+    },
+    {
+        "id": 4
+    }
+]
+
+const const_energy_outputs = {    
+    "energy_raw": "Direct Energy Gain",
+    "energy_raw_recharge": "Particle/Orb Energy Gain",
+    "energy_total": "Total Energy Gain",
+    "energy_required": "Burst Energy Cost",
+    "recharge_current": "Current Energy Recharge",
+    "recharge_required": "Required Energy Recharge"
+}

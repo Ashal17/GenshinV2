@@ -1,0 +1,174 @@
+@media only screen and (max-width: 1084px) {
+    .frame_energy {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 1084px) {
+    .frame_energy {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.container_energy {
+    padding: 1px;
+}
+
+.energy_column_input {
+    display:flex;
+    flex-direction:column;
+}
+
+.energy_column_output {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.energy_option_row {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--grey-15);
+    padding: 5px;
+    margin: 2px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .energy_option_row .label_img {
+        height: 25px;
+    }
+
+        .energy_option_row .label_img .svg-energy {
+            height: 15px;
+            width: 15px;
+            padding: 5px;
+        }
+
+    .energy_option_row.anemo .svg-energy:before,
+    .energy_option_row.anemo .svg-particle:before,
+    .energy_option_row.anemo .svg-orb:before {
+        background-color: var(--anemo);
+    }
+
+    .energy_option_row.cryo .svg-energy:before,
+    .energy_option_row.cryo .svg-particle:before,
+    .energy_option_row.cryo .svg-orb:before {
+        background-color: var(--cryo);
+    }
+
+    .energy_option_row.dendro .svg-energy:before,
+    .energy_option_row.dendro .svg-particle:before,
+    .energy_option_row.dendro .svg-orb:before {
+        background-color: var(--dendro);
+    }
+
+    .energy_option_row.electro .svg-energy:before,
+    .energy_option_row.electro .svg-particle:before,
+    .energy_option_row.electro .svg-orb:before {
+        background-color: var(--electro);
+    }
+
+    .energy_option_row.geo .svg-energy:before,
+    .energy_option_row.geo .svg-particle:before,
+    .energy_option_row.geo .svg-orb:before {
+        background-color: var(--geo);
+    }
+
+    .energy_option_row.hydro .svg-energy:before,
+    .energy_option_row.hydro .svg-particle:before,
+    .energy_option_row.hydro .svg-orb:before {
+        background-color: var(--hydro);
+    }
+
+    .energy_option_row.pyro .svg-energy:before,
+    .energy_option_row.pyro .svg-particle:before,
+    .energy_option_row.pyro .svg-orb:before {
+        background-color: var(--pyro);
+    }
+
+
+.energy_option_name {
+    font-size: 0.9em;
+    flex: 1 1;
+}
+
+.energy_option_value {
+    width:45px;
+    text-align:center;
+    padding-right: 3px;
+}
+
+.energy_option_count.energy_on_field {
+    padding: 0px 5px;
+}
+.energy_option_count.energy_off_field {
+    padding: 0px 7px 0px 5px;
+}
+
+    .energy_option_count_val {
+        height: 23px;
+        width: 23px;
+    }
+
+.energy_option_count .prompt_input_simple {
+    min-width: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.energy_on_field .icon_selects {
+    border: 1px solid var(--yellow-dim);
+}
+
+    .energy_on_field .icon_selects:hover {
+        border: 1px solid var(--yellow);
+    }
+.energy_on_field .img_icon:before {
+    background-color: var(--yellow-dim);
+}
+
+.energy_off_field .img_icon:before {
+    background-color: var(--orange-bg-glow);
+}
+
+.energy_on_field .prompt_input_simple,
+.energy_on_field .prompt_input_simple .prompt_input_field,
+.energy_on_field .prompt_input_simple .prompt_button {
+    border: 1px solid var(--yellow-dim);
+}
+
+.energy_off_field.energy_option_val_desc {
+    color: var(--orange-bg-glow);
+}
+
+.energy_option_val_desc {
+    font-size: 0.9em;
+    padding: 0px;
+    margin-right: 15px;
+}
+
+.energy_output {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--grey-15);
+    padding: 5px;
+    margin: 2px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .energy_output .img_svg {
+        height: 25px;
+    }
+
+.energy_output_text {
+    flex: 1 1;
+    font-size: 1.1em;
+    padding:0px 5px;
+}
+
+.energy_output_val {
+    color: var(--yellow);
+    white-space: nowrap;
+    font-size: 1.2em;
+}

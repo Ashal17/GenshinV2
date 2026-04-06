@@ -74,6 +74,11 @@
         "values": [ 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ]
       }
     ],
+    "energy": [
+      {
+        "id": 103
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -507,7 +512,12 @@
     "const": [
       {
         "name": "Gleeful Songs",
-        "desc": "Barbara regenerates 1 Energy every 10s."
+        "desc": "Barbara regenerates 1 Energy every 10s.",
+        "energy": [
+          {
+            "id": 27
+          }
+        ]
       },
       {
         "name": "Vitality Burst",
@@ -529,7 +539,12 @@
       },
       {
         "name": "Attentiveness be My Power",
-        "desc": "Every enemy Barbara hits with her Charged Attack regenerates 1 Energy for her. A maximum of 5 energy can be regenerated in this manner with any one Charged Attack."
+        "desc": "Every enemy Barbara hits with her Charged Attack regenerates 1 Energy for her. A maximum of 5 energy can be regenerated in this manner with any one Charged Attack.",
+        "energy": [
+          {
+            "id": 28
+          }
+        ]
       },
       {
         "name": "The Purest Companionship",
@@ -617,6 +632,14 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 104
+      },
+      {
+        "id": 105
       }
     ],
     "attacks": [
@@ -947,6 +970,14 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 106
+      },
+      {
+        "id": 107
       }
     ],
     "attacks": [
@@ -1282,6 +1313,11 @@
         "values": [ 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ]
       }
     ],
+    "energy": [
+      {
+        "id": 108
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -1472,7 +1508,12 @@
       },
       {
         "name": "Frozen Skies",
-        "desc": "Chongyun regenerates 1 Energy every time he hits an enemy affected by Cryo. This effect can only occur once every 2s."
+        "desc": "Chongyun regenerates 1 Energy every time he hits an enemy affected by Cryo. This effect can only occur once every 2s.",
+        "energy": [
+          {
+            "id": 29
+          }
+        ]
       },
       {
         "name": "The True Path",
@@ -1565,6 +1606,11 @@
       {
         "stat": "burst_energy",
         "values": [ 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 109
       }
     ],
     "attacks": [
@@ -1868,6 +1914,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 110
       }
     ],
     "attacks": [
@@ -2233,6 +2284,11 @@
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
       }
     ],
+    "energy": [
+      {
+        "id": 111
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -2483,7 +2539,12 @@
       {
         "name": "Let the Wind Lead",
         "desc": "Using Dandelion Breeze will regenerate 20% of its Energy.",
-        "level": 8
+        "level": 8,
+        "energy": [
+          {
+            "id": 30
+          }
+        ]
       }
     ],
     "ascension": [
@@ -2536,6 +2597,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 112
       }
     ],
     "attacks": [
@@ -2743,7 +2809,12 @@
       },
       {
         "name": "Glacial Whirlwind",
-        "desc": "Glacial Waltz will generate 1 additional icicle, and will regenerate 15 Energy when cast."
+        "desc": "Glacial Waltz will generate 1 additional icicle, and will regenerate 15 Energy when cast.",
+        "energy": [
+          {
+            "id": 31
+          }
+        ]
       }
     ],
     "passive": [
@@ -2778,7 +2849,12 @@
       {
         "name": "Glacial Heart",
         "desc": "Enemies Frozen by Frostgnaw will drop additional Elemental Particles. Frostgnaw may only produce a maximum of 2 additional Elemental Particles per use.",
-        "level": 8
+        "level": 8,
+        "energy": [
+          {
+            "id": 113
+          }
+        ]
       }
     ],
     "ascension": [
@@ -2829,6 +2905,11 @@
       {
         "stat": "burst_energy",
         "values": [ 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 114
       }
     ],
     "attacks": [
@@ -3167,6 +3248,11 @@
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
       }
     ],
+    "energy": [
+      {
+        "id": 115
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -3365,7 +3451,7 @@
       },
       {
         "name": "Blazing Delight",
-        "desc": "While under the effects of Sparks 'n' Splash, Klee will regenerate 3 Energy for all members of the party (excluding Klee) every 3s.For 25s after Sparks 'n' Splash is used, all other party members will gain a 10% Pyro DMG Bonus, and Klee will gain a 50% Pyro DMG Bonus.Hexerei: Secret Rite<br> When Klee uses an Explosive Spark, there is a 50% chance it will not be consumed. Additionally, while Sparks 'n' Splash is active, Klee's Normal Attacks have a 40% chance on the first and second hits to consume an Explosive Spark, dealing an additional attack equivalent to Boom-Boom Strike to her opponent(s).",
+        "desc": "While under the effects of Sparks 'n' Splash, Klee will regenerate 3 Energy for all members of the party (excluding Klee) every 3s. For 25s after Sparks 'n' Splash is used, all other party members will gain a 10% Pyro DMG Bonus, and Klee will gain a 50% Pyro DMG Bonus. Hexerei: Secret Rite<br> When Klee uses an Explosive Spark, there is a 50% chance it will not be consumed. Additionally, while Sparks 'n' Splash is active, Klee's Normal Attacks have a 40% chance on the first and second hits to consume an Explosive Spark, dealing an additional attack equivalent to Boom-Boom Strike to her opponent(s).",
         "apply": [
           {
             "id": 49,
@@ -3374,6 +3460,11 @@
           },
           {
             "id": 2356
+          }
+        ],
+        "energy": [
+          {
+            "id": 32
           }
         ]
       }
@@ -3395,7 +3486,12 @@
       {
         "name": "Sparkling Burst",
         "desc": "When Klee's Charged Attack results in a CRIT, all party members gain 2 Elemental Energy.",
-        "level": 8
+        "level": 8,
+        "energy": [
+          {
+            "id": 33
+          }
+        ]
       },
       {
         "name": "Witch's Eve Rite: Sparkborne Magic",
@@ -3455,6 +3551,11 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 116
       }
     ],
     "attacks": [
@@ -3629,7 +3730,12 @@
     "const": [
       {
         "name": "Infinite Circuit",
-        "desc": "Lisa regenerates 2 Energy for every opponent hit while holding Violet Arc. A maximum of 10 Energy can be regenerated in this manner at any one time."
+        "desc": "Lisa regenerates 2 Energy for every opponent hit while holding Violet Arc. A maximum of 10 Energy can be regenerated in this manner at any one time.",
+        "energy": [
+          {
+            "id": 34
+          }
+        ]
       },
       {
         "name": "Electromagnetic Field",
@@ -3737,6 +3843,11 @@
       {
         "stat": "burst_energy",
         "values": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 117
       }
     ],
     "attacks": [
@@ -4026,6 +4137,11 @@
       {
         "stat": "burst_energy",
         "values": [ 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 118
       }
     ],
     "attacks": [
@@ -4766,7 +4882,12 @@
     "const": [
       {
         "name": "Ascetics of Frost",
-        "desc": "When the Herald of Frost hits an enemy marked by a Fortune-Preserving Talisman, Qiqi regenerates 2 Energy."
+        "desc": "When the Herald of Frost hits an enemy marked by a Fortune-Preserving Talisman, Qiqi regenerates 2 Energy.",
+        "energy": [
+          {
+            "id": 35
+          }
+        ]
       },
       {
         "name": "Frozen to the Bone",
@@ -4874,6 +4995,14 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 119
+      },
+      {
+        "id": 120
       }
     ],
     "attacks": [
@@ -5187,7 +5316,12 @@
         "apply": {
           "id": 2367,
           "auto": true
-        }
+        },
+        "energy": [
+          {
+            "id": 36
+          }
+        ]
       }
     ],
     "ascension": [
@@ -5245,6 +5379,11 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 121
       }
     ],
     "attacks": [
@@ -5558,6 +5697,14 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 122
+      },
+      {
+        "id": 123
       }
     ],
     "attacks": [
@@ -6008,6 +6155,11 @@
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
       }
     ],
+    "energy": [
+      {
+        "id": 124
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -6182,7 +6334,12 @@
       },
       {
         "name": "Reaction Force",
-        "desc": "The shockwave triggered by Wake of Earth regenerates 5 Energy for every enemy hit. A maximum of 25 Energy can be regenerated in this manner at any one time."
+        "desc": "The shockwave triggered by Wake of Earth regenerates 5 Energy for every enemy hit. A maximum of 25 Energy can be regenerated in this manner at any one time.",
+        "energy": [
+          {
+            "id": 37
+          }
+        ]
       },
       {
         "name": "Meteorite Impact",
@@ -6350,6 +6507,14 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 125
+      },
+      {
+        "id": 126
       }
     ],
     "attacks": [
@@ -6649,7 +6814,12 @@
       {
         "name": "Stormeye",
         "desc": "Regenerates 15 Energy for Venti after the effects of Wind's Grand Ode end. If an Elemental Absorption occurred, this also restores 15 Energy to all characters of that corresponding element in the party.",
-        "level": 8
+        "level": 8,
+        "energy": [
+          {
+            "id": 38
+          }
+        ]
       },
       {
         "name": "Witch's Eve Rite: Temporal Wind's Eulogy",
@@ -6716,6 +6886,11 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 127
       }
     ],
     "attacks": [
@@ -7022,6 +7197,11 @@
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
       }
     ],
+    "energy": [
+      {
+        "id": 128
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -7223,7 +7403,12 @@
       },
       {
         "name": "Hence, Call Them My Own Verses",
-        "desc": "Activating 2 of Guhua Sword: Raincutter's sword rain attacks greatly increases the DMG of the third. Xingqiu regenerates 3 Energy when sword rain attacks hit enemies."
+        "desc": "Activating 2 of Guhua Sword: Raincutter's sword rain attacks greatly increases the DMG of the third. Xingqiu regenerates 3 Energy when sword rain attacks hit enemies.",
+        "energy": [
+          {
+            "id": 39
+          }
+        ]
       }
     ],
     "passive": [
@@ -7315,6 +7500,14 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 129
+      },
+      {
+        "id": 130
       }
     ],
     "attacks": [
@@ -7509,7 +7702,12 @@
     "const": [
       {
         "name": "A Lingering Flavor",
-        "desc": "Regenerates 15 Energy for Diona after the effects of Signature Mix end."
+        "desc": "Regenerates 15 Energy for Diona after the effects of Signature Mix end.",
+        "energy": [
+          {
+            "id": 40
+          }
+        ]
       },
       {
         "name": "Shaken, Not Purred",
@@ -7626,6 +7824,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 131
       }
     ],
     "attacks": [
@@ -7914,7 +8117,12 @@
       },
       {
         "name": "Foul Legacy: Understream",
-        "desc": "When opponents affected by Riptide are defeated, Tartaglia regenerates 4 Elemental Energy."
+        "desc": "When opponents affected by Riptide are defeated, Tartaglia regenerates 4 Elemental Energy.",
+        "energy": [
+          {
+            "id": 41
+          }
+        ]
       },
       {
         "name": "Abyssal Mayhem: Vortex of Turmoil",
@@ -8017,6 +8225,11 @@
       {
         "stat": "burst_energy",
         "values": [ 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 132
       }
     ],
     "attacks": [
@@ -8315,6 +8528,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 133
       }
     ],
     "attacks": [
@@ -8634,6 +8852,11 @@
         "values": [ 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ]
       }
     ],
+    "energy": [
+      {
+        "id": 134
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -8807,10 +9030,15 @@
     "const": [
       {
         "name": "Flower of Eden",
-        "desc": "Transient Blossoms generated by Albedo's Elemental Skill Abiogenesis: Solar Isotoma regenerate 1.2 Energy for Albedo.Additionally, the use of Albedo's Elemental Skill Abiogenesis: Solar Isotoma also increases his DEF by 50% for the next 20s.",
+        "desc": "Transient Blossoms generated by Albedo's Elemental Skill Abiogenesis: Solar Isotoma regenerate 1.2 Energy for Albedo. Additionally, the use of Albedo's Elemental Skill Abiogenesis: Solar Isotoma also increases his DEF by 50% for the next 20s.",
         "apply": {
           "id": 2360
-        }
+        },
+        "energy": [
+          {
+            "id": 42
+          }
+        ]
       },
       {
         "name": "Opening of Phanerozoic",
@@ -8969,6 +9197,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 135
       }
     ],
     "attacks": [
@@ -9168,7 +9401,12 @@
         "apply": {
           "id": 141,
           "party": true
-        }
+        },
+        "energy": [
+          {
+            "id": 43
+          }
+        ]
       },
       {
         "name": "The Auspicious",
@@ -9279,6 +9517,11 @@
       {
         "stat": "burst_energy",
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 136
       }
     ],
     "attacks": [
@@ -9537,6 +9780,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 137
       }
     ],
     "attacks": [
@@ -9872,6 +10120,11 @@
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
       }
     ],
+    "energy": [
+      {
+        "id": 138
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -10075,7 +10328,12 @@
       },
       {
         "name": "Painful Grace",
-        "desc": "Ravaging Confession's CRIT Hits regenerate 5 Energy for Rosaria.<br>Can only be triggered once each time Ravaging Confession is cast."
+        "desc": "Ravaging Confession's CRIT Hits regenerate 5 Energy for Rosaria.<br>Can only be triggered once each time Ravaging Confession is cast.",
+        "energy": [
+          {
+            "id": 44
+          }
+        ]
       },
       {
         "name": "Last Rites",
@@ -10171,6 +10429,11 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 139
       }
     ],
     "attacks": [
@@ -10483,6 +10746,14 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 140
+      },
+      {
+        "id": 141
       }
     ],
     "attacks": [
@@ -10805,6 +11076,14 @@
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
       }
     ],
+    "energy": [
+      {
+        "id": 142
+      },
+      {
+        "id": 143
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -11079,7 +11358,15 @@
       },
       {
         "name": "Oozora Genpou",
-        "desc": "When Kaedehara Kazuha's Energy is lower than 45, he obtains the following effects:<br>Pressing or Holding Chihayaburu regenerates 3 or 4 Energy for Kaedehara Kazuha, respectively.<br>When gliding, Kaedehara Kazuha regenerates 2 Energy per second.."
+        "desc": "When Kaedehara Kazuha's Energy is lower than 45, he obtains the following effects:<br>Pressing or Holding Chihayaburu regenerates 3 or 4 Energy for Kaedehara Kazuha, respectively.<br>When gliding, Kaedehara Kazuha regenerates 2 Energy per second.",
+        "energy": [
+          {
+            "id": 45
+          },
+          {
+            "id": 46
+          }
+        ]
       },
       {
         "name": "Wisdom of Bansei",
@@ -11232,6 +11519,14 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 144
+      },
+      {
+        "id": 145
       }
     ],
     "attacks": [
@@ -11469,7 +11764,12 @@
       },
       {
         "name": "Skiving: New and Improved",
-        "desc": "Sayu recovers 1.2 Energy when she triggers a Swirl reaction. This effect occurs once every 2s."
+        "desc": "Sayu recovers 1.2 Energy when she triggers a Swirl reaction. This effect occurs once every 2s.",
+        "energy": [
+          {
+            "id": 47
+          }
+        ]
       },
       {
         "name": "Speed Comes First",
@@ -11574,6 +11874,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 146
       }
     ],
     "attacks": [
@@ -11860,6 +12165,11 @@
         "values": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
       }
     ],
+    "energy": [
+      {
+        "id": 150
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -12140,6 +12450,11 @@
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
       }
     ],
+    "energy": [
+      {
+        "id": 147
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -12271,7 +12586,12 @@
         "apply": {
           "id": 565,
           "party": true
-        }
+        },
+        "energy": [
+          {
+            "id": 49
+          }
+        ]
       },
       {
         "id": 2,
@@ -12300,6 +12620,11 @@
             "stat": "atk",
             "crit": true,
             "scale": [ 32.8, 35.26, 37.72, 41, 43.46, 45.92, 49.2, 52.48, 55.76, 59.04, 62.32, 65.6, 69.7, 73.8, 77.9 ]
+          }
+        ],
+        "energy": [
+          {
+            "id": 50
           }
         ]
       }
@@ -12346,7 +12671,12 @@
         "desc": "Every 2 Falling Thunder attacks triggered by Bellowing Thunder will increase the DMG dealt by the next Falling Thunder by 100%, and will restore an additional 1 Energy to the current character.",
         "apply": {
           "id": 1817
-        }
+        },
+        "energy": [
+          {
+            "id": 48
+          }
+        ]
       }
     ],
     "passive": [
@@ -12485,6 +12815,14 @@
       {
         "stat": "burst_energy",
         "values": [ 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 148
+      },
+      {
+        "id": 149
       }
     ],
     "attacks": [
@@ -12931,6 +13269,11 @@
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
       }
     ],
+    "energy": [
+      {
+        "id": 159
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -13154,7 +13497,12 @@
       {
         "name": "Decorum",
         "desc": "When Tengu Juurai: Ambush hits opponents, Kujou Sara will restore 1.2 Energy to all party members for every 100% Energy Recharge she has. This effect can be triggered once every 3s.",
-        "level": 8
+        "level": 8,
+        "energy": [
+          {
+            "id": 53
+          }
+        ]
       }
     ],
     "ascension": [
@@ -13205,6 +13553,11 @@
       {
         "stat": "burst_energy",
         "values": [ 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 160
       }
     ],
     "attacks": [
@@ -13479,6 +13832,11 @@
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
       }
     ],
+    "energy": [
+      {
+        "id": 161
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -13669,7 +14027,12 @@
       },
       {
         "name": "The Moon Overlooks the Waters",
-        "desc": "While donning the Ceremonial Garment created by Nereid's Ascension, Sangonomiya Kokomi's Normal Attack SPD is increased by 10%, and Normal Attacks that hit opponents will restore 0.8 Energy for her. This effect can occur once every 0.2s."
+        "desc": "While donning the Ceremonial Garment created by Nereid's Ascension, Sangonomiya Kokomi's Normal Attack SPD is increased by 10%, and Normal Attacks that hit opponents will restore 0.8 Energy for her. This effect can occur once every 0.2s.",
+        "energy": [
+          {
+            "id": 54
+          }
+        ]
       },
       {
         "name": "All Streams Flow to the Sea",
@@ -13768,6 +14131,11 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 162
       }
     ],
     "attacks": [
@@ -13961,7 +14329,12 @@
       },
       {
         "name": "Long-Term Planning",
-        "desc": "After using Crimson Ooyoroi, 15 Energy will be restored to Thoma."
+        "desc": "After using Crimson Ooyoroi, 15 Energy will be restored to Thoma.",
+        "energy": [
+          {
+            "id": 55
+          }
+        ]
       },
       {
         "name": "Raging Wildfire",
@@ -14056,6 +14429,11 @@
       {
         "stat": "burst_energy",
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 163
       }
     ],
     "attacks": [
@@ -14209,7 +14587,12 @@
       },
       {
         "name": "Gather 'Round, It's a Brawl!",
-        "desc": "After using Royal Descent: Behold, Itto the Evil!, each party member whose Element is Geo will decrease that skill's CD by 1.5s and restore 6 Energy to Arataki Itto. A maximum of 4.5s CD can be decreased and 18 Energy restored in this manner."
+        "desc": "After using Royal Descent: Behold, Itto the Evil!, each party member whose Element is Geo will decrease that skill's CD by 1.5s and restore 6 Energy to Arataki Itto. A maximum of 4.5s CD can be decreased and 18 Energy restored in this manner.",
+        "energy": [
+          {
+            "id": 56
+          }
+        ]
       },
       {
         "name": "Horns Lowered, Coming Through",
@@ -14322,6 +14705,11 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 164
       }
     ],
     "attacks": [
@@ -14627,6 +15015,14 @@
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
       }
     ],
+    "energy": [
+      {
+        "id": 165
+      },
+      {
+        "id": 166
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -14908,6 +15304,17 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 167
+      },
+      {
+        "id": 168
+      },
+      {
+        "id": 169
       }
     ],
     "attacks": [
@@ -15231,6 +15638,11 @@
         "values": [ 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90 ]
       }
     ],
+    "energy": [
+      {
+        "id": 170
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -15393,7 +15805,12 @@
     "const": [
       {
         "name": "Chronicles of the Kitsune Cohort",
-        "desc": "Each time Great Secret Art: Tenko Kenshin activates a Sky Kitsune Thunderbolt, Yae Miko will restore 8 Elemental Energy for herself."
+        "desc": "Each time Great Secret Art: Tenko Kenshin activates a Sky Kitsune Thunderbolt, Yae Miko will restore 8 Elemental Energy for herself.",
+        "energy": [
+          {
+            "id": 57
+          }
+        ]
       },
       {
         "name": "Fox's Mooncall",
@@ -15506,6 +15923,11 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 171
       }
     ],
     "attacks": [
@@ -15768,7 +16190,12 @@
       {
         "name": "Kamisato Art: Katsusui Senkoku",
         "desc": "If Kamisato Ayato is not on the field and his Energy is less than 40, he will regenerate 1.5 Energy for himself every second.",
-        "level": 8
+        "level": 8,
+        "energy": [
+          {
+            "id": 58
+          }
+        ]
       }
     ],
     "ascension": [
@@ -15821,6 +16248,11 @@
       {
         "stat": "burst_energy",
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 172
       }
     ],
     "attacks": [
@@ -16124,6 +16556,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 173
       }
     ],
     "attacks": [
@@ -16442,6 +16879,17 @@
         "values": [ 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ]
       }
     ],
+    "energy": [
+      {
+        "id": 174
+      },
+      {
+        "id": 175
+      },
+      {
+        "id": 176
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -16640,7 +17088,15 @@
       },
       {
         "name": "Tome of Lies",
-        "desc": "The first Windmuster Iris explosion in each Windmuster Kick will regenerate 9 Elemental Energy for Shikanoin Heizou. Every subsequent explosion in that Windmuster Kick will each regenerate an additional 1.5 Energy for Heizou.<br>One Windmuster Kick can regenerate a total of 13.5 Energy for Heizou in this manner."
+        "desc": "The first Windmuster Iris explosion in each Windmuster Kick will regenerate 9 Elemental Energy for Shikanoin Heizou. Every subsequent explosion in that Windmuster Kick will each regenerate an additional 1.5 Energy for Heizou.<br>One Windmuster Kick can regenerate a total of 13.5 Energy for Heizou in this manner.",
+        "energy": [
+          {
+            "id": 59
+          },
+          {
+            "id": 60
+          }
+        ]
       },
       {
         "name": "Secret Archive",
@@ -16729,6 +17185,11 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 177
       }
     ],
     "attacks": [
@@ -16986,7 +17447,12 @@
       {
         "name": "Compound Interest",
         "desc": "When Troubleshooter Shots from Spirit-Warding Lamp: Troubleshooter Cannon hit opponents, Dori will restore 5 Elemental Energy for every 100% Energy Recharge possessed.<br>A maximum of 15 Energy can be restored this way per Spirit- Warding Lamp: Troubleshooter Cannon.",
-        "level": 8
+        "level": 8,
+        "energy": [
+          {
+            "id": 61
+          }
+        ]
       }
     ],
     "ascension": [
@@ -17037,6 +17503,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 178
       }
     ],
     "attacks": [
@@ -17336,6 +17807,11 @@
       {
         "stat": "burst_energy",
         "values": [ 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 179
       }
     ],
     "attacks": [
@@ -17649,6 +18125,11 @@
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
       }
     ],
+    "energy": [
+      {
+        "id": 180
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -17811,7 +18292,12 @@
     "const": [
       {
         "name": "Symbiotic Creeper",
-        "desc": "After Razorgrass Blade hits an opponent, it will regenerate 3.5 Energy for the Traveler."
+        "desc": "After Razorgrass Blade hits an opponent, it will regenerate 3.5 Energy for the Traveler.",
+        "energy": [
+          {
+            "id": 62
+          }
+        ]
       },
       {
         "name": "Green Resilience",
@@ -17991,6 +18477,14 @@
       {
         "stat": "burst_energy",
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 181
+      },
+      {
+        "id": 182
       }
     ],
     "attacks": [
@@ -18225,7 +18719,12 @@
         "desc": "After the third dance step of Dance of the Seven Realms‘ Pirouette hits opponents, Nilou will gain 15 Elemental Energy, and DMG from her Dance of the Lotus: Distant Dreams, Listening Spring will be increased by 50% for 8s.",
         "apply": {
           "id": 830
-        }
+        },
+        "energy": [
+          {
+            "id": 63
+          }
+        ]
       },
       {
         "name": "Twirling Light",
@@ -18322,6 +18821,14 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 183
+      },
+      {
+        "id": 184
       }
     ],
     "attacks": [
@@ -18579,7 +19086,12 @@
       },
       {
         "name": "Austerity: Forbidding Guard",
-        "desc": "When Cyno is in the Pactsworn Pathclearer state triggered by Sacred Rite: Wolf’s Swiftness, after he triggers Electro-Charged, Overloaded, Quicken, Hyperbloom, an Electro Swirl or an Electro Crystallization reaction, he will restore 3 Elemental Energy for all nearby party members (except himself.)<br>This effect can occur 5 times within one use of Sacred Rite: Wolf’s Swiftness."
+        "desc": "When Cyno is in the Pactsworn Pathclearer state triggered by Sacred Rite: Wolf’s Swiftness, after he triggers Electro-Charged, Overloaded, Quicken, Hyperbloom, an Electro Swirl or an Electro Crystallization reaction, he will restore 3 Elemental Energy for all nearby party members (except himself.)<br>This effect can occur 5 times within one use of Sacred Rite: Wolf’s Swiftness.",
+        "energy": [
+          {
+            "id": 64
+          }
+        ]
       },
       {
         "name": "Funerary Rite: The Passing of Starlight",
@@ -18690,6 +19202,14 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 185
+      },
+      {
+        "id": 186
       }
     ],
     "attacks": [
@@ -19000,6 +19520,11 @@
         "values": [ 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ]
       }
     ],
+    "energy": [
+      {
+        "id": 187
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -19167,7 +19692,12 @@
       },
       {
         "name": "Light’s Remit",
-        "desc": "When Shooting Stars from Nights of Formal Focus strike opponents, they will each restore 1 Energy to Layla. Each Shooting Star can restore Energy to her in this manner once."
+        "desc": "When Shooting Stars from Nights of Formal Focus strike opponents, they will each restore 1 Energy to Layla. Each Shooting Star can restore Energy to her in this manner once.",
+        "energy": [
+          {
+            "id": 65
+          }
+        ]
       },
       {
         "name": "Secrets of the Night",
@@ -19279,6 +19809,11 @@
       {
         "stat": "burst_energy",
         "values": [ 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 188
       }
     ],
     "attacks": [
@@ -19576,6 +20111,11 @@
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
       }
     ],
+    "energy": [
+      {
+        "id": 189
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -19751,7 +20291,12 @@
       },
       {
         "name": "Divine Comprehension",
-        "desc": "The vortex created by Wind Realm of Nasamjnin will restore Energy to Faruzan based on the number of opponents hit: If it hits 1 opponent, it will restore 2 Energy for Faruzan. Each additional opponent hit will restore 0.5 more Energy for Faruzan.<br>A maximum of 4 Energy can be restored to her per vortex."
+        "desc": "The vortex created by Wind Realm of Nasamjnin will restore Energy to Faruzan based on the number of opponents hit: If it hits 1 opponent, it will restore 2 Energy for Faruzan. Each additional opponent hit will restore 0.5 more Energy for Faruzan.<br>A maximum of 4 Energy can be restored to her per vortex.",
+        "energy": [
+          {
+            "id": 66
+          }
+        ]
       },
       {
         "name": "Wonderland of Rumination",
@@ -19841,6 +20386,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 190
       }
     ],
     "attacks": [
@@ -20025,7 +20575,12 @@
         "level": 2,
         "apply": {
           "id": 956
-        }
+        },
+        "energy": [
+          {
+            "id": 66
+          }
+        ]
       },
       {
         "name": "Gales of Reverie",
@@ -20103,6 +20658,11 @@
       {
         "stat": "burst_energy",
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 191
       }
     ],
     "attacks": [
@@ -20434,6 +20994,11 @@
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
       }
     ],
+    "energy": [
+      {
+        "id": 192
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -20655,7 +21220,12 @@
       },
       {
         "name": "Innocent",
-        "desc": "While affected by the Adeptal Legacy state caused by Moonjade Descent, if White Jade Radish explosions hit opponents, 3 Energy will be restored to Yaoyao. This form of Energy regeneration can occur once every 0.8s."
+        "desc": "While affected by the Adeptal Legacy state caused by Moonjade Descent, if White Jade Radish explosions hit opponents, 3 Energy will be restored to Yaoyao. This form of Energy regeneration can occur once every 0.8s.",
+        "energy": [
+          {
+            "id": 67
+          }
+        ]
       },
       {
         "name": "Loyal and Kind",
@@ -20768,6 +21338,11 @@
       {
         "stat": "burst_energy",
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 193
       }
     ],
     "attacks": [
@@ -21012,7 +21587,12 @@
       },
       {
         "name": "An Oath Abiding",
-        "desc": "When Flame-Mane's Fist and Incineration Drive attacks unleashed during Leonine Bite hit opponents, they will restore 1.5 Energy for Dehya and 2.5% of her Max HP. This effect can be triggered once every 0.2s."
+        "desc": "When Flame-Mane's Fist and Incineration Drive attacks unleashed during Leonine Bite hit opponents, they will restore 1.5 Energy for Dehya and 2.5% of her Max HP. This effect can be triggered once every 0.2s.",
+        "energy": [
+          {
+            "id": 68
+          }
+        ]
       },
       {
         "name": "The Alpha Unleashed",
@@ -21088,6 +21668,11 @@
       {
         "stat": "burst_energy",
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 194
       }
     ],
     "attacks": [
@@ -21309,7 +21894,12 @@
       },
       {
         "name": "Sunfrost Encomium",
-        "desc": "When Mika's own Skyfeather Song's Eagleplume state heals party members, this will restore 3 Energy to Mika. This form of Energy restoration can occur 5 times during the Eagleplume state created by 1 use of Skyfeather Song."
+        "desc": "When Mika's own Skyfeather Song's Eagleplume state heals party members, this will restore 3 Energy to Mika. This form of Energy restoration can occur 5 times during the Eagleplume state created by 1 use of Skyfeather Song.",
+        "energy": [
+          {
+            "id": 69
+          }
+        ]
       },
       {
         "name": "Signal Arrow",
@@ -21376,6 +21966,11 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 195
       }
     ],
     "attacks": [
@@ -21695,6 +22290,11 @@
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
       }
     ],
+    "energy": [
+      {
+        "id": 196
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -21993,6 +22593,14 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 197
+      },
+      {
+        "id": 198
       }
     ],
     "attacks": [
@@ -22352,6 +22960,11 @@
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
       }
     ],
+    "energy": [
+      {
+        "id": 199
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -22689,6 +23302,11 @@
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
       }
     ],
+    "energy": [
+      {
+        "id": 200
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -23013,6 +23631,14 @@
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
       }
     ],
+    "energy": [
+      {
+        "id": 201
+      },
+      {
+        "id": 202
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -23287,7 +23913,15 @@
       },
       {
         "name": "Penguins and the Land of Plenty",
-        "desc": "Unleashing Pressurized Floe: Shattering Pressure will restore 2 Energy to Freminet. If a Pressure Level 4 Shattering Pressure is unleashed, this will restore 3 Energy."
+        "desc": "Unleashing Pressurized Floe: Shattering Pressure will restore 2 Energy to Freminet. If a Pressure Level 4 Shattering Pressure is unleashed, this will restore 3 Energy.",
+        "energy": [
+          {
+            "id": 70
+          },
+          {
+            "id": 71
+          }
+        ]
       },
       {
         "name": "Song of the Eddies and Bleached Sands",
@@ -23373,6 +24007,11 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 203
       }
     ],
     "attacks": [
@@ -23664,7 +24303,12 @@
     "const": [
       {
         "name": "Swelling Lake",
-        "desc": "Picking up a Sourcewater Droplet will restore 2 Energy to the Traveler. Requires the Passive Talent \"Spotless Waters.\""
+        "desc": "Picking up a Sourcewater Droplet will restore 2 Energy to the Traveler. Requires the Passive Talent \"Spotless Waters.\"",
+        "energy": [
+          {
+            "id": 72
+          }
+        ]
       },
       {
         "name": "Trickling Purity",
@@ -23789,6 +24433,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 204
       }
     ],
     "attacks": [
@@ -24099,6 +24748,11 @@
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
       }
     ],
+    "energy": [
+      {
+        "id": 205
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -24393,6 +25047,11 @@
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
       }
     ],
+    "energy": [
+      {
+        "id": 206
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -24637,7 +25296,12 @@
       },
       {
         "name": "\"They Know Not Life, Who Dwelt in the Netherworld Not!\"",
-        "desc": "When the Salon Members from Salon Solitaire hit an opponent, or the Singer of Many Waters restores HP to the active character, Furina will restore 4 Energy. This effect triggers once every 5s."
+        "desc": "When the Salon Members from Salon Solitaire hit an opponent, or the Singer of Many Waters restores HP to the active character, Furina will restore 4 Energy. This effect triggers once every 5s.",
+        "energy": [
+          {
+            "id": 52
+          }
+        ]
       },
       {
         "name": "\"His Name I Now Know, It Is...!\"",
@@ -24724,6 +25388,14 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 207
+      },
+      {
+        "id": 208
       }
     ],
     "attacks": [
@@ -24985,7 +25657,12 @@
         "desc": "When Still Photo: Comprehensive Confirmation hits an opponent marked by Snappy Silhouette or Focused Impression, it will deal 10% more DMG and restore 2 Energy to Charlotte. This restoration can be triggered 5 times every 20s.",
         "apply": {
           "id": 1245
-        }
+        },
+        "energy": [
+          {
+            "id": 73
+          }
+        ]
       },
       {
         "name": "A Principle of Conscience",
@@ -25079,6 +25756,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 209
       }
     ],
     "attacks": [
@@ -25276,7 +25958,12 @@
     "const": [
       {
         "name": "A Lady's Rules for Keeping a Courteous Distance",
-        "desc": "Each charge of Crystal Shrapnel consumed when Navia uses Ceremonial Crystalshot will restore 2 Energy to her and decrease the CD of As the Sunlit Sky's Singing Salute by 1s. Up to 6 Energy can be gained this way, and the CD of Ceremonial Crystalshot can be decreased by up to 3s."
+        "desc": "Each charge of Crystal Shrapnel consumed when Navia uses Ceremonial Crystalshot will restore 2 Energy to her and decrease the CD of As the Sunlit Sky's Singing Salute by 1s. Up to 6 Energy can be gained this way, and the CD of Ceremonial Crystalshot can be decreased by up to 3s.",
+        "energy": [
+          {
+            "id": 74
+          }
+        ]
       },
       {
         "name": "The President's Pursuit of Victory",
@@ -25370,6 +26057,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 210
       }
     ],
     "attacks": [
@@ -25591,7 +26283,12 @@
     "const": [
       {
         "name": "Stable Front Line's Resolve",
-        "desc": "When the active character with the \"Coordinated Tactics\" status (not including Chevreuse herself) triggers the Overloaded reaction, they will recover 6 Energy. This effect can be triggered once every 10s.You must first unlock the Passive Talent \"Vanguard's Coordinated Tactics.\""
+        "desc": "When the active character with the \"Coordinated Tactics\" status (not including Chevreuse herself) triggers the Overloaded reaction, they will recover 6 Energy. This effect can be triggered once every 10s.You must first unlock the Passive Talent \"Vanguard's Coordinated Tactics.\"",
+        "energy": [
+          {
+            "id": 75
+          }
+        ]
       },
       {
         "name": "Sniper Induced Explosion",
@@ -25716,6 +26413,11 @@
       {
         "stat": "burst_energy",
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 211
       }
     ],
     "attacks": [
@@ -26075,6 +26777,11 @@
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
       }
     ],
+    "energy": [
+      {
+        "id": 212
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -26289,7 +26996,12 @@
       },
       {
         "name": "Soar Across Mountains",
-        "desc": "When Bestial Ascent's Plunging Attack: Charmed Cloudstrider hits an opponent, it will restore 2 Energy to Gaming. This effect can be triggered once every 0.2s."
+        "desc": "When Bestial Ascent's Plunging Attack: Charmed Cloudstrider hits an opponent, it will restore 2 Energy to Gaming. This effect can be triggered once every 0.2s.",
+        "energy": [
+          {
+            "id": 76
+          }
+        ]
       },
       {
         "name": "Evil-Daunting Roar",
@@ -26360,6 +27072,11 @@
       {
         "stat": "burst_energy",
         "values": [ 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 213
       }
     ],
     "attacks": [
@@ -26635,6 +27352,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 214
       }
     ],
     "attacks": [
@@ -26919,7 +27641,12 @@
       },
       {
         "name": "\"You Shall Love and Protect Each Other Henceforth...\"",
-        "desc": "When Arlecchino successfully absorbs a Blood-Debt Directive, Balemoon Rising's CD will decrease by 2s and 15 Elemental Energy will be restored to her. This effect can occur once every 10s."
+        "desc": "When Arlecchino successfully absorbs a Blood-Debt Directive, Balemoon Rising's CD will decrease by 2s and 15 Elemental Energy will be restored to her. This effect can occur once every 10s.",
+        "energy": [
+          {
+            "id": 77
+          }
+        ]
       },
       {
         "name": "\"For Alone, We Are as Good as Dead...\"",
@@ -26993,6 +27720,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 215
       }
     ],
     "attacks": [
@@ -27342,6 +28074,11 @@
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
       }
     ],
+    "energy": [
+      {
+        "id": 216
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -27657,6 +28394,11 @@
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
       }
     ],
+    "energy": [
+      {
+        "id": 51
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -27969,6 +28711,11 @@
         "values": [ 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50 ]
       }
     ],
+    "energy": [
+      {
+        "id": 217
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -28277,6 +29024,11 @@
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
       }
     ],
+    "energy": [
+      {
+        "id": 218
+      }
+    ],
     "attacks": [
       {
         "id": 0,
@@ -28468,7 +29220,12 @@
     "const": [
       {
         "name": "Shards Are Gems Too",
-        "desc": "When Kachina mounts or dismounts Turbo Twirly, she will absorb nearby Elemental Shards created by Crystallize.Additionally, when a party member picks up such a Shard, 3 Energy will be restored to Kachina. Energy can be restored this way once every 5s."
+        "desc": "When Kachina mounts or dismounts Turbo Twirly, she will absorb nearby Elemental Shards created by Crystallize. Additionally, when a party member picks up such a Shard, 3 Energy will be restored to Kachina. Energy can be restored this way once every 5s.",
+        "energy": [
+          {
+            "id": 78
+          }
+        ]
       },
       {
         "name": "Never Leave Home Without... Turbo Twirly",
@@ -28575,6 +29332,11 @@
       {
         "stat": "burst_energy",
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 219
       }
     ],
     "attacks": [
@@ -28795,7 +29557,12 @@
         "apply": {
           "id": 2459,
           "auto": true
-        }
+        },
+        "energy": [
+          {
+            "id": 79
+          }
+        ]
       },
       {
         "name": "Howler Monkey's Tail",
@@ -28885,6 +29652,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 220
       }
     ],
     "attacks": [
@@ -29069,7 +29841,12 @@
         "apply": {
           "id": 2460,
           "auto": true
-        }
+        },
+        "energy": [
+          {
+            "id": 80
+          }
+        ]
       },
       {
         "name": "Same Style of Surfboard on Sale!",
@@ -29137,6 +29914,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 221
       }
     ],
     "attacks": [
@@ -29368,7 +30150,12 @@
           "party": true,
           "special": "chiucue_mix",
           "auto": true
-        }
+        },
+        "energy": [
+          {
+            "id": 81
+          }
+        ]
       },
       {
         "name": "Tonalpohualli's Loop",
@@ -29480,6 +30267,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 222
       }
     ],
     "attacks": [
@@ -29851,6 +30643,11 @@
             ],
             "id": 0
           }
+        ],
+        "energy": [
+          {
+            "id": 82
+          }
         ]
       },
       {
@@ -29920,6 +30717,11 @@
       {
         "stat": "burst_energy",
         "values": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 223
       }
     ],
     "attacks": [
@@ -30093,8 +30895,13 @@
       },
       {
         "name": "Aspect Catalyst",
-        "desc": "After the Elemental Skill Night's Sling's Spirit Orb hits an opponent, Ororon will gain the Aspect Sigil effect for 15s.Aspect Sigil - When a nearby active party member hits an opponent with Normal, Charged, or Plunging Attacks, that character will restore 3 Energy. If Ororon is off-field, Ororon will also restore 3 Energy. This effect can trigger once every 1s, and can trigger 3 times per duration.",
-        "level": 8
+        "desc": "After the Elemental Skill Night's Sling's Spirit Orb hits an opponent, Ororon will gain the Aspect Sigil effect for 15s. Aspect Sigil - When a nearby active party member hits an opponent with Normal, Charged, or Plunging Attacks, that character will restore 3 Energy. If Ororon is off-field, Ororon will also restore 3 Energy. This effect can trigger once every 1s, and can trigger 3 times per duration.",
+        "level": 8,
+        "energy": [
+          {
+            "id": 83
+          }
+        ]
       },
       {
         "name": "The Art of Skinchanging",
@@ -30129,7 +30936,12 @@
       },
       {
         "name": "As the Mysteries of the Night Wind",
-        "desc": "The Supersonic Oculus summoned by the Elemental Burst Dark Voices Echo rotates 25% faster.Additionally, Ororon will restore 8 Energy to himself after using Dark Voices Echo."
+        "desc": "The Supersonic Oculus summoned by the Elemental Burst Dark Voices Echo rotates 25% faster.Additionally, Ororon will restore 8 Energy to himself after using Dark Voices Echo.",
+        "energy": [
+          {
+            "id": 84
+          }
+        ]
       },
       {
         "name": "A Gift For the Soul",
@@ -30204,6 +31016,11 @@
       {
         "stat": "burst_energy",
         "values": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 224
       }
     ],
     "attacks": [
@@ -30609,7 +31426,12 @@
       },
       {
         "stat": "burst_energy",
-        "values": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 225
       }
     ],
     "attacks": [
@@ -30849,6 +31671,11 @@
             ],
             "id": 0
           }
+        ],
+        "energy": [
+          {
+            "id": 85
+          }
         ]
       },
       {
@@ -30926,6 +31753,11 @@
       {
         "stat": "burst_energy",
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 226
       }
     ],
     "attacks": [
@@ -31106,7 +31938,15 @@
       {
         "name": "Embers Unspent",
         "desc": "After the current active character inside a Blazing Threshold or Scorching Threshold triggers a Pyro-related reaction, the Traveler will regain 5 Energy. This can occur once every 12s. Additionally, when a nearby party member triggers a Nightsoul Burst, the Traveler will regain 4 Energy.",
-        "level": 8
+        "level": 8,
+        "energy": [
+          {
+            "id": 86
+          },
+          {
+            "id": 87
+          }
+        ]
       },
       {
         "name": "Foreign Starfire",
@@ -31269,6 +32109,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 227
       }
     ],
     "attacks": [
@@ -31586,6 +32431,11 @@
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
       }
     ],
+    "energy": [
+      {
+        "id": 228
+      }
+    ],
     "attacks": [
       {
         "name": "Pure Heart, Pure Dreams",
@@ -31790,7 +32640,12 @@
       },
       {
         "name": "Buds Warm Lucid Springs",
-        "desc": "Picking up a Yumemi Style Special Snack from the Elemental Burst Anraku Secret Spring Therapy will both deal DMG and heal, and will restore 5 Energy to Yumemizuki Mizuki. Energy can be restored this way 4 times per Anraku Secret Spring Therapy duration."
+        "desc": "Picking up a Yumemi Style Special Snack from the Elemental Burst Anraku Secret Spring Therapy will both deal DMG and heal, and will restore 5 Energy to Yumemizuki Mizuki. Energy can be restored this way 4 times per Anraku Secret Spring Therapy duration.",
+        "energy": [
+          {
+            "id": 88
+          }
+        ]
       },
       {
         "name": "As Setting Moon Brings Year's End",
@@ -31859,6 +32714,11 @@
       {
         "stat": "burst_energy",
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 229
       }
     ],
     "attacks": [
@@ -32121,7 +32981,12 @@
       },
       {
         "name": "Beyond the Edge of Light",
-        "desc": "Varesa will enter Apex Drive after using a Plunging Attack, regardless of whether she is in the Fiery Passion state or not.When Apex Drive is active, Varesa's interruption resistance will also further increase.Additionally, Varesa will restore 11.5 Energy when her Plunging Attack ground impact hits an opponent."
+        "desc": "Varesa will enter Apex Drive after using a Plunging Attack, regardless of whether she is in the Fiery Passion state or not.When Apex Drive is active, Varesa's interruption resistance will also further increase.Additionally, Varesa will restore 11.5 Energy when her Plunging Attack ground impact hits an opponent.",
+        "energy": [
+          {
+            "id": 89
+          }
+        ]
       },
       {
         "name": "Unbowed Resolve",
@@ -32162,7 +33027,12 @@
         "apply": {
           "id": 1905,
           "auto": true
-        }
+        },
+        "energy": [
+          {
+            "id": 90
+          }
+        ]
       }
     ],
     "ascension": [
@@ -32213,6 +33083,11 @@
       {
         "stat": "burst_energy",
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 230
       }
     ],
     "attacks": [
@@ -32397,7 +33272,12 @@
     "const": [
       {
         "name": "Starting's Never Easy",
-        "desc": "When Iansan is in combat and is in the Nightsoul's Blessing state, she will restore 15 Elemental Energy for every 6 Nightsoul points she consumes. This effect can trigger once every 18s."
+        "desc": "When Iansan is in combat and is in the Nightsoul's Blessing state, she will restore 15 Elemental Energy for every 6 Nightsoul points she consumes. This effect can trigger once every 18s.",
+        "energy": [
+          {
+            "id": 91
+          }
+        ]
       },
       {
         "name": "Laziness is the Enemy!",
@@ -32489,6 +33369,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 231
       }
     ],
     "attacks": [
@@ -32722,7 +33607,12 @@
       },
       {
         "name": "Secret Rosemary Recipe",
-        "desc": "Rehab Diet lasts 6 more seconds. While it is active, you have a chance of healing 100% extra HP and restoring 2 Energy to Escoffier when you trigger healing through Rehab Diet. This chance corresponds to Escoffier's CRIT Rate. You can trigger this effect 7 times during any one Rehab Diet's duration.You must first unlock the Passive Talent \"Better to Salivate Than Medicate.\""
+        "desc": "Rehab Diet lasts 6 more seconds. While it is active, you have a chance of healing 100% extra HP and restoring 2 Energy to Escoffier when you trigger healing through Rehab Diet. This chance corresponds to Escoffier's CRIT Rate. You can trigger this effect 7 times during any one Rehab Diet's duration.You must first unlock the Passive Talent \"Better to Salivate Than Medicate.\"",
+        "energy": [
+          {
+            "id": 92
+          }
+        ]
       },
       {
         "name": "Symphony of a Thousand Sauces",
@@ -32805,6 +33695,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 232
       }
     ],
     "attacks": [
@@ -32980,7 +33875,12 @@
     "const": [
       {
         "name": "Vitiferous Elixir's Concoction",
-        "desc": "When Supporting Fire hits an opponent, it will restore 6 Energy for Ifa. One such Energy restoration can be triggered once every 8s."
+        "desc": "When Supporting Fire hits an opponent, it will restore 6 Energy for Ifa. One such Energy restoration can be triggered once every 8s.",
+        "energy": [
+          {
+            "id": 93
+          }
+        ]
       },
       {
         "name": "Guiding Spirit of Ballistic Prayer",
@@ -33084,6 +33984,11 @@
       {
         "stat": "burst_energy",
         "values": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 233
       }
     ],
     "attacks": [
@@ -33508,6 +34413,11 @@
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
       }
     ],
+    "energy": [
+      {
+        "id": 234
+      }
+    ],
     "attacks": [
       {
         "name": "Favonius Bladework - Ritual",
@@ -33693,7 +34603,12 @@
     "const": [
       {
         "name": "Infallible Procession",
-        "desc": "Each time Dahlia gains 1 of his Elemental Burst Radiant Psalter's Benison stacks, he will regain 2.5 Elemental Energy."
+        "desc": "Each time Dahlia gains 1 of his Elemental Burst Radiant Psalter's Benison stacks, he will regain 2.5 Elemental Energy.",
+        "energy": [
+          {
+            "id": 94
+          }
+        ]
       },
       {
         "name": "Revelation of Mercy",
@@ -33781,6 +34696,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 235
       }
     ],
     "attacks": [
@@ -34027,7 +34947,12 @@
       },
       {
         "name": "The Edictless Path",
-        "desc": "When your own party members trigger Lunar-Charged reactions, recover 5 Elemental Energy. This effect can occur once every 4s."
+        "desc": "When your own party members trigger Lunar-Charged reactions, recover 5 Elemental Energy. This effect can occur once every 4s.",
+        "energy": [
+          {
+            "id": 95
+          }
+        ]
       },
       {
         "name": "Mirror's Dream Transcension",
@@ -34112,6 +35037,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 236
       }
     ],
     "attacks": [
@@ -34360,7 +35290,12 @@
       },
       {
         "name": "\"Nor Yearn for the Great Bear's Might\"",
-        "desc": "When attacks from the Frostgrove Sanctuary summoned by her Elemental Skill Runo: Dawnless Rest of Karsikko hit opponents, Lauma will regain 4 Elemental Energy. This effect can be triggered once every 5s."
+        "desc": "When attacks from the Frostgrove Sanctuary summoned by her Elemental Skill Runo: Dawnless Rest of Karsikko hit opponents, Lauma will regain 4 Elemental Energy. This effect can be triggered once every 5s.",
+        "energy": [
+          {
+            "id": 96
+          }
+        ]
       },
       {
         "name": "\"If Truth May Be Subject to Witness\"",
@@ -34462,6 +35397,11 @@
       {
         "stat": "burst_energy",
         "values": [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 237
       }
     ],
     "attacks": [
@@ -34747,7 +35687,12 @@
     "const": [
       {
         "name": "Part the Veil of Snow",
-        "desc": "The basic cooldown of the special Elemental Skill Northland Spearstorm is reduced to 4s.Additionally, when party members trigger Lunar-Charged reactions, Flins will recover 8 Elemental Energy. This effect can occur once every 5.5s."
+        "desc": "The basic cooldown of the special Elemental Skill Northland Spearstorm is reduced to 4s. Additionally, when party members trigger Lunar-Charged reactions, Flins will recover 8 Elemental Energy. This effect can occur once every 5.5s.",
+        "energy": [
+          {
+            "id": 97
+          }
+        ]
       },
       {
         "name": "The Devil's Wall",
@@ -34871,6 +35816,11 @@
       {
         "stat": "burst_energy",
         "values": [ 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 238
       }
     ],
     "attacks": [
@@ -35087,7 +36037,12 @@
       },
       {
         "name": "Butter and Cats and the Law of Energy Supply",
-        "desc": "When the Elemental Skill Musecatcher hits an opponent, it will restore 10 Elemental Energy for Aino. Energy can be restored to her in this manner once every 10s."
+        "desc": "When the Elemental Skill Musecatcher hits an opponent, it will restore 10 Elemental Energy for Aino. Energy can be restored to her in this manner once every 10s.",
+        "energy": [
+          {
+            "id": 98
+          }
+        ]
       },
       {
         "name": "Perpetual Turbine of Metal and Light",
@@ -35162,6 +36117,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 239
       }
     ],
     "attacks": [
@@ -35556,6 +36516,14 @@
       {
         "stat": "burst_energy",
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 240
+      },
+      {
+        "id": 241
       }
     ],
     "attacks": [
@@ -35993,6 +36961,11 @@
         "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
       }
     ],
+    "energy": [
+      {
+        "id": 242
+      }
+    ],
     "attacks": [
       {
         "name": "Strike While the Arrow's Hot",
@@ -36322,7 +37295,12 @@
       },
       {
         "name": "Wild Berry Amid the Dust",
-        "desc": "When a Purrsonal Coordinated Assistance Robot from the Elemental Burst Hidden Aces: Seven Tools of the Hunter undergoes an Elemental Conversion, Jahoda will recover 4 Elemental Energy."
+        "desc": "When a Purrsonal Coordinated Assistance Robot from the Elemental Burst Hidden Aces: Seven Tools of the Hunter undergoes an Elemental Conversion, Jahoda will recover 4 Elemental Energy.",
+        "energy": [
+          {
+            "id": 99
+          }
+        ]
       },
       {
         "name": "The Greatest Treasure",
@@ -36395,6 +37373,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 243
       }
     ],
     "attacks": [
@@ -36611,13 +37594,18 @@
     "const": [
       {
         "name": "Radiance Over Blossoms and Peaks",
-        "desc": "Unleashing her Elemental Skill Eternal Tides will immediately trigger an effect equivalent to the effect of Kuuvahki Interference. This effect can be triggered once every 15s.Moonsign: Ascendant GleamWhen Kuuvahki Interference is triggered, if the Lunar reaction type that has accumulated the most Gravity for Columbina is:<br> Lunar-Charged: Current active character will recover 6 Energy.<br> Lunar-Bloom: Active character's interruption resistance will be increased for 8s.<br> Lunar-Crystallize: Summons aRainsea Shield. The Rainsea Shield's DMG absorption is based on 12% of Columbina's Max HP, and it will absorb Hydro DMG with 250% effectiveness for 8s. All nearby party members' Lunar Reaction DMG is elevated by 1.5%.",
+        "desc": "Unleashing her Elemental Skill Eternal Tides will immediately trigger an effect equivalent to the effect of Kuuvahki Interference. This effect can be triggered once every 15s. Moonsign: Ascendant GleamWhen Kuuvahki Interference is triggered, if the Lunar reaction type that has accumulated the most Gravity for Columbina is:<br> Lunar-Charged: Current active character will recover 6 Energy.<br> Lunar-Bloom: Active character's interruption resistance will be increased for 8s.<br> Lunar-Crystallize: Summons aRainsea Shield. The Rainsea Shield's DMG absorption is based on 12% of Columbina's Max HP, and it will absorb Hydro DMG with 250% effectiveness for 8s. All nearby party members' Lunar Reaction DMG is elevated by 1.5%.",
         "apply": {
           "id": 2420,
           "party": true,
           "special": "const_2_3_4_5_6",
           "auto": true
-        }
+        },
+        "energy": [
+          {
+            "id": 100
+          }
+        ]
       },
       {
         "name": "Not in Lone Splendor",
@@ -36647,7 +37635,12 @@
         "desc": "When Kuuvahki Interference is triggered, 4 Elemental Energy will be restored to Columbina;Additionally, if the Lunar reaction type that accumulates the most Gravity for Columbina is Lunar-Charged, Lunar-Bloom, or Lunar-Crystallize, the current trigger of Kuuvahki Interference will increase the Lunar Reaction DMG dealt. Increase in DMG is equal to 12.5%/2.5%/12.5% of Columbina's Max HP respectively. This effect can be triggered at most once every 15s. All nearby party members' Lunar Reaction DMG is elevated by 1.5%.",
         "apply": {
           "id": 2428
-        }
+        },
+        "energy": [
+          {
+            "id": 101
+          }
+        ]
       },
       {
         "name": "Silence Tending One Lone Song",
@@ -36733,6 +37726,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 244
       }
     ],
     "attacks": [
@@ -37109,6 +38107,11 @@
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
       }
     ],
+    "energy": [
+      {
+        "id": 245
+      }
+    ],
     "attacks": [
       {
         "name": "Oathkeeper's Spear",
@@ -37302,7 +38305,12 @@
     "const": [
       {
         "name": "Vigilant Sentinel",
-        "desc": "When Illuga is on the field, he will regain 12 Elemental Energy after a Geo-related Reaction is triggered. This effect can be triggered once every 15s."
+        "desc": "When Illuga is on the field, he will regain 12 Elemental Energy after a Geo-related Reaction is triggered. This effect can be triggered once every 15s.",
+        "energy": [
+          {
+            "id": 102
+          }
+        ]
       },
       {
         "name": "Elk with Fanged Antlers",
@@ -37409,6 +38417,11 @@
       {
         "stat": "burst_energy",
         "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 246
       }
     ],
     "attacks": [
@@ -37583,7 +38596,7 @@
             "name": "Sturm und Drang 1-Hit",
             "type": "normal",
             "damage": true,
-            "vision": "anemo",
+            "vision": "physical",
             "conversion_special": true,
             "stat": "atk",
             "crit": true,
@@ -37606,7 +38619,7 @@
             "name": "Sturm und Drang 2-Hit (2/2)",
             "type": "normal",
             "damage": true,
-            "vision": "anemo",
+            "vision": "physical",
             "conversion_special": true,
             "stat": "atk",
             "crit": true,
@@ -37630,7 +38643,7 @@
             "name": "Sturm und Drang 3-Hit (2/2)",
             "type": "normal",
             "damage": true,
-            "vision": "anemo",
+            "vision": "physical",
             "conversion_special": true,
             "stat": "atk",
             "crit": true,
@@ -37665,7 +38678,7 @@
             "name": "Sturm und Drang 5-Hit (1/2)",
             "type": "normal",
             "damage": true,
-            "vision": "anemo",
+            "vision": "physical",
             "conversion_special": true,
             "stat": "atk",
             "crit": true,
@@ -37688,7 +38701,7 @@
             "name": "Sturm und Drang Charged Attack (1/2)",
             "type": "charged",
             "damage": true,
-            "vision": "anemo",
+            "vision": "physical",
             "conversion_special": true,
             "stat": "atk",
             "crit": true,
@@ -37891,6 +38904,334 @@
       {
         "name": "\"Beloved Mondstadt, Steadfast You Shall Shine\"",
         "desc": "Sturm und Drang is enhanced:<br> For a short time after unleashing the special Elemental Skill Four Winds' Ascension, Tapping on Varka's Elemental Skill or Holding his Normal Attack will not expend any uses of Four Winds' Ascension, and will perform one additional instance of the special Charged Attack, Azure Devour.<br> For a short time after performing the special Charged Attack Azure Devour, tap on Varka's Elemental Skill to unleash an additional instance of Four Winds' Ascension without expending any uses of Four Winds' Ascension.When triggering an additional special Charged Attack, Azure Devour, or unleashing an additional special Elemental Skill, Four Winds' Ascension, in this manner, the above effect cannot be triggered.Additionally, the Azure Fang's Oath effect in Ascension Talent Wind's Vanguard is enhanced: Every stack of Azure Fang's Oath will increase Varka's CRIT DMG by 20%."
+      }
+    ],
+    "ascension": [
+      {
+        "type": "item",
+        "id": "unknown_ascension"
+      },
+      {
+        "type": "group",
+        "id": "unknown_regular"
+      },
+      {
+        "type": "item",
+        "id": "unknown_speciality"
+      }
+    ]
+  },
+  "linnea": {
+    "id": 117,
+    "enka_id": 10000130,
+    "name": "Linnea",
+    "weapon": "bow",
+    "vision": "geo",
+    "rarity": 5,
+    "nation": "nodkrai",
+    "moonsign": true,
+    "stats": [
+      {
+        "stat": "hp_base",
+        "values": [ 770.0, 1998.0, 2659.0, 3978.0, 4447.0, 5117.0, 5742.0, 6419.0, 6888.0, 7570.0, 8040.0, 8730.0, 9199.0, 9895.0, 10246.5, 10598.0 ]
+      },
+      {
+        "stat": "atk_base",
+        "values": [ 11.17, 28.98, 38.56, 57.7, 64.5, 74.21, 83.28, 93.09, 99.9, 109.8, 116.6, 126.61, 133.42, 143.51, 159.65, 175.79 ]
+      },
+      {
+        "stat": "def_base",
+        "values": [ 70.6, 183.13, 243.67, 364.61, 407.62, 468.97, 526.32, 588.3, 631.31, 693.86, 736.87, 800.13, 843.14, 906.89, 939.12, 971.35 ]
+      },
+      {
+        "stat": "crit",
+        "values": [ 0.0, 0.0, 0.0, 0.0, 4.8, 4.8, 9.6, 9.6, 9.6, 9.6, 14.4, 14.4, 19.2, 19.2, 19.2, 19.2 ]
+      },
+      {
+        "stat": "burst_energy",
+        "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [
+      {
+        "id": 247
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Capture Protocol",
+        "type": "normal",
+        "damage": true,
+        "id": 0,
+        "vision": "physical",
+        "parts": [
+          {
+            "name": "1-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 59.0, 63.8, 68.6, 75.46, 80.26, 85.75, 93.3, 100.84, 108.39, 116.62, 124.85, 133.09, 141.32, 149.55, 157.78 ],
+            "id": 0
+          },
+          {
+            "name": "2-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 51.15, 55.32, 59.48, 65.43, 69.59, 74.35, 80.89, 87.43, 93.98, 101.11, 108.25, 115.39, 122.53, 129.66, 136.8 ],
+            "id": 1
+          },
+          {
+            "name": "3-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 81.63, 88.28, 94.92, 104.41, 111.06, 118.65, 129.09, 139.53, 149.97, 161.36, 172.75, 184.14, 195.54, 206.93, 218.32 ],
+            "id": 2
+          },
+          {
+            "name": "Aimed Shot",
+            "type": "charged",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 43.86, 47.43, 51.0, 56.1, 59.67, 63.75, 69.36, 74.97, 80.58, 86.7, 92.82, 98.94, 105.06, 111.18, 117.3 ],
+            "id": 3
+          },
+          {
+            "name": "Fully-Charged Aimed Shot",
+            "type": "charged",
+            "damage": true,
+            "vision": "geo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 124.0, 133.3, 142.6, 155.0, 164.3, 173.6, 186.0, 198.4, 210.8, 223.2, 235.6, 248.0, 263.5, 279.0, 294.5 ],
+            "id": 4
+          },
+          {
+            "name": "Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 56.83, 61.45, 66.08, 72.69, 77.31, 82.6, 89.87, 97.14, 104.41, 112.34, 120.27, 128.2, 136.12, 144.05, 151.98 ],
+            "id": 5
+          },
+          {
+            "name": "Low Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 113.63, 122.88, 132.13, 145.35, 154.59, 165.17, 179.7, 194.23, 208.77, 224.62, 240.48, 256.34, 272.19, 288.05, 303.9 ],
+            "id": 6
+          },
+          {
+            "name": "High Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 141.93, 153.49, 165.04, 181.54, 193.1, 206.3, 224.45, 242.61, 260.76, 280.57, 300.37, 320.18, 339.98, 359.79, 379.59 ],
+            "id": 7
+          }
+        ]
+      },
+      {
+        "name": "Countermeasure: Lumi's Battle Cry!",
+        "type": "skill",
+        "damage": true,
+        "id": 1,
+        "vision": "geo",
+        "parts": [
+          {
+            "name": "Lumi Pound-Pound Pummeler (1/2)",
+            "type": "skill",
+            "damage": true,
+            "vision": "geo",
+            "stat": "def",
+            "crit": true,
+            "scale": [ 96.0, 103.2, 110.4, 120.0, 127.2, 134.4, 144.0, 153.6, 163.2, 172.8, 182.4, 192.0, 204.0, 216.0, 228.0 ],
+            "id": 0
+          },
+          {
+            "name": "Lumi Heavy Overdrive Hammer",
+            "type": "lunarcrystalize",
+            "damage": false,
+            "vision": null,
+            "reaction": "lunarcrystalize",
+            "stat": "def",
+            "crit": true,
+            "scale": [ 100.0, 107.5, 115.0, 125.0, 132.5, 140.0, 150.0, 160.0, 170.0, 180.0, 190.0, 200.0, 212.5, 225.0, 237.5 ],
+            "id": 1
+          },
+          {
+            "name": "Lumi Million Ton Crush",
+            "type": "lunarcrystalize",
+            "damage": false,
+            "vision": null,
+            "reaction": "lunarcrystalize",
+            "stat": "def",
+            "crit": true,
+            "scale": [ 400.0, 430.0, 460.0, 500.0, 530.0, 560.0, 600.0, 640.0, 680.0, 720.0, 760.0, 800.0, 850.0, 900.0, 950.0 ],
+            "id": 2,
+            "alt": 1
+          }
+        ]
+      },
+      {
+        "name": "Memo: Survival Guide in Extreme Conditions",
+        "type": "burst",
+        "damage": true,
+        "id": 2,
+        "vision": "geo",
+        "parts": [
+          {
+            "name": "Initial Healing Amount",
+            "type": "healing",
+            "damage": false,
+            "vision": "geo",
+            "stat": "def",
+            "crit": false,
+            "scale": [ 160.0, 172.0, 184.0, 200.0, 212.0, 224.0, 240.0, 256.0, 272.0, 288.0, 304.0, 320.0, 340.0, 360.0, 380.0 ],
+            "flat": [ 770.38, 847.42, 930.89, 1020.78, 1117.09, 1219.82, 1328.98, 1444.55, 1566.54, 1694.95, 1829.79, 1971.04, 2118.72, 2272.82, 2433.33 ],
+            "id": 0
+          },
+          {
+            "name": "Continuous Healing",
+            "type": "healing",
+            "damage": false,
+            "vision": "geo",
+            "stat": "def",
+            "crit": false,
+            "scale": [ 32.0, 34.4, 36.8, 40.0, 42.4, 44.8, 48.0, 51.2, 54.4, 57.6, 60.8, 64.0, 68.0, 72.0, 76.0 ],
+            "flat": [ 154.08, 169.48, 186.18, 204.16, 223.42, 243.96, 265.8, 288.91, 313.31, 338.99, 365.96, 394.21, 423.74, 454.56, 486.67 ],
+            "id": 1
+          }
+        ]
+      }
+    ],
+    "passive": [
+      {
+        "name": "Moonsign Benediction: Habitat Survey",
+        "desc": "When a party member triggers a Hydro Crystallize reaction, it will be converted into the Lunar-Crystallize reaction, with every 100 DEF that Linnea has increasing Lunar-Crystallize's Base DMG by 0.7%, up to a maximum of 14%.Additionally, when Linnea is in the party, the party's Moonsign will increase by 1 level.",
+        "level": 0,
+        "apply": {
+          "id": 2572,
+          "party": true,
+          "auto": true
+        }
+      },
+      {
+        "name": "Field Observation Notes",
+        "desc": "When Lumi is present on the field, the Geo RES of opponents near Lumi will decrease by 15%. Moonsign: Ascendant Gleam: Linnea's Elemental Skill Countermeasure: Lumi's Battle Cry! and Elemental Burst Memo: Survival Guide in Extreme Conditions are enhanced. After summoning Lumi, the Geo RES of opponents near Lumi will be further decreased by 15%.",
+        "level": 2,
+        "apply": {
+          "id": 2573,
+          "party": true,
+          "special": "moonsign_0_2"
+        }
+      },
+      {
+        "name": "Universal Naturalist Archive",
+        "desc": "Linnea will increase the Elemental Mastery of certain characters in your party according to your current active character. Increase in Elemental Mastery is based on 5% of Linnea's DEF. If your current active character:<br> Is a Moonsign character: Increase this character's Elemental Mastery.<br> Is not a Moonsign character: Increase Linnea's own Elemental Mastery.",
+        "level": 8,
+        "apply": {
+          "id": 2575,
+          "party": true,
+          "special": "moonsign"
+        }
+      },
+      {
+        "name": "Master Adventurer",
+        "desc": "When Linnea is not in combat, the charge time of her Aimed Shot is greatly decreased, and she will shoot an Ultra Convenient Quick Arrow instead. Different effects will occur depending on the targets hit:<br> Specific animals: Ultra Convenient Quick Arrow will be transformed into a special \"Net\" that can capture the essence and form of these animals, using them as a medium to manifest the animal's physical form again. The \"Net\" can only be used for a limited number of times each week. <br> Ore veins used in forging: Linnea will dispatch Lumi, who will quickly strike at the ore marked by the Ultra Convenient Quick Arrow, then collect the dislodged ore. If Lumi is not on the field, Linnea will summon her for a short duration to help obtain the ore.The DMG dealt to opponents by Linnea's Ultra Convenient Quick Arrow is reduced to 20% of her original Charged Arrow. Additionally, after firing a certain number of Ultra Convenient Quick Arrows within a short period of time, Linnea needs to take a temporary break before she can continue using them.",
+        "level": 0
+      }
+    ],
+    "const": [
+      {
+        "name": "Provisional Classification",
+        "desc": "When unleashing Elemental Skill Countermeasure: Lumi's Battle Cry!, or when triggering Moondrift Harmony, Linnea gains 6 stacks of the Field Catalog effect for 10s. Max 18 stacks. When nearby party members deal Lunar-Crystallize Reaction DMG, consume 1 stack of Field Catalog to increase the DMG dealt. The increase in DMG is equal to 75% of Linnea's DEF. Additionally, when Lumi uses Million Ton Crush in her Ultimate Power Form, Linnea can consume up to 5 stacks of Field Catalog. Each stack will increase the DMG dealt by 150% of Linnea's DEF.",
+        "apply": [
+          {
+            "id": 2576,
+            "party": true,
+            "special": "const_6"
+          },
+          {
+            "id": 2578
+          }
+        ]
+      },
+      {
+        "name": "Tidings of Joy and Sorrow",
+        "desc": "Within 8s after triggering Moondrift Harmony, all Hydro and Geo party members have their CRIT DMG increased by 40%. Additionally, when Lumi uses Million Ton Crush in her Ultimate Power Form, the CRIT DMG of that attack increases by an additional 150%. Moonsign: Ascendant Gleam: When Lumi uses Heavy Overdrive Hammer in her Super Power Form, or when she uses Million Ton Crush in her Ultimate Power Form, an instance of Moondrift Harmony will be triggered. For this instance of Moondrift Harmony, all Hydro and Geo characters in the party will be considered to have applied their Elements in the reaction.",
+        "apply": [
+          {
+            "id": 2579,
+            "party": true,
+            "special": "hydro_geo_personal"
+          },
+          {
+            "id": 2580,
+            "auto": true
+          }
+        ]
+      },
+      {
+        "name": "Eventful Log Page",
+        "desc": "Increases the Level of Countermeasure: Lumi's Battle Cry! by 3.Maximum upgrade level is 15.",
+        "bonus": [
+          {
+            "stat": "levelskill",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "Expert Instinct",
+        "desc": "Within 5s after Moondrift Harmony is triggered, increase the DEF of Linnea and your current active character by 25% respectively. When Linnea is on field, the DEF-increasing effect can be stacked.",
+        "apply": [
+          {
+            "id": 2581,
+            "party": true
+          },
+          {
+            "id": 2582
+          }
+        ]
+      },
+      {
+        "name": "Fairyland's Farewell Gift",
+        "desc": "Elemental Burst Memo: Survival Guide in Extreme Conditions increases by 3. Maximum upgrade level is 15.",
+        "bonus": [
+          {
+            "stat": "levelburst",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "Golden Beagle's Dream",
+        "desc": "The effects of the Constellation, Provisional Classification, are enhanced: When unleashing Elemental Skill Countermeasure: Lumi's Battle Cry!, or when triggering Moondrift Harmony, Linnea will directly gain the maximum number of Field Catalog stacks. When consuming Field Catalog, consume twice the original number of stacks, such that the increase in DMG will be boosted to 150% of the original value.Moonsign: Ascendant Gleam: Lunar-Crystallize Reaction DMG dealt by nearby party members is elevated by 25%.",
+        "apply": [
+          {
+            "id": 2583,
+            "party": true,
+            "special": "moonsign_2",
+            "auto": true
+          }
+        ]
       }
     ],
     "ascension": [

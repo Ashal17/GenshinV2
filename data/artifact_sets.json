@@ -186,7 +186,10 @@
       {
         "stat": null,
         "value": "Using an Elemental Burst regenerates {{2}} Energy for all party members (excluding the wearer) every 2s for 6s. This effect cannot stack.",
-        "req": 4
+        "req": 4,
+        "energy": [
+          { "id": 6 }
+        ]
       }
     ],
     "flower": "Exile's Flower",
@@ -403,7 +406,10 @@
       {
         "stat": null,
         "value": "Gaining Energy gives {{3}} Energy to all party members who have a bow or a catalyst equipped. Can only occur once every 3s.",
-        "req": 4
+        "req": 4,
+        "energy": [
+          { "id": 7 }
+        ]
       }
     ],
     "flower": "Scholar's Bookmark",
@@ -1032,7 +1038,10 @@
         "apply": {
           "id": 547,
           "option": 0
-        }
+        },
+        "energy": [
+          { "id": 8 }
+        ]
       }
     ],
     "flower": "Entangling Bloom",
@@ -1633,7 +1642,12 @@
       {
         "stat": null,
         "value": "Regenerate {{6}} Energy when party member triggers a Nightsoul Burst.",
-        "req": 2
+        "req": 2,
+        "energy": [
+          {
+            "id": 9
+          }
+        ]
       },
       {
         "stat": null,

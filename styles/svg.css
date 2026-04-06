@@ -57,6 +57,10 @@ background: none;
     -webkit-mask-image: url(../images/svg/account-multiple-outline-share.svg);
     mask-image: url(../images/svg/account-multiple-outline-share.svg);
 }
+.svg-account-group-outline:before {
+    -webkit-mask-image: url(../images/svg/account-group-outline.svg);
+    mask-image: url(../images/svg/account-group-outline.svg);
+}
 .svg-alert-outline:before {
     -webkit-mask-image: url(../images/svg/alert-outline.svg);
     mask-image: url(../images/svg/alert-outline.svg);
@@ -241,9 +245,21 @@ background: none;
     -webkit-mask-image: url(../images/svg/star.svg);
     mask-image: url(../images/svg/star.svg);
 }
-.svg-star-four-points:before, .svg-skill:before, .svg-star-4:before {
+.svg-star-four-points:before, .svg-skill:before, .svg-star-4:before, .svg-energy:before {
     -webkit-mask-image: url(../images/svg/star-four-points.svg);
     mask-image: url(../images/svg/star-four-points.svg);
+}
+.svg-star-four-points-small:before {
+    -webkit-mask-image: url(../images/svg/star-four-points-small.svg);
+    mask-image: url(../images/svg/star-four-points-small.svg);
+}
+.star-four-points-circle:before, .svg-orb:before {
+    -webkit-mask-image: url(../images/svg/star-four-points-circle.svg);
+    mask-image: url(../images/svg/star-four-points-circle.svg);
+}
+.star-four-points-circle-outline:before, .svg-particle:before {
+    -webkit-mask-image: url(../images/svg/star-four-points-circle-outline.svg);
+    mask-image: url(../images/svg/star-four-points-circle-outline.svg);
 }
 .svg-star-plus:before {
     -webkit-mask-image: url(../images/svg/star-plus.svg);

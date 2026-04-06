@@ -28948,7 +28948,7 @@
   },
   {
     "id": 1024,
-    "name": "Jadefall’s Splendor - Refine 1",
+    "name": "Primordial Jade Regalia - Refine 1",
     "options": [
       {
         "id": 0,
@@ -28967,7 +28967,7 @@
   },
   {
     "id": 1025,
-    "name": "Jadefall’s Splendor - Refine 2",
+    "name": "Primordial Jade Regalia - Refine 2",
     "options": [
       {
         "id": 0,
@@ -28986,7 +28986,7 @@
   },
   {
     "id": 1026,
-    "name": "Jadefall’s Splendor - Refine 3",
+    "name": "Primordial Jade Regalia - Refine 3",
     "options": [
       {
         "id": 0,
@@ -29005,7 +29005,7 @@
   },
   {
     "id": 1027,
-    "name": "Jadefall’s Splendor - Refine 4",
+    "name": "Primordial Jade Regalia - Refine 4",
     "options": [
       {
         "id": 0,
@@ -29024,7 +29024,7 @@
   },
   {
     "id": 1028,
-    "name": "Jadefall’s Splendor - Refine 5",
+    "name": "Primordial Jade Regalia - Refine 5",
     "options": [
       {
         "id": 0,
@@ -70063,6 +70063,465 @@
           {
             "stat": "cryo",
             "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2562,
+    "name": "Dawn’s Salutation Returned - Personal - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "geo",
+            "value": 40
+          },
+          {
+            "stat": "lunarcrystalize",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2563,
+    "name": "Dawn’s Salutation Returned - Personal - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "geo",
+            "value": 50
+          },
+          {
+            "stat": "lunarcrystalize",
+            "value": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2564,
+    "name": "Dawn’s Salutation Returned - Personal - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "geo",
+            "value": 60
+          },
+          {
+            "stat": "lunarcrystalize",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2565,
+    "name": "Dawn’s Salutation Returned - Personal - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "geo",
+            "value": 70
+          },
+          {
+            "stat": "lunarcrystalize",
+            "value": 70
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2566,
+    "name": "Dawn’s Salutation Returned - Personal - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "geo",
+            "value": 80
+          },
+          {
+            "stat": "lunarcrystalize",
+            "value": 80
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2567,
+    "name": "Dawn’s Salutation Returned - Party - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "geo",
+            "value": 20
+          },
+          {
+            "stat": "lunarcrystalize",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2568,
+    "name": "Dawn’s Salutation Returned - Party - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "geo",
+            "value": 25
+          },
+          {
+            "stat": "lunarcrystalize",
+            "value": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2569,
+    "name": "Dawn’s Salutation Returned - Party - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "geo",
+            "value": 30
+          },
+          {
+            "stat": "lunarcrystalize",
+            "value": 30
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2570,
+    "name": "Dawn’s Salutation Returned - Party - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "geo",
+            "value": 35
+          },
+          {
+            "stat": "lunarcrystalize",
+            "value": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2571,
+    "name": "Dawn’s Salutation Returned - Party - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "geo",
+            "value": 40
+          },
+          {
+            "stat": "lunarcrystalize",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2572,
+    "name": "Moonsign Benediction: Habitat Survey",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "def",
+            "character": "linnea",
+            "target": "lunarcrystalize_base",
+            "ratio": 0.007,
+            "max": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2573,
+    "name": "Field Observation Notes",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "enemygeores",
+            "value": -15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2574,
+    "name": "Field Observation Notes - Ascendant Gleam",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "enemygeores",
+            "value": -30
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2575,
+    "name": "Universal Naturalist Archive",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "def",
+            "character": "linnea",
+            "target": "elemastery",
+            "ratio": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2576,
+    "name": "Provisional Classification",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "def",
+            "character": "linnea",
+            "ratio": 75,
+            "target_vision": "reactions",
+            "target_type": "lunarcrystalize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2577,
+    "name": "Provisional Classification - Golden Beagle's Dream",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "def",
+            "character": "linnea",
+            "ratio": 150,
+            "target_vision": "reactions",
+            "target_type": "lunarcrystalize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2578,
+    "name": "Provisional Classification - Lumi Million Ton Crush",
+    "options": [
+      {
+        "id": 0,
+        "name": "5 Stacks",
+        "bonusdmg": [
+          {
+            "source": "def",
+            "ratio": 750,
+            "target_vision": "alt",
+            "target_type": "alt1",
+            "custom_name": "Defense to Lumi Million Ton Crush"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "4 Stacks",
+        "bonusdmg": [
+          {
+            "source": "def",
+            "ratio": 600,
+            "target_vision": "alt",
+            "target_type": "alt1",
+            "custom_name": "Defense to Lumi Million Ton Crush"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "3 Stacks",
+        "bonusdmg": [
+          {
+            "source": "def",
+            "ratio": 450,
+            "target_vision": "alt",
+            "target_type": "alt1",
+            "custom_name": "Defense to Lumi Million Ton Crush"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "2 Stacks",
+        "bonusdmg": [
+          {
+            "source": "def",
+            "ratio": 300,
+            "target_vision": "alt",
+            "target_type": "alt1",
+            "custom_name": "Defense to Lumi Million Ton Crush"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "1 Stack",
+        "bonusdmg": [
+          {
+            "source": "def",
+            "ratio": 150,
+            "target_vision": "alt",
+            "target_type": "alt1",
+            "custom_name": "Defense to Lumi Million Ton Crush"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2579,
+    "name": "Tidings of Joy and Sorrow",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2580,
+    "name": "Tidings of Joy and Sorrow - Lumi Million Ton Crush",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "critdmgalt1",
+            "value": 150,
+            "custom_name": "Lumi Million Ton Crush Crit DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2581,
+    "name": "Expert Instinct - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "def%",
+            "value": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2582,
+    "name": "Expert Instinct - Personal",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "def%",
+            "value": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2583,
+    "name": "Golden Beagle's Dream",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "lunarcrystalize_elevate",
+            "value": 25
           }
         ]
       }

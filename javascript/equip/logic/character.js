@@ -88,6 +88,7 @@ function equip_character_load(party_id, character_data) {
         equip_skills_update_reset_active(party_id);
     }
     equip_skills_update_all();
+    equip_energy_update_all();
     
     equip_character_display(party_id);
     equip_control_display_all();
@@ -97,7 +98,8 @@ function equip_character_load(party_id, character_data) {
     equip_effects_display_all();
     equip_skills_display_all();
     equip_storage_display_active();
-    equip_stats_display();   
+    equip_stats_display();
+    equip_energy_display();
 
     equip_storage_save_last();
 }
@@ -110,11 +112,14 @@ function equip_character_change_simple_trigger(party_id) {
     equip_effects_update_stats_all();
     equip_stats_update_total_all();
     equip_skills_update_all();
+    equip_energy_update_all();
 
     equip_effects_display_all();
     equip_skills_display_all();
     equip_character_display(party_id);
     equip_stats_display();
+    equip_energy_display();
+
     equip_storage_save_last();
 }
 
@@ -127,6 +132,7 @@ function equip_character_change_trigger(party_id) {
     equip_stats_update_total_all();
     equip_skills_update_reset_active(party_id);
     equip_skills_update_all();
+    equip_energy_update_all();
 
     equip_effects_display_all();
     equip_skills_display_all();
@@ -134,6 +140,8 @@ function equip_character_change_trigger(party_id) {
     equip_character_display_resonance();
     equip_stats_display();
     equip_weapon_display();
+    equip_energy_display();
+
     equip_storage_save_last();
 }
 
@@ -166,6 +174,8 @@ function equip_active_character_change(party_id) {
         equip_weapon_display();
         equip_artifacts_display_all();
         equip_stats_display();
+        equip_energy_display();
+
         equip_storage_save_last();
     }
 }

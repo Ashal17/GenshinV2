@@ -349,6 +349,9 @@
           "value": "."
         }
       ],
+      "energy": [
+        { "id": 10 }
+      ],
       "ascension": [
         {
           "type": "group",
@@ -2800,6 +2803,96 @@
           "id": "unknown_regular"
         }
       ]
+    },
+    {
+      "id": 48,
+      "enka_id": 15516,
+      "name": "Golden Frostbound Oath",
+      "icon": "golden_frostbound_oath",
+      "type": "bow",
+      "rarity": 5,
+      "atk_base": 44.34,
+      "stats": [
+        {
+          "stat": "critdmg",
+          "type": "level",
+          "value": 19.2
+        },
+        {
+          "stat": "def%",
+          "type": "refine",
+          "value": [ 16.0, 20.0, 24.0, 28.0, 32.0 ]
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "When the equipping character's Elemental Skill or Lunar-Crystallize attacks hit opponents, gain the Frost Fae's Favor effect for 6s: Geo DMG inflicted by the equipping character increases by "
+        },
+        {
+          "type": "refine",
+          "value": [ 40.0, 50.0, 60.0, 70.0, 80.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ", Lunar-Crystallize Reaction DMG increases by "
+        },
+        {
+          "type": "refine",
+          "value": [ 40.0, 50.0, 60.0, 70.0, 80.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". While this effect is active, if there are Moondrifts near the equipping character, all other nearby party members will gain the Frost Fae's Mischief effect: Geo DMG dealt increases by "
+        },
+        {
+          "type": "refine",
+          "value": [ 20.0, 25.0, 30.0, 35.0, 40.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " and Lunar-Crystallize Reaction DMG increases by "
+        },
+        {
+          "type": "refine",
+          "value": [ 20.0, 25.0, 30.0, 35.0, 40.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". This effect can be triggered even when the equipping character is off-field."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2562,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        },
+        {
+          "id": 2567,
+          "party": true,
+          "noself": true,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Dawn’s Salutation Returned",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
     }
   ],
   "catalyst": [
@@ -3092,6 +3185,9 @@
           "value": "."
         }
       ],
+      "energy": [
+        { "id": 10 }
+      ],
       "ascension": [
         {
           "type": "group",
@@ -3381,6 +3477,9 @@
           "type": "text",
           "value": " HP every 2s for this duration."
         }
+      ],
+      "energy": [
+        { "id": 11 }
       ],
       "ascension": [
         {
@@ -4153,6 +4252,9 @@
           "option": 0
         }
       ],
+      "energy": [
+        { "id": 12 }
+      ],
       "ascension": [
         {
           "type": "group",
@@ -4607,6 +4709,7 @@
           "option": 0
         }
       ],
+      "energy": [ { "id": 24 } ],
       "ascension": [
         {
           "type": "group",
@@ -4621,7 +4724,7 @@
           "id": "spectral_nucleus"
         }
       ],
-      "effect_name": "Jadefall’s Splendor"
+      "effect_name": "Primordial Jade Regalia"
     },
     {
       "id": 33,
@@ -4950,6 +5053,9 @@
           "option": 0
         }
       ],
+      "energy": [
+        { "id": 13 }
+      ],
       "ascension": [
         {
           "type": "group",
@@ -5012,6 +5118,9 @@
           "option": 0,
           "party": true
         }
+      ],
+      "energy": [
+        { "id": 14 }
       ],
       "ascension": [
         {
@@ -5895,6 +6004,9 @@
           "offset": [ 0, 1, 2, 3, 4 ]
         }
       ],
+      "energy": [
+        {"id": 22}
+      ],
       "effect_name": "Ballad of the Crossroads",
       "ascension": [
         {
@@ -6120,6 +6232,9 @@
           "type": "text",
           "value": "."
         }
+      ],
+      "energy": [
+        { "id": 10 }
       ],
       "ascension": [
         {
@@ -7184,6 +7299,10 @@
           "value": "Energy every 2s for the next 6s. This effect can occur once every 10s. Can be triggered even when the character is not on the field."
         }
       ],
+      "energy": [
+        { "id": 14 },
+        { "id": 15 }
+      ],
       "ascension": [
         {
           "type": "group",
@@ -7787,6 +7906,9 @@
           "option": 0
         }
       ],
+      "energy": [
+        { "id": 16 }
+      ],
       "ascension": [
         {
           "type": "group",
@@ -8171,6 +8293,9 @@
           "option": 0,
           "offset": [ 0, 1, 2, 3, 4 ]
         }
+      ],
+      "energy": [
+        { "id": 17 }
       ],
       "effect_name": "Mind in Bloom",
       "ascension": [
@@ -8678,6 +8803,9 @@
           "type": "text",
           "value": "."
         }
+      ],
+      "energy": [
+        { "id": 10 }
       ],
       "ascension": [
         {
@@ -9366,6 +9494,14 @@
           "value": "Energy every 2s for the next 6s. This effect can occur once every 10s. Can be triggered even when the character is not on the field."
         }
       ],
+      "energy": [
+        {
+          "id": 14
+        },
+        {
+          "id": 15
+        }
+      ],
       "ascension": [
         {
           "type": "group",
@@ -9881,6 +10017,7 @@
           "value": ". This effect can be triggered once every 10s, and can occur even when the character is not on the field."
         }
       ],
+      "energy": [ {"id": 23} ],
       "ascension": [
         {
           "type": "group",
@@ -9895,7 +10032,7 @@
           "id": "spectral_nucleus"
         }
       ],
-      "effect_name": "\tTip of the Spear"
+      "effect_name": "Tip of the Spear"
     },
     {
       "id": 30,
@@ -9988,6 +10125,9 @@
           "type": "text",
           "value": " Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field."
         }
+      ],
+      "energy": [
+        {"id": 20}
       ],
       "ascension": [
         {
@@ -10117,6 +10257,9 @@
           "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
+      ],
+      "energy": [
+        { "id": 21 }
       ],
       "ascension": [
         {
@@ -10563,6 +10706,11 @@
           "offset": [ 0, 1, 2, 3, 4 ]
         }
       ],
+      "energy": [
+        {
+          "id": 18
+        }
+      ],
       "effect_name": "Mournful Tribute",
       "ascension": [
         {
@@ -10943,6 +11091,9 @@
           "type": "text",
           "value": "."
         }
+      ],
+      "energy": [
+        { "id": 10 }
       ],
       "ascension": [
         {
@@ -12060,6 +12211,11 @@
           "value": "Energy for each seed consumed."
         }
       ],
+      "energy": [
+        {
+          "id": 19
+        }
+      ],
       "ascension": [
         {
           "type": "group",
@@ -12743,6 +12899,9 @@
           "offset": [ 0, 1, 2, 3, 4 ],
           "option": 0
         }
+      ],
+      "energy": [
+        {"id": 16}
       ],
       "ascension": [
         {

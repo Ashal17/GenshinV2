@@ -3,12 +3,12 @@ window_frame_ids = [
     { "id": "frame_stats", "text": "Stats", "order": 1, "display": true },
     { "id": "frame_equipment", "text": "Equipment", "order": 2, "display": true },
     { "id": "frame_effects", "text": "Effects", "order": 3, "display": true },
-    { "id": "frame_recharge", "text": "Energy Recharge", "order": 4, "display": true },
+    { "id": "frame_energy", "text": "Energy Recharge", "order": 4, "display": true },
     { "id": "frame_skills", "text": "Skills // Storage", "order": 5, "display": true },
 ];
 
 async function equip_load_all_data() {
-    var ver = "?20260223";
+    var ver = "?20260406";
 
     data_characters = await utils_load_json("/data/characters.json" + ver);
     data_enemies = await utils_load_json("/data/enemies.json" + ver);
@@ -24,6 +24,7 @@ async function equip_load_all_data() {
     data_artifact_sets = await utils_load_json("/data/artifact_sets.json");
     data_artifact_enka_stats = await utils_load_json("/data/artifact_enka_stats.json");
     data_effects = await utils_load_json("/data/effects.json" + ver);
+    data_energy = await utils_load_json("/data/energy.json" + ver);
 
     for (var i = 0; i < data_enemies.length; i++) {
         for (var ii = 0; ii < data_enemies[i].stats.length; ii++) {
@@ -56,7 +57,7 @@ async function equip_setup_all() {
         equip_setup_ui_frame_stats();
         equip_setup_ui_frame_equipment();
         equip_setup_ui_frame_effects();
-        equip_setup_ui_frame_recharge();
+        equip_setup_ui_frame_energy();
         equip_setup_ui_frame_skills();
 
         var storage_account = await equip_account_return_storage();
@@ -502,11 +503,24 @@ function equip_setup_ui_effects(effect_type, skill_index = null) {
     return obj;
 }
 
-function equip_setup_ui_frame_recharge() {
-    var parent = document.getElementById("frame_recharge_content");
-    parent.className += " frame_recharge";
+function equip_setup_ui_frame_energy() {
+    var parent = document.getElementById("frame_energy_content");
+    parent.className += " frame_energy";
 
-    
+    parent.appendChild(equip_setup_ui_energy("input"));
+    parent.appendChild(equip_setup_ui_energy("output"));
+}
+
+function equip_setup_ui_energy(energy_window) {
+    var obj = utils_create_obj("div", "container_object container_energy");
+
+    var name_row = utils_create_obj("div", "container_namerow");
+    name_row.appendChild(utils_create_obj("p", "container_name", null, utils_capitalize(energy_window)));
+    obj.appendChild(name_row);
+
+    obj.appendChild(utils_create_obj("div", "energy_column_" + energy_window, "energy_container_" + energy_window));
+
+    return obj;
 }
 
 function equip_setup_ui_frame_skills() {
@@ -656,6 +670,7 @@ function equip_setup_user_objects(user_data = null) {
 
         char.effects = utils_object_get_value(user_data, "user_party." + i + ".effects", []);
         char.active_skills = utils_object_get_value(user_data, "user_party." + i + ".active_skills", []);
+        char.energy = utils_object_get_value(user_data, "user_party." + i + ".energy", []);
 
         user_objects.user_party.push(char);
     }
@@ -772,6 +787,15 @@ function equip_setup_output_objects() {
         char.effects.conversion_special = false;
         char.effects.character = [];
         char.effects.party = [];
+
+        char.energy = {};
+        char.energy.source = [];
+        char.energy.energy_total = 0;
+        char.energy.energy_raw = 0;
+        char.energy.energy_raw_recharge = 0;
+        char.energy.energy_required = 0;
+        char.energy.recharge_current = 0;
+        char.energy.recharge_required = 0;
 
         char.skills = {};
         char.skills.output = {};

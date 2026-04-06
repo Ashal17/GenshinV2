@@ -111,7 +111,10 @@
       },
       {
         "stat": null,
-        "value": "Superconduct, Overloaded, Electro-Charged, Quicken, Aggravate or Hyperbloom have a 100% chance to generate an Electro Elemental Particle (CD: 5s)."
+        "value": "Superconduct, Overloaded, Electro-Charged, Quicken, Aggravate or Hyperbloom have a 100% chance to generate an Electro Elemental Particle (CD: 5s).",
+        "energy": [
+          { "id": 5 }
+        ]
       }
     ]
   },
