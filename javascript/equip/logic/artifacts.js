@@ -309,7 +309,6 @@ function equip_artifacts_update(party_id, artifact_id) {
 }
 
 function equip_artifacts_update_set(party_id) {
-
     output_party[party_id].artifacts.sets = equip_artifacts_return_active_sets(user_objects.user_party[party_id].artifacts);
 }
 
@@ -357,7 +356,7 @@ function equip_artifacts_display(artifact_id) {
     main_text.innerHTML = equip_artifacts_return_main_text(current_artifact.main_stat, artifact_id);
     
     set_text.innerHTML = "&times;" + output_party[user_objects.user_active_character].artifacts.sets[current_artifact.id];
-    equip_artifacts_display_set_description(set_description, artifact, false);
+    equip_artifacts_display_set_description(set_description, artifact, output_party[user_objects.user_active_character].artifacts.sets[artifact.id]);
     if (current_artifact.id == 0) {
         set_text.className = "artifact_set_text hidden";
     } else {
@@ -385,13 +384,13 @@ function equip_artifacts_display(artifact_id) {
     }
 }
 
-function equip_artifacts_display_set_description(set_description, artifact, ignore_active_bonus=true) {
+function equip_artifacts_display_set_description(set_description, artifact, set_count=null) {
     utils_delete_children(set_description, 0);
 
     set_description.appendChild(utils_create_obj("div", "container_name", null, artifact.name));
 
-    for (var i = 0; i < artifact.set_bonus.length; i++) {
-        if (!ignore_active_bonus && artifact.set_bonus[i].req > output_party[user_objects.user_active_character].artifacts.sets[artifact.id]) {
+    for (var i = 0; i < artifact.set_bonus.length; i++) {               
+        if (set_count && artifact.set_bonus[i].req > set_count) {
             set_description.appendChild(utils_create_bonus(artifact.set_bonus[i], "inactive"));
         } else {
             set_description.appendChild(utils_create_bonus(artifact.set_bonus[i]));
@@ -806,11 +805,19 @@ function equip_artifacts_return_sub_filter_options() {
     return options;
 }
 
-function equip_artifacts_return_active_sets(artifacts) {
+function equip_artifacts_return_active_sets(artifacts, stars=false) {
     var active_sets = {};
 
     for (var i = 0; i < const_artifact_types.length; i++) {
-        utils_object_create_add_key(active_sets, artifacts[const_artifact_types[i]].id, 1);
+        if (stars) {
+            utils_object_create_key(active_sets, artifacts[const_artifact_types[i]].id, { "count": 0, "stars": [] });
+            utils_object_create_add_key(active_sets[artifacts[const_artifact_types[i]].id], "count", 1);
+            utils_array_insert_unique(active_sets[artifacts[const_artifact_types[i]].id].stars, artifacts[const_artifact_types[i]].stars);
+            
+        } else {
+            utils_object_create_add_key(active_sets, artifacts[const_artifact_types[i]].id, 1);
+        }
+        
     }
 
     return active_sets;
@@ -874,4 +881,5 @@ function equip_artifacts_storage_return_filtered_artifact(artifact_id, artifact,
         return stats;
     }
 }
+
 

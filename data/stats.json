@@ -223,11 +223,15 @@
     "type": "percent"
   },
   "critlunarcharged": {
-    "name": "Lunar-Crystallize Crit Rate",
+    "name": "Lunar-Charged Crit Rate",
     "type": "percent"
   },
   "critsuperconduct": {
     "name": "Superconduct Crit Rate",
+    "type": "percent"
+  },
+  "critstellarconduct": {
+    "name": "Stellar-conduct Crit Rate",
     "type": "percent"
   },
   "critshatter": {
@@ -383,6 +387,10 @@
   },
   "critdmgsuperconduct": {
     "name": "Superconduct Crit DMG",
+    "type": "percent"
+  },
+  "critdmgstellarconduct": {
+    "name": "Stellar-conduct Crit DMG",
     "type": "percent"
   },
   "critdmgshatter": {
@@ -753,6 +761,10 @@
     "name": "Superconduct",
     "type": "percent"
   },
+  "stellarconduct": {
+    "name": "Stellar-conduct",
+    "type": "percent"
+  },
   "shatter": {
     "name": "Shatter",
     "type": "percent"
@@ -835,6 +847,10 @@
   },
   "superconduct_base": {
     "name": "Superconduct Base DMG",
+    "type": "percent"
+  },
+  "stellarconduct_base": {
+    "name": "Stellar-conduct Base DMG",
     "type": "percent"
   },
   "shatter_base": {
@@ -921,6 +937,10 @@
     "name": "Superconduct Elevation",
     "type": "percent"
   },
+  "stellarconduct_elevate": {
+    "name": "Stellar-conduct Elevation",
+    "type": "percent"
+  },
   "shatter_elevate": {
     "name": "Shatter Elevation",
     "type": "percent"
@@ -1003,6 +1023,14 @@
   },
   "superconduct_mult": {
     "name": "Superconduct Multiplier",
+    "type": "percent"
+  },
+  "stellarconduct_mult": {
+    "name": "Stellar-conduct Multiplier",
+    "type": "percent"
+  },
+  "stellarconduct_direct_mult": {
+    "name": "Stellar-conduct Reaction Multiplier",
     "type": "percent"
   },
   "shatter_mult": {
@@ -1261,6 +1289,10 @@
   },
   "additionalhp_hp": {
     "name": "Additional Hit HP Scaling × HP",
+    "type": "percent"
+  },
+  "defignore": {
+    "name": "All Attack Defense Ignore",
     "type": "percent"
   },
   "normaldefignore": {

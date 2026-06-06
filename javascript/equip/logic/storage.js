@@ -108,6 +108,7 @@ function equip_storage_load_preferences(preferences_data = null) {
     user_preferences.storage.filter = utils_object_get_value(preferences_data, "storage.filter", false);
     user_preferences.storage.pin = utils_object_get_value(preferences_data, "storage.pin", false);
     user_preferences.storage.dps = utils_object_get_value(preferences_data, "storage.dps", false);
+    user_preferences.storage.party_detail = utils_object_get_value(preferences_data, "storage.party_detail", false);
 }
 
 function equip_storage_change_trigger(save_storage = true) {
@@ -141,8 +142,7 @@ function equip_storage_change_new(new_name) {
     equip_storage_update_set_storage(
         -1,
         new_name,
-        output_party[user_objects.user_active_character].skills.output.initial.active,
-        equip_skills_return_party_total_active(),
+        equip_skills_return_storage_damage_data(),
         user_objects,
         equip_storage_return_duration(-1)
     );
@@ -182,8 +182,7 @@ function equip_storage_change_save(index) {
     equip_storage_update_set_storage(
         index,
         storage_objects.saved_storage[index].name,
-        output_party[user_objects.user_active_character].skills.output.initial.active,
-        equip_skills_return_party_total_active(),
+        equip_skills_return_storage_damage_data(),
         user_objects,
         equip_storage_return_duration(-1)
     );
@@ -224,26 +223,16 @@ function equip_storage_change_option(option_name) {
     equip_storage_display_option_all();
     utils_preferences_change_trigger();
     equip_storage_change_trigger(false);
+    equip_storage_display_party_detail();
 }
 
-function equip_storage_update_set_storage(index, name, damage_character, damage_party, user_data, duration) {
+function equip_storage_update_set_storage(index, name, damage_data, user_data, duration) {
     var data = {};
 
     data.name = name;
     data.duration = duration;
 
-    data.damage_data = {
-        "character": {
-            "avg": damage_character.avg,
-            "ncrt": damage_character.ncrt,
-            "crt": damage_character.crt
-        },
-        "party": {
-            "avg": damage_party.avg,
-            "ncrt": damage_party.ncrt,
-            "crt": damage_party.crt
-        }       
-    }
+    data.damage_data = damage_data;
 
     data.comparison = 0;
 
@@ -270,6 +259,14 @@ function equip_storage_update_comparison(index, base_dmg) {
     var index_dmg = equip_storage_return_saved_dmg(index);
     var dmg_diff = index_dmg / base_dmg - 1;
     storage_objects.saved_storage[index].comparison = utils_number_round(dmg_diff, 4);
+}
+
+function equip_storage_display_party_detail() {
+    if (user_preferences.storage.party_detail) {
+        document.getElementById("frame_skills_content").className = "frame_window_content frame_skills frame_skills_party_detail";        
+    } else {
+        document.getElementById("frame_skills_content").className = "frame_window_content frame_skills";
+    }    
 }
 
 function equip_storage_display_header_type() {
@@ -387,17 +384,20 @@ function equip_storage_display(index) {
     obj.appendChild(utils_create_obj("div", "storage_text storage_text_name", null, storage_objects.saved_storage[index].name));
     obj.sort = storage_objects.saved_storage[index].name;
 
+    var duration = equip_storage_return_duration(index);
+
     var party_container = utils_create_obj("div", "storage_party_container");
-    if (user_preferences.storage.party) {
+    if (user_preferences.storage.party_detail) {
+        equip_storage_display_party_detail_dmg(storage_objects.saved_storage[index].damage_data, storage_objects.saved_storage[index].user_data.user_party, duration, party_container);
+    } else if (user_preferences.storage.party) {
         equip_storage_display_party(storage_objects.saved_storage[index].user_data.user_party, party_container);
     } else {
         equip_storage_display_character(storage_objects.saved_storage[index].user_data.user_party[storage_objects.saved_storage[index].user_data.user_active_character].id, party_container);
-    }
-    
+    }  
     obj.appendChild(party_container);
-    
-    var duration = equip_storage_return_duration(index);
+
     obj.appendChild(utils_create_obj("div", "storage_text storage_text_damage", null, equip_storage_display_dmg(equip_storage_return_saved_dmg(index), duration)));
+    
     obj.appendChild(equip_storage_display_comparison(index, user_preferences.storage.base));
 
     obj.appendChild(utils_create_img_button_prompt_input("timer-outline", "Set Rotation Duration", "storage_duration_" + index, "Enter Rotation Duration (seconds)", equip_storage_change_duration, index, duration, "storage_btn"));
@@ -440,32 +440,30 @@ function equip_storage_display_active_party(party_container_id) {
     var party_container = document.getElementById(party_container_id);
     utils_delete_children(party_container, 0);
 
-    if (user_preferences.storage.party) {
+    if (user_preferences.storage.party_detail) {
+        equip_storage_display_party_detail_dmg(equip_skills_return_storage_damage_data(), user_objects.user_party, equip_storage_return_duration(-1), party_container)
+    } else if (user_preferences.storage.party) {
         equip_storage_display_party(user_objects.user_party, party_container);
     } else {
         equip_storage_display_character(user_objects.user_party[user_objects.user_active_character].id, party_container)
     }
 }
 
-function equip_storage_display_party(party_list, party_container) {
-    
+function equip_storage_display_party(party_list, party_container) {    
     for (var i = 0; i < party_list.length; i++) {
         if (party_list[i].constructor == Object) {
             var char_id = party_list[i].id;
         } else {
             var char_id = party_list[i];
         }       
-        var char_img_container = utils_create_obj("div", "storage_party " + data_characters[char_id].vision);
-        char_img_container.appendChild(utils_create_img("storage_party_img", null, "/images/icons/character/" + char_id + "/char.png"));
-        party_container.appendChild(char_img_container);
+        party_container.appendChild(equip_display_party_icon(char_id));
     }
 }
 
 function equip_storage_display_character(char_id, party_container) {
     var character = data_characters[char_id];
     var vision = character.vision;
-
-    //party_container.appendChild(utils_create_img_svg(vision));    
+   
     party_container.appendChild(utils_create_obj("div", vision, null, utils_object_get_value(character, "short_name", character.name)));
 }
 
@@ -518,6 +516,39 @@ function equip_storage_display_option(option, option_detail) {
     return opt_row;
 }
 
+function equip_storage_display_party_detail_dmg(damage_data, party_list, duration, party_container) {
+    var party_detail_container = utils_create_obj("div", "storage_party_detail_container");
+
+    for (var i = 0; i < party_list.length; i++) {
+        if (party_list[i].constructor == Object) {
+            var char_id = party_list[i].id;
+
+            if (Array.isArray(damage_data.character)) {
+                var char_container = utils_create_obj("div", "storage_party_detail");
+                char_container.appendChild(equip_display_party_icon(char_id, party_list[i].constel));
+                char_container.appendChild(equip_character_storage_display_equip(party_list[i], true))
+
+                var damage = damage_data.character[i].damage[equip_storage_return_comparison_type()];
+                var share = damage_data.character[i].share[equip_storage_return_comparison_type()] * 100;
+                if (user_preferences.storage.dps) {
+                    damage = damage / duration;
+                }
+                var damage_string = utils_number_format('<span class="' + data_characters[char_id].vision + '">' + damage.toFixed(1)) + '</span> <span class="storage_text_detail">' + utils_number_format(share.toFixed(1)) + '%</span>';
+
+                char_container.appendChild(utils_create_obj("div", "storage_text", null, damage_string));
+                party_detail_container.appendChild(char_container);
+            } else {
+                party_detail_container.appendChild(equip_display_party_icon(char_id, party_list[i].constel));
+            }
+        } else {
+            party_detail_container.appendChild(equip_display_party_icon(party_list[i]));
+        }
+        
+    }
+    party_container.appendChild(party_detail_container);
+
+}
+
 function equip_storage_display_dmg(dmg_value, duration) {
 
     if (user_preferences.storage.dps) {
@@ -528,15 +559,24 @@ function equip_storage_display_dmg(dmg_value, duration) {
 }
 
 
-function equip_storage_return_saved_dmg(index) {
+function equip_storage_return_saved_dmg(index, party_id = null) {
 
-    if (user_preferences.storage.party) {
-        var party = "party";
+    if (user_preferences.storage.party && party_id === null) {
+        var damage = Number(storage_objects.saved_storage[index].damage_data.party[equip_storage_return_comparison_type()]);
     } else {
-        var party = "character";
+        if (Array.isArray(storage_objects.saved_storage[index].damage_data.character)) {
+            if (party_id === null) {
+                party_id = storage_objects.saved_storage[index].user_data.user_active_character;
+            }            
+            var damage = Number(storage_objects.saved_storage[index].damage_data.character[party_id].damage[equip_storage_return_comparison_type()]);
+        } else {
+            if (party_id === null) {
+                var damage = Number(storage_objects.saved_storage[index].damage_data.character[equip_storage_return_comparison_type()]);
+            } else {
+                var damage = 0;
+            }            
+        }
     }
-
-    var damage = Number(storage_objects.saved_storage[index].damage_data[party][equip_storage_return_comparison_type()]);
 
     if (user_preferences.storage.dps) {
         return damage / equip_storage_return_duration(index);

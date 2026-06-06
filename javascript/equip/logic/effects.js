@@ -524,6 +524,7 @@ function equip_effects_update_options_all() {
     for (var i = 0; i < const_party_size; i++) {
         equip_effects_update_options(i);
     }
+    equip_effects_update_active_options_all();
 }
 
 function equip_effects_update_options(party_id) {
@@ -694,6 +695,35 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             }
             new_effect.id = apply.id + offset_val;
             new_effect.max_id = max_id;
+            break;
+
+        case "6_6_1_set_wearer":
+            if (data_characters[user_objects.user_party[source_party].id].hexenzirkel) {
+                var vision = data_characters[user_objects.user_party[source_party].id].vision;
+                var offset_val = utils_array_lookup_index(const_character_visions, vision);
+
+                if (equip_character_return_variable_count("hexenzirkel") >= 2) {
+                    offset_val += const_character_visions.length;
+                }
+
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = apply.id + const_character_visions.length * 2 - 1;
+            }    
+
+            break;
+
+        case "6_6_1_set_active":
+            if (data_characters[user_objects.user_party[source_party].id].hexenzirkel && equip_character_return_variable_count("hexenzirkel") >= 2) {
+                var vision = data_characters[user_objects.user_party[party_id].id].vision;
+                var wearer_vision = data_characters[user_objects.user_party[source_party].id].vision;
+                if (vision != wearer_vision) {
+                    var offset_val = utils_array_lookup_index(const_character_visions, vision);
+
+                    new_effect.id = apply.id + offset_val;
+                    new_effect.max_id = apply.id + const_character_visions.length - 1;
+                }                
+            }
+
             break;
 
         case "plan_to_get_paid":
@@ -871,6 +901,27 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
 
             break;
 
+        case "hexenzirkel_0_2_personal":
+            var hexenzirkel = equip_character_return_variable_count("hexenzirkel");
+            if (hexenzirkel >= 2 && data_characters[user_objects.user_party[party_id].id].hexenzirkel) {
+                hexenzirkel = 1;
+            } else {
+                hexenzirkel = 0;
+            }
+            if (apply.offset) {
+                var offset_val = apply.offset[offset] + hexenzirkel * apply.offset.length;
+                var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length;
+            } else {
+                var offset_val = hexenzirkel;
+                var max_id = apply.id + 1;
+            }
+
+            new_effect.id = apply.id + offset_val;
+            new_effect.max_id = max_id;
+
+
+            break;
+
         case "hexenzirkel_2":
             var hexenzirkel = equip_character_return_variable_count("hexenzirkel");
             if (hexenzirkel >= 2) {
@@ -942,6 +993,85 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
 
             break;
 
+        case "polestar":
+            var polestar = equip_character_return_variable_count("polestar");
+            if (polestar > 0) {
+                if (apply.offset) {
+                    var offset_val = apply.offset[offset] + apply.offset.length;
+                    var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length;
+                } else {
+                    var offset_val = 0;
+                    var max_id = apply.id;
+                }
+
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = max_id;
+
+            }
+
+            break;
+
+        case "polestar_0":
+            var polestar = equip_character_return_variable_count("polestar");
+            var offset_val = 0;
+            if (polestar > 0) {
+                offset_val += 1;
+            }
+            new_effect.id = apply.id + offset_val;
+            new_effect.max_id = apply.id + 1;
+
+            break;
+
+        case "polestar_const_2":
+            var polestar = equip_character_return_variable_count("polestar");
+            if (polestar > 0) {
+                var const_effect_ids = equip_effects_return_const_offset(source_party, apply, offset, [2]);
+                new_effect.id = const_effect_ids.id;
+                new_effect.max_id = const_effect_ids.max_id;
+            }
+
+            break;
+
+
+        case "reckoning_for_sin":
+            
+            var offset_val = 0;
+            
+            if (user_objects.user_party[source_party].constel >= 2) {
+                offset_val += 1;
+                var polestar = equip_character_return_variable_count("polestar");
+                if (polestar > 0) {
+                    offset_val += 1;
+                }
+            }
+
+            new_effect.id = apply.id + offset_val;
+            new_effect.max_id = apply.id + 3;
+
+            break;
+
+        case "polestar_stellar_personal":
+            var polestar = equip_character_return_variable_count("polestar");
+            var radiance_personal = 0;
+            if (polestar > 0) {
+                if (data_characters[user_objects.user_party[party_id].id].radiance_stellarconduct) {
+                    radiance_personal = 1;
+                }
+
+                if (apply.offset) {
+                    var offset_val = apply.offset[offset] + radiance_personal * apply.offset.length;
+                    var max_id = apply.id + apply.offset.slice(-1)[0] + apply.offset.length;
+                } else {
+                    var offset_val = radiance_personal;
+                    var max_id = apply.id + 1;
+                }
+
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = max_id;
+            }
+            
+            break;
+
         case "phantasmal_nocturne":
             var hexenzirkel = equip_character_return_variable_count("hexenzirkel");
             if (hexenzirkel >= 2) {
@@ -983,6 +1113,22 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             var const_effect_ids = equip_effects_return_const_offset(source_party, apply, offset, [6]);
             new_effect.id = const_effect_ids.id + offset_val;
             new_effect.max_id = const_effect_ids.max_id + 2;
+
+            break;
+
+        case "guidance_of_theosis":
+            new_effect.max_id = apply.id + 14;
+            var offset_val = 0;
+
+            if (user_objects.user_party[source_party].constel >= 2) {
+                var vision = data_characters[user_objects.user_party[party_id].id].vision;
+                offset_val += 1 + utils_array_lookup_index(const_character_visions, vision);
+
+                if (user_objects.user_party[source_party].constel >= 6) {
+                    offset_val += 7;
+                }
+            } 
+            new_effect.id = apply.id + offset_val;
 
             break;
         case "blessing_of_moonlight":
@@ -1174,6 +1320,21 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
                     offset_val = 2;
                 }
 
+                new_effect.id = apply.id + offset_val;
+                new_effect.max_id = max_id;
+            }
+            break;
+
+        case "no_pyro":
+            
+            if (data_characters[user_objects.user_party[party_id].id].vision != "pyro") {
+                if (apply.offset) {
+                    var offset_val = apply.offset[offset];
+                    var max_id = apply.id + apply.offset.slice(-1)[0];
+                } else {
+                    var offset_val = 0;
+                    var max_id = apply.id;
+                }
                 new_effect.id = apply.id + offset_val;
                 new_effect.max_id = max_id;
             }
@@ -1393,6 +1554,12 @@ function equip_effects_update_special_option(effect_list, apply, offset, source,
             new_effect.max_id = const_effect_ids.max_id;
             break;
 
+        case "const_2_6":
+            var const_effect_ids = equip_effects_return_const_offset(source_party, apply, offset, [2,6]);
+            new_effect.id = const_effect_ids.id;
+            new_effect.max_id = const_effect_ids.max_id;
+            break;
+
         case "const_2_3_4_5_6":
             var const_effect_ids = equip_effects_return_const_offset(source_party, apply, offset, [2,3,4,5,6]);
             new_effect.id = const_effect_ids.id;
@@ -1456,7 +1623,6 @@ function equip_effects_update_active_options_sub(party_id, skill_index) {
         var user_effect = user_effects[i];
 
         if (!user_effect.manual) {
-
             if (user_effect.selected == false && user_effect.option == 0) {
                 user_effects.splice(i, 1);
             } else if (!equip_effects_return_selected_option(user_effect)) {

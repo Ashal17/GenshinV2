@@ -261,14 +261,19 @@ function equip_enka_return_character(uid, enka_char, custom_name = null) {
 }
 
 function equip_enka_return_level(level, asc) {
+
+    var result = 0;
+
+    for (var i = 0; i < const_level_list_enka.length; i++) {
+        if (level <= const_level_list_enka[i]) {
+            result = i;
+            break;
+        }
+    }
+
     if (asc) {
-        var result = asc * 2;
-    } else {
-        var result = 0;
-    }
-    if (level == const_level_list_values[result + 1]) {
-        result += 1;
-    }
+        result += Number(asc);
+    } 
     return result;
 }
 

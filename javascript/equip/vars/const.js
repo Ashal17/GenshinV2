@@ -8,6 +8,7 @@ const const_artifact_sub_stats_optimize_table = { "hp": "hp%", "atk": "atk%", "d
 const const_party_size = 4;
 const const_level_list = ["1", "20", "20+", "40", "40+", "50", "50+", "60", "60+", "70", "70+", "80", "80+", "90", "95", "100"];
 const const_level_list_values = [1, 20, 20, 40, 40, 50, 50, 60, 60, 70, 70, 80, 80, 90, 95, 100];
+const const_level_list_enka = [1, 20, 40, 50, 60, 70, 80, 90, 95, 100];
 const const_constel_list = [0, 1, 2, 3, 4, 5, 6];
 const const_character_visions = ["anemo", "cryo", "dendro", "electro", "geo", "hydro", "pyro"];
 const const_stats_visions = ["anemo", "cryo", "dendro", "electro", "geo", "hydro", "pyro", "physical", "healing"];
@@ -114,17 +115,17 @@ const const_display_stats_columns = [
     },
     {
         "main": "crit",
-        "stats": ["crit", "critnormal", "critcharged", "critplunge", "critskill", "critburst", "critanemo", "crithydro", "critpyro", "critcryo", "critgeo", "critelectro", "critdendro", "critphysical", "critoverload", "critburning", "critelectrocharged", "critsuperconduct", "critshatter", "critswirl", "critrupture", "critburgeon", "crithyperbloom", "critlunarcharged", "critlunarbloom"],
+        "stats": ["crit", "critnormal", "critcharged", "critplunge", "critskill", "critburst", "critanemo", "crithydro", "critpyro", "critcryo", "critgeo", "critelectro", "critdendro", "critphysical", "critoverload", "critburning", "critelectrocharged", "critsuperconduct", "critshatter", "critswirl", "critrupture", "critburgeon", "crithyperbloom", "critlunarcharged", "critlunarbloom", "critstellarconduct"],
         "hide": true
     },
     {
         "main": "critdmg",
-        "stats": ["critdmg", "critdmgnormal", "critdmgcharged", "critdmgplunge", "critdmgskill", "critdmgburst", "critdmganemo", "critdmghydro", "critdmgpyro", "critdmgcryo", "critdmggeo", "critdmgelectro", "critdmgdendro", "critdmgphysical", "critdmgoverload", "critdmgburning", "critdmgelectrocharged", "critdmgsuperconduct", "critdmgshatter", "critdmgswirl", "critdmgrupture", "critdmgburgeon", "critdmghyperbloom", "critdmglunarcharged", "critdmglunarbloom"],
+        "stats": ["critdmg", "critdmgnormal", "critdmgcharged", "critdmgplunge", "critdmgskill", "critdmgburst", "critdmganemo", "critdmghydro", "critdmgpyro", "critdmgcryo", "critdmggeo", "critdmgelectro", "critdmgdendro", "critdmgphysical", "critdmgoverload", "critdmgburning", "critdmgelectrocharged", "critdmgsuperconduct", "critdmgshatter", "critdmgswirl", "critdmgrupture", "critdmgburgeon", "critdmghyperbloom", "critdmglunarcharged", "critdmglunarbloom", "critdmgstellarconduct"],
         "hide": true
     },
     {
         "main": "elemastery",
-        "stats": ["elemastery", "melt", "vaporize", "overload", "burning", "electrocharged", "superconduct", "shatter", "swirl", "rupture", "burgeon", "hyperbloom", "lunarcharged", "lunarbloom", "lunarcrystalize", "aggravate", "spread", "crystalize", "lunarcharged_elevate", "lunarbloom_elevate", "lunarcrystalize_elevate"],
+        "stats": ["elemastery", "melt", "vaporize", "overload", "burning", "electrocharged", "superconduct", "shatter", "swirl", "rupture", "burgeon", "hyperbloom", "lunarcharged", "lunarbloom", "lunarcrystalize", "stellarconduct", "aggravate", "spread", "crystalize", "lunarcharged_elevate", "lunarbloom_elevate", "lunarcrystalize_elevate", "stellarconduct_elevate"],
         "hide": true
     },
     {
@@ -257,7 +258,10 @@ const const_storage_options = {
         "group": ["crit", "noncrit"]
     },
     "party": {
-        "name": "Entire Party"
+        "name": "Combine Party Damage"
+    },
+    "party_detail": {
+        "name": "Party Details"
     },
     "dps": {
         "name": "Compare DPS"

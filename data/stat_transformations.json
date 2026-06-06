@@ -223,7 +223,12 @@
       "mods": [ 0, 100 ]
     },
     {
-      "stat": "shatter_mult",
+      "stat": "stellarconduct_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
+      "stat": "stellarconduct_direct_mult",
       "change": "default",
       "mods": [ 0, 100 ]
     },
@@ -971,6 +976,11 @@
       "stat": "superconduct",
       "change": "add",
       "mods": [ "elemasteryadd" ]
+    },
+    {
+      "stat": "stellarconduct",
+      "change": "add",
+      "mods": [ "elemasteryaddshared" ]
     },
     {
       "stat": "shatter",

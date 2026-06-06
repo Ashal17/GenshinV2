@@ -65,6 +65,11 @@
     "multiplier": 1.5,
     "vision": "cryo"
   },
+  "stellarconduct": {
+    "name": "Stellar-conduct",
+    "type": "elemasteryaddshared",
+    "direct_multiplier": "variable"
+  },
   "electrocharged": {
     "name": "Electro-Charged",
     "type": "elemasteryadd",
@@ -117,7 +122,6 @@
   "lunarbloom": {
     "name": "Lunar-Bloom",
     "type": "elemasteryaddshared",
-    "vision": "dendro",
     "direct_multiplier": 1
   },
   "rupture": {

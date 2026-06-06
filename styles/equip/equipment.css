@@ -29,13 +29,21 @@
     grid-template-columns: repeat(auto-fill, 100px);
 }
 
-    .equipment_icon {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
+.equipment_icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+    .equipment_icon .equipment_icon_level {
+        position: absolute;
+        right: 2px;
+        bottom: 0px;
+        font-size:0.8rem;
+        text-shadow: 1px 1px 0px var(--black), 1px -1px 0px var(--black), -1px 1px 0px var(--black), -1px -1px 0px var(--black);
     }
 
 .frame_equipment .container_object .equipment_icon {
@@ -79,7 +87,7 @@
         max-width: calc(100% - 6px);
     }
 
-.container_object .equipment_img:hover, .prompt_select_options .equipment_img:hover {
+.container_object:not(.container_skills_storage) .equipment_img:hover, .prompt_select_options .equipment_img:hover {
     box-shadow: 0px 0px 5px 5px var(--orange-bg-glow) inset;
 }
 
@@ -91,7 +99,7 @@
 
     .equipment_stats .tooltip_trigger {
         padding: 2px;
-        font-size: 0.9em;
+        font-size: 0.9rem;
         text-overflow:ellipsis;
         color:var(--yellow);
     }
@@ -132,7 +140,7 @@
 }
 
     .artifact_stats .icon_selects_text {
-        font-size: 0.9em;
+        font-size: 0.9rem;
     }
 
 .artifact_sub_line .icon_selects_text span {
@@ -143,11 +151,11 @@
 }
 
 .artifact_stats .elemastery .icon_selects_text {
-    font-size: 0.75em;
+    font-size: 0.75rem;
 }
 
 .artifact_stats .recharge .icon_selects_text {
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 .artifact_stars .icon_selects_text {
@@ -194,7 +202,7 @@
     }
 
     .artifact_sub_rel .icon_selects_text {
-        font-size: 0.8em;
+        font-size: 0.8rem;
     }
 
 .artifact_sub_line .prompt_input_simple {
@@ -208,7 +216,7 @@
     align-items: center;
     justify-content: center;
     width: 25px;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 .artifact_stats .left {
@@ -663,7 +671,7 @@
         }
 
     .weapon_effect {
-        font-size: 0.8em;
+        font-size: 0.8rem;
         padding: 2px;
     }
 

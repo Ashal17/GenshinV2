@@ -110,6 +110,29 @@ function equip_skills_update_verify_active(party_id) {
             }
         } else if (active_skills[i].attack_type == "reaction") {
             if (!output_party[party_id].skills.output.initial.reactions.hasOwnProperty(active_skills[i].attack_id)) {
+                utils_log_debug("Removing active reaction: " + active_skills[i].attack_id)
+                active_skills.splice(i, 1);
+            }
+        } else if (active_skills[i].attack_type.startsWith("shared")) {
+            var active = false;
+            var split_attack_type = active_skills[i].attack_type.split(".");
+            var character_id = split_attack_type[1];
+            var shared_party_id = equip_character_return_party_id_by_name(character_id);
+            if (shared_party_id > -1) {
+                var skill_type = split_attack_type[2];
+                if (skill_type == "passive" || skill_type == "const") {
+                    var skill_id = parseInt(split_attack_type[1]);
+                    if (skill_type == "passive" && user_objects.user_party[shared_party_id].level >= character.passive[skill_id].level) {
+                        active = true;
+                    } else if (skill_type == "const" && user_objects.user_party[shared_party_id].constel > skill_id) {
+                        active = true;
+                    }
+                } else {
+                    active = true;
+                }
+            }
+            if (!active) {
+                utils_log_debug("Removing active shared skill: " + active_skills[i].attack_type)
                 active_skills.splice(i, 1);
             }
         }
@@ -250,17 +273,19 @@ function equip_skills_update_character(party_id) {
     var current_character = data_characters[user_objects.user_party[party_id].id];
 
     output_party[party_id].skills.output.initial.attacks = equip_skills_return_character_attacks(current_character.attacks, party_id, "attacks", null, null);
-    output_party[party_id].skills.output.initial.passive = equip_skills_return_character_skills(current_character.passive, party_id, "passive", null, null);
-    output_party[party_id].skills.output.initial.const = equip_skills_return_character_skills(current_character.const, party_id, "const", null, null);
-    output_party[party_id].skills.output.initial.other = equip_skills_return_character_attacks(const_skills_other, party_id, "other", null, null)
+    output_party[party_id].skills.output.initial.passive = equip_skills_return_character_skills(current_character.passive, party_id, "passive", "attacks", null, null);
+    output_party[party_id].skills.output.initial.const = equip_skills_return_character_skills(current_character.const, party_id, "const", "attacks", null, null);
+    output_party[party_id].skills.output.initial.other = equip_skills_return_character_attacks(const_skills_other, party_id, "other", null, null);
+    output_party[party_id].skills.output.initial.shared = equip_skills_return_character_shared(party_id, null, null);
 
     for (var i = 0; i < output_party[party_id].artifacts.optimize_stats.length; i++) {
         var optimize_char = output_party[party_id].artifacts.optimize_stats[i];
         for (var ii = 0; ii < optimize_char.length; ii++) {
             output_party[party_id].skills.output.optimize[i][optimize_char[ii]].attacks = equip_skills_return_character_attacks(current_character.attacks, party_id, "attacks", optimize_char[ii], i);
-            output_party[party_id].skills.output.optimize[i][optimize_char[ii]].passive = equip_skills_return_character_skills(current_character.passive, party_id, "passive", optimize_char[ii], i);
-            output_party[party_id].skills.output.optimize[i][optimize_char[ii]].const = equip_skills_return_character_skills(current_character.const, party_id, "const", optimize_char[ii], i);
-            output_party[party_id].skills.output.optimize[i][optimize_char[ii]].other = equip_skills_return_character_attacks(const_skills_other, party_id, "other", optimize_char[ii], i)
+            output_party[party_id].skills.output.optimize[i][optimize_char[ii]].passive = equip_skills_return_character_skills(current_character.passive, party_id, "passive", "attacks", optimize_char[ii], i);
+            output_party[party_id].skills.output.optimize[i][optimize_char[ii]].const = equip_skills_return_character_skills(current_character.const, party_id, "const", "attacks", optimize_char[ii], i);
+            output_party[party_id].skills.output.optimize[i][optimize_char[ii]].other = equip_skills_return_character_attacks(const_skills_other, party_id, "other", optimize_char[ii], i);
+            output_party[party_id].skills.output.optimize[i][optimize_char[ii]].shared = equip_skills_return_character_shared(party_id, optimize_char[ii], i);
         }
     }
 }
@@ -327,6 +352,13 @@ function equip_skills_display_permanent_all() {
             parent.appendChild(permanent_attack_obj);
         }        
     }     
+
+    for (var i = 0; i < const_party_size; i++) {
+        var permanent_shared_obj = equip_skills_display_permanent_shared(i);
+        if (permanent_shared_obj) {
+            parent.appendChild(permanent_shared_obj);
+        }
+    }
 
     for (var i = 0; i < character.passive.length; i++) {
         var active = false;
@@ -427,31 +459,79 @@ function equip_skills_display_permanent(passive, passive_type, id, active) {
     
     if (passive.attacks) {
         var attacks = utils_create_obj("div", "skills_attack");
-
         for (var i = 0; i < passive.attacks.length; i++) {
-            if (passive.attacks[i].parts) {
-                for (var ii = 0; ii < passive.attacks[i].parts.length; ii++) {
-                    attacks.appendChild(equip_skills_display_permanent_attack_part(passive.attacks[i].parts[ii], output_party[user_objects.user_active_character].skills.output.initial[passive_type][id][i][ii], active, false));
-                }
-            }            
+            var att_part_objects = equip_skills_display_permanent_attack_part_all(passive.attacks[i], output_party[user_objects.user_active_character].skills.output.initial[passive_type][id][i], active, false);
+
+            for (var ii = 0; ii < att_part_objects.length; ii++) {
+                attacks.appendChild(att_part_objects[ii]);
+            }
         }
+        
+
         obj.appendChild(attacks);
     }
 
     return obj
 }
 
-function equip_skills_display_permanent_attack(attack, output_attack, hide_empty=false) {
+function equip_skills_display_permanent_shared(source_party_id) {
+    var character_id = user_objects.user_party[source_party_id].id;
+    var character_data = data_characters[user_objects.user_party[source_party_id].id];
+
     var att_part_objects = [];
-    if (attack.parts) {
-        for (var i = 0; i < attack.parts.length; i++) {
-            var att_part_obj = equip_skills_display_permanent_attack_part(attack.parts[i], output_attack[i], true, hide_empty);
-            if (att_part_obj) {
-                att_part_objects.push(att_part_obj);
-            }
-            
+    if (character_data.shared_attacks) {
+        for (var i = 0; i < character_data.shared_attacks.length; i++) {
+            var att_part_shared = equip_skills_display_permanent_attack_part_all(character_data.shared_attacks[i], output_party[user_objects.user_active_character].skills.output.initial.shared[character_id].shared_attacks[i], true, false);
+            att_part_objects.push(... att_part_shared);
         }
     }
+
+    for (var i = 0; i < character_data.passive.length; i++) {
+        var active = false;
+        if (user_objects.user_party[source_party_id].level >= character_data.passive[i].level) {
+            active = true;
+        }
+        if (character_data.passive[i].shared_attacks) {
+            for (var ii = 0; ii < character_data.passive[i].shared_attacks.length; ii++) {
+                var att_part_shared = equip_skills_display_permanent_attack_part_all(character_data.passive[i].shared_attacks[ii], output_party[user_objects.user_active_character].skills.output.initial.shared[character_id].passive[i][ii], active, false);
+                att_part_objects.push(...att_part_shared);
+            }
+        }
+    }
+
+    for (var i = 0; i < character_data.const.length; i++) {
+        var active = false;
+        if (user_objects.user_party[source_party_id].constel > i) {
+            active = true;
+        }
+        if (character_data.const[i].shared_attacks) {
+            for (var ii = 0; ii < character_data.const[i].shared_attacks.length; ii++) {
+                var att_part_shared = equip_skills_display_permanent_attack_part_all(character_data.const[i].shared_attacks[ii], output_party[user_objects.user_active_character].skills.output.initial.shared[character_id].const[i][ii], active, false);
+                att_part_objects.push(...att_part_shared);
+            }
+        }
+    }
+
+    if (att_part_objects.length > 0) {
+        var obj = utils_create_obj("div", "skills_row_permanent");
+        obj.appendChild(equip_skills_display_attack_name(character_data.name + "' Shared Attacks"));
+
+        var att_obj = utils_create_obj("div", "skills_attack");
+
+        for (var i = 0; i < att_part_objects.length; i++) {
+            att_obj.appendChild(att_part_objects[i]);
+        }
+
+        obj.appendChild(att_obj);
+        return obj;
+    } else {
+        return null;
+    }
+}
+
+function equip_skills_display_permanent_attack(attack, output_attack, hide_empty = false) {
+
+    var att_part_objects = equip_skills_display_permanent_attack_part_all(attack, output_attack, true, hide_empty);
 
     if (att_part_objects.length > 0 || !hide_empty) {
         var obj = utils_create_obj("div", "skills_row_permanent");
@@ -470,6 +550,19 @@ function equip_skills_display_permanent_attack(attack, output_attack, hide_empty
     }
 }
 
+function equip_skills_display_permanent_attack_part_all(attack, output_attack, active, hide_empty) {
+    var att_part_objects = [];
+    if (attack.parts) {
+        for (var i = 0; i < attack.parts.length; i++) {
+            var att_part_obj = equip_skills_display_permanent_attack_part(attack.parts[i], output_attack[i], active, hide_empty);
+            if (att_part_obj) {
+                att_part_objects.push(att_part_obj);
+            }
+        }
+    }
+    return att_part_objects;
+}
+
 function equip_skills_display_permanent_attack_part(part, output_part, active, hide_empty=false) {
     
     var part_dmg_objects = equip_skills_display_attack_part_value(part, output_part, false, 1, false);
@@ -478,11 +571,8 @@ function equip_skills_display_permanent_attack_part(part, output_part, active, h
         return null;
     }
 
-    if (part.reaction) {
-        var vision = data_reactions[part.reaction].vision;
-    } else {
-        var vision = equip_skills_return_part_vision(part, user_objects.user_active_character);
-    }
+    var vision = equip_skills_return_part_vision(part, user_objects.user_active_character);
+    
 
     var obj = utils_create_obj("div", "skills_part " + vision);
 
@@ -657,7 +747,8 @@ function equip_skills_display_active_all() {
         "passive": [],
         "const": [],
         "reaction": [],
-        "other":[]
+        "other": [],
+        "shared": []
     };
 
     for (var i = 0; i < active_skills.length; i++) {
@@ -705,11 +796,7 @@ function equip_skills_display_active_attack(active_skill, index) {
     if (part_objects) {
         var part = part_objects.part;
 
-        if (part.reaction) {
-            var vision = data_reactions[part.reaction].vision;
-        } else {
-            var vision = equip_skills_return_part_vision(part, user_objects.user_active_character, index);
-        }
+        var vision = equip_skills_return_part_vision(part, user_objects.user_active_character, index);
 
         var obj = utils_create_obj("div", "skills_part " + vision);
 
@@ -827,23 +914,15 @@ function equip_skills_display_active_reaction(active_reaction, index) {
 
 function equip_skills_return_attack_part_objects_simple(party_id, active_skill) {
 
-    var character = data_characters[user_objects.user_party[party_id].id];
+    var attack_object = equip_skill_return_attack_object(data_characters[user_objects.user_party[party_id].id], active_skill.attack_type);
 
-    if (active_skill.attack_type == "attacks") {
-        var character_attacks = utils_object_get_value(character, active_skill.attack_type, null);
-    } else if (active_skill.attack_type == "other") {
-        var character_attacks = const_skills_other;
-    } else {
-        var character_attacks = utils_object_get_value(character, active_skill.attack_type + ".attacks", null);
-    }
-
-    if (character_attacks) {
-        var attack_index = utils_array_lookup_parameter(character_attacks, "id", active_skill.attack_id);
+    if (attack_object) {
+        var attack_index = utils_array_lookup_parameter(attack_object, "id", active_skill.attack_id);
         if (attack_index > -1) {
-            var part_index = utils_array_lookup_parameter(character_attacks[attack_index].parts, "id", active_skill.part_id);
+            var part_index = utils_array_lookup_parameter(attack_object[attack_index].parts, "id", active_skill.part_id);
             return {
-                "part": character_attacks[attack_index].parts[part_index],
-                "attack_name": character_attacks[attack_index].name,
+                "part": attack_object[attack_index].parts[part_index],
+                "attack_name": attack_object[attack_index].name,
                 "attack_type": active_skill.attack_type,
                 "attack_index": attack_index,
                 "part_index": part_index
@@ -901,14 +980,29 @@ function equip_skills_return_effects_output_dmg(party_id, index, artifact_stat =
     }
 }
 
-function equip_skills_return_character_skills(skills, party_id, skill_type, artifact_stat = null, artifact_stat_party = null) {
+function equip_skills_return_character_shared(party_id, artifact_stat = null, artifact_stat_party = null) {
+    var result_shared = {};
+
+    for (var i = 0; i < const_party_size; i++) {
+        var character_id = user_objects.user_party[i].id;
+        var character_data = data_characters[character_id];
+        var character_shared = structuredClone(default_skills_shared);
+        character_shared.shared_attacks = equip_skills_return_character_attacks(character_data.shared_attacks, party_id, "shared." + character_id + ".shared_attacks", artifact_stat, artifact_stat_party);
+        character_shared.passive = equip_skills_return_character_skills(character_data.passive, party_id, "shared." + character_id + ".passive", "shared_attacks", artifact_stat, artifact_stat_party);
+        character_shared.const = equip_skills_return_character_skills(character_data.const, party_id, "shared." + character_id + ".const", "shared_attacks", artifact_stat, artifact_stat_party);;
+        result_shared[character_id] = character_shared;
+    }
+
+    return result_shared;
+}
+
+function equip_skills_return_character_skills(skills, party_id, skill_type, attack_type, artifact_stat = null, artifact_stat_party = null) {
     var result_skills = [];
 
     for (var i = 0; i < skills.length; i++) {
         var skill = skills[i];
-        if (skill.attacks) {
-            var attack_type = skill_type + "." + i;
-            var skill_attacks = equip_skills_return_character_attacks(skill.attacks, party_id, attack_type, artifact_stat, artifact_stat_party);
+        if (skill[attack_type]) {
+            var skill_attacks = equip_skills_return_character_attacks(skill[attack_type], party_id, skill_type + "." + i, artifact_stat, artifact_stat_party);
             result_skills.push(skill_attacks);
         } else {
             result_skills.push(null);
@@ -919,9 +1013,11 @@ function equip_skills_return_character_skills(skills, party_id, skill_type, arti
 function equip_skills_return_character_attacks(attacks, party_id, attack_type, artifact_stat = null, artifact_stat_party = null) {
     var result_attacks = [];
 
-    for (var i = 0; i < attacks.length; i++) {
-        result_attacks.push(equip_skills_return_damage(party_id, attacks[i], attack_type, artifact_stat, artifact_stat_party));
-    }
+    if (attacks) {
+        for (var i = 0; i < attacks.length; i++) {
+            result_attacks.push(equip_skills_return_damage(party_id, attacks[i], attack_type, artifact_stat, artifact_stat_party));
+        }
+    }    
     return result_attacks;
 }
 
@@ -929,8 +1025,7 @@ function equip_skills_return_damage(party_id, attack, attack_type, artifact_stat
 
     var result = [];
 
-    var level = equip_skills_return_skill_level(party_id, attack.type, null, artifact_stat, artifact_stat_party);
-    var enemy_defense = equip_skills_return_enemy_defense(party_id, null, artifact_stat, artifact_stat_party);
+    var level = equip_skills_return_skill_attack_level(party_id, attack_type, attack.id, null, artifact_stat, artifact_stat_party);
 
     for (var i = 0; i < attack.parts.length; i++) {
         var part = attack.parts[i];
@@ -946,7 +1041,7 @@ function equip_skills_return_damage(party_id, attack, attack_type, artifact_stat
         
         
         if (part.damage && !part.reaction) {
-            var defense = enemy_defense;
+            var defense = equip_skills_return_enemy_defense(party_id, part, null, artifact_stat, artifact_stat_party);;
         } else {
             var defense = 1;
         }
@@ -997,7 +1092,9 @@ function equip_skills_return_basic_damage(party_id, part, level, skill_index = n
 
     if (part.alt) {
         result *= output_stats["alt" + part.alt + "_mult"] / 100;
-    } else if (part.type) {
+    }
+
+    if (part.type) {
         result *= output_stats[part.type + "_mult"] / 100;
     }
 
@@ -1036,6 +1133,10 @@ function equip_skills_return_bonusdmg(party_id, skill_index, artifact_stat = nul
                         source_artifact_stat = null;
                         source_artifact_stat_party = null;
                     }  
+
+                    if (option.bonusdmg[ii].target_vision == "shared" && bonusdmg[option.bonusdmg[ii].target_vision][option.bonusdmg[ii].target_type] === null) {
+                        bonusdmg[option.bonusdmg[ii].target_vision][option.bonusdmg[ii].target_type] = 0;
+                    }
 
                     bonusdmg[option.bonusdmg[ii].target_vision][option.bonusdmg[ii].target_type] += equip_skills_return_add_damage(source_party_id, option.bonusdmg[ii], source_skill_index, source_artifact_stat, source_artifact_stat_party);
                 }
@@ -1097,7 +1198,13 @@ function equip_skills_return_dmg_modifier(party_id, part, vision, skill_index = 
     }
 
     if (part.reaction) {
-        result *= data_reactions[part.reaction].direct_multiplier;
+
+        if (data_reactions[part.reaction].direct_multiplier === "variable") {
+            result *= output_stats[part.reaction + "_direct_mult"] / 100;
+        } else {
+            result *= data_reactions[part.reaction].direct_multiplier;
+        }    
+
         result *= (1 + output_stats[part.reaction + "_base"] / 100);
     } 
 
@@ -1117,11 +1224,10 @@ function equip_skills_return_elevate(party_id, part, skill_index = null, artifac
     return result;
 }
 
+
 function equip_skills_return_resistance(party_id, part, vision, skill_index = null, artifact_stat = null, artifact_stat_party = null) {
-    if (part.damage) {
+    if (part.damage || part.reaction) {
         return equip_skills_return_resistance_modifier(party_id, vision, skill_index, artifact_stat, artifact_stat_party) / 100;
-    } else if (part.reaction) {
-        return equip_skills_return_resistance_modifier(party_id, data_reactions[part.reaction].vision, skill_index, artifact_stat, artifact_stat_party) / 100;
     } else {
         return 1;
     }
@@ -1141,9 +1247,7 @@ function equip_skills_return_resistance_modifier(party_id, vision, skill_index =
 }
 
 function equip_skills_return_critrate(party_id, part, vision, skill_index = null, artifact_stat = null, artifact_stat_party = null) {
-    if (part.reaction) {
-        vision = data_reactions[part.reaction].vision;
-    }
+
     var crit = 0
     var output_stats = equip_stats_return_output_stats(party_id, skill_index, artifact_stat, artifact_stat_party, null);
 
@@ -1171,9 +1275,7 @@ function equip_skills_return_critrate(party_id, part, vision, skill_index = null
 }
 
 function equip_skills_return_critdmg(party_id, part, vision, skill_index = null, artifact_stat = null, artifact_stat_party = null) {
-    if (part.reaction) {
-        vision = data_reactions[part.reaction].vision;
-    }
+
     var critdmg = 0
     var output_stats = equip_stats_return_output_stats(party_id, skill_index, artifact_stat, artifact_stat_party, null);
 
@@ -1195,24 +1297,27 @@ function equip_skills_return_critdmg(party_id, part, vision, skill_index = null,
 }
 
 function equip_skills_return_reactions(party_id, part, artifact_stat = null, artifact_stat_party = null) {
-    var vision = equip_skills_return_part_vision(part, party_id);
+    
     var reactions = {};
+    if (part.damage) {
+        var vision = equip_skills_return_part_vision(part, party_id);
+        if (artifact_stat === null) {
+            var output_reactions = output_party[party_id].skills.output.initial.reactions;
+        } else {
+            var output_reactions = output_party[party_id].skills.output.optimize[artifact_stat_party][artifact_stat].reactions;
+        }
 
-    if (artifact_stat === null) {
-        var output_reactions = output_party[party_id].skills.output.initial.reactions;
-    } else {
-        var output_reactions = output_party[party_id].skills.output.optimize[artifact_stat_party][artifact_stat].reactions;
-    }
-
-    if (vision in data_visions) {
-        for (var i = 0; i < data_visions[vision].reactions_mod.length; i++) {
-            var reaction_name = data_visions[vision].reactions_mod[i];
-            reactions[reaction_name] = {
-                "type": data_reactions[reaction_name].type,
-                "value": output_reactions[vision][reaction_name]
+        if (vision in data_visions) {
+            for (var i = 0; i < data_visions[vision].reactions_mod.length; i++) {
+                var reaction_name = data_visions[vision].reactions_mod[i];
+                reactions[reaction_name] = {
+                    "type": data_reactions[reaction_name].type,
+                    "value": output_reactions[vision][reaction_name]
+                }
             }
         }
     }
+    
     
     return reactions;
 }
@@ -1309,7 +1414,35 @@ function equip_skills_return_reaction_value(party_id, reaction_name, vision, ski
     return result;
 }
 
+function equip_skills_return_skill_attack_level(party_id, attack_type, attack_id, skill_index = null, artifact_stat = null, artifact_stat_party = null) {
+
+    var attack_object = equip_skill_return_attack_object(data_characters[user_objects.user_party[party_id].id], attack_type);
+    var level_attack_type = attack_object[attack_id].type;
+    var level_party_id = party_id;
+    var level_skill_index = skill_index;
+    var level_artifact_stat = artifact_stat;
+    var level_artifact_stat_party = artifact_stat_party;
+
+    if (attack_type.startsWith("shared")) {
+
+        level_party_id = equip_character_return_party_id_by_name(attack_type.split(".")[1]);
+
+        if (level_party_id != party_id) {
+            level_skill_index = null;
+        }
+
+        if (level_party_id != artifact_stat_party) {
+            level_artifact_stat = null;
+            level_artifact_stat_party = null;
+        }
+    }
+
+    return equip_skills_return_skill_level(level_party_id, level_attack_type, level_skill_index, level_artifact_stat, level_artifact_stat_party);
+
+}
+
 function equip_skills_return_skill_level(party_id, attack_type, skill_index = null, artifact_stat = null, artifact_stat_party = null) {
+
     var level = 0;
     if (attack_type) {
         level = user_objects.user_party[party_id]["level" + attack_type] + equip_stats_return_output_stats(party_id, skill_index, artifact_stat, artifact_stat_party, "level" + attack_type);
@@ -1317,15 +1450,22 @@ function equip_skills_return_skill_level(party_id, attack_type, skill_index = nu
     return level;
 }
 
-function equip_skills_return_enemy_defense(party_id, skill_index = null, artifact_stat = null, artifact_stat_party = null) {
+function equip_skills_return_enemy_defense(party_id, part, skill_index = null, artifact_stat = null, artifact_stat_party = null) {
 
-    var enemy_defense = (100 - equip_stats_return_output_stats(party_id, skill_index, artifact_stat, artifact_stat_party, "enemyred")) / 100;
+    var enemydef = equip_stats_return_output_stats(party_id, skill_index, artifact_stat, artifact_stat_party, "enemydef");
+    var defignore = equip_stats_return_output_stats(party_id, skill_index, artifact_stat, artifact_stat_party, "defignore");
+    if (part.type) {
+        defignore += equip_stats_return_output_stats(party_id, skill_index, artifact_stat, artifact_stat_party, part.type + "defignore");
+    }
+    var enemy_defense = (100 - equip_stats_calculate_enemyred(enemydef, defignore, party_id)) / 100;
 
     return enemy_defense;
 }
 
 function equip_skills_return_part_vision(part, party_id, skill_index = null) {
-    if (part.conversion_special) {
+    if (part.vision == "character") {
+        return data_characters[user_objects.user_party[party_id].id].vision;
+    } else if (part.conversion_special) {
         if (skill_index !== null && output_party[party_id].skills.output.initial.active.details[skill_index] && output_party[party_id].skills.output.initial.active.details[skill_index].conversion_special) {
             return output_party[party_id].skills.output.initial.active.details[skill_index].conversion_special;
         } else if (output_party[party_id].effects.conversion_special) {
@@ -1422,7 +1562,6 @@ function equip_skills_return_part_bonusdmg(part, bonusdmg, vision) {
         result += bonusdmg.all.all;
     }
     if (part.reaction) {
-        vision = data_reactions[part.reaction].vision;
         result += bonusdmg.reactions[part.reaction];
         result += bonusdmg.all[part.reaction];
     } else if (part.type) {
@@ -1433,10 +1572,12 @@ function equip_skills_return_part_bonusdmg(part, bonusdmg, vision) {
         result += bonusdmg.alt["alt" + part.alt];
     } 
 
+    if (part.shared && bonusdmg.shared[part.shared]) {
+        result += bonusdmg.shared[part.shared];
+    }
+
     if (vision) {
-
         result += bonusdmg[vision].all;
-
         if (part.type && !part.reaction) {
             result += bonusdmg[vision][part.type];
         }        
@@ -1491,6 +1632,47 @@ function equip_skills_return_reaction_dmg(reaction, output_reaction, count) {
     }
 
     return result_obj;
+}
+
+function equip_skills_return_storage_damage_data() {
+    var damage_data = {};
+    damage_data.character = [];
+    damage_data.party = equip_skills_return_party_total_active();
+
+    for (var i = 0; i < const_party_size; i++) {
+        let output_active = output_party[i].skills.output.initial.active;
+
+        var damage_share = {
+            "ncrt": output_active.ncrt,
+            "crt": output_active.crt,
+            "avg": output_active.avg
+        }
+
+        if (damage_data.party.ncrt) {
+            damage_share.ncrt = damage_share.ncrt / damage_data.party.ncrt;
+        }
+
+        if (damage_data.party.crt) {
+            damage_share.crt = damage_share.crt / damage_data.party.crt;
+        }
+
+        if (damage_data.party.avg) {
+            damage_share.avg = damage_share.avg / damage_data.party.avg;
+        }
+
+
+        damage_data.character.push(
+            {
+                "damage": {
+                    "ncrt": output_active.ncrt,
+                    "crt": output_active.crt,
+                    "avg": output_active.avg
+                },
+                "share": damage_share
+            }
+        )
+    }
+    return damage_data;
 }
 
 function equip_skills_return_party_total_active(artifact_stat = null, artifact_stat_party = null) {
@@ -1583,22 +1765,14 @@ function equip_skills_return_effects_details_dmg(party_id, skill_index, artifact
 
     } else {
         var part_objects = equip_skills_return_attack_part_objects_simple(party_id, active_skill);
-        var attack_type = part_objects.attack_type;
-        if (attack_type == "other") {
-            var attack_object = const_skills_other;
-        } else {
-            if (attack_type != "attacks") {
-                attack_type += ".attacks";
-            }
-            var attack_object = utils_object_get_value(data_characters[user_objects.user_party[party_id].id], attack_type, null);
-        }
 
-        var level = equip_skills_return_skill_level(party_id, attack_object[part_objects.attack_index].type, skill_index, artifact_stat, artifact_stat_party);
+        var level = equip_skills_return_skill_attack_level(party_id, part_objects.attack_type, part_objects.attack_index, skill_index, artifact_stat, artifact_stat_party);
+
         var vision = equip_skills_return_part_vision(part_objects.part, party_id, skill_index);
 
         var output_part = {};
         if (part_objects.part.damage) {
-            output_part.defense = equip_skills_return_enemy_defense(party_id, skill_index, artifact_stat, artifact_stat_party);
+            output_part.defense = equip_skills_return_enemy_defense(party_id, part_objects.part, skill_index, artifact_stat, artifact_stat_party);
         } else {
             output_part.defense = 1;
         }
@@ -1608,7 +1782,6 @@ function equip_skills_return_effects_details_dmg(party_id, skill_index, artifact
         output_part.crit = equip_skills_return_critrate(party_id, part_objects.part, vision, skill_index, artifact_stat, artifact_stat_party);
         output_part.critdmg = equip_skills_return_critdmg(party_id, part_objects.part, vision, skill_index, artifact_stat, artifact_stat_party);
         output_part.elevate = equip_skills_return_elevate(party_id, part_objects.part, skill_index, artifact_stat, artifact_stat_party);
-
 
         if (active_skill.reaction) {
             output_part.reactions = {};
@@ -1627,5 +1800,23 @@ function equip_skills_return_effects_details_dmg(party_id, skill_index, artifact
         }
     }
     return details_dmg;
+}
+
+function equip_skill_return_attack_object(character, attack_type) {
+    if (attack_type == "attacks") {
+        return utils_object_get_value(character, attack_type, null);
+    } else if (attack_type == "other") {
+        return const_skills_other;
+    } else if (attack_type.startsWith("shared")) {
+        var attack_type_split = attack_type.split(".");
+        var character_id = attack_type_split[1];
+        if (attack_type_split[2] == "shared_attacks") {
+            return utils_object_get_value(data_characters[character_id], attack_type_split[2], null);
+        } else {
+            return utils_object_get_value(data_characters[character_id], attack_type_split[2] + "." + attack_type_split[3] + ".shared_attacks", null);
+        }
+    } else {
+        return utils_object_get_value(character, attack_type + ".attacks", null);
+    }
 }
 

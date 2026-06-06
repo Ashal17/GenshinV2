@@ -6005,9 +6005,91 @@
         }
       ],
       "energy": [
-        {"id": 22}
+        { "id": 22 }
       ],
       "effect_name": "Ballad of the Crossroads",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "enka_id": 14523,
+      "name": "Angelos' Heptades",
+      "icon": "seven_edicts_of_dust_and_light",
+      "type": "catalyst",
+      "rarity": 5,
+      "atk_base": 49.14,
+      "stats": [
+        {
+          "stat": "atk%",
+          "type": "level",
+          "value": 3.6
+        },
+        {
+          "stat": "atk%",
+          "type": "refine",
+          "value": [ 12.0, 15.0, 18.0, 21.0, 24.0 ]
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "After the equipping character creates a Shield, they gain \"Pathfinder's Light\" for 20s: Increases your active party member's DMG by "
+        },
+        {
+          "type": "refine",
+          "value": [ 10.0, 13.0, 16.0, 19.0, 22.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for every 1,000 ATK the equipping character has, up to a maximum of "
+        },
+        {
+          "type": "refine",
+          "value": [ 26.0, 34.0, 42.0, 50.0, 58.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". While Pathfinder's Light is in effect, when your active party member hits a nearby opponent, or opens a chest outside of combat, they will also gain \"Guide's Contentment\": Restores "
+        },
+        {
+          "type": "refine",
+          "value": [ 14.0, 14.0, 15.0, 16.0, 17.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " Elemental Energy to the equipping character. This effect can trigger once every 16s and can be triggered even when the equipping character is off-field. Hexerei: Secret Rite: When there are off-field Hexerei characters in your party, they will also gain 50% of the DMG increase from Pathfinder's Light."
+        }
+      ],
+      "energy": [
+        {
+          "id": 248
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2626,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "special": "hexenzirkel_0_2_personal",
+          "party": true
+        }
+      ],
+      "effect_name": "Crown of the Final Scion",
       "ascension": [
         {
           "type": "item",
@@ -8443,6 +8525,68 @@
           "id": "unknown_regular"
         }
       ]
+    },
+    {
+      "id": 46,
+      "enka_id": 12516,
+      "name": "Beyond the Key",
+      "icon": "6_7_claymore",
+      "type": "claymore",
+      "rarity": 5,
+      "atk_base": 47.54,
+      "stats": [
+        {
+          "stat": "critdmg",
+          "type": "level",
+          "value": 9.6
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "When the wielder is on the field, the claymore unleashes its Instanced Calculation effect and increases the wielder's ATK by "
+        },
+        {
+          "type": "refine",
+          "value": [ 16.0, 20.0, 24.0, 28.0, 32.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". During this time, when the wielder hits an opponent with a Charged Attack, the claymore will use Sampling Calculation and grant the wielder a "
+        },
+        {
+          "type": "refine",
+          "value": [ 20, 25, 30, 35, 40 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " Stellar-Conduct Reaction DMG Bonus for 5s. Max 3 Sampling stacks, and 1 stack can be gained every 0.2s."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2725,
+          "option": 0,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "The White Queen's Ascension",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
     }
   ],
   "polearm": [
@@ -10774,6 +10918,73 @@
         }
       ],
       "effect_name": "Untainted Desire",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "enka_id": 13517,
+      "name": "Disaster and Remorse",
+      "icon": "disaster_and_remorse",
+      "type": "polearm",
+      "rarity": 5,
+      "atk_base": 47.54,
+      "stats": [
+        {
+          "stat": "crit",
+          "type": "level",
+          "value": 4.8
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "After the equipping character uses an Elemental Skill, they gain \"Path of Conflict\" for 17s, as well as \"Unforgivable\" and \"Irreparable\" for 3s each. This effect can trigger once every 18s.Unforgivable: Increases the equipping character's Normal Attack and Charged Attack DMG by "
+        },
+        {
+          "type": "refine",
+          "value": [ 40.0, 50.0, 60.0, 70.0, 80.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ".Irreparable: Increases the equipping character's Elemental Skill and Elemental Burst DMG by "
+        },
+        {
+          "type": "refine",
+          "value": [ 40.0, 50.0, 60.0, 70.0, 80.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ".While Path of Conflict is in effect, when the equipping character hits an opponent with a Normal Attack or Charged Attack, Irreparable's duration will be increased by 1s. When the equipping character hits an opponent with their Elemental Skill or Elemental Burst, Unforgivable's duration will be increased by 1s. Each of the above effects can be triggered once every 0.1s. When Path of Conflict ends, or the equipping character leaves the field, both Unforgivable and Irreparable will be removed.Hexerei: Secret Rite: The above ATK boosts are increased by 75%."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2606,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "special": "hexenzirkel_0_2"
+        },
+        {
+          "id": 2616,
+          "offset": [ 0, 1, 2, 3, 4 ],
+          "special": "hexenzirkel_0_2"
+        }
+      ],
+      "effect_name": "Ruin and Blame",
       "ascension": [
         {
           "type": "item",

@@ -59,6 +59,7 @@ p {
 
 html {
     height: 100%;
+    font: 90% GenshinFont;
 }
 
 body {
@@ -68,7 +69,6 @@ body {
     flex-direction: column;
     align-items:center;
     background-color: var(--grey-15);
-    font: 90% GenshinFont;
     margin: 0;
     color: var(--white);
 }

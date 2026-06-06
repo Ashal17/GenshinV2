@@ -8,7 +8,7 @@ window_frame_ids = [
 ];
 
 async function equip_load_all_data() {
-    var ver = "?20260406";
+    var ver = "?20260601";
 
     data_characters = await utils_load_json("/data/characters.json" + ver);
     data_enemies = await utils_load_json("/data/enemies.json" + ver);
@@ -534,6 +534,7 @@ function equip_setup_ui_frame_skills() {
 
     equip_skills_display_header();
     equip_storage_display_header_type();
+    equip_storage_display_party_detail();
 }
 
 function equip_setup_ui_skills(skill_window) {
@@ -558,7 +559,7 @@ function equip_setup_ui_storage() {
     obj.appendChild(utils_create_obj("p", "container_name", null, utils_capitalize("Storage")));
 
     var storage_column = utils_create_obj("div", "storage_column", "storage_column");
-    var storage_header = utils_create_obj("div", "storage_row");
+    var storage_header = utils_create_obj("div", "storage_row storage_header");
     storage_header.appendChild(utils_create_obj("div", "storage_btn"));
     storage_header.appendChild(utils_create_obj("div", "storage_text storage_text_name", null, "Name"));
     storage_header.appendChild(utils_create_obj("div", "storage_party_container", "storage_party_container_header", "Party"));
@@ -605,7 +606,7 @@ function equip_setup_ui_storage() {
 
 function equip_setup_ui_storage_pin() {
     var obj = utils_create_obj("div", "container_storage_pin", "storage_pin");
-    var storage_header = utils_create_obj("div", "storage_row");
+    var storage_header = utils_create_obj("div", "storage_row storage_header");
     storage_header.appendChild(utils_create_obj("div", "storage_party_container", "storage_party_container_header_pin", "Party"));
     storage_header.appendChild(utils_create_obj("div", "storage_text", "storage_text_damage_header_pin", "Damage"));
     storage_header.appendChild(utils_create_obj("div", "storage_text", null, "Comparison"));
@@ -851,6 +852,8 @@ function equip_setup_default_stats() {
     default_bonusdmg.alt.alt2base = 0;
     default_bonusdmg.alt.alt3base = 0;
 
+    default_bonusdmg.shared = {};
+
     default_artifact = {};
     default_artifact.id = 0
     default_artifact.stars = 0
@@ -921,5 +924,11 @@ function equip_setup_default_stats() {
     default_skills_detail.reactions = {};
     default_skills_detail.bonusdmg = {};
     default_skills_detail.other = [];
+    default_skills_detail.shared = [];
     default_skills_detail.active = structuredClone(default_active_skill);
+
+    default_skills_shared = {};
+    default_skills_shared.shared_attacks = [];
+    default_skills_shared.passive = [];
+    default_skills_shared.const = [];
 }

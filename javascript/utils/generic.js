@@ -41,7 +41,7 @@ function utils_includes_alt_names(name, alt_names, input) {
     return result;
 }
 
-function utils_array_sort(arr, key) {
+function utils_array_sort(arr, key=null) {
     if (key) {
         if (Array.isArray(key)) {
             for (var i = 0; i < key.length; i++) {
@@ -87,6 +87,12 @@ function utils_array_swap(array, index1, index2) {
         return true;
     } else {
         return false;
+    }
+}
+
+function utils_array_insert_unique(array, value) {
+    if (!array.includes(value)) {
+        array.push(value);
     }
 }
 

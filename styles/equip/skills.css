@@ -5,16 +5,48 @@
 }
 
 @media only screen and (min-width: 1084px) {
-    .frame_skills {
+    .frame_skills:not(.frame_skills_party_detail) {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .frame_skills.frame_skills_party_detail {
+        grid-template:
+            "a a" auto
+            "b c" auto 
+            / 1fr 1fr;
+    }
+
+    .frame_skills.frame_skills_party_detail .container_skills_permanent {
+        grid-area: b;
+    }
+
+    .frame_skills.frame_skills_party_detail .container_skills_active {
+        grid-area: c;
+    }
+
+    .frame_skills.frame_skills_party_detail .container_skills_storage {
+        grid-area: a;
     }
 }
 
 @media only screen and (min-width: 1500px) {
-    .frame_skills {
+    .frame_skills:not(.frame_skills_party_detail) {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+
+.frame_skills.frame_skills_party_detail .container_skills_permanent {
+    order: 2;
+}
+
+.frame_skills.frame_skills_party_detail .container_skills_active {
+    order: 3;
+}
+
+.frame_skills.frame_skills_party_detail .container_skills_storage {
+    order: 1;
+}
+
 
 .frame_skills .container_object {
     min-width: 400px;
@@ -32,7 +64,7 @@
     background-color: var(--grey-15);
     padding: 5px;
     margin: 2px;
-    font-size:0.9em;
+    font-size:0.9rem;
 }
 
     .skills_row_permanent.enabled .skills_name{
@@ -82,7 +114,7 @@
 }
 
 .skills_passive_desc {
-    font-size:0.9em;
+    font-size:0.9rem;
     padding:5px;
 }
 
@@ -219,7 +251,7 @@
 }
 
     .skills_part_count_val .icon_selects_text {
-        font-size:0.9em;
+        font-size:0.9rem;
     }
 
     .skills_row_name .svg-minus-circle-outline:before {

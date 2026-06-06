@@ -1669,5 +1669,62 @@
     "type": "particle",
     "vision": "geo",
     "value": 1
+  },
+  {
+    "id": 248,
+    "name": "Crown of the Final Scion (16s CD)",
+    "type": "energy",
+    "value": [ 14, 14, 15, 16, 17 ]
+  },
+  {
+    "id": 249,
+    "name": "Revelation: Uncreated Light (?)",
+    "type": "particle",
+    "vision": "pyro",
+    "value": 1
+  },
+  {
+    "id": 250,
+    "name": "Unforeseen Strike (?)",
+    "type": "particle",
+    "vision": "cryo",
+    "value": 1
+  },
+  {
+    "id": 251,
+    "name": "Love Like Flowing Light, Faded Like Gladsome Strains",
+    "type": "energy",
+    "value": 15
+  },
+  {
+    "id": 252,
+    "name": "Ring-A-Ding-Ding! Hexhunter Chime (?)",
+    "type": "particle",
+    "vision": "anemo",
+    "value": 1
+  },
+  {
+    "id": 253,
+    "name": "With a Vow to Seek Rescue, the Journey Begins (1.8s CD)",
+    "type": "energy",
+    "value": 2
+  },
+  {
+    "id": 254,
+    "name": "Ascetics of Frost - Radiance: Stellar-Conduct (6s CD)",
+    "type": "energy",
+    "value": 6
+  },
+  {
+    "id": 255,
+    "name": "Austerity: Forbidding Guard - Protection of Anubis (18s CD)",
+    "type": "energy",
+    "value": 20
+  },
+  {
+    "id": 256,
+    "name": "Sakura Channeling (5s CD)",
+    "type": "energy",
+    "value": 8
   }
 ]

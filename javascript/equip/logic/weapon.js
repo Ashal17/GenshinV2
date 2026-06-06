@@ -120,7 +120,7 @@ function equip_weapon_display_effect(weapon, current_weapon) {
 function equip_weapon_display_tooltip(weapon, current_weapon, weapon_type) {
     var tooltip = utils_create_obj("div", "tooltip_hover tooltip_bottom tooltip_weapon");
     var nameline = utils_create_obj("div", "prompt_header");
-    nameline.appendChild(equip_display_equipment_icon("/images/icons/weapon/" + weapon_type + "/" + weapon.icon + ".png", weapon.rarity, null, current_weapon.refine));
+    nameline.appendChild(equip_display_equipment_icon("/images/icons/weapon/" + weapon_type + "/" + weapon.icon + ".png", weapon.rarity, null, current_weapon.refine + 1));
     nameline.appendChild(utils_create_obj("div", "tooltip_header_text", null, weapon.name))
     tooltip.appendChild(nameline);
 

@@ -293,13 +293,13 @@ function equip_stats_update_enemy_defense_all() {
 
 function equip_stats_update_enemy_defense(party_id) {
 
-    output_party[party_id].stats.initial.total["enemyred"] = equip_stats_calculate_enemyred(output_party[party_id].stats.initial.total, party_id);
+    output_party[party_id].stats.initial.total["enemyred"] = equip_stats_calculate_enemyred(output_party[party_id].stats.initial.total["enemydef"], 0, party_id);
     equip_stats_update_enemy_defense_optimize(party_id, output_party[party_id].stats);
 
     for (var i = 0; i < user_objects.user_party[party_id].active_skills.length; i++) {
         var skill_effects = user_objects.user_party[party_id].active_skills[i].effects;
         if (skill_effects && skill_effects.length > 0) {
-            output_party[party_id].skills.stats[i].initial.total["enemyred"] = equip_stats_calculate_enemyred(output_party[party_id].skills.stats[i].initial.total, party_id);
+            output_party[party_id].skills.stats[i].initial.total["enemyred"] = equip_stats_calculate_enemyred(output_party[party_id].skills.stats[i].initial.total["enemydef"], 0, party_id);
             equip_stats_update_enemy_defense_optimize(party_id, output_party[party_id].skills.stats[i]);
         }
     }
@@ -309,7 +309,7 @@ function equip_stats_update_enemy_defense_optimize(party_id, stats_obj) {
     for (var i = 0; i < output_party[party_id].artifacts.optimize_stats.length; i++) {
         var optimize_char = output_party[party_id].artifacts.optimize_stats[i];
         for (var ii = 0; ii < optimize_char.length; ii++) {
-            stats_obj.optimize[i][optimize_char[ii]].total["enemyred"] = equip_stats_calculate_enemyred(stats_obj.optimize[i][optimize_char[ii]].total, party_id);
+            stats_obj.optimize[i][optimize_char[ii]].total["enemyred"] = equip_stats_calculate_enemyred(stats_obj.optimize[i][optimize_char[ii]].total["enemydef"], 0, party_id);
         }
     }
 }
@@ -469,9 +469,11 @@ function equip_stats_calculate_elemastery(type, value) {
 
 }
 
-function equip_stats_calculate_enemyred(stats_total, party_id) {
+function equip_stats_calculate_enemyred(enemydef, defignore, party_id) {
 
-    return 100 * stats_total["enemydef"] / (stats_total["enemydef"] + (5 * const_level_list_values[user_objects.user_party[party_id].level]) + 500);
+    var adjusted_enemydef = enemydef * (100 - defignore) / 100;
+
+    return 100 * adjusted_enemydef / (adjusted_enemydef + (5 * const_level_list_values[user_objects.user_party[party_id].level]) + 500);
 
 }
 

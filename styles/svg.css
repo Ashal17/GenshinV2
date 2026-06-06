@@ -401,6 +401,10 @@ background: none;
     -webkit-mask-image: url(../images/svg/lunarcrystalize.svg);
     mask-image: url(../images/svg/lunarcrystalize.svg);
 }
+.svg-stellarconduct:before {
+    -webkit-mask-image: url(../images/svg/stellarconduct.svg);
+    mask-image: url(../images/svg/stellarconduct.svg);
+}
 .svg-enka:before {
     -webkit-mask-image: url(../images/svg/enka.svg);
     mask-image: url(../images/svg/enka.svg);

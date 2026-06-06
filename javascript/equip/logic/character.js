@@ -613,26 +613,50 @@ function equip_character_storage_display_stats(character_display_stats, vision_s
     return stats_obj;
 }
 
-function equip_character_storage_display_equip(character_storage) {
+function equip_character_storage_display_equip(character_storage, simple_artifact=false) {
     var weapon_type = data_characters[character_storage.id].weapon;
     var weapon = utils_array_get_by_lookup(data_weapons[weapon_type], "id", character_storage.weapon.id);
 
     var equip_obj = utils_create_obj("div", "char_storage_equip");
-    equip_obj.appendChild(equip_display_equipment_icon("/images/icons/weapon/" + weapon_type + "/" + weapon.icon + ".png", weapon.rarity, equip_weapon_display_tooltip(weapon, character_storage.weapon, weapon_type), const_level_list[character_storage.weapon.level]));
+    equip_obj.appendChild(equip_display_equipment_icon(
+        "/images/icons/weapon/" + weapon_type + "/" + weapon.icon + ".png",
+        weapon.rarity,
+        equip_weapon_display_tooltip(weapon, character_storage.weapon, weapon_type),
+        character_storage.weapon.refine + 1)
+    );
 
-    for (var i = 0; i < const_artifact_types.length; i++) {
-        var artifact_id = const_artifact_types[i];
-        var artifact = utils_array_get_by_lookup(data_artifact_sets, "id", character_storage.artifacts[artifact_id].id);
-        equip_obj.appendChild(equip_display_equipment_icon(
-            "/images/icons/artifact/" + artifact_id + "/" + artifact.icon + ".png",
-            character_storage.artifacts[artifact_id].stars,
-            equip_artifacts_display_tooltip(artifact_id, character_storage.artifacts[artifact_id]),
-            character_storage.artifacts[artifact_id].level
-        ));
-    }
+    if (simple_artifact) {
+        var active_sets = equip_artifacts_return_active_sets(character_storage.artifacts, true);
+        for (let [set_id, set_stats] of Object.entries(active_sets)) {
+            if (set_stats.count >= 2) {
+                var artifact = utils_array_get_by_lookup(data_artifact_sets, "id", set_id);
+                var set_tooltip = utils_create_obj("div", "artifact_set_description tooltip_hover");
+                equip_artifacts_display_set_description(set_tooltip, artifact, set_stats.count);
+                equip_obj.appendChild(equip_display_equipment_icon(
+                    "/images/icons/artifact/flower/" + artifact.icon + ".png",
+                    utils_array_sort(set_stats.stars).join("_"),
+                    set_tooltip,
+                    set_stats.count
+                ));
+            }
+        }
+    } else {
+        for (var i = 0; i < const_artifact_types.length; i++) {
+            var artifact_id = const_artifact_types[i];
+            var artifact = utils_array_get_by_lookup(data_artifact_sets, "id", character_storage.artifacts[artifact_id].id);
+            equip_obj.appendChild(equip_display_equipment_icon(
+                "/images/icons/artifact/" + artifact_id + "/" + artifact.icon + ".png",
+                character_storage.artifacts[artifact_id].stars,
+                equip_artifacts_display_tooltip(artifact_id, character_storage.artifacts[artifact_id]),
+                null
+            ));
+        }
+    }    
 
     return equip_obj;
 }
+
+
 
 
 function equip_character_storage_display_skill_level(skill_name, skill_level) {

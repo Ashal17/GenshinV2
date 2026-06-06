@@ -672,6 +672,16 @@
         "req": 4
       },
       {
+        "stat": "lunarcharged",
+        "value": 20,
+        "req": 4
+      },
+      {
+        "stat": "stellarconduct",
+        "value": 20,
+        "req": 4
+      },
+      {
         "stat": null,
         "value": "Triggering Quicken, Overloaded, Electro-Charged or Superconduct decreases Elemental Skill CD by 1s. Can only occur once every 0.8s.",
         "req": 4
@@ -885,6 +895,82 @@
     "sands": "Summer Night's Moment",
     "goblet": "Summer Night's Waterballoon",
     "circlet": "Summer Night's Mask"
+  },
+  {
+    "id": 26,
+    "enka_id": 15011,
+    "name": "Prayers for Wisdom",
+    "scanner_key": "PrayersForWisdom",
+    "icon": "prayers_for_wisdom",
+    "stars": [
+      4,
+      3
+    ],
+    "set_bonus": [
+      {
+        "stat": null,
+        "value": "Affected by Electro for {{40%}} less time.",
+        "req": 1
+      }
+    ],
+    "circlet": "Tiara of Thunder"
+  },
+  {
+    "id": 27,
+    "enka_id": 15013,
+    "name": "Prayers for Springtime",
+    "scanner_key": "PrayersForSpringtime",
+    "icon": "prayers_for_springtime",
+    "stars": [
+      4,
+      3
+    ],
+    "set_bonus": [
+      {
+        "stat": null,
+        "value": "Affected by Cryo for {{40%}} less time.",
+        "req": 1
+      }
+    ],
+    "circlet": "Tiara of Frost"
+  },
+  {
+    "id": 28,
+    "enka_id": 15009,
+    "name": "Prayers for Illumination",
+    "scanner_key": "PrayersForIllumination",
+    "icon": "prayers_for_illumination",
+    "stars": [
+      4,
+      3
+    ],
+    "set_bonus": [
+      {
+        "stat": null,
+        "value": "Affected by Pyro for {{40%}} less time.",
+        "req": 1
+      }
+    ],
+    "circlet": "Tiara of Flame"
+  },
+  {
+    "id": 29,
+    "enka_id": 15010,
+    "name": "Prayers for Destiny",
+    "scanner_key": "PrayersForDestiny",
+    "icon": "prayers_for_destiny",
+    "stars": [
+      4,
+      3
+    ],
+    "set_bonus": [
+      {
+        "stat": null,
+        "value": "Affected by Hydro for {{40%}} less time.",
+        "req": 1
+      }
+    ],
+    "circlet": "Tiara of Torrents"
   },
   {
     "id": 30,
@@ -1937,79 +2023,81 @@
     "circlet": "Ballad of Love and Lament"
   },
   {
-    "id": 26,
-    "enka_id": 15011,
-    "name": "Prayers for Wisdom",
-    "scanner_key": "PrayersForWisdom",
-    "icon": "prayers_for_wisdom",
-    "stars": [
-      4,
-      3
-    ],
+    "id": 60,
+    "enka_id": 15045,
+    "name": "Celestial Gift",
+    "scanner_key": "CelestialGift",
+    "icon": "6_6_1_set",
+    "stars": [ 5, 4 ],
     "set_bonus": [
       {
+        "stat": "recharge",
+        "value": 20,
+        "req": 2
+      },
+      {
         "stat": null,
-        "value": "Affected by Electro for {{40%}} less time.",
-        "req": 1
+        "value": "If the equipping character has completed Witch’s Homework, after they use an Elemental Skill, they also gain “Light’s Guidance” for 20s: All nearby party members gain a {{20%}} Elemental DMG Bonus corresponding to the equipping character’s Elemental Type. The equipping character can trigger this effect while off-field. DMG Bonuses provided by Artifact Sets with the same name do not stack. Hexerei: Secret Rite: Light’s Guidance is upgraded to “Mortal Hymn”: All nearby party members gain a 40% Elemental DMG Bonus corresponding to both the equipping character and the current active party member’s Elemental Type instead. If both characters have the same Elemental Type, these bonuses will not stack.",
+        "req": 4,
+        "apply": [
+          {
+            "id": 2584,
+            "special": "6_6_1_set_wearer",
+            "party": true
+          },
+          {
+            "id": 2598,
+            "special": "6_6_1_set_active",
+            "party": true,
+            "noself": true
+          }
+        ]
       }
     ],
-    "circlet": "Tiara of Thunder"
+    "flower": "Heavensent Fragrance",
+    "plume": "Heavensent Demise",
+    "sands": "Heavensent Decree",
+    "goblet": "Heavensent Reward",
+    "circlet": "Heavensent Crown"
   },
   {
-    "id": 27,
-    "enka_id": 15013,
-    "name": "Prayers for Springtime",
-    "scanner_key": "PrayersForSpringtime",
-    "icon": "prayers_for_springtime",
-    "stars": [
-      4,
-      3
-    ],
+    "id": 61,
+    "enka_id": 15046,
+    "name": "Disenchantment in Deep Shadow",
+    "scanner_key": "DisenchantmentInDeepShadow",
+    "icon": "6_6_2_set",
+    "stars": [ 5, 4 ],
     "set_bonus": [
       {
-        "stat": null,
-        "value": "Affected by Cryo for {{40%}} less time.",
-        "req": 1
-      }
-    ],
-    "circlet": "Tiara of Frost"
-  },
-  {
-    "id": 28,
-    "enka_id": 15009,
-    "name": "Prayers for Illumination",
-    "scanner_key": "PrayersForIllumination",
-    "icon": "prayers_for_illumination",
-    "stars": [
-      4,
-      3
-    ],
-    "set_bonus": [
+        "stat": "atk%",
+        "value": 18,
+        "req": 2
+      },
+      {
+        "stat": "superconduct",
+        "value": 80,
+        "req": 4
+      },
+      {
+        "stat": "stellarconduct",
+        "value": 40,
+        "req": 4
+      },
       {
         "stat": null,
-        "value": "Affected by Pyro for {{40%}} less time.",
-        "req": 1
+        "value": "When a character attacks an opponent affected by Superconduct, the resulting DMG instance's CRIT Rate increases by 20%. This Set has an ability that has yet to be revealed...",
+        "req": 4,
+        "apply": [
+          {
+            "id": 2605
+          }
+        ]
       }
     ],
-    "circlet": "Tiara of Flame"
-  },
-  {
-    "id": 29,
-    "enka_id": 15010,
-    "name": "Prayers for Destiny",
-    "scanner_key": "PrayersForDestiny",
-    "icon": "prayers_for_destiny",
-    "stars": [
-      4,
-      3
-    ],
-    "set_bonus": [
-      {
-        "stat": null,
-        "value": "Affected by Hydro for {{40%}} less time.",
-        "req": 1
-      }
-    ],
-    "circlet": "Tiara of Torrents"
+    "flower": "Iridescence That Ceased Amidst Glory",
+    "plume": "Sharpness That Ceased Upon Wondrous Creation",
+    "sands": "Moment That Ceased Upon Waking From Grand Dreams",
+    "goblet": "Ovations That Ceased Upon Festivity",
+    "circlet": "Pendulum That Ceased Amidst a Great Fall"
   }
 ]

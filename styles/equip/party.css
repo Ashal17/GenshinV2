@@ -73,7 +73,7 @@
             background-color: var(--orange-bg);
             color: var(--white);
             content: 'Active';
-            font-size: 0.9em;
+            font-size: 0.9rem;
             padding: 2px 5px 0px 5px;
             box-shadow: 0 0 4px 4px var(--orange-bg);
         }
@@ -287,7 +287,7 @@
     .character_stats .statline {
         flex: none;
         width: calc(50% - 8px);
-        font-size: 1em;
+        font-size: 1rem;
         padding:2px 4px;
     }
 
@@ -337,7 +337,7 @@
     }
 
 .resonance_name {
-    font-size:0.9em;
+    font-size:0.9rem;
 }
 
 .char_storage_column {
@@ -531,12 +531,16 @@
     position:relative;
 }
 
+    .char_storage_equip .equipment_icon {
+        margin: 2px;
+    }
+
     .char_storage_equip .equipment_img {
         height: 26px;
         width: 26px;
-        margin: 2px;
+        margin: 0px;
         border-radius: 5px;
-        cursor: default;
+        cursor: help;
     }
 
 .char_storage_atk, .char_storage_def, .char_storage_elemastery {

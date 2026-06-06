@@ -2643,9 +2643,242 @@
   },
   {
     "id": 64,
-    "name": "FREE",
+    "name": "Polestar Field",
     "options": [
-
+      {
+        "id": 0,
+        "name": "12 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct_direct_mult",
+            "value": 200
+          },
+          {
+            "stat": "electro",
+            "value": 40
+          },
+          {
+            "stat": "cryo",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "11 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct_direct_mult",
+            "value": 195
+          },
+          {
+            "stat": "electro",
+            "value": 39
+          },
+          {
+            "stat": "cryo",
+            "value": 39
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "10 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct_direct_mult",
+            "value": 189
+          },
+          {
+            "stat": "electro",
+            "value": 38
+          },
+          {
+            "stat": "cryo",
+            "value": 38
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "9 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct_direct_mult",
+            "value": 185
+          },
+          {
+            "stat": "electro",
+            "value": 37
+          },
+          {
+            "stat": "cryo",
+            "value": 37
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "8 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct_direct_mult",
+            "value": 179
+          },
+          {
+            "stat": "electro",
+            "value": 36
+          },
+          {
+            "stat": "cryo",
+            "value": 36
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "7 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct_direct_mult",
+            "value": 175
+          },
+          {
+            "stat": "electro",
+            "value": 35
+          },
+          {
+            "stat": "cryo",
+            "value": 35
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "6 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct_direct_mult",
+            "value": 170
+          },
+          {
+            "stat": "electro",
+            "value": 34
+          },
+          {
+            "stat": "cryo",
+            "value": 34
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct_direct_mult",
+            "value": 164
+          },
+          {
+            "stat": "electro",
+            "value": 33
+          },
+          {
+            "stat": "cryo",
+            "value": 33
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct_direct_mult",
+            "value": 160
+          },
+          {
+            "stat": "electro",
+            "value": 32
+          },
+          {
+            "stat": "cryo",
+            "value": 32
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct_direct_mult",
+            "value": 154
+          },
+          {
+            "stat": "electro",
+            "value": 31
+          },
+          {
+            "stat": "cryo",
+            "value": 31
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct_direct_mult",
+            "value": 150
+          },
+          {
+            "stat": "electro",
+            "value": 30
+          },
+          {
+            "stat": "cryo",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "stellarconduct_direct_mult",
+            "value": 145
+          },
+          {
+            "stat": "electro",
+            "value": 29
+          },
+          {
+            "stat": "cryo",
+            "value": 29
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "0 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct_direct_mult",
+            "value": 100
+          },
+          {
+            "stat": "electro",
+            "value": 20
+          },
+          {
+            "stat": "cryo",
+            "value": 20
+          }
+        ]
+      }
     ]
   },
   {
@@ -2939,6 +3172,18 @@
           {
             "stat": "elemastery",
             "value": 200
+          },
+          {
+            "stat": "superconduct",
+            "value": 40
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "swirlcryo",
+            "value": 40
           }
         ]
       },
@@ -2949,6 +3194,18 @@
           {
             "stat": "healinginc",
             "value": 30
+          },
+          {
+            "stat": "superconduct",
+            "value": 40
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "swirlcryo",
+            "value": 40
           }
         ]
       }
@@ -11708,23 +11965,103 @@
   },
   {
     "id": 378,
-    "name": "FREE",
-    "options": []
+    "name": "Edict of Cleansing",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "ratio": 80,
+            "target_vision": "all",
+            "target_type": "skill"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 379,
-    "name": "FREE",
-    "options": []
+    "name": "Yakan Offering",
+    "options": [
+      {
+        "id": 0,
+        "name": "After Elemental Burst",
+        "stats": [
+          {
+            "stat": "electro",
+            "value": 40
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 380,
-    "name": "FREE",
-    "options": []
+    "name": "Fox's Mooncall",
+    "options": [
+      {
+        "id": 0,
+        "name": "Level 4",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 200
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Level 3",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Level 2",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 90
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Level 1",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 60
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 381,
-    "name": "FREE",
-    "options": []
+    "name": "Sakura Channeling - Personal",
+    "options": [
+      {
+        "id": 0,
+        "name": "Passive",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 100
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 382,
@@ -21533,7 +21870,7 @@
   },
   {
     "id": 745,
-    "name": "Sakura Channeling",
+    "name": "Sakura Channeling - Party",
     "options": [
       {
         "id": 0,
@@ -29455,6 +29792,13 @@
             "target_vision": "alt",
             "target_type": "alt3",
             "custom_name": "Elemental Mastery to Duststalker Bolt"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 600,
+            "target_vision": "reactions",
+            "target_type": "stellarconduct",
+            "custom_name": "Elemental Mastery to Duststalker Bolt - Starsame"
           }
         ]
       }
@@ -31481,6 +31825,16 @@
           {
             "stat": "normal_mult",
             "value": 143.17
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 143.17,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 143.17,
+            "hidden": true
           }
         ]
       }
@@ -31497,6 +31851,16 @@
           {
             "stat": "normal_mult",
             "value": 145.75
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 145.75,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 145.75,
+            "hidden": true
           }
         ]
       }
@@ -31513,6 +31877,16 @@
           {
             "stat": "normal_mult",
             "value": 148.34
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 148.34,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 148.34,
+            "hidden": true
           }
         ]
       }
@@ -31529,6 +31903,16 @@
           {
             "stat": "normal_mult",
             "value": 151.7
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 151.7,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 151.7,
+            "hidden": true
           }
         ]
       }
@@ -31545,6 +31929,16 @@
           {
             "stat": "normal_mult",
             "value": 154.29
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 154.29,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 154.29,
+            "hidden": true
           }
         ]
       }
@@ -31561,6 +31955,16 @@
           {
             "stat": "normal_mult",
             "value": 156.87
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 156.87,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 156.87,
+            "hidden": true
           }
         ]
       }
@@ -31577,6 +31981,16 @@
           {
             "stat": "normal_mult",
             "value": 160.23
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 160.23,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 160.23,
+            "hidden": true
           }
         ]
       }
@@ -31593,6 +32007,16 @@
           {
             "stat": "normal_mult",
             "value": 163.59
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 163.59,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 163.59,
+            "hidden": true
           }
         ]
       }
@@ -31609,6 +32033,16 @@
           {
             "stat": "normal_mult",
             "value": 166.95
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 166.95,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 166.95,
+            "hidden": true
           }
         ]
       }
@@ -31625,6 +32059,16 @@
           {
             "stat": "normal_mult",
             "value": 170.31
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 170.31,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 170.31,
+            "hidden": true
           }
         ]
       }
@@ -31641,6 +32085,16 @@
           {
             "stat": "normal_mult",
             "value": 173.67
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 173.67,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 173.67,
+            "hidden": true
           }
         ]
       }
@@ -31657,6 +32111,16 @@
           {
             "stat": "normal_mult",
             "value": 177.03
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 177.03,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 177.03,
+            "hidden": true
           }
         ]
       }
@@ -31673,6 +32137,16 @@
           {
             "stat": "normal_mult",
             "value": 180.39
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 180.39,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 180.39,
+            "hidden": true
           }
         ]
       }
@@ -31689,6 +32163,16 @@
           {
             "stat": "normal_mult",
             "value": 183.75
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 183.75,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 183.75,
+            "hidden": true
           }
         ]
       }
@@ -31705,6 +32189,16 @@
           {
             "stat": "normal_mult",
             "value": 187.11
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 187.11,
+            "hidden": true
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 187.11,
+            "hidden": true
           }
         ]
       }
@@ -31732,134 +32226,14 @@
   },
   {
     "id": 1155,
-    "name": "There Shall Be a Reckoning for Sin",
+    "name": "FREE",
     "options": [
-      {
-        "id": 0,
-        "name": "5 Stacks",
-        "stats": [
-          {
-            "stat": "atk%",
-            "value": 30
-          }
-        ]
-      },
-      {
-        "id": 1,
-        "name": "4 Stacks",
-        "stats": [
-          {
-            "stat": "atk%",
-            "value": 24
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "name": "3 Stacks",
-        "stats": [
-          {
-            "stat": "atk%",
-            "value": 18
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "name": "2 Stacks",
-        "stats": [
-          {
-            "stat": "atk%",
-            "value": 12
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "name": "1 Stack",
-        "stats": [
-          {
-            "stat": "atk%",
-            "value": 6
-          }
-        ]
-      }
     ]
   },
   {
     "id": 1156,
-    "name": "Shackles for the Arrogant",
+    "name": "FREE",
     "options": [
-      {
-        "id": 0,
-        "name": "5 Stacks",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 200
-          },
-          {
-            "stat": "atk%",
-            "value": 30
-          }
-        ]
-      },
-      {
-        "id": 1,
-        "name": "4 Stacks",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 160
-          },
-          {
-            "stat": "atk%",
-            "value": 24
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "name": "3 Stacks",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 120
-          },
-          {
-            "stat": "atk%",
-            "value": 18
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "name": "2 Stacks",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 80
-          },
-          {
-            "stat": "atk%",
-            "value": 12
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "name": "1 Stack",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 40
-          },
-          {
-            "stat": "atk%",
-            "value": 6
-          }
-        ]
-      }
     ]
   },
   {
@@ -51381,6 +51755,10 @@
           {
             "stat": "skilldefignore",
             "value": 60
+          },
+          {
+            "stat": "critdmgstellarconduct",
+            "value": 150
           }
         ]
       }
@@ -51469,22 +51847,8 @@
   },
   {
     "id": 1860,
-    "name": "Esteem for the Innocent",
+    "name": "FREE",
     "options": [
-      {
-        "id": 0,
-        "name": "Permanent",
-        "stats": [
-          {
-            "stat": "critcharged",
-            "value": 10
-          },
-          {
-            "stat": "critdmgcharged",
-            "value": 80
-          }
-        ]
-      }
     ]
   },
   {
@@ -52296,6 +52660,24 @@
             "character": "yumemizuki_mizuki",
             "target": "pyro",
             "ratio": 0.04
+          }
+        ],
+        "stats": [
+          {
+            "stat": "enemypyrores",
+            "value": -20
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -20
+          },
+          {
+            "stat": "enemycryores",
+            "value": -20
+          },
+          {
+            "stat": "enemyelectrores",
+            "value": -20
           }
         ]
       }
@@ -70522,6 +70904,3605 @@
           {
             "stat": "lunarcrystalize_elevate",
             "value": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2584,
+    "name": "6.6 Artifact 1 - Wearer - Anemo",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "anemo",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2585,
+    "name": "6.6 Artifact 1 - Wearer - Cryo",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "cryo",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2586,
+    "name": "6.6 Artifact 1 - Wearer - Dendro",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "dendro",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2587,
+    "name": "6.6 Artifact 1 - Wearer - Electro",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "electro",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2588,
+    "name": "6.6 Artifact 1 - Wearer - Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "geo",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2589,
+    "name": "6.6 Artifact 1 - Wearer - Hydro",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "hydro",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2590,
+    "name": "6.6 Artifact 1 - Wearer - Pyro",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "pyro",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2591,
+    "name": "6.6 Artifact 1 - Wearer - Anemo - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "anemo",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2592,
+    "name": "6.6 Artifact 1 - Wearer - Cryo - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "cryo",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2593,
+    "name": "6.6 Artifact 1 - Wearer - Dendro - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "dendro",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2594,
+    "name": "6.6 Artifact 1 - Wearer - Electro - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "electro",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2595,
+    "name": "6.6 Artifact 1 - Wearer - Geo - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "geo",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2596,
+    "name": "6.6 Artifact 1 - Wearer - Hydro - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "hydro",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2597,
+    "name": "6.6 Artifact 1 - Wearer - Pyro - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "pyro",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2598,
+    "name": "6.6 Artifact 1 - Active - Anemo - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "anemo",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2599,
+    "name": "6.6 Artifact 1 - Active - Cryo - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "cryo",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2600,
+    "name": "6.6 Artifact 1 - Active - Dendro - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "dendro",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2601,
+    "name": "6.6 Artifact 1 - Active - Electro - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "electro",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2602,
+    "name": "6.6 Artifact 1 - Active - Geo - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "geo",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2603,
+    "name": "6.6 Artifact 1 - Active - Hydro - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "hydro",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2604,
+    "name": "6.6 Artifact 1 - Active - Pyro - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "pyro",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2605,
+    "name": "6.6 Artifact 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Piece Bonus",
+        "stats": [
+          {
+            "stat": "crit",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2606,
+    "name": "Ruin and Blame - Refine 1 - Unforgivable",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 40
+          },
+          {
+            "stat": "charged",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2607,
+    "name": "Ruin and Blame - Refine 2 - Unforgivable",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 50
+          },
+          {
+            "stat": "charged",
+            "value": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2608,
+    "name": "Ruin and Blame - Refine 3 - Unforgivable",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 60
+          },
+          {
+            "stat": "charged",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2609,
+    "name": "Ruin and Blame - Refine 4 - Unforgivable",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 70
+          },
+          {
+            "stat": "charged",
+            "value": 70
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2610,
+    "name": "Ruin and Blame - Refine 5 - Unforgivable",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 80
+          },
+          {
+            "stat": "charged",
+            "value": 80
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2611,
+    "name": "Ruin and Blame - Refine 1 - Unforgivable - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 70
+          },
+          {
+            "stat": "charged",
+            "value": 70
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2612,
+    "name": "Ruin and Blame - Refine 2 - Unforgivable - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 87.5
+          },
+          {
+            "stat": "charged",
+            "value": 87.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2613,
+    "name": "Ruin and Blame - Refine 3 - Unforgivable - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 105
+          },
+          {
+            "stat": "charged",
+            "value": 105
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2614,
+    "name": "Ruin and Blame - Refine 4 - Unforgivable - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 122.5
+          },
+          {
+            "stat": "charged",
+            "value": 122.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2615,
+    "name": "Ruin and Blame - Refine 5 - Unforgivable - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 140
+          },
+          {
+            "stat": "charged",
+            "value": 140
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2616,
+    "name": "Ruin and Blame - Refine 1 - Irreparable",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "skill",
+            "value": 40
+          },
+          {
+            "stat": "burst",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2617,
+    "name": "Ruin and Blame - Refine 2 - Irreparable",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "skill",
+            "value": 50
+          },
+          {
+            "stat": "burst",
+            "value": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2618,
+    "name": "Ruin and Blame - Refine 3 - Irreparable",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "skill",
+            "value": 60
+          },
+          {
+            "stat": "burst",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2619,
+    "name": "Ruin and Blame - Refine 4 - Irreparable",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "skill",
+            "value": 70
+          },
+          {
+            "stat": "burst",
+            "value": 70
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2620,
+    "name": "Ruin and Blame - Refine 5 - Irreparable",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "skill",
+            "value": 80
+          },
+          {
+            "stat": "burst",
+            "value": 80
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2621,
+    "name": "Ruin and Blame - Refine 1 - Irreparable - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "skill",
+            "value": 70
+          },
+          {
+            "stat": "burst",
+            "value": 70
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2622,
+    "name": "Ruin and Blame - Refine 2 - Irreparable - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "skill",
+            "value": 87.5
+          },
+          {
+            "stat": "burst",
+            "value": 87.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2623,
+    "name": "Ruin and Blame - Refine 3 - Irreparable - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "skill",
+            "value": 105
+          },
+          {
+            "stat": "burst",
+            "value": 105
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2624,
+    "name": "Ruin and Blame - Refine 4 - Irreparable - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "skill",
+            "value": 122.5
+          },
+          {
+            "stat": "burst",
+            "value": 122.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2625,
+    "name": "Ruin and Blame - Refine 5 - Irreparable - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "skill",
+            "value": 140
+          },
+          {
+            "stat": "burst",
+            "value": 140
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2626,
+    "name": "Crown of the Final Scion - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.01,
+            "max": 26,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2627,
+    "name": "Crown of the Final Scion - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.013,
+            "max": 34,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2628,
+    "name": "Crown of the Final Scion - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.016,
+            "max": 42,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2629,
+    "name": "Crown of the Final Scion - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.019,
+            "max": 50,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2630,
+    "name": "Crown of the Final Scion - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.022,
+            "max": 58,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2631,
+    "name": "Crown of the Final Scion - Refine 1 - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "On-field",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.01,
+            "max": 26,
+            "character": "weapon"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Off-field",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.005,
+            "max": 13,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2632,
+    "name": "Crown of the Final Scion - Refine 2 - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "On-field",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.013,
+            "max": 34,
+            "character": "weapon"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Off-field",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.0065,
+            "max": 17,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2633,
+    "name": "Crown of the Final Scion - Refine 3 - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "On-field",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.016,
+            "max": 42,
+            "character": "weapon"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Off-field",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.008,
+            "max": 21,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2634,
+    "name": "Crown of the Final Scion - Refine 4 - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "On-field",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.019,
+            "max": 50,
+            "character": "weapon"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Off-field",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.0095,
+            "max": 25,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2635,
+    "name": "Crown of the Final Scion - Refine 5 - Hexerei",
+    "options": [
+      {
+        "id": 0,
+        "name": "On-field",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.022,
+            "max": 58,
+            "character": "weapon"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Off-field",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "all",
+            "ratio": 0.011,
+            "max": 29,
+            "character": "weapon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2636,
+    "name": "Revelation: Uncreated Light - Level 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.0825,
+            "max": 330
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2637,
+    "name": "Revelation: Uncreated Light - Level 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.09,
+            "max": 360
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2638,
+    "name": "Revelation: Uncreated Light - Level 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.0975,
+            "max": 390
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2639,
+    "name": "Revelation: Uncreated Light - Level 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.105,
+            "max": 420
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2640,
+    "name": "Revelation: Uncreated Light - Level 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.1125,
+            "max": 450
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2641,
+    "name": "Revelation: Uncreated Light - Level 6",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.12,
+            "max": 480
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2642,
+    "name": "Revelation: Uncreated Light - Level 7",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.1275,
+            "max": 510
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2643,
+    "name": "Revelation: Uncreated Light - Level 8",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.135,
+            "max": 540
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2644,
+    "name": "Revelation: Uncreated Light - Level 9",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.1425,
+            "max": 570
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2645,
+    "name": "Revelation: Uncreated Light - Level 10",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.15,
+            "max": 600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2646,
+    "name": "Revelation: Uncreated Light - Level 11",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.159,
+            "max": 636
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2647,
+    "name": "Revelation: Uncreated Light - Level 12",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.168,
+            "max": 672
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2648,
+    "name": "Revelation: Uncreated Light - Level 13",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.177,
+            "max": 708
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2649,
+    "name": "Revelation: Uncreated Light - Level 14",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.186,
+            "max": 744
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2650,
+    "name": "Revelation: Uncreated Light - Level 15",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.195,
+            "max": 780
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2651,
+    "name": "Revelation: Uncreated Light - Level 1 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.0825,
+            "max": 330,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2652,
+    "name": "Revelation: Uncreated Light - Level 2 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.09,
+            "max": 360,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2653,
+    "name": "Revelation: Uncreated Light - Level 3 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.0975,
+            "max": 390,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2654,
+    "name": "Revelation: Uncreated Light - Level 4 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.105,
+            "max": 420,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2655,
+    "name": "Revelation: Uncreated Light - Level 5 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.1125,
+            "max": 450,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2656,
+    "name": "Revelation: Uncreated Light - Level 6 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.12,
+            "max": 480,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2657,
+    "name": "Revelation: Uncreated Light - Level 7 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.1275,
+            "max": 510,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2658,
+    "name": "Revelation: Uncreated Light - Level 8 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.135,
+            "max": 540,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2659,
+    "name": "Revelation: Uncreated Light - Level 9 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.1425,
+            "max": 570,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2660,
+    "name": "Revelation: Uncreated Light - Level 10 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.15,
+            "max": 600,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2661,
+    "name": "Revelation: Uncreated Light - Level 11 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.159,
+            "max": 636,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2662,
+    "name": "Revelation: Uncreated Light - Level 12 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.168,
+            "max": 672,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2663,
+    "name": "Revelation: Uncreated Light - Level 13 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.177,
+            "max": 708,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2664,
+    "name": "Revelation: Uncreated Light - Level 14 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.186,
+            "max": 744,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2665,
+    "name": "Revelation: Uncreated Light - Level 15 - \"I Will Guide You and Show You the Path You Should Tread\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "target": "atk",
+            "ratio": 0.195,
+            "max": 780,
+            "add": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2666,
+    "name": "Guidance of Theosis",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2667,
+    "name": "Guidance of Theosis - \"I Will Guide You and Show You the Path You Should Tread\" - Anemo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemyanemores",
+            "value": -25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2668,
+    "name": "Guidance of Theosis - \"I Will Guide You and Show You the Path You Should Tread\" - Cryo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemycryores",
+            "value": -25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2669,
+    "name": "Guidance of Theosis - \"I Will Guide You and Show You the Path You Should Tread\" - Dendro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemydendrores",
+            "value": -25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2670,
+    "name": "Guidance of Theosis - \"I Will Guide You and Show You the Path You Should Tread\" - Electro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemyelectrores",
+            "value": -25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2671,
+    "name": "Guidance of Theosis - \"I Will Guide You and Show You the Path You Should Tread\" - Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemygeores",
+            "value": -25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2672,
+    "name": "Guidance of Theosis - \"I Will Guide You and Show You the Path You Should Tread\" - Hydro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2673,
+    "name": "Guidance of Theosis - \"I Will Guide You and Show You the Path You Should Tread\" - Pyro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemypyrores",
+            "value": -25
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Inactive",
+        "stats": [
+          {
+            "stat": "enemypyrores",
+            "value": -25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2674,
+    "name": "Guidance of Theosis - \"This Is the Path, Walk It Without Delay\" - Anemo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemyanemores",
+            "value": -25
+          },
+          {
+            "stat": "defignore",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2675,
+    "name": "Guidance of Theosis - \"This Is the Path, Walk It Without Delay\" - Cryo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemycryores",
+            "value": -25
+          },
+          {
+            "stat": "defignore",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2676,
+    "name": "Guidance of Theosis - \"This Is the Path, Walk It Without Delay\" - Dendro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemydendrores",
+            "value": -25
+          },
+          {
+            "stat": "defignore",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2677,
+    "name": "Guidance of Theosis - \"This Is the Path, Walk It Without Delay\" - Electro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemyelectrores",
+            "value": -25
+          },
+          {
+            "stat": "defignore",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2678,
+    "name": "Guidance of Theosis - \"This Is the Path, Walk It Without Delay\" - Geo",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemygeores",
+            "value": -25
+          },
+          {
+            "stat": "defignore",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2679,
+    "name": "Guidance of Theosis - \"This Is the Path, Walk It Without Delay\" - Hydro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemyhydrores",
+            "value": -25
+          },
+          {
+            "stat": "defignore",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2680,
+    "name": "Guidance of Theosis - \"This Is the Path, Walk It Without Delay\" - Pyro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemypyrores",
+            "value": -25
+          },
+          {
+            "stat": "defignore",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2681,
+    "name": "Witch's Eve Rite: Light in the Darkness",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "ratio": 300,
+            "target_vision": "shared",
+            "target_type": "nicole",
+            "custom_name": "Nicole's Attack to Astral Projection"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2682,
+    "name": "\"Whether Left or Right, No Matter Which Way You Turn\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "character": "nicole",
+            "ratio": 70,
+            "target_vision": "all",
+            "target_type": "normal"
+          },
+          {
+            "source": "atk",
+            "character": "nicole",
+            "ratio": 70,
+            "target_vision": "all",
+            "target_type": "charged"
+          },
+          {
+            "source": "atk",
+            "character": "nicole",
+            "ratio": 70,
+            "target_vision": "all",
+            "target_type": "plunge"
+          },
+          {
+            "source": "atk",
+            "character": "nicole",
+            "ratio": 70,
+            "target_vision": "all",
+            "target_type": "skill"
+          },
+          {
+            "source": "atk",
+            "character": "nicole",
+            "ratio": 70,
+            "target_vision": "all",
+            "target_type": "burst"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2683,
+    "name": "Will to Win",
+    "input": {
+      "min": 0,
+      "max": 100,
+      "decimal": 0,
+      "stats": [
+        {
+          "stat": "specialmeter",
+          "multiplier": 1,
+          "custom_name": "Will to Win"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2684,
+    "name": "Will to Win - Yesterday's Breeze, Laden With Sorrowful Song",
+    "input": {
+      "min": 0,
+      "max": 300,
+      "decimal": 0,
+      "stats": [
+        {
+          "stat": "specialmeter",
+          "multiplier": 1,
+          "custom_name": "Will to Win"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2685,
+    "name": "Will to Win - Unforeseen Strike",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "skill",
+            "ratio": 0.4,
+            "custom_name": "Will to Win to Unforeseen Strike DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2686,
+    "name": "Will to Win - Manifest Judgment",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "specialmeter",
+            "target": "burst",
+            "ratio": 0.4,
+            "custom_name": "Will to Win to Manifest Judgment DMG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2687,
+    "name": "When the Mood Strikes",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "levelskill",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2688,
+    "name": "Flippant Masterpiece",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2689,
+    "name": "Witch's Eve Rite: Unhealing Thorn",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "normal",
+            "value": 40
+          },
+          {
+            "stat": "charged",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2690,
+    "name": "In Flight, I Strike Whatever Flies - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2691,
+    "name": "To Drown, to Sink, Unconscious — Supreme Joy",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "critdmgskill",
+            "value": 175
+          },
+          {
+            "stat": "critdmgburst",
+            "value": 175
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2692,
+    "name": "Tolling Synchronicity",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "character": "prune",
+            "target": "normal",
+            "ratio": 0.025,
+            "min": 2000,
+            "max": 50
+          },
+          {
+            "source": "atk",
+            "character": "prune",
+            "target": "charged",
+            "ratio": 0.025,
+            "min": 2000,
+            "max": 50
+          },
+          {
+            "source": "atk",
+            "character": "prune",
+            "target": "plunge",
+            "ratio": 0.025,
+            "min": 2000,
+            "max": 50
+          },
+          {
+            "source": "atk",
+            "character": "prune",
+            "target": "skill",
+            "ratio": 0.025,
+            "min": 2000,
+            "max": 50
+          },
+          {
+            "source": "atk",
+            "character": "prune",
+            "target": "burst",
+            "ratio": 0.025,
+            "min": 2000,
+            "max": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2693,
+    "name": "Witch's Eve Rite: Witchseeker's Vow - Personal",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2694,
+    "name": "Witch's Eve Rite: Witchseeker's Vow - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 30
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2695,
+    "name": "Useful for Cleaning Messy Baggage, Elemental Powers Are Indeed",
+    "options": [
+      {
+        "id": 0,
+        "name": "6 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 35
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 25
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 15
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "0 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2696,
+    "name": "And That's the Story! Share It With Your Friends!",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 350
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2697,
+    "name": "Guidance of Theosis",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2698,
+    "name": "Guidance of Theosis - \"I Will Guide You and Show You the Path You Should Tread\" - Pyro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemypyrores",
+            "value": -25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2699,
+    "name": "Guidance of Theosis - \"This Is the Path, Walk It Without Delay\" - Pyro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active",
+        "stats": [
+          {
+            "stat": "atk",
+            "value": 300
+          },
+          {
+            "stat": "enemypyrores",
+            "value": -25
+          },
+          {
+            "stat": "defignore",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2700,
+    "name": "Guidance of Theosis - \"I Will Guide You and Show You the Path You Should Tread\" - Pyro",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active",
+        "stats": [
+          {
+            "stat": "enemypyrores",
+            "value": -25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2701,
+    "name": "Bane of Evil - Radiance: Stellar-Conduct",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active",
+        "stats": [
+          {
+            "stat": "enemycryores",
+            "value": -15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2702,
+    "name": "Bane of Evil - Radiance: Stellar-Conduct",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active",
+        "stats": [
+          {
+            "stat": "enemycryores",
+            "value": -15
+          },
+          {
+            "stat": "elemastery",
+            "value": 200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2703,
+    "name": "Cat's Tail Closing Time - Personal",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active",
+        "stats": [
+          {
+            "stat": "hp%",
+            "value": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2704,
+    "name": "Seven Sacred Treasures",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active",
+        "stats": [
+          {
+            "stat": "superconduct",
+            "value": 50
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 50
+          },
+          {
+            "stat": "swirlcryo",
+            "value": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2705,
+    "name": "Frozen to the Bone - Radiance: Stellar-Conduct",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2706,
+    "name": "Rite of Resurrection - Radiance: Stellar-Conduct",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "ratio": 600,
+            "target_vision": "reactions",
+            "target_type": "stellarconduct",
+            "character": "qiqi"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2707,
+    "name": "Vast Be the Dream - Personal",
+    "options": [
+      {
+        "id": 0,
+        "name": "Use Skill",
+        "bonusdmg": [
+          {
+            "source": "elemastery",
+            "ratio": 1000,
+            "target_vision": "alt",
+            "target_type": "alt1",
+            "custom_name": "Elemental Mastery to Continuous Dreamdifter"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2708,
+    "name": "Vast Be the Dream - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "elemastery",
+            "ratio": 0.1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2709,
+    "name": "The Heart Lingers Long - Personal",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "elemastery",
+            "target": "crit",
+            "ratio": 0.04,
+            "min": 500,
+            "max": 20
+          },
+          {
+            "source": "elemastery",
+            "target": "critdmg",
+            "ratio": 0.16,
+            "min": 500,
+            "max": 80
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2710,
+    "name": "Ordinance: Unceasing Vigil - Protection of Anubis",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2711,
+    "name": "Ceremony: Homecoming of Spirits - Protection of Anubis",
+    "options": [
+      {
+        "id": 0,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 200
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 50
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 200
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 200
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 200
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 200
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "0 Stacks",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2712,
+    "name": "There Shall Be an Unveiling for Injustice",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2713,
+    "name": "Terror for the Evildoers - Repelling Fist 5 Hit",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active",
+        "stats": [
+          {
+            "stat": "alt2",
+            "value": 50,
+            "custom_name": "Repelling Fist 5 Hit"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2713,
+    "name": "Terror for the Evildoers - Luster: Vaulting Fist",
+    "options": [
+      {
+        "id": 0,
+        "name": "Active",
+        "stats": [
+          {
+            "stat": "alt3",
+            "value": 50,
+            "custom_name": "Luster: Vaulting Fist"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2714,
+    "name": "There Shall Be a Reckoning for Sin",
+    "options": [
+      {
+        "id": 0,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 18
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2715,
+    "name": "Shackles for the Arrogant",
+    "options": [
+      {
+        "id": 0,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 200
+          },
+          {
+            "stat": "atk%",
+            "value": 30
+          },
+          {
+            "stat": "normal_mult",
+            "value": 125
+          },
+          {
+            "stat": "charged_mult",
+            "value": 130
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 160
+          },
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 120
+          },
+          {
+            "stat": "atk%",
+            "value": 18
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 80
+          },
+          {
+            "stat": "atk%",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 40
+          },
+          {
+            "stat": "atk%",
+            "value": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2715,
+    "name": "Shackles for the Arrogant - Polestar Field",
+    "options": [
+      {
+        "id": 0,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 200
+          },
+          {
+            "stat": "atk%",
+            "value": 30
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 150,
+            "custom_name": "Stellar-Conduct Multiplier"
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 150,
+            "hidden": true
+          },
+          {
+            "stat": "alt3_mult",
+            "value": 150,
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 160
+          },
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 120
+          },
+          {
+            "stat": "atk%",
+            "value": 18
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 80
+          },
+          {
+            "stat": "atk%",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 40
+          },
+          {
+            "stat": "atk%",
+            "value": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2716,
+    "name": "Esteem for the Innocent",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critcharged",
+            "value": 10
+          },
+          {
+            "stat": "critdmgcharged",
+            "value": 80
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2717,
+    "name": "Esteem for the Innocent - Radiance: Stellar-Conduct",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "critcharged",
+            "value": 10
+          },
+          {
+            "stat": "critdmgcharged",
+            "value": 80
+          },
+          {
+            "stat": "critnormal",
+            "value": 10
+          },
+          {
+            "stat": "critdmgnormal",
+            "value": 80
+          },
+          {
+            "stat": "critstellarconduct",
+            "value": 10
+          },
+          {
+            "stat": "critdmgstellarconduct",
+            "value": 80
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2718,
+    "name": "Light of Rationalisme",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "atk",
+            "character": "sandrone",
+            "target": "stellarconduct_base",
+            "ratio": 0.007,
+            "max": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2719,
+    "name": "Archaic Calculation Engine - Skill",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "alt1_mult",
+            "value": 400,
+            "custom_name": "Prism Shot Multiplier"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2720,
+    "name": "Archaic Calculation Engine - Burst",
+    "options": [
+      {
+        "id": 0,
+        "name": "10 Stacks",
+        "stats": [
+          {
+            "stat": "alt2_mult",
+            "value": 200,
+            "custom_name": "Convective Inhibition Ray Multiplier"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "9 Stacks",
+        "stats": [
+          {
+            "stat": "alt2_mult",
+            "value": 190,
+            "custom_name": "Convective Inhibition Ray Multiplier"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "8 Stacks",
+        "stats": [
+          {
+            "stat": "alt2_mult",
+            "value": 180,
+            "custom_name": "Convective Inhibition Ray Multiplier"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "7 Stacks",
+        "stats": [
+          {
+            "stat": "alt2_mult",
+            "value": 170,
+            "custom_name": "Convective Inhibition Ray Multiplier"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "6 Stacks",
+        "stats": [
+          {
+            "stat": "alt2_mult",
+            "value": 160,
+            "custom_name": "Convective Inhibition Ray Multiplier"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "alt2_mult",
+            "value": 150,
+            "custom_name": "Convective Inhibition Ray Multiplier"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "alt2_mult",
+            "value": 140,
+            "custom_name": "Convective Inhibition Ray Multiplier"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "alt2_mult",
+            "value": 130,
+            "custom_name": "Convective Inhibition Ray Multiplier"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "alt2_mult",
+            "value": 120,
+            "custom_name": "Convective Inhibition Ray Multiplier"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "alt2_mult",
+            "value": 110,
+            "custom_name": "Convective Inhibition Ray Multiplier"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2721,
+    "name": "A Lady's Code of Conduct",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "elemastery",
+            "ratio": 0.08,
+            "max": 160
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2722,
+    "name": "Morrow After the Golden Dusk",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 30
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2723,
+    "name": "An Heiress Gazed Into the Looking-Glass",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "ratio": 300,
+            "target_vision": "alt",
+            "target_type": "alt3",
+            "custom_name": "Attack to Condensed Beam Stellar-Conduct"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "ratio": 240,
+            "target_vision": "alt",
+            "target_type": "alt3",
+            "custom_name": "Attack to Condensed Beam Stellar-Conduct"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "ratio": 180,
+            "target_vision": "alt",
+            "target_type": "alt3",
+            "custom_name": "Attack to Condensed Beam Stellar-Conduct"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "0 Stacks",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "ratio": 120,
+            "target_vision": "alt",
+            "target_type": "alt3",
+            "custom_name": "Attack to Condensed Beam Stellar-Conduct"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2724,
+    "name": "Narcissus Wakes, Her Eyes Upon the Dawn",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct_elevate",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2725,
+    "name": "The White Queen's Ascension - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 16
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 60
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 16
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 16
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "0 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 16
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2726,
+    "name": "The White Queen's Ascension - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 75
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 50
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 25
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "0 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2727,
+    "name": "The White Queen's Ascension - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 24
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 90
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 24
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 60
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 24
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "0 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2728,
+    "name": "The White Queen's Ascension - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 28
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 105
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 28
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 70
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 28
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 35
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "0 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 28
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2729,
+    "name": "The White Queen's Ascension - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 32
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 120
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 32
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 80
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 32
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "0 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 32
           }
         ]
       }
