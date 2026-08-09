@@ -2687,7 +2687,7 @@
         "stats": [
           {
             "stat": "stellarconduct_direct_mult",
-            "value": 189
+            "value": 190
           },
           {
             "stat": "electro",
@@ -2723,7 +2723,7 @@
         "stats": [
           {
             "stat": "stellarconduct_direct_mult",
-            "value": 179
+            "value": 180
           },
           {
             "stat": "electro",
@@ -2777,7 +2777,7 @@
         "stats": [
           {
             "stat": "stellarconduct_direct_mult",
-            "value": 164
+            "value": 165
           },
           {
             "stat": "electro",
@@ -2813,7 +2813,7 @@
         "stats": [
           {
             "stat": "stellarconduct_direct_mult",
-            "value": 154
+            "value": 155
           },
           {
             "stat": "electro",
@@ -21915,6 +21915,10 @@
             "value": 36
           },
           {
+            "stat": "stellarconduct",
+            "value": 36
+          },
+          {
             "stat": "elemental",
             "value": 12
           }
@@ -21927,6 +21931,10 @@
           {
             "stat": "skill",
             "value": 24
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 24
           }
         ]
       },
@@ -21936,6 +21944,10 @@
         "stats": [
           {
             "stat": "skill",
+            "value": 12
+          },
+          {
+            "stat": "stellarconduct",
             "value": 12
           }
         ]
@@ -21955,6 +21967,10 @@
             "value": 45
           },
           {
+            "stat": "stellarconduct",
+            "value": 45
+          },
+          {
             "stat": "elemental",
             "value": 15
           }
@@ -21967,6 +21983,10 @@
           {
             "stat": "skill",
             "value": 30
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 30
           }
         ]
       },
@@ -21976,6 +21996,10 @@
         "stats": [
           {
             "stat": "skill",
+            "value": 15
+          },
+          {
+            "stat": "stellarconduct",
             "value": 15
           }
         ]
@@ -21995,6 +22019,10 @@
             "value": 54
           },
           {
+            "stat": "stellarconduct",
+            "value": 54
+          },
+          {
             "stat": "elemental",
             "value": 18
           }
@@ -22007,6 +22035,10 @@
           {
             "stat": "skill",
             "value": 36
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 36
           }
         ]
       },
@@ -22016,6 +22048,10 @@
         "stats": [
           {
             "stat": "skill",
+            "value": 18
+          },
+          {
+            "stat": "stellarconduct",
             "value": 18
           }
         ]
@@ -22035,6 +22071,10 @@
             "value": 63
           },
           {
+            "stat": "stellarconduct",
+            "value": 63
+          },
+          {
             "stat": "elemental",
             "value": 21
           }
@@ -22047,6 +22087,10 @@
           {
             "stat": "skill",
             "value": 42
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 42
           }
         ]
       },
@@ -22056,6 +22100,10 @@
         "stats": [
           {
             "stat": "skill",
+            "value": 21
+          },
+          {
+            "stat": "stellarconduct",
             "value": 21
           }
         ]
@@ -22075,6 +22123,10 @@
             "value": 72
           },
           {
+            "stat": "stellarconduct",
+            "value": 72
+          },
+          {
             "stat": "elemental",
             "value": 24
           }
@@ -22087,6 +22139,10 @@
           {
             "stat": "skill",
             "value": 48
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 48
           }
         ]
       },
@@ -22096,6 +22152,10 @@
         "stats": [
           {
             "stat": "skill",
+            "value": 24
+          },
+          {
+            "stat": "stellarconduct",
             "value": 24
           }
         ]
@@ -31032,11 +31092,11 @@
         "stats": [
           {
             "stat": "hp%",
-            "value": 20
+            "value": 32
           },
           {
             "stat": "elemastery",
-            "value": 80
+            "value": 40
           }
         ]
       }
@@ -31052,11 +31112,11 @@
         "stats": [
           {
             "stat": "hp%",
-            "value": 25
+            "value": 40
           },
           {
             "stat": "elemastery",
-            "value": 100
+            "value": 50
           }
         ]
       }
@@ -31072,11 +31132,11 @@
         "stats": [
           {
             "stat": "hp%",
-            "value": 30
+            "value": 48
           },
           {
             "stat": "elemastery",
-            "value": 120
+            "value": 60
           }
         ]
       }
@@ -31092,11 +31152,11 @@
         "stats": [
           {
             "stat": "hp%",
-            "value": 35
+            "value": 56
           },
           {
             "stat": "elemastery",
-            "value": 140
+            "value": 70
           }
         ]
       }
@@ -31112,11 +31172,11 @@
         "stats": [
           {
             "stat": "hp%",
-            "value": 40
+            "value": 64
           },
           {
             "stat": "elemastery",
-            "value": 160
+            "value": 80
           }
         ]
       }
@@ -32978,6 +33038,10 @@
             "value": 42
           },
           {
+            "stat": "stellarconduct",
+            "value": 42
+          },
+          {
             "stat": "aspeed",
             "value": 8
           }
@@ -32994,6 +33058,10 @@
           {
             "stat": "charged",
             "value": 28
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 28
           }
         ]
       },
@@ -33007,6 +33075,10 @@
           },
           {
             "stat": "charged",
+            "value": 14
+          },
+          {
+            "stat": "stellarconduct",
             "value": 14
           }
         ]
@@ -33030,6 +33102,10 @@
             "value": 52.5
           },
           {
+            "stat": "stellarconduct",
+            "value": 52.5
+          },
+          {
             "stat": "aspeed",
             "value": 10
           }
@@ -33046,6 +33122,10 @@
           {
             "stat": "charged",
             "value": 35
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 36
           }
         ]
       },
@@ -33059,6 +33139,10 @@
           },
           {
             "stat": "charged",
+            "value": 17.5
+          },
+          {
+            "stat": "stellarconduct",
             "value": 17.5
           }
         ]
@@ -33082,6 +33166,10 @@
             "value": 63
           },
           {
+            "stat": "stellarconduct",
+            "value": 63
+          },
+          {
             "stat": "aspeed",
             "value": 12
           }
@@ -33098,6 +33186,10 @@
           {
             "stat": "charged",
             "value": 42
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 42
           }
         ]
       },
@@ -33111,6 +33203,10 @@
           },
           {
             "stat": "charged",
+            "value": 21
+          },
+          {
+            "stat": "stellarconduct",
             "value": 21
           }
         ]
@@ -33134,6 +33230,10 @@
             "value": 73.5
           },
           {
+            "stat": "stellarconduct",
+            "value": 73.5
+          },
+          {
             "stat": "aspeed",
             "value": 14
           }
@@ -33150,6 +33250,10 @@
           {
             "stat": "charged",
             "value": 49
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 49
           }
         ]
       },
@@ -33163,6 +33267,10 @@
           },
           {
             "stat": "charged",
+            "value": 24.5
+          },
+          {
+            "stat": "stellarconduct",
             "value": 24.5
           }
         ]
@@ -33186,6 +33294,10 @@
             "value": 84
           },
           {
+            "stat": "stellarconduct",
+            "value": 84
+          },
+          {
             "stat": "aspeed",
             "value": 16
           }
@@ -33202,6 +33314,10 @@
           {
             "stat": "charged",
             "value": 56
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 56
           }
         ]
       },
@@ -33215,6 +33331,10 @@
           },
           {
             "stat": "charged",
+            "value": 28
+          },
+          {
+            "stat": "stellarconduct",
             "value": 28
           }
         ]
@@ -52301,6 +52421,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.18
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.018
           }
         ]
       }
@@ -52320,6 +52446,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.21
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.021
           }
         ]
       }
@@ -52339,6 +52471,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.24
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.024
           }
         ]
       }
@@ -52358,6 +52496,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.27
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.027
           }
         ]
       }
@@ -52377,6 +52521,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.3
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.03
           }
         ]
       }
@@ -52396,6 +52546,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.33
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.033
           }
         ]
       }
@@ -52415,6 +52571,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.36
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.036
           }
         ]
       }
@@ -52434,6 +52596,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.39
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.039
           }
         ]
       }
@@ -52453,6 +52621,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.42
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.042
           }
         ]
       }
@@ -52472,6 +52646,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.45
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.045
           }
         ]
       }
@@ -52491,6 +52671,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.48
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.048
           }
         ]
       }
@@ -52510,6 +52696,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.51
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.051
           }
         ]
       }
@@ -52529,6 +52721,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.54
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.054
           }
         ]
       }
@@ -52548,6 +52746,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.57
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.057
           }
         ]
       }
@@ -52567,6 +52771,12 @@
             "character": "yumemizuki_mizuki",
             "target": "swirl",
             "ratio": 0.6
+          },
+          {
+            "source": "elemastery",
+            "character": "yumemizuki_mizuki",
+            "target": "stellarswirl",
+            "ratio": 0.06
           }
         ]
       }
@@ -52623,6 +52833,13 @@
             "target_vision": "reactions",
             "target_type": "swirlpyro",
             "character": "yumemizuki_mizuki"
+          },
+          {
+            "source": "elemastery",
+            "ratio": 550,
+            "target_vision": "reactions",
+            "target_type": "stellarswirl",
+            "character": "yumemizuki_mizuki"
           }
         ]
       }
@@ -52664,6 +52881,10 @@
         ],
         "stats": [
           {
+            "stat": "enemyanemores",
+            "value": -20
+          },
+          {
             "stat": "enemypyrores",
             "value": -20
           },
@@ -52698,6 +52919,14 @@
           {
             "stat": "critdmgswirl",
             "value": 100
+          },
+          {
+            "stat": "critstellarswirl",
+            "value": 10
+          },
+          {
+            "stat": "critdmgstellarswirl",
+            "value": 20
           }
         ]
       }
@@ -70911,7 +71140,7 @@
   },
   {
     "id": 2584,
-    "name": "6.6 Artifact 1 - Wearer - Anemo",
+    "name": "Celestial Gift - Wearer - Anemo",
     "options": [
       {
         "id": 0,
@@ -70927,7 +71156,7 @@
   },
   {
     "id": 2585,
-    "name": "6.6 Artifact 1 - Wearer - Cryo",
+    "name": "Celestial Gift - Wearer - Cryo",
     "options": [
       {
         "id": 0,
@@ -70943,7 +71172,7 @@
   },
   {
     "id": 2586,
-    "name": "6.6 Artifact 1 - Wearer - Dendro",
+    "name": "Celestial Gift - Wearer - Dendro",
     "options": [
       {
         "id": 0,
@@ -70959,7 +71188,7 @@
   },
   {
     "id": 2587,
-    "name": "6.6 Artifact 1 - Wearer - Electro",
+    "name": "Celestial Gift - Wearer - Electro",
     "options": [
       {
         "id": 0,
@@ -70975,7 +71204,7 @@
   },
   {
     "id": 2588,
-    "name": "6.6 Artifact 1 - Wearer - Geo",
+    "name": "Celestial Gift - Wearer - Geo",
     "options": [
       {
         "id": 0,
@@ -70991,7 +71220,7 @@
   },
   {
     "id": 2589,
-    "name": "6.6 Artifact 1 - Wearer - Hydro",
+    "name": "Celestial Gift - Wearer - Hydro",
     "options": [
       {
         "id": 0,
@@ -71007,7 +71236,7 @@
   },
   {
     "id": 2590,
-    "name": "6.6 Artifact 1 - Wearer - Pyro",
+    "name": "Celestial Gift - Wearer - Pyro",
     "options": [
       {
         "id": 0,
@@ -71023,7 +71252,7 @@
   },
   {
     "id": 2591,
-    "name": "6.6 Artifact 1 - Wearer - Anemo - Hexerei",
+    "name": "Celestial Gift - Wearer - Anemo - Hexerei",
     "options": [
       {
         "id": 0,
@@ -71039,7 +71268,7 @@
   },
   {
     "id": 2592,
-    "name": "6.6 Artifact 1 - Wearer - Cryo - Hexerei",
+    "name": "Celestial Gift - Wearer - Cryo - Hexerei",
     "options": [
       {
         "id": 0,
@@ -71055,7 +71284,7 @@
   },
   {
     "id": 2593,
-    "name": "6.6 Artifact 1 - Wearer - Dendro - Hexerei",
+    "name": "Celestial Gift - Wearer - Dendro - Hexerei",
     "options": [
       {
         "id": 0,
@@ -71071,7 +71300,7 @@
   },
   {
     "id": 2594,
-    "name": "6.6 Artifact 1 - Wearer - Electro - Hexerei",
+    "name": "Celestial Gift - Wearer - Electro - Hexerei",
     "options": [
       {
         "id": 0,
@@ -71087,7 +71316,7 @@
   },
   {
     "id": 2595,
-    "name": "6.6 Artifact 1 - Wearer - Geo - Hexerei",
+    "name": "Celestial Gift - Wearer - Geo - Hexerei",
     "options": [
       {
         "id": 0,
@@ -71103,7 +71332,7 @@
   },
   {
     "id": 2596,
-    "name": "6.6 Artifact 1 - Wearer - Hydro - Hexerei",
+    "name": "Celestial Gift - Wearer - Hydro - Hexerei",
     "options": [
       {
         "id": 0,
@@ -71119,7 +71348,7 @@
   },
   {
     "id": 2597,
-    "name": "6.6 Artifact 1 - Wearer - Pyro - Hexerei",
+    "name": "Celestial Gift - Wearer - Pyro - Hexerei",
     "options": [
       {
         "id": 0,
@@ -71135,7 +71364,7 @@
   },
   {
     "id": 2598,
-    "name": "6.6 Artifact 1 - Active - Anemo - Hexerei",
+    "name": "Celestial Gift - Active - Anemo - Hexerei",
     "options": [
       {
         "id": 0,
@@ -71151,7 +71380,7 @@
   },
   {
     "id": 2599,
-    "name": "6.6 Artifact 1 - Active - Cryo - Hexerei",
+    "name": "Celestial Gift - Active - Cryo - Hexerei",
     "options": [
       {
         "id": 0,
@@ -71167,7 +71396,7 @@
   },
   {
     "id": 2600,
-    "name": "6.6 Artifact 1 - Active - Dendro - Hexerei",
+    "name": "Celestial Gift - Active - Dendro - Hexerei",
     "options": [
       {
         "id": 0,
@@ -71183,7 +71412,7 @@
   },
   {
     "id": 2601,
-    "name": "6.6 Artifact 1 - Active - Electro - Hexerei",
+    "name": "Celestial Gift - Active - Electro - Hexerei",
     "options": [
       {
         "id": 0,
@@ -71199,7 +71428,7 @@
   },
   {
     "id": 2602,
-    "name": "6.6 Artifact 1 - Active - Geo - Hexerei",
+    "name": "Celestial Gift - Active - Geo - Hexerei",
     "options": [
       {
         "id": 0,
@@ -71215,7 +71444,7 @@
   },
   {
     "id": 2603,
-    "name": "6.6 Artifact 1 - Active - Hydro - Hexerei",
+    "name": "Celestial Gift - Active - Hydro - Hexerei",
     "options": [
       {
         "id": 0,
@@ -71231,7 +71460,7 @@
   },
   {
     "id": 2604,
-    "name": "6.6 Artifact 1 - Active - Pyro - Hexerei",
+    "name": "Celestial Gift - Active - Pyro - Hexerei",
     "options": [
       {
         "id": 0,
@@ -71247,7 +71476,7 @@
   },
   {
     "id": 2605,
-    "name": "6.6 Artifact 2",
+    "name": "Disenchantment in Deep Shadow",
     "options": [
       {
         "id": 0,
@@ -71255,7 +71484,7 @@
         "stats": [
           {
             "stat": "crit",
-            "value": 20
+            "value": 16
           }
         ]
       }
@@ -73361,16 +73590,12 @@
   },
   {
     "id": 2702,
-    "name": "Bane of Evil - Radiance: Stellar-Conduct",
+    "name": "Bane of Evil - Radiance: Stellar-Conduct - Active",
     "options": [
       {
         "id": 0,
         "name": "Active",
         "stats": [
-          {
-            "stat": "enemycryores",
-            "value": -15
-          },
           {
             "stat": "elemastery",
             "value": 200
@@ -73414,6 +73639,10 @@
           {
             "stat": "swirlcryo",
             "value": 50
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 50
           }
         ]
       }
@@ -73448,6 +73677,13 @@
             "ratio": 600,
             "target_vision": "reactions",
             "target_type": "stellarconduct",
+            "character": "qiqi"
+          },
+          {
+            "source": "atk",
+            "ratio": 600,
+            "target_vision": "reactions",
+            "target_type": "stellarswirl",
             "character": "qiqi"
           }
         ]
@@ -73631,7 +73867,7 @@
         "stats": [
           {
             "stat": "stellarconduct",
-            "value": 50
+            "value": 30
           }
         ]
       }
@@ -73655,7 +73891,7 @@
     ]
   },
   {
-    "id": 2713,
+    "id": 2714,
     "name": "Terror for the Evildoers - Luster: Vaulting Fist",
     "options": [
       {
@@ -73672,235 +73908,9 @@
     ]
   },
   {
-    "id": 2714,
-    "name": "There Shall Be a Reckoning for Sin",
-    "options": [
-      {
-        "id": 0,
-        "name": "5 Stacks",
-        "stats": [
-          {
-            "stat": "atk%",
-            "value": 30
-          }
-        ]
-      },
-      {
-        "id": 1,
-        "name": "4 Stacks",
-        "stats": [
-          {
-            "stat": "atk%",
-            "value": 24
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "name": "3 Stacks",
-        "stats": [
-          {
-            "stat": "atk%",
-            "value": 18
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "name": "2 Stacks",
-        "stats": [
-          {
-            "stat": "atk%",
-            "value": 12
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "name": "1 Stack",
-        "stats": [
-          {
-            "stat": "atk%",
-            "value": 6
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": 2715,
-    "name": "Shackles for the Arrogant",
-    "options": [
-      {
-        "id": 0,
-        "name": "5 Stacks",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 200
-          },
-          {
-            "stat": "atk%",
-            "value": 30
-          },
-          {
-            "stat": "normal_mult",
-            "value": 125
-          },
-          {
-            "stat": "charged_mult",
-            "value": 130
-          }
-        ]
-      },
-      {
-        "id": 1,
-        "name": "4 Stacks",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 160
-          },
-          {
-            "stat": "atk%",
-            "value": 24
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "name": "3 Stacks",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 120
-          },
-          {
-            "stat": "atk%",
-            "value": 18
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "name": "2 Stacks",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 80
-          },
-          {
-            "stat": "atk%",
-            "value": 12
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "name": "1 Stack",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 40
-          },
-          {
-            "stat": "atk%",
-            "value": 6
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 2715,
-    "name": "Shackles for the Arrogant - Polestar Field",
-    "options": [
-      {
-        "id": 0,
-        "name": "5 Stacks",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 200
-          },
-          {
-            "stat": "atk%",
-            "value": 30
-          },
-          {
-            "stat": "alt1_mult",
-            "value": 150,
-            "custom_name": "Stellar-Conduct Multiplier"
-          },
-          {
-            "stat": "alt2_mult",
-            "value": 150,
-            "hidden": true
-          },
-          {
-            "stat": "alt3_mult",
-            "value": 150,
-            "hidden": true
-          }
-        ]
-      },
-      {
-        "id": 1,
-        "name": "4 Stacks",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 160
-          },
-          {
-            "stat": "atk%",
-            "value": 24
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "name": "3 Stacks",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 120
-          },
-          {
-            "stat": "atk%",
-            "value": 18
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "name": "2 Stacks",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 80
-          },
-          {
-            "stat": "atk%",
-            "value": 12
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "name": "1 Stack",
-        "stats": [
-          {
-            "stat": "burst",
-            "value": 40
-          },
-          {
-            "stat": "atk%",
-            "value": 6
-          }
-        ]
-      }
-    ]
+    "name": "FREE",
+    "options": []
   },
   {
     "id": 2716,
@@ -73970,6 +73980,13 @@
             "source": "atk",
             "character": "sandrone",
             "target": "stellarconduct_base",
+            "ratio": 0.007,
+            "max": 14
+          },
+          {
+            "source": "atk",
+            "character": "sandrone",
+            "target": "stellarswirl_base",
             "ratio": 0.007,
             "max": 14
           }
@@ -74139,6 +74156,10 @@
           {
             "stat": "stellarconduct",
             "value": 30
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 30
           }
         ]
       }
@@ -74151,52 +74172,44 @@
       {
         "id": 0,
         "name": "3 Stacks",
-        "bonusdmg": [
+        "stats": [
           {
-            "source": "atk",
-            "ratio": 300,
-            "target_vision": "alt",
-            "target_type": "alt3",
-            "custom_name": "Attack to Condensed Beam Stellar-Conduct"
+            "stat": "critdmgalt3",
+            "custom_name": "Condensed Beam Stellar Crit DMG",
+            "value": 100
           }
         ]
       },
       {
         "id": 1,
         "name": "2 Stacks",
-        "bonusdmg": [
+        "stats": [
           {
-            "source": "atk",
-            "ratio": 240,
-            "target_vision": "alt",
-            "target_type": "alt3",
-            "custom_name": "Attack to Condensed Beam Stellar-Conduct"
+            "stat": "critdmgalt3",
+            "custom_name": "Condensed Beam Stellar Crit DMG",
+            "value": 80
           }
         ]
       },
       {
         "id": 2,
         "name": "1 Stack",
-        "bonusdmg": [
+        "stats": [
           {
-            "source": "atk",
-            "ratio": 180,
-            "target_vision": "alt",
-            "target_type": "alt3",
-            "custom_name": "Attack to Condensed Beam Stellar-Conduct"
+            "stat": "critdmgalt3",
+            "custom_name": "Condensed Beam Stellar Crit DMG",
+            "value": 60
           }
         ]
       },
       {
         "id": 3,
         "name": "0 Stacks",
-        "bonusdmg": [
+        "stats": [
           {
-            "source": "atk",
-            "ratio": 120,
-            "target_vision": "alt",
-            "target_type": "alt3",
-            "custom_name": "Attack to Condensed Beam Stellar-Conduct"
+            "stat": "critdmgalt3",
+            "custom_name": "Condensed Beam Stellar Crit DMG",
+            "value": 40
           }
         ]
       }
@@ -74220,7 +74233,7 @@
   },
   {
     "id": 2725,
-    "name": "The White Queen's Ascension - Refine 1",
+    "name": "White Fairy's Queening - Refine 1",
     "options": [
       {
         "id": 0,
@@ -74228,11 +74241,15 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 16
+            "value": 28
           },
           {
             "stat": "stellarconduct",
-            "value": 60
+            "value": 48
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 48
           }
         ]
       },
@@ -74242,11 +74259,15 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 16
+            "value": 28
           },
           {
             "stat": "stellarconduct",
-            "value": 40
+            "value": 32
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 32
           }
         ]
       },
@@ -74256,11 +74277,15 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 16
+            "value": 28
           },
           {
             "stat": "stellarconduct",
-            "value": 20
+            "value": 16
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 16
           }
         ]
       },
@@ -74270,7 +74295,7 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 16
+            "value": 28
           }
         ]
       }
@@ -74278,7 +74303,7 @@
   },
   {
     "id": 2726,
-    "name": "The White Queen's Ascension - Refine 2",
+    "name": "White Fairy's Queening - Refine 2",
     "options": [
       {
         "id": 0,
@@ -74286,11 +74311,15 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 20
+            "value": 35
           },
           {
             "stat": "stellarconduct",
-            "value": 75
+            "value": 60
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 60
           }
         ]
       },
@@ -74300,11 +74329,15 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 20
+            "value": 35
           },
           {
             "stat": "stellarconduct",
-            "value": 50
+            "value": 40
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 40
           }
         ]
       },
@@ -74314,11 +74347,15 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 20
+            "value": 35
           },
           {
             "stat": "stellarconduct",
-            "value": 25
+            "value": 20
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 20
           }
         ]
       },
@@ -74328,7 +74365,7 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 20
+            "value": 35
           }
         ]
       }
@@ -74336,7 +74373,7 @@
   },
   {
     "id": 2727,
-    "name": "The White Queen's Ascension - Refine 3",
+    "name": "White Fairy's Queening - Refine 3",
     "options": [
       {
         "id": 0,
@@ -74344,11 +74381,15 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 24
+            "value": 42
           },
           {
             "stat": "stellarconduct",
-            "value": 90
+            "value": 72
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 72
           }
         ]
       },
@@ -74358,11 +74399,15 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 24
+            "value": 42
           },
           {
             "stat": "stellarconduct",
-            "value": 60
+            "value": 48
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 48
           }
         ]
       },
@@ -74372,11 +74417,15 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 24
+            "value": 42
           },
           {
             "stat": "stellarconduct",
-            "value": 30
+            "value": 24
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 24
           }
         ]
       },
@@ -74386,7 +74435,7 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 24
+            "value": 42
           }
         ]
       }
@@ -74394,7 +74443,7 @@
   },
   {
     "id": 2728,
-    "name": "The White Queen's Ascension - Refine 4",
+    "name": "White Fairy's Queening - Refine 4",
     "options": [
       {
         "id": 0,
@@ -74402,11 +74451,15 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 28
+            "value": 49
           },
           {
             "stat": "stellarconduct",
-            "value": 105
+            "value": 84
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 84
           }
         ]
       },
@@ -74416,11 +74469,15 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 28
+            "value": 49
           },
           {
             "stat": "stellarconduct",
-            "value": 70
+            "value": 56
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 56
           }
         ]
       },
@@ -74430,17 +74487,3616 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 28
+            "value": 49
           },
           {
             "stat": "stellarconduct",
-            "value": 35
+            "value": 28
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 28
           }
         ]
       },
       {
         "id": 3,
         "name": "0 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 49
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2729,
+    "name": "White Fairy's Queening - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 56
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 96
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 96
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 56
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 64
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 64
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 56
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 32
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 32
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "0 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 56
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2730,
+    "name": "There Shall Be a Reckoning for Sin",
+    "options": [
+      {
+        "id": 0,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 18
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2731,
+    "name": "Shackles for the Arrogant",
+    "options": [
+      {
+        "id": 0,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 200
+          },
+          {
+            "stat": "atk%",
+            "value": 30
+          },
+          {
+            "stat": "normal_mult",
+            "value": 125
+          },
+          {
+            "stat": "charged_mult",
+            "value": 130
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 160
+          },
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 120
+          },
+          {
+            "stat": "atk%",
+            "value": 18
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 80
+          },
+          {
+            "stat": "atk%",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 40
+          },
+          {
+            "stat": "atk%",
+            "value": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2732,
+    "name": "Shackles for the Arrogant - Polestar Field",
+    "options": [
+      {
+        "id": 0,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 200
+          },
+          {
+            "stat": "atk%",
+            "value": 30
+          },
+          {
+            "stat": "alt1_mult",
+            "value": 150,
+            "custom_name": "\"There Shall Be an Unveiling for Injustice\" Multiplier"
+          },
+          {
+            "stat": "alt2_mult",
+            "value": 150,
+            "hidden": true
+          },
+          {
+            "stat": "alt3_mult",
+            "value": 150,
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 160
+          },
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 120
+          },
+          {
+            "stat": "atk%",
+            "value": 18
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 80
+          },
+          {
+            "stat": "atk%",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "burst",
+            "value": 40
+          },
+          {
+            "stat": "atk%",
+            "value": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2733,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 14
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2734,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 18
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 18
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2735,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 22
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 22
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2736,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 26
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 26
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2737,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 30
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 30
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2738,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 6",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 34
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 34
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2739,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 7",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 38
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 38
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2740,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 8",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 42
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 42
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2741,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 9",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 46
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 46
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2742,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 10",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 50
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2743,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 11",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 54
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 54
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2744,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 12",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 58
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 58
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2745,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 13",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 62
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 62
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2746,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 14",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 66
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 66
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2747,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 15",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 70
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 70
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2748,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 1 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 7
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 7
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2749,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 2 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 9
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2750,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 3 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 11
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 11
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2751,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 4 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 13
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2752,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 5 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 15
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2753,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 6 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 17
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 17
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2754,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 7 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 19
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 19
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2755,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 8 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 21
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 21
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2756,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 9 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 23
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 23
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2757,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 10 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 25
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2758,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 11 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 27
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 27
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2759,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 12 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 29
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 29
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2760,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 13 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 31
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 31
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2761,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 14 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 33
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 33
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2762,
+    "name": "Fast Dance: A Dream of Sable Feathers - Level 15 - Party",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 35
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2763,
+    "name": "Dance of the Silver Morn",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "atk",
+            "character": "odette",
+            "target": "stellarconduct_base",
+            "ratio": 0.007,
+            "max": 14
+          },
+          {
+            "source": "atk",
+            "character": "odette",
+            "target": "stellarswirl_base",
+            "ratio": 0.007,
+            "max": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2764,
+    "name": "The Chosen One's Spring",
+    "options": [
+      {
+        "id": 0,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 60
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 60
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 45
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 45
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 30
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 15
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2765,
+    "name": "The Chosen One's Spring - \"On This Danceless Morn, She Gazes at Her Double\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "6 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 90
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 90
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 75
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 75
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 60
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 60
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 45
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 45
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 30
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 15
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2766,
+    "name": "The Chosen One's Spring - \"I Must See the Snow Swan's Dream for Myself, She Thought\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "6 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 90
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 90
+          },
+          {
+            "stat": "atk%",
+            "value": 42
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 75
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 75
+          },
+          {
+            "stat": "atk%",
+            "value": 35
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 60
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 60
+          },
+          {
+            "stat": "atk%",
+            "value": 28
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 45
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 45
+          },
+          {
+            "stat": "atk%",
+            "value": 21
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 30
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 30
+          },
+          {
+            "stat": "atk%",
+            "value": 14
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 15
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 15
+          },
+          {
+            "stat": "atk%",
+            "value": 7
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2767,
+    "name": "The Chosen One's Spring - \"Reach Out Your Hand to Touch the Eternal Visage of the Sky\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "6 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 90
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 90
+          },
+          {
+            "stat": "atk%",
+            "value": 42
+          },
+          {
+            "stat": "stellarconduct_elevate",
+            "value": 25
+          },
+          {
+            "stat": "stellarswirl_elevate",
+            "value": 25
+          }
+
+        ]
+      },
+      {
+        "id": 1,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 75
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 75
+          },
+          {
+            "stat": "atk%",
+            "value": 35
+          },
+          {
+            "stat": "stellarconduct_elevate",
+            "value": 25
+          },
+          {
+            "stat": "stellarswirl_elevate",
+            "value": 25
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 60
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 60
+          },
+          {
+            "stat": "atk%",
+            "value": 28
+          },
+          {
+            "stat": "stellarconduct_elevate",
+            "value": 25
+          },
+          {
+            "stat": "stellarswirl_elevate",
+            "value": 25
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 45
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 45
+          },
+          {
+            "stat": "atk%",
+            "value": 21
+          },
+          {
+            "stat": "stellarconduct_elevate",
+            "value": 25
+          },
+          {
+            "stat": "stellarswirl_elevate",
+            "value": 25
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 30
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 30
+          },
+          {
+            "stat": "atk%",
+            "value": 14
+          },
+          {
+            "stat": "stellarconduct_elevate",
+            "value": 25
+          },
+          {
+            "stat": "stellarswirl_elevate",
+            "value": 25
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 15
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 15
+          },
+          {
+            "stat": "atk%",
+            "value": 7
+          },
+          {
+            "stat": "stellarconduct_elevate",
+            "value": 25
+          },
+          {
+            "stat": "stellarswirl_elevate",
+            "value": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2768,
+    "name": "Pathetique of Pateticheskaya",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "order": 1,
+        "transform": [
+          {
+            "source": "atk",
+            "target": "stellarconduct_mult",
+            "ratio": 0.015,
+            "add": 100,
+            "min": 1000,
+            "max": 130
+          },
+          {
+            "source": "atk",
+            "target": "stellarswirl_mult",
+            "ratio": 0.015,
+            "add": 100,
+            "min": 1000,
+            "max": 130
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2769,
+    "name": "\"I Must See the Snow Swan's Dream for Myself, She Thought\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Radiance: Stellar-Conduct",
+        "stats": [
+          {
+            "stat": "enemycryores",
+            "value": -20
+          },
+          {
+            "stat": "enemyelectrores",
+            "value": -20
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Radiance: Stellar Swirl",
+        "stats": [
+          {
+            "stat": "enemycryores",
+            "value": -20
+          },
+          {
+            "stat": "enemyanemores",
+            "value": -20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2770,
+    "name": "\"Reach Out Your Hand to Touch the Eternal Visage of the Sky\"",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "stellarconduct_elevate",
+            "value": 20
+          },
+          {
+            "stat": "stellarswirl_elevate",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2771,
+    "name": "7.0 Set 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "crit",
+            "value": 16
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2772,
+    "name": "7.0 Set 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 12
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 50
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2773,
+    "name": "Hunter's Advance - Level 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 11.66
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2774,
+    "name": "Hunter's Advance - Level 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 12.72
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2775,
+    "name": "Hunter's Advance - Level 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 13.78
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2776,
+    "name": "Hunter's Advance - Level 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 14.84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2777,
+    "name": "Hunter's Advance - Level 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 15.9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2778,
+    "name": "Hunter's Advance - Level 6",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 16.96
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2779,
+    "name": "Hunter's Advance - Level 7",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 18.02
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2780,
+    "name": "Hunter's Advance - Level 8",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 19.08
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2781,
+    "name": "Hunter's Advance - Level 9",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20.14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2782,
+    "name": "Hunter's Advance - Level 10",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 21.2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2783,
+    "name": "Hunter's Advance - Level 11",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 22.47
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2784,
+    "name": "Hunter's Advance - Level 12",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 23.74
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2785,
+    "name": "Hunter's Advance - Level 13",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 25.02
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2786,
+    "name": "Hunter's Advance - Level 14",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 26.29
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2787,
+    "name": "Hunter's Advance - Level 15",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 27.56
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2788,
+    "name": "Hunter's Advance - Level 1 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 11.66
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2789,
+    "name": "Hunter's Advance - Level 2 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 12.72
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2790,
+    "name": "Hunter's Advance - Level 3 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 13.78
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2791,
+    "name": "Hunter's Advance - Level 4 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 14.84
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2792,
+    "name": "Hunter's Advance - Level 5 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 15.9
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2793,
+    "name": "Hunter's Advance - Level 6 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 16.96
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2794,
+    "name": "Hunter's Advance - Level 7 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 18.02
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2795,
+    "name": "Hunter's Advance - Level 8 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 19.08
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2796,
+    "name": "Hunter's Advance - Level 9 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20.14
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2797,
+    "name": "Hunter's Advance - Level 10 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 21.2
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2798,
+    "name": "Hunter's Advance - Level 11 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 22.47
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2799,
+    "name": "Hunter's Advance - Level 12 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 23.74
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2800,
+    "name": "Hunter's Advance - Level 13 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 25.02
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2801,
+    "name": "Hunter's Advance - Level 14 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 26.29
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2802,
+    "name": "Hunter's Advance - Level 15 - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "Permanent",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 27.56
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2803,
+    "name": "Hunter's Advance - Level 1 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 23.32
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 11.66
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2804,
+    "name": "Hunter's Advance - Level 2 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 25.44
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 12.72
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2805,
+    "name": "Hunter's Advance - Level 3 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 27.56
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 13.78
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2806,
+    "name": "Hunter's Advance - Level 4 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 29.68
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 14.84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2807,
+    "name": "Hunter's Advance - Level 5 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 31.8
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 15.9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2808,
+    "name": "Hunter's Advance - Level 6 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 33.92
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 16.96
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2809,
+    "name": "Hunter's Advance - Level 7 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 36.04
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 18.02
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2810,
+    "name": "Hunter's Advance - Level 8 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 38.16
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 19.08
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2811,
+    "name": "Hunter's Advance - Level 9 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 40.28
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20.14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2812,
+    "name": "Hunter's Advance - Level 10 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 42.4
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 21.2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2813,
+    "name": "Hunter's Advance - Level 11 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 44.94
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 22.47
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2814,
+    "name": "Hunter's Advance - Level 12 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 47.48
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 23.74
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2815,
+    "name": "Hunter's Advance - Level 13 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 50.04
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 25.02
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2816,
+    "name": "Hunter's Advance - Level 14 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 52.58
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 26.29
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2817,
+    "name": "Hunter's Advance - Level 15 - Standard Reclaimed",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 55.12
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 27.56
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2818,
+    "name": "Hunter's Advance - Level 1 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 23.32
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 11.66
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2819,
+    "name": "Hunter's Advance - Level 2 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 25.44
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 12.72
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2820,
+    "name": "Hunter's Advance - Level 3 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 27.56
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 13.78
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2821,
+    "name": "Hunter's Advance - Level 4 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 29.68
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 14.84
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2822,
+    "name": "Hunter's Advance - Level 5 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 31.8
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 15.9
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2823,
+    "name": "Hunter's Advance - Level 6 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 33.92
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 16.96
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2824,
+    "name": "Hunter's Advance - Level 7 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 36.04
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 18.02
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2825,
+    "name": "Hunter's Advance - Level 8 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 38.16
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 19.08
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2826,
+    "name": "Hunter's Advance - Level 9 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 40.28
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20.14
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2827,
+    "name": "Hunter's Advance - Level 10 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 42.4
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 21.2
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2828,
+    "name": "Hunter's Advance - Level 11 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 44.94
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 22.47
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2829,
+    "name": "Hunter's Advance - Level 12 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 47.48
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 23.74
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2830,
+    "name": "Hunter's Advance - Level 13 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 50.04
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 25.02
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2831,
+    "name": "Hunter's Advance - Level 14 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 52.58
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 26.29
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2832,
+    "name": "Hunter's Advance - Level 15 - Standard Reclaimed - Into the Fray",
+    "options": [
+      {
+        "id": 0,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 55.12
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 27.56
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2833,
+    "name": "Farewell, Winter Wheat",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "recharge",
+            "target": "skill",
+            "ratio": 0.35
+          },
+          {
+            "source": "recharge",
+            "target": "burst",
+            "ratio": 0.35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2834,
+    "name": "Frostbound Javelin",
+    "options": [
+      {
+        "id": 0,
+        "name": "8 Stacks",
+        "stats": [
+          {
+            "stat": "alt1_mult",
+            "custom_name": "Frostbound Javelin Multiplier",
+            "value": 140
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "7 Stacks",
+        "stats": [
+          {
+            "stat": "alt1_mult",
+            "custom_name": "Frostbound Javelin Multiplier",
+            "value": 135
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "6 Stacks",
+        "stats": [
+          {
+            "stat": "alt1_mult",
+            "custom_name": "Frostbound Javelin Multiplier",
+            "value": 130
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "alt1_mult",
+            "custom_name": "Frostbound Javelin Multiplier",
+            "value": 125
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "alt1_mult",
+            "custom_name": "Frostbound Javelin Multiplier",
+            "value": 120
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "alt1_mult",
+            "custom_name": "Frostbound Javelin Multiplier",
+            "value": 115
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "alt1_mult",
+            "custom_name": "Frostbound Javelin Multiplier",
+            "value": 110
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "alt1_mult",
+            "custom_name": "Frostbound Javelin Multiplier",
+            "value": 105
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2835,
+    "name": "Illusory Frostmirror",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "atk",
+            "character": "traveler_cryo",
+            "target": "stellarconduct_base",
+            "ratio": 0.0035,
+            "max": 7
+          },
+          {
+            "source": "atk",
+            "character": "traveler_cryo",
+            "target": "stellarswirl_base",
+            "ratio": 0.0035,
+            "max": 7
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2836,
+    "name": "Ever-Keen Frost",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "conversion": "cryo",
+        "bonusdmg": [
+          {
+            "source": "atk",
+            "ratio": 80,
+            "target_vision": "all",
+            "target_type": "normal"
+          },
+          {
+            "source": "atk",
+            "ratio": 80,
+            "target_vision": "all",
+            "target_type": "charged"
+          },
+          {
+            "source": "atk",
+            "ratio": 80,
+            "target_vision": "all",
+            "target_type": "plunge"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2837,
+    "name": "Lucent Ice",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "transform": [
+          {
+            "source": "atk",
+            "target": "elemastery",
+            "ratio": 0.08,
+            "max": 160
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2838,
+    "name": "Frostfall Reverberation",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2839,
+    "name": "Brumal Grimfrost",
+    "options": [
+      {
+        "id": 0,
+        "name": "8 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 40
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "7 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 35
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 35
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "6 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 30
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "5 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 25
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 25
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "4 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 15
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 15
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 10
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 5
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2840,
+    "name": "Lone Light’s Blessing - Refine 1",
+    "input": {
+      "min": 0,
+      "max": 20,
+      "decimal": 0,
+      "custom_name": " Distance",
+      "stats": [
+        {
+          "stat": "atk%",
+          "multiplier": 1,
+          "add": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": 2841,
+    "name": "Lone Light’s Blessing - Refine 2",
+    "input": {
+      "min": 0,
+      "max": 25,
+      "decimal": 0,
+      "custom_name": " Distance",
+      "stats": [
+        {
+          "stat": "atk%",
+          "multiplier": 1,
+          "add": 25
+        }
+      ]
+    }
+  },
+  {
+    "id": 2842,
+    "name": "Lone Light’s Blessing - Refine 3",
+    "input": {
+      "min": 0,
+      "max": 30,
+      "decimal": 0,
+      "custom_name": " Distance",
+      "stats": [
+        {
+          "stat": "atk%",
+          "multiplier": 1,
+          "add": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": 2843,
+    "name": "Lone Light’s Blessing - Refine 4",
+    "input": {
+      "min": 0,
+      "max": 35,
+      "decimal": 0,
+      "custom_name": " Distance",
+      "stats": [
+        {
+          "stat": "atk%",
+          "multiplier": 1,
+          "add": 35
+        }
+      ]
+    }
+  },
+  {
+    "id": 2844,
+    "name": "Lone Light’s Blessing - Refine 5",
+    "input": {
+      "min": 0,
+      "max": 40,
+      "decimal": 0,
+      "custom_name": " Distance",
+      "stats": [
+        {
+          "stat": "atk%",
+          "multiplier": 1,
+          "add": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2845,
+    "name": "Starfire Upon the Snowplains - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 16
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 16
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 16
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 16
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2846,
+    "name": "Starfire Upon the Snowplains - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2847,
+    "name": "Starfire Upon the Snowplains - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 24
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 24
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2848,
+    "name": "Starfire Upon the Snowplains - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 28
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 28
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 28
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
         "stats": [
           {
             "stat": "atk%",
@@ -74451,12 +78107,12 @@
     ]
   },
   {
-    "id": 2729,
-    "name": "The White Queen's Ascension - Refine 5",
+    "id": 2849,
+    "name": "Starfire Upon the Snowplains - Refine 5",
     "options": [
       {
         "id": 0,
-        "name": "3 Stacks",
+        "name": "Stellar",
         "stats": [
           {
             "stat": "atk%",
@@ -74464,7 +78120,221 @@
           },
           {
             "stat": "stellarconduct",
-            "value": 120
+            "value": 32
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 32
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 32
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2850,
+    "name": "Snow Swan's Finale - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 24
+          },
+          {
+            "stat": "critdmgstellarconduct",
+            "value": 50
+          },
+          {
+            "stat": "critdmgstellarswirl",
+            "value": 50
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 16
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2851,
+    "name": "Snow Swan's Finale - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 30
+          },
+          {
+            "stat": "critdmgstellarconduct",
+            "value": 65
+          },
+          {
+            "stat": "critdmgstellarswirl",
+            "value": 65
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2852,
+    "name": "Snow Swan's Finale - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 36
+          },
+          {
+            "stat": "critdmgstellarconduct",
+            "value": 80
+          },
+          {
+            "stat": "critdmgstellarswirl",
+            "value": 80
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2853,
+    "name": "Snow Swan's Finale - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 42
+          },
+          {
+            "stat": "critdmgstellarconduct",
+            "value": 95
+          },
+          {
+            "stat": "critdmgstellarswirl",
+            "value": 95
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "2 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 28
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "1 Stack",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2854,
+    "name": "Snow Swan's Finale - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "3 Stacks",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 48
+          },
+          {
+            "stat": "critdmgstellarconduct",
+            "value": 110
+          },
+          {
+            "stat": "critdmgstellarswirl",
+            "value": 110
           }
         ]
       },
@@ -74475,10 +78345,6 @@
           {
             "stat": "atk%",
             "value": 32
-          },
-          {
-            "stat": "stellarconduct",
-            "value": 80
           }
         ]
       },
@@ -74488,21 +78354,1719 @@
         "stats": [
           {
             "stat": "atk%",
-            "value": 32
+            "value": 16
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2855,
+    "name": "Traveler's Path - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Traveler",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 16
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2856,
+    "name": "Traveler's Path - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "7 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 42
           },
           {
-            "stat": "stellarconduct",
-            "value": 40
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "6 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 36
+          },
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "5 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 30
+          },
+          {
+            "stat": "atk%",
+            "value": 20
           }
         ]
       },
       {
         "id": 3,
-        "name": "0 Stacks",
+        "name": "4 Resonances",
         "stats": [
+          {
+            "stat": "critdmg",
+            "value": 24
+          },
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "3 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 18
+          },
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "2 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 12
+          },
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "1 Resonance",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 6
+          },
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2857,
+    "name": "Traveler's Path - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "7 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 42
+          },
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "6 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 36
+          },
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "5 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 30
+          },
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "4 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 24
+          },
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "3 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 18
+          },
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "2 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 12
+          },
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "1 Resonance",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 6
+          },
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2858,
+    "name": "Traveler's Path - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "7 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 42
+          },
+          {
+            "stat": "atk%",
+            "value": 28
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "6 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 36
+          },
+          {
+            "stat": "atk%",
+            "value": 28
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "5 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 30
+          },
+          {
+            "stat": "atk%",
+            "value": 28
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "4 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 24
+          },
+          {
+            "stat": "atk%",
+            "value": 28
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "3 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 18
+          },
+          {
+            "stat": "atk%",
+            "value": 28
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "2 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 12
+          },
+          {
+            "stat": "atk%",
+            "value": 28
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "1 Resonance",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 6
+          },
+          {
+            "stat": "atk%",
+            "value": 28
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2859,
+    "name": "Traveler's Path - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "7 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 42
+          },
           {
             "stat": "atk%",
             "value": 32
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "6 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 36
+          },
+          {
+            "stat": "atk%",
+            "value": 32
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "5 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 30
+          },
+          {
+            "stat": "atk%",
+            "value": 32
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "4 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 24
+          },
+          {
+            "stat": "atk%",
+            "value": 32
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "3 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 18
+          },
+          {
+            "stat": "atk%",
+            "value": 32
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "2 Resonances",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 12
+          },
+          {
+            "stat": "atk%",
+            "value": 32
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "1 Resonance",
+        "stats": [
+          {
+            "stat": "critdmg",
+            "value": 6
+          },
+          {
+            "stat": "atk%",
+            "value": 32
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2860,
+    "name": "Day and Night in Counterpoint - Refine 1 - ATK",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 18
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2861,
+    "name": "Day and Night in Counterpoint - Refine 2 - ATK",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 22.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2862,
+    "name": "Day and Night in Counterpoint - Refine 3 - ATK",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 27
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2863,
+    "name": "Day and Night in Counterpoint - Refine 4 - ATK",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 31.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2864,
+    "name": "Day and Night in Counterpoint - Refine 5 - ATK",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 36
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2865,
+    "name": "Day and Night in Counterpoint - Refine 1 - Elemental Mastery",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2866,
+    "name": "Day and Night in Counterpoint - Refine 2 - Elemental Mastery",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 150
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2867,
+    "name": "Day and Night in Counterpoint - Refine 3 - Elemental Mastery",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 180
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2868,
+    "name": "Day and Night in Counterpoint - Refine 4 - Elemental Mastery",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 210
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2869,
+    "name": "Day and Night in Counterpoint - Refine 5 - Elemental Mastery",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 240
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2870,
+    "name": "Day and Night in Counterpoint - Refine 1 - Stellar-Glimmer",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 28
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 28
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2871,
+    "name": "Day and Night in Counterpoint - Refine 2 - Stellar-Glimmer",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 35
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2872,
+    "name": "Day and Night in Counterpoint - Refine 3 - Stellar-Glimmer",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 42
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 42
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2873,
+    "name": "Day and Night in Counterpoint - Refine 4 - Stellar-Glimmer",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 49
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 49
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2874,
+    "name": "Day and Night in Counterpoint - Refine 5 - Stellar-Glimmer",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "stellarconduct",
+            "value": 56
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 56
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2875,
+    "name": "Repentance and Redemption - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 64
+          },
+          {
+            "stat": "atk%",
+            "value": 16
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 64
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2876,
+    "name": "Repentance and Redemption - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 80
+          },
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 80
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2877,
+    "name": "Repentance and Redemption - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 96
+          },
+          {
+            "stat": "atk%",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 96
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2878,
+    "name": "Repentance and Redemption - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 112
+          },
+          {
+            "stat": "atk%",
+            "value": 28
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 112
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2879,
+    "name": "Repentance and Redemption - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 128
+          },
+          {
+            "stat": "atk%",
+            "value": 32
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 128
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2880,
+    "name": "A Cast Real Far - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2881,
+    "name": "A Cast Real Far - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2882,
+    "name": "A Cast Real Far - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 30
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2883,
+    "name": "A Cast Real Far - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2884,
+    "name": "A Cast Real Far - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2885,
+    "name": "Song of the Vigil - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2886,
+    "name": "Song of the Vigil - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2887,
+    "name": "Song of the Vigil - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 30
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2888,
+    "name": "Song of the Vigil - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2889,
+    "name": "Song of the Vigil - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2890,
+    "name": "Without Heed for Day nor Night - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 20
+          },
+          {
+            "stat": "elemastery",
+            "value": 100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2891,
+    "name": "Without Heed for Day nor Night - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 25
+          },
+          {
+            "stat": "elemastery",
+            "value": 125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2892,
+    "name": "Without Heed for Day nor Night - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 30
+          },
+          {
+            "stat": "elemastery",
+            "value": 150
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2893,
+    "name": "Without Heed for Day nor Night - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 35
+          },
+          {
+            "stat": "elemastery",
+            "value": 175
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2894,
+    "name": "Without Heed for Day nor Night - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 40
+          },
+          {
+            "stat": "elemastery",
+            "value": 200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2895,
+    "name": "Echo of a Vow - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 60
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 16
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 16
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2896,
+    "name": "Echo of a Vow - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 75
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 20
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 75
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2897,
+    "name": "Echo of a Vow - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 90
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 24
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2898,
+    "name": "Echo of a Vow - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 105
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 28
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 28
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 105
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2899,
+    "name": "Echo of a Vow - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          },
+          {
+            "stat": "stellarconduct",
+            "value": 32
+          },
+          {
+            "stat": "stellarswirl",
+            "value": 32
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Non-Stellar",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2900,
+    "name": "A Candle Woven From the Night - Refine 1 - 0 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 36
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2901,
+    "name": "A Candle Woven From the Night - Refine 2 - 0 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 45
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2902,
+    "name": "A Candle Woven From the Night - Refine 3 - 0 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 54
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2903,
+    "name": "A Candle Woven From the Night - Refine 4 - 0 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 63
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2904,
+    "name": "A Candle Woven From the Night - Refine 5 - 0 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 72
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2905,
+    "name": "A Candle Woven From the Night - Refine 1 - 1 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 24
+          },
+          {
+            "stat": "elemastery",
+            "value": 64
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2906,
+    "name": "A Candle Woven From the Night - Refine 2 - 1 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 30
+          },
+          {
+            "stat": "elemastery",
+            "value": 80
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2907,
+    "name": "A Candle Woven From the Night - Refine 3 - 1 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 36
+          },
+          {
+            "stat": "elemastery",
+            "value": 96
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2908,
+    "name": "A Candle Woven From the Night - Refine 4 - 1 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 42
+          },
+          {
+            "stat": "elemastery",
+            "value": 112
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2909,
+    "name": "A Candle Woven From the Night - Refine 5 - 1 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 48
+          },
+          {
+            "stat": "elemastery",
+            "value": 128
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2910,
+    "name": "A Candle Woven From the Night - Refine 1 - 2 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 12
+          },
+          {
+            "stat": "elemastery",
+            "value": 128
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2911,
+    "name": "A Candle Woven From the Night - Refine 2 - 2 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 15
+          },
+          {
+            "stat": "elemastery",
+            "value": 160
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2912,
+    "name": "A Candle Woven From the Night - Refine 3 - 2 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 18
+          },
+          {
+            "stat": "elemastery",
+            "value": 192
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2913,
+    "name": "A Candle Woven From the Night - Refine 4 - 2 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 21
+          },
+          {
+            "stat": "elemastery",
+            "value": 224
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2914,
+    "name": "A Candle Woven From the Night - Refine 5 - 2 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "atk%",
+            "value": 24
+          },
+          {
+            "stat": "elemastery",
+            "value": 256
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2915,
+    "name": "A Candle Woven From the Night - Refine 1 - 3 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 192
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2916,
+    "name": "A Candle Woven From the Night - Refine 2 - 3 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 240
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2917,
+    "name": "A Candle Woven From the Night - Refine 3 - 3 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 288
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2918,
+    "name": "A Candle Woven From the Night - Refine 4 - 3 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 336
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2919,
+    "name": "A Candle Woven From the Night - Refine 5 - 3 Same Elements",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 384
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2920,
+    "name": "Covenant of Frost and Snow - Refine 1",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 120
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2921,
+    "name": "Covenant of Frost and Snow - Refine 2",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 150
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2922,
+    "name": "Covenant of Frost and Snow - Refine 3",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 180
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2923,
+    "name": "Covenant of Frost and Snow - Refine 4",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 210
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2924,
+    "name": "Covenant of Frost and Snow - Refine 5",
+    "options": [
+      {
+        "id": 0,
+        "name": "Buff",
+        "stats": [
+          {
+            "stat": "elemastery",
+            "value": 240
           }
         ]
       }

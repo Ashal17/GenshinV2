@@ -439,3 +439,25 @@ function equip_control_create_comparison_options(btn, parent) {
 
     utils_update_frame_position_contain(null, prompt, "bottom");
 }
+
+function equip_control_create_comparison_filters(btn, parent) {
+
+    var prompt = utils_create_prompt(btn, "prompt_options", parent);
+    if (!prompt) {
+        return;
+    }
+
+    var headerline = utils_create_obj("div", "prompt_header");
+    prompt.appendChild(headerline);
+    headerline.appendChild(utils_create_obj("div", "prompt_header_text", null, "Comparison Filters"));
+    headerline.appendChild(utils_create_obj("div", "spacer"));
+    var decline = utils_create_obj("button", "prompt_button prompt_button_decline", null, "&#10006");
+    decline.onclick = function (event) { utils_destroy_current_prompt("active_prompt"); event.preventDefault(); };
+    headerline.appendChild(decline);
+
+    prompt.appendChild(utils_create_obj("div", "prompt_options_container", "comparison_filters_container"))
+
+    equip_storage_display_filter_all();
+
+    utils_update_frame_position_contain(null, prompt, "bottom");
+}

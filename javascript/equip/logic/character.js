@@ -177,6 +177,7 @@ function equip_active_character_change(party_id) {
         equip_energy_display();
 
         equip_storage_save_last();
+        equip_storage_change_trigger(false);
     }
 }
 

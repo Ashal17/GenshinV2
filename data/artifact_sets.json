@@ -2037,7 +2037,7 @@
       },
       {
         "stat": null,
-        "value": "If the equipping character has completed Witch’s Homework, after they use an Elemental Skill, they also gain “Light’s Guidance” for 20s: All nearby party members gain a {{20%}} Elemental DMG Bonus corresponding to the equipping character’s Elemental Type. The equipping character can trigger this effect while off-field. DMG Bonuses provided by Artifact Sets with the same name do not stack. Hexerei: Secret Rite: Light’s Guidance is upgraded to “Mortal Hymn”: All nearby party members gain a 40% Elemental DMG Bonus corresponding to both the equipping character and the current active party member’s Elemental Type instead. If both characters have the same Elemental Type, these bonuses will not stack.",
+        "value": "If the equipping character has completed Witch’s Homework, after they use an Elemental Skill, they also gain “Light’s Guidance” for 20s: All nearby party members gain a {{20%}} Elemental DMG Bonus corresponding to the equipping character’s Elemental Type. The equipping character can trigger this effect while off-field. DMG Bonuses provided by Artifact Sets with the same name do not stack. Hexerei: Secret Rite: Light’s Guidance is upgraded to “Mortal Hymn”: All nearby party members gain a {{40%}} Elemental DMG Bonus corresponding to both the equipping character and the current active party member’s Elemental Type instead. If both characters have the same Elemental Type, these bonuses will not stack.",
         "req": 4,
         "apply": [
           {
@@ -2085,7 +2085,7 @@
       },
       {
         "stat": null,
-        "value": "When a character attacks an opponent affected by Superconduct, the resulting DMG instance's CRIT Rate increases by 20%. This Set has an ability that has yet to be revealed...",
+        "value": "When a character attacks an opponent affected by Superconduct, the resulting DMG instance's CRIT Rate increases by {{16%}}.",
         "req": 4,
         "apply": [
           {
@@ -2099,5 +2099,68 @@
     "sands": "Moment That Ceased Upon Waking From Grand Dreams",
     "goblet": "Ovations That Ceased Upon Festivity",
     "circlet": "Pendulum That Ceased Amidst a Great Fall"
+  },
+  {
+    "id": 62,
+    "enka_id": 15047,
+    "name": "7.0 Set 1",
+    "scanner_key": "7.0 Set 1",
+    "icon": "7_0_set_1",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "atk%",
+        "value": 18,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "Triggering a Stellar Swirl reaction increases the character's CRIT Rate by {{16%}} and Stellar Swirl DMG by {{40%}} for 10s.",
+        "req": 4,
+        "apply": [
+          {
+            "id": 2771,
+            "special": "stellarswirl"
+          }
+        ]
+      }
+    ],
+    "flower": "Honor to Your Devotion",
+    "plume": "Glory to Your Legacy",
+    "sands": "Time Gifted Unto You",
+    "goblet": "Chalice of Your Blood and Sorrow",
+    "circlet": "Testament to Your Faith"
+  },
+  {
+    "id": 63,
+    "enka_id": 15048,
+    "name": "7.0 Set 2",
+    "scanner_key": "7.0 Set 2",
+    "icon": "7_0_set_2",
+    "stars": [ 5, 4 ],
+    "set_bonus": [
+      {
+        "stat": "atk%",
+        "value": 18,
+        "req": 2
+      },
+      {
+        "stat": null,
+        "value": "When you trigger Stellar-Conduct, Stellar Swirl, or directly deal reaction DMG of the above types, your ATK increases by {{12%}} and nearby party members gain a buff that increases their Stellar-Conduct and Stellar Swirl DMG by {{50%}} for 12s. This effect is unique and cannot stack. Can be triggered even when the character is not on the field.",
+        "req": 4,
+        "apply": [
+          {
+            "id": 2772,
+            "party": true,
+            "special": "stellarglimmer"
+          }
+        ]
+      }
+    ],
+    "flower": "7.0 Set 2",
+    "plume": "7.0 Set 2",
+    "sands": "7.0 Set 2",
+    "goblet": "7.0 Set 2",
+    "circlet": "7.0 Set 2"
   }
 ]

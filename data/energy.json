@@ -1726,5 +1726,39 @@
     "name": "Sakura Channeling (5s CD)",
     "type": "energy",
     "value": 8
+  },
+  {
+    "id": 257,
+    "name": "Frostvale Thunderclap (18s CD)",
+    "type": "energy",
+    "value": 15
+  },
+  {
+    "id": 258,
+    "name": "Somber Freeze (0.5s CD)",
+    "type": "energy",
+    "value": 5
+  },
+  {
+    "id": 259,
+    "name": "Snow Swan's Finale (3.5s CD)",
+    "type": "energy",
+    "source": "weapon",
+    "value": [ 4.0, 4.5, 5.0, 5.5, 6.0 ]
+  },
+  {
+    "id": 260,
+    "name": "Frostbreath (16s CD)",
+    "type": "energy",
+    "party": true,
+    "source": "weapon",
+    "value": [ 6.0, 7.5, 9.0, 10.5, 12.0 ]
+  },
+  {
+    "id": 261,
+    "name": "Song of the Vigil (9s CD)",
+    "type": "energy",
+    "source": "weapon",
+    "value": [ 4.0, 5.0, 6.0, 7.0, 8.0 ]
   }
 ]

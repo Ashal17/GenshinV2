@@ -105,7 +105,12 @@ function equip_storage_load_preferences(preferences_data = null) {
     } else {
         user_preferences.storage.party = true;
     }
-    user_preferences.storage.filter = utils_object_get_value(preferences_data, "storage.filter", false);
+
+    user_preferences.storage.filter = {};
+    user_preferences.storage.filter.active = utils_object_get_value(preferences_data, "storage.filter.active", false);
+    user_preferences.storage.filter.highest = utils_object_get_value(preferences_data, "storage.filter.highest", false);
+    user_preferences.storage.filter.first = utils_object_get_value(preferences_data, "storage.filter.first", false);
+
     user_preferences.storage.pin = utils_object_get_value(preferences_data, "storage.pin", false);
     user_preferences.storage.dps = utils_object_get_value(preferences_data, "storage.dps", false);
     user_preferences.storage.party_detail = utils_object_get_value(preferences_data, "storage.party_detail", false);
@@ -224,6 +229,21 @@ function equip_storage_change_option(option_name) {
     utils_preferences_change_trigger();
     equip_storage_change_trigger(false);
     equip_storage_display_party_detail();
+}
+
+function equip_storage_change_filter(filter_name) {
+
+    for (const [filter, filter_detail] of Object.entries(const_storage_filters)) {
+        if (filter == filter_name && !user_preferences.storage.filter[filter_name]) {
+            user_preferences.storage.filter[filter_name] = true;
+        } else {
+            user_preferences.storage.filter[filter] = false;
+        }        
+    }
+
+    equip_storage_display_filter_all();
+    utils_preferences_change_trigger();
+    equip_storage_change_trigger(false);
 }
 
 function equip_storage_update_set_storage(index, name, damage_data, user_data, duration) {
@@ -360,13 +380,10 @@ function equip_storage_display_all() {
     var parent = document.getElementById("storage_column");
     utils_delete_children(parent, 2);
 
-    var current_char = user_objects.user_party[user_objects.user_active_character].id;
-
     var storage_display_objects = [];
 
     for (var i = 0; i < storage_objects.saved_storage.length; i++) {
-        var stored_active_char = storage_objects.saved_storage[i].user_data.user_party[storage_objects.saved_storage[i].user_data.user_active_character].id;
-        if (!user_preferences.storage.filter || current_char == stored_active_char) {
+        if (equip_storage_return_filter_result(storage_objects.saved_storage[i])) {
             storage_display_objects.push(equip_storage_display(i));
         }        
     }
@@ -516,6 +533,37 @@ function equip_storage_display_option(option, option_detail) {
     return opt_row;
 }
 
+function equip_storage_display_filter_all() {
+    var filters_container = document.getElementById("comparison_filters_container");
+
+    if (filters_container) {
+        utils_delete_children(filters_container, 0);
+
+        for (const [filter, filter_detail] of Object.entries(const_storage_filters)) {
+            filters_container.appendChild(equip_storage_display_filter(filter, filter_detail))
+        }
+    }
+}
+
+function equip_storage_display_filter(filter, filter_detail) {
+
+    var filter_row = utils_create_obj("div", "toggle_row option_row");
+    filter_row.appendChild(utils_create_obj("div", "toggle_name", "comparison_filter_name_" + filter, filter_detail.name));
+
+    if (user_preferences.storage.filter[filter]) {
+        var toggle_class = "active";
+    } else {
+        var toggle_class = "inactive";
+    }
+
+    var filter_toggle = utils_create_obj("div", "toggle " + toggle_class, "comparison_filter_toggle_" + filter);
+    filter_toggle.onclick = function (event) { equip_storage_change_filter(filter); event.preventDefault(); };
+
+    filter_row.appendChild(filter_toggle);
+
+    return filter_row;
+}
+
 function equip_storage_display_party_detail_dmg(damage_data, party_list, duration, party_container) {
     var party_detail_container = utils_create_obj("div", "storage_party_detail_container");
 
@@ -525,8 +573,11 @@ function equip_storage_display_party_detail_dmg(damage_data, party_list, duratio
 
             if (Array.isArray(damage_data.character)) {
                 var char_container = utils_create_obj("div", "storage_party_detail");
-                char_container.appendChild(equip_display_party_icon(char_id, party_list[i].constel));
-                char_container.appendChild(equip_character_storage_display_equip(party_list[i], true))
+                var char_icons_container = utils_create_obj("div", "storage_party_icon_container");
+                char_icons_container.appendChild(equip_display_party_icon(char_id, party_list[i].constel));
+                char_icons_container.appendChild(equip_character_storage_display_equip(party_list[i], true))
+
+                char_container.appendChild(char_icons_container);
 
                 var damage = damage_data.character[i].damage[equip_storage_return_comparison_type()];
                 var share = damage_data.character[i].share[equip_storage_return_comparison_type()] * 100;
@@ -603,3 +654,46 @@ function equip_storage_return_comparison_type() {
     }
 }
 
+function equip_storage_return_filter_result(saved_storage) {
+    if (user_preferences.storage.filter.active) {
+        var current_active = user_objects.user_party[user_objects.user_active_character].id;
+        var storage_active = saved_storage.user_data.user_party[saved_storage.user_data.user_active_character].id;
+        if (current_active == storage_active) {
+            return true;
+        }
+    } else if (user_preferences.storage.filter.highest) {
+        var current_highest = equip_storage_return_highest(equip_skills_return_storage_damage_data(), user_objects.user_party);
+        var storage_highest = equip_storage_return_highest(saved_storage.damage_data, saved_storage.user_data.user_party);
+        if (current_highest == storage_highest) {
+            return true;
+        }
+    } else if (user_preferences.storage.filter.first) {
+        var current_first = user_objects.user_party[0].id;
+        var storage_first = saved_storage.user_data.user_party[0].id;
+        if (current_first == storage_first) {
+            return true;
+        }
+    } else {
+        return true;
+    }
+    return false;
+}
+
+function equip_storage_return_highest(damage_data, user_party) {
+
+    var highest_id = null;
+    if (Array.isArray(damage_data.character)) {
+
+        var highest = 0;       
+
+        for (var i = 0; i < const_party_size; i++) {
+
+            if (damage_data.character[i].share[equip_storage_return_comparison_type()] > highest) {
+                highest = damage_data.character[i].share[equip_storage_return_comparison_type()];
+                highest_id = user_party[i].id;
+            }            
+        }      
+    }
+
+    return highest_id;
+}

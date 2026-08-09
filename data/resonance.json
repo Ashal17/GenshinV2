@@ -233,7 +233,7 @@
     "name": "Polestar Field",
     "icon": "stellarconduct",
     "req": {
-      "type": "polestar",
+      "type": "stellarconduct",
       "value": true,
       "count": 1
     },

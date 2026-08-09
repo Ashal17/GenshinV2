@@ -1,12 +1,12 @@
 {
   "anemo": {
     "name": "Anemo",
-    "reactions": [ "swirlcryo", "swirlelectro", "swirlhydro", "swirlpyro" ],
+    "reactions": [ "swirlcryo", "swirlelectro", "swirlhydro", "swirlpyro", "stellarswirlinitial", "stellarswirlvortex1", "stellarswirlvortex2" ],
     "reactions_mod": []
   },
   "cryo": {
     "name": "Cryo",
-    "reactions": [ "melt", "superconduct", "swirlcryo" ],
+    "reactions": [ "melt", "superconduct", "swirlcryo", "stellarswirlinitial", "stellarswirlvortex1", "stellarswirlvortex2" ],
     "reactions_mod": [ "melt" ]
   },
   "dendro": {

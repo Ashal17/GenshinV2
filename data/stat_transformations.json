@@ -193,6 +193,11 @@
       "mods": [ 0, 100 ]
     },
     {
+      "stat": "stellarswirl_mult",
+      "change": "default",
+      "mods": [ 0, 100 ]
+    },
+    {
       "stat": "swirlpyro_mult",
       "change": "default",
       "mods": [ 0, 100 ]
@@ -951,6 +956,11 @@
       "stat": "swirl",
       "change": "add",
       "mods": [ "elemasteryadd" ]
+    },
+    {
+      "stat": "stellarswirl",
+      "change": "add",
+      "mods": [ "elemasteryaddshared" ]
     },
     {
       "stat": "overload",

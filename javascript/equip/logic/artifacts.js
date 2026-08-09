@@ -152,8 +152,8 @@ function equip_artifacts_change_sub_relative(rel_value, artifact_sub_id) {
     var artifact_id = artifact_sub_id.slice(0, -1);
 
     var artifact = user_objects.user_party[user_objects.user_active_character].artifacts[artifact_id];
-    var max_rolls = artifact.stars + Math.floor(artifact.level / 4) - 4;
-    rel_value = utils_number_verify(rel_value, 1, 0, max_rolls);
+
+    rel_value = utils_number_verify(rel_value, 1, 0, equip_artifacts_return_max_rolls(artifact.stars, artifact.level));
     var value = equip_artifacts_return_value_from_relative_value(artifact.sub_stats[sub_id].id, rel_value, artifact.stars);
     value = equip_artifacts_verify_sub_value(value, artifact, sub_id);
     if (value != null) {
@@ -284,8 +284,8 @@ function equip_artifacts_update_relative_values(party_id, artifact_id) {
         total_relative += relative;
         output_party[party_id].artifacts[artifact_id].relative_values[i] = relative;       
     }
-    var max_rolls = artifact.stars + Math.floor(artifact.level / 4) - 4;
-    output_party[party_id].artifacts[artifact_id].relative_values_max = max_rolls;
+
+    output_party[party_id].artifacts[artifact_id].relative_values_max = equip_artifacts_return_max_rolls(artifact.stars, artifact.level);
     output_party[party_id].artifacts[artifact_id].relative_total = total_relative;
 }
 
@@ -708,8 +708,8 @@ function equip_artifacts_verify_main_stat(artifact_id) {
 
 function equip_artifacts_verify_sub_value(value, artifact, sub_id) {
     var stat_id = artifact.sub_stats[sub_id].id;
-    var max_rolls = artifact.stars + Math.floor(artifact.level / 4) - 4;
-    var max = data_artifact_stats[artifact.stars].sub_stats[stat_id].slice(-1)[0] * max_rolls;
+
+    var max = data_artifact_stats[artifact.stars].sub_stats[stat_id].slice(-1)[0] * equip_artifacts_return_max_rolls(artifact.stars, artifact.level);
     return utils_number_verify(value, 2, 0, max);
 }
 
@@ -859,6 +859,10 @@ function equip_artifacts_return_value_from_relative_value(stat_id, rel_value, st
     } else {
         return 0;
     }
+}
+
+function equip_artifacts_return_max_rolls(stars, level) {
+    return Math.max(stars + Math.floor(level / 4) - 4, 1)
 }
 
 function equip_artifacts_storage_return_filtered_artifact(artifact_id, artifact, filter_sub_rv, always) {

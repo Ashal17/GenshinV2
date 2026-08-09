@@ -2893,6 +2893,120 @@
           "id": "unknown_regular"
         }
       ]
+    },
+    {
+      "id": 49,
+      "enka_id": 15435,
+      "name": "Jade Vista",
+      "icon": "bp_weapon",
+      "type": "bow",
+      "rarity": 4,
+      "atk_base": 42.4,
+      "stats": [
+        {
+          "stat": "crit",
+          "type": "level",
+          "value": 6.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "For every party member other than the equipping character:<br>· Who is of the same Elemental Type as the equipper: The equipping character's Elemental Mastery is increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 64.0, 80.0, 96.0, 112.0, 128.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": ";<br>· Who is not of the same Elemental Type as the equipper: The equipping character's ATK increases by "
+        },
+        {
+          "type": "refine",
+          "value": [ 12.0, 15.0, 18.0, 21.0, 24.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ".<br>The two effects described above can stack up to 3 times in total, with Elemental Mastery buffs applied first."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2900,
+          "special": "same_element",
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "A Candle Woven From the Night",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "enka_id": 15436,
+      "name": "Covenant of Frost and Snow",
+      "icon": "covenant_of_frost_and_snow",
+      "type": "bow",
+      "rarity": 4,
+      "atk_base": 42.4,
+      "stats": [
+        {
+          "stat": "def%",
+          "type": "level",
+          "value": 11.26
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Using an Elemental Skill increases Elemental Mastery by "
+        },
+        {
+          "type": "refine",
+          "value": [ 120.0, 150.0, 180.0, 210.0, 240.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " for 12s."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2920,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Covenant of Frost and Snow",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
     }
   ],
   "catalyst": [
@@ -4298,7 +4412,16 @@
         },
         {
           "type": "text",
-          "value": " for 12s. Max 3 stacks. This character will gain "
+          "value": " as well as their Stellar-Conduct DMG by  "
+        },
+        {
+          "type": "refine",
+          "post": " %",
+          "value": [ 12, 15, 18, 21, 24 ]
+        },
+        {
+          "type": "text",
+          "value": " for 24s. Max 3 stacks. This character will gain "
         },
         {
           "type": "refine",
@@ -4749,7 +4872,7 @@
         {
           "type": "refine",
           "post": " %",
-          "value": [ 20, 25, 30, 35, 40 ]
+          "value": [ 32,40,48,56,64 ]
         },
         {
           "type": "text",
@@ -4758,11 +4881,11 @@
         {
           "type": "refine",
           "post": "",
-          "value": [ 80, 100, 120, 140, 160 ]
+          "value": [ 40,50,60,70,80 ]
         },
         {
           "type": "text",
-          "value": ". These effects will be canceled after the wielder has been on the field for 6s."
+          "value": ". These effects will be canceled after the wielder has been on the field for 10s."
         }
       ],
       "apply_effect": [
@@ -4959,6 +5082,15 @@
         {
           "type": "text",
           "value": " and Charged Attack DMG will be increased by "
+        },
+        {
+          "type": "refine",
+          "post": " %",
+          "value": [ 14, 17.5, 21, 24.5, 28 ]
+        },
+        {
+          "type": "text",
+          "value": ", and Stellar-Conduct DMG is increased by "
         },
         {
           "type": "refine",
@@ -6090,6 +6222,128 @@
         }
       ],
       "effect_name": "Crown of the Final Scion",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "enka_id": 14435,
+      "name": "Clash of Kings",
+      "icon": "bp_weapon",
+      "type": "catalyst",
+      "rarity": 4,
+      "atk_base": 42.4,
+      "stats": [
+        {
+          "stat": "crit",
+          "type": "level",
+          "value": 6.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Using an Elemental Skill increases ATK by "
+        },
+        {
+          "type": "refine",
+          "value": [ 20.0, 25.0, 30.0, 35.0, 40.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " and Elemental Mastery by "
+        },
+        {
+          "type": "refine",
+          "value": [ 100.0, 125.0, 150.0, 175.0, 200.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " for 6s. This effect can trigger once every 12s. When an opponent is hit with a Charged Attack while the aforementioned effect is active, the effect is extended by 6s, max 1 extension."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2890,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Without Heed for Day nor Night",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "enka_id": 14436,
+      "name": "Echoes of the Heart",
+      "icon": "echoes_of_the_heart",
+      "type": "catalyst",
+      "rarity": 4,
+      "atk_base": 43.73,
+      "stats": [
+        {
+          "stat": "atk%",
+          "type": "level",
+          "value": 6.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Triggering an elemental reaction increases the character's Elemental Mastery by "
+        },
+        {
+          "type": "refine",
+          "value": [ 60.0, 75.0, 90.0, 105.0, 120.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " for 12s, and when a Stellar-Conduct/Stellar Swirl reaction is triggered, Stellar-Conduct/Stellar Swirl DMG is also increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 16.0, 20.0, 24.0, 28.0, 32.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for 12s. The aforementioned effects can still trigger even when the equipping character is not on the field."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2895,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Echo of a Vow",
       "ascension": [
         {
           "type": "item",
@@ -8529,7 +8783,7 @@
     {
       "id": 46,
       "enka_id": 12516,
-      "name": "Beyond the Key",
+      "name": "A Teaspoon of Transcendence",
       "icon": "6_7_claymore",
       "type": "claymore",
       "rarity": 5,
@@ -8548,7 +8802,7 @@
         },
         {
           "type": "refine",
-          "value": [ 16.0, 20.0, 24.0, 28.0, 32.0 ],
+          "value": [ 28, 35, 42, 49, 56 ],
           "post": " %"
         },
         {
@@ -8557,12 +8811,12 @@
         },
         {
           "type": "refine",
-          "value": [ 20, 25, 30, 35, 40 ],
+          "value": [ 16, 20, 24, 28, 32 ],
           "post": " %"
         },
         {
           "type": "text",
-          "value": " Stellar-Conduct Reaction DMG Bonus for 5s. Max 3 Sampling stacks, and 1 stack can be gained every 0.2s."
+          "value": " Stellar-Conduct and Stellar Swirl Reaction DMG Bonus for 5s. Max 3 Sampling stacks, and 1 stack can be gained every 0.2s."
         }
       ],
       "apply_effect": [
@@ -8572,7 +8826,146 @@
           "offset": [ 0, 1, 2, 3, 4 ]
         }
       ],
-      "effect_name": "The White Queen's Ascension",
+      "effect_name": "White Fairy's Queening",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "enka_id": 12435,
+      "name": "Forged by the Golden Melody",
+      "icon": "bp_weapon",
+      "type": "claymore",
+      "rarity": 4,
+      "atk_base": 42.4,
+      "stats": [
+        {
+          "stat": "crit",
+          "type": "level",
+          "value": 6.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Precision Instrument: Grants a buff in the following order every 10s: +"
+        },
+        {
+          "type": "refine",
+          "value": [ 18,22.5,27,31.5,36 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " ATK > +"
+        },
+        {
+          "type": "refine",
+          "value": [ 120.0, 150.0, 180.0, 210.0, 240.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " Elemental Mastery > +"
+        },
+        {
+          "type": "refine",
+          "value": [ 28,35,42,49,56 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " Stellar-Conduct and Stellar Swirl reaction DMG for 10s. If the character has triggered the Stellar-Conduct or Stellar Swirl reactions, the current buff will also be retained and extended by 12s. This effect can trigger once every 12s."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2860,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        },
+        {
+          "id": 2865,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        },
+        {
+          "id": 2870,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Day and Night in Counterpoint",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "enka_id": 12436,
+      "name": "Blade of Atonement",
+      "icon": "blade_of_atonement",
+      "type": "claymore",
+      "rarity": 4,
+      "atk_base": 43.73,
+      "stats": [
+        {
+          "stat": "atk%",
+          "type": "level",
+          "value": 6.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Triggering an elemental reaction increases the character's Elemental Mastery by "
+        },
+        {
+          "type": "refine",
+          "value": [ 64.0, 80.0, 96.0, 112.0, 128.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " for 12s, and when a Stellar-Conduct/Stellar Swirl reaction is triggered, ATK is also increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 16.0, 20.0, 24.0, 28.0, 32.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for 12s. The aforementioned effects can still trigger even when the equipping character is not on the field."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2875,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Repentance and Redemption",
       "ascension": [
         {
           "type": "item",
@@ -10985,6 +11378,134 @@
         }
       ],
       "effect_name": "Ruin and Blame",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "enka_id": 13435,
+      "name": "Frostbreath",
+      "icon": "bp_weapon",
+      "type": "polearm",
+      "rarity": 4,
+      "atk_base": 42.4,
+      "stats": [
+        {
+          "stat": "recharge",
+          "type": "level",
+          "value": 10.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Triggering a Cryo or Hydro-related elemental reaction increases ATK by "
+        },
+        {
+          "type": "refine",
+          "value": [ 20.0, 25.0, 30.0, 35.0, 40.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for 15s, as well as regenerates "
+        },
+        {
+          "type": "refine",
+          "value": [ 6.0, 7.5, 9.0, 10.5, 12.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " Elemental Energy for other members of the party nearby. This effect can trigger once every 16s."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2880,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "energy": [
+        { "id": 260 }
+      ],
+      "effect_name": "A Cast Real Far",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "enka_id": 13436,
+      "name": "Song of the Vigil",
+      "icon": "song_of_the_vigil",
+      "type": "polearm",
+      "rarity": 4,
+      "atk_base": 43.73,
+      "stats": [
+        {
+          "stat": "elemastery",
+          "type": "level",
+          "value": 24.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Triggering an elemental reaction gives "
+        },
+        {
+          "type": "refine",
+          "value": [ 4.0, 5.0, 6.0, 7.0, 8.0 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " Elemental Energy. This effect can trigger once every 9s. When a Stellar-Conduct/Stellar Swirl reaction is triggered, ATK is also increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 20.0, 25.0, 30.0, 35.0, 40.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for 12s. The aforementioned effects can still trigger even when the equipping character is not on the field."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2885,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "energy": [
+        { "id": 261 }
+      ],
+      "effect_name": "Cadence of Days Gone By",
       "ascension": [
         {
           "type": "item",
@@ -13944,6 +14465,274 @@
         }
       ],
       "effect_name": "Legacy of Lang-Gan",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "enka_id": 11435,
+      "name": "Heretic’s Molten Blade",
+      "icon": "bp_weapon",
+      "type": "sword",
+      "rarity": 4,
+      "atk_base": 42.4,
+      "stats": [
+        {
+          "stat": "crit",
+          "type": "level",
+          "value": 6.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Using an Elemental Skill gives the \"Swift Stride\" buff for 14s. This buff can trigger once every 14s and is removed when the character leaves the field. Swift Stride: Increases the equipping character's ATK by "
+        },
+        {
+          "type": "refine",
+          "value": [ 20.0, 25.0, 30.0, 35.0, 40.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": "–"
+        },
+        {
+          "type": "refine",
+          "value": [ 40.0, 50.0, 60.0, 70.0, 80.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " depending on the distance they have traveled while the buff has been active. (Buff refreshes once every second.)"
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2840,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Lone Light’s Blessing",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "enka_id": 11436,
+      "name": "Emberwell",
+      "icon": "emberwell",
+      "type": "sword",
+      "rarity": 4,
+      "atk_base": 42.4,
+      "stats": [
+        {
+          "stat": "elemastery",
+          "type": "level",
+          "value": 36.0
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "Triggering an elemental reaction increases the character's ATK by "
+        },
+        {
+          "type": "refine",
+          "value": [ 16.0, 20.0, 24.0, 28.0, 32.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for 12s, and when a Stellar-Conduct/Stellar Swirl reaction is triggered, Stellar-Conduct/Stellar Swirl DMG is also increased by "
+        },
+        {
+          "type": "refine",
+          "value": [ 16.0, 20.0, 24.0, 28.0, 32.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for 12s. The aforementioned effects can still trigger even when the equipping character is not on the field."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2845,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Starfire Upon the Snowplains",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "enka_id": 11520,
+      "name": "Whitelake Frostfeather",
+      "icon": "whitelake_frostfeather",
+      "type": "sword",
+      "rarity": 5,
+      "atk_base": 47.54,
+      "stats": [
+        {
+          "stat": "crit",
+          "type": "level",
+          "value": 4.8
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "When an opponent is hit with an Elemental Skill, the equipping character gains the \"Prelude\" effect, which increases their ATK by "
+        },
+        {
+          "type": "refine",
+          "value": [ 8.0, 10.0, 12.0, 14.0, 16.0 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " for 8s. This effect can stack once every 0.1s, max 3 stacks. When the Prelude stack count reaches 3, the performance will reach its climax, giving the equipping character the \"Closing\" effect, increasing CRIT DMG dealt with Stellar reactions by "
+        },
+        {
+          "type": "refine",
+          "value": [ 50,65,80,95,110 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": ". During this time, the equipping character also gains "
+        },
+        {
+          "type": "refine",
+          "value": [ 4.0, 4.5, 5, 5.5, 6 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " Elemental Energy whenever they trigger a Stellar reaction or deal Stellar reaction DMG. This can trigger once every 3.5s, and can still trigger even if the equipping character is not on the field."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2850,
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "energy": [
+        {
+          "id": 259
+        }
+      ],
+      "effect_name": "Snow Swan’s Finale",
+      "ascension": [
+        {
+          "type": "item",
+          "id": "unknown_weapon"
+        },
+        {
+          "type": "group",
+          "id": "unknown_elite"
+        },
+        {
+          "type": "item",
+          "id": "unknown_regular"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "enka_id": 11521,
+      "name": "Exaiphanes Blade",
+      "icon": "exaiphanes_blade",
+      "type": "sword",
+      "rarity": 5,
+      "atk_base": 45.94,
+      "stats": [
+        {
+          "stat": "crit",
+          "type": "level",
+          "value": 7.2
+        }
+      ],
+      "display_effects": [
+        {
+          "type": "text",
+          "value": "When the Traveler equips this, CRIT DMG increases by "
+        },
+        {
+          "type": "refine",
+          "value": [ 0,6,6,6,6 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " for every Element they have resonated with. When the Traveler equips this, hitting an opponent will restore "
+        },
+        {
+          "type": "refine",
+          "value": [ 3, 3, 5, 5, 5 ],
+          "post": ""
+        },
+        {
+          "type": "text",
+          "value": " Elemental Energy, and will increase ATK by "
+        },
+        {
+          "type": "refine",
+          "value": [ 16, 20, 24, 32, 40 ],
+          "post": " %"
+        },
+        {
+          "type": "text",
+          "value": " within the next 8s. This can be triggered even when the character is off-field. This effect can occur once every 5s."
+        }
+      ],
+      "apply_effect": [
+        {
+          "id": 2855,
+          "special": "traveler",
+          "offset": [ 0, 1, 2, 3, 4 ]
+        }
+      ],
+      "effect_name": "Traveler’s Path",
       "ascension": [
         {
           "type": "item",

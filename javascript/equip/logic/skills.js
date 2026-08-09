@@ -1365,6 +1365,12 @@ function equip_skills_return_reaction_value(party_id, reaction_name, vision, ski
 
     var reaction = data_reactions[reaction_name];
 
+    if (reaction.stat) {
+        var reaction_stat = reaction.stat;
+    } else {
+        var reaction_stat = reaction_name;
+    }
+
     var output_stats = equip_stats_return_output_stats(party_id, skill_index, artifact_stat, artifact_stat_party, null);
 
     if (skill_index === null) {
@@ -1373,7 +1379,7 @@ function equip_skills_return_reaction_value(party_id, reaction_name, vision, ski
         var bonusdmg = equip_skills_return_bonusdmg(party_id, skill_index, artifact_stat, artifact_stat_party);
     }
 
-    var reaction_mult = (1 + output_stats[reaction_name] / 100) * (output_stats[reaction_name + "_mult"] / 100) * (1 + output_stats[reaction_name + "_base"] / 100);
+    var reaction_mult = (1 + output_stats[reaction_stat] / 100) * (output_stats[reaction_stat + "_mult"] / 100) * (1 + output_stats[reaction_stat + "_base"] / 100);
 
     if (reaction.skilltype == "elemasterymult") {
         var result = reaction.multiplier[vision] * reaction_mult;
@@ -1384,10 +1390,10 @@ function equip_skills_return_reaction_value(party_id, reaction_name, vision, ski
         }
         if (reaction.skilltype == "elemasteryadd") {
             if (bonusdmg && bonusdmg.reactions) {
-                result_num += bonusdmg.reactions[reaction_name];
+                result_num += bonusdmg.reactions[reaction_stat];
             }      
-            var crit = output_stats["crit" + reaction_name] / 100;
-            var critdmg = output_stats["critdmg" + reaction_name] / 100;
+            var crit = output_stats["crit" + reaction_stat] / 100;
+            var critdmg = output_stats["critdmg" + reaction_stat] / 100;
             if (reaction.crit) {
                 crit += output_stats["crit"] / 100;
                 critdmg += output_stats["critdmg"] / 100;
@@ -1400,7 +1406,7 @@ function equip_skills_return_reaction_value(party_id, reaction_name, vision, ski
                 "resistance": equip_skills_return_resistance_modifier(party_id, data_reactions[reaction_name].vision, skill_index) / 100,
                 "crit": crit,
                 "critdmg": critdmg,
-                "elevate": 1 + output_stats[reaction_name + "_elevate"] / 100,
+                "elevate": 1 + output_stats[reaction_stat + "_elevate"] / 100,
                 "id": {
                     "attack_type":"reaction", "vision":vision, "reaction":reaction_name
                 }

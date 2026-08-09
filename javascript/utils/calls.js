@@ -1,6 +1,12 @@
 async function utils_load_json(url) {
     var response = await fetch(url);
-    return await response.json();
+    try {
+        return await response.json();
+    } catch (e) {
+        console.log(response);
+        throw new Error(url + " " + e);
+    }
+    
 }
 
 async function utils_get(url) {

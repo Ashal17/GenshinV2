@@ -115,17 +115,17 @@ const const_display_stats_columns = [
     },
     {
         "main": "crit",
-        "stats": ["crit", "critnormal", "critcharged", "critplunge", "critskill", "critburst", "critanemo", "crithydro", "critpyro", "critcryo", "critgeo", "critelectro", "critdendro", "critphysical", "critoverload", "critburning", "critelectrocharged", "critsuperconduct", "critshatter", "critswirl", "critrupture", "critburgeon", "crithyperbloom", "critlunarcharged", "critlunarbloom", "critstellarconduct"],
+        "stats": ["crit", "critnormal", "critcharged", "critplunge", "critskill", "critburst", "critanemo", "crithydro", "critpyro", "critcryo", "critgeo", "critelectro", "critdendro", "critphysical", "critoverload", "critburning", "critelectrocharged", "critsuperconduct", "critshatter", "critswirl", "critrupture", "critburgeon", "crithyperbloom", "critlunarcharged", "critlunarbloom", "critstellarconduct", "critstellarswirl"],
         "hide": true
     },
     {
         "main": "critdmg",
-        "stats": ["critdmg", "critdmgnormal", "critdmgcharged", "critdmgplunge", "critdmgskill", "critdmgburst", "critdmganemo", "critdmghydro", "critdmgpyro", "critdmgcryo", "critdmggeo", "critdmgelectro", "critdmgdendro", "critdmgphysical", "critdmgoverload", "critdmgburning", "critdmgelectrocharged", "critdmgsuperconduct", "critdmgshatter", "critdmgswirl", "critdmgrupture", "critdmgburgeon", "critdmghyperbloom", "critdmglunarcharged", "critdmglunarbloom", "critdmgstellarconduct"],
+        "stats": ["critdmg", "critdmgnormal", "critdmgcharged", "critdmgplunge", "critdmgskill", "critdmgburst", "critdmganemo", "critdmghydro", "critdmgpyro", "critdmgcryo", "critdmggeo", "critdmgelectro", "critdmgdendro", "critdmgphysical", "critdmgoverload", "critdmgburning", "critdmgelectrocharged", "critdmgsuperconduct", "critdmgshatter", "critdmgswirl", "critdmgrupture", "critdmgburgeon", "critdmghyperbloom", "critdmglunarcharged", "critdmglunarbloom", "critdmgstellarconduct", "critdmgstellarswirl"],
         "hide": true
     },
     {
         "main": "elemastery",
-        "stats": ["elemastery", "melt", "vaporize", "overload", "burning", "electrocharged", "superconduct", "shatter", "swirl", "rupture", "burgeon", "hyperbloom", "lunarcharged", "lunarbloom", "lunarcrystalize", "stellarconduct", "aggravate", "spread", "crystalize", "lunarcharged_elevate", "lunarbloom_elevate", "lunarcrystalize_elevate", "stellarconduct_elevate"],
+        "stats": ["elemastery", "melt", "vaporize", "overload", "burning", "electrocharged", "superconduct", "shatter", "swirl", "rupture", "burgeon", "hyperbloom", "lunarcharged", "lunarbloom", "lunarcrystalize", "stellarconduct", "stellarswirl", "aggravate", "spread", "crystalize", "lunarcharged_elevate", "lunarbloom_elevate", "lunarcrystalize_elevate", "stellarconduct_elevate", "stellarswirl_elevate"],
         "hide": true
     },
     {
@@ -266,11 +266,20 @@ const const_storage_options = {
     "dps": {
         "name": "Compare DPS"
     },
-    "filter": {
-        "name": "Filter Active Character"
-    },
     "pin": {
         "name": "Pin Active Result"
+    }
+}
+
+const const_storage_filters = {
+    "active": {
+        "name": "Active Character"
+    },
+    "highest": {
+        "name": "Highest Damage"
+    },
+    "first": {
+        "name": "First Party Member"
     }
 }
 

@@ -231,7 +231,7 @@
     "type": "percent"
   },
   "critstellarconduct": {
-    "name": "Stellar-conduct Crit Rate",
+    "name": "Stellar-Conduct Crit Rate",
     "type": "percent"
   },
   "critshatter": {
@@ -252,6 +252,10 @@
   },
   "critswirlcryo": {
     "name": "Cryo Swirl Crit Rate",
+    "type": "percent"
+  },
+  "critstellarswirl": {
+    "name": "Stellar-Swirl Crit Rate",
     "type": "percent"
   },
   "critswirlelectro": {
@@ -390,7 +394,7 @@
     "type": "percent"
   },
   "critdmgstellarconduct": {
-    "name": "Stellar-conduct Crit DMG",
+    "name": "Stellar-Conduct Crit DMG",
     "type": "percent"
   },
   "critdmgshatter": {
@@ -411,6 +415,10 @@
   },
   "critdmgswirlcryo": {
     "name": "Cryo Swirl Crit DMG",
+    "type": "percent"
+  },
+  "critdmgstellarswirl": {
+    "name": "Stellar-Swirl Crit DMG",
     "type": "percent"
   },
   "critdmgswirlelectro": {
@@ -762,7 +770,7 @@
     "type": "percent"
   },
   "stellarconduct": {
-    "name": "Stellar-conduct",
+    "name": "Stellar-Conduct",
     "type": "percent"
   },
   "shatter": {
@@ -783,6 +791,10 @@
   },
   "swirlcryo": {
     "name": "Cryo Swirl",
+    "type": "percent"
+  },
+  "stellarswirl": {
+    "name": "Stellar-Swirl",
     "type": "percent"
   },
   "swirlelectro": {
@@ -850,7 +862,7 @@
     "type": "percent"
   },
   "stellarconduct_base": {
-    "name": "Stellar-conduct Base DMG",
+    "name": "Stellar-Conduct Base DMG",
     "type": "percent"
   },
   "shatter_base": {
@@ -871,6 +883,10 @@
   },
   "swirlcryo_base": {
     "name": "Cryo Swirl Base DMG",
+    "type": "percent"
+  },
+  "stellarswirl_base": {
+    "name": "Stellar-Swirl Base DMG",
     "type": "percent"
   },
   "swirlelectro_base": {
@@ -938,7 +954,7 @@
     "type": "percent"
   },
   "stellarconduct_elevate": {
-    "name": "Stellar-conduct Elevation",
+    "name": "Stellar-Conduct Elevation",
     "type": "percent"
   },
   "shatter_elevate": {
@@ -959,6 +975,10 @@
   },
   "swirlcryo_elevate": {
     "name": "Cryo Swirl Elevation",
+    "type": "percent"
+  },
+  "stellarswirl_elevate": {
+    "name": "Stellar-Swirl Elevation",
     "type": "percent"
   },
   "swirlelectro_elevate": {
@@ -1026,11 +1046,11 @@
     "type": "percent"
   },
   "stellarconduct_mult": {
-    "name": "Stellar-conduct Multiplier",
+    "name": "Stellar-Conduct Multiplier",
     "type": "percent"
   },
   "stellarconduct_direct_mult": {
-    "name": "Stellar-conduct Reaction Multiplier",
+    "name": "Stellar-Conduct Reaction Multiplier",
     "type": "percent"
   },
   "shatter_mult": {
@@ -1051,6 +1071,10 @@
   },
   "swirlcryo_mult": {
     "name": "Cryo Swirl Multiplier",
+    "type": "percent"
+  },
+  "stellarswirl_mult": {
+    "name": "Stellar-Swirl Multiplier",
     "type": "percent"
   },
   "swirlelectro_mult": {

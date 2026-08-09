@@ -8,7 +8,7 @@ window_frame_ids = [
 ];
 
 async function equip_load_all_data() {
-    var ver = "?20260601";
+    var ver = "?20260809";
 
     data_characters = await utils_load_json("/data/characters.json" + ver);
     data_enemies = await utils_load_json("/data/enemies.json" + ver);
@@ -64,9 +64,7 @@ async function equip_setup_all() {
         var share_account = await equip_account_return_share();
         var legacy_storage = await equip_legacy_v1_account_storage_load(storage_account);
 
-        equip_storage_load_user_storage(storage_account.storage_objects);
-        equip_storage_display_header_type();
-        equip_storage_display_all();
+        equip_storage_load_user_storage(storage_account.storage_objects);        
 
         var load_url_share = await equip_share_load_url();
         if (load_url_share) {
@@ -82,6 +80,9 @@ async function equip_setup_all() {
         equip_artifacts_storage_load_last(storage_account.artifact_storage_objects, legacy_storage.artifact_list);
 
         equip_share_load_account(share_account);
+
+        equip_storage_display_header_type();
+        equip_storage_display_all();
         
     } catch (err) {
         utils_loading_show_error(err, "An Error occured during loading the page.<br>Please reload the page with CTRL+F5.<br>If the Error persists, please contact the administrator.");
@@ -582,7 +583,13 @@ function equip_setup_ui_storage() {
     storage_active.appendChild(utils_create_img_button_prompt_input("timer-outline", "Set Rotation Duration", "storage_duration_active", "Enter Rotation Duration (seconds)", equip_storage_change_duration, -1, equip_storage_return_duration(-1), "storage_btn"));
     storage_active.appendChild(utils_create_obj("div", "storage_btn"));
     storage_active.appendChild(utils_create_obj("div", "storage_btn"));
-    storage_active.appendChild(utils_create_obj("div", "storage_btn"));
+
+    var storage_filter_container = utils_create_obj("div", "img_button_container storage_btn", "storage_options_btn_container");
+    var storage_filter_btn = utils_create_img_btn("filter-outline", null, "Storage Filters", "storage_filters_btn");
+    storage_filter_btn.onclick = function (event) { equip_control_create_comparison_filters(storage_filter_btn.id, storage_filter_container.id); event.preventDefault(); };
+    storage_filter_container.appendChild(storage_filter_btn);
+    storage_active.appendChild(storage_filter_container);
+
 
     var storage_options_container = utils_create_obj("div", "img_button_container storage_btn", "storage_options_btn_container");
     var storage_options_btn = utils_create_img_btn("cog-outline", null, "Storage Options", "storage_options_btn");
@@ -839,10 +846,12 @@ function equip_setup_default_stats() {
     }
     default_bonusdmg.reactions = {};
     for (let reaction_id in data_reactions) {
-        default_bonusdmg.reactions[reaction_id] = 0;
-        default_bonusdmg.reactions[reaction_id + "base"] = 0;
-        default_bonusdmg.all[reaction_id] = 0;
-        default_bonusdmg.all[reaction_id + "base"] = 0;
+        if (!data_reactions[reaction_id].stat) {
+            default_bonusdmg.reactions[reaction_id] = 0;
+            default_bonusdmg.reactions[reaction_id + "base"] = 0;
+            default_bonusdmg.all[reaction_id] = 0;
+            default_bonusdmg.all[reaction_id + "base"] = 0;
+        }        
     }  
     default_bonusdmg.alt = {};
     default_bonusdmg.alt.alt1 = 0;

@@ -903,7 +903,12 @@
           {
             "id": 2701,
             "party": true,
-            "special": "polestar_stellar_personal"
+            "special": "stellarconduct"
+          },
+          {
+            "id": 2702,
+            "party": true,
+            "special": "stellarconduct_personal"
           }
         ]
       }
@@ -2842,7 +2847,6 @@
         "level": 2,
         "attacks": [
           {
-            "type": "burst",
             "name": "Cold-Blooded Strike",
             "parts": [
               {
@@ -2852,7 +2856,7 @@
                 "vision": "cryo",
                 "stat": "atk",
                 "crit": false,
-                "scale": [ 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15 ]
+                "scale": [ 15 ]
               }
             ],
             "id": 0
@@ -4687,6 +4691,7 @@
     "rarity": 5,
     "nation": "liyue",
     "radiance_stellarconduct": true,
+    "radiance_stellarswirl": true,
     "optimize_artifact_stats": [
       "elemastery",
       "atk",
@@ -4936,7 +4941,7 @@
           },
           {
             "id": 2705,
-            "special": "polestar"
+            "special": "stellarconduct"
           }
         ]
       },
@@ -4988,7 +4993,7 @@
         "apply": {
           "id": 2706,
           "party": true,
-          "special": "polestar"
+          "special": "stellarconduct"
         }
       }
     ],
@@ -5019,7 +5024,7 @@
         "apply": {
           "id": 2704,
           "party": true,
-          "special": "polestar"
+          "special": "stellarconduct"
         }
       }
     ],
@@ -7551,6 +7556,7 @@
     "rarity": 4,
     "nation": "mondstadt",
     "radiance_stellarconduct": true,
+    "radiance_stellarswirl": true,
     "optimize_artifact_stats": [
       "elemastery",
       "atk",
@@ -16012,7 +16018,7 @@
       },
       {
         "name": "Edict of Cleansing",
-        "desc": "Extends the duration of the Sesshou Sakura by 10s. When a nearby party member triggers a Superconduct or Stellar-Conduct reaction, the next instance of Sesshou Sakura lightning is enhanced as follows: DMG dealt is increased at 80% of Yae Miko's ATK. This effect can trigger once every 2.5s. If your Yae Miko is in the Radiance: Stellar-Conduct state, a Sesshou Sakura lightning hit on the opponent will also cause an additional instance of Electro DMG at 125% of Yae Miko's ATK. This DMG is considered Stellar-Conduct DMG.Additionally, when inside a Polestar Field, Yae Miko will enter the Radiance: Stellar-Conduct state.",
+        "desc": "Extends the duration of the Sesshou Sakura by 10s. When a nearby party member triggers a Superconduct or Stellar-Conduct reaction, the next instance of Sesshou Sakura lightning is enhanced as follows: DMG dealt is increased at 80% of Yae Miko's ATK. This effect can trigger once every 2.5s. If your Yae Miko is in the Radiance: Stellar-Conduct state, a Sesshou Sakura lightning hit on the opponent will also cause an additional instance of Electro DMG at 200% of Yae Miko's ATK. This DMG is considered Stellar-Conduct DMG.Additionally, when inside a Polestar Field, Yae Miko will enter the Radiance: Stellar-Conduct state.",
         "level": 8,
         "apply": {
           "id": 378
@@ -16030,7 +16036,7 @@
                 "vision": "electro",
                 "stat": "atk",
                 "crit": true,
-                "scale": [ 125 ]
+                "scale": [ 200 ]
               }
             ],
             "id": 0
@@ -19235,7 +19241,7 @@
           {
             "id": 2710,
             "party": true,
-            "special": "polestar_const_2"
+            "special": "stellarconduct_const_2"
           }
         ]
       },
@@ -19291,7 +19297,7 @@
       },
       {
         "name": "Featherfall Judgment",
-        "desc": "When Cyno is in the Pactsworn Pathclearer state activated by Sacred Rite: Wolf's Swiftness, he will enter the Endseer stance at intervals. If he activates Secret Rite: Chasmic Soulfarer while affected by this stance, he will activate the Judication effect, increasing the DMG of this Secret Rite: Chasmic Soulfarer by 35%, and firing off 3 Duststalker Bolts that deal 100% of Cyno's ATK as Electro DMG. Duststalker Bolt DMG is considered Elemental Skill DMG.Radiance: Stellar-Conduct: When Judication is triggered, Cyno will instead fire 3 Duststalker Bolts - Starsame to his front, dealing Electro DMG at 80% of his ATK. This DMG is considered Stellar-Conduct DMG.",
+        "desc": "When Cyno is in the Pactsworn Pathclearer state activated by Sacred Rite: Wolf's Swiftness, he will enter the Endseer stance at intervals. If he activates Secret Rite: Chasmic Soulfarer while affected by this stance, he will activate the Judication effect, increasing the DMG of this Secret Rite: Chasmic Soulfarer by 35%, and firing off 3 Duststalker Bolts that deal 100% of Cyno's ATK as Electro DMG. Duststalker Bolt DMG is considered Elemental Skill DMG.Radiance: Stellar-Conduct: When Judication is triggered, Cyno will instead fire 3 Duststalker Bolts - Starsame to his front, dealing Electro DMG at 200% of his ATK. This DMG is considered Stellar-Conduct DMG.",
         "level": 2,
         "apply": {
           "id": 1813
@@ -19320,7 +19326,7 @@
                 "vision": "electro",
                 "stat": "atk",
                 "crit": true,
-                "scale": [ 80 ]
+                "scale": [ 200 ]
               }
             ],
             "id": 0
@@ -24811,13 +24817,13 @@
         "desc": "When Wriothesley's current HP increases or decreases, if he is in the Chilling Penalty state conferred by Icefang Rush, Chilling Penalty will gain one stack of Prosecution Edict. Max 5 stacks. Each stack will increase Wriothesley's ATK by 6%.",
         "level": 8,
         "apply": {
-          "id": 2714,
+          "id": 2730,
           "special": "reckoning_for_sin"
         }
       },
       {
         "name": "There Shall Be an Unveiling for Injustice",
-        "desc": "Radiance: Stellar-Conduct: The Passive Talent \"There Shall Be a Plea for Justice\" is changed to the following:When Wriothesley's HP is less than 60%, he will obtain a \"Gracious Rebuke: Unveiling.\" This enhances the next Charged Attack of his Normal Attack: Forceful Fists of Frost into Luster: Vaulting Fist, which will not consume Stamina and restores 30% Max HP to Wriothesley upon hit. Wriothesley can gain HP in this way once every 2s.Additionally, the third and fifth strikes of Repelling Fist enhanced by Chilling Penalty will deal 40% and 60% of their original Cryo DMG respectively, while Luster: Vaulting Fist will deal 100% of its original AoE Cryo DMG. The aforementioned DMG is considered as Stellar-Conduct DMG, and Wriothesley deals 30% increased Stellar-Conduct DMG.Additionally, when inside a Polestar Field, Wriothesley will enter the Radiance: Stellar-Conduct state.",
+        "desc": "Radiance: Stellar-Conduct: The Passive Talent \"There Shall Be a Plea for Justice\" is changed to the following:When Wriothesley's HP is less than 60%, he will obtain a \"Gracious Rebuke: Unveiling.\" This enhances the next Charged Attack of his Normal Attack: Forceful Fists of Frost into Luster: Vaulting Fist, which will not consume Stamina and restores 30% Max HP to Wriothesley upon hit. Wriothesley can gain HP in this way once every 2s.Additionally, the third and fifth strikes of Repelling Fist enhanced by Chilling Penalty will deal 60% and 80% of their original Cryo DMG respectively, while Luster: Vaulting Fist will deal 100% of its original AoE Cryo DMG. The aforementioned DMG is considered as Stellar-Conduct DMG, and Wriothesley deals 30% increased Stellar-Conduct DMG.Additionally, when inside a Polestar Field, Wriothesley will enter the Radiance: Stellar-Conduct state.",
         "level": 8,
         "apply": {
           "id": 2712,
@@ -24838,7 +24844,7 @@
                 "stat": "atk",
                 "crit": true,
                 "alt": 1,
-                "scale": [ 26.888, 29.076, 31.268, 34.392, 36.58, 39.084, 42.524, 45.96, 49.4, 53.152, 56.904, 60.656, 64.408, 68.16, 71.912 ]
+                "scale": [ 40.332, 43.614, 46.902, 51.588, 54.87, 58.626, 63.786, 68.94, 74.1, 79.728, 85.356, 90.984, 96.612, 102.24, 107.868 ]
               },
               {
                 "id": 1,
@@ -24850,7 +24856,7 @@
                 "stat": "atk",
                 "crit": true,
                 "alt": 2,
-                "scale": [ 54.444, 58.878, 63.306, 69.642, 74.07, 79.134, 86.1, 93.066, 100.026, 107.622, 115.224, 122.82, 130.416, 138.012, 145.608 ]
+                "scale": [ 72.592, 78.504, 84.408, 92.856, 98.76, 105.512, 114.8, 124.088, 133.368, 143.496, 153.632, 163.76, 173.888, 184.016, 194.144 ]
               },
               {
                 "id": 2,
@@ -24941,10 +24947,10 @@
       },
       {
         "name": "Esteem for the Innocent",
-        "desc": "The CRIT Rate of Rebuke: Vaulting Fist will be increased by 10%, and its CRIT DMG by 80%. When unleashed, it will also create an additional icicle that deals 100% of Rebuke: Vaulting Fist's Base DMG as Cryo DMG. DMG dealt this way is regarded as Charged Attack DMG.Radiance: Stellar-Conduct: The aforementioned effect is changed to:<br> The Repelling Fist enhanced by Chilling Penalty, as well as Luster: Vaulting Fist, gain a 10% CRIT Rate and 80% CRIT DMG boost. In addition, the fifth attack of Repelling Fists enhanced by Chilling Penalty, as well as Luster: Vaulting Fist, will each generate an additional icicle that deals Cryo DMG at 40% Base DMG. This DMG will be considered Stellar-Conduct DMG.You must first unlock the Ascension Talent \"There Shall Be a Plea for Justice.\"",
+        "desc": "The CRIT Rate of Rebuke: Vaulting Fist will be increased by 10%, and its CRIT DMG by 80%. When unleashed, it will also create an additional icicle that deals 100% of Rebuke: Vaulting Fist's Base DMG as Cryo DMG. DMG dealt this way is regarded as Charged Attack DMG.Radiance: Stellar-Conduct: The aforementioned effect is changed to:<br> The Repelling Fist enhanced by Chilling Penalty, as well as Luster: Vaulting Fist, gain a 10% CRIT Rate and 80% CRIT DMG boost. In addition, the fifth attack of Repelling Fists enhanced by Chilling Penalty, as well as Luster: Vaulting Fist, will each generate an additional icicle that deals Cryo DMG at 20% Base DMG. This DMG will be considered Stellar-Conduct DMG.You must first unlock the Ascension Talent \"There Shall Be a Plea for Justice.\"",
         "apply": {
           "id": 2716,
-          "special": "polestar_0"
+          "special": "stellarconduct_0"
         },
         "attacks": [
           {
@@ -24960,7 +24966,7 @@
                 "vision": "cryo",
                 "stat": "atk",
                 "crit": true,
-                "scale": [ 36.296, 39.252, 42.204, 46.428, 49.38, 52.756, 57.4, 62.044, 66.684, 71.748, 76.816, 81.88, 86.944, 92.008, 97.072 ]
+                "scale": [ 18.148, 19.626, 21.102, 23.214, 24.69, 26.378, 28.7, 31.022, 33.342, 35.874, 38.408, 40.94, 43.472, 46.004, 48.536 ]
               },
               {
                 "id": 1,
@@ -24971,7 +24977,7 @@
                 "vision": "cryo",
                 "stat": "atk",
                 "crit": true,
-                "scale": [ 61.184, 65.772, 70.36, 76.48, 81.068, 85.656, 91.776, 97.896, 104.012, 110.132, 116.248, 122.368, 130.016, 137.664, 145.312 ]
+                "scale": [ 30.592, 32.886, 35.18, 38.24, 40.534, 42.828, 45.888, 48.948, 52.006, 55.066, 58.124, 61.184, 65.008, 68.832, 72.656 ]
               }
             ],
             "id": 0
@@ -27609,7 +27615,7 @@
     "weapon": "polearm",
     "vision": "pyro",
     "rarity": 5,
-    "nation": "fontaine",
+    "nation": "snezhnaya",
     "optimize_artifact_stats": [
       "elemastery",
       "atk",
@@ -32687,6 +32693,8 @@
     "vision": "anemo",
     "rarity": 5,
     "nation": "inazuma",
+    "radiance_stellarswirl": true,
+    "stellarswirl": true,
     "optimize_artifact_stats": [
       "elemastery",
       "atk",
@@ -32896,7 +32904,7 @@
       },
       {
         "name": "Vast Be the Dream",
-        "desc": "When Yumemizuki Mizuki triggers a Swirl reaction while in the Dreamdrifter state, the next instance of periodic AoE Anemo DMG she deals to nearby enemies during that same state will be increased by 1,000% of her Elemental Mastery. The aforementioned effect can trigger once every 2.5s.Additionally, while Yumemizuki Mizuki is in the Dreamdrifter state, the Elemental Mastery of nearby party characters is increased by 10% of Yumemizuki Mizuki's Elemental Mastery.",
+        "desc": "When Yumemizuki Mizuki triggers a Swirl or Stellar Swirl reaction while in the Dreamdrifter state, the next instance of periodic AoE Anemo DMG she deals to nearby enemies during that same state will be increased by 1,000% of her Elemental Mastery. The aforementioned effect can trigger once every 2.5s.<br>Radiance: Stellar Swirl: When Yumemizuki Mizuki deals to an opponent the above enhanced AoE Anemo DMG, she will also deal an additional instance of Anemo DMG at 1,000% of her Elemental Mastery. This DMG is considered Stellar Swirl reaction DMG.<br>Additionally, while Yumemizuki Mizuki is in the Dreamdrifter state, the Elemental Mastery of nearby party characters is also increased by 10% of her Elemental Mastery.<br>Yumemizuki Mizuki will also enter the Radiance: Stellar Swirl state for 8s when a nearby party member triggers a Stellar Swirl reaction.",
         "level": 8,
         "apply": [
           {
@@ -32906,13 +32914,32 @@
             "id": 2708,
             "party": true
           }
+        ],
+        "attacks": [
+          {
+            "name": "Vast Be the Dream",
+            "parts": [
+              {
+                "id": 0,
+                "name": "Vast Be the Dream",
+                "type": "stellarswirl",
+                "reaction": "stellarswirl",
+                "damage": false,
+                "vision": "anemo",
+                "stat": "elemastery",
+                "crit": true,
+                "scale": [ 1000 ]
+              }
+            ],
+            "id": 0
+          }
         ]
       }
     ],
     "const": [
       {
         "name": "In Mist-Like Waters",
-        "desc": "When Yumemizuki Mizuki is in the Dreamdrifter state, she will continuously apply the \"Twenty-Three Nights' Awaiting\" effect to nearby opponents for 3s every 3.5s. When an opponent is affected by Anemo DMG-triggered Swirl reactions while the aforementioned effect is active, the effect will be canceled, and this Swirl instance has its DMG against this opponent increased by 1,100% of Mizuki's Elemental Mastery. She also launches an additional attack on the same opponent, dealing Anemo DMG equal to 1,000% of Yumemizuki Mizuki's Elemental Mastery.",
+        "desc": "When Yumemizuki Mizuki is in the Dreamdrifter state, she will continuously apply the \"Twenty-Three Nights' Awaiting\" effect to nearby opponents for 3s every 3.5s. When an opponent has a Swirl or Stellar Swirl reaction triggered against them by Anemo DMG while the aforementioned effect is active, the effect will be canceled, and this Swirl or Stellar Swirl instance has its DMG against this opponent increased by 1,100% and 550% of Mizuki's Elemental Mastery respectively. She also launches an additional attack on the same opponent, dealing Anemo DMG at 1,000% of Yumemizuki Mizuki's Elemental Mastery.<br>Radiance: Stellar Swirl: The aforementioned additional DMG is changed to Anemo DMG at 400% of Yumemizuki Mizuki's Elemental Mastery. This DMG is considered Stellar Swirl reaction DMG.",
         "apply": {
           "id": 1898,
           "party": true
@@ -32930,6 +32957,17 @@
                 "stat": "elemastery",
                 "crit": true,
                 "scale": [ 1000 ]
+              },
+              {
+                "id": 1,
+                "name": "In Mist-Like Waters - Stellar-Swirl",
+                "type": "stellarswirl",
+                "reaction": "stellarswirl",
+                "damage": false,
+                "vision": "anemo",
+                "stat": "elemastery",
+                "crit": true,
+                "scale": [ 400 ]
               }
             ],
             "id": 0
@@ -40825,10 +40863,11 @@
     "weapon": "claymore",
     "vision": "cryo",
     "rarity": 5,
-    "nation": "star",
+    "nation": "snezhnaya",
     "radiance_stellarconduct": true,
-    "polestar": true,
-    "unreleased": true,
+    "radiance_stellarswirl": true,
+    "stellarconduct": true,
+    "stellarswirl": true,
     "optimize_artifact_stats": [
       "atk",
       "atk%"
@@ -40927,6 +40966,18 @@
             "alt": 3
           },
           {
+            "name": "Charged Attack Condensed Beam Stellar-Swirl",
+            "type": "stellarswirl",
+            "reaction": "stellarswirl",
+            "damage": false,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 122.55, 132.53, 142.5, 156.75, 166.73, 178.13, 193.8, 209.48, 225.15, 242.25, 259.35, 276.45, 293.55, 310.65, 327.75 ],
+            "id": 10,
+            "alt": 3
+          },
+          {
             "name": "When in Power Overdrive",
             "type": "charged",
             "damage": true,
@@ -40997,6 +41048,18 @@
             "scale": [ 21.6, 23.22, 24.84, 27.0, 28.62, 30.24, 32.4, 34.56, 36.72, 38.88, 41.04, 43.2, 45.9, 48.6, 51.3 ],
             "id": 1,
             "alt": 1
+          },
+          {
+            "name": "Prism Shot Stellar-Swirl",
+            "type": "stellarswirl",
+            "reaction": "stellarswirl",
+            "damage": false,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 32.4, 34.83, 37.26, 40.5, 42.93, 45.36, 48.6, 51.84, 55.08, 58.32, 61.56, 64.8, 68.85, 72.9, 76.95 ],
+            "id": 2,
+            "alt": 1
           }
         ]
       },
@@ -41039,6 +41102,18 @@
             "scale": [ 220.53, 237.07, 253.61, 275.67, 292.21, 308.75, 330.8, 352.85, 374.91, 396.96, 419.01, 441.07, 468.63, 496.2, 523.77 ],
             "id": 2,
             "alt": 2
+          },
+          {
+            "name": "Convective Inhibition Ray Stellar-Swirl",
+            "type": "stellarswirl",
+            "reaction": "stellarswirl",
+            "damage": false,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 330.8, 355.61, 380.42, 413.5, 438.31, 463.12, 496.2, 529.28, 562.36, 595.44, 628.52, 661.6, 702.95, 744.3, 785.65 ],
+            "id": 3,
+            "alt": 2
           }
         ]
       }
@@ -41046,7 +41121,7 @@
     "passive": [
       {
         "name": "Light of Rationalisme",
-        "desc": "When your party members trigger Superconduct, it will be changed to Stellar-Conduct, and your party members' Base Stellar-Conduct DMG will be increased based on Sandrone's ATK: Every 100 ATK she has increases the Base Stellar-Conduct DMG by 0.7%. The maximum increase that can be gained this way is 14%.Additionally, when Sandrone is within a Polestar Field, she will enter the Radiance: Stellar-Conduct state.",
+        "desc": "When party members trigger Superconduct or Cryo Swirl, it will be changed to a Stellar-Conduct or Stellar Swirl reaction, and party members' Base DMG for the aforementioned reactions will be increased based on Sandrone's ATK: Every 100 ATK she has increases the Base Stellar-Conduct or Stellar Swirl DMG by 0.7%. The maximum increase that can be gained this way is 14%.Additionally, when Sandrone is within a Polestar Field, she will enter the Radiance: Stellar-Conduct state.Sandrone will also enter the Radiance: Stellar Swirl state for 8s after triggering a Stellar Swirl reaction.",
         "level": 0,
         "apply": {
           "id": 2718,
@@ -41056,26 +41131,23 @@
       },
       {
         "name": "Archaic Calculation Engine",
-        "desc": "Radiance: Stellar-Conduct: When using the Elemental Skill Formule Phenomenale: Differential Analysis, if Fagio's Decoding Power is greater than 50, the second Prism Shot fired by Fagio at nearby opponents will deal 400% of its original DMG as Fagio's Decoding Power is decreased.Additionally, for every 10 points of Decoding Power Fagio loses, it gains 1 stack of Refined Tactics for 60s (max 10 stacks). When Sandrone uses the Elemental Burst Formule Phenomenale: Q.E.D. while in the Radiance: Stellar-Conduct state, all stacks of Refined Tactics are cleared, causing the Convective Inhibition Ray to deal (100% + (no. of stacks cleared ×10))% of its original DMG.",
+        "desc": "Radiance: Stellar Glimmer: When using the Elemental Skill Formule Phenomenale: Differential Analysis, if Fagio's Decoding Power is greater than 50, the second Prism Shot fired by Fagio at nearby opponents will deal 400% of its original DMG as Fagio's Decoding Power is decreased.Additionally, for every 10 points of Decoding Power Fagio loses, it gains 1 stack of Refined Tactics for 60s (max 10 stacks). When Sandrone uses the Elemental Burst Formule Phenomenale: Q.E.D. while in the Radiance: Stellar Glimmer state, all stacks of Refined Tactics are cleared, causing the Convective Inhibition Ray to deal 100% + (number of stacks cleared) × 10% of its original DMG.",
         "level": 2,
         "apply": [
           {
-            "id": 2719,
-            "special": "polestar"
+            "id": 2719
           },
           {
-            "id": 2720,
-            "special": "polestar"
+            "id": 2720
           }
         ]
       },
       {
         "name": "A Lady's Code of Conduct",
-        "desc": "Radiance: Stellar-Conduct: Increases Sandrone's Elemental Mastery based on her ATK. Every 100 ATK will increase her Elemental Mastery by 8. The maximum increase she can gain this way is 160.",
+        "desc": "Increases Sandrone's Elemental Mastery based on her ATK. Every 100 ATK will increase her Elemental Mastery by 8. The maximum increase she can gain this way is 160.",
         "level": 8,
         "apply": {
-          "id": 2721,
-          "special": "polestar"
+          "id": 2721
         }
       },
       {
@@ -41087,7 +41159,7 @@
     "const": [
       {
         "name": "Morrow After the Golden Dusk",
-        "desc": "When in Decoding mode, Fagio's Decoding Power increases at a 50% lower rate, and all party members deal 30% increased Stellar-Conduct DMG.",
+        "desc": "When in Decoding mode, Fagio's Decoding Power increases at a 50% lower rate, and all party members deal 30% increased Stellar-Conduct and Stellar Swirl reaction DMG.",
         "apply": {
           "id": 2722,
           "party": true
@@ -41095,10 +41167,9 @@
       },
       {
         "name": "An Heiress Gazed Into the Looking-Glass",
-        "desc": "Radiance: Stellar-Conduct: Increases Charged Attack condensed beam DMG by 120% of Sandrone's ATK. Also, each time a beam is fired, DMG dealt by all condensed beams fired during this Decoding mode period will be further increased by 60% of Sandrone's ATK (max 3 stacks).",
+        "desc": "Radiance: Stellar Glimmer: Increases CRIT DMG from Charged Attack condensed beams by 40%. Also, each time a beam is fired, CRIT DMG dealt by all condensed beams fired during this Decoding mode period will be further increased by 20%. Max 3 stacks.",
         "apply": {
-          "id": 2723,
-          "special": "polestar"
+          "id": 2723
         }
       },
       {
@@ -41113,14 +41184,14 @@
       },
       {
         "name": "In Knowledge Lies the World's True Ground",
-        "desc": "When Sandrone deals Stellar-Conduct DMG, she will also summon an extra Prismatic Resonance Cannon to fire off a coordinated attack which deals Cryo DMG at 125% of her ATK. This DMG is considered Stellar-Conduct DMG, and the effect can occur once every 4s.",
+        "desc": "When Sandrone deals Stellar-Conduct or Stellar Swirl DMG to an opponent, she will also summon an extra Prismatic Resonance Cannon to fire off a coordinated attack which deals Cryo DMG at 125% and 187.5% of her ATK respectively. This DMG is considered Stellar-Conduct or Stellar Swirl reaction DMG, and the effect can occur once every 4s.",
         "attacks": [
           {
             "name": "In Knowledge Lies the World's True Ground",
             "parts": [
               {
                 "id": 0,
-                "name": "Prismatic Resonance Cannon - Stellar-conduct",
+                "name": "Prismatic Resonance Cannon - Stellar-Conduct",
                 "reaction": "stellarconduct",
                 "type": "stellarconduct",
                 "damage": false,
@@ -41128,6 +41199,17 @@
                 "stat": "atk",
                 "crit": true,
                 "scale": [ 125 ]
+              },
+              {
+                "id": 1,
+                "name": "Prismatic Resonance Cannon - Stellar-Swirl",
+                "reaction": "stellarswirl",
+                "type": "stellarswirl",
+                "damage": false,
+                "vision": "cryo",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 187.5 ]
               }
             ],
             "id": 0
@@ -41146,7 +41228,7 @@
       },
       {
         "name": "Narcissus Wakes, Her Eyes Upon the Dawn",
-        "desc": "When Fagio fires a condensed beam for the third time while in Decoding mode, the beam becomes a more powerful Condensed Cluster Beam that fires continuously. This beam will deal up to 4 additional instances of AoE Cryo DMG at 75% of Sandrone's ATK on top of any subsequent original beam fired. Radiance: Stellar-Conduct: The Condensed Cluster Beam will instead deal 4 additional instances of AoE Cryo DMG at 50% of Sandrone's ATK. This DMG is considered Stellar-Conduct DMG.Additionally, all Stellar-Conduct DMG dealt by Sandrone is elevated by 20%.",
+        "desc": "When Fagio fires a condensed beam for the third time while in Decoding mode, the beam becomes a more powerful Condensed Cluster Beam that fires continuously. This beam will deal up to 4 additional instances of AoE Cryo DMG at 100% of Sandrone's ATK on top of any subsequent original beam fired.Radiance: Stellar-Conduct: The Condensed Cluster Beam will instead deal 4 additional instances of AoE Cryo DMG at 80% of Sandrone's ATK. This DMG is considered Stellar-Conduct DMG.Radiance: Stellar Swirl: The condensed cluster beam deals AoE Cryo DMG of up to 4 strikes at 120% of Sandrone's ATK instead. This DMG is considered Stellar Swirl reaction DMG.Additionally, all Stellar-Conduct DMG dealt by Sandrone is elevated by 20%.",
         "apply": {
           "id": 2724,
           "auto": true
@@ -41167,7 +41249,7 @@
               },
               {
                 "id": 1,
-                "name": "Condensed Cluster Beam - Stellar-conduct",
+                "name": "Condensed Cluster Beam - Stellar-Conduct",
                 "reaction": "stellarconduct",
                 "type": "stellarconduct",
                 "damage": false,
@@ -41176,11 +41258,1226 @@
                 "crit": true,
                 "scale": [ 80 ],
                 "alt": 3
+              },
+              {
+                "id": 2,
+                "name": "Condensed Cluster Beam - Stellar-Swirl",
+                "reaction": "stellarswirl",
+                "type": "stellarswirl",
+                "damage": false,
+                "vision": "cryo",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 120 ],
+                "alt": 3
               }
             ],
             "id": 0
           }
         ]
+      }
+    ],
+    "ascension": [
+      {
+        "type": "item",
+        "id": "unknown_ascension"
+      },
+      {
+        "type": "group",
+        "id": "unknown_regular"
+      },
+      {
+        "type": "item",
+        "id": "unknown_speciality"
+      }
+    ]
+  },
+  "odette": {
+    "id": 122,
+    "enka_id": 10000150,
+    "name": "Odette",
+    "weapon": "sword",
+    "vision": "cryo",
+    "rarity": 5,
+    "nation": "snezhnaya",
+    "radiance_stellarconduct": true,
+    "radiance_stellarswirl": true,
+    "stellarconduct": true,
+    "stellarswirl": true,
+    "unreleased": true,
+    "optimize_artifact_stats": [
+      "atk",
+      "atk%"
+    ],
+    "stats": [
+      {
+        "stat": "hp_base",
+        "values": [ 1011.0, 2621.0, 3488.0, 5219.0, 5834.0, 6713.0, 7533.0, 8421.0, 9036.0, 9932.0, 10547.0, 11453.0, 12068.0, 12981.0, 13442.0, 13903.0 ]
+      },
+      {
+        "stat": "atk_base",
+        "values": [ 26.07, 67.62, 89.97, 134.62, 150.5, 173.16, 194.33, 217.22, 233.1, 256.19, 272.07, 295.43, 311.31, 334.85, 372.52, 410.19 ]
+      },
+      {
+        "stat": "def_base",
+        "values": [ 61.27, 158.92, 211.45, 316.4, 353.73, 406.97, 456.73, 510.53, 547.85, 602.13, 639.46, 694.35, 731.68, 787.0, 814.97, 842.94 ]
+      },
+      {
+        "stat": "critdmg",
+        "values": [ 0.0, 0.0, 0.0, 0.0, 9.6, 9.6, 19.2, 19.2, 19.2, 19.2, 28.8, 28.8, 38.4, 38.4, 38.4, 38.4 ]
+      },
+      {
+        "stat": "burst_energy",
+        "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [],
+    "attacks": [
+      {
+        "name": "Snow Swan Variation",
+        "type": "normal",
+        "damage": true,
+        "id": 0,
+        "vision": "physical",
+        "parts": [
+          {
+            "name": "1-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 51.86, 56.08, 60.3, 66.33, 70.55, 75.37, 82.01, 88.64, 95.27, 102.51, 109.74, 116.98, 124.22, 131.45, 138.69 ],
+            "id": 0
+          },
+          {
+            "name": "2-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 51.51, 55.7, 59.9, 65.89, 70.08, 74.87, 81.46, 88.05, 94.64, 101.82, 109.01, 116.2, 123.39, 130.57, 137.76 ],
+            "id": 1
+          },
+          {
+            "name": "3-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 32.61, 35.27, 37.92, 41.71, 44.37, 47.4, 51.57, 55.74, 59.91, 64.46, 69.01, 73.56, 78.12, 82.67, 87.22 ],
+            "id": 2
+          },
+          {
+            "name": "3-Hit (2/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 38.28, 41.39, 44.51, 48.96, 52.08, 55.64, 60.53, 65.43, 70.33, 75.67, 81.01, 86.35, 91.69, 97.03, 102.37 ],
+            "id": 3
+          },
+          {
+            "name": "4-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 74.57, 80.64, 86.71, 95.38, 101.45, 108.39, 117.93, 127.47, 137.01, 147.41, 157.82, 168.22, 178.63, 189.03, 199.44 ],
+            "id": 4
+          },
+          {
+            "name": "5-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 90.21, 97.56, 104.9, 115.39, 122.73, 131.12, 142.66, 154.2, 165.74, 178.33, 190.91, 203.5, 216.09, 228.68, 241.27 ],
+            "id": 5
+          },
+          {
+            "name": "Charged Attack",
+            "type": "charged",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 107.41, 116.16, 124.9, 137.39, 146.13, 156.13, 169.86, 183.6, 197.34, 212.33, 227.32, 242.31, 257.29, 272.28, 287.27 ],
+            "id": 6
+          },
+          {
+            "name": "Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 63.93, 69.14, 74.34, 81.77, 86.98, 92.93, 101.1, 109.28, 117.46, 126.38, 135.3, 144.22, 153.14, 162.06, 170.98 ],
+            "id": 7
+          },
+          {
+            "name": "Low Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 127.84, 138.24, 148.65, 163.51, 173.92, 185.81, 202.16, 218.51, 234.86, 252.7, 270.54, 288.38, 306.22, 324.05, 341.89 ],
+            "id": 8
+          },
+          {
+            "name": "High Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 159.68, 172.67, 185.67, 204.24, 217.23, 232.09, 252.51, 272.93, 293.36, 315.64, 337.92, 360.2, 382.48, 404.76, 427.04 ],
+            "id": 9
+          }
+        ]
+      },
+      {
+        "name": "Slow Dance: Phantom Night Trance",
+        "type": "skill",
+        "damage": true,
+        "id": 1,
+        "vision": "cryo",
+        "parts": [
+          {
+            "name": "Skill",
+            "type": "skill",
+            "damage": true,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 108.08, 116.19, 124.29, 135.1, 143.21, 151.31, 162.12, 172.93, 183.74, 194.54, 205.35, 216.16, 229.67, 243.18, 256.69 ],
+            "id": 0
+          },
+          {
+            "name": "Coda at Dawn's Finale DoT",
+            "type": "skill",
+            "damage": false,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": false,
+            "scale": [ 95.84, 103.03, 110.22, 119.8, 126.99, 134.18, 143.76, 153.34, 162.93, 172.51, 182.1, 191.68, 203.66, 215.64, 227.62 ],
+            "id": 1
+          },
+          {
+            "name": "Coda at Dawn's Tolling Stellar-Conduct",
+            "reaction": "stellarconduct",
+            "type": "stellarconduct",
+            "damage": false,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 305.76, 328.69, 351.62, 382.2, 405.13, 428.06, 458.64, 489.22, 519.79, 550.37, 580.94, 611.52, 649.74, 687.96, 726.18 ],
+            "id": 2
+          },
+          {
+            "name": "Coda at Dawn's Tolling Stellar Swirl",
+            "reaction": "stellarswirl",
+            "type": "stellarswirl",
+            "damage": false,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 458.64, 493.04, 527.44, 573.3, 607.7, 642.1, 687.96, 733.82, 779.69, 825.55, 871.42, 917.28, 974.61, 1031.94, 1089.27 ],
+            "id": 3
+          },
+          {
+            "name": "\"Plume\" Dance Move",
+            "type": "skill",
+            "damage": true,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 43.04, 46.27, 49.5, 53.8, 57.03, 60.26, 64.56, 68.86, 73.17, 77.47, 81.78, 86.08, 91.46, 96.84, 102.22 ],
+            "id": 4
+          },
+          {
+            "name": "\"Plume\" Dance Move Stellar-Conduct",
+            "reaction": "stellarconduct",
+            "type": "stellarconduct",
+            "damage": false,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 27.02, 29.05, 31.08, 33.78, 35.81, 37.83, 40.54, 43.24, 45.94, 48.64, 51.35, 54.05, 57.43, 60.8, 64.18 ],
+            "id": 5
+          },
+          {
+            "name": "\"Plume\" Dance Move Stellar Swirl",
+            "reaction": "stellarswirl",
+            "type": "stellarswirl",
+            "damage": false,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 40.53, 43.57, 46.61, 50.66, 53.7, 56.74, 60.79, 64.84, 68.9, 72.95, 77.0, 81.06, 86.12, 91.19, 96.25 ],
+            "id": 6
+          },
+          {
+            "name": "\"Wing\" Dance Move",
+            "type": "skill",
+            "damage": true,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 51.46, 55.32, 59.18, 64.33, 68.19, 72.05, 77.2, 82.34, 87.49, 92.64, 97.78, 102.93, 109.36, 115.79, 122.23 ],
+            "id": 7
+          },
+          {
+            "name": "\"Wing\" Dance Move Stellar-Conduct",
+            "reaction": "stellarconduct",
+            "type": "stellarconduct",
+            "damage": false,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 32.31, 34.74, 37.16, 40.39, 42.81, 45.24, 48.47, 51.7, 54.93, 58.16, 61.39, 64.62, 68.66, 72.7, 76.74 ],
+            "id": 8
+          },
+          {
+            "name": "\"Wing\" Dance Move Stellar Swirl",
+            "reaction": "stellarswirl",
+            "type": "stellarswirl",
+            "damage": false,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 48.46, 52.1, 55.73, 60.58, 64.21, 67.85, 72.7, 77.54, 82.39, 87.24, 92.08, 96.93, 102.99, 109.04, 115.1 ],
+            "id": 9
+          }
+        ]
+      },
+      {
+        "name": "Fast Dance: A Dream of Sable Feathers",
+        "type": "burst",
+        "damage": true,
+        "id": 2,
+        "vision": "cryo",
+        "parts": [
+          {
+            "name": "Slash (1/3)",
+            "type": "burst",
+            "damage": true,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 110.18, 118.44, 126.7, 137.72, 145.98, 154.25, 165.26, 176.28, 187.3, 198.32, 209.33, 220.35, 234.12, 247.9, 261.67 ],
+            "id": 0
+          },
+          {
+            "name": "Final Slash",
+            "type": "burst",
+            "damage": true,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 170.27, 183.04, 195.81, 212.84, 225.61, 238.38, 255.41, 272.44, 289.46, 306.49, 323.52, 340.54, 361.83, 383.11, 404.4 ],
+            "id": 1
+          }
+        ],
+        "apply": {
+          "id": 2733,
+          "offset": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
+          "party": true,
+          "special": "snow_swan_dream"
+        }
+      }
+    ],
+    "passive": [
+      {
+        "name": "Dance of the Silver Morn",
+        "desc": "Odette will enter the Radiance: Stellar-Conduct or Radiance: Stellar Glimmer state for 8s when she is inside a Polestar Field or triggers a Stellar Swirl reaction respectively.When a party member triggers a Superconduct or Cryo Swirl reaction, it becomes a Stellar-Conduct or Stellar Swirl reaction instead, and the Base DMG of said reaction is also increased by 0.7% for every 100 points of Odette's ATK. A maximum 14% increase can be obtained in this way.",
+        "level": 0,
+        "apply": {
+          "id": 2763,
+          "party": true,
+          "auto": true
+        }
+      },
+      {
+        "name": "The Chosen One's Spring",
+        "desc": "When Odette summons her solo dance double, she also obtains 4 stacks of Marvelous Splendor.",
+        "level": 2,
+        "apply": {
+          "id": 2764,
+          "party": true,
+          "special": "const_1_2_6"
+        }
+      },
+      {
+        "name": "Pathetique of Pateticheskaya",
+        "desc": "For every 100 ATK Odette has over 1,000, her Stellar Glimmer DMG is additionally increased by 1.5% of the original DMG. She can deal up to 30% more additional DMG in this way.",
+        "level": 8,
+        "apply": {
+          "id": 2768,
+          "auto": true
+        }
+      },
+      {
+        "name": "Winter Dream's Echo",
+        "desc": "Shows the locations of Snezhnaya's Local Specialties on the mini-map.Practicing dance in one's spare time might even trigger other effects...",
+        "level": 0
+      }
+    ],
+    "const": [
+      {
+        "name": "\"On This Danceless Morn, She Gazes at Her Double\"",
+        "desc": "Unleashing the special Elemental Skill Adagio: Cock-Crow Coda deals an instance of Cryo AoE DMG to nearby opponents that will be considered the corresponding Stellar reaction DMG at a certain percentage of Odette's ATK:Radiance: Stellar-Conduct: 300%;Radiance: Stellar Swirl: 450%.Additionally, the Passive Talent \"Spring Rite of the Chosen One\" is also enhanced: now, when Odette summons her solo dance double, she also gains 2 stacks of Marvelous Splendor, and when she is off-field, the rate at which Marvelous Splendor is removed is sped up to 2 stacks per second.",
+        "attacks": [
+          {
+            "name": "\"On This Danceless Morn, She Gazes at Her Double\"",
+            "parts": [
+              {
+                "id": 0,
+                "name": "\"On This Danceless Morn, She Gazes at Her Double\" - Stellar-Conduct",
+                "reaction": "stellarconduct",
+                "type": "stellarconduct",
+                "damage": false,
+                "vision": "cryo",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 300 ]
+              },
+              {
+                "id": 1,
+                "name": "\"On This Danceless Morn, She Gazes at Her Double\" - Stellar-Swirl",
+                "reaction": "stellarswirl",
+                "type": "stellarswirl",
+                "damage": false,
+                "vision": "cryo",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 450 ]
+              }
+            ],
+            "id": 0
+          }
+        ]
+      },
+      {
+        "name": "\"I Must See the Snow Swan's Dream for Myself, She Thought\"",
+        "desc": "The Passive Talent \"Spring Rite of the Chosen One\" is enhanced as follows: every stack of Marvelous Splendor active also increases the character's ATK by 7%.Additionally, if Odette is in the Radiance: Stellar Glimmer state when there is a solo dance double on the field, opponents near the dance double will also have their corresponding Elemental RES lowered by 20%.<br>Radiance: Stellar-Conduct: Cryo and Electro.<br>Radiance: Stellar Swirl: Cryo and Anemo.You must unlock the Passive Talent \"Spring Rite of the Chosen One\" to gain access to the above effects.",
+        "apply": {
+          "id": 2769,
+          "party": true
+        }
+      },
+      {
+        "name": "\"I Must Pursue the Howling Wind and Keep on Moving Up Myself\"",
+        "desc": "Increases the Level of Slow Dance: Phantom Night Trance by 3.",
+        "bonus": [
+          {
+            "stat": "levelskill",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "\"Upwards I Go, as I Fall Into the Hazy, Burning Sky\"",
+        "desc": "The Elemental Burst Fast Dance: A Dream of Sable Feathers is enhanced as follows: when Odette obtains Snow Swan's Dream, Stellar Glimmer reaction DMG dealt by other party members is increased by 50% of Snow Swan Dream's effects.When a party member attacks and hits an opponent, Odette will also join in with a coordinated attack, dealing AoE Cryo DMG that is also considered as the corresponding Stellar reaction DMG. This effect, which can trigger once every 3.5s, will be at a certain percentage of Odette's ATK:Radiance: Stellar-Conduct: 66%;Radiance: Stellar Swirl: 99%.",
+        "attacks": [
+          {
+            "name": "\"Upwards I Go, as I Fall Into the Hazy, Burning Sky\"",
+            "parts": [
+              {
+                "id": 0,
+                "name": "\"Upwards I Go, as I Fall Into the Hazy, Burning Sky\" - Stellar-Conduct",
+                "reaction": "stellarconduct",
+                "type": "stellarconduct",
+                "damage": false,
+                "vision": "cryo",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 66 ]
+              },
+              {
+                "id": 1,
+                "name": "\"Upwards I Go, as I Fall Into the Hazy, Burning Sky\" - Stellar-Swirl",
+                "reaction": "stellarswirl",
+                "type": "stellarswirl",
+                "damage": false,
+                "vision": "cryo",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 99 ]
+              }
+            ],
+            "id": 0
+          }
+        ]
+      },
+      {
+        "name": "\"Behold, for I Have Bid Farewell to Earthly Suffering\"",
+        "desc": "Increases the Level of Fast Dance: A Dream of Sable Feathers  by 3.",
+        "bonus": [
+          {
+            "stat": "levelburst",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "\"Reach Out Your Hand to Touch the Eternal Visage of the Sky\"",
+        "desc": "The Passive Talent \"Spring Rite of the Chosen One\" is enhanced as follows: When all nearby party members have been granted Marvelous Splendor by Odette, her Marvelous Splendor stack will no longer decrease.Additionally, characters affected by Marvelous Splendor have their Stellar Glimmer reaction DMG dealt to opponents elevated by 25%, and Stellar Glimmer reaction DMG dealt by Odette is elevated by an additional 20%.You must unlock the Passive Talent \"Spring Rite of the Chosen One\" to gain access to the above effects.",
+        "apply": {
+          "id": 2770,
+          "auto": true
+        }
+      }
+    ],
+    "ascension": [
+      {
+        "type": "item",
+        "id": "unknown_ascension"
+      },
+      {
+        "type": "group",
+        "id": "unknown_regular"
+      },
+      {
+        "type": "item",
+        "id": "unknown_speciality"
+      }
+    ]
+  },
+  "alyosha": {
+    "id": 123,
+    "enka_id": 10000148,
+    "name": "Alyosha",
+    "weapon": "polearm",
+    "vision": "electro",
+    "rarity": 4,
+    "nation": "snezhnaya",
+    "radiance_stellarconduct": true,
+    "unreleased": true,
+    "optimize_artifact_stats": [
+      "atk",
+      "atk%"
+    ],
+    "stats": [
+      {
+        "stat": "hp_base",
+        "values": [ 1003.0, 2577.0, 3326.0, 4982.0, 5514.0, 6343.0, 7052.0, 7881.0, 8413.0, 9241.0, 9773.0, 10602.0, 11134.0, 11962.0, 12376.0, 12790.0 ]
+      },
+      {
+        "stat": "atk_base",
+        "values": [ 22.26, 57.19, 73.82, 110.57, 122.38, 140.77, 156.52, 174.91, 186.73, 205.09, 216.91, 235.29, 247.11, 265.5, 299.37, 333.23 ]
+      },
+      {
+        "stat": "def_base",
+        "values": [ 58.94, 151.42, 195.45, 292.77, 324.05, 372.74, 414.45, 463.14, 494.43, 543.05, 574.34, 623.03, 654.31, 703.0, 727.31, 751.62 ]
+      },
+      {
+        "stat": "recharge",
+        "values": [ 0.0, 0.0, 0.0, 0.0, 6.67, 6.67, 13.33, 13.33, 13.33, 13.33, 20.0, 20.0, 26.67, 26.67, 26.67, 26.67 ]
+      },
+      {
+        "stat": "burst_energy",
+        "values": [ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 ]
+      }
+    ],
+    "energy": [],
+    "attacks": [
+      {
+        "name": "Skirmishing Spear",
+        "type": "normal",
+        "damage": true,
+        "id": 0,
+        "vision": "physical",
+        "parts": [
+          {
+            "name": "1-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 47.82, 51.71, 55.6, 61.16, 65.05, 69.5, 75.62, 81.73, 87.85, 94.52, 101.19, 107.86, 114.54, 121.21, 127.88 ],
+            "id": 0
+          },
+          {
+            "name": "2-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 48.16, 52.08, 56.0, 61.6, 65.52, 70.0, 76.16, 82.32, 88.48, 95.2, 101.92, 108.64, 115.36, 122.08, 128.8 ],
+            "id": 1
+          },
+          {
+            "name": "3-Hit (1/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 34.23, 37.01, 39.8, 43.78, 46.57, 49.75, 54.13, 58.51, 62.88, 67.66, 72.44, 77.21, 81.99, 86.76, 91.54 ],
+            "id": 2
+          },
+          {
+            "name": "3-Hit (2/2)",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 31.82, 34.41, 37.0, 40.7, 43.29, 46.25, 50.32, 54.39, 58.46, 62.9, 67.34, 71.78, 76.22, 80.66, 85.1 ],
+            "id": 3
+          },
+          {
+            "name": "4-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 75.85, 82.03, 88.2, 97.02, 103.19, 110.25, 119.95, 129.65, 139.36, 149.94, 160.52, 171.11, 181.69, 192.28, 202.86 ],
+            "id": 4
+          },
+          {
+            "name": "Charged Attack",
+            "type": "charged",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 111.03, 120.06, 129.1, 142.01, 151.05, 161.38, 175.58, 189.78, 203.98, 219.47, 234.96, 250.45, 265.95, 281.44, 296.93 ],
+            "id": 5
+          },
+          {
+            "name": "Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 63.93, 69.14, 74.34, 81.77, 86.98, 92.93, 101.1, 109.28, 117.46, 126.38, 135.3, 144.22, 153.14, 162.06, 170.98 ],
+            "id": 7
+          },
+          {
+            "name": "Low Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 127.84, 138.24, 148.65, 163.51, 173.92, 185.81, 202.16, 218.51, 234.86, 252.7, 270.54, 288.38, 306.22, 324.05, 341.89 ],
+            "id": 8
+          },
+          {
+            "name": "High Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 159.68, 172.67, 185.67, 204.24, 217.23, 232.09, 252.51, 272.93, 293.36, 315.64, 337.92, 360.2, 382.48, 404.76, 427.04 ],
+            "id": 9
+          }
+        ]
+      },
+      {
+        "name": "Thunderbolt Ambush",
+        "type": "skill",
+        "damage": true,
+        "id": 1,
+        "vision": "electro",
+        "parts": [
+          {
+            "name": "Press",
+            "type": "skill",
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 286.72, 308.22, 329.73, 358.4, 379.9, 401.41, 430.08, 458.75, 487.42, 516.1, 544.77, 573.44, 609.28, 645.12, 680.96 ],
+            "id": 0
+          },
+          {
+            "name": "Hold",
+            "type": "skill",
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 358.4, 385.28, 412.16, 448.0, 474.88, 501.76, 537.6, 573.44, 609.28, 645.12, 680.96, 716.8, 761.6, 806.4, 851.2 ],
+            "id": 1
+          }
+        ]
+      },
+      {
+        "name": "Hunter's Advance",
+        "type": "burst",
+        "damage": true,
+        "id": 2,
+        "vision": "electro",
+        "parts": [
+          {
+            "name": "Fulgurite Hunting Field",
+            "type": "burst",
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 74.96, 80.58, 86.2, 93.7, 99.32, 104.94, 112.44, 119.94, 127.43, 134.93, 142.42, 149.92, 159.29, 168.66, 178.03 ],
+            "id": 0
+          },
+          {
+            "name": "Tugarin",
+            "type": "burst",
+            "damage": true,
+            "vision": "electro",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 50.22, 53.99, 57.76, 62.78, 66.55, 70.31, 75.33, 80.36, 85.38, 90.4, 95.42, 100.45, 106.72, 113.0, 119.28 ],
+            "id": 1
+          }
+        ],
+        "apply": {
+          "id": 2773,
+          "offset": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
+          "party": true,
+          "special": "hunter_mark"
+        }
+      }
+    ],
+    "passive": [
+      {
+        "name": "Into the Fray",
+        "desc": "Alyosha will enter the Radiance: Stellar-Conduct state when inside a Polestar Field. Radiance: Stellar-Conduct: The Hunter's Precision effect obtained when Hunter's Mark is activated will also increase all Stellar-Conduct DMG dealt by nearby teammates by 20%.",
+        "level": 0
+      },
+      {
+        "name": "The Treeline Rouses",
+        "desc": "When Tugarin attacks, it will also restore HP to nearby party members at 120% of Alyosha's ATK.",
+        "level": 2,
+        "attacks": [
+          {
+            "name": "The Treeline Rouses",
+            "parts": [
+              {
+                "id": 0,
+                "name": "The Treeline Rouses",
+                "type": "healing",
+                "vision": "electro",
+                "stat": "atk",
+                "crit": false,
+                "scale": [ 120 ]
+              }
+            ],
+            "id": 0
+          }
+        ]
+      },
+      {
+        "name": "Farewell, Winter Wheat",
+        "desc": "Increases the DMG Alyosha deals with his Elemental Skill and Elemental Burst by 0.35% for every 1% of his Energy Recharge. Up to a 70% increase can be obtained in this way.",
+        "level": 8,
+        "apply": {
+          "id": 2833,
+          "auto": true
+        }
+      },
+      {
+        "name": "Treetop Watch",
+        "desc": "Displays the location of nearby resources unique to Snezhnaya on the mini-map.",
+        "level": 0
+      }
+    ],
+    "const": [
+      {
+        "name": "Frostvale Thunderclap",
+        "desc": "Alyosha regenerates 15 Elemental Energy when nearby party members trigger an Electro-related reaction. This effect can trigger once every 18s.",
+        "energy": [
+          {
+            "id": 257
+          }
+        ]
+      },
+      {
+        "name": "Howl From Afar",
+        "desc": "The duration of the Elemental Burst Hunter's Advance is extended by 6s. Additionally, each time Tugarin attacks the opponent, it will first apply the Hunter's Mark. This effect does not activate existing Hunter's Marks."
+      },
+      {
+        "name": "Kindred Call",
+        "desc": "Increases the Level of the Elemental Skill Thunderbolt Ambush by 3.",
+        "bonus": [
+          {
+            "stat": "levelskill",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "Spoils of the Hunt",
+        "desc": "When Tugarin attacks, it will also restore 60% of Alyosha's ATK as HP to the nearby party member with the lowest HP by percentage.",
+        "attacks": [
+          {
+            "name": "Spoils of the Hunt",
+            "parts": [
+              {
+                "id": 0,
+                "name": "Spoils of the Hunt",
+                "type": "healing",
+                "vision": "electro",
+                "stat": "atk",
+                "crit": false,
+                "scale": [ 60 ]
+              }
+            ],
+            "id": 0
+          }
+        ]
+      },
+      {
+        "name": "When the Birdsong Falls Silent",
+        "desc": "Increases the Level of the Elemental Burst Hunter's Advance by 3.",
+        "bonus": [
+          {
+            "stat": "levelburst",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "Standard Reclaimed",
+        "desc": "The Hunter's Precision effect obtained from activating a Hunter's Mark can now stack, max 2 stacks. When the stack count reaches 2, currently active party members will also have their Elemental Mastery increased by 100."
+      }
+    ],
+    "ascension": [
+      {
+        "type": "item",
+        "id": "unknown_ascension"
+      },
+      {
+        "type": "group",
+        "id": "unknown_regular"
+      },
+      {
+        "type": "item",
+        "id": "unknown_speciality"
+      }
+    ]
+  },
+  "traveler_cryo": {
+    "id": 124,
+    "enka_id": [ 10000005, 10000007 ],
+    "short_name": "Traveler",
+    "name": "Traveler (Cryo)",
+    "weapon": "sword",
+    "vision": "cryo",
+    "rarity": 5,
+    "nation": "none",
+    "radiance_stellarconduct": true,
+    "radiance_stellarswirl": true,
+    "stellarconduct": true,
+    "stellarswirl": true,
+    "unreleased": true,
+    "optimize_artifact_stats": [
+      "atk",
+      "atk%"
+    ],
+    "stats": [
+      {
+        "stat": "hp_base",
+        "values": [ 912.0, 2342.0, 3024.0, 4529.0, 5013.0, 5766.0, 6411.0, 7164.0, 7648.0, 8401.0, 8885.0, 9638.0, 10122.0, 10875.0, 11251.0, 11627.0 ]
+      },
+      {
+        "stat": "atk_base",
+        "values": [ 17.81, 45.75, 59.05, 88.45, 97.91, 112.62, 125.22, 139.93, 149.38, 164.07, 173.53, 188.24, 197.69, 212.4, 239.5, 266.59 ]
+      },
+      {
+        "stat": "def_base",
+        "values": [ 57.23, 147.01, 189.76, 284.24, 314.61, 361.88, 402.38, 449.65, 480.03, 527.24, 557.61, 604.88, 635.25, 682.52, 706.12, 729.73 ]
+      },
+      {
+        "stat": "atk%",
+        "values": [ 0.0, 0.0, 0.0, 0.0, 6.0, 6.0, 12.0, 12.0, 12.0, 12.0, 18.0, 18.0, 24.0, 24.0, 24.0, 24.0 ]
+      },
+      {
+        "stat": "burst_energy",
+        "values": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+      }
+    ],
+    "energy": [],
+    "attacks": [
+      {
+        "name": "Foreign Frostglint",
+        "type": "normal",
+        "damage": true,
+        "id": 0,
+        "vision": "physical",
+        "parts": [
+          {
+            "name": "1-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 44.46, 48.08, 51.7, 56.87, 60.49, 64.63, 70.31, 76.0, 81.69, 87.89, 94.09, 100.3, 106.5, 112.71, 118.91 ],
+            "id": 0
+          },
+          {
+            "name": "2-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 43.43, 46.97, 50.5, 55.55, 59.09, 63.13, 68.68, 74.24, 79.79, 85.85, 91.91, 97.97, 104.03, 110.09, 116.15 ],
+            "id": 1
+          },
+          {
+            "name": "3-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 52.98, 57.29, 61.6, 67.76, 72.07, 77.0, 83.78, 90.55, 97.33, 104.72, 112.11, 119.5, 126.9, 134.29, 141.68 ],
+            "id": 2
+          },
+          {
+            "name": "4-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 58.31, 63.05, 67.8, 74.58, 79.33, 84.75, 92.21, 99.67, 107.12, 115.26, 123.4, 131.53, 139.67, 147.8, 155.94 ],
+            "id": 3
+          },
+          {
+            "name": "5-Hit",
+            "type": "normal",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 70.78, 76.54, 82.3, 90.53, 96.29, 102.88, 111.93, 120.98, 130.03, 139.91, 149.79, 159.66, 169.54, 179.41, 189.29 ],
+            "id": 4
+          },
+          {
+            "name": "Charged Attack (1/2)",
+            "type": "charged",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 55.9, 60.45, 65.0, 71.5, 76.05, 81.25, 88.4, 95.55, 102.7, 110.5, 118.3, 126.1, 133.9, 141.7, 149.5 ],
+            "id": 5
+          },
+          {
+            "name": "Charged Attack (2/2)",
+            "type": "charged",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 72.24, 78.12, 84.0, 92.4, 98.28, 105.0, 114.24, 123.48, 132.72, 142.8, 152.88, 162.96, 173.04, 183.12, 193.2 ],
+            "id": 6
+          },
+          {
+            "name": "Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 63.93, 69.14, 74.34, 81.77, 86.98, 92.93, 101.1, 109.28, 117.46, 126.38, 135.3, 144.22, 153.14, 162.06, 170.98 ],
+            "id": 7
+          },
+          {
+            "name": "Low Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 127.84, 138.24, 148.65, 163.51, 173.92, 185.81, 202.16, 218.51, 234.86, 252.7, 270.54, 288.38, 306.22, 324.05, 341.89 ],
+            "id": 8
+          },
+          {
+            "name": "High Plunge",
+            "type": "plunge",
+            "damage": true,
+            "vision": "physical",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 159.68, 172.67, 185.67, 204.24, 217.23, 232.09, 252.51, 272.93, 293.36, 315.64, 337.92, 360.2, 382.48, 404.76, 427.04 ],
+            "id": 9
+          }
+        ]
+      },
+      {
+        "name": "Pierce of the Ice Fog",
+        "type": "skill",
+        "damage": true,
+        "id": 1,
+        "vision": "cryo",
+        "parts": [
+          {
+            "name": "Skill",
+            "type": "skill",
+            "damage": true,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 91.68, 98.56, 105.43, 114.6, 121.48, 128.35, 137.52, 146.69, 155.86, 165.02, 174.19, 183.36, 194.82, 206.28, 217.74 ],
+            "id": 0
+          },
+          {
+            "name": "Ice Crystal",
+            "type": "skill",
+            "damage": true,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 21.39, 23.0, 24.6, 26.74, 28.34, 29.95, 32.09, 34.23, 36.37, 38.51, 40.64, 42.78, 45.46, 48.13, 50.81 ],
+            "id": 1
+          }
+        ]
+      },
+      {
+        "name": "Frostbound Javelin",
+        "type": "burst",
+        "damage": true,
+        "id": 2,
+        "vision": "cryo",
+        "parts": [
+          {
+            "name": "Ice Javelin",
+            "type": "burst",
+            "damage": true,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 55.13, 59.27, 63.4, 68.91, 73.05, 77.18, 82.7, 88.21, 93.72, 99.24, 104.75, 110.26, 117.15, 124.04, 130.94 ],
+            "id": 0,
+            "alt": 1
+          },
+          {
+            "name": "Stellar-Conduct Ice Javelin",
+            "type": "stellarconduct",
+            "reaction": "stellarconduct",
+            "damage": false,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 36.75, 39.51, 42.27, 45.94, 48.7, 51.46, 55.13, 58.81, 62.48, 66.16, 69.83, 73.51, 78.1, 82.7, 87.29 ],
+            "id": 1,
+            "alt": 1
+          },
+          {
+            "name": "Stellar Swirl Ice Javelin",
+            "type": "stellarswirl",
+            "reaction": "stellarswirl",
+            "damage": false,
+            "vision": "cryo",
+            "stat": "atk",
+            "crit": true,
+            "scale": [ 55.13, 59.27, 63.4, 68.91, 73.05, 77.18, 82.7, 88.21, 93.72, 99.24, 104.75, 110.26, 117.15, 124.04, 130.94 ],
+            "id": 2,
+            "alt": 1
+          }
+        ],
+        "apply": {
+          "id": 2834
+        }
+      }
+    ],
+    "passive": [
+      {
+        "name": "Illusory Frostmirror",
+        "desc": "The Traveler will enter the Radiance: Stellar-Conduct or Radiance: Stellar Glimmer state for 8s when they are inside a Polestar Field or trigger a Stellar Swirl reaction respectively.When a party member triggers a Superconduct or Cryo Swirl reaction, it becomes a Stellar-Conduct or Stellar Swirl reaction instead, and the Base DMG of said reaction is also increased by 0.35% for every 100 points of the Traveler's ATK. A maximum 7% increase can be obtained in this way.",
+        "level": 0,
+        "apply": {
+          "id": 2835,
+          "auto": true,
+          "party": true
+        }
+      },
+      {
+        "name": "Ever-Keen Frost",
+        "desc": "Radiance: Stellar-Conduct: When a Frostpierce Star is on the field, DMG from the Traveler's Normal Attacks, Charged Attacks, and Plunging Attacks are converted to Cryo DMG that cannot be overridden by another elemental infusion, and DMG dealt is also increased by 80% of the Traveler's ATK.",
+        "level": 2,
+        "apply": {
+          "id": 2836
+        }
+      },
+      {
+        "name": "Lucent Ice",
+        "desc": "The Traveler's Elemental Mastery is increased by 8% of their ATK. Up to 160 Elemental Mastery can be gained in this way.",
+        "level": 8,
+        "apply": {
+          "id": 2837,
+          "auto": true
+        }
+      },
+      {
+        "name": "Deep Ice From Afar",
+        "desc": "Draws new strength and power from their past travels: every instance of Elemental Resonance that has occurred now grants an additional enhancement effect.Additionally, when a nearby party member deals Stellar-Conduct or Stellar Swirl DMG, the Traveler gains 1 stack of \"Icepoint.\" 1 stack of Icepoint can be obtained in this way once every 2s, max 3 stacks. When the Traveler unleashes a Charged Attack at 3 stacks of Icepoint, all stacks are consumed to change the attack into a special Charged Attack: Freezing Ice.Charged Attack: Freezing Ice<br>Cryo DMG dealt is increased by 140% of the Traveler's ATK, and the Traveler also gains 2 stacks of Frostglow.<br>Charged Attack: Freezing Ice can be unleashed once every 15s. Additionally, the DMG bonus from the Ascension Talent \"Ever-Keen Frost\" does not apply to Charged Attack: Freezing Ice.Radiance: Stellar Glimmer: DMG from Charged Attack: Freezing Ice is changed to Cryo DMG of the corresponding Stellar Glimmer reaction type.",
+        "level": 0,
+        "apply": [
+          {
+            "id": 2529
+          },
+          {
+            "id": 2530
+          },
+          {
+            "id": 2531
+          },
+          {
+            "id": 2532
+          },
+          {
+            "id": 2533
+          },
+          {
+            "id": 2534
+          },
+          {
+            "id": 2535
+          }
+        ],
+        "attacks": [
+          {
+            "type": "normal",
+            "name": "Deep Ice From Afar",
+            "parts": [
+              {
+                "name": "Charged Attack: Freezing Ice (1/2)",
+                "type": "charged",
+                "damage": true,
+                "vision": "cryo",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 195.9, 200.45, 205.0, 211.5, 216.05, 221.25, 228.4, 235.55, 242.7, 250.5, 258.3, 266.1, 273.9, 281.7, 289.5 ],
+                "id": 0
+              },
+              {
+                "name": "Charged Attack: Freezing Ice (2/2)",
+                "type": "charged",
+                "damage": true,
+                "vision": "cryo",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 200.72, 205.66, 210.6, 217.66, 222.6, 228.25, 236.02, 243.78, 251.55, 260.02, 268.49, 276.96, 285.44, 293.91, 302.38 ],
+                "id": 1
+              },
+              {
+                "name": "Charged Attack: Freezing Ice (1/2) - Stellar-Conduct",
+                "type": "stellarconduct",
+                "reaction": "stellarconduct",
+                "damage": false,
+                "vision": "cryo",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 195.9, 200.45, 205.0, 211.5, 216.05, 221.25, 228.4, 235.55, 242.7, 250.5, 258.3, 266.1, 273.9, 281.7, 289.5 ],
+                "id": 2
+              },
+              {
+                "name": "Charged Attack: Freezing Ice (2/2) - Stellar-Conduct",
+                "type": "stellarconduct",
+                "reaction": "stellarconduct",
+                "damage": false,
+                "vision": "cryo",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 200.72, 205.66, 210.6, 217.66, 222.6, 228.25, 236.02, 243.78, 251.55, 260.02, 268.49, 276.96, 285.44, 293.91, 302.38 ],
+                "id": 3
+              },
+              {
+                "name": "Charged Attack: Freezing Ice (1/2) - Stellar-Swirl",
+                "type": "stellarswirl",
+                "reaction": "stellarswirl",
+                "damage": false,
+                "vision": "cryo",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 195.9, 200.45, 205.0, 211.5, 216.05, 221.25, 228.4, 235.55, 242.7, 250.5, 258.3, 266.1, 273.9, 281.7, 289.5 ],
+                "id": 4
+              },
+              {
+                "name": "Charged Attack: Freezing Ice (2/2) - Stellar-Swirl",
+                "type": "stellarswirl",
+                "reaction": "stellarswirl",
+                "damage": false,
+                "vision": "cryo",
+                "stat": "atk",
+                "crit": true,
+                "scale": [ 200.72, 205.66, 210.6, 217.66, 222.6, 228.25, 236.02, 243.78, 251.55, 260.02, 268.49, 276.96, 285.44, 293.91, 302.38 ],
+                "id": 5
+              }
+            ],
+            "id": 0
+          }
+        ]
+      }
+    ],
+    "const": [
+      {
+        "name": "Somber Freeze",
+        "desc": "The Traveler regenerates 5 Elemental Energy when they deal Stellar Glimmer DMG. This effect can trigger once every 0.5s.",
+        "energy": [
+          {
+            "id": 258
+          }
+        ]
+      },
+      {
+        "name": "Frostfall Reverberation",
+        "desc": "The active character's Elemental Mastery is increased by 60 for 5s when an opponent is hit by an ice crystal.Additionally, when a character affected by the aforementioned effect triggers a Stellar reaction or deals Stellar Glimmer DMG, the Elemental Mastery boost described above will be increased to 120 for its duration.",
+        "apply": {
+          "id": 2838,
+          "party": true
+        }
+      },
+      {
+        "name": "Glacial Shard",
+        "desc": "Increases the Level of Frostbound Javelin by 3.",
+        "bonus": [
+          {
+            "stat": "levelburst",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "Enduring Ice",
+        "desc": "The duration of the Frostpierce Star is increased by 25%."
+      },
+      {
+        "name": "Bittercold Fog",
+        "desc": "Increases the Level of Pierce of the Ice Fog by 3.",
+        "bonus": [
+          {
+            "stat": "levelskill",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "name": "Brumal Grimfrost",
+        "desc": "Every stack of Frostglow consumed when using the Elemental Burst Frostbound Javelin increases Stellar Glimmer DMG dealt by other party members by 5% for 15s. A maximum 40% increase can be obtained in this way.",
+        "apply": {
+          "id": 2839,
+          "party": true,
+          "noself": true
+        }
       }
     ],
     "ascension": [

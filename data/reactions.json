@@ -33,6 +33,38 @@
     "multiplier": 0.6,
     "vision": "cryo"
   },
+  "stellarswirl": {
+    "name": "Stellar Swirl",
+    "type": "elemasteryaddshared",
+    "direct_multiplier": 1
+  },
+  "stellarswirlinitial": {
+    "name": "Stellar Swirl Initial",
+    "stat": "stellarswirl",
+    "type": "elemasteryaddshared",
+    "crit": true,
+    "skilltype": "elemasteryadd",
+    "multiplier": 0.75,
+    "vision": "anemo"
+  },
+  "stellarswirlvortex1": {
+    "name": "Stellar Swirl Vortex (Lv 1)",
+    "stat": "stellarswirl",
+    "type": "elemasteryaddshared",
+    "crit": true,
+    "skilltype": "elemasteryadd",
+    "multiplier": 2,
+    "vision": "cryo"
+  },
+  "stellarswirlvortex2": {
+    "name": "Stellar Swirl Vortex (Lv 2)",
+    "stat": "stellarswirl",
+    "type": "elemasteryaddshared",
+    "crit": true,
+    "skilltype": "elemasteryadd",
+    "multiplier": 3,
+    "vision": "cryo"
+  },
   "swirlelectro": {
     "name": "Swirl - Electro",
     "type": "elemasteryadd",
@@ -83,7 +115,7 @@
     "type": "elemasteryaddshared",
     "crit": true,
     "skilltype": "elemasteryadd",
-    "multiplier": 1.8,
+    "multiplier": 3,
     "vision": "electro",
     "direct_multiplier": 3
   },
@@ -115,7 +147,7 @@
     "type": "elemasteryaddshared",
     "crit": true,
     "skilltype": "elemasteryadd",
-    "multiplier": 0.96,
+    "multiplier": 1.6,
     "vision": "geo",
     "direct_multiplier": 1.6
   },
